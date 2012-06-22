@@ -1,0 +1,8 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = MBAS; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = MenuDock; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

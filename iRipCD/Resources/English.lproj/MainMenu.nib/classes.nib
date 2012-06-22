@@ -1,0 +1,33 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {showPreferencePanel = id; }; 
+            CLASS = AppController; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = MyTextField; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {
+            ACTIONS = {
+                encodeAction = id; 
+                selectFilesAction = id; 
+                setSourceAction = id; 
+                showPreferencePanelAction = id; 
+            }; 
+            CLASS = iRipCD; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                encodeButtonOutlet = NSButton; 
+                filesTextFieldOutlet = MyTextField; 
+                optionsPopupOutlet = NSPopUpButton; 
+                progressOutlet = NSProgressIndicator; 
+                selectButtonOutlet = NSButton; 
+                sourceMatrixOutlet = NSMatrix; 
+                windowOutlet = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

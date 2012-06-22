@@ -1,0 +1,289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B90C234F0F61D3AD00A55433 /* Updater.icns in Resources */ = {isa = PBXBuildFile; fileRef = B90C234E0F61D3AD00A55433 /* Updater.icns */; };
+		B923C1EC0F0960B300FB17EC /* Updater.m in Sources */ = {isa = PBXBuildFile; fileRef = B923C1EB0F0960B300FB17EC /* Updater.m */; };
+		B923C1F10F0960CE00FB17EC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B923C1EE0F0960CE00FB17EC /* MainMenu.xib */; };
+		B923C20E0F09622D00FB17EC /* Read Me.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B923C20D0F09622D00FB17EC /* Read Me.rtf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107320486CEB800E47090 /* Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Updater.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B90C234E0F61D3AD00A55433 /* Updater.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Updater.icns; sourceTree = "<group>"; };
+		B923C1EA0F0960B300FB17EC /* Updater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Updater.h; sourceTree = "<group>"; };
+		B923C1EB0F0960B300FB17EC /* Updater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Updater.m; sourceTree = "<group>"; };
+		B923C1EF0F0960CE00FB17EC /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B923C1F00F0960CE00FB17EC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B923C20D0F09622D00FB17EC /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Updater.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Updater */ = {
+			isa = PBXGroup;
+			children = (
+				B923C1E90F0960B300FB17EC /* Classes */,
+				B923C1ED0F0960CE00FB17EC /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Updater;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B923C1E90F0960B300FB17EC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B923C1EA0F0960B300FB17EC /* Updater.h */,
+				B923C1EB0F0960B300FB17EC /* Updater.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B923C1ED0F0960CE00FB17EC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B923C1EE0F0960CE00FB17EC /* MainMenu.xib */,
+				B923C1F00F0960CE00FB17EC /* Info.plist */,
+				B923C20D0F09622D00FB17EC /* Read Me.rtf */,
+				B90C234E0F61D3AD00A55433 /* Updater.icns */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Updater */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Updater" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				B923C1FC0F09620C00FB17EC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Updater;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Updater;
+			productReference = 8D1107320486CEB800E47090 /* Updater.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Updater" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Updater */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Updater */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B923C1F10F0960CE00FB17EC /* MainMenu.xib in Resources */,
+				B923C20E0F09622D00FB17EC /* Read Me.rtf in Resources */,
+				B90C234F0F61D3AD00A55433 /* Updater.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B923C1FC0F09620C00FB17EC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "#setup directories\ncd $TARGET_BUILD_DIR\nmkdir $PRODUCT_NAME\n\n#copy stuff over\ncp -RL $SRCROOT/ \"$PRODUCT_NAME/$PRODUCT_NAME Source Code\"\ncp -R $PRODUCT_NAME.app $PRODUCT_NAME/\ncp -R \"$SRCROOT/Resources/Read Me.rtf\" $PRODUCT_NAME/\n\n#clean stuff\ncd \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/\"\nrm -rf _*\ncd $TARGET_BUILD_DIR\nfind $PRODUCT_NAME/ -type f -name \\.DS_Store -exec rm -f {} ';'\nfind -d $PRODUCT_NAME/ -type d -name *~\\.nib -exec rm -rf {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.mode1 -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.pbxuser -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.perspective -exec rm -f {} ';'\nchmod -R 755 $PRODUCT_NAME\n\n#compress stuff\nditto -ck $PRODUCT_NAME $PRODUCT_NAME.zip\n\n#cleanup\nrm -r $PRODUCT_NAME";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B923C1EC0F0960B300FB17EC /* Updater.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B923C1EE0F0960CE00FB17EC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B923C1EF0F0960CE00FB17EC /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B923C1F50F0961C300FB17EC /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_DYNAMIC_NO_PIC = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				PRODUCT_NAME = Updater;
+				SDKROOT = macosx10.4;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Release-Deployment";
+		};
+		B923C1F60F0961C300FB17EC /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = "Release-Deployment";
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				PRODUCT_NAME = Updater;
+				SDKROOT = macosx10.4;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_DYNAMIC_NO_PIC = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				PRODUCT_NAME = Updater;
+				SDKROOT = macosx10.4;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Updater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+				B923C1F60F0961C300FB17EC /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Updater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				B923C1F50F0961C300FB17EC /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

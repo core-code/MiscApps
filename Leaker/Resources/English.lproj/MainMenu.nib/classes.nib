@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = Leaker; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                bytesText = NSTextField; 
+                leaksText = NSTextField; 
+                nameText = NSTextField; 
+                panel = NSPanel; 
+                progress = NSProgressIndicator; 
+                table = NSTableView; 
+                window = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

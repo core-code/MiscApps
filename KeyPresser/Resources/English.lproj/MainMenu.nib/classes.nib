@@ -1,0 +1,34 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {setKey = id; start = id; stopButtonAction = id; }; 
+            CLASS = KeyPresser; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applications = NSPopUpButton; 
+                interval = NSTextField; 
+                keytext = NSTextField; 
+                logsheet = NSWindow; 
+                logtext = NSTextView; 
+                set = NSButton; 
+                start = NSButton; 
+                window = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {setKey = id; start = id; }; 
+            CLASS = MyApplication; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applications = NSPopUpButton; 
+                interval = NSTextField; 
+                keytext = NSTextField; 
+                window = NSWindow; 
+            }; 
+            SUPERCLASS = NSApplication; 
+        }
+    ); 
+    IBVersion = 1; 
+}

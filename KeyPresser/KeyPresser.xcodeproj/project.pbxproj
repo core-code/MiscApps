@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		662BA13B0CC40E2700A0BC66 /* KeyPresser.m in Sources */ = {isa = PBXBuildFile; fileRef = 662BA13A0CC40E2700A0BC66 /* KeyPresser.m */; };
+		662BA1480CC40E3200A0BC66 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 662BA1420CC40E3200A0BC66 /* MainMenu.nib */; };
+		662BA1490CC40E3200A0BC66 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 662BA1440CC40E3200A0BC66 /* Info.plist */; };
+		662BA14A0CC40E3200A0BC66 /* KeyPresser.icns in Resources */ = {isa = PBXBuildFile; fileRef = 662BA1450CC40E3200A0BC66 /* KeyPresser.icns */; };
+		66B2F5550CCC0FB3002C586B /* PTKeyCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66B2F53C0CCC0FB3002C586B /* PTKeyCodes.plist */; };
+		66B2F5560CCC0FB3002C586B /* PTKeyComboPanel.nib in Resources */ = {isa = PBXBuildFile; fileRef = 66B2F53E0CCC0FB3002C586B /* PTKeyComboPanel.nib */; };
+		66B2F5570CCC0FB3002C586B /* PTKeyboardIcon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 66B2F5460CCC0FB3002C586B /* PTKeyboardIcon.tiff */; };
+		66B2F5580CCC0FB3002C586B /* PTHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B2F5490CCC0FB3002C586B /* PTHotKey.m */; };
+		66B2F5590CCC0FB3002C586B /* PTHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B2F54B0CCC0FB3002C586B /* PTHotKeyCenter.m */; };
+		66B2F55A0CCC0FB3002C586B /* PTKeyBroadcaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B2F54D0CCC0FB3002C586B /* PTKeyBroadcaster.m */; };
+		66B2F55B0CCC0FB3002C586B /* PTKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B2F54F0CCC0FB3002C586B /* PTKeyCodeTranslator.m */; };
+		66B2F55C0CCC0FB3002C586B /* PTKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B2F5510CCC0FB3002C586B /* PTKeyCombo.m */; };
+		66B2F55D0CCC0FB3002C586B /* PTKeyComboPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B2F5530CCC0FB3002C586B /* PTKeyComboPanel.m */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B9EAA4D9089950FF00DBB088 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EAA4D8089950FF00DBB088 /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		662BA1390CC40E2700A0BC66 /* KeyPresser.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KeyPresser.h; sourceTree = "<group>"; };
+		662BA13A0CC40E2700A0BC66 /* KeyPresser.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = KeyPresser.m; sourceTree = "<group>"; };
+		662BA1430CC40E3200A0BC66 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		662BA1440CC40E3200A0BC66 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		662BA1450CC40E3200A0BC66 /* KeyPresser.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = KeyPresser.icns; sourceTree = "<group>"; };
+		66B2F53A0CCC0FB3002C586B /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		66B2F53D0CCC0FB3002C586B /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; name = English; path = English.lproj/PTKeyCodes.plist; sourceTree = "<group>"; };
+		66B2F53F0CCC0FB3002C586B /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PTKeyComboPanel.nib; sourceTree = "<group>"; };
+		66B2F5400CCC0FB3002C586B /* French */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist; name = French; path = French.lproj/PTKeyCodes.plist; sourceTree = "<group>"; };
+		66B2F5410CCC0FB3002C586B /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/PTKeyComboPanel.nib; sourceTree = "<group>"; };
+		66B2F5420CCC0FB3002C586B /* German */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist; name = German; path = German.lproj/PTKeyCodes.plist; sourceTree = "<group>"; };
+		66B2F5430CCC0FB3002C586B /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/PTKeyComboPanel.nib; sourceTree = "<group>"; };
+		66B2F5440CCC0FB3002C586B /* Japanese */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist; name = Japanese; path = Japanese.lproj/PTKeyCodes.plist; sourceTree = "<group>"; };
+		66B2F5450CCC0FB3002C586B /* Japanese */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Japanese; path = Japanese.lproj/PTKeyComboPanel.nib; sourceTree = "<group>"; };
+		66B2F5460CCC0FB3002C586B /* PTKeyboardIcon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PTKeyboardIcon.tiff; sourceTree = "<group>"; };
+		66B2F5480CCC0FB3002C586B /* PTHotKey.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PTHotKey.h; sourceTree = "<group>"; };
+		66B2F5490CCC0FB3002C586B /* PTHotKey.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PTHotKey.m; sourceTree = "<group>"; };
+		66B2F54A0CCC0FB3002C586B /* PTHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PTHotKeyCenter.h; sourceTree = "<group>"; };
+		66B2F54B0CCC0FB3002C586B /* PTHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PTHotKeyCenter.m; sourceTree = "<group>"; };
+		66B2F54C0CCC0FB3002C586B /* PTKeyBroadcaster.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PTKeyBroadcaster.h; sourceTree = "<group>"; };
+		66B2F54D0CCC0FB3002C586B /* PTKeyBroadcaster.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PTKeyBroadcaster.m; sourceTree = "<group>"; };
+		66B2F54E0CCC0FB3002C586B /* PTKeyCodeTranslator.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PTKeyCodeTranslator.h; sourceTree = "<group>"; };
+		66B2F54F0CCC0FB3002C586B /* PTKeyCodeTranslator.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PTKeyCodeTranslator.m; sourceTree = "<group>"; };
+		66B2F5500CCC0FB3002C586B /* PTKeyCombo.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PTKeyCombo.h; sourceTree = "<group>"; };
+		66B2F5510CCC0FB3002C586B /* PTKeyCombo.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PTKeyCombo.m; sourceTree = "<group>"; };
+		66B2F5520CCC0FB3002C586B /* PTKeyComboPanel.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PTKeyComboPanel.h; sourceTree = "<group>"; };
+		66B2F5530CCC0FB3002C586B /* PTKeyComboPanel.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PTKeyComboPanel.m; sourceTree = "<group>"; };
+		66B2F8D20CCC24C2002C586B /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* KeyPresser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyPresser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9EAA4D8089950FF00DBB088 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				B9EAA4D9089950FF00DBB088 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9EAA4D8089950FF00DBB088 /* Carbon.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* KeyPresser.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* test */ = {
+			isa = PBXGroup;
+			children = (
+				662BA1380CC40E2700A0BC66 /* Classes */,
+				66B2F5380CCC0FB3002C586B /* Foreign Code */,
+				662BA13F0CC40E3200A0BC66 /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = test;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		662BA1380CC40E2700A0BC66 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				662BA1390CC40E2700A0BC66 /* KeyPresser.h */,
+				662BA13A0CC40E2700A0BC66 /* KeyPresser.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		662BA13F0CC40E3200A0BC66 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				662BA1420CC40E3200A0BC66 /* MainMenu.nib */,
+				662BA1440CC40E3200A0BC66 /* Info.plist */,
+				662BA1450CC40E3200A0BC66 /* KeyPresser.icns */,
+				66B2F8D20CCC24C2002C586B /* Read Me.rtf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		66B2F5380CCC0FB3002C586B /* Foreign Code */ = {
+			isa = PBXGroup;
+			children = (
+				66B2F5390CCC0FB3002C586B /* PTHotKeysLib */,
+			);
+			path = "Foreign Code";
+			sourceTree = "<group>";
+		};
+		66B2F5390CCC0FB3002C586B /* PTHotKeysLib */ = {
+			isa = PBXGroup;
+			children = (
+				66B2F53A0CCC0FB3002C586B /* LICENSE.txt */,
+				66B2F53B0CCC0FB3002C586B /* res */,
+				66B2F5470CCC0FB3002C586B /* src */,
+			);
+			path = PTHotKeysLib;
+			sourceTree = "<group>";
+		};
+		66B2F53B0CCC0FB3002C586B /* res */ = {
+			isa = PBXGroup;
+			children = (
+				66B2F53C0CCC0FB3002C586B /* PTKeyCodes.plist */,
+				66B2F53E0CCC0FB3002C586B /* PTKeyComboPanel.nib */,
+				66B2F5460CCC0FB3002C586B /* PTKeyboardIcon.tiff */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		66B2F5470CCC0FB3002C586B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				66B2F5480CCC0FB3002C586B /* PTHotKey.h */,
+				66B2F5490CCC0FB3002C586B /* PTHotKey.m */,
+				66B2F54A0CCC0FB3002C586B /* PTHotKeyCenter.h */,
+				66B2F54B0CCC0FB3002C586B /* PTHotKeyCenter.m */,
+				66B2F54C0CCC0FB3002C586B /* PTKeyBroadcaster.h */,
+				66B2F54D0CCC0FB3002C586B /* PTKeyBroadcaster.m */,
+				66B2F54E0CCC0FB3002C586B /* PTKeyCodeTranslator.h */,
+				66B2F54F0CCC0FB3002C586B /* PTKeyCodeTranslator.m */,
+				66B2F5500CCC0FB3002C586B /* PTKeyCombo.h */,
+				66B2F5510CCC0FB3002C586B /* PTKeyCombo.m */,
+				66B2F5520CCC0FB3002C586B /* PTKeyComboPanel.h */,
+				66B2F5530CCC0FB3002C586B /* PTKeyComboPanel.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* KeyPresser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9EAA4700899448800DBB088 /* Build configuration list for PBXNativeTarget "KeyPresser" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				66B2F9690CCC28D9002C586B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeyPresser;
+			productInstallPath = "$(HOME)/Applications";
+			productName = test;
+			productReference = 8D1107320486CEB800E47090 /* KeyPresser.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B9EAA4740899448800DBB088 /* Build configuration list for PBXProject "KeyPresser" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* test */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* KeyPresser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				662BA1480CC40E3200A0BC66 /* MainMenu.nib in Resources */,
+				662BA1490CC40E3200A0BC66 /* Info.plist in Resources */,
+				662BA14A0CC40E3200A0BC66 /* KeyPresser.icns in Resources */,
+				66B2F5550CCC0FB3002C586B /* PTKeyCodes.plist in Resources */,
+				66B2F5560CCC0FB3002C586B /* PTKeyComboPanel.nib in Resources */,
+				66B2F5570CCC0FB3002C586B /* PTKeyboardIcon.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66B2F9690CCC28D9002C586B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "#setup directories\ncd $TARGET_BUILD_DIR\nmkdir $PRODUCT_NAME\n\n#copy stuff over\ncp -RL $SRCROOT/ \"$PRODUCT_NAME/$PRODUCT_NAME Source Code\"\ncp -R $PRODUCT_NAME.app $PRODUCT_NAME/\ncp -R \"$SRCROOT/Resources/Read Me.rtf\" $PRODUCT_NAME/\n\n#clean stuff\ncd \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/\"\nrm -rf _*\ncd $TARGET_BUILD_DIR\nfind $PRODUCT_NAME/ -type f -name \\.DS_Store -exec rm -f {} ';'\nfind -d $PRODUCT_NAME/ -type d -name *~\\.nib -exec rm -rf {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.mode1 -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.pbxuser -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.perspective -exec rm -f {} ';'\nchmod -R 755 $PRODUCT_NAME\n\n#compress stuff\nditto -ck $PRODUCT_NAME $PRODUCT_NAME.zip\n\n#cleanup\nrm -r $PRODUCT_NAME";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				662BA13B0CC40E2700A0BC66 /* KeyPresser.m in Sources */,
+				66B2F5580CCC0FB3002C586B /* PTHotKey.m in Sources */,
+				66B2F5590CCC0FB3002C586B /* PTHotKeyCenter.m in Sources */,
+				66B2F55A0CCC0FB3002C586B /* PTKeyBroadcaster.m in Sources */,
+				66B2F55B0CCC0FB3002C586B /* PTKeyCodeTranslator.m in Sources */,
+				66B2F55C0CCC0FB3002C586B /* PTKeyCombo.m in Sources */,
+				66B2F55D0CCC0FB3002C586B /* PTKeyComboPanel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		662BA1420CC40E3200A0BC66 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				662BA1430CC40E3200A0BC66 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		66B2F53C0CCC0FB3002C586B /* PTKeyCodes.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66B2F53D0CCC0FB3002C586B /* English */,
+				66B2F5400CCC0FB3002C586B /* French */,
+				66B2F5420CCC0FB3002C586B /* German */,
+				66B2F5440CCC0FB3002C586B /* Japanese */,
+			);
+			name = PTKeyCodes.plist;
+			sourceTree = "<group>";
+		};
+		66B2F53E0CCC0FB3002C586B /* PTKeyComboPanel.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66B2F53F0CCC0FB3002C586B /* English */,
+				66B2F5410CCC0FB3002C586B /* French */,
+				66B2F5430CCC0FB3002C586B /* German */,
+				66B2F5450CCC0FB3002C586B /* Japanese */,
+			);
+			name = PTKeyComboPanel.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66705A880CC41078004E7ED3 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = "Release-Deployment";
+		};
+		66705A890CC41078004E7ED3 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = __ALLOW_NON_HOTKEYS_IN_PANEL__;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				PRODUCT_NAME = KeyPresser;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Release-Deployment";
+		};
+		B9EAA4710899448800DBB088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		B9EAA4720899448800DBB088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		B9EAA4750899448800DBB088 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = __ALLOW_NON_HOTKEYS_IN_PANEL__;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				PRODUCT_NAME = KeyPresser;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Debug;
+		};
+		B9EAA4760899448800DBB088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = __ALLOW_NON_HOTKEYS_IN_PANEL__;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				PRODUCT_NAME = KeyPresser;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9EAA4700899448800DBB088 /* Build configuration list for PBXNativeTarget "KeyPresser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9EAA4710899448800DBB088 /* Debug */,
+				B9EAA4720899448800DBB088 /* Release */,
+				66705A880CC41078004E7ED3 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B9EAA4740899448800DBB088 /* Build configuration list for PBXProject "KeyPresser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9EAA4750899448800DBB088 /* Debug */,
+				B9EAA4760899448800DBB088 /* Release */,
+				66705A890CC41078004E7ED3 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

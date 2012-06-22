@@ -1,0 +1,40 @@
+//
+// Prefix header for all source files of the 'VolumeCore' target in the 'VolumeCore' project
+//
+
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#include <OpenGL/glext.h>
+#include <OpenGL/glu.h>
+#include <OpenGL/OpenGL.h>
+#include <Carbon/Carbon.h>
+#include <mach/mach.h>
+#include <mach/mach_time.h>
+#else
+#include <GL/gl.h>
+#include <GL/glext.h>
+#include <GL/glu.h>
+#include "opengl_linux.h"
+#include <AppKit/NSColorSpace.h>
+#endif
+
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import "NSData+Bzip2.h"	
+#endif
+
+#ifdef __APPLE__
+#define fatal(fmt, ...) {char *tmp = NULL; asprintf (&tmp, fmt, ## __VA_ARGS__); fprintf(stderr, fmt, ## __VA_ARGS__); NSRunCriticalAlertPanel(@"Core3D", [NSString stringWithUTF8String:tmp], @"OK", nil, nil); exit(1);}
+#else
+static inline void fatal(const char*err, ...) {va_list ap; va_start(ap, err); vfprintf(stderr, err, ap); va_end(ap); exit(1);}
+#endif
+
+#define glError() { \
+GLenum err = glGetError(); \
+while (err != GL_NO_ERROR) { \
+fprintf(stderr, "glError: %s caught at %s:%u\n", (char *)gluErrorString(err), __FILE__, __LINE__); \
+err = glGetError(); \
+} \
+}
+

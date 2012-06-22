@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66B6FEC80CB0080900874A0C /* DocumentController.h in Headers */ = {isa = PBXBuildFile; fileRef = 66B6FEC40CB0080900874A0C /* DocumentController.h */; };
+		66B6FEC90CB0080900874A0C /* DocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B6FEC50CB0080900874A0C /* DocumentController.m */; };
+		66B6FEDA0CB0083400874A0C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 66B6FECE0CB0083400874A0C /* Credits.rtf */; };
+		66B6FEDB0CB0083400874A0C /* DocumentController.nib in Resources */ = {isa = PBXBuildFile; fileRef = 66B6FED00CB0083400874A0C /* DocumentController.nib */; };
+		66B6FEDD0CB0083400874A0C /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 66B6FED40CB0083400874A0C /* MainMenu.nib */; };
+		66B6FEE00CB0083400874A0C /* Phorgiveness.icns in Resources */ = {isa = PBXBuildFile; fileRef = 66B6FED80CB0083400874A0C /* Phorgiveness.icns */; };
+		B992219C06DFE0DD009D73C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		B992219D06DFE0DD009D73C3 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A6D9610233196B01A80002 /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		664A56800CB0579600D5E7F5 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		66B6FEC40CB0080900874A0C /* DocumentController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DocumentController.h; path = Classes/DocumentController.h; sourceTree = "<group>"; };
+		66B6FEC50CB0080900874A0C /* DocumentController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = DocumentController.m; path = Classes/DocumentController.m; sourceTree = "<group>"; };
+		66B6FECF0CB0083400874A0C /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		66B6FED10CB0083400874A0C /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/DocumentController.nib; sourceTree = "<group>"; };
+		66B6FED50CB0083400874A0C /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		66B6FED60CB0083400874A0C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B6FED80CB0083400874A0C /* Phorgiveness.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Phorgiveness.icns; sourceTree = "<group>"; };
+		B992219F06DFE0DD009D73C3 /* Phorgiveness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phorgiveness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5A6D9610233196B01A80002 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B992219B06DFE0DD009D73C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B992219C06DFE0DD009D73C3 /* Cocoa.framework in Frameworks */,
+				B992219D06DFE0DD009D73C3 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5A6D9610233196B01A80002 /* Carbon.framework */,
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B992219F06DFE0DD009D73C3 /* Phorgiveness.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* msge */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				66B6FECD0CB0083400874A0C /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = msge;
+			sourceTree = "<group>";
+		};
+		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				66B6FEC40CB0080900874A0C /* DocumentController.h */,
+				66B6FEC50CB0080900874A0C /* DocumentController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
+				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66B6FECD0CB0083400874A0C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66B6FECE0CB0083400874A0C /* Credits.rtf */,
+				66B6FED00CB0083400874A0C /* DocumentController.nib */,
+				66B6FED40CB0083400874A0C /* MainMenu.nib */,
+				66B6FED60CB0083400874A0C /* Info.plist */,
+				664A56800CB0579600D5E7F5 /* Read Me.rtf */,
+				66B6FED80CB0083400874A0C /* Phorgiveness.icns */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B992218F06DFE0DD009D73C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B6FEC80CB0080900874A0C /* DocumentController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B992218E06DFE0DD009D73C3 /* Phorgiveness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6653C5FB0CB006F20036DD0F /* Build configuration list for PBXNativeTarget "Phorgiveness" */;
+			buildPhases = (
+				B992218F06DFE0DD009D73C3 /* Headers */,
+				B992219206DFE0DD009D73C3 /* Resources */,
+				B992219706DFE0DD009D73C3 /* Sources */,
+				B992219B06DFE0DD009D73C3 /* Frameworks */,
+				6671ABF50CBABC0300FF0854 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Phorgiveness;
+			productName = msge;
+			productReference = B992219F06DFE0DD009D73C3 /* Phorgiveness.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 6653C5FF0CB006F20036DD0F /* Build configuration list for PBXProject "Phorgiveness" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* msge */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B992218E06DFE0DD009D73C3 /* Phorgiveness */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B992219206DFE0DD009D73C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B6FEDA0CB0083400874A0C /* Credits.rtf in Resources */,
+				66B6FEDB0CB0083400874A0C /* DocumentController.nib in Resources */,
+				66B6FEDD0CB0083400874A0C /* MainMenu.nib in Resources */,
+				66B6FEE00CB0083400874A0C /* Phorgiveness.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6671ABF50CBABC0300FF0854 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "#setup directories\ncd $TARGET_BUILD_DIR\nmkdir $PRODUCT_NAME\n\n#copy stuff over\ncp -RL $SRCROOT/ \"$PRODUCT_NAME/$PRODUCT_NAME Source Code\"\ncp -R $PRODUCT_NAME.app $PRODUCT_NAME/\ncp -R \"$SRCROOT/Resources/Read Me.rtf\" $PRODUCT_NAME/\n\n#clean stuff\ncd \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/\"\nrm -rf _*\ncd $TARGET_BUILD_DIR\nfind $PRODUCT_NAME/ -type f -name \\.DS_Store -exec rm -f {} ';'\nfind -d $PRODUCT_NAME/ -type d -name *~\\.nib -exec rm -rf {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.mode1 -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.pbxuser -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.perspective -exec rm -f {} ';'\nchmod -R 755 $PRODUCT_NAME\n\n#compress stuff\nditto -ck $PRODUCT_NAME $PRODUCT_NAME.zip\n\n#cleanup\nrm -r $PRODUCT_NAME";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B992219706DFE0DD009D73C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B6FEC90CB0080900874A0C /* DocumentController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		66B6FECE0CB0083400874A0C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66B6FECF0CB0083400874A0C /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		66B6FED00CB0083400874A0C /* DocumentController.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66B6FED10CB0083400874A0C /* English */,
+			);
+			name = DocumentController.nib;
+			sourceTree = "<group>";
+		};
+		66B6FED40CB0083400874A0C /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66B6FED50CB0083400874A0C /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6653C5FC0CB006F20036DD0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		6653C5FD0CB006F20036DD0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		6653C6000CB006F20036DD0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = ppc;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = 4.0;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				PREBINDING = NO;
+				PRODUCT_NAME = Phorgiveness;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Debug;
+		};
+		6653C6010CB006F20036DD0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = ppc;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_VERSION = 4.0;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				PREBINDING = NO;
+				PRODUCT_NAME = Phorgiveness;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Release;
+		};
+		6671AC070CBABC1900FF0854 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = "Release-Deployment";
+		};
+		6671AC080CBABC1900FF0854 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = ppc;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_VERSION = 4.0;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				PREBINDING = NO;
+				PRODUCT_NAME = Phorgiveness;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Release-Deployment";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6653C5FB0CB006F20036DD0F /* Build configuration list for PBXNativeTarget "Phorgiveness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6653C5FC0CB006F20036DD0F /* Debug */,
+				6653C5FD0CB006F20036DD0F /* Release */,
+				6671AC070CBABC1900FF0854 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6653C5FF0CB006F20036DD0F /* Build configuration list for PBXProject "Phorgiveness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6653C6000CB006F20036DD0F /* Debug */,
+				6653C6010CB006F20036DD0F /* Release */,
+				6671AC080CBABC1900FF0854 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}

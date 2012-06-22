@@ -1,0 +1,30 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {convert = id; endSheet = id; preferences = id; }; 
+            CLASS = iRipDVD; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                animated = NSButton; 
+                audio = NSPopUpButton; 
+                convert = NSButton; 
+                dvd = NSButtonCell; 
+                language = NSPopUpButton; 
+                menuitem = NSMenuItem; 
+                minutes = NSTextField; 
+                preview = NSButton; 
+                progress = NSProgressIndicator; 
+                quality = NSSlider; 
+                sheet = NSWindow; 
+                size = NSPopUpButton; 
+                status = NSTextField; 
+                vob = NSButtonCell; 
+                width = NSPopUpButton; 
+                window = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

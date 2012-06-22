@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B9286E531594C3710079F1BB /* Read Me.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9286E521594C3710079F1BB /* Read Me.rtf */; };
+		B99359F01594B8E80000AE6C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B99359EF1594B8E80000AE6C /* icon.png */; };
+		B99359F31594C0DE0000AE6C /* MountMenu.icns in Resources */ = {isa = PBXBuildFile; fileRef = B99359F21594C0DE0000AE6C /* MountMenu.icns */; };
+		B99EFA001506DFB80006412C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99EF9FF1506DFB80006412C /* Cocoa.framework */; };
+		B99EFA0A1506DFB80006412C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B99EFA081506DFB80006412C /* InfoPlist.strings */; };
+		B99EFA0C1506DFB80006412C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B99EFA0B1506DFB80006412C /* main.m */; };
+		B99EFA131506DFB80006412C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B99EFA121506DFB80006412C /* AppDelegate.m */; };
+		B99EFA161506DFB80006412C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99EFA141506DFB80006412C /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B9286E521594C3710079F1BB /* Read Me.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		B99359EF1594B8E80000AE6C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		B99359F21594C0DE0000AE6C /* MountMenu.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MountMenu.icns; sourceTree = "<group>"; };
+		B99EF9FB1506DFB80006412C /* MountMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MountMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B99EF9FF1506DFB80006412C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B99EFA021506DFB80006412C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B99EFA031506DFB80006412C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B99EFA041506DFB80006412C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B99EFA071506DFB80006412C /* MountMenu-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MountMenu-Info.plist"; sourceTree = "<group>"; };
+		B99EFA091506DFB80006412C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B99EFA0B1506DFB80006412C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B99EFA0D1506DFB80006412C /* MountMenu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MountMenu-Prefix.pch"; sourceTree = "<group>"; };
+		B99EFA111506DFB80006412C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B99EFA121506DFB80006412C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B99EFA151506DFB80006412C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B99EF9F81506DFB80006412C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B99EFA001506DFB80006412C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B99EF9F01506DFB80006412C = {
+			isa = PBXGroup;
+			children = (
+				B99EFA051506DFB80006412C /* MountMenu */,
+				B99EF9FE1506DFB80006412C /* Frameworks */,
+				B99EF9FC1506DFB80006412C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B99EF9FC1506DFB80006412C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B99EF9FB1506DFB80006412C /* MountMenu.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B99EF9FE1506DFB80006412C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B99EF9FF1506DFB80006412C /* Cocoa.framework */,
+				B99EFA011506DFB80006412C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B99EFA011506DFB80006412C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B99EFA021506DFB80006412C /* AppKit.framework */,
+				B99EFA031506DFB80006412C /* CoreData.framework */,
+				B99EFA041506DFB80006412C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B99EFA051506DFB80006412C /* MountMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B99EFA111506DFB80006412C /* AppDelegate.h */,
+				B99EFA121506DFB80006412C /* AppDelegate.m */,
+				B99EFA141506DFB80006412C /* MainMenu.xib */,
+				B99EFA061506DFB80006412C /* Supporting Files */,
+			);
+			path = MountMenu;
+			sourceTree = "<group>";
+		};
+		B99EFA061506DFB80006412C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9286E521594C3710079F1BB /* Read Me.rtf */,
+				B99359F21594C0DE0000AE6C /* MountMenu.icns */,
+				B99359EF1594B8E80000AE6C /* icon.png */,
+				B99EFA071506DFB80006412C /* MountMenu-Info.plist */,
+				B99EFA081506DFB80006412C /* InfoPlist.strings */,
+				B99EFA0B1506DFB80006412C /* main.m */,
+				B99EFA0D1506DFB80006412C /* MountMenu-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B99EF9FA1506DFB80006412C /* MountMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B99EFA191506DFB80006412C /* Build configuration list for PBXNativeTarget "MountMenu" */;
+			buildPhases = (
+				B99EF9F71506DFB80006412C /* Sources */,
+				B99EF9F81506DFB80006412C /* Frameworks */,
+				B99EF9F91506DFB80006412C /* Resources */,
+				B9286E501594C2AB0079F1BB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MountMenu;
+			productName = MountMenu;
+			productReference = B99EF9FB1506DFB80006412C /* MountMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B99EF9F21506DFB80006412C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = CoreCode;
+			};
+			buildConfigurationList = B99EF9F51506DFB80006412C /* Build configuration list for PBXProject "MountMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B99EF9F01506DFB80006412C;
+			productRefGroup = B99EF9FC1506DFB80006412C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B99EF9FA1506DFB80006412C /* MountMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B99EF9F91506DFB80006412C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B99EFA0A1506DFB80006412C /* InfoPlist.strings in Resources */,
+				B99EFA161506DFB80006412C /* MainMenu.xib in Resources */,
+				B99359F01594B8E80000AE6C /* icon.png in Resources */,
+				B99359F31594C0DE0000AE6C /* MountMenu.icns in Resources */,
+				B9286E531594C3710079F1BB /* Read Me.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B9286E501594C2AB0079F1BB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "#setup directories\ncd $TARGET_BUILD_DIR\nmkdir $PRODUCT_NAME\n\n#copy stuff over\ncp -RL $SRCROOT/ \"$PRODUCT_NAME/$PRODUCT_NAME Source Code\"\ncp -R $PRODUCT_NAME.app $PRODUCT_NAME/\ncp -R \"$SRCROOT/$PRODUCT_NAME/Read Me.rtf\" $PRODUCT_NAME/\n\n#clean stuff\ncd \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/\"\nrm -rf _*\ncd $TARGET_BUILD_DIR\nfind $PRODUCT_NAME/ -type f -name \\.DS_Store -exec rm -f {} ';'\nfind -d $PRODUCT_NAME/ -type d -name *~\\.nib -exec rm -rf {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.mode1 -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.pbxuser -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.perspective -exec rm -f {} ';'\nchmod -R 755 $PRODUCT_NAME\n\n#compress stuff\nditto -ck $PRODUCT_NAME $PRODUCT_NAME.zip\n\n#cleanup\nrm -r $PRODUCT_NAME";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B99EF9F71506DFB80006412C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B99EFA0C1506DFB80006412C /* main.m in Sources */,
+				B99EFA131506DFB80006412C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B99EFA081506DFB80006412C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B99EFA091506DFB80006412C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B99EFA141506DFB80006412C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B99EFA151506DFB80006412C /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B99EFA171506DFB80006412C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = "";
+			};
+			name = Debug;
+		};
+		B99EFA181506DFB80006412C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = "";
+			};
+			name = Release;
+		};
+		B99EFA1A1506DFB80006412C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MountMenu/MountMenu-Prefix.pch";
+				INFOPLIST_FILE = "MountMenu/MountMenu-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B99EFA1B1506DFB80006412C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MountMenu/MountMenu-Prefix.pch";
+				INFOPLIST_FILE = "MountMenu/MountMenu-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B99EF9F51506DFB80006412C /* Build configuration list for PBXProject "MountMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B99EFA171506DFB80006412C /* Debug */,
+				B99EFA181506DFB80006412C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B99EFA191506DFB80006412C /* Build configuration list for PBXNativeTarget "MountMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B99EFA1A1506DFB80006412C /* Debug */,
+				B99EFA1B1506DFB80006412C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B99EF9F21506DFB80006412C /* Project object */;
+}

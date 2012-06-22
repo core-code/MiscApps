@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>*</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>MarathonSavedGame</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>sga∞</string>
+				<string>sga2</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>NSDocumentClass</key>
+			<string>DocumentController</string>
+		</dict>
+	</array>
+
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundleIconFile</key>
+	<string>${PRODUCT_NAME}.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.corecode.${PRODUCT_NAME}</string>
+	<key>CFBundleDisplayName</key>
+	<string>${PRODUCT_NAME}</string>
+	
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>PHOR</string>	
+
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright 2002, CoreCode.</string>	
+	<key>CFBundleVersion</key>
+	<string>1.0a3</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0a3</string>
+</dict>
+</plist>

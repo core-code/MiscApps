@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B985CF460F4B0AE800CE9205 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B985CF470F4B0AE800CE9205 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B999E3780EF45AC10023592E /* OpenGL.framework */; };
+		B985CF480F4B0AE800CE9205 /* BGHUDAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B934FA5B0EF7195200B0FC5F /* BGHUDAppKit.framework */; };
+		B985CF4A0F4B0AE800CE9205 /* BGHUDAppKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B934FA5B0EF7195200B0FC5F /* BGHUDAppKit.framework */; };
+		B99DD22C1482C0CF00A8162F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99DD22B1482C0CF00A8162F /* MainMenu.xib */; };
+		B9C9EDAB0F560E4300FCBFA2 /* Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D0C00F56078600438E31 /* Camera.mm */; };
+		B9C9EDAD0F560E4300FCBFA2 /* CocoaOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1960F56078600438E31 /* CocoaOpenGLView.mm */; };
+		B9C9EDB10F560E4300FCBFA2 /* Light.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D19A0F56078600438E31 /* Light.mm */; };
+		B9C9EDB30F560E4300FCBFA2 /* Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1A00F56078600438E31 /* Scene.mm */; };
+		B9C9EDB50F560E4300FCBFA2 /* SceneNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1A20F56078600438E31 /* SceneNode.mm */; };
+		B9C9EDB70F560E4300FCBFA2 /* Utilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1A40F56078600438E31 /* Utilities.mm */; };
+		B9C9EDB90F560E4300FCBFA2 /* LSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1A60F56078600438E31 /* LSystem.mm */; };
+		B9C9EDBB0F560E4300FCBFA2 /* LSystemSimulation.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1A80F56078600438E31 /* LSystemSimulation.mm */; };
+		B9C9EE190F560F7C00FCBFA2 /* CoreLS.icns in Resources */ = {isa = PBXBuildFile; fileRef = B9C9EE150F560F7C00FCBFA2 /* CoreLS.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B985CF490F4B0AE800CE9205 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B985CF4A0F4B0AE800CE9205 /* BGHUDAppKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		B934FA5B0EF7195200B0FC5F /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = Frameworks/BGHUDAppKit.framework; sourceTree = "<group>"; };
+		B985CF4E0F4B0AE800CE9205 /* CoreLS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreLS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B999E3780EF45AC10023592E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		B99DD22B1482C0CF00A8162F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		B9C0D0BF0F56078600438E31 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		B9C0D0C00F56078600438E31 /* Camera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Camera.mm; sourceTree = "<group>"; };
+		B9C0D1950F56078600438E31 /* CocoaOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaOpenGLView.h; sourceTree = "<group>"; };
+		B9C0D1960F56078600438E31 /* CocoaOpenGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CocoaOpenGLView.mm; sourceTree = "<group>"; };
+		B9C0D1970F56078600438E31 /* Core3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core3D.h; sourceTree = "<group>"; };
+		B9C0D1980F56078600438E31 /* Core3D_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core3D_Prefix.pch; sourceTree = "<group>"; };
+		B9C0D1990F56078600438E31 /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
+		B9C0D19A0F56078600438E31 /* Light.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Light.mm; sourceTree = "<group>"; };
+		B9C0D19F0F56078600438E31 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		B9C0D1A00F56078600438E31 /* Scene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Scene.mm; sourceTree = "<group>"; };
+		B9C0D1A10F56078600438E31 /* SceneNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneNode.h; sourceTree = "<group>"; };
+		B9C0D1A20F56078600438E31 /* SceneNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneNode.mm; sourceTree = "<group>"; };
+		B9C0D1A30F56078600438E31 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		B9C0D1A40F56078600438E31 /* Utilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Utilities.mm; sourceTree = "<group>"; };
+		B9C0D1A50F56078600438E31 /* LSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSystem.h; sourceTree = "<group>"; };
+		B9C0D1A60F56078600438E31 /* LSystem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LSystem.mm; sourceTree = "<group>"; };
+		B9C0D1A70F56078600438E31 /* LSystemSimulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSystemSimulation.h; sourceTree = "<group>"; };
+		B9C0D1A80F56078600438E31 /* LSystemSimulation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LSystemSimulation.mm; sourceTree = "<group>"; };
+		B9C9EE150F560F7C00FCBFA2 /* CoreLS.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CoreLS.icns; sourceTree = "<group>"; };
+		B9C9EE160F560F7C00FCBFA2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9C9EE180F560F7C00FCBFA2 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B985CF450F4B0AE800CE9205 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B985CF460F4B0AE800CE9205 /* Cocoa.framework in Frameworks */,
+				B985CF470F4B0AE800CE9205 /* OpenGL.framework in Frameworks */,
+				B985CF480F4B0AE800CE9205 /* BGHUDAppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B934FA5B0EF7195200B0FC5F /* BGHUDAppKit.framework */,
+				B999E3780EF45AC10023592E /* OpenGL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B985CF4E0F4B0AE800CE9205 /* CoreLS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* fraktale */ = {
+			isa = PBXGroup;
+			children = (
+				B9C0D0BD0F56078600438E31 /* Classes */,
+				B9C9EE140F560F7C00FCBFA2 /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = fraktale;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9C0D0BD0F56078600438E31 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B9C0D0BE0F56078600438E31 /* Engine */,
+				B9C0D1A50F56078600438E31 /* LSystem.h */,
+				B9C0D1A60F56078600438E31 /* LSystem.mm */,
+				B9C0D1A70F56078600438E31 /* LSystemSimulation.h */,
+				B9C0D1A80F56078600438E31 /* LSystemSimulation.mm */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B9C0D0BE0F56078600438E31 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				B9C0D0BF0F56078600438E31 /* Camera.h */,
+				B9C0D0C00F56078600438E31 /* Camera.mm */,
+				B9C0D1950F56078600438E31 /* CocoaOpenGLView.h */,
+				B9C0D1960F56078600438E31 /* CocoaOpenGLView.mm */,
+				B9C0D1970F56078600438E31 /* Core3D.h */,
+				B9C0D1980F56078600438E31 /* Core3D_Prefix.pch */,
+				B9C0D1990F56078600438E31 /* Light.h */,
+				B9C0D19A0F56078600438E31 /* Light.mm */,
+				B9C0D19F0F56078600438E31 /* Scene.h */,
+				B9C0D1A00F56078600438E31 /* Scene.mm */,
+				B9C0D1A10F56078600438E31 /* SceneNode.h */,
+				B9C0D1A20F56078600438E31 /* SceneNode.mm */,
+				B9C0D1A30F56078600438E31 /* Utilities.h */,
+				B9C0D1A40F56078600438E31 /* Utilities.mm */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		B9C9EE140F560F7C00FCBFA2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B99DD22B1482C0CF00A8162F /* MainMenu.xib */,
+				B9C9EE150F560F7C00FCBFA2 /* CoreLS.icns */,
+				B9C9EE160F560F7C00FCBFA2 /* Info.plist */,
+				B9C9EE180F560F7C00FCBFA2 /* Read Me.rtf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B985CF250F4B0AE800CE9205 /* CoreLS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B985CF4B0F4B0AE800CE9205 /* Build configuration list for PBXNativeTarget "CoreLS" */;
+			buildPhases = (
+				B985CF260F4B0AE800CE9205 /* Resources */,
+				B985CF3A0F4B0AE800CE9205 /* Sources */,
+				B985CF450F4B0AE800CE9205 /* Frameworks */,
+				B985CF490F4B0AE800CE9205 /* CopyFiles */,
+				B9C9EDFE0F560F0300FCBFA2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreLS;
+			productInstallPath = "$(HOME)/Applications";
+			productName = fraktale;
+			productReference = B985CF4E0F4B0AE800CE9205 /* CoreLS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CoreLS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* fraktale */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B985CF250F4B0AE800CE9205 /* CoreLS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B985CF260F4B0AE800CE9205 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9C9EE190F560F7C00FCBFA2 /* CoreLS.icns in Resources */,
+				B99DD22C1482C0CF00A8162F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B9C9EDFE0F560F0300FCBFA2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "#setup directories\ncd $TARGET_BUILD_DIR\nmkdir $PRODUCT_NAME\n\n#copy stuff over\ncp -R $PRODUCT_NAME.app $PRODUCT_NAME/\ncp -R \"$SRCROOT/Resources/Read Me.rtf\" $PRODUCT_NAME/\n\n#clean stuff\ncd $TARGET_BUILD_DIR\nfind $PRODUCT_NAME/ -type f -name \\.DS_Store -exec rm -f {} ';'\nchmod -R 755 $PRODUCT_NAME\n\n#compress stuff\nditto -ck $PRODUCT_NAME $PRODUCT_NAME.zip\n\n#cleanup\nrm -r $PRODUCT_NAME";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B985CF3A0F4B0AE800CE9205 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9C9EDAB0F560E4300FCBFA2 /* Camera.mm in Sources */,
+				B9C9EDAD0F560E4300FCBFA2 /* CocoaOpenGLView.mm in Sources */,
+				B9C9EDB10F560E4300FCBFA2 /* Light.mm in Sources */,
+				B9C9EDB30F560E4300FCBFA2 /* Scene.mm in Sources */,
+				B9C9EDB50F560E4300FCBFA2 /* SceneNode.mm in Sources */,
+				B9C9EDB70F560E4300FCBFA2 /* Utilities.mm in Sources */,
+				B9C9EDB90F560E4300FCBFA2 /* LSystem.mm in Sources */,
+				B9C9EDBB0F560E4300FCBFA2 /* LSystemSimulation.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B985CF4C0F4B0AE800CE9205 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		B985CF4D0F4B0AE800CE9205 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		B9C9EDEC0F560ED000FCBFA2 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks/\"",
+				);
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OBJC_CALL_CXX_CDTORS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/Engine/Core3D_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"Classes/Engine/**",
+					Foreign,
+					"Code/**",
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				OTHER_LDFLAGS = "-lbz2";
+				PRODUCT_NAME = CoreLS;
+				SDKROOT = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Release-Deployment";
+		};
+		B9C9EDED0F560ED000FCBFA2 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = "Release-Deployment";
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks/\"",
+				);
+				GCC_OBJC_CALL_CXX_CDTORS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/Engine/Core3D_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"Classes/Engine/**",
+					Foreign,
+					"Code/**",
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				OTHER_LDFLAGS = "-lbz2";
+				PRODUCT_NAME = CoreLS;
+				SDKROOT = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks/\"",
+				);
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OBJC_CALL_CXX_CDTORS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/Engine/Core3D_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"Classes/Engine/**",
+					Foreign,
+					"Code/**",
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				OTHER_LDFLAGS = "-lbz2";
+				PRODUCT_NAME = CoreLS;
+				SDKROOT = "";
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B985CF4B0F4B0AE800CE9205 /* Build configuration list for PBXNativeTarget "CoreLS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B985CF4C0F4B0AE800CE9205 /* Debug */,
+				B985CF4D0F4B0AE800CE9205 /* Release */,
+				B9C9EDED0F560ED000FCBFA2 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CoreLS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				B9C9EDEC0F560ED000FCBFA2 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

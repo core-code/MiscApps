@@ -1,0 +1,77 @@
+#import <TargetConditionals.h>
+#include <mach/mach.h>
+#include <mach/mach_time.h>
+
+#if defined(TARGET_OS_IPHONE) && TARGET_OS_IPHONE
+	#import <QuartzCore/QuartzCore.h>
+	#ifdef __OBJC__
+		#import <UIKit/UIKit.h>
+		#include <OpenGLES/EAGL.h>
+	#import <OpenGLES/EAGLDrawable.h>
+	#endif	
+	
+	#include <OpenGLES/ES1/gl.h>
+	#include <OpenGLES/ES1/glext.h>
+	#include <AudioToolbox/AudioToolbox.h>
+	#import <QuartzCore/QuartzCore.h>
+	#define Color UIColor
+#else
+	#include <OpenGL/gl.h>
+	#include <OpenGL/glext.h>
+	#include <OpenGL/glu.h>
+	#include <OpenGL/OpenGL.h>
+
+	#include <Carbon/Carbon.h>
+	
+	#ifdef __OBJC__
+		#import <Cocoa/Cocoa.h>
+	#endif
+	#define Color NSColor	
+#endif
+
+#ifdef __cplusplus
+	#import "cml/cml.h"
+	using namespace std;
+	using namespace cml;
+	typedef cml::vector< float,  external<3> > vector3fe;	
+	typedef cml::matrix< float,  external<4,4>, col_basis, col_major > matrix44f_ce;
+#endif
+
+#ifdef SDL_BACKEND
+#include "SDL.h"
+
+static inline void fatal(const char *err, ...) {
+	va_list ap;
+
+	va_start (ap, err);
+	vfprintf (stderr, err, ap);
+	va_end (ap);
+	SDL_ShowCursor(SDL_ENABLE);	
+	SDL_Quit();
+	exit(1);
+}
+#else
+#define fatal(fmt, ...) {char *tmp = NULL; asprintf (&tmp, fmt, ## __VA_ARGS__); fprintf(stderr, fmt, ## __VA_ARGS__); NSRunCriticalAlertPanel(@"Core3D", [NSString stringWithUTF8String:tmp], @"OK", nil, nil); exit(1);}
+#endif
+	
+#if DEBUG
+	#ifdef TARGET_OS_IPHONE
+		#define glError() { \
+			GLenum err = glGetError(); \
+			while (err != GL_NO_ERROR) { \
+				fprintf(stderr, "glError caught at %s:%u\n", __FILE__, __LINE__); \
+				err = glGetError(); \
+			} \
+		}	
+	#else
+		#define glError() { \
+			GLenum err = glGetError(); \
+			while (err != GL_NO_ERROR) { \
+				fprintf(stderr, "glError: %s caught at %s:%u\n", (char *)gluErrorString(err), __FILE__, __LINE__); \
+				err = glGetError(); \
+			} \
+		}
+	#endif
+#else
+	#define glError() 
+#endif

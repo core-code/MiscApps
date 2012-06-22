@@ -1,0 +1,361 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		665C7B740CBAA08800A399E0 /* CHMExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = 665C7B6E0CBAA08800A399E0 /* CHMExtractor.h */; };
+		665C7B750CBAA08800A399E0 /* CHMExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 665C7B6F0CBAA08800A399E0 /* CHMExtractor.m */; };
+		665C7B760CBAA08800A399E0 /* StatusPanelController.h in Headers */ = {isa = PBXBuildFile; fileRef = 665C7B700CBAA08800A399E0 /* StatusPanelController.h */; };
+		665C7B770CBAA08800A399E0 /* StatusPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665C7B710CBAA08800A399E0 /* StatusPanelController.m */; };
+		665C7B780CBAA08800A399E0 /* View.h in Headers */ = {isa = PBXBuildFile; fileRef = 665C7B720CBAA08800A399E0 /* View.h */; };
+		665C7B790CBAA08800A399E0 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 665C7B730CBAA08800A399E0 /* View.m */; };
+		665C7B870CBAA09800A399E0 /* chm.icns in Resources */ = {isa = PBXBuildFile; fileRef = 665C7B7F0CBAA09800A399E0 /* chm.icns */; };
+		665C7B880CBAA09800A399E0 /* chmdump in Resources */ = {isa = PBXBuildFile; fileRef = 665C7B800CBAA09800A399E0 /* chmdump */; };
+		665C7B890CBAA09800A399E0 /* CHMExtractor.icns in Resources */ = {isa = PBXBuildFile; fileRef = 665C7B810CBAA09800A399E0 /* CHMExtractor.icns */; };
+		665C7B8A0CBAA09800A399E0 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 665C7B820CBAA09800A399E0 /* MainMenu.nib */; };
+		665C7B8B0CBAA09800A399E0 /* Status.nib in Resources */ = {isa = PBXBuildFile; fileRef = 665C7B840CBAA09800A399E0 /* Status.nib */; };
+		665C7B8C0CBAA09800A399E0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 665C7B860CBAA09800A399E0 /* Info.plist */; };
+		667228390CC54F700008B9CC /* FileUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 667228350CC54F700008B9CC /* FileUtilities.h */; };
+		6672283A0CC54F700008B9CC /* FileUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 667228360CC54F700008B9CC /* FileUtilities.m */; };
+		6672283B0CC54F700008B9CC /* TaskWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 667228370CC54F700008B9CC /* TaskWrapper.h */; };
+		6672283C0CC54F700008B9CC /* TaskWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 667228380CC54F700008B9CC /* TaskWrapper.m */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		665C7B6E0CBAA08800A399E0 /* CHMExtractor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CHMExtractor.h; sourceTree = "<group>"; };
+		665C7B6F0CBAA08800A399E0 /* CHMExtractor.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CHMExtractor.m; sourceTree = "<group>"; };
+		665C7B700CBAA08800A399E0 /* StatusPanelController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = StatusPanelController.h; sourceTree = "<group>"; };
+		665C7B710CBAA08800A399E0 /* StatusPanelController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = StatusPanelController.m; sourceTree = "<group>"; };
+		665C7B720CBAA08800A399E0 /* View.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		665C7B730CBAA08800A399E0 /* View.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
+		665C7B7F0CBAA09800A399E0 /* chm.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = chm.icns; sourceTree = "<group>"; };
+		665C7B800CBAA09800A399E0 /* chmdump */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = chmdump; sourceTree = "<group>"; };
+		665C7B810CBAA09800A399E0 /* CHMExtractor.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CHMExtractor.icns; sourceTree = "<group>"; };
+		665C7B830CBAA09800A399E0 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		665C7B850CBAA09800A399E0 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Status.nib; sourceTree = "<group>"; };
+		665C7B860CBAA09800A399E0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6671AC1A0CBABC2D00FF0854 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		667228350CC54F700008B9CC /* FileUtilities.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FileUtilities.h; sourceTree = "<group>"; };
+		667228360CC54F700008B9CC /* FileUtilities.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FileUtilities.m; sourceTree = "<group>"; };
+		667228370CC54F700008B9CC /* TaskWrapper.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TaskWrapper.h; sourceTree = "<group>"; };
+		667228380CC54F700008B9CC /* TaskWrapper.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TaskWrapper.m; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* CHMExtractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHMExtractor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* CHMExtractor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CHMExtractor */ = {
+			isa = PBXGroup;
+			children = (
+				665C7B6D0CBAA08800A399E0 /* Classes */,
+				667228340CC54F700008B9CC /* Foreign Code */,
+				665C7B7E0CBAA09800A399E0 /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CHMExtractor;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		665C7B6D0CBAA08800A399E0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				665C7B6E0CBAA08800A399E0 /* CHMExtractor.h */,
+				665C7B6F0CBAA08800A399E0 /* CHMExtractor.m */,
+				665C7B700CBAA08800A399E0 /* StatusPanelController.h */,
+				665C7B710CBAA08800A399E0 /* StatusPanelController.m */,
+				665C7B720CBAA08800A399E0 /* View.h */,
+				665C7B730CBAA08800A399E0 /* View.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		665C7B7E0CBAA09800A399E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6671AC1A0CBABC2D00FF0854 /* Read Me.rtf */,
+				665C7B7F0CBAA09800A399E0 /* chm.icns */,
+				665C7B800CBAA09800A399E0 /* chmdump */,
+				665C7B810CBAA09800A399E0 /* CHMExtractor.icns */,
+				665C7B820CBAA09800A399E0 /* MainMenu.nib */,
+				665C7B840CBAA09800A399E0 /* Status.nib */,
+				665C7B860CBAA09800A399E0 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		667228340CC54F700008B9CC /* Foreign Code */ = {
+			isa = PBXGroup;
+			children = (
+				667228350CC54F700008B9CC /* FileUtilities.h */,
+				667228360CC54F700008B9CC /* FileUtilities.m */,
+				667228370CC54F700008B9CC /* TaskWrapper.h */,
+				667228380CC54F700008B9CC /* TaskWrapper.m */,
+			);
+			path = "Foreign Code";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D1107270486CEB800E47090 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				665C7B740CBAA08800A399E0 /* CHMExtractor.h in Headers */,
+				665C7B760CBAA08800A399E0 /* StatusPanelController.h in Headers */,
+				665C7B780CBAA08800A399E0 /* View.h in Headers */,
+				667228390CC54F700008B9CC /* FileUtilities.h in Headers */,
+				6672283B0CC54F700008B9CC /* TaskWrapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* CHMExtractor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 665FFC9F0CB15F76000718DA /* Build configuration list for PBXNativeTarget "CHMExtractor" */;
+			buildPhases = (
+				8D1107270486CEB800E47090 /* Headers */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				6671ABC50CBABB7100FF0854 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CHMExtractor;
+			productInstallPath = "$(HOME)/Applications";
+			productName = CHMExtractor;
+			productReference = 8D1107320486CEB800E47090 /* CHMExtractor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 665FFCA30CB15F76000718DA /* Build configuration list for PBXProject "CHMExtractor" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CHMExtractor */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* CHMExtractor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				665C7B870CBAA09800A399E0 /* chm.icns in Resources */,
+				665C7B880CBAA09800A399E0 /* chmdump in Resources */,
+				665C7B890CBAA09800A399E0 /* CHMExtractor.icns in Resources */,
+				665C7B8A0CBAA09800A399E0 /* MainMenu.nib in Resources */,
+				665C7B8B0CBAA09800A399E0 /* Status.nib in Resources */,
+				665C7B8C0CBAA09800A399E0 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6671ABC50CBABB7100FF0854 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "#setup directories\ncd $TARGET_BUILD_DIR\nmkdir $PRODUCT_NAME\n\n#copy stuff over\ncp -RL $SRCROOT/ \"$PRODUCT_NAME/$PRODUCT_NAME Source Code\"\ncp -R $PRODUCT_NAME.app $PRODUCT_NAME/\ncp -R \"$SRCROOT/Resources/Read Me.rtf\" $PRODUCT_NAME/\n\n#clean stuff\ncd \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/\"\nrm -rf _*\ncd $TARGET_BUILD_DIR\nfind $PRODUCT_NAME/ -type f -name \\.DS_Store -exec rm -f {} ';'\nfind -d $PRODUCT_NAME/ -type d -name *~\\.nib -exec rm -rf {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.mode1 -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.pbxuser -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.perspective -exec rm -f {} ';'\nchmod -R 755 $PRODUCT_NAME\n\n#compress stuff\nditto -ck $PRODUCT_NAME $PRODUCT_NAME.zip\n\n#cleanup\nrm -r $PRODUCT_NAME";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				665C7B750CBAA08800A399E0 /* CHMExtractor.m in Sources */,
+				665C7B770CBAA08800A399E0 /* StatusPanelController.m in Sources */,
+				665C7B790CBAA08800A399E0 /* View.m in Sources */,
+				6672283A0CC54F700008B9CC /* FileUtilities.m in Sources */,
+				6672283C0CC54F700008B9CC /* TaskWrapper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		665C7B820CBAA09800A399E0 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				665C7B830CBAA09800A399E0 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		665C7B840CBAA09800A399E0 /* Status.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				665C7B850CBAA09800A399E0 /* English */,
+			);
+			name = Status.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		665FFCA00CB15F76000718DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		665FFCA10CB15F76000718DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		665FFCA40CB15F76000718DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = ppc;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				PREBINDING = NO;
+				PRODUCT_NAME = CHMExtractor;
+				SDKROOT = /Developer/SDKs/MacOSX10.2.8.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Debug;
+		};
+		665FFCA50CB15F76000718DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = ppc;
+				GCC_DYNAMIC_NO_PIC = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				PREBINDING = NO;
+				PRODUCT_NAME = CHMExtractor;
+				SDKROOT = /Developer/SDKs/MacOSX10.2.8.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Release;
+		};
+		6671ABDD0CBABB8300FF0854 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = "Release-Deployment";
+		};
+		6671ABDE0CBABB8300FF0854 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = ppc;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_DYNAMIC_NO_PIC = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				PREBINDING = NO;
+				PRODUCT_NAME = CHMExtractor;
+				SDKROOT = /Developer/SDKs/MacOSX10.2.8.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Release-Deployment";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		665FFC9F0CB15F76000718DA /* Build configuration list for PBXNativeTarget "CHMExtractor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				665FFCA00CB15F76000718DA /* Debug */,
+				665FFCA10CB15F76000718DA /* Release */,
+				6671ABDD0CBABB8300FF0854 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		665FFCA30CB15F76000718DA /* Build configuration list for PBXProject "CHMExtractor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				665FFCA40CB15F76000718DA /* Debug */,
+				665FFCA50CB15F76000718DA /* Release */,
+				6671ABDE0CBABB8300FF0854 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

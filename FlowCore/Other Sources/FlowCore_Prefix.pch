@@ -1,0 +1,37 @@
+//
+// Prefix header for all source files of the 'FlowCore' target in the 'FlowCore' project
+//
+
+#include <OpenGL/gl.h>
+#include <OpenGL/glext.h>
+#include <OpenGL/glu.h>
+#include <OpenGL/OpenGL.h>
+
+#include <Carbon/Carbon.h>
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+	#import "NSData+Bzip2.h"	
+#endif
+
+#define fatal(fmt, ...) {char *tmp = NULL; asprintf (&tmp, fmt, ## __VA_ARGS__); fprintf(stderr, fmt, ## __VA_ARGS__); NSRunCriticalAlertPanel(@"Core3D", [NSString stringWithUTF8String:tmp], @"OK", nil, nil); exit(1);}
+
+#define glError() { \
+GLenum err = glGetError(); \
+while (err != GL_NO_ERROR) { \
+fprintf(stderr, "glError: %s caught at %s:%u\n", (char *)gluErrorString(err), __FILE__, __LINE__); \
+err = glGetError(); \
+} \
+}
+
+#include <mach/mach.h>
+#include <mach/mach_time.h>
+
+
+#ifdef __cplusplus
+#import "cml/cml.h"
+using namespace std;
+using namespace cml;
+typedef cml::vector< float,  external<3> > vector3fe;	
+typedef cml::matrix< float,  external<4,4>, col_basis, col_major > matrix44f_ce;
+#endif

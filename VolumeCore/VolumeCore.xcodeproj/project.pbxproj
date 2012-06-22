@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		B9072F701483E30700FB4B2A /* VoxelDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93CE5F60F61B12800E073A7 /* VoxelDocument.xib */; };
+		B93CE5D10F61B01200E073A7 /* CocoaOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = B93CE5CC0F61B01200E073A7 /* CocoaOpenGLView.m */; };
+		B93CE5D20F61B01200E073A7 /* TransferFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B93CE5CE0F61B01200E073A7 /* TransferFunctionView.m */; };
+		B93CE5D30F61B01200E073A7 /* VoxelDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = B93CE5D00F61B01200E073A7 /* VoxelDocument.m */; };
+		B93CE5DA0F61B01800E073A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B93CE5D50F61B01800E073A7 /* main.m */; };
+		B93CE5DB0F61B01800E073A7 /* NSData+Bzip2.m in Sources */ = {isa = PBXBuildFile; fileRef = B93CE5D70F61B01800E073A7 /* NSData+Bzip2.m */; };
+		B93CE6030F61B12800E073A7 /* 2d.frag in Resources */ = {isa = PBXBuildFile; fileRef = B93CE5EE0F61B12800E073A7 /* 2d.frag */; };
+		B93CE6040F61B12800E073A7 /* 2d.vert in Resources */ = {isa = PBXBuildFile; fileRef = B93CE5EF0F61B12800E073A7 /* 2d.vert */; };
+		B93CE6050F61B12800E073A7 /* 3d.frag in Resources */ = {isa = PBXBuildFile; fileRef = B93CE5F00F61B12800E073A7 /* 3d.frag */; };
+		B93CE6060F61B12800E073A7 /* 3d.vert in Resources */ = {isa = PBXBuildFile; fileRef = B93CE5F10F61B12800E073A7 /* 3d.vert */; };
+		B93CE6070F61B12800E073A7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B93CE5F20F61B12800E073A7 /* Credits.rtf */; };
+		B93CE6080F61B12800E073A7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93CE5F40F61B12800E073A7 /* MainMenu.xib */; };
+		B93CE60E0F61B12800E073A7 /* raypos.frag in Resources */ = {isa = PBXBuildFile; fileRef = B93CE5FC0F61B12800E073A7 /* raypos.frag */; };
+		B93CE60F0F61B12800E073A7 /* raypos.vert in Resources */ = {isa = PBXBuildFile; fileRef = B93CE5FD0F61B12800E073A7 /* raypos.vert */; };
+		B93CE6110F61B12800E073A7 /* stagbeetle277x277x164.dat.bz2 in Resources */ = {isa = PBXBuildFile; fileRef = B93CE5FF0F61B12800E073A7 /* stagbeetle277x277x164.dat.bz2 */; };
+		B93CE6120F61B12800E073A7 /* VolumeCore.icns in Resources */ = {isa = PBXBuildFile; fileRef = B93CE6000F61B12800E073A7 /* VolumeCore.icns */; };
+		B93CE6130F61B12800E073A7 /* VolumeCoreDocument.icns in Resources */ = {isa = PBXBuildFile; fileRef = B93CE6010F61B12800E073A7 /* VolumeCoreDocument.icns */; };
+		B93CE6140F61B12800E073A7 /* XMasTree.dat.bz2 in Resources */ = {isa = PBXBuildFile; fileRef = B93CE6020F61B12800E073A7 /* XMasTree.dat.bz2 */; };
+		B93CE6280F61B21D00E073A7 /* BGHUDAppKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B940B5560EA7D30B0026F05D /* BGHUDAppKit.framework */; };
+		B940B5570EA7D30B0026F05D /* BGHUDAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B940B5560EA7D30B0026F05D /* BGHUDAppKit.framework */; };
+		B975C1FF0EAFD19B00932C34 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B975C1FE0EAFD19B00932C34 /* OpenGL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B940B57E0EA7D31E0026F05D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B93CE6280F61B21D00E073A7 /* BGHUDAppKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FBA07B3F13500E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D15AC370486D014006FF6A4 /* VolumeCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolumeCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B93CE5CB0F61B01200E073A7 /* CocoaOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaOpenGLView.h; sourceTree = "<group>"; };
+		B93CE5CC0F61B01200E073A7 /* CocoaOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaOpenGLView.m; sourceTree = "<group>"; };
+		B93CE5CD0F61B01200E073A7 /* TransferFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferFunctionView.h; sourceTree = "<group>"; };
+		B93CE5CE0F61B01200E073A7 /* TransferFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferFunctionView.m; sourceTree = "<group>"; };
+		B93CE5CF0F61B01200E073A7 /* VoxelDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoxelDocument.h; sourceTree = "<group>"; };
+		B93CE5D00F61B01200E073A7 /* VoxelDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoxelDocument.m; sourceTree = "<group>"; };
+		B93CE5D50F61B01800E073A7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B93CE5D60F61B01800E073A7 /* NSData+Bzip2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Bzip2.h"; sourceTree = "<group>"; };
+		B93CE5D70F61B01800E073A7 /* NSData+Bzip2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Bzip2.m"; sourceTree = "<group>"; };
+		B93CE5D80F61B01800E073A7 /* VolumeCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeCore.h; sourceTree = "<group>"; };
+		B93CE5D90F61B01800E073A7 /* VolumeCore_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeCore_Prefix.pch; sourceTree = "<group>"; };
+		B93CE5EE0F61B12800E073A7 /* 2d.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 2d.frag; sourceTree = "<group>"; };
+		B93CE5EF0F61B12800E073A7 /* 2d.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 2d.vert; sourceTree = "<group>"; };
+		B93CE5F00F61B12800E073A7 /* 3d.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 3d.frag; sourceTree = "<group>"; };
+		B93CE5F10F61B12800E073A7 /* 3d.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 3d.vert; sourceTree = "<group>"; };
+		B93CE5F30F61B12800E073A7 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		B93CE5F50F61B12800E073A7 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B93CE5F70F61B12800E073A7 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/VoxelDocument.xib; sourceTree = "<group>"; };
+		B93CE5F90F61B12800E073A7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B93CE5FC0F61B12800E073A7 /* raypos.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = raypos.frag; sourceTree = "<group>"; };
+		B93CE5FD0F61B12800E073A7 /* raypos.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = raypos.vert; sourceTree = "<group>"; };
+		B93CE5FF0F61B12800E073A7 /* stagbeetle277x277x164.dat.bz2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = stagbeetle277x277x164.dat.bz2; sourceTree = "<group>"; };
+		B93CE6000F61B12800E073A7 /* VolumeCore.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = VolumeCore.icns; sourceTree = "<group>"; };
+		B93CE6010F61B12800E073A7 /* VolumeCoreDocument.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = VolumeCoreDocument.icns; sourceTree = "<group>"; };
+		B93CE6020F61B12800E073A7 /* XMasTree.dat.bz2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = XMasTree.dat.bz2; sourceTree = "<group>"; };
+		B93CE61F0F61B18D00E073A7 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		B940B5560EA7D30B0026F05D /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = Frameworks/BGHUDAppKit.framework; sourceTree = "<group>"; };
+		B975C1FE0EAFD19B00932C34 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D15AC330486D014006FF6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				B940B5570EA7D30B0026F05D /* BGHUDAppKit.framework in Frameworks */,
+				B975C1FF0EAFD19B00932C34 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B975C1FE0EAFD19B00932C34 /* OpenGL.framework */,
+				B940B5560EA7D30B0026F05D /* BGHUDAppKit.framework */,
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+				13E42FBA07B3F13500E4EEF1 /* CoreData.framework */,
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D15AC370486D014006FF6A4 /* VolumeCore.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* VolumeCore */ = {
+			isa = PBXGroup;
+			children = (
+				B93CE5CA0F61B01200E073A7 /* Classes */,
+				B93CE5D40F61B01800E073A7 /* OtherSources */,
+				B93CE5ED0F61B12800E073A7 /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = VolumeCore;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
+				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B93CE5CA0F61B01200E073A7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B93CE5CB0F61B01200E073A7 /* CocoaOpenGLView.h */,
+				B93CE5CC0F61B01200E073A7 /* CocoaOpenGLView.m */,
+				B93CE5CF0F61B01200E073A7 /* VoxelDocument.h */,
+				B93CE5D00F61B01200E073A7 /* VoxelDocument.m */,
+				B93CE5CD0F61B01200E073A7 /* TransferFunctionView.h */,
+				B93CE5CE0F61B01200E073A7 /* TransferFunctionView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B93CE5D40F61B01800E073A7 /* OtherSources */ = {
+			isa = PBXGroup;
+			children = (
+				B93CE5D80F61B01800E073A7 /* VolumeCore.h */,
+				B93CE5D90F61B01800E073A7 /* VolumeCore_Prefix.pch */,
+				B93CE5D50F61B01800E073A7 /* main.m */,
+				B93CE5D60F61B01800E073A7 /* NSData+Bzip2.h */,
+				B93CE5D70F61B01800E073A7 /* NSData+Bzip2.m */,
+			);
+			path = OtherSources;
+			sourceTree = "<group>";
+		};
+		B93CE5ED0F61B12800E073A7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B93CE61F0F61B18D00E073A7 /* Read Me.rtf */,
+				B93CE5EE0F61B12800E073A7 /* 2d.frag */,
+				B93CE5EF0F61B12800E073A7 /* 2d.vert */,
+				B93CE5F00F61B12800E073A7 /* 3d.frag */,
+				B93CE5F10F61B12800E073A7 /* 3d.vert */,
+				B93CE5F20F61B12800E073A7 /* Credits.rtf */,
+				B93CE5F40F61B12800E073A7 /* MainMenu.xib */,
+				B93CE5F60F61B12800E073A7 /* VoxelDocument.xib */,
+				B93CE5FC0F61B12800E073A7 /* raypos.frag */,
+				B93CE5FD0F61B12800E073A7 /* raypos.vert */,
+				B93CE5FF0F61B12800E073A7 /* stagbeetle277x277x164.dat.bz2 */,
+				B93CE6020F61B12800E073A7 /* XMasTree.dat.bz2 */,
+				B93CE6000F61B12800E073A7 /* VolumeCore.icns */,
+				B93CE6010F61B12800E073A7 /* VolumeCoreDocument.icns */,
+				B93CE5F90F61B12800E073A7 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D15AC270486D014006FF6A4 /* VolumeCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "VolumeCore" */;
+			buildPhases = (
+				8D15AC2B0486D014006FF6A4 /* Resources */,
+				8D15AC300486D014006FF6A4 /* Sources */,
+				8D15AC330486D014006FF6A4 /* Frameworks */,
+				B940B57E0EA7D31E0026F05D /* CopyFiles */,
+				B93CE5E50F61B10C00E073A7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VolumeCore;
+			productInstallPath = "$(HOME)/Applications";
+			productName = VolumeCore;
+			productReference = 8D15AC370486D014006FF6A4 /* VolumeCore.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "VolumeCore" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* VolumeCore */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D15AC270486D014006FF6A4 /* VolumeCore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D15AC2B0486D014006FF6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B93CE6030F61B12800E073A7 /* 2d.frag in Resources */,
+				B93CE6040F61B12800E073A7 /* 2d.vert in Resources */,
+				B93CE6050F61B12800E073A7 /* 3d.frag in Resources */,
+				B93CE6060F61B12800E073A7 /* 3d.vert in Resources */,
+				B93CE6070F61B12800E073A7 /* Credits.rtf in Resources */,
+				B93CE6080F61B12800E073A7 /* MainMenu.xib in Resources */,
+				B93CE60E0F61B12800E073A7 /* raypos.frag in Resources */,
+				B93CE60F0F61B12800E073A7 /* raypos.vert in Resources */,
+				B93CE6110F61B12800E073A7 /* stagbeetle277x277x164.dat.bz2 in Resources */,
+				B93CE6120F61B12800E073A7 /* VolumeCore.icns in Resources */,
+				B93CE6130F61B12800E073A7 /* VolumeCoreDocument.icns in Resources */,
+				B93CE6140F61B12800E073A7 /* XMasTree.dat.bz2 in Resources */,
+				B9072F701483E30700FB4B2A /* VoxelDocument.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B93CE5E50F61B10C00E073A7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "#setup directories\ncd $TARGET_BUILD_DIR\nmkdir $PRODUCT_NAME\n\n#copy stuff over\ncp -RL $SRCROOT/ \"$PRODUCT_NAME/$PRODUCT_NAME Source Code\"\ncp -R $PRODUCT_NAME.app $PRODUCT_NAME/\ncp -R \"$SRCROOT/Resources/Read Me.rtf\" $PRODUCT_NAME/\n\n#clean stuff\ncd \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/\"\nrm -rf _*\ncd $TARGET_BUILD_DIR\nfind $PRODUCT_NAME/ -type f -name \\.DS_Store -exec rm -f {} ';'\nfind -d $PRODUCT_NAME/ -type d -name *~\\.nib -exec rm -rf {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.mode1 -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.pbxuser -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.perspective -exec rm -f {} ';'\nchmod -R 755 $PRODUCT_NAME\n\n#compress stuff\nditto -ck $PRODUCT_NAME $PRODUCT_NAME.zip\n\n#cleanup\nrm -r $PRODUCT_NAME";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D15AC300486D014006FF6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B93CE5D10F61B01200E073A7 /* CocoaOpenGLView.m in Sources */,
+				B93CE5D20F61B01200E073A7 /* TransferFunctionView.m in Sources */,
+				B93CE5D30F61B01200E073A7 /* VoxelDocument.m in Sources */,
+				B93CE5DA0F61B01800E073A7 /* main.m in Sources */,
+				B93CE5DB0F61B01800E073A7 /* NSData+Bzip2.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B93CE5F20F61B12800E073A7 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B93CE5F30F61B12800E073A7 /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		B93CE5F40F61B12800E073A7 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B93CE5F50F61B12800E073A7 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		B93CE5F60F61B12800E073A7 /* VoxelDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B93CE5F70F61B12800E073A7 /* English */,
+			);
+			name = VoxelDocument.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B93CE5E20F61B0ED00E073A7 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks/\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OtherSources/VolumeCore_Prefix.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_LDFLAGS = "-lbz2";
+				PREBINDING = NO;
+				PRODUCT_NAME = VolumeCore;
+				SDKROOT = macosx10.5;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Release-Deployment";
+		};
+		B93CE5E30F61B0ED00E073A7 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = "Release-Deployment";
+		};
+		C05733C808A9546B00998B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		C05733C908A9546B00998B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		C05733CC08A9546B00998B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks/\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OtherSources/VolumeCore_Prefix.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_LDFLAGS = "-lbz2";
+				PREBINDING = NO;
+				PRODUCT_NAME = VolumeCore;
+				SDKROOT = macosx10.5;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Debug;
+		};
+		C05733CD08A9546B00998B17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks/\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OtherSources/VolumeCore_Prefix.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_LDFLAGS = "-lbz2";
+				PREBINDING = NO;
+				PRODUCT_NAME = VolumeCore;
+				SDKROOT = macosx10.5;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "VolumeCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C05733C808A9546B00998B17 /* Debug */,
+				C05733C908A9546B00998B17 /* Release */,
+				B93CE5E30F61B0ED00E073A7 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "VolumeCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C05733CC08A9546B00998B17 /* Debug */,
+				C05733CD08A9546B00998B17 /* Release */,
+				B93CE5E20F61B0ED00E073A7 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}

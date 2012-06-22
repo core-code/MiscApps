@@ -1,0 +1,8 @@
+{
+    IBClasses = (
+        {CLASS = Controller; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = PDFullscreen; LANGUAGE = ObjC; SUPERCLASS = NSWindowController; }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {hotKeyAction = id; toggleKeyAction = id; }; 
+            CLASS = OmniExpose; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                ourHotKeyTextField = NSTextField; 
+                theirHotKeyTextField = NSTextField; 
+                window = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

@@ -1,0 +1,24 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {hotKeyAction = id; toggleCornerAction = id; toggleKeyAction = id; }; 
+            CLASS = OmniExposeController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                hotCornerPopUpButton = NSPopUpButton; 
+                ourHotKeyTextField = NSTextField; 
+                theirHotKeyTextField = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {hotKeyAction = id; }; 
+            CLASS = SelectionFlasher; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {hotKeyTextField = NSTextField; window = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

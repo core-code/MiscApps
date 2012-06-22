@@ -1,0 +1,34 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {
+                AmmunitionPUSelect = id; 
+                AmmunitionTFSet = id; 
+                EnergyOxygenSet = id; 
+                ItemsPUSelect = id; 
+                ItemsTFSet = id; 
+                PowerupsPUSelect = id; 
+                PowerupsTFSet = id; 
+                WeaponsPUSelect = id; 
+                WeaponsTFSet = id; 
+            }; 
+            CLASS = DocumentController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                AmmunitionPU = id; 
+                AmmunitionTF = id; 
+                EnergyTF = id; 
+                ItemsPU = id; 
+                ItemsTF = id; 
+                OxygenTF = id; 
+                PowerupsPU = id; 
+                PowerupsTF = id; 
+                WeaponsPU = id; 
+                WeaponsTF = id; 
+            }; 
+            SUPERCLASS = NSDocument; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

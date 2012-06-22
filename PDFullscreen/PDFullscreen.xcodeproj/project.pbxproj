@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		664FE0870CBA8C6C00A14689 /* PDFullscreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 664FE0750CBA8C6C00A14689 /* PDFullscreen.m */; };
+		664FE0890CBA8C6C00A14689 /* PDFullscreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 664FE0790CBA8C6C00A14689 /* PDFullscreenView.m */; };
+		664FE08C0CBA8C6C00A14689 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 664FE07F0CBA8C6C00A14689 /* MainMenu.nib */; };
+		664FE08E0CBA8C6C00A14689 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 664FE0830CBA8C6C00A14689 /* Info.plist */; };
+		664FE08F0CBA8C6C00A14689 /* PDF.icns in Resources */ = {isa = PBXBuildFile; fileRef = 664FE0840CBA8C6C00A14689 /* PDF.icns */; };
+		664FE0900CBA8C6C00A14689 /* PDFullscreen.icns in Resources */ = {isa = PBXBuildFile; fileRef = 664FE0850CBA8C6C00A14689 /* PDFullscreen.icns */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B9256DE0079EFD8100F298A5 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9256DDF079EFD8100F298A5 /* ApplicationServices.framework */; };
+		B9F7DB750CE49FAE00ABBC9C /* PDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F7DB740CE49FAE00ABBC9C /* PDFView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		664FE0740CBA8C6C00A14689 /* PDFullscreen.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PDFullscreen.h; sourceTree = "<group>"; };
+		664FE0750CBA8C6C00A14689 /* PDFullscreen.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PDFullscreen.m; sourceTree = "<group>"; };
+		664FE0780CBA8C6C00A14689 /* PDFullscreenView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PDFullscreenView.h; sourceTree = "<group>"; };
+		664FE0790CBA8C6C00A14689 /* PDFullscreenView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PDFullscreenView.m; sourceTree = "<group>"; };
+		664FE0800CBA8C6C00A14689 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		664FE0830CBA8C6C00A14689 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		664FE0840CBA8C6C00A14689 /* PDF.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PDF.icns; sourceTree = "<group>"; };
+		664FE0850CBA8C6C00A14689 /* PDFullscreen.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PDFullscreen.icns; sourceTree = "<group>"; };
+		6693C2E90CBA927D00CD727C /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* PDFullscreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFullscreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9256DDF079EFD8100F298A5 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		B9F7DB730CE49FAE00ABBC9C /* PDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFView.h; sourceTree = "<group>"; };
+		B9F7DB740CE49FAE00ABBC9C /* PDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				B9256DE0079EFD8100F298A5 /* ApplicationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9256DDF079EFD8100F298A5 /* ApplicationServices.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* PDFullscreen.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* PDFullscreen */ = {
+			isa = PBXGroup;
+			children = (
+				664FE0730CBA8C6C00A14689 /* Classes */,
+				B9F7DB720CE49FAE00ABBC9C /* Foreign Code */,
+				664FE07C0CBA8C6C00A14689 /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = PDFullscreen;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		664FE0730CBA8C6C00A14689 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				664FE0740CBA8C6C00A14689 /* PDFullscreen.h */,
+				664FE0750CBA8C6C00A14689 /* PDFullscreen.m */,
+				664FE0780CBA8C6C00A14689 /* PDFullscreenView.h */,
+				664FE0790CBA8C6C00A14689 /* PDFullscreenView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		664FE07C0CBA8C6C00A14689 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				664FE07F0CBA8C6C00A14689 /* MainMenu.nib */,
+				664FE0830CBA8C6C00A14689 /* Info.plist */,
+				664FE0840CBA8C6C00A14689 /* PDF.icns */,
+				664FE0850CBA8C6C00A14689 /* PDFullscreen.icns */,
+				6693C2E90CBA927D00CD727C /* Read Me.rtf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B9F7DB720CE49FAE00ABBC9C /* Foreign Code */ = {
+			isa = PBXGroup;
+			children = (
+				B9F7DB730CE49FAE00ABBC9C /* PDFView.h */,
+				B9F7DB740CE49FAE00ABBC9C /* PDFView.m */,
+			);
+			path = "Foreign Code";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* PDFullscreen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66FAD3240C949A9A000C76B5 /* Build configuration list for PBXNativeTarget "PDFullscreen" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				6671AB080CBAB4C400FF0854 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PDFullscreen;
+			productInstallPath = "$(HOME)/Applications";
+			productName = PDFullscreen;
+			productReference = 8D1107320486CEB800E47090 /* PDFullscreen.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 66FAD3280C949A9A000C76B5 /* Build configuration list for PBXProject "PDFullscreen" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* PDFullscreen */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* PDFullscreen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				664FE08C0CBA8C6C00A14689 /* MainMenu.nib in Resources */,
+				664FE08E0CBA8C6C00A14689 /* Info.plist in Resources */,
+				664FE08F0CBA8C6C00A14689 /* PDF.icns in Resources */,
+				664FE0900CBA8C6C00A14689 /* PDFullscreen.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6671AB080CBAB4C400FF0854 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "#setup directories\ncd $TARGET_BUILD_DIR\nmkdir $PRODUCT_NAME\n\n#copy stuff over\ncp -RL $SRCROOT/ \"$PRODUCT_NAME/$PRODUCT_NAME Source Code\"\ncp -R $PRODUCT_NAME.app $PRODUCT_NAME/\ncp -R \"$SRCROOT/Resources/Read Me.rtf\" $PRODUCT_NAME/\n\n#clean stuff\ncd \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/\"\nrm -rf _*\ncd $TARGET_BUILD_DIR\nfind $PRODUCT_NAME/ -type f -name \\.DS_Store -exec rm -f {} ';'\nfind -d $PRODUCT_NAME/ -type d -name *~\\.nib -exec rm -rf {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.mode1 -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.pbxuser -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME Source Code/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.perspective -exec rm -f {} ';'\nchmod -R 755 $PRODUCT_NAME\n\n#compress stuff\nditto -ck $PRODUCT_NAME $PRODUCT_NAME.zip\n\n#cleanup\nrm -r $PRODUCT_NAME";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				664FE0870CBA8C6C00A14689 /* PDFullscreen.m in Sources */,
+				664FE0890CBA8C6C00A14689 /* PDFullscreenView.m in Sources */,
+				B9F7DB750CE49FAE00ABBC9C /* PDFView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		664FE07F0CBA8C6C00A14689 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				664FE0800CBA8C6C00A14689 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6671ABAD0CBABAE100FF0854 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = "Release-Deployment";
+		};
+		6671ABAE0CBABAE100FF0854 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEPLOYMENT_POSTPROCESSING = YES;
+				GCC_DYNAMIC_NO_PIC = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				PRODUCT_NAME = PDFullscreen;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Release-Deployment";
+		};
+		66FAD3250C949A9A000C76B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		66FAD3260C949A9A000C76B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		66FAD3290C949A9A000C76B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				PRODUCT_NAME = PDFullscreen;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Debug;
+		};
+		66FAD32A0C949A9A000C76B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_DYNAMIC_NO_PIC = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				PREBINDING = NO;
+				PRODUCT_NAME = PDFullscreen;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66FAD3240C949A9A000C76B5 /* Build configuration list for PBXNativeTarget "PDFullscreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66FAD3250C949A9A000C76B5 /* Debug */,
+				66FAD3260C949A9A000C76B5 /* Release */,
+				6671ABAD0CBABAE100FF0854 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		66FAD3280C949A9A000C76B5 /* Build configuration list for PBXProject "PDFullscreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66FAD3290C949A9A000C76B5 /* Debug */,
+				66FAD32A0C949A9A000C76B5 /* Release */,
+				6671ABAE0CBABAE100FF0854 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

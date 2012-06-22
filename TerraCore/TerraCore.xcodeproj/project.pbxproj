@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B91753F70F5DBDCB00A5E28A /* Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = B917530D0F5DBDCA00A5E28A /* Camera.mm */; };
+		B917544A0F5DBDCB00A5E28A /* CocoaOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91753E30F5DBDCB00A5E28A /* CocoaOpenGLView.mm */; };
+		B917544B0F5DBDCB00A5E28A /* Light.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91753E70F5DBDCB00A5E28A /* Light.mm */; };
+		B917544C0F5DBDCB00A5E28A /* NSData+Bzip2.m in Sources */ = {isa = PBXBuildFile; fileRef = B91753E90F5DBDCB00A5E28A /* NSData+Bzip2.m */; };
+		B917544D0F5DBDCB00A5E28A /* Octree.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91753EB0F5DBDCB00A5E28A /* Octree.mm */; };
+		B917544E0F5DBDCB00A5E28A /* Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91753ED0F5DBDCB00A5E28A /* Scene.mm */; };
+		B917544F0F5DBDCB00A5E28A /* SceneNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91753EF0F5DBDCB00A5E28A /* SceneNode.mm */; };
+		B91754500F5DBDCB00A5E28A /* Utilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91753F10F5DBDCB00A5E28A /* Utilities.mm */; };
+		B91754510F5DBDCB00A5E28A /* FractalTerrain.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91753F30F5DBDCB00A5E28A /* FractalTerrain.mm */; };
+		B91754520F5DBDCB00A5E28A /* TerrainSimulation.mm in Sources */ = {isa = PBXBuildFile; fileRef = B91753F60F5DBDCB00A5E28A /* TerrainSimulation.mm */; };
+		B91754690F5DBDDA00A5E28A /* grass.png in Resources */ = {isa = PBXBuildFile; fileRef = B91754540F5DBDDA00A5E28A /* grass.png */; };
+		B917546A0F5DBDDA00A5E28A /* grid_1024.octree.bz2 in Resources */ = {isa = PBXBuildFile; fileRef = B91754550F5DBDDA00A5E28A /* grid_1024.octree.bz2 */; };
+		B917546B0F5DBDDA00A5E28A /* grid_128.octree.bz2 in Resources */ = {isa = PBXBuildFile; fileRef = B91754560F5DBDDA00A5E28A /* grid_128.octree.bz2 */; };
+		B917546C0F5DBDDA00A5E28A /* grid_16.octree.bz2 in Resources */ = {isa = PBXBuildFile; fileRef = B91754570F5DBDDA00A5E28A /* grid_16.octree.bz2 */; };
+		B917546D0F5DBDDA00A5E28A /* grid_256.octree.bz2 in Resources */ = {isa = PBXBuildFile; fileRef = B91754580F5DBDDA00A5E28A /* grid_256.octree.bz2 */; };
+		B917546E0F5DBDDA00A5E28A /* grid_32.octree.bz2 in Resources */ = {isa = PBXBuildFile; fileRef = B91754590F5DBDDA00A5E28A /* grid_32.octree.bz2 */; };
+		B917546F0F5DBDDA00A5E28A /* grid_512.octree.bz2 in Resources */ = {isa = PBXBuildFile; fileRef = B917545A0F5DBDDA00A5E28A /* grid_512.octree.bz2 */; };
+		B91754700F5DBDDA00A5E28A /* grid_64.octree.bz2 in Resources */ = {isa = PBXBuildFile; fileRef = B917545B0F5DBDDA00A5E28A /* grid_64.octree.bz2 */; };
+		B91754720F5DBDDA00A5E28A /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = B917545D0F5DBDDA00A5E28A /* MainMenu.nib */; };
+		B91754730F5DBDDA00A5E28A /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = B917545E0F5DBDDA00A5E28A /* rock.png */; };
+		B91754740F5DBDDA00A5E28A /* sand.png in Resources */ = {isa = PBXBuildFile; fileRef = B917545F0F5DBDDA00A5E28A /* sand.png */; };
+		B91754750F5DBDDA00A5E28A /* snow.png in Resources */ = {isa = PBXBuildFile; fileRef = B91754600F5DBDDA00A5E28A /* snow.png */; };
+		B91754760F5DBDDA00A5E28A /* TerraCore.icns in Resources */ = {isa = PBXBuildFile; fileRef = B91754610F5DBDDA00A5E28A /* TerraCore.icns */; };
+		B91754770F5DBDDA00A5E28A /* terrain.frag in Resources */ = {isa = PBXBuildFile; fileRef = B91754620F5DBDDA00A5E28A /* terrain.frag */; };
+		B91754780F5DBDDA00A5E28A /* terrain.vert in Resources */ = {isa = PBXBuildFile; fileRef = B91754630F5DBDDA00A5E28A /* terrain.vert */; };
+		B91754790F5DBDDA00A5E28A /* Test1.png in Resources */ = {isa = PBXBuildFile; fileRef = B91754640F5DBDDA00A5E28A /* Test1.png */; };
+		B917547A0F5DBDDA00A5E28A /* Test2.png in Resources */ = {isa = PBXBuildFile; fileRef = B91754650F5DBDDA00A5E28A /* Test2.png */; };
+		B917547B0F5DBDDA00A5E28A /* Test3.png in Resources */ = {isa = PBXBuildFile; fileRef = B91754660F5DBDDA00A5E28A /* Test3.png */; };
+		B917547C0F5DBDDA00A5E28A /* Test4.png in Resources */ = {isa = PBXBuildFile; fileRef = B91754670F5DBDDA00A5E28A /* Test4.png */; };
+		B917547D0F5DBDDA00A5E28A /* water.png in Resources */ = {isa = PBXBuildFile; fileRef = B91754680F5DBDDA00A5E28A /* water.png */; };
+		B934FA5C0EF7195200B0FC5F /* BGHUDAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B934FA5B0EF7195200B0FC5F /* BGHUDAppKit.framework */; };
+		B934FA7A0EF7195800B0FC5F /* BGHUDAppKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B934FA5B0EF7195200B0FC5F /* BGHUDAppKit.framework */; };
+		B93CE50B0F619A4A00E073A7 /* Read Me.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B93CE50A0F619A4A00E073A7 /* Read Me.rtf */; };
+		B999E3790EF45AC10023592E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B999E3780EF45AC10023592E /* OpenGL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B999E3E60EF45B740023592E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B934FA7A0EF7195800B0FC5F /* BGHUDAppKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107320486CEB800E47090 /* TerraCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TerraCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B917530C0F5DBDCA00A5E28A /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		B917530D0F5DBDCA00A5E28A /* Camera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Camera.mm; sourceTree = "<group>"; };
+		B91753E20F5DBDCB00A5E28A /* CocoaOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaOpenGLView.h; sourceTree = "<group>"; };
+		B91753E30F5DBDCB00A5E28A /* CocoaOpenGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CocoaOpenGLView.mm; sourceTree = "<group>"; };
+		B91753E40F5DBDCB00A5E28A /* Core3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core3D.h; sourceTree = "<group>"; };
+		B91753E50F5DBDCB00A5E28A /* Core3D_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core3D_Prefix.pch; sourceTree = "<group>"; };
+		B91753E60F5DBDCB00A5E28A /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
+		B91753E70F5DBDCB00A5E28A /* Light.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Light.mm; sourceTree = "<group>"; };
+		B91753E80F5DBDCB00A5E28A /* NSData+Bzip2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Bzip2.h"; sourceTree = "<group>"; };
+		B91753E90F5DBDCB00A5E28A /* NSData+Bzip2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Bzip2.m"; sourceTree = "<group>"; };
+		B91753EA0F5DBDCB00A5E28A /* Octree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Octree.h; sourceTree = "<group>"; };
+		B91753EB0F5DBDCB00A5E28A /* Octree.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Octree.mm; sourceTree = "<group>"; };
+		B91753EC0F5DBDCB00A5E28A /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		B91753ED0F5DBDCB00A5E28A /* Scene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Scene.mm; sourceTree = "<group>"; };
+		B91753EE0F5DBDCB00A5E28A /* SceneNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneNode.h; sourceTree = "<group>"; };
+		B91753EF0F5DBDCB00A5E28A /* SceneNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneNode.mm; sourceTree = "<group>"; };
+		B91753F00F5DBDCB00A5E28A /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		B91753F10F5DBDCB00A5E28A /* Utilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Utilities.mm; sourceTree = "<group>"; };
+		B91753F20F5DBDCB00A5E28A /* FractalTerrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FractalTerrain.h; sourceTree = "<group>"; };
+		B91753F30F5DBDCB00A5E28A /* FractalTerrain.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FractalTerrain.mm; sourceTree = "<group>"; };
+		B91753F40F5DBDCB00A5E28A /* random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = random.h; sourceTree = "<group>"; };
+		B91753F50F5DBDCB00A5E28A /* TerrainSimulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TerrainSimulation.h; sourceTree = "<group>"; };
+		B91753F60F5DBDCB00A5E28A /* TerrainSimulation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TerrainSimulation.mm; sourceTree = "<group>"; };
+		B91754540F5DBDDA00A5E28A /* grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass.png; sourceTree = "<group>"; };
+		B91754550F5DBDDA00A5E28A /* grid_1024.octree.bz2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = grid_1024.octree.bz2; sourceTree = "<group>"; };
+		B91754560F5DBDDA00A5E28A /* grid_128.octree.bz2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = grid_128.octree.bz2; sourceTree = "<group>"; };
+		B91754570F5DBDDA00A5E28A /* grid_16.octree.bz2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = grid_16.octree.bz2; sourceTree = "<group>"; };
+		B91754580F5DBDDA00A5E28A /* grid_256.octree.bz2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = grid_256.octree.bz2; sourceTree = "<group>"; };
+		B91754590F5DBDDA00A5E28A /* grid_32.octree.bz2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = grid_32.octree.bz2; sourceTree = "<group>"; };
+		B917545A0F5DBDDA00A5E28A /* grid_512.octree.bz2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = grid_512.octree.bz2; sourceTree = "<group>"; };
+		B917545B0F5DBDDA00A5E28A /* grid_64.octree.bz2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = grid_64.octree.bz2; sourceTree = "<group>"; };
+		B917545C0F5DBDDA00A5E28A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B917545D0F5DBDDA00A5E28A /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = MainMenu.nib; sourceTree = "<group>"; };
+		B917545E0F5DBDDA00A5E28A /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
+		B917545F0F5DBDDA00A5E28A /* sand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sand.png; sourceTree = "<group>"; };
+		B91754600F5DBDDA00A5E28A /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow.png; sourceTree = "<group>"; };
+		B91754610F5DBDDA00A5E28A /* TerraCore.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = TerraCore.icns; sourceTree = "<group>"; };
+		B91754620F5DBDDA00A5E28A /* terrain.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = terrain.frag; sourceTree = "<group>"; };
+		B91754630F5DBDDA00A5E28A /* terrain.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = terrain.vert; sourceTree = "<group>"; };
+		B91754640F5DBDDA00A5E28A /* Test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Test1.png; sourceTree = "<group>"; };
+		B91754650F5DBDDA00A5E28A /* Test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Test2.png; sourceTree = "<group>"; };
+		B91754660F5DBDDA00A5E28A /* Test3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Test3.png; sourceTree = "<group>"; };
+		B91754670F5DBDDA00A5E28A /* Test4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Test4.png; sourceTree = "<group>"; };
+		B91754680F5DBDDA00A5E28A /* water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = water.png; sourceTree = "<group>"; };
+		B934FA5B0EF7195200B0FC5F /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = Frameworks/BGHUDAppKit.framework; sourceTree = "<group>"; };
+		B93CE50A0F619A4A00E073A7 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		B999E3780EF45AC10023592E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				B999E3790EF45AC10023592E /* OpenGL.framework in Frameworks */,
+				B934FA5C0EF7195200B0FC5F /* BGHUDAppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B934FA5B0EF7195200B0FC5F /* BGHUDAppKit.framework */,
+				B999E3780EF45AC10023592E /* OpenGL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* TerraCore.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* fraktale */ = {
+			isa = PBXGroup;
+			children = (
+				B917530A0F5DBDCA00A5E28A /* Classes */,
+				B91754530F5DBDDA00A5E28A /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = fraktale;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B917530A0F5DBDCA00A5E28A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B917530B0F5DBDCA00A5E28A /* Engine */,
+				B91753F20F5DBDCB00A5E28A /* FractalTerrain.h */,
+				B91753F30F5DBDCB00A5E28A /* FractalTerrain.mm */,
+				B91753F40F5DBDCB00A5E28A /* random.h */,
+				B91753F50F5DBDCB00A5E28A /* TerrainSimulation.h */,
+				B91753F60F5DBDCB00A5E28A /* TerrainSimulation.mm */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B917530B0F5DBDCA00A5E28A /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				B917530C0F5DBDCA00A5E28A /* Camera.h */,
+				B917530D0F5DBDCA00A5E28A /* Camera.mm */,
+				B91753E20F5DBDCB00A5E28A /* CocoaOpenGLView.h */,
+				B91753E30F5DBDCB00A5E28A /* CocoaOpenGLView.mm */,
+				B91753E40F5DBDCB00A5E28A /* Core3D.h */,
+				B91753E50F5DBDCB00A5E28A /* Core3D_Prefix.pch */,
+				B91753E60F5DBDCB00A5E28A /* Light.h */,
+				B91753E70F5DBDCB00A5E28A /* Light.mm */,
+				B91753E80F5DBDCB00A5E28A /* NSData+Bzip2.h */,
+				B91753E90F5DBDCB00A5E28A /* NSData+Bzip2.m */,
+				B91753EA0F5DBDCB00A5E28A /* Octree.h */,
+				B91753EB0F5DBDCB00A5E28A /* Octree.mm */,
+				B91753EC0F5DBDCB00A5E28A /* Scene.h */,
+				B91753ED0F5DBDCB00A5E28A /* Scene.mm */,
+				B91753EE0F5DBDCB00A5E28A /* SceneNode.h */,
+				B91753EF0F5DBDCB00A5E28A /* SceneNode.mm */,
+				B91753F00F5DBDCB00A5E28A /* Utilities.h */,
+				B91753F10F5DBDCB00A5E28A /* Utilities.mm */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		B91754530F5DBDDA00A5E28A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B93CE50A0F619A4A00E073A7 /* Read Me.rtf */,
+				B91754540F5DBDDA00A5E28A /* grass.png */,
+				B91754550F5DBDDA00A5E28A /* grid_1024.octree.bz2 */,
+				B91754560F5DBDDA00A5E28A /* grid_128.octree.bz2 */,
+				B91754570F5DBDDA00A5E28A /* grid_16.octree.bz2 */,
+				B91754580F5DBDDA00A5E28A /* grid_256.octree.bz2 */,
+				B91754590F5DBDDA00A5E28A /* grid_32.octree.bz2 */,
+				B917545A0F5DBDDA00A5E28A /* grid_512.octree.bz2 */,
+				B917545B0F5DBDDA00A5E28A /* grid_64.octree.bz2 */,
+				B917545C0F5DBDDA00A5E28A /* Info.plist */,
+				B917545D0F5DBDDA00A5E28A /* MainMenu.nib */,
+				B917545E0F5DBDDA00A5E28A /* rock.png */,
+				B917545F0F5DBDDA00A5E28A /* sand.png */,
+				B91754600F5DBDDA00A5E28A /* snow.png */,
+				B91754610F5DBDDA00A5E28A /* TerraCore.icns */,
+				B91754620F5DBDDA00A5E28A /* terrain.frag */,
+				B91754630F5DBDDA00A5E28A /* terrain.vert */,
+				B91754640F5DBDDA00A5E28A /* Test1.png */,
+				B91754650F5DBDDA00A5E28A /* Test2.png */,
+				B91754660F5DBDDA00A5E28A /* Test3.png */,
+				B91754670F5DBDDA00A5E28A /* Test4.png */,
+				B91754680F5DBDDA00A5E28A /* water.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* TerraCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TerraCore" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				B999E3E60EF45B740023592E /* CopyFiles */,
+				B93CE5290F619C5100E073A7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TerraCore;
+			productInstallPath = "$(HOME)/Applications";
+			productName = fraktale;
+			productReference = 8D1107320486CEB800E47090 /* TerraCore.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TerraCore" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* fraktale */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* TerraCore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B91754690F5DBDDA00A5E28A /* grass.png in Resources */,
+				B917546A0F5DBDDA00A5E28A /* grid_1024.octree.bz2 in Resources */,
+				B917546B0F5DBDDA00A5E28A /* grid_128.octree.bz2 in Resources */,
+				B917546C0F5DBDDA00A5E28A /* grid_16.octree.bz2 in Resources */,
+				B917546D0F5DBDDA00A5E28A /* grid_256.octree.bz2 in Resources */,
+				B917546E0F5DBDDA00A5E28A /* grid_32.octree.bz2 in Resources */,
+				B917546F0F5DBDDA00A5E28A /* grid_512.octree.bz2 in Resources */,
+				B91754700F5DBDDA00A5E28A /* grid_64.octree.bz2 in Resources */,
+				B91754720F5DBDDA00A5E28A /* MainMenu.nib in Resources */,
+				B91754730F5DBDDA00A5E28A /* rock.png in Resources */,
+				B91754740F5DBDDA00A5E28A /* sand.png in Resources */,
+				B91754750F5DBDDA00A5E28A /* snow.png in Resources */,
+				B91754760F5DBDDA00A5E28A /* TerraCore.icns in Resources */,
+				B91754770F5DBDDA00A5E28A /* terrain.frag in Resources */,
+				B91754780F5DBDDA00A5E28A /* terrain.vert in Resources */,
+				B91754790F5DBDDA00A5E28A /* Test1.png in Resources */,
+				B917547A0F5DBDDA00A5E28A /* Test2.png in Resources */,
+				B917547B0F5DBDDA00A5E28A /* Test3.png in Resources */,
+				B917547C0F5DBDDA00A5E28A /* Test4.png in Resources */,
+				B917547D0F5DBDDA00A5E28A /* water.png in Resources */,
+				B93CE50B0F619A4A00E073A7 /* Read Me.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B93CE5290F619C5100E073A7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "#setup directories\ncd $TARGET_BUILD_DIR\nmkdir $PRODUCT_NAME\n\n#copy stuff over\ncp -R $PRODUCT_NAME.app $PRODUCT_NAME/\ncp -R \"$SRCROOT/Resources/Read Me.rtf\" $PRODUCT_NAME/\n\n#clean stuff\ncd $TARGET_BUILD_DIR\nfind $PRODUCT_NAME/ -type f -name \\.DS_Store -exec rm -f {} ';'\nchmod -R 755 $PRODUCT_NAME\n\n#compress stuff\nditto -ck $PRODUCT_NAME $PRODUCT_NAME.zip\n\n#cleanup\nrm -r $PRODUCT_NAME";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B91753F70F5DBDCB00A5E28A /* Camera.mm in Sources */,
+				B917544A0F5DBDCB00A5E28A /* CocoaOpenGLView.mm in Sources */,
+				B917544B0F5DBDCB00A5E28A /* Light.mm in Sources */,
+				B917544C0F5DBDCB00A5E28A /* NSData+Bzip2.m in Sources */,
+				B917544D0F5DBDCB00A5E28A /* Octree.mm in Sources */,
+				B917544E0F5DBDCB00A5E28A /* Scene.mm in Sources */,
+				B917544F0F5DBDCB00A5E28A /* SceneNode.mm in Sources */,
+				B91754500F5DBDCB00A5E28A /* Utilities.mm in Sources */,
+				B91754510F5DBDCB00A5E28A /* FractalTerrain.mm in Sources */,
+				B91754520F5DBDCB00A5E28A /* TerrainSimulation.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B917549D0F5DBF1300A5E28A /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks/\"",
+				);
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OBJC_CALL_CXX_CDTORS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/Engine/Core3D_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"Classes/Engine/**",
+					Foreign,
+					"Code/**",
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				OTHER_LDFLAGS = "-lbz2";
+				PREBINDING = NO;
+				PRODUCT_NAME = TerraCore;
+				SDKROOT = macosx10.5;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = "Release-Deployment";
+		};
+		B917549E0F5DBF1300A5E28A /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = "Release-Deployment";
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks/\"",
+				);
+				GCC_OBJC_CALL_CXX_CDTORS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/Engine/Core3D_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"Classes/Engine/**",
+					Foreign,
+					"Code/**",
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				OTHER_LDFLAGS = "-lbz2";
+				PREBINDING = NO;
+				PRODUCT_NAME = TerraCore;
+				SDKROOT = macosx10.5;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks/\"",
+				);
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_OBJC_CALL_CXX_CDTORS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/Engine/Core3D_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"Classes/Engine/**",
+					Foreign,
+					"Code/**",
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				OTHER_LDFLAGS = "-lbz2";
+				PREBINDING = NO;
+				PRODUCT_NAME = TerraCore;
+				SDKROOT = macosx10.5;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "TerraCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+				B917549E0F5DBF1300A5E28A /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TerraCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				B917549D0F5DBF1300A5E28A /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,0 +1,18 @@
+{
+    IBClasses = (
+        {
+            CLASS = CHMExtractor; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {viewOutlet = View; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = View; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {master = id; }; 
+            SUPERCLASS = NSView; 
+        }
+    ); 
+    IBVersion = 1; 
+}
