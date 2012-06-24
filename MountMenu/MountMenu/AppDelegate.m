@@ -68,11 +68,11 @@
 		{		
 			NSArray *lineComponents = [line componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 			NSArray *info = [lineComponents filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF != ''"]];
-			NSString *name = [[line substringWithRange:NSMakeRange(33, 24)] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+			NSString *name = [[line substringWithRange:NSMakeRange(33, 23)] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 			NSUInteger i = [localVolumes indexOfObject:name];
 			
 			NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:name, @"name",
-																			[[info objectAtIndex:[info count]-3] stringByAppendingString:[info objectAtIndex:[info count]-2]], @"size", 
+																			[[[info objectAtIndex:[info count]-3] stringByAppendingString:[info objectAtIndex:[info count]-2]] stringByReplacingOccurrencesOfString:@"*" withString:@""], @"size", 
 																			[info objectAtIndex:[info count]-1], @"disk", 
 																			[NSNumber numberWithInt: (i == NSNotFound) ? 0 : 1], @"mounted", nil];
 			
