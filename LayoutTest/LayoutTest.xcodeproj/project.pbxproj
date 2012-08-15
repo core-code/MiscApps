@@ -16,6 +16,7 @@
 		B9A39A3A155341CB002E67D0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9A39A1E15533A5E002E67D0 /* MainMenu.xib */; };
 		B9A39A3C15534210002E67D0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9A39A1E15533A5E002E67D0 /* MainMenu.xib */; };
 		B9A39A3E15534216002E67D0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9A39A36155341C6002E67D0 /* Localizable.strings */; };
+		B9AC02BF15B5F528007B4545 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9AC02BD15B5F528007B4545 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		B9A39A1B15533A5E002E67D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B9A39A1C15533A5E002E67D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B9A39A1F15533A5E002E67D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9AC02BE15B5F528007B4545 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "../../../../SMARTReporter3/SMARTReporter3/pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		B9A39A1015533A5E002E67D0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B9AC02BD15B5F528007B4545 /* Localizable.strings */,
 				B912670C1594CCFA006DE808 /* LayoutTest.icns */,
 				B9A39A1115533A5E002E67D0 /* LayoutTest-Info.plist */,
 				B9A39A1515533A5E002E67D0 /* main.m */,
@@ -141,6 +144,7 @@
 				fr,
 				de,
 				sv,
+				"pt-BR",
 			);
 			mainGroup = B9A399FA15533A5D002E67D0;
 			productRefGroup = B9A39A0615533A5D002E67D0 /* Products */;
@@ -163,6 +167,7 @@
 				B9A39A3C15534210002E67D0 /* MainMenu.xib in Resources */,
 				B9A39A3E15534216002E67D0 /* Localizable.strings in Resources */,
 				B912670D1594CCFA006DE808 /* LayoutTest.icns in Resources */,
+				B9AC02BF15B5F528007B4545 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +201,14 @@
 			name = Localizable.strings;
 			path = /Users/julian/Documents/Development/SMARTReporter3/SMARTReporter3;
 			sourceTree = "<absolute>";
+		};
+		B9AC02BD15B5F528007B4545 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9AC02BE15B5F528007B4545 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
