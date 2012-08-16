@@ -10,6 +10,9 @@ An application that redirects the "Front Row" presentation mode to your second d
 	
 WindowMover
 An application that moves the frontmost window to the mouse cursor position when a hotkey is pressed.
+
+InstaCode
+An application for developers that allows to quickly try out pieces of source code (C/ObjC/C++/ObjC++) without having to create, compile and delete projects or files.
 	
 Phorgiveness
 An application for editing/cheating Marathon Infinity & Aleph One saved games.

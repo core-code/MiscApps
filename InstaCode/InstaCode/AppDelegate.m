@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  InstaCode
 //
-//  Created by Julian Mayer on 31.07.12.
+//  Created by CoreCode on 31.07.12.
 //  Copyright (c) 2012 CoreCode. All rights reserved.
 //
 
