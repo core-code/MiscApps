@@ -1,0 +1,4 @@
+
+int function(int param)
+{
+}

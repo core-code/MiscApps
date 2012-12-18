@@ -1,0 +1,9 @@
+
+@interface Class : NSObject {
+}
+@end
+
+@implementation Class : NSObject
+
+@end
+

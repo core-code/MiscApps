@@ -3,167 +3,183 @@
 //  InstaCode
 //
 //  Created by CoreCode on 31.07.12.
-//  Copyright (c) 2012 CoreCode. All rights reserved.
-//
+/*	Copyright (c) 2012 CoreCode
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitationthe rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
 
 #import "AppDelegate.h"
+#import "MGSFragaria.h"
+#import "MGSPreferencesController.h"
 
-@implementation NSString(bla)
-- (NSUInteger)countOccurencesOfString:(NSString *)str
-{
-    return [[self componentsSeparatedByString:str] count] - 1;
-}
-@end
+CONST_KEY(XCode)
+CONST_KEY(XCodeVersions)
+CONST_KEY(Project)
+CONST_KEY(Runs)
+CONST_KEY(NextNag)
+CONST_KEY(NagCount)
+CONST_KEY(UserPayed)
 
 @implementation AppDelegate
-@synthesize resultTabView;
-@synthesize progressIndicator;
-@synthesize compileButton;
-@synthesize compileLabel;
-@synthesize runLabel;
-@synthesize codeTextView;
-@synthesize compilationTextView;
-@synthesize outputTextView;
 
-
-
-#define kMainPreset @"#include <stdio.h>\n\nint main() \n{\n       printf(\"hello world\");\n}"
-#define kFunctionPreset @"#include <stdio.h>\n#include <unistd.h>\n\nint function(void)\n{\n	return 1;\n}\n\nint main()\n{\n	printf(\"function() returned: %i\", function());\n}"
-#define kObjCPreset @"#import <Foundation/Foundation.h>\n\nint main(int argc, const char * argv[]) {\n	@autoreleasepool {\n	    NSLog(@\"Hello, World!\");\n	}\n	return 0;\n}\n"
-#define kCPPPreset @"#include <iostream>\n \nusing namespace std;\n \nint main()\n{\n	cout << \"Hello World!\";\n}"
-
-- (void)applicationWillTerminate:(NSNotification *)notification
++ (void)initialize
 {
-    [[NSUserDefaults standardUserDefaults] setObject:[codeTextView string] forKey:@"code"];
+	[[NSUserDefaults standardUserDefaults] registerDefaults:@{kProjectKey : @"#include <stdio.h>\n\nint main() \n{\n       printf(\"hello world\");\n}",
+												  kRunsKey : @(1), kNextNagKey : @(40), kNagCountKey : @(1), kUserPayedKey : @(0)}];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	if (![[NSFileManager defaultManager] fileExistsAtPath:@"/usr/bin/clang++"])
+	cc = [CoreLib new];
+	
+	self.presetsNames = [@[@"Preset:"] arrayByAddingObjectsFromArray:[[cc.resURL add:@"Presets"].dirContents mapped:^(id input){return [input replaced:@".txt" with:@""];}]];
+	self.snippetNames = [@[@"Snippets:"] arrayByAddingObjectsFromArray:[[cc.resURL add:@"Snippets"].dirContents mapped:^(id input){return [input replaced:@".txt" with:@""];}]];
+
+	[_compilationTextView setFont:[NSFont fontWithName:@"Menlo" size:12]];
+
+	
+	// create an syntax highlight instance
+	fragaria = [[MGSFragaria alloc] init];
+	[fragaria setObject:self forKey:MGSFODelegate];
+	[fragaria setObject:@"Objective-C" forKey:MGSFOSyntaxDefinitionName];
+	[fragaria embedInView:self.contentView];
+	MGSFragariaPrefsAutocompleteSuggestAutomatically.defaultInt = YES;
+	[fragaria setString:kProjectKey.defaultString];
+	dirty = YES;
+	[self textDidChange:nil];
+	
+	
+	// check xcode versions
+	NSArray *xcodeVersions = [[@"/Applications".dirContents filteredArrayUsingPredicate:_predf(@"self BEGINSWITH[cd] 'Xcode'")] filtered:^int(NSString *s){return _stringf(@"/Applications/%@/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/ToolchainInfo.plist", s).fileExists;}];
+	if (xcodeVersions.empty)
 	{
-		NSRunAlertPanel(@"Error", @"You need to install Xcode and its Command-Line Development tools to use InstaCode", @"D'oh", nil, nil);
+		NSRunAlertPanel(@"Error", @"You need to install Xcode to use InstaCode.\n\nIt is a free download on the Mac App Store.\n\nIf you already have it installed, make sure it is in your /Applications folder and its name still begins with 'Xcode'.", @"OK", nil, nil);
+		[@"https://itunes.apple.com/en/app/xcode/id497799835?mt=12".URL open];
 		exit(1);
 	}
+	if (!kXCodeKey.defaultString.length)
+		kXCodeKey.defaultString = xcodeVersions[0];
+	kXCodeVersionsKey.defaultObj = xcodeVersions;
+
 	
-    NSString *saved = [[NSUserDefaults standardUserDefaults] stringForKey:@"code"];
-    if (saved && [saved length])
-        [codeTextView setString:saved];
-    else
-        [codeTextView setString:kMainPreset];
+	// first start
+	if (kRunsKey.defaultInt == 1)
+	{
+		[self openURL:@{@"tag" : @(2)}];
+		kRunsKey.defaultInt = 2;
+	}
+
+	// nag donations
+	if (!kUserPayedKey.defaultInt)
+	{
+		if (kRunsKey.defaultInt >= kNextNagKey.defaultInt)
+		{
+			NSInteger res = NSRunAlertPanel(@"Info", _stringf(@"InstaCode is supported by donations. You've used InstaCode to compile %li programs. Would you like to donate now?", kRunsKey.defaultInt), @"Donate now!", @"Remind me Later", @"I have donated");
+
+			if (res == NSAlertDefaultReturn) // donate now
+			{
+				[@"https://www.paypal.com/xclick/business=donations@corecode.at&item_name=InstaCode+Payment&no_shipping=1&cn=Suggestions&tax=0&currency_code=EUR&lc=us&locale.x=en_US".URL open];
+			}
+			else if (res == NSAlertOtherReturn) // says he has donated
+			{
+				kUserPayedKey.defaultInt = 1;
+			}
+			
+			kNextNagKey.defaultInt = (2.0/((kNagCountKey.defaultInt+5)*0.15))*8.0; // math ftw
+			kNagCountKey.defaultInt = kNagCountKey.defaultInt+1;
+		}
+	}
 }
 
-- (void)runProgram
+- (void)applicationWillTerminate:(NSNotification *)notification
 {
-    runStart = [NSDate date];
-    [outputTextView setString:@""];
-
-    compiledAppTask = [[NSTask alloc] init];
-	NSPipe *taskPipe = [NSPipe pipe];
-
-    [compiledAppTask setLaunchPath:@"/tmp/InstaCode.out"];
-    [compiledAppTask setStandardOutput:taskPipe];
-	[compiledAppTask setStandardError:taskPipe];
-    
-    fileHandle = [taskPipe fileHandleForReading];
-    [fileHandle waitForDataInBackgroundAndNotify];
-
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(programStopped) name:NSTaskDidTerminateNotification object:compiledAppTask];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getData:) name:NSFileHandleDataAvailableNotification object:fileHandle];
-    
-    
-    [compiledAppTask launch];
-
-    //    [task waitUntilExit];
-    
-    //    NSData *data = [fileHandle readDataToEndOfFile];
-    //    NSString *string = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-    
+	kProjectKey.defaultString = [fragaria string];
 }
 
-- (void)programStopped
-{
-    
-    NSData *data = [fileHandle readDataToEndOfFile];
-    NSString *string = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-    [outputTextView setString:[[outputTextView string] stringByAppendingString:string]];
-    
-    [[NSFileManager defaultManager] removeItemAtPath:@"/tmp/InstaCode.out" error:NULL];
-    [progressIndicator stopAnimation:self];
-    [compileButton setTitle:@"Compile & Run"];
-    [runLabel setStringValue:[NSString stringWithFormat:@"Run: done in %.2fs (ret %i)", [[NSDate date] timeIntervalSinceDate:runStart], [compiledAppTask terminationStatus]]];
+#pragma mark IBAction
 
+- (IBAction)showPreferencesWindow:(id)sender
+{    
+    [[MGSPreferencesController sharedPrefsWindowController] showWindow:self];
 }
 
-- (void)getData:(NSNotification *)aNotification
+- (IBAction)openURL:(id)sender
 {
-    NSData *data = [fileHandle availableData];
-    NSString *outputString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+	int tag = [[sender valueForKey:@"tag"] intValue];
     
-    [outputTextView setString:[[outputTextView string] stringByAppendingString:outputString]];
-    
-    
-    
-    if (![[compileButton title] isEqualToString:@"Compile & Run"])
-    {
-        [runLabel setStringValue:[NSString stringWithFormat:@"Run: currently running (%.2fs)", [[NSDate date] timeIntervalSinceDate:runStart]]];
-        
-        [fileHandle waitForDataInBackgroundAndNotify];
-    }
+	if (tag == 1)
+		[_stringf(@"mailto:feedback@corecode.at?subject=%@ %@ Feedback", cc.appName, cc.appVersionString).escapedURL open];
+	else if (tag == 2)
+		[@"Read Me.rtf".resourceURL open];
+	else if (tag == 3)
+		[_stringf(@"http://www.corecode.at/%@/", [cc.appName lowercaseString]).escapedURL open];
 }
 
 - (IBAction)compileAndRun:(id)sender
 {
-    if ([[compileButton title] isEqualToString:@"Compile & Run"])
+    if ([[_compileButton title] isEqualToString:@"Compile & Run"])
     {
-        [[codeTextView string] writeToFile:@"/tmp/InstaCode.mm" atomically:YES encoding:NSUTF8StringEncoding error:NULL];
-        //   NSTask
-        NSTask *task = [[NSTask alloc] init];
-        NSPipe *taskPipe = [NSPipe pipe];
-        NSFileHandle *file = [taskPipe fileHandleForReading];
-        
-        [task setLaunchPath:@"/usr/bin/clang++"];
-        [task setStandardOutput:taskPipe];
-        [task setStandardError:taskPipe];
-        
-        [task setArguments:@[@"-x", @"objective-c++", @"-stdlib=libc++", @"-framework", @"Foundation", @"-O3", @"-Wall",  @"-o", @"/tmp/InstaCode.out", @"/tmp/InstaCode.mm"]];
-        
-        [task launch];
-        
+		kRunsKey.defaultInt = kRunsKey.defaultInt+1;
+
+        [[fragaria string] writeToURL:[cc.suppURL add:@"InstaCode.mm"] atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+
+		NSArray *args = @[_stringf(@"/Applications/%@/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++", kXCodeKey.defaultString), @"-x", @"objective-c++", @"-stdlib=libc++", @"-isysroot", _stringf(@"/Applications/%@/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.%i.sdk", kXCodeKey.defaultString, [self checkSDKVersion]), @"-framework", @"Foundation", @"-framework", @"AppKit", @"-framework", @"QuartzCore", @"-O3", @"-Wall", @"-o", [cc.suppURL add:@"InstaCode.out"].path, [cc.suppURL add:@"InstaCode.mm"].path];
+	
+        NSInteger terminationStatus;
         NSDate *pre = [NSDate date];
-        [task waitUntilExit];
-        NSDate *post = [NSDate date];
-        float compileTime = [post timeIntervalSinceDate:pre];
+        NSString *string = [args runAsTaskWithTerminationStatus:&terminationStatus];
+        float compileTime = [[NSDate date] timeIntervalSinceDate:pre];
+
         
-        NSData *data = [file readDataToEndOfFile];
-        NSString *string = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+        [_compilationTextView setString:string];
         
-        [compilationTextView setString:string];
+        [[NSFileManager defaultManager] removeItemAtURL:[cc.suppURL add:@"InstaCode.mm"] error:NULL];
         
-        [[NSFileManager defaultManager] removeItemAtPath:@"/tmp/InstaCode.mm" error:NULL];
-        
-        if ([task terminationStatus]) // err
+        if (terminationStatus) // err
         {
-            [resultTabView selectFirstTabViewItem:nil];
+            [_resultTabView selectFirstTabViewItem:nil];
             
-            [compileLabel setStringValue:[NSString stringWithFormat:@"Compile: failed in %.2fs (%liw|%lie)", compileTime, [string countOccurencesOfString:@"warning:"], [string countOccurencesOfString:@"error:"]]];
-            [runLabel setStringValue:@""];
+            [_compileLabel setStringValue:[NSString stringWithFormat:@"Compile: failed in %.2fs (%liw|%lie)", compileTime, [string countOccurencesOfString:@"warning:"], [string countOccurencesOfString:@"error:"]]];
+            [_runLabel setStringValue:@""];
+			
+			for (NSString *line in string.lines)
+			{
+				if ([line contains:@"InstaCode"] && [line contains:@" error: "])
+				{
+					int row = [[line split:@":"][1] intValue];
+					int col = [[line split:@":"][2] intValue];
+					
+					int range = 0, i = 0;
+					for (NSString *l in [fragaria string].lines)
+					{
+						i++;
+						if (i == row)
+						{
+							[[fragaria textView] setSelectedRange:NSMakeRange(range+col-1, 1)];
+							[[fragaria textView] scrollRangeToVisible:NSMakeRange(range+col-1, 1)];
+							break;
+						}
+						range += [l length]+1;
+					}
+					break;
+				}
+			}
         }
         else
         {
-            [compileLabel setStringValue:[NSString stringWithFormat:@"Compile: done in %.2fs (%liw)", compileTime, [string countOccurencesOfString:@"warning:"]]];
-            [runLabel setStringValue:@"Run: currently running"];
-            [progressIndicator startAnimation:self];
-            [compileButton setTitle:@"Stop"];
+            [_compileLabel setStringValue:[NSString stringWithFormat:@"Compile: done in %.2fs (%li warnings)", compileTime, [string countOccurencesOfString:@"warning:"]]];
+            [_runLabel setStringValue:@"Run: currently running"];
+            [_progressIndicator startAnimation:self];
+            [_compileButton setTitle:@"Stop"];
             
-            [resultTabView selectLastTabViewItem:nil];
+            [_resultTabView selectLastTabViewItem:nil];
             [self runProgram];
         }
     }
-    else if ([[compileButton title] isEqualToString:@"Stop"])
-    {        
-        [compileButton setTitle:@"Compile & Run"];
+    else if ([[_compileButton title] isEqualToString:@"Stop"])
+    {
+        [_compileButton setTitle:@"Compile & Run"];
 
         [compiledAppTask terminate];
     }
@@ -171,15 +187,163 @@
         assert(0);
 }
 
+- (IBAction)chooseGoto:(id)sender
+{
+	NSRange r = NSRangeFromString(_gotoRanges[[sender indexOfSelectedItem]-1]);
+	[[fragaria textView] setSelectedRange:r];
+	[[fragaria textView] scrollRangeToVisible:r];
+
+}
+
+- (IBAction)chooseSnippet:(id)sender
+{
+	int level = 0;
+	NSArray *ranges = [[fragaria textView] selectedRanges];
+	if ([ranges count])
+	{
+		NSInteger insertionPoint = [[ranges objectAtIndex:0] rangeValue].location;
+		for (NSInteger i = MIN(insertionPoint, [[fragaria string] length]-1); i >= 0; i--)
+		{
+			char c = [[fragaria string] characterAtIndex:i];
+			if (c == '{') level++;
+			if (c == '}') level--;
+		}
+	}
+	
+	NSString *path = [[cc.resDir stringByAppendingPathComponent:@"Snippets"] stringByAppendingPathComponent:[[[sender selectedItem] title] stringByAppendingString:@".txt"]];
+	NSString *str = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+
+	
+	[[fragaria textView] insertText:[[str.lines mapped:^id(NSString *s){ for (int i = 0; i < level; i++) s = [@"\t" stringByAppendingString:s]; return s;}] joined:@"\n"]];
+}
+
 - (IBAction)choosePreset:(id)sender
 {
-    if ([[sender title] isEqualToString:@"Main"])
-        [codeTextView setString:kMainPreset];
-    else if ([[sender title] isEqualToString:@"Function"])
-        [codeTextView setString:kFunctionPreset];
-    else if ([[sender title] isEqualToString:@"Obj-C"])
-        [codeTextView setString:kObjCPreset];
-    else if ([[sender title] isEqualToString:@"C++"])
-        [codeTextView setString:kCPPPreset];
+	if (!dirty || (dirty && NSRunAlertPanel(@"InstaCode", @"Choosing a new preset will erase your current project.", @"Continue", @"Cancel", nil) == NSOKButton))
+	{
+		NSURL *path = [[cc.resURL add:@"Presets"] add:[[[sender selectedItem] title] stringByAppendingString:@".txt"]];
+		NSString *str = [NSString stringWithContentsOfURL:path encoding:NSUTF8StringEncoding error:NULL];
+		[fragaria setString:str];
+		[self textDidChange:nil];
+		dirty = FALSE;
+	}
+}
+
+#pragma mark NSTextDelegate
+
+- (void)textDidChange:(NSNotification *)notification
+{
+	dirty = TRUE;
+	
+	NSMutableArray *tmp = @[@"Goto:"].mutable;
+	NSMutableArray *tmpRanges = @[].mutable;
+
+	int level = 0;
+
+	for (NSString *line in [fragaria string].lines)
+	{
+		if (level == 0)
+		{
+			if ([line hasPrefix:@"-"] || [line hasPrefix:@"+"] || [[[line split:@"{"][0] trimmed] hasSuffix:@")"])
+			{
+				[tmp addObject:[line split:@"{"][0]];
+
+				[tmpRanges addObject:NSStringFromRange([[fragaria string] rangeOfString:line])];
+			}
+		}
+		
+		for (int i = 0; i < [line length]; i++)
+		{
+			char c = [line characterAtIndex:i];
+			if (c == '{') level++;
+			if (c == '}') level--;
+		}
+	}
+	
+	self.gotoRanges = tmpRanges.immutable;
+	self.gotoNames = tmp.immutable;
+}
+
+- (BOOL)textShouldBeginEditing:(NSText *)aTextObject
+{
+	return YES;
+}
+
+- (BOOL)textShouldEndEditing:(NSText *)aTextObject
+{
+	return YES;
+}
+
+#pragma mark Private
+
+- (void)runProgram
+{
+    runStart = [NSDate date];
+    [_outputTextView setString:@""];
+	
+    compiledAppTask = [[NSTask alloc] init];
+	NSPipe *taskPipe = [NSPipe pipe];
+	
+    [compiledAppTask setLaunchPath:[cc.suppURL add:@"InstaCode.out"].path];
+    [compiledAppTask setStandardOutput:taskPipe];
+	[compiledAppTask setStandardError:taskPipe];
+    
+    fileHandle = [taskPipe fileHandleForReading];
+    [fileHandle waitForDataInBackgroundAndNotify];
+	
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(programStopped) name:NSTaskDidTerminateNotification object:compiledAppTask];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getData:) name:NSFileHandleDataAvailableNotification object:fileHandle];
+    
+    
+    [compiledAppTask launch];
+}
+
+- (void)programStopped
+{
+    NSData *data = [fileHandle readDataToEndOfFile];
+    NSString *string = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+    [_outputTextView setString:[[_outputTextView string] stringByAppendingString:string]];
+    
+    [[NSFileManager defaultManager] removeItemAtURL:[cc.suppURL add:@"InstaCode.out"] error:NULL];
+    [_progressIndicator stopAnimation:self];
+    [_compileButton setTitle:@"Compile & Run"];
+    [_runLabel setStringValue:[NSString stringWithFormat:@"Run: done in %.2fs (return %i)", [[NSDate date] timeIntervalSinceDate:runStart], [compiledAppTask terminationStatus]]];
+}
+
+- (void)getData:(NSNotification *)aNotification
+{
+    NSData *data = [fileHandle availableData];
+    NSString *outputString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
+    [_outputTextView setString:[[_outputTextView string] stringByAppendingString:outputString]];
+    
+    
+    if (![[_compileButton title] isEqualToString:@"Compile & Run"])
+    {
+        [_runLabel setStringValue:[NSString stringWithFormat:@"Run: currently running (%.2fs)", [[NSDate date] timeIntervalSinceDate:runStart]]];
+        
+        [fileHandle waitForDataInBackgroundAndNotify];
+    }
+}
+
+- (int)checkSDKVersion
+{
+    int sdkVer;
+    for (sdkVer = 20; sdkVer >= 0; sdkVer--) // we are save until Mac OS X 10.20 ;->
+        if (_stringf(@"/Applications/%@/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.%i.sdk", kXCodeKey.defaultString, sdkVer).fileExists)
+            break;
+    
+    if (!sdkVer)
+    {
+        NSRunAlertPanel(@"Error", @"Fatal Error", @"D'oh", nil, nil);
+        exit(1);
+    }
+	
+	return sdkVer;
 }
 @end
+
+int main(int argc, char *argv[])
+{
+    return NSApplicationMain(argc, (const char **)argv);
+}

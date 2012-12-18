@@ -1,0 +1,148 @@
+#import <Cocoa/Cocoa.h>
+#import <QuartzCore/QuartzCore.h>
+
+NSMutableDictionary *keyDict;
+
+@interface KeyWindow : NSWindow
+@end
+
+@implementation KeyWindow
+- (void)keyDown:(NSEvent *)theEvent {
+	[keyDict setObject:@(YES) forKey:@([[theEvent characters] characterAtIndex:0])];
+}
+- (void)keyUp:(NSEvent *)theEvent {
+	[keyDict setObject:@(NO) forKey:@([[theEvent characters] characterAtIndex:0])];
+}
+@end
+
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate> {
+	NSWindow *window;
+	int posL, posR, scoreL, scoreR, round;
+	CALayer *l, *r, *b;
+	CGPoint ballPos, ballSpeed;
+}
+@end
+
+static __inline__ CGFloat RandomFloatBetween(CGFloat a, CGFloat b) {
+	return a + (b - a) * ((CGFloat) random() / (CGFloat) RAND_MAX);
+}
+
+@implementation AppDelegate : NSObject
+
+- (void)applicationWillFinishLaunching:(NSNotification *)notification {
+	// create menus programmatically
+	id menubar = [NSMenu new];
+	id appMenuItem = [NSMenuItem new];
+	[menubar addItem:appMenuItem];
+	[NSApp setMainMenu:menubar];
+	id appMenu = [NSMenu new];
+	id quitMenuItem = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@"q"];
+	[appMenu addItem:quitMenuItem];
+	[appMenuItem setSubmenu:appMenu];
+	// create window programmatically
+	window = [[KeyWindow alloc] initWithContentRect:NSMakeRect(0, 0, 400, 300)
+		styleMask:NSTitledWindowMask backing:NSBackingStoreBuffered defer:NO];
+	[window cascadeTopLeftFromPoint:NSMakePoint(20,20)];
+	[window setTitle:@"Example Window"];
+	[window makeKeyAndOrderFront:nil];
+	[window setDelegate:self];
+	[NSApp activateIgnoringOtherApps:YES];
+
+	// reset game
+	[self reset];
+	
+	// key down data structure
+	keyDict = [NSMutableDictionary new];
+	
+	// game loop
+	[NSTimer scheduledTimerWithTimeInterval:1.0 / 30.0 target:self selector:@selector(loop) userInfo:nil repeats:YES];
+	
+	// setup layers for game objects
+	l = [CALayer layer];
+	l.frame = CGRectMake(0, posL-60/2, 10, 60);
+	l.backgroundColor = CGColorCreateGenericRGB(1.0, 0.0, 0.0, 1.0);
+	
+	r = [CALayer layer];
+	r.frame = CGRectMake(0, posR-60/2, 10, 60);
+	r.backgroundColor = CGColorCreateGenericRGB(0.0, 0.0, 1.0, 1.0);
+
+	b = [CALayer layer];
+	b.frame = CGRectMake(ballPos.x, ballPos.y, 25, 25);
+	b.backgroundColor = CGColorCreateGenericRGB(0.0, 1.0, 0.0, 1.0);
+	b.cornerRadius = 10.0;
+	
+	[window.contentView setWantsLayer:YES];
+	[[window.contentView layer] addSublayer:r];
+	[[window.contentView layer] addSublayer:l];
+	[[window.contentView layer] addSublayer:b];
+}
+
+- (void)reset {
+	window.title = [NSString stringWithFormat:@"<<Pong>> Round: %i	Score: %i|%i", scoreL+scoreR, scoreL, scoreR];
+	// initial game object positions
+	posL = posR = window.frame.size.height / 2;
+	ballPos = CGPointMake(400/2, 300/2);
+	ballSpeed = CGPointMake((random() > RAND_MAX/2) ? -3 : 3, RandomFloatBetween(-1,1));
+}
+
+- (void)loop {
+	// check keys and move user paddle
+	if ([[keyDict objectForKey:@(NSUpArrowFunctionKey)] intValue])
+		posL +=5;
+	else if ([[keyDict objectForKey:@(NSDownArrowFunctionKey)] intValue])
+		posL -=5;
+	
+	// advance ball
+	ballPos.x += ballSpeed.x;
+	ballPos.y += ballSpeed.y;
+
+	// move enemy AI paddle
+	posR += (posR - ballPos.y) < 0 ? 2 : -2;
+	
+	// handle collisions ball with paddle or OUT
+	if (ballPos.x > 400 - 10 - 25) {
+		if (fabsf(posR - ballPos.y) > 60/2) { // out
+			scoreL++;
+			[self reset];
+		}
+		else { // paddle
+			ballSpeed.y -= (posR - ballPos.y) / 10.0;
+			ballSpeed.x = -ballSpeed.x;
+			ballPos.x = 400 - 10 - 25;			
+		}
+	}
+	else if (ballPos.x < 10) {
+		if (fabsf(posL - ballPos.y) > 60/2) {
+			scoreR++;
+			[self reset];
+		}
+		else {
+			ballSpeed.y -= (posL - ballPos.y) / 10.0;
+			ballSpeed.x = -ballSpeed.x;
+			ballPos.x = 10;
+		}
+	}
+	
+	// handle collisions ball to top or bottom
+	if (ballPos.y >= 300-25 || ballPos.y < 0)
+		ballSpeed.y = -ballSpeed.y;
+
+	// update graphics
+	[CATransaction begin];
+	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+	l.frame = CGRectMake(0, posL-60/2, 10, 60);
+	r.frame = CGRectMake(400-10, posR-60/2, 10, 60);
+	b.frame = CGRectMake(ballPos.x, ballPos.y, 25, 25);
+	[CATransaction commit];
+}
+@end
+
+int main () {
+	@autoreleasepool {
+		NSApplication *app = [NSApplication sharedApplication];
+		[app setActivationPolicy:NSApplicationActivationPolicyRegular];
+		[app setDelegate:[[AppDelegate alloc] init]];
+		[app run];
+	}
+	return EXIT_SUCCESS;
+}

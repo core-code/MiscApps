@@ -3,27 +3,38 @@
 //  InstaCode
 //
 //  Created by CoreCode on 31.07.12.
-//  Copyright (c) 2012 CoreCode. All rights reserved.
-//
+/*	Copyright (c) 2012 CoreCode
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitationthe rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
 
-#import <Cocoa/Cocoa.h>
+@class MGSFragaria;
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
     NSFileHandle *fileHandle;
     NSTask *compiledAppTask;
     NSDate *runStart;
+	MGSFragaria *fragaria;
+	BOOL dirty;
 }
-@property (assign) IBOutlet NSWindow *window;
-@property (unsafe_unretained) IBOutlet NSTextView *codeTextView;
-@property (unsafe_unretained) IBOutlet NSTextView *compilationTextView;
-@property (unsafe_unretained) IBOutlet NSTextView *outputTextView;
-@property (unsafe_unretained) IBOutlet NSTabView *resultTabView;
-@property (unsafe_unretained) IBOutlet NSProgressIndicator *progressIndicator;
-@property (unsafe_unretained) IBOutlet NSButton *compileButton;
-@property (unsafe_unretained) IBOutlet NSTextField *compileLabel;
-@property (unsafe_unretained) IBOutlet NSTextField *runLabel;
+
+@property (assign, nonatomic) IBOutlet NSWindow *window;
+@property (assign, nonatomic) IBOutlet NSTextView *compilationTextView;
+@property (assign, nonatomic) IBOutlet NSTextView *outputTextView;
+@property (weak, nonatomic) IBOutlet NSTabView *resultTabView;
+@property (weak, nonatomic) IBOutlet NSProgressIndicator *progressIndicator;
+@property (weak, nonatomic) IBOutlet NSButton *compileButton;
+@property (weak, nonatomic) IBOutlet NSTextField *compileLabel;
+@property (weak, nonatomic) IBOutlet NSTextField *runLabel;
+@property (weak, nonatomic) IBOutlet NSView *contentView;
+@property (strong, nonatomic) NSArray *presetsNames;
+@property (strong, nonatomic) NSArray *snippetNames;
+@property (strong, nonatomic) NSArray *gotoNames;
+@property (strong, nonatomic) NSArray *gotoRanges;
 
 - (IBAction)compileAndRun:(id)sender;
 - (IBAction)choosePreset:(id)sender;
+
 @end

@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <unistd.h>
+
+int function(void)
+{
+	return 1;
+}
+
+int main()
+{
+	printf("function() returned: %i", function());
+}
