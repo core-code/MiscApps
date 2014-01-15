@@ -10,16 +10,17 @@
  */
 
 #import "AppDelegate.h"
-#import "MGSFragaria.h"
-#import "MGSPreferencesController.h"
 
-CONST_KEY(XCode)
-CONST_KEY(XCodeVersions)
 CONST_KEY(Project)
 CONST_KEY(Runs)
 CONST_KEY(NextNag)
 CONST_KEY(NagCount)
 CONST_KEY(UserPayed)
+CONST_KEY(XCodeVersions)
+CONST_KEY(XCode)
+
+#import "MGSFragaria.h"
+#import "MGSPreferencesController.h"
 
 @implementation AppDelegate
 
@@ -51,7 +52,7 @@ CONST_KEY(UserPayed)
 	
 	
 	// check xcode versions
-	NSArray *xcodeVersions = [[@"/Applications".dirContents filteredArrayUsingPredicate:_predf(@"self BEGINSWITH[cd] 'Xcode'")] filtered:^int(NSString *s){return _stringf(@"/Applications/%@/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/ToolchainInfo.plist", s).fileExists;}];
+	NSArray *xcodeVersions = [[@"/Applications".dirContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'Xcode'"] filtered:^int(NSString *s){return makeString(@"/Applications/%@/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/ToolchainInfo.plist", s).fileExists;}];
 	if (xcodeVersions.empty)
 	{
 		NSRunAlertPanel(@"Error", @"You need to install Xcode to use InstaCode.\n\nIt is a free download on the Mac App Store.\n\nIf you already have it installed, make sure it is in your /Applications folder and its name still begins with 'Xcode'.", @"OK", nil, nil);
@@ -75,7 +76,7 @@ CONST_KEY(UserPayed)
 	{
 		if (kRunsKey.defaultInt >= kNextNagKey.defaultInt)
 		{
-			NSInteger res = NSRunAlertPanel(@"Info", _stringf(@"InstaCode is supported by donations. You've used InstaCode to compile %li programs. Would you like to donate now?", kRunsKey.defaultInt), @"Donate now!", @"Remind me Later", @"I have donated");
+			NSInteger res = NSRunAlertPanel(@"Info", makeString(@"InstaCode is supported by donations. You've used InstaCode to compile %li programs. Would you like to donate now?", kRunsKey.defaultInt), @"Donate now!", @"Remind me Later", @"I have donated");
 
 			if (res == NSAlertDefaultReturn) // donate now
 			{
@@ -109,11 +110,11 @@ CONST_KEY(UserPayed)
 	int tag = [[sender valueForKey:@"tag"] intValue];
     
 	if (tag == 1)
-		[_stringf(@"mailto:feedback@corecode.at?subject=%@ %@ Feedback", cc.appName, cc.appVersionString).escapedURL open];
+		[makeString(@"mailto:feedback@corecode.at?subject=%@ %@ Feedback", cc.appName, cc.appVersionString).escapedURL open];
 	else if (tag == 2)
 		[@"Read Me.rtf".resourceURL open];
 	else if (tag == 3)
-		[_stringf(@"http://www.corecode.at/%@/", [cc.appName lowercaseString]).escapedURL open];
+		[makeString(@"http://www.corecode.at/%@/", [cc.appName lowercaseString]).escapedURL open];
 }
 
 - (IBAction)compileAndRun:(id)sender
@@ -124,7 +125,7 @@ CONST_KEY(UserPayed)
 
         [[fragaria string] writeToURL:[cc.suppURL add:@"InstaCode.mm"] atomically:YES encoding:NSUTF8StringEncoding error:NULL];
 
-		NSArray *args = @[_stringf(@"/Applications/%@/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++", kXCodeKey.defaultString), @"-x", @"objective-c++", @"-stdlib=libc++", @"-isysroot", _stringf(@"/Applications/%@/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.%i.sdk", kXCodeKey.defaultString, [self checkSDKVersion]), @"-framework", @"Foundation", @"-framework", @"AppKit", @"-framework", @"QuartzCore", @"-O3", @"-Wall", @"-o", [cc.suppURL add:@"InstaCode.out"].path, [cc.suppURL add:@"InstaCode.mm"].path];
+		NSArray *args = @[makeString(@"/Applications/%@/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++", kXCodeKey.defaultString), @"-x", @"objective-c++", @"-stdlib=libc++", @"-isysroot", makeString(@"/Applications/%@/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.%i.sdk", kXCodeKey.defaultString, [self checkSDKVersion]), @"-framework", @"Foundation", @"-framework", @"AppKit", @"-framework", @"QuartzCore", @"-O3", @"-Wall", @"-o", [cc.suppURL add:@"InstaCode.out"].path, [cc.suppURL add:@"InstaCode.mm"].path];
 	
         NSInteger terminationStatus;
         NSDate *pre = [NSDate date];
@@ -140,7 +141,7 @@ CONST_KEY(UserPayed)
         {
             [_resultTabView selectFirstTabViewItem:nil];
             
-            [_compileLabel setStringValue:[NSString stringWithFormat:@"Compile: failed in %.2fs (%liw|%lie)", compileTime, [string countOccurencesOfString:@"warning:"], [string countOccurencesOfString:@"error:"]]];
+            [_compileLabel setStringValue:makeString(@"Compile: failed in %.2fs (%liw|%lie)", compileTime, [string countOccurencesOfString:@"warning:"], [string countOccurencesOfString:@"error:"])];
             [_runLabel setStringValue:@""];
 			
 			for (NSString *line in string.lines)
@@ -236,7 +237,7 @@ CONST_KEY(UserPayed)
 	dirty = TRUE;
 	
 	NSMutableArray *tmp = @[@"Goto:"].mutable;
-	NSMutableArray *tmpRanges = @[].mutable;
+	NSMutableArray *tmpRanges = [NSMutableArray new];
 
 	int level = 0;
 
@@ -330,7 +331,7 @@ CONST_KEY(UserPayed)
 {
     int sdkVer;
     for (sdkVer = 20; sdkVer >= 0; sdkVer--) // we are save until Mac OS X 10.20 ;->
-        if (_stringf(@"/Applications/%@/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.%i.sdk", kXCodeKey.defaultString, sdkVer).fileExists)
+        if (makeString(@"/Applications/%@/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.%i.sdk", kXCodeKey.defaultString, sdkVer).fileExists)
             break;
     
     if (!sdkVer)
