@@ -25,6 +25,9 @@ An application for converting/extracting Compiled HTML Help (.chm) files so you 
 	
 PDFullscreen
 An application for fullscreen PDF viewing - helpful for eBook reading.
+
+MovieCutter
+An application for cutting/splitting any movie file types like MKV/MP4/etc.
 	
 TunesController
 An application for remotely controlling iTunes from any Java capable device.
