@@ -12,10 +12,6 @@
 		B9E60B181885EE0400FD5922 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B171885EE0400FD5922 /* AppDelegate.m */; };
 		B9E60B1B1885EE0400FD5922 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E60B191885EE0400FD5922 /* MainMenu.xib */; };
 		B9E60B1D1885EE0400FD5922 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E60B1C1885EE0400FD5922 /* Images.xcassets */; };
-		B9E60B241885EE0400FD5922 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E60B231885EE0400FD5922 /* XCTest.framework */; };
-		B9E60B251885EE0400FD5922 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E60B041885EE0400FD5922 /* Cocoa.framework */; };
-		B9E60B2D1885EE0400FD5922 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9E60B2B1885EE0400FD5922 /* InfoPlist.strings */; };
-		B9E60B2F1885EE0400FD5922 /* MovieCutterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B2E1885EE0400FD5922 /* MovieCutterTests.m */; };
 		B9E60B7F1885EE1200FD5922 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B3F1885EE1200FD5922 /* CoreLib.m */; };
 		B9E60B901885EE1200FD5922 /* NSArray+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B661885EE1200FD5922 /* NSArray+CoreCode.m */; };
 		B9E60B911885EE1200FD5922 /* NSData+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B681885EE1200FD5922 /* NSData+CoreCode.m */; };
@@ -30,16 +26,6 @@
 		B9E60BA91885F39800FD5922 /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9E60BA81885F39800FD5922 /* ffmpeg */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B9E60B261885EE0400FD5922 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B9E60AF91885EE0400FD5922 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B9E60B001885EE0400FD5922;
-			remoteInfo = MovieCutter;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		B9E60B011885EE0400FD5922 /* MovieCutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieCutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E60B041885EE0400FD5922 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -53,7 +39,6 @@
 		B9E60B171885EE0400FD5922 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B9E60B1A1885EE0400FD5922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B9E60B1C1885EE0400FD5922 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B9E60B221885EE0400FD5922 /* MovieCutterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieCutterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E60B231885EE0400FD5922 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B9E60B2A1885EE0400FD5922 /* MovieCutterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MovieCutterTests-Info.plist"; sourceTree = "<group>"; };
 		B9E60B2C1885EE0400FD5922 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -92,15 +77,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9E60B1F1885EE0400FD5922 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B9E60B251885EE0400FD5922 /* Cocoa.framework in Frameworks */,
-				B9E60B241885EE0400FD5922 /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -118,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				B9E60B011885EE0400FD5922 /* MovieCutter.app */,
-				B9E60B221885EE0400FD5922 /* MovieCutterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,24 +210,6 @@
 			productReference = B9E60B011885EE0400FD5922 /* MovieCutter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B9E60B211885EE0400FD5922 /* MovieCutterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B9E60B351885EE0400FD5922 /* Build configuration list for PBXNativeTarget "MovieCutterTests" */;
-			buildPhases = (
-				B9E60B1E1885EE0400FD5922 /* Sources */,
-				B9E60B1F1885EE0400FD5922 /* Frameworks */,
-				B9E60B201885EE0400FD5922 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B9E60B271885EE0400FD5922 /* PBXTargetDependency */,
-			);
-			name = MovieCutterTests;
-			productName = MovieCutterTests;
-			productReference = B9E60B221885EE0400FD5922 /* MovieCutterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -261,11 +218,6 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = corecode;
-				TargetAttributes = {
-					B9E60B211885EE0400FD5922 = {
-						TestTargetID = B9E60B001885EE0400FD5922;
-					};
-				};
 			};
 			buildConfigurationList = B9E60AFC1885EE0400FD5922 /* Build configuration list for PBXProject "MovieCutter" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -281,7 +233,6 @@
 			projectRoot = "";
 			targets = (
 				B9E60B001885EE0400FD5922 /* MovieCutter */,
-				B9E60B211885EE0400FD5922 /* MovieCutterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -295,14 +246,6 @@
 				B9E60B1D1885EE0400FD5922 /* Images.xcassets in Resources */,
 				B9E60B151885EE0400FD5922 /* Credits.rtf in Resources */,
 				B9E60B1B1885EE0400FD5922 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9E60B201885EE0400FD5922 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B9E60B2D1885EE0400FD5922 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,23 +271,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9E60B1E1885EE0400FD5922 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B9E60B2F1885EE0400FD5922 /* MovieCutterTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B9E60B271885EE0400FD5922 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B9E60B001885EE0400FD5922 /* MovieCutter */;
-			targetProxy = B9E60B261885EE0400FD5922 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B9E60B131885EE0400FD5922 /* Credits.rtf */ = {
@@ -468,46 +395,6 @@
 			};
 			name = Release;
 		};
-		B9E60B361885EE0400FD5922 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MovieCutter.app/Contents/MacOS/MovieCutter";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MovieCutter/MovieCutter-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "MovieCutterTests/MovieCutterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		B9E60B371885EE0400FD5922 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MovieCutter.app/Contents/MacOS/MovieCutter";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MovieCutter/MovieCutter-Prefix.pch";
-				INFOPLIST_FILE = "MovieCutterTests/MovieCutterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -525,15 +412,6 @@
 			buildConfigurations = (
 				B9E60B331885EE0400FD5922 /* Debug */,
 				B9E60B341885EE0400FD5922 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B9E60B351885EE0400FD5922 /* Build configuration list for PBXNativeTarget "MovieCutterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B9E60B361885EE0400FD5922 /* Debug */,
-				B9E60B371885EE0400FD5922 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

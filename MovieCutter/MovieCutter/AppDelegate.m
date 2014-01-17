@@ -105,6 +105,7 @@ int durationSecs;
 							   movie.path,
 							   @"-ss",
 							   @"cutStart".defaultString,
+							   @"-map", @"0",
 							   @"-vcodec", @"copy",
 							   @"-acodec", @"copy",
 							   @"-scodec", @"copy",
