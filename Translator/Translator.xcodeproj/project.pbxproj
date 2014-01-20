@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B90EFDCF188D5F2A00210A03 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90EFDCE188D5F2A00210A03 /* Cocoa.framework */; };
-		B90EFDDB188D5F2A00210A03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFDDA188D5F2A00210A03 /* main.m */; };
 		B90EFDE2188D5F2A00210A03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFDE1188D5F2A00210A03 /* AppDelegate.m */; };
-		B90EFDE5188D5F2A00210A03 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90EFDE3188D5F2A00210A03 /* MainMenu.xib */; };
 		B90EFDE7188D5F2A00210A03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90EFDE6188D5F2A00210A03 /* Images.xcassets */; };
 		B90EFE49188D5F7400210A03 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE09188D5F7300210A03 /* CoreLib.m */; };
 		B90EFE5A188D5F7400210A03 /* NSArray+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE30188D5F7300210A03 /* NSArray+CoreCode.m */; };
@@ -24,6 +22,7 @@
 		B90EFE62188D5F7400210A03 /* NSString+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE40188D5F7400210A03 /* NSString+CoreCode.m */; };
 		B90EFE63188D5F7400210A03 /* NSURL+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE42188D5F7400210A03 /* NSURL+CoreCode.m */; };
 		B90EFE73188D5FE800210A03 /* MainMenuTranslations.plist in Resources */ = {isa = PBXBuildFile; fileRef = B90EFE72188D5FE800210A03 /* MainMenuTranslations.plist */; };
+		B9677072188D8807001B9A59 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9677070188D8807001B9A59 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,16 +32,10 @@
 		B90EFDD2188D5F2A00210A03 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B90EFDD3188D5F2A00210A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B90EFDD6188D5F2A00210A03 /* Translator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Translator-Info.plist"; sourceTree = "<group>"; };
-		B90EFDDA188D5F2A00210A03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B90EFDDC188D5F2A00210A03 /* Translator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Translator-Prefix.pch"; sourceTree = "<group>"; };
 		B90EFDE0188D5F2A00210A03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B90EFDE1188D5F2A00210A03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B90EFDE4188D5F2A00210A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B90EFDE6188D5F2A00210A03 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B90EFDED188D5F2A00210A03 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B90EFDF4188D5F2A00210A03 /* TranslatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TranslatorTests-Info.plist"; sourceTree = "<group>"; };
-		B90EFDF6188D5F2A00210A03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B90EFDF8188D5F2A00210A03 /* TranslatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TranslatorTests.m; sourceTree = "<group>"; };
 		B90EFE08188D5F7300210A03 /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
 		B90EFE09188D5F7300210A03 /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
 		B90EFE2F188D5F7300210A03 /* NSArray+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CoreCode.h"; sourceTree = "<group>"; };
@@ -66,6 +59,7 @@
 		B90EFE41188D5F7400210A03 /* NSURL+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CoreCode.h"; sourceTree = "<group>"; };
 		B90EFE42188D5F7400210A03 /* NSURL+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CoreCode.m"; sourceTree = "<group>"; };
 		B90EFE72188D5FE800210A03 /* MainMenuTranslations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainMenuTranslations.plist; sourceTree = "<group>"; };
+		B9677071188D8807001B9A59 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				B90EFDD4188D5F2A00210A03 /* Translator */,
-				B90EFDF2188D5F2A00210A03 /* TranslatorTests */,
 				B90EFDCD188D5F2A00210A03 /* Frameworks */,
 				B90EFDCC188D5F2A00210A03 /* Products */,
 			);
@@ -102,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				B90EFDCE188D5F2A00210A03 /* Cocoa.framework */,
-				B90EFDED188D5F2A00210A03 /* XCTest.framework */,
 				B90EFDD0188D5F2A00210A03 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -123,7 +115,7 @@
 			children = (
 				B90EFDE0188D5F2A00210A03 /* AppDelegate.h */,
 				B90EFDE1188D5F2A00210A03 /* AppDelegate.m */,
-				B90EFDE3188D5F2A00210A03 /* MainMenu.xib */,
+				B9677070188D8807001B9A59 /* MainMenu.xib */,
 				B90EFDE6188D5F2A00210A03 /* Images.xcassets */,
 				B90EFE02188D5F7300210A03 /* CoreLib */,
 				B90EFDD5188D5F2A00210A03 /* Supporting Files */,
@@ -136,26 +128,7 @@
 			children = (
 				B90EFE72188D5FE800210A03 /* MainMenuTranslations.plist */,
 				B90EFDD6188D5F2A00210A03 /* Translator-Info.plist */,
-				B90EFDDA188D5F2A00210A03 /* main.m */,
 				B90EFDDC188D5F2A00210A03 /* Translator-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B90EFDF2188D5F2A00210A03 /* TranslatorTests */ = {
-			isa = PBXGroup;
-			children = (
-				B90EFDF8188D5F2A00210A03 /* TranslatorTests.m */,
-				B90EFDF3188D5F2A00210A03 /* Supporting Files */,
-			);
-			path = TranslatorTests;
-			sourceTree = "<group>";
-		};
-		B90EFDF3188D5F2A00210A03 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B90EFDF4188D5F2A00210A03 /* TranslatorTests-Info.plist */,
-				B90EFDF5188D5F2A00210A03 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -244,7 +217,7 @@
 			files = (
 				B90EFDE7188D5F2A00210A03 /* Images.xcassets in Resources */,
 				B90EFE73188D5FE800210A03 /* MainMenuTranslations.plist in Resources */,
-				B90EFDE5188D5F2A00210A03 /* MainMenu.xib in Resources */,
+				B9677072188D8807001B9A59 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,27 +240,18 @@
 				B90EFE5B188D5F7400210A03 /* NSData+CoreCode.m in Sources */,
 				B90EFE5C188D5F7400210A03 /* NSDate+CoreCode.m in Sources */,
 				B90EFE60188D5F7400210A03 /* NSNumber+CoreCode.m in Sources */,
-				B90EFDDB188D5F2A00210A03 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B90EFDE3188D5F2A00210A03 /* MainMenu.xib */ = {
+		B9677070188D8807001B9A59 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B90EFDE4188D5F2A00210A03 /* Base */,
+				B9677071188D8807001B9A59 /* en */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		B90EFDF5188D5F2A00210A03 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B90EFDF6188D5F2A00210A03 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -324,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -356,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
 			name = Release;

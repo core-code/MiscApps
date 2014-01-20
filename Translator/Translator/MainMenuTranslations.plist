@@ -5345,7 +5345,7 @@
 		<key>useStandardLigatures:</key>
 		<string>Utilizar Padrão</string>
 	</dict>
-	<key>pt_PT.lproj</key>
+	<key>pt-PT.lproj</key>
 	<dict>
 		<key>About APPLICATIONNAME</key>
 		<string>Acerca do APPLICATIONNAME</string>
@@ -7632,7 +7632,7 @@
 		<key>useStandardLigatures:</key>
 		<string>Sử dụng Mặc định</string>
 	</dict>
-	<key>zh_CN.lproj</key>
+	<key>zh-Hans.lproj</key>
 	<dict>
 		<key>\tDefault</key>
 		<string>\t默认</string>
@@ -7885,7 +7885,7 @@
 		<key>useStandardLigatures:</key>
 		<string>使用默认</string>
 	</dict>
-	<key>zh_TW.lproj</key>
+	<key>zh-Hant.lproj</key>
 	<dict>
 		<key>\tDefault</key>
 		<string>\t預設值</string>
