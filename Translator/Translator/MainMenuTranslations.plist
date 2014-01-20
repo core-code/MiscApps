@@ -4,6 +4,10 @@
 <dict>
 	<key>ar.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>إظهار شريط الأدوات</string>
+		<key>Customize Toolbar…</key>
+		<string>تخصيص شريط الأدوات…</string>
 		<key>\tDefault</key>
 		<string>\tافتراضي</string>
 		<key>\tLeft to Right</key>
@@ -20,8 +24,6 @@
 		<string>محاذاة إلى اليمين</string>
 		<key>Allow Hyphenation</key>
 		<string>السماح بالتشريط</string>
-		<key>Attach Files…</key>
-		<string>إرفاق ملفات...</string>
 		<key>Bigger</key>
 		<string>أكبر</string>
 		<key>Bold</key>
@@ -92,18 +94,12 @@
 		<string>ربط الأحرف</string>
 		<key>Line Break</key>
 		<string>فاصل السطر</string>
-		<key>Link…</key>
-		<string>ربط...</string>
-		<key>List…</key>
-		<string>قائمة…</string>
 		<key>Loosen</key>
 		<string>توسيع</string>
 		<key>Lower</key>
 		<string>خفض</string>
 		<key>Make Lower Case</key>
 		<string>تحويل إلى أحرف صغيرة</string>
-		<key>Make Rich Text</key>
-		<string>تحويل إلى نص منسق</string>
 		<key>Make Upper Case</key>
 		<string>تحويل إلى أحرف كبيرة</string>
 		<key>Make Vertical Layout</key>
@@ -121,6 +117,8 @@
 		<key>Page Break</key>
 		<string>فاصل الصفحة</string>
 		<key>Page Setup…</key>
+		<string>إعداد الصفحة…</string>
+		<key>Page Setup...</key>
 		<string>إعداد الصفحة…</string>
 		<key>Paragraph Break</key>
 		<string>فاصل الفقرة</string>
@@ -147,6 +145,8 @@
 		<key>Revert to Saved</key>
 		<string>إعادة لحالة الحفظ السابقة</string>
 		<key>Save</key>
+		<string>حفظ</string>
+		<key>Save…</key>
 		<string>حفظ</string>
 		<key>Save All</key>
 		<string>حفظ الكل</string>
@@ -196,8 +196,6 @@
 		<string>خط منخفض</string>
 		<key>Superscript</key>
 		<string>خط مرتفع</string>
-		<key>Table…</key>
-		<string>جدول…</string>
 		<key>Text</key>
 		<string>النص</string>
 		<key>Text Replacement</key>
@@ -224,39 +222,19 @@
 		<string>استخدام التحديد للبحث</string>
 		<key>View</key>
 		<string>عرض</string>
-		<key>Wrap to Page</key>
-		<string>احتواء لملاءمة الصفحة</string>
 		<key>Zoom</key>
 		<string>تكبير/تصغير</string>
 		<key>Zoom In</key>
 		<string>تكبير</string>
 		<key>Zoom Out</key>
 		<string>تصغير</string>
-		<key>_NSFontMenu</key>
-		<string>شكل الحرف</string>
-		<key>_NSMainMenu</key>
-		<string>مساعدة</string>
-		<key>_NSServicesMenu</key>
-		<string>خدمات</string>
-		<key>_NSWindowsMenu</key>
-		<string>نافذة</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>‏‎	من اليسار إلى اليمين</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>‏‎	افتراضي</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>‏‎	من اليمين إلى اليسار</string>
-		<key>submenuAction:</key>
-		<string>تحرير</string>
-		<key>turnOffKerning:</key>
-		<string>عدم استخدام أي عناصر</string>
-		<key>useStandardKerning:</key>
-		<string>استخدام الإعداد الافتراضي</string>
-		<key>useStandardLigatures:</key>
-		<string>استخدام الإعداد الافتراضي</string>
 	</dict>
 	<key>ca.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Mostrar la barra d’eines</string>
+		<key>Customize Toolbar…</key>
+		<string>Personalitzar la barra d’eines…</string>
 		<key>\tDefault</key>
 		<string>\tPer omissió</string>
 		<key>\tLeft to Right</key>
@@ -273,8 +251,6 @@
 		<string>Alinear a la dreta</string>
 		<key>Allow Hyphenation</key>
 		<string>Permetre la divisió de paraules</string>
-		<key>Attach Files…</key>
-		<string>Adjuntar arxius…</string>
 		<key>Bigger</key>
 		<string>Més gran</string>
 		<key>Bold</key>
@@ -345,18 +321,12 @@
 		<string>Lligadures</string>
 		<key>Line Break</key>
 		<string>Salt de línia</string>
-		<key>Link…</key>
-		<string>Enllaçar…</string>
-		<key>List…</key>
-		<string>Llista…</string>
 		<key>Loosen</key>
 		<string>Augmentar</string>
 		<key>Lower</key>
 		<string>Abaixar</string>
 		<key>Make Lower Case</key>
 		<string>Tot en minúscula</string>
-		<key>Make Rich Text</key>
-		<string>Convertir a text enriquit</string>
 		<key>Make Upper Case</key>
 		<string>Tot en majúscula</string>
 		<key>Make Vertical Layout</key>
@@ -374,6 +344,8 @@
 		<key>Page Break</key>
 		<string>Salt de pàgina</string>
 		<key>Page Setup…</key>
+		<string>Configuració de pàgina…</string>
+		<key>Page Setup...</key>
 		<string>Configuració de pàgina…</string>
 		<key>Paragraph Break</key>
 		<string>Salt de paràgraf</string>
@@ -400,6 +372,8 @@
 		<key>Revert to Saved</key>
 		<string>Restaurar a la versió desada</string>
 		<key>Save</key>
+		<string>Desar</string>
+		<key>Save…</key>
 		<string>Desar</string>
 		<key>Save All</key>
 		<string>Desar-ho tot</string>
@@ -449,8 +423,6 @@
 		<string>Subíndex</string>
 		<key>Superscript</key>
 		<string>Superíndex</string>
-		<key>Table…</key>
-		<string>Taula…</string>
 		<key>Text</key>
 		<string>Text</string>
 		<key>Text Replacement</key>
@@ -477,41 +449,21 @@
 		<string>Utilitzar la selecció per buscar</string>
 		<key>View</key>
 		<string>Veure</string>
-		<key>Wrap to Page</key>
-		<string>Ajustar a la pàgina</string>
 		<key>Zoom</key>
 		<string>Zoom</string>
 		<key>Zoom In</key>
 		<string>Ampliar</string>
 		<key>Zoom Out</key>
 		<string>Reduir</string>
-		<key>_NSFontMenu</key>
-		<string>Forma dels caràcters</string>
-		<key>_NSMainMenu</key>
-		<string>Ajuda</string>
-		<key>_NSServicesMenu</key>
-		<string>Serveis</string>
-		<key>_NSWindowsMenu</key>
-		<string>Finestra</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\tD’esquerra a dreta</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\tPer omissió</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\tDe dreta a esquerra</string>
-		<key>submenuAction:</key>
-		<string>Editar</string>
-		<key>turnOffKerning:</key>
-		<string>Cap</string>
-		<key>useStandardKerning:</key>
-		<string>Valor per omissió</string>
-		<key>useStandardLigatures:</key>
-		<string>Valor per omissió</string>
 	</dict>
 	<key>cs.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Zobrazit panel nástrojů</string>
+		<key>Customize Toolbar…</key>
+		<string>Upravit panel nástrojů…</string>
 		<key>About APPLICATIONNAME</key>
-		<string>O aplikaci APPLICATIONNAME</string>
+		<string>O aplikaci APPLICATIONNAME</string>
 		<key>Actual Size</key>
 		<string>Skutečná velikost</string>
 		<key>Align Left</key>
@@ -520,8 +472,6 @@
 		<string>Zarovnat doprava</string>
 		<key>Allow Hyphenation</key>
 		<string>Povolit dělení slov</string>
-		<key>Attach Files…</key>
-		<string>Přiložit soubory…</string>
 		<key>Baseline</key>
 		<string>Účaří</string>
 		<key>Bigger</key>
@@ -539,7 +489,7 @@
 		<key>Check Document Now</key>
 		<string>Zkontrolovat dokument</string>
 		<key>Check Grammar With Spelling</key>
-		<string>Kontrolovat gramatiku a pravopis</string>
+		<string>Kontrolovat gramatiku a pravopis</string>
 		<key>Check Spelling While Typing</key>
 		<string>Kontrolovat pravopis při psaní</string>
 		<key>Clear Menu</key>
@@ -575,7 +525,7 @@
 		<key>Find Previous</key>
 		<string>Hledat předchozí</string>
 		<key>Find and Replace…</key>
-		<string>Hledat a nahradit…</string>
+		<string>Hledat a nahradit…</string>
 		<key>Find…</key>
 		<string>Hledat…</string>
 		<key>Font</key>
@@ -588,8 +538,6 @@
 		<string>Skrýt ostatní</string>
 		<key>Hide APPLICATIONNAME</key>
 		<string>Skrýt APPLICATIONNAME</string>
-		<key>Insert</key>
-		<string>Vložit</string>
 		<key>Italic</key>
 		<string>Kurzíva</string>
 		<key>Jump to Selection</key>
@@ -602,18 +550,12 @@
 		<string>Ligatury</string>
 		<key>Line Break</key>
 		<string>Zalomení řádku</string>
-		<key>Link…</key>
-		<string>Odkaz…</string>
-		<key>List…</key>
-		<string>Seznam…</string>
 		<key>Loosen</key>
 		<string>Volnější</string>
 		<key>Lower</key>
 		<string>Snížit</string>
 		<key>Make Lower Case</key>
 		<string>Převést na malá písmena</string>
-		<key>Make Rich Text</key>
-		<string>Převést na formát RTF</string>
 		<key>Make Upper Case</key>
 		<string>Převést na velká písmena</string>
 		<key>Make Vertical Layout</key>
@@ -634,6 +576,8 @@
 		<string>Zalomení stránky</string>
 		<key>Page Setup…</key>
 		<string>Vzhled stránky…</string>
+		<key>Page Setup...</key>
+		<string>Vzhled stránky…</string>
 		<key>Paragraph</key>
 		<string>Odstavec</string>
 		<key>Paragraph Break</key>
@@ -645,7 +589,7 @@
 		<key>Paste Style</key>
 		<string>Vložit styl</string>
 		<key>Paste and Match Style</key>
-		<string>Vložit a použít styl</string>
+		<string>Vložit a použít styl</string>
 		<key>Preferences…</key>
 		<string>Předvolby…</string>
 		<key>Prevent Editing</key>
@@ -659,8 +603,10 @@
 		<key>Redo</key>
 		<string>Opakovat akci</string>
 		<key>Revert to Saved</key>
-		<string>Vrátit se k uloženému</string>
+		<string>Vrátit se k uloženému</string>
 		<key>Save</key>
+		<string>Uložit</string>
+		<key>Save…</key>
 		<string>Uložit</string>
 		<key>Save All</key>
 		<string>Uložit vše</string>
@@ -685,7 +631,7 @@
 		<key>Show Ruler</key>
 		<string>Zobrazit pravítko</string>
 		<key>Show Spelling and Grammar</key>
-		<string>Zobrazit pravopis a gramatiku</string>
+		<string>Zobrazit pravopis a gramatiku</string>
 		<key>Show Substitutions</key>
 		<string>Zobrazit záměny</string>
 		<key>Smaller</key>
@@ -703,7 +649,7 @@
 		<key>Speech</key>
 		<string>Řeč</string>
 		<key>Spelling and Grammar</key>
-		<string>Pravopis a gramatika</string>
+		<string>Pravopis a gramatika</string>
 		<key>Start Speaking</key>
 		<string>Spustit předčítání</string>
 		<key>Stop Speaking</key>
@@ -716,8 +662,6 @@
 		<string>Záměny</string>
 		<key>Superscript</key>
 		<string>Horní index</string>
-		<key>Table…</key>
-		<string>Tabulka…</string>
 		<key>Text</key>
 		<string>Text</string>
 		<key>Text Replacement</key>
@@ -746,8 +690,6 @@
 		<string>Zobrazení</string>
 		<key>Window</key>
 		<string>Okno</string>
-		<key>Wrap to Page</key>
-		<string>Zalomit podle stránky</string>
 		<key>Writing Direction</key>
 		<string>Směr psaní</string>
 		<key>Zoom</key>
@@ -765,6 +707,10 @@
 	</dict>
 	<key>da.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Vis værktøjslinje</string>
+		<key>Customize Toolbar…</key>
+		<string>Indstil værktøjslinje…</string>
 		<key>About APPLICATIONNAME</key>
 		<string>Om APPLICATIONNAME</string>
 		<key>Actual Size</key>
@@ -775,8 +721,6 @@
 		<string>Højrejuster</string>
 		<key>Allow Hyphenation</key>
 		<string>Tillad orddeling</string>
-		<key>Attach Files…</key>
-		<string>Vedlæg arkiver…</string>
 		<key>Baseline</key>
 		<string>Grundlinje</string>
 		<key>Bigger</key>
@@ -843,8 +787,6 @@
 		<string>Skjul andre</string>
 		<key>Hide APPLICATIONNAME</key>
 		<string>Skjul APPLICATIONNAME</string>
-		<key>Insert</key>
-		<string>Indsæt</string>
 		<key>Italic</key>
 		<string>Kursiv</string>
 		<key>Jump to Selection</key>
@@ -857,18 +799,12 @@
 		<string>Ligaturer</string>
 		<key>Line Break</key>
 		<string>Linjeskift</string>
-		<key>Link…</key>
-		<string>Henvisning…</string>
-		<key>List…</key>
-		<string>Liste…</string>
 		<key>Loosen</key>
 		<string>Løsere</string>
 		<key>Lower</key>
 		<string>Sænk</string>
 		<key>Make Lower Case</key>
 		<string>Med små bogstaver</string>
-		<key>Make Rich Text</key>
-		<string>Konverter til RTF-format</string>
 		<key>Make Upper Case</key>
 		<string>Med store bogstaver</string>
 		<key>Make Vertical Layout</key>
@@ -888,6 +824,8 @@
 		<key>Page Break</key>
 		<string>Sideskift</string>
 		<key>Page Setup…</key>
+		<string>Sidelayout…</string>
+		<key>Page Setup...</key>
 		<string>Sidelayout…</string>
 		<key>Paragraph</key>
 		<string>Afsnit</string>
@@ -916,6 +854,8 @@
 		<key>Revert to Saved</key>
 		<string>Brug sidst arkiverede</string>
 		<key>Save</key>
+		<string>Arkiver</string>
+		<key>Save…</key>
 		<string>Arkiver</string>
 		<key>Save All</key>
 		<string>Arkiver alle</string>
@@ -971,8 +911,6 @@
 		<string>Erstatninger</string>
 		<key>Superscript</key>
 		<string>Hævet skrift</string>
-		<key>Table…</key>
-		<string>Tabel…</string>
 		<key>Text</key>
 		<string>Tekst</string>
 		<key>Text Replacement</key>
@@ -1003,8 +941,6 @@
 		<string>Oversigt</string>
 		<key>Window</key>
 		<string>Vindue</string>
-		<key>Wrap to Page</key>
-		<string>Tekstombrydning på side</string>
 		<key>Writing Direction</key>
 		<string>Skriveretning</string>
 		<key>Zoom</key>
@@ -1022,6 +958,10 @@
 	</dict>
 	<key>de.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Symbolleiste einblenden</string>
+		<key>Customize Toolbar…</key>
+		<string>Symbolleiste anpassen …</string>
 		<key>About APPLICATIONNAME</key>
 		<string>Über APPLICATIONNAME</string>
 		<key>Actual Size</key>
@@ -1032,8 +972,6 @@
 		<string>Rechtsbündig</string>
 		<key>Allow Hyphenation</key>
 		<string>Mit Silbentrennung</string>
-		<key>Attach Files…</key>
-		<string>Anhänge hinzufügen …</string>
 		<key>Baseline</key>
 		<string>Schriftlinie</string>
 		<key>Bigger</key>
@@ -1087,7 +1025,7 @@
 		<key>Find Previous</key>
 		<string>Weitersuchen (rückwärts)</string>
 		<key>Find and Replace…</key>
-		<string>Suchen und Ersetzen …</string>
+		<string>Suchen und Ersetzen …</string>
 		<key>Find…</key>
 		<string>Suchen …</string>
 		<key>Font</key>
@@ -1100,8 +1038,6 @@
 		<string>Andere ausblenden</string>
 		<key>Hide APPLICATIONNAME</key>
 		<string>APPLICATIONNAME ausblenden</string>
-		<key>Insert</key>
-		<string>Einfügen</string>
 		<key>Italic</key>
 		<string>Kursiv</string>
 		<key>Jump to Selection</key>
@@ -1114,18 +1050,12 @@
 		<string>Ligaturen</string>
 		<key>Line Break</key>
 		<string>Zeilenumbruch</string>
-		<key>Link…</key>
-		<string>Link …</string>
-		<key>List…</key>
-		<string>Liste …</string>
 		<key>Loosen</key>
 		<string>Weiter</string>
 		<key>Lower</key>
 		<string>Niedriger</string>
 		<key>Make Lower Case</key>
 		<string>Kleinbuchstaben</string>
-		<key>Make Rich Text</key>
-		<string>In formatierten Text umwandeln</string>
 		<key>Make Upper Case</key>
 		<string>Großbuchstaben</string>
 		<key>Make Vertical Layout</key>
@@ -1145,6 +1075,8 @@
 		<key>Page Break</key>
 		<string>Seitenumbruch</string>
 		<key>Page Setup…</key>
+		<string>Papierformat …</string>
+		<key>Page Setup...</key>
 		<string>Papierformat …</string>
 		<key>Paragraph</key>
 		<string>Absatz</string>
@@ -1173,6 +1105,8 @@
 		<key>Revert to Saved</key>
 		<string>Zurück zur letzten Version</string>
 		<key>Save</key>
+		<string>Sichern</string>
+		<key>Save…</key>
 		<string>Sichern</string>
 		<key>Save All</key>
 		<string>Alles sichern</string>
@@ -1228,8 +1162,6 @@
 		<string>Ersetzungen</string>
 		<key>Superscript</key>
 		<string>Hochgestellt</string>
-		<key>Table…</key>
-		<string>Tabelle …</string>
 		<key>Text</key>
 		<string>Text</string>
 		<key>Text Replacement</key>
@@ -1260,8 +1192,6 @@
 		<string>Darstellung</string>
 		<key>Window</key>
 		<string>Fenster</string>
-		<key>Wrap to Page</key>
-		<string>Seitenränder einblenden</string>
 		<key>Writing Direction</key>
 		<string>Richtung beim Schreiben</string>
 		<key>Zoom</key>
@@ -1279,6 +1209,10 @@
 	</dict>
 	<key>el.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Εμφάνιση γραμμής εργαλείων</string>
+		<key>Customize Toolbar…</key>
+		<string>Προσαρμογή γραμμής εργαλείων…</string>
 		<key>\tDefault</key>
 		<string>\tΠροεπιλογή</string>
 		<key>\tLeft to Right</key>
@@ -1295,8 +1229,6 @@
 		<string>Στοίχιση δεξιά</string>
 		<key>Allow Hyphenation</key>
 		<string>Να επιτρέπεται ο συλλαβισμός</string>
-		<key>Attach Files…</key>
-		<string>Επισύναψη αρχείων…</string>
 		<key>Bigger</key>
 		<string>Μεγαλύτερα</string>
 		<key>Bold</key>
@@ -1367,18 +1299,12 @@
 		<string>Ειδικά σχήματα</string>
 		<key>Line Break</key>
 		<string>Αλλαγή γραμμής</string>
-		<key>Link…</key>
-		<string>Σύνδεσμος...</string>
-		<key>List…</key>
-		<string>Λίστα…</string>
 		<key>Loosen</key>
 		<string>Πιο αραιά</string>
 		<key>Lower</key>
 		<string>Κατέβασμα</string>
 		<key>Make Lower Case</key>
 		<string>Αλλαγή σε πεζά</string>
-		<key>Make Rich Text</key>
-		<string>Μετατροπή σε εμπλουτισμένο κείμενο</string>
 		<key>Make Upper Case</key>
 		<string>Αλλαγή σε κεφαλαία</string>
 		<key>Make Vertical Layout</key>
@@ -1396,6 +1322,8 @@
 		<key>Page Break</key>
 		<string>Αλλαγή σελίδας</string>
 		<key>Page Setup…</key>
+		<string>Διαμόρφωση σελίδας…</string>
+		<key>Page Setup...</key>
 		<string>Διαμόρφωση σελίδας…</string>
 		<key>Paragraph Break</key>
 		<string>Αλλαγή παραγράφου</string>
@@ -1422,6 +1350,8 @@
 		<key>Revert to Saved</key>
 		<string>Επιστροφή σε αποθηκευμένο</string>
 		<key>Save</key>
+		<string>Αποθήκευση</string>
+		<key>Save…</key>
 		<string>Αποθήκευση</string>
 		<key>Save All</key>
 		<string>Αποθήκευση όλων</string>
@@ -1471,8 +1401,6 @@
 		<string>Δείκτης</string>
 		<key>Superscript</key>
 		<string>Εκθέτης</string>
-		<key>Table…</key>
-		<string>Πίνακας…</string>
 		<key>Text</key>
 		<string>Κείμενο</string>
 		<key>Text Replacement</key>
@@ -1499,39 +1427,19 @@
 		<string>Χρήση επιλογής για εύρεση</string>
 		<key>View</key>
 		<string>Προβολή</string>
-		<key>Wrap to Page</key>
-		<string>Αναδίπλωση σε σελίδα</string>
 		<key>Zoom</key>
 		<string>Ζουμ</string>
 		<key>Zoom In</key>
 		<string>Μεγέθυνση</string>
 		<key>Zoom Out</key>
 		<string>Σμίκρυνση</string>
-		<key>_NSFontMenu</key>
-		<string>Σχήμα χαρακτήρα</string>
-		<key>_NSMainMenu</key>
-		<string>Βοήθεια</string>
-		<key>_NSServicesMenu</key>
-		<string>Υπηρεσίες</string>
-		<key>_NSWindowsMenu</key>
-		<string>Παράθυρο</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\tΑριστερά προς δεξιά</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\tΠροεπιλογή</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\tΔεξιά προς αριστερά</string>
-		<key>submenuAction:</key>
-		<string>Επεξεργασία</string>
-		<key>turnOffKerning:</key>
-		<string>Καμία</string>
-		<key>useStandardKerning:</key>
-		<string>Χρήση προεπιλογής</string>
-		<key>useStandardLigatures:</key>
-		<string>Χρήση προεπιλογής</string>
 	</dict>
 	<key>es.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Mostrar barra de herramientas</string>
+		<key>Customize Toolbar…</key>
+		<string>Personalizar barra de herramientas…</string>
 		<key>\tDefault</key>
 		<string>\tPor omisión</string>
 		<key>\tLeft to Right</key>
@@ -1548,8 +1456,6 @@
 		<string>Alinear a la derecha</string>
 		<key>Allow Hyphenation</key>
 		<string>Permitir división de palabras</string>
-		<key>Attach Files…</key>
-		<string>Adjuntar archivos…</string>
 		<key>Bigger</key>
 		<string>Más grande</string>
 		<key>Bold</key>
@@ -1620,18 +1526,12 @@
 		<string>Ligaduras</string>
 		<key>Line Break</key>
 		<string>Salto de línea</string>
-		<key>Link…</key>
-		<string>Enlace…</string>
-		<key>List…</key>
-		<string>Lista…</string>
 		<key>Loosen</key>
 		<string>Aumentar</string>
 		<key>Lower</key>
 		<string>Bajar</string>
 		<key>Make Lower Case</key>
 		<string>Todo en minúsculas</string>
-		<key>Make Rich Text</key>
-		<string>Convertir a RTF</string>
 		<key>Make Upper Case</key>
 		<string>Todo en mayúsculas</string>
 		<key>Make Vertical Layout</key>
@@ -1649,6 +1549,8 @@
 		<key>Page Break</key>
 		<string>Salto de página</string>
 		<key>Page Setup…</key>
+		<string>Ajustar página…</string>
+		<key>Page Setup...</key>
 		<string>Ajustar página…</string>
 		<key>Paragraph Break</key>
 		<string>Salto de párrafo</string>
@@ -1675,6 +1577,8 @@
 		<key>Revert to Saved</key>
 		<string>Volver a la versión guardada</string>
 		<key>Save</key>
+		<string>Guardar</string>
+		<key>Save…</key>
 		<string>Guardar</string>
 		<key>Save All</key>
 		<string>Guardar todo</string>
@@ -1724,8 +1628,6 @@
 		<string>Subíndice</string>
 		<key>Superscript</key>
 		<string>Superíndice</string>
-		<key>Table…</key>
-		<string>Tabla…</string>
 		<key>Text</key>
 		<string>Texto</string>
 		<key>Text Replacement</key>
@@ -1752,39 +1654,19 @@
 		<string>Usar selección para buscar</string>
 		<key>View</key>
 		<string>Visualización</string>
-		<key>Wrap to Page</key>
-		<string>Ajustar a página</string>
 		<key>Zoom</key>
 		<string>Zoom</string>
 		<key>Zoom In</key>
 		<string>Aumentar zoom</string>
 		<key>Zoom Out</key>
 		<string>Reducir zoom</string>
-		<key>_NSFontMenu</key>
-		<string>Forma de los caracteres</string>
-		<key>_NSMainMenu</key>
-		<string>Ayuda</string>
-		<key>_NSServicesMenu</key>
-		<string>Servicios</string>
-		<key>_NSWindowsMenu</key>
-		<string>Ventana</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\tDe izquierda a derecha</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\tPor omisión</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\tDe derecha a izquierda</string>
-		<key>submenuAction:</key>
-		<string>Edición</string>
-		<key>turnOffKerning:</key>
-		<string>Ninguno</string>
-		<key>useStandardKerning:</key>
-		<string>Valor por omisión</string>
-		<key>useStandardLigatures:</key>
-		<string>Valor por omisión</string>
 	</dict>
 	<key>fi.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Näytä työkalupalkki</string>
+		<key>Customize Toolbar…</key>
+		<string>Muokkaa työkalupalkkia…</string>
 		<key>About APPLICATIONNAME</key>
 		<string>Tietoja: APPLICATIONNAME</string>
 		<key>Actual Size</key>
@@ -1795,8 +1677,6 @@
 		<string>Tasaa oikealle</string>
 		<key>Allow Hyphenation</key>
 		<string>Salli tavutus</string>
-		<key>Attach Files…</key>
-		<string>Liitä tiedostoja…</string>
 		<key>Baseline</key>
 		<string>Peruslinja</string>
 		<key>Bigger</key>
@@ -1863,8 +1743,6 @@
 		<string>Kätke muut</string>
 		<key>Hide APPLICATIONNAME</key>
 		<string>Kätke APPLICATIONNAME</string>
-		<key>Insert</key>
-		<string>Lisää</string>
 		<key>Italic</key>
 		<string>Kursivoi</string>
 		<key>Jump to Selection</key>
@@ -1877,18 +1755,12 @@
 		<string>Ligatuurit</string>
 		<key>Line Break</key>
 		<string>Rivinvaihto</string>
-		<key>Link…</key>
-		<string>Linkki…</string>
-		<key>List…</key>
-		<string>Luettelo…</string>
 		<key>Loosen</key>
 		<string>Harvenna</string>
 		<key>Lower</key>
 		<string>Laske</string>
 		<key>Make Lower Case</key>
 		<string>Muuta pieniksi kirjaimiksi</string>
-		<key>Make Rich Text</key>
-		<string>Muunna muotoilluksi tekstiksi</string>
 		<key>Make Upper Case</key>
 		<string>Muuta isoiksi kirjaimiksi</string>
 		<key>Make Vertical Layout</key>
@@ -1908,6 +1780,8 @@
 		<key>Page Break</key>
 		<string>Sivunvaihto</string>
 		<key>Page Setup…</key>
+		<string>Arkin määritys…</string>
+		<key>Page Setup...</key>
 		<string>Arkin määritys…</string>
 		<key>Paragraph</key>
 		<string>Kappale</string>
@@ -1936,6 +1810,8 @@
 		<key>Revert to Saved</key>
 		<string>Palaa tallennettuun</string>
 		<key>Save</key>
+		<string>Tallenna</string>
+		<key>Save…</key>
 		<string>Tallenna</string>
 		<key>Save All</key>
 		<string>Tallenna kaikki</string>
@@ -1991,8 +1867,6 @@
 		<string>Korvaukset</string>
 		<key>Superscript</key>
 		<string>Yläindeksoi</string>
-		<key>Table…</key>
-		<string>Taulukko…</string>
 		<key>Text</key>
 		<string>Teksti</string>
 		<key>Text Replacement</key>
@@ -2023,8 +1897,6 @@
 		<string>Näytä</string>
 		<key>Window</key>
 		<string>Ikkuna</string>
-		<key>Wrap to Page</key>
-		<string>Rivitä sivulle</string>
 		<key>Writing Direction</key>
 		<string>Kirjoitussuunta</string>
 		<key>Zoom</key>
@@ -2042,6 +1914,10 @@
 	</dict>
 	<key>fr.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Afficher la barre d’outils</string>
+		<key>Customize Toolbar…</key>
+		<string>Personnaliser la barre d’outils…</string>
 		<key>About APPLICATIONNAME</key>
 		<string>À propos de APPLICATIONNAME</string>
 		<key>Actual Size</key>
@@ -2052,8 +1928,6 @@
 		<string>Aligner à droite</string>
 		<key>Allow Hyphenation</key>
 		<string>Permettre la césure</string>
-		<key>Attach Files…</key>
-		<string>Joindre des fichiers…</string>
 		<key>Baseline</key>
 		<string>Ligne de base</string>
 		<key>Bigger</key>
@@ -2120,8 +1994,6 @@
 		<string>Masquer les autres</string>
 		<key>Hide APPLICATIONNAME</key>
 		<string>Masquer APPLICATIONNAME</string>
-		<key>Insert</key>
-		<string>Insérer</string>
 		<key>Italic</key>
 		<string>Italique</string>
 		<key>Jump to Selection</key>
@@ -2134,18 +2006,12 @@
 		<string>Ligatures</string>
 		<key>Line Break</key>
 		<string>un saut de ligne</string>
-		<key>Link…</key>
-		<string>Lien…</string>
-		<key>List…</key>
-		<string>Liste…</string>
 		<key>Loosen</key>
 		<string>Desserrer</string>
 		<key>Lower</key>
 		<string>Abaisser</string>
 		<key>Make Lower Case</key>
 		<string>Mettre en minuscules</string>
-		<key>Make Rich Text</key>
-		<string>Convertir au format RTF</string>
 		<key>Make Upper Case</key>
 		<string>Mettre en majuscules</string>
 		<key>Make Vertical Layout</key>
@@ -2165,6 +2031,8 @@
 		<key>Page Break</key>
 		<string>un saut de page</string>
 		<key>Page Setup…</key>
+		<string>Format d’impression…</string>
+		<key>Page Setup...</key>
 		<string>Format d’impression…</string>
 		<key>Paragraph</key>
 		<string>Paragraphe</string>
@@ -2193,6 +2061,8 @@
 		<key>Revert to Saved</key>
 		<string>Revenir à la version enregistrée</string>
 		<key>Save</key>
+		<string>Enregistrer</string>
+		<key>Save…</key>
 		<string>Enregistrer</string>
 		<key>Save All</key>
 		<string>Tout enregistrer</string>
@@ -2248,8 +2118,6 @@
 		<string>Substitutions</string>
 		<key>Superscript</key>
 		<string>Exposant</string>
-		<key>Table…</key>
-		<string>Tableau…</string>
 		<key>Text</key>
 		<string>Texte</string>
 		<key>Text Replacement</key>
@@ -2278,8 +2146,6 @@
 		<string>Présentation</string>
 		<key>Window</key>
 		<string>Fenêtre</string>
-		<key>Wrap to Page</key>
-		<string>Adapter à la page</string>
 		<key>Writing Direction</key>
 		<string>Sens de l’écriture</string>
 		<key>Zoom</key>
@@ -2297,6 +2163,10 @@
 	</dict>
 	<key>he.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>הצג את סרגל הכלים</string>
+		<key>Customize Toolbar…</key>
+		<string>‏התאמה אישית של סרגל הכלים...</string>
 		<key>\tDefault</key>
 		<string>‏	לפי האות הראשונה</string>
 		<key>\tLeft to Right</key>
@@ -2313,8 +2183,6 @@
 		<string>‏יישר לימין</string>
 		<key>Allow Hyphenation</key>
 		<string>‏אפשר מיקוף</string>
-		<key>Attach Files…</key>
-		<string>‏צרף קבצים...</string>
 		<key>Bigger</key>
 		<string>‏גדול יותר</string>
 		<key>Bold</key>
@@ -2385,18 +2253,12 @@
 		<string>משלבי אותיות</string>
 		<key>Line Break</key>
 		<string>‏מעבר שורה</string>
-		<key>Link…</key>
-		<string>‏קישור…</string>
-		<key>List…</key>
-		<string>‏רשימה…</string>
 		<key>Loosen</key>
 		<string>‏שחרר</string>
 		<key>Lower</key>
 		<string>הנמך</string>
 		<key>Make Lower Case</key>
 		<string>‏הפוך לאותיות קטנות</string>
-		<key>Make Rich Text</key>
-		<string>‏הפוך למלל עשיר</string>
 		<key>Make Upper Case</key>
 		<string>‏הפוך לאותיות גדולות</string>
 		<key>Make Vertical Layout</key>
@@ -2414,6 +2276,8 @@
 		<key>Page Break</key>
 		<string>‏מעבר עמוד</string>
 		<key>Page Setup…</key>
+		<string>הגדרות עמוד…</string>
+		<key>Page Setup...</key>
 		<string>הגדרות עמוד…</string>
 		<key>Paragraph Break</key>
 		<string>‏מעבר פיסקה</string>
@@ -2440,6 +2304,8 @@
 		<key>Revert to Saved</key>
 		<string>‏חזור לגירסה השמורה האחרונה</string>
 		<key>Save</key>
+		<string>שמור</string>
+		<key>Save…</key>
 		<string>שמור</string>
 		<key>Save All</key>
 		<string>‏שמור הכול</string>
@@ -2489,8 +2355,6 @@
 		<string>כתב תחתי</string>
 		<key>Superscript</key>
 		<string>כתב עילי</string>
-		<key>Table…</key>
-		<string>‏טבלה...</string>
 		<key>Text</key>
 		<string>‏מלל</string>
 		<key>Text Replacement</key>
@@ -2517,39 +2381,19 @@
 		<string>‏השתמש במלל הנבחר לחיפוש</string>
 		<key>View</key>
 		<string>תצוגה</string>
-		<key>Wrap to Page</key>
-		<string>‏התאם שורות לגודל העמוד</string>
 		<key>Zoom</key>
 		<string>הגדל/הקטן</string>
 		<key>Zoom In</key>
 		<string>הגדל</string>
 		<key>Zoom Out</key>
 		<string>הקטן</string>
-		<key>_NSFontMenu</key>
-		<string>‏צורת אות</string>
-		<key>_NSMainMenu</key>
-		<string>עזרה</string>
-		<key>_NSServicesMenu</key>
-		<string>שירותים</string>
-		<key>_NSWindowsMenu</key>
-		<string>חלון</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>‏	משמאל לימין</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>‏	לפי האות הראשונה</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>‏	מימין לשמאל</string>
-		<key>submenuAction:</key>
-		<string>‏עריכה</string>
-		<key>turnOffKerning:</key>
-		<string>‏אל תשתמש באף אחד</string>
-		<key>useStandardKerning:</key>
-		<string>‏השתמש בברירת-המחדל</string>
-		<key>useStandardLigatures:</key>
-		<string>‏השתמש בברירת-המחדל</string>
 	</dict>
 	<key>hr.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Prikaži alatnu traku</string>
+		<key>Customize Toolbar…</key>
+		<string>Podesi alatnu traku...</string>
 		<key>About APPLICATIONNAME</key>
 		<string>Više o aplikaciji APPLICATIONNAME</string>
 		<key>Actual Size</key>
@@ -2560,8 +2404,6 @@
 		<string>Poravnaj desno</string>
 		<key>Allow Hyphenation</key>
 		<string>Dozvoli rastavljanje riječi</string>
-		<key>Attach Files…</key>
-		<string>Dodaj datoteke…</string>
 		<key>Baseline</key>
 		<string>Osnovna crta</string>
 		<key>Bigger</key>
@@ -2628,8 +2470,6 @@
 		<string>Sakrij ostalo</string>
 		<key>Hide APPLICATIONNAME</key>
 		<string>Sakrij APPLICATIONNAME</string>
-		<key>Insert</key>
-		<string>Umetni</string>
 		<key>Italic</key>
 		<string>Kurziv</string>
 		<key>Jump to Selection</key>
@@ -2642,18 +2482,12 @@
 		<string>Ligature</string>
 		<key>Line Break</key>
 		<string>Prijelom linije</string>
-		<key>Link…</key>
-		<string>Link…</string>
-		<key>List…</key>
-		<string>Popis…</string>
 		<key>Loosen</key>
 		<string>Olabavi</string>
 		<key>Lower</key>
 		<string>Spusti</string>
 		<key>Make Lower Case</key>
 		<string>Pretvori u mala slova</string>
-		<key>Make Rich Text</key>
-		<string>Izradi bogati tekst</string>
 		<key>Make Upper Case</key>
 		<string>Pretvori u velika slova</string>
 		<key>Make Vertical Layout</key>
@@ -2673,6 +2507,8 @@
 		<key>Page Break</key>
 		<string>Prijelom stranice</string>
 		<key>Page Setup…</key>
+		<string>Podešavanje stranice…</string>
+		<key>Page Setup...</key>
 		<string>Podešavanje stranice…</string>
 		<key>Paragraph</key>
 		<string>Paragraf</string>
@@ -2701,6 +2537,8 @@
 		<key>Revert to Saved</key>
 		<string>Vrati na spremljeno</string>
 		<key>Save</key>
+		<string>Spremi</string>
+		<key>Save…</key>
 		<string>Spremi</string>
 		<key>Save All</key>
 		<string>Spremi sve</string>
@@ -2756,8 +2594,6 @@
 		<string>Zamjene</string>
 		<key>Superscript</key>
 		<string>Eksponent</string>
-		<key>Table…</key>
-		<string>Tablica…</string>
 		<key>Text</key>
 		<string>Tekst</string>
 		<key>Text Replacement</key>
@@ -2788,8 +2624,6 @@
 		<string>Prikaz</string>
 		<key>Window</key>
 		<string>Prozor</string>
-		<key>Wrap to Page</key>
-		<string>Podesi prema stranici</string>
 		<key>Writing Direction</key>
 		<string>Smjer pisanja</string>
 		<key>Zoom</key>
@@ -2807,6 +2641,10 @@
 	</dict>
 	<key>hu.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Eszköztár megjelenítése</string>
+		<key>Customize Toolbar…</key>
+		<string>Eszköztár testreszabása…</string>
 		<key>About APPLICATIONNAME</key>
 		<string>A APPLICATIONNAME névjegye</string>
 		<key>Actual Size</key>
@@ -2817,8 +2655,6 @@
 		<string>Igazítás jobbra</string>
 		<key>Allow Hyphenation</key>
 		<string>Elválasztás engedélyezése</string>
-		<key>Attach Files…</key>
-		<string>Fájlok csatolása…</string>
 		<key>Baseline</key>
 		<string>Alapvonal</string>
 		<key>Bigger</key>
@@ -2885,8 +2721,6 @@
 		<string>A többi elrejtése</string>
 		<key>Hide APPLICATIONNAME</key>
 		<string>APPLICATIONNAME elrejtése</string>
-		<key>Insert</key>
-		<string>Beszúrás</string>
 		<key>Italic</key>
 		<string>Dőlt</string>
 		<key>Jump to Selection</key>
@@ -2899,18 +2733,12 @@
 		<string>Ligatúrák</string>
 		<key>Line Break</key>
 		<string>Sortörés</string>
-		<key>Link…</key>
-		<string>Link…</string>
-		<key>List…</key>
-		<string>Lista…</string>
 		<key>Loosen</key>
 		<string>Meglazítás</string>
 		<key>Lower</key>
 		<string>Süllyeszés</string>
 		<key>Make Lower Case</key>
 		<string>Kisbetűssé alakítás</string>
-		<key>Make Rich Text</key>
-		<string>Legyen Rich Text</string>
 		<key>Make Upper Case</key>
 		<string>Nagybetűssé alakítás</string>
 		<key>Make Vertical Layout</key>
@@ -2930,6 +2758,8 @@
 		<key>Page Break</key>
 		<string>Oldaltörés</string>
 		<key>Page Setup…</key>
+		<string>Oldalbeállítás…</string>
+		<key>Page Setup...</key>
 		<string>Oldalbeállítás…</string>
 		<key>Paragraph</key>
 		<string>Bekezdés</string>
@@ -2958,6 +2788,8 @@
 		<key>Revert to Saved</key>
 		<string>Visszatérés a mentettre</string>
 		<key>Save</key>
+		<string>Mentés</string>
+		<key>Save…</key>
 		<string>Mentés</string>
 		<key>Save All</key>
 		<string>Mentés mindet</string>
@@ -3013,8 +2845,6 @@
 		<string>Behelyettesítések</string>
 		<key>Superscript</key>
 		<string>Kitevőbe rakás</string>
-		<key>Table…</key>
-		<string>Táblázat…</string>
 		<key>Text</key>
 		<string>Szöveg</string>
 		<key>Text Replacement</key>
@@ -3045,8 +2875,6 @@
 		<string>Nézet</string>
 		<key>Window</key>
 		<string>Ablak</string>
-		<key>Wrap to Page</key>
-		<string>Tördelés az oldalra</string>
 		<key>Writing Direction</key>
 		<string>Írás iránya</string>
 		<key>Zoom</key>
@@ -3064,6 +2892,10 @@
 	</dict>
 	<key>id.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Tampilkan Bar Alat</string>
+		<key>Customize Toolbar…</key>
+		<string>Sesuaikan Bar Alat…</string>
 		<key>\tDefault</key>
 		<string>\tDefault</string>
 		<key>\tLeft to Right</key>
@@ -3080,8 +2912,6 @@
 		<string>Rata Kanan</string>
 		<key>Allow Hyphenation</key>
 		<string>Izinkan Pemenggalan</string>
-		<key>Attach Files…</key>
-		<string>Lampirkan File…</string>
 		<key>Bigger</key>
 		<string>Lebih Besar</string>
 		<key>Bold</key>
@@ -3152,18 +2982,12 @@
 		<string>Ligatur</string>
 		<key>Line Break</key>
 		<string>Ganti Baris</string>
-		<key>Link…</key>
-		<string>Tautan…</string>
-		<key>List…</key>
-		<string>Daftar…</string>
 		<key>Loosen</key>
 		<string>Longgarkan</string>
 		<key>Lower</key>
 		<string>Turunkan</string>
 		<key>Make Lower Case</key>
 		<string>Buat Huruf Kecil</string>
-		<key>Make Rich Text</key>
-		<string>Buat Teks Kaya</string>
 		<key>Make Upper Case</key>
 		<string>Jadikan Huruf Besar</string>
 		<key>Make Vertical Layout</key>
@@ -3181,6 +3005,8 @@
 		<key>Page Break</key>
 		<string>Ganti Halaman</string>
 		<key>Page Setup…</key>
+		<string>Pengaturan Halaman…</string>
+		<key>Page Setup...</key>
 		<string>Pengaturan Halaman…</string>
 		<key>Paragraph Break</key>
 		<string>Ganti Paragraf</string>
@@ -3207,6 +3033,8 @@
 		<key>Revert to Saved</key>
 		<string>Kembalikan ke Disimpan</string>
 		<key>Save</key>
+		<string>Simpan</string>
+		<key>Save…</key>
 		<string>Simpan</string>
 		<key>Save All</key>
 		<string>Simpan Semua</string>
@@ -3256,8 +3084,6 @@
 		<string>Subskrip</string>
 		<key>Superscript</key>
 		<string>Superskrip</string>
-		<key>Table…</key>
-		<string>Tabel…</string>
 		<key>Text</key>
 		<string>Teks</string>
 		<key>Text Replacement</key>
@@ -3284,39 +3110,19 @@
 		<string>Gunakan Pilihan untuk Temukan</string>
 		<key>View</key>
 		<string>Lihat</string>
-		<key>Wrap to Page</key>
-		<string>Bungkus Sesuai Ukuran Halaman</string>
 		<key>Zoom</key>
 		<string>Zoom</string>
 		<key>Zoom In</key>
 		<string>Perbesar</string>
 		<key>Zoom Out</key>
 		<string>Perkecil</string>
-		<key>_NSFontMenu</key>
-		<string>Bentuk Karakter</string>
-		<key>_NSMainMenu</key>
-		<string>Bantuan</string>
-		<key>_NSServicesMenu</key>
-		<string>Layanan</string>
-		<key>_NSWindowsMenu</key>
-		<string>Jendela</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\tKiri ke Kanan</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\tDefault</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\tKanan ke Kiri</string>
-		<key>submenuAction:</key>
-		<string>Edit</string>
-		<key>turnOffKerning:</key>
-		<string>Tidak Satu Pun</string>
-		<key>useStandardKerning:</key>
-		<string>Gunakan Default</string>
-		<key>useStandardLigatures:</key>
-		<string>Gunakan Default</string>
 	</dict>
 	<key>it.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Mostra la barra strumenti</string>
+		<key>Customize Toolbar…</key>
+		<string>Personalizza la barra strumenti…</string>
 		<key>About APPLICATIONNAME</key>
 		<string>Informazioni su APPLICATIONNAME</string>
 		<key>Actual Size</key>
@@ -3327,8 +3133,6 @@
 		<string>Allinea a destra</string>
 		<key>Allow Hyphenation</key>
 		<string>Abilita sillabazione</string>
-		<key>Attach Files…</key>
-		<string>Allega file…</string>
 		<key>Baseline</key>
 		<string>Linea di base</string>
 		<key>Bigger</key>
@@ -3393,8 +3197,6 @@
 		<string>Nascondi altre</string>
 		<key>Hide APPLICATIONNAME</key>
 		<string>Nascondi APPLICATIONNAME</string>
-		<key>Insert</key>
-		<string>Inserisci</string>
 		<key>Italic</key>
 		<string>Corsivo</string>
 		<key>Jump to Selection</key>
@@ -3407,18 +3209,12 @@
 		<string>Legature</string>
 		<key>Line Break</key>
 		<string>Interruzione di riga</string>
-		<key>Link…</key>
-		<string>Link…</string>
-		<key>List…</key>
-		<string>Elenco…</string>
 		<key>Loosen</key>
 		<string>Allarga</string>
 		<key>Lower</key>
 		<string>Riduci</string>
 		<key>Make Lower Case</key>
 		<string>Scrivi in lettere minuscole</string>
-		<key>Make Rich Text</key>
-		<string>Testo formattato</string>
 		<key>Make Upper Case</key>
 		<string>Scrivi in lettere maiuscole</string>
 		<key>Make Vertical Layout</key>
@@ -3438,6 +3234,8 @@
 		<key>Page Break</key>
 		<string>Interruzione di pagina</string>
 		<key>Page Setup…</key>
+		<string>Formato di stampa…</string>
+		<key>Page Setup...</key>
 		<string>Formato di stampa…</string>
 		<key>Paragraph</key>
 		<string>Paragrafo</string>
@@ -3466,6 +3264,8 @@
 		<key>Revert to Saved</key>
 		<string>Ripristina versione salvata</string>
 		<key>Save</key>
+		<string>Salva</string>
+		<key>Save…</key>
 		<string>Salva</string>
 		<key>Save All</key>
 		<string>Salva tutto</string>
@@ -3521,8 +3321,6 @@
 		<string>Sostituzioni</string>
 		<key>Superscript</key>
 		<string>Apice</string>
-		<key>Table…</key>
-		<string>Tabella…</string>
 		<key>Text</key>
 		<string>Testo</string>
 		<key>Text Replacement</key>
@@ -3553,8 +3351,6 @@
 		<string>Vista</string>
 		<key>Window</key>
 		<string>Finestra</string>
-		<key>Wrap to Page</key>
-		<string>Adatta a pagina</string>
 		<key>Writing Direction</key>
 		<string>Direzione scrittura</string>
 		<key>Zoom</key>
@@ -3572,6 +3368,10 @@
 	</dict>
 	<key>ja.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>ツールバーを表示</string>
+		<key>Customize Toolbar…</key>
+		<string>ツールバーをカスタマイズ...</string>
 		<key>\tDefault</key>
 		<string>\tデフォルト</string>
 		<key>\tLeft to Right</key>
@@ -3588,8 +3388,6 @@
 		<string>右揃え</string>
 		<key>Allow Hyphenation</key>
 		<string>行末ハイフン処理をする</string>
-		<key>Attach Files…</key>
-		<string>ファイルを添付...</string>
 		<key>Bigger</key>
 		<string>大きく</string>
 		<key>Bold</key>
@@ -3660,18 +3458,12 @@
 		<string>リガチャ</string>
 		<key>Line Break</key>
 		<string>改行</string>
-		<key>Link…</key>
-		<string>リンク...</string>
-		<key>List…</key>
-		<string>リスト...</string>
 		<key>Loosen</key>
 		<string>ゆるく</string>
 		<key>Lower</key>
 		<string>下げる</string>
 		<key>Make Lower Case</key>
 		<string>小文字にする</string>
-		<key>Make Rich Text</key>
-		<string>リッチテキストにする</string>
 		<key>Make Upper Case</key>
 		<string>大文字にする</string>
 		<key>Make Vertical Layout</key>
@@ -3689,6 +3481,8 @@
 		<key>Page Break</key>
 		<string>改ページ</string>
 		<key>Page Setup…</key>
+		<string>ページ設定...</string>
+		<key>Page Setup...</key>
 		<string>ページ設定...</string>
 		<key>Paragraph Break</key>
 		<string>段落区切り</string>
@@ -3715,6 +3509,8 @@
 		<key>Revert to Saved</key>
 		<string>最後に保存した状態に戻す</string>
 		<key>Save</key>
+		<string>保存</string>
+		<key>Save…</key>
 		<string>保存</string>
 		<key>Save All</key>
 		<string>すべてを保存</string>
@@ -3764,8 +3560,6 @@
 		<string>下付き</string>
 		<key>Superscript</key>
 		<string>上付き</string>
-		<key>Table…</key>
-		<string>表...</string>
 		<key>Text</key>
 		<string>テキスト</string>
 		<key>Text Replacement</key>
@@ -3792,39 +3586,19 @@
 		<string>選択部分を検索に使用</string>
 		<key>View</key>
 		<string>表示</string>
-		<key>Wrap to Page</key>
-		<string>ページサイズで表示</string>
 		<key>Zoom</key>
 		<string>拡大／縮小</string>
 		<key>Zoom In</key>
 		<string>拡大</string>
 		<key>Zoom Out</key>
 		<string>縮小</string>
-		<key>_NSFontMenu</key>
-		<string>文字の形状</string>
-		<key>_NSMainMenu</key>
-		<string>ヘルプ</string>
-		<key>_NSServicesMenu</key>
-		<string>サービス</string>
-		<key>_NSWindowsMenu</key>
-		<string>ウインドウ</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\t左から右</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\tデフォルト</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\t右から左</string>
-		<key>submenuAction:</key>
-		<string>編集</string>
-		<key>turnOffKerning:</key>
-		<string>使用しない</string>
-		<key>useStandardKerning:</key>
-		<string>デフォルト</string>
-		<key>useStandardLigatures:</key>
-		<string>デフォルト</string>
 	</dict>
 	<key>ko.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>도구 막대 보기</string>
+		<key>Customize Toolbar…</key>
+		<string>도구 막대 사용자화...</string>
 		<key>\tDefault</key>
 		<string>\t기본</string>
 		<key>\tLeft to Right</key>
@@ -3841,8 +3615,6 @@
 		<string>오른쪽 정렬</string>
 		<key>Allow Hyphenation</key>
 		<string>하이픈 허용</string>
-		<key>Attach Files…</key>
-		<string>파일 첨부…</string>
 		<key>Bigger</key>
 		<string>크게</string>
 		<key>Bold</key>
@@ -3913,18 +3685,12 @@
 		<string>합자</string>
 		<key>Line Break</key>
 		<string>줄바꿈</string>
-		<key>Link…</key>
-		<string>링크…</string>
-		<key>List…</key>
-		<string>목록…</string>
 		<key>Loosen</key>
 		<string>넓게</string>
 		<key>Lower</key>
 		<string>내리기</string>
 		<key>Make Lower Case</key>
 		<string>소문자로 만들기</string>
-		<key>Make Rich Text</key>
-		<string>리치 텍스트 만들기</string>
 		<key>Make Upper Case</key>
 		<string>대문자로 만들기</string>
 		<key>Make Vertical Layout</key>
@@ -3942,6 +3708,8 @@
 		<key>Page Break</key>
 		<string>페이지 바꿈</string>
 		<key>Page Setup…</key>
+		<string>페이지 설정…</string>
+		<key>Page Setup...</key>
 		<string>페이지 설정…</string>
 		<key>Paragraph Break</key>
 		<string>단락 바꿈</string>
@@ -3968,6 +3736,8 @@
 		<key>Revert to Saved</key>
 		<string>저장 시점으로 복귀</string>
 		<key>Save</key>
+		<string>저장</string>
+		<key>Save…</key>
 		<string>저장</string>
 		<key>Save All</key>
 		<string>모두 저장</string>
@@ -4017,8 +3787,6 @@
 		<string>내려쓰기</string>
 		<key>Superscript</key>
 		<string>올려쓰기</string>
-		<key>Table…</key>
-		<string>표…</string>
 		<key>Text</key>
 		<string>텍스트</string>
 		<key>Text Replacement</key>
@@ -4045,39 +3813,19 @@
 		<string>선택 부분으로 찾기</string>
 		<key>View</key>
 		<string>보기</string>
-		<key>Wrap to Page</key>
-		<string>페이지로 보기</string>
 		<key>Zoom</key>
 		<string>확대/축소</string>
 		<key>Zoom In</key>
 		<string>확대</string>
 		<key>Zoom Out</key>
 		<string>축소</string>
-		<key>_NSFontMenu</key>
-		<string>문자 모양</string>
-		<key>_NSMainMenu</key>
-		<string>도움말</string>
-		<key>_NSServicesMenu</key>
-		<string>서비스</string>
-		<key>_NSWindowsMenu</key>
-		<string>윈도우</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\t왼쪽에서 오른쪽</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\t기본</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\t오른쪽에서 왼쪽</string>
-		<key>submenuAction:</key>
-		<string>편집</string>
-		<key>turnOffKerning:</key>
-		<string>사용하지 않음</string>
-		<key>useStandardKerning:</key>
-		<string>기본값 사용</string>
-		<key>useStandardLigatures:</key>
-		<string>기본값 사용</string>
 	</dict>
 	<key>ms.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Tunjukkan Bar Alat</string>
+		<key>Customize Toolbar…</key>
+		<string>Menyesuaikan Bar Alat…</string>
 		<key>\tDefault</key>
 		<string>\tLalai</string>
 		<key>\tLeft to Right</key>
@@ -4094,8 +3842,6 @@
 		<string>Jajar Kanan</string>
 		<key>Allow Hyphenation</key>
 		<string>Benarkan Penyempangan</string>
-		<key>Attach Files…</key>
-		<string>Melampirkan Fail…</string>
 		<key>Bigger</key>
 		<string>Lebih Besar</string>
 		<key>Bold</key>
@@ -4166,18 +3912,12 @@
 		<string>Ligatur</string>
 		<key>Line Break</key>
 		<string>Garis Pemisah</string>
-		<key>Link…</key>
-		<string>Pautan…</string>
-		<key>List…</key>
-		<string>Senarai…</string>
 		<key>Loosen</key>
 		<string>Longgarkan</string>
 		<key>Lower</key>
 		<string>Lebih Rendah</string>
 		<key>Make Lower Case</key>
 		<string>Jadikan Huruf Kecil</string>
-		<key>Make Rich Text</key>
-		<string>Jadikan Teks Beraneka</string>
 		<key>Make Upper Case</key>
 		<string>Jadikan Huruf Besar</string>
 		<key>Make Vertical Layout</key>
@@ -4195,6 +3935,8 @@
 		<key>Page Break</key>
 		<string>Pemisah Halaman</string>
 		<key>Page Setup…</key>
+		<string>Persediaan Halaman…</string>
+		<key>Page Setup...</key>
 		<string>Persediaan Halaman…</string>
 		<key>Paragraph Break</key>
 		<string>Pemisah Perenggan</string>
@@ -4221,6 +3963,8 @@
 		<key>Revert to Saved</key>
 		<string>Kembali ke Disimpan</string>
 		<key>Save</key>
+		<string>Simpan</string>
+		<key>Save…</key>
 		<string>Simpan</string>
 		<key>Save All</key>
 		<string>Simpan Semua</string>
@@ -4270,8 +4014,6 @@
 		<string>Subskrip</string>
 		<key>Superscript</key>
 		<string>Superskrip</string>
-		<key>Table…</key>
-		<string>Jadual…</string>
 		<key>Text</key>
 		<string>Teks</string>
 		<key>Text Replacement</key>
@@ -4298,39 +4040,19 @@
 		<string>Guna Pilihan untuk Mencari</string>
 		<key>View</key>
 		<string>Lihat</string>
-		<key>Wrap to Page</key>
-		<string>Balut ke Halaman</string>
 		<key>Zoom</key>
 		<string>Zum</string>
 		<key>Zoom In</key>
 		<string>Zum Ke Dalam</string>
 		<key>Zoom Out</key>
 		<string>Zum Ke Luar</string>
-		<key>_NSFontMenu</key>
-		<string>Bentuk Aksara</string>
-		<key>_NSMainMenu</key>
-		<string>Bantuan</string>
-		<key>_NSServicesMenu</key>
-		<string>Perkhidmatan</string>
-		<key>_NSWindowsMenu</key>
-		<string>Tetingkap</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\tKiri ke Kanan</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\tLalai</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\tKanan ke Kiri</string>
-		<key>submenuAction:</key>
-		<string>Edit</string>
-		<key>turnOffKerning:</key>
-		<string>Jangan Guna</string>
-		<key>useStandardKerning:</key>
-		<string>Gunakan Lalai</string>
-		<key>useStandardLigatures:</key>
-		<string>Gunakan Lalai</string>
 	</dict>
 	<key>nl.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Toon knoppenbalk</string>
+		<key>Customize Toolbar…</key>
+		<string>Pas knoppenbalk aan…</string>
 		<key>\tDefault</key>
 		<string>\tStandaard</string>
 		<key>\tLeft to Right</key>
@@ -4347,8 +4069,6 @@
 		<string>Lijn rechts uit</string>
 		<key>Allow Hyphenation</key>
 		<string>Sta woordafbreking toe</string>
-		<key>Attach Files…</key>
-		<string>Voeg bestanden bij…</string>
 		<key>Bigger</key>
 		<string>Groter</string>
 		<key>Bold</key>
@@ -4419,18 +4139,12 @@
 		<string>Ligaturen</string>
 		<key>Line Break</key>
 		<string>Regeleinde</string>
-		<key>Link…</key>
-		<string>Koppeling…</string>
-		<key>List…</key>
-		<string>Lijst…</string>
 		<key>Loosen</key>
 		<string>Uitgerekt</string>
 		<key>Lower</key>
 		<string>Omlaag</string>
 		<key>Make Lower Case</key>
 		<string>Zet om in kleine letters</string>
-		<key>Make Rich Text</key>
-		<string>Converteer naar RTF-tekst</string>
 		<key>Make Upper Case</key>
 		<string>Zet om in hoofdletters</string>
 		<key>Make Vertical Layout</key>
@@ -4448,6 +4162,8 @@
 		<key>Page Break</key>
 		<string>Pagina-einde</string>
 		<key>Page Setup…</key>
+		<string>Pagina-instelling…</string>
+		<key>Page Setup...</key>
 		<string>Pagina-instelling…</string>
 		<key>Paragraph Break</key>
 		<string>Alinea-einde</string>
@@ -4474,6 +4190,8 @@
 		<key>Revert to Saved</key>
 		<string>Laatst bewaarde versie</string>
 		<key>Save</key>
+		<string>Bewaar</string>
+		<key>Save…</key>
 		<string>Bewaar</string>
 		<key>Save All</key>
 		<string>Bewaar alles</string>
@@ -4523,8 +4241,6 @@
 		<string>Subscript</string>
 		<key>Superscript</key>
 		<string>Superscript</string>
-		<key>Table…</key>
-		<string>Tabel…</string>
 		<key>Text</key>
 		<string>Tekst</string>
 		<key>Text Replacement</key>
@@ -4551,39 +4267,19 @@
 		<string>Gebruik selectie voor zoekactie</string>
 		<key>View</key>
 		<string>Weergave</string>
-		<key>Wrap to Page</key>
-		<string>Pas aan paginabreedte aan</string>
 		<key>Zoom</key>
 		<string>Vergroot/verklein</string>
 		<key>Zoom In</key>
 		<string>Zoom in</string>
 		<key>Zoom Out</key>
 		<string>Zoom uit</string>
-		<key>_NSFontMenu</key>
-		<string>Tekenvorm</string>
-		<key>_NSMainMenu</key>
-		<string>Help</string>
-		<key>_NSServicesMenu</key>
-		<string>Voorzieningen</string>
-		<key>_NSWindowsMenu</key>
-		<string>Venster</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\tLinks naar rechts</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\tStandaard</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\tRechts naar links</string>
-		<key>submenuAction:</key>
-		<string>Wijzig</string>
-		<key>turnOffKerning:</key>
-		<string>Geen</string>
-		<key>useStandardKerning:</key>
-		<string>Standaard</string>
-		<key>useStandardLigatures:</key>
-		<string>Standaard</string>
 	</dict>
 	<key>no.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Vis verktøylinje</string>
+		<key>Customize Toolbar…</key>
+		<string>Tilpass verktøylinje…</string>
 		<key>About APPLICATIONNAME</key>
 		<string>Om APPLICATIONNAME</string>
 		<key>Actual Size</key>
@@ -4594,8 +4290,6 @@
 		<string>Høyrejustert</string>
 		<key>Allow Hyphenation</key>
 		<string>Tillat orddeling</string>
-		<key>Attach Files…</key>
-		<string>Sett inn filer…</string>
 		<key>Baseline</key>
 		<string>Skriftlinje</string>
 		<key>Bigger</key>
@@ -4662,8 +4356,6 @@
 		<string>Skjul andre</string>
 		<key>Hide APPLICATIONNAME</key>
 		<string>Skjul APPLICATIONNAME</string>
-		<key>Insert</key>
-		<string>Sett inn</string>
 		<key>Italic</key>
 		<string>Kursiv</string>
 		<key>Jump to Selection</key>
@@ -4676,18 +4368,12 @@
 		<string>Ligaturer</string>
 		<key>Line Break</key>
 		<string>Linjeskift</string>
-		<key>Link…</key>
-		<string>Kobling…</string>
-		<key>List…</key>
-		<string>Liste…</string>
 		<key>Loosen</key>
 		<string>Løsere</string>
 		<key>Lower</key>
 		<string>Senk</string>
 		<key>Make Lower Case</key>
 		<string>Bruk små bokstaver</string>
-		<key>Make Rich Text</key>
-		<string>Konverter til rik tekst</string>
 		<key>Make Upper Case</key>
 		<string>Bruk store bokstaver</string>
 		<key>Make Vertical Layout</key>
@@ -4707,6 +4393,8 @@
 		<key>Page Break</key>
 		<string>Sideskift</string>
 		<key>Page Setup…</key>
+		<string>Utskriftsformat…</string>
+		<key>Page Setup...</key>
 		<string>Utskriftsformat…</string>
 		<key>Paragraph</key>
 		<string>Avsnitt</string>
@@ -4735,6 +4423,8 @@
 		<key>Revert to Saved</key>
 		<string>Tilbake til arkivert</string>
 		<key>Save</key>
+		<string>Arkiver</string>
+		<key>Save…</key>
 		<string>Arkiver</string>
 		<key>Save All</key>
 		<string>Arkiver alle</string>
@@ -4790,8 +4480,6 @@
 		<string>Automatiske endringer</string>
 		<key>Superscript</key>
 		<string>Hevet tekst</string>
-		<key>Table…</key>
-		<string>Tabell…</string>
 		<key>Text</key>
 		<string>Tekst</string>
 		<key>Text Replacement</key>
@@ -4822,8 +4510,6 @@
 		<string>Vis</string>
 		<key>Window</key>
 		<string>Vindu</string>
-		<key>Wrap to Page</key>
-		<string>Tilpass til side</string>
 		<key>Writing Direction</key>
 		<string>Skriveretning</string>
 		<key>Zoom</key>
@@ -4841,6 +4527,10 @@
 	</dict>
 	<key>pl.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Pokaż pasek narzędzi</string>
+		<key>Customize Toolbar…</key>
+		<string>Dostosuj pasek narzędzi…</string>
 		<key>\tDefault</key>
 		<string>\tDomyślny</string>
 		<key>\tLeft to Right</key>
@@ -4857,8 +4547,6 @@
 		<string>Wyrównaj do prawej</string>
 		<key>Allow Hyphenation</key>
 		<string>Stosuj przenoszenie wyrazów</string>
-		<key>Attach Files…</key>
-		<string>Dołącz pliki…</string>
 		<key>Bigger</key>
 		<string>Większa</string>
 		<key>Bold</key>
@@ -4908,7 +4596,7 @@
 		<key>Find Previous</key>
 		<string>Znajdź poprzednie</string>
 		<key>Find and Replace…</key>
-		<string>Znajdź i zastąp…</string>
+		<string>Znajdź i zastąp…</string>
 		<key>Find…</key>
 		<string>Znajdź…</string>
 		<key>Font</key>
@@ -4929,18 +4617,12 @@
 		<string>Ligatury</string>
 		<key>Line Break</key>
 		<string>znak końca wiersza</string>
-		<key>Link…</key>
-		<string>Łącze…</string>
-		<key>List…</key>
-		<string>Lista…</string>
 		<key>Loosen</key>
 		<string>Luźniejszy</string>
 		<key>Lower</key>
 		<string>Obniż</string>
 		<key>Make Lower Case</key>
 		<string>Zamień na małe litery</string>
-		<key>Make Rich Text</key>
-		<string>Zamień na RTF</string>
 		<key>Make Upper Case</key>
 		<string>Zamień na wielkie litery</string>
 		<key>Make Vertical Layout</key>
@@ -4958,6 +4640,8 @@
 		<key>Page Break</key>
 		<string>znak końca strony</string>
 		<key>Page Setup…</key>
+		<string>Układ strony…</string>
+		<key>Page Setup...</key>
 		<string>Układ strony…</string>
 		<key>Paragraph Break</key>
 		<string>znak końca akapitu</string>
@@ -4984,6 +4668,8 @@
 		<key>Revert to Saved</key>
 		<string>Przywróć do zachowanego</string>
 		<key>Save</key>
+		<string>Zachowaj</string>
+		<key>Save…</key>
 		<string>Zachowaj</string>
 		<key>Save All</key>
 		<string>Zachowaj wszystko</string>
@@ -5033,8 +4719,6 @@
 		<string>Indeks dolny</string>
 		<key>Superscript</key>
 		<string>Indeks górny</string>
-		<key>Table…</key>
-		<string>Tabela…</string>
 		<key>Text</key>
 		<string>Tekst</string>
 		<key>Text Replacement</key>
@@ -5061,39 +4745,19 @@
 		<string>Szukaj zaznaczonego tekstu</string>
 		<key>View</key>
 		<string>Widok</string>
-		<key>Wrap to Page</key>
-		<string>Uformuj strony</string>
 		<key>Zoom</key>
 		<string>Zoom</string>
 		<key>Zoom In</key>
 		<string>Powiększ</string>
 		<key>Zoom Out</key>
 		<string>Pomniejsz</string>
-		<key>_NSFontMenu</key>
-		<string>Kształt znaków</string>
-		<key>_NSMainMenu</key>
-		<string>Pomoc</string>
-		<key>_NSServicesMenu</key>
-		<string>Usługi</string>
-		<key>_NSWindowsMenu</key>
-		<string>Okno</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\tOd lewej do prawej</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\tDomyślny</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\tOd prawej do lewej</string>
-		<key>submenuAction:</key>
-		<string>Edycja</string>
-		<key>turnOffKerning:</key>
-		<string>Nie używaj</string>
-		<key>useStandardKerning:</key>
-		<string>Używaj domyślnego</string>
-		<key>useStandardLigatures:</key>
-		<string>Używaj domyślnej</string>
 	</dict>
 	<key>pt.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Mostrar Barra de Ferramentas</string>
+		<key>Customize Toolbar…</key>
+		<string>Personalizar Barra de Ferramentas…</string>
 		<key>\tDefault</key>
 		<string>\tPadrão</string>
 		<key>\tLeft to Right</key>
@@ -5110,8 +4774,6 @@
 		<string>Alinhar à Direita</string>
 		<key>Allow Hyphenation</key>
 		<string>Permitir Separação de Palavras</string>
-		<key>Attach Files…</key>
-		<string>Anexar Arquivos…</string>
 		<key>Bigger</key>
 		<string>Maior</string>
 		<key>Bold</key>
@@ -5182,18 +4844,12 @@
 		<string>Ligaduras</string>
 		<key>Line Break</key>
 		<string>Quebra de Linha</string>
-		<key>Link…</key>
-		<string>Link…</string>
-		<key>List…</key>
-		<string>Lista…</string>
 		<key>Loosen</key>
 		<string>Aumentar</string>
 		<key>Lower</key>
 		<string>Mais baixa</string>
 		<key>Make Lower Case</key>
 		<string>Tudo em Minúsculas</string>
-		<key>Make Rich Text</key>
-		<string>Converter para RTF</string>
 		<key>Make Upper Case</key>
 		<string>Tudo em Maiúsculas</string>
 		<key>Make Vertical Layout</key>
@@ -5211,6 +4867,8 @@
 		<key>Page Break</key>
 		<string>Quebra de Página</string>
 		<key>Page Setup…</key>
+		<string>Configurar Página…</string>
+		<key>Page Setup...</key>
 		<string>Configurar Página…</string>
 		<key>Paragraph Break</key>
 		<string>Quebra de Parágrafo</string>
@@ -5237,6 +4895,8 @@
 		<key>Revert to Saved</key>
 		<string>Reverter para Salvo</string>
 		<key>Save</key>
+		<string>Salvar</string>
+		<key>Save…</key>
 		<string>Salvar</string>
 		<key>Save All</key>
 		<string>Salvar Tudo</string>
@@ -5286,8 +4946,6 @@
 		<string>Subscrito</string>
 		<key>Superscript</key>
 		<string>Sobrescrito</string>
-		<key>Table…</key>
-		<string>Tabela…</string>
 		<key>Text</key>
 		<string>Texto</string>
 		<key>Text Replacement</key>
@@ -5314,39 +4972,19 @@
 		<string>Usar Seleção para Buscar</string>
 		<key>View</key>
 		<string>Visualizar</string>
-		<key>Wrap to Page</key>
-		<string>Ajustar à Página</string>
 		<key>Zoom</key>
 		<string>Ampliar/Reduzir</string>
 		<key>Zoom In</key>
 		<string>Ampliar</string>
 		<key>Zoom Out</key>
 		<string>Reduzir</string>
-		<key>_NSFontMenu</key>
-		<string>Forma do Caractere</string>
-		<key>_NSMainMenu</key>
-		<string>Ajuda</string>
-		<key>_NSServicesMenu</key>
-		<string>Serviços</string>
-		<key>_NSWindowsMenu</key>
-		<string>Janela</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\tDa Esquerda para a Direita</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\tPadrão</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\tDa Direita para a Esquerda</string>
-		<key>submenuAction:</key>
-		<string>Editar</string>
-		<key>turnOffKerning:</key>
-		<string>Não Utilizar</string>
-		<key>useStandardKerning:</key>
-		<string>Usar Padrão</string>
-		<key>useStandardLigatures:</key>
-		<string>Utilizar Padrão</string>
 	</dict>
 	<key>pt-PT.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Mostrar barra de ferramentas</string>
+		<key>Customize Toolbar…</key>
+		<string>Personalizar barra de ferramentas…</string>
 		<key>About APPLICATIONNAME</key>
 		<string>Acerca do APPLICATIONNAME</string>
 		<key>Actual Size</key>
@@ -5357,8 +4995,6 @@
 		<string>Alinhar à direita</string>
 		<key>Allow Hyphenation</key>
 		<string>Permitir hifenização</string>
-		<key>Attach Files…</key>
-		<string>Anexar ficheiros…</string>
 		<key>Baseline</key>
 		<string>Linha de base</string>
 		<key>Bigger</key>
@@ -5425,8 +5061,6 @@
 		<string>Ocultar outras aplicações</string>
 		<key>Hide APPLICATIONNAME</key>
 		<string>Ocultar APPLICATIONNAME</string>
-		<key>Insert</key>
-		<string>Inserir</string>
 		<key>Italic</key>
 		<string>Itálico</string>
 		<key>Jump to Selection</key>
@@ -5439,18 +5073,12 @@
 		<string>Ligaduras</string>
 		<key>Line Break</key>
 		<string>Quebra de linha</string>
-		<key>Link…</key>
-		<string>Criar hiperligação…</string>
-		<key>List…</key>
-		<string>Lista…</string>
 		<key>Loosen</key>
 		<string>Aumentar</string>
 		<key>Lower</key>
 		<string>Baixar</string>
 		<key>Make Lower Case</key>
 		<string>tudo em minúsculas</string>
-		<key>Make Rich Text</key>
-		<string>Converter em texto formatado (RTF)</string>
 		<key>Make Upper Case</key>
 		<string>TUDO EM MAIÚSCULAS</string>
 		<key>Make Vertical Layout</key>
@@ -5470,6 +5098,8 @@
 		<key>Page Break</key>
 		<string>Quebra de página</string>
 		<key>Page Setup…</key>
+		<string>Configurar página…</string>
+		<key>Page Setup...</key>
 		<string>Configurar página…</string>
 		<key>Paragraph</key>
 		<string>Parágrafo</string>
@@ -5498,6 +5128,8 @@
 		<key>Revert to Saved</key>
 		<string>Restabelecer versão guardada</string>
 		<key>Save</key>
+		<string>Guardar</string>
+		<key>Save…</key>
 		<string>Guardar</string>
 		<key>Save All</key>
 		<string>Guardar tudo</string>
@@ -5553,8 +5185,6 @@
 		<string>Substituições</string>
 		<key>Superscript</key>
 		<string>Expoente</string>
-		<key>Table…</key>
-		<string>Tabela…</string>
 		<key>Text</key>
 		<string>Texto</string>
 		<key>Text Replacement</key>
@@ -5583,8 +5213,6 @@
 		<string>Visualização</string>
 		<key>Window</key>
 		<string>Janela</string>
-		<key>Wrap to Page</key>
-		<string>Ajustar à página</string>
 		<key>Writing Direction</key>
 		<string>Direcção de escrita</string>
 		<key>Zoom</key>
@@ -5602,6 +5230,10 @@
 	</dict>
 	<key>ro.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Afișează bara de instrumente</string>
+		<key>Customize Toolbar…</key>
+		<string>Personalizare bară de instrumente…</string>
 		<key>\tDefault</key>
 		<string>\tImplicit</string>
 		<key>\tLeft to Right</key>
@@ -5618,8 +5250,6 @@
 		<string>Aliniat la dreapta</string>
 		<key>Allow Hyphenation</key>
 		<string>Permite silabisirea</string>
-		<key>Attach Files…</key>
-		<string>Atașează fișiere…</string>
 		<key>Bigger</key>
 		<string>Mai mare</string>
 		<key>Bold</key>
@@ -5690,18 +5320,12 @@
 		<string>Ligaturi</string>
 		<key>Line Break</key>
 		<string>Întrerupere linie</string>
-		<key>Link…</key>
-		<string>Link…</string>
-		<key>List…</key>
-		<string>Listă…</string>
 		<key>Loosen</key>
 		<string>Mai larg</string>
 		<key>Lower</key>
 		<string>Mai jos</string>
 		<key>Make Lower Case</key>
 		<string>Transformă în minuscule</string>
-		<key>Make Rich Text</key>
-		<string>Transformă în text îmbogățit</string>
 		<key>Make Upper Case</key>
 		<string>Transformă în majuscule</string>
 		<key>Make Vertical Layout</key>
@@ -5719,6 +5343,8 @@
 		<key>Page Break</key>
 		<string>Întrerupere pagină</string>
 		<key>Page Setup…</key>
+		<string>Configurare pagină…</string>
+		<key>Page Setup...</key>
 		<string>Configurare pagină…</string>
 		<key>Paragraph Break</key>
 		<string>Întrerupere paragraf</string>
@@ -5745,6 +5371,8 @@
 		<key>Revert to Saved</key>
 		<string>Revino la versiunea salvată</string>
 		<key>Save</key>
+		<string>Salvează</string>
+		<key>Save…</key>
 		<string>Salvează</string>
 		<key>Save All</key>
 		<string>Salvează tot</string>
@@ -5794,8 +5422,6 @@
 		<string>Indice</string>
 		<key>Superscript</key>
 		<string>Exponent</string>
-		<key>Table…</key>
-		<string>Tabel…</string>
 		<key>Text</key>
 		<string>Text</string>
 		<key>Text Replacement</key>
@@ -5822,39 +5448,19 @@
 		<string>Găsește selecția</string>
 		<key>View</key>
 		<string>Vizualizare</string>
-		<key>Wrap to Page</key>
-		<string>Încadrează în pagină</string>
 		<key>Zoom</key>
 		<string>Zoom</string>
 		<key>Zoom In</key>
 		<string>Zoom înainte</string>
 		<key>Zoom Out</key>
 		<string>Zoom înapoi</string>
-		<key>_NSFontMenu</key>
-		<string>Formă caracter</string>
-		<key>_NSMainMenu</key>
-		<string>Ajutor</string>
-		<key>_NSServicesMenu</key>
-		<string>Servicii</string>
-		<key>_NSWindowsMenu</key>
-		<string>Fereastră</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\tDe la stânga la dreapta</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\tImplicit</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\tDe la dreapta la stânga</string>
-		<key>submenuAction:</key>
-		<string>Editare</string>
-		<key>turnOffKerning:</key>
-		<string>Nu utiliza nimic</string>
-		<key>useStandardKerning:</key>
-		<string>Utilizează valori implicite</string>
-		<key>useStandardLigatures:</key>
-		<string>Utilizează valori implicite</string>
 	</dict>
 	<key>ru.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Показать панель инструментов</string>
+		<key>Customize Toolbar…</key>
+		<string>Настроить панель инструментов…</string>
 		<key>\tDefault</key>
 		<string>\tСтандартно</string>
 		<key>\tLeft to Right</key>
@@ -5871,14 +5477,12 @@
 		<string>Выровнять вправо</string>
 		<key>Allow Hyphenation</key>
 		<string>Разрешить переносы</string>
-		<key>Attach Files…</key>
-		<string>Вложить файлы…</string>
 		<key>Bigger</key>
 		<string>Увеличить</string>
 		<key>Bold</key>
 		<string>Жирный</string>
 		<key>Bring All to Front</key>
-		<string>Все окна — на передний план</string>
+		<string>Все окна — на передний план</string>
 		<key>Capitalize</key>
 		<string>С заглавной буквы</string>
 		<key>Center</key>
@@ -5943,18 +5547,12 @@
 		<string>Лигатуры</string>
 		<key>Line Break</key>
 		<string>на новую строку</string>
-		<key>Link…</key>
-		<string>Ссылка…</string>
-		<key>List…</key>
-		<string>Список…</string>
 		<key>Loosen</key>
 		<string>Увеличить</string>
 		<key>Lower</key>
 		<string>Опустить</string>
 		<key>Make Lower Case</key>
 		<string>Нижний регистр</string>
-		<key>Make Rich Text</key>
-		<string>Конвертировать в форматированный текст</string>
 		<key>Make Upper Case</key>
 		<string>Верхний регистр</string>
 		<key>Make Vertical Layout</key>
@@ -5972,6 +5570,8 @@
 		<key>Page Break</key>
 		<string>на новую страницу</string>
 		<key>Page Setup…</key>
+		<string>Параметры страницы…</string>
+		<key>Page Setup...</key>
 		<string>Параметры страницы…</string>
 		<key>Paragraph Break</key>
 		<string>на новый абзац</string>
@@ -5998,6 +5598,8 @@
 		<key>Revert to Saved</key>
 		<string>Вернуться к сохраненному</string>
 		<key>Save</key>
+		<string>Сохранить</string>
+		<key>Save…</key>
 		<string>Сохранить</string>
 		<key>Save All</key>
 		<string>Сохранить все</string>
@@ -6047,8 +5649,6 @@
 		<string>Подстрочная</string>
 		<key>Superscript</key>
 		<string>Надстрочная</string>
-		<key>Table…</key>
-		<string>Таблица…</string>
 		<key>Text</key>
 		<string>Текст</string>
 		<key>Text Replacement</key>
@@ -6075,41 +5675,21 @@
 		<string>Найти выбранное</string>
 		<key>View</key>
 		<string>Вид</string>
-		<key>Wrap to Page</key>
-		<string>Разбить по размеру бумаги</string>
 		<key>Zoom</key>
 		<string>Изменить масштаб</string>
 		<key>Zoom In</key>
 		<string>Увеличить масштаб</string>
 		<key>Zoom Out</key>
 		<string>Уменьшить масштаб</string>
-		<key>_NSFontMenu</key>
-		<string>Форма символа</string>
-		<key>_NSMainMenu</key>
-		<string>Справка</string>
-		<key>_NSServicesMenu</key>
-		<string>Службы</string>
-		<key>_NSWindowsMenu</key>
-		<string>Окно</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\tСлева направо</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\tСтандартно</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\tСправа налево</string>
-		<key>submenuAction:</key>
-		<string>Правка</string>
-		<key>turnOffKerning:</key>
-		<string>Не применять</string>
-		<key>useStandardKerning:</key>
-		<string>По умолчанию</string>
-		<key>useStandardLigatures:</key>
-		<string>По умолчанию</string>
 	</dict>
 	<key>sk.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Zobraziť panel s nástrojmi</string>
+		<key>Customize Toolbar…</key>
+		<string>Prispôsobiť panel s nástrojmi…</string>
 		<key>About APPLICATIONNAME</key>
-		<string>O aplikácii APPLICATIONNAME</string>
+		<string>O aplikácii APPLICATIONNAME</string>
 		<key>Actual Size</key>
 		<string>Skutočná veľkosť</string>
 		<key>Align Left</key>
@@ -6118,8 +5698,6 @@
 		<string>Zarovnať vpravo</string>
 		<key>Allow Hyphenation</key>
 		<string>Povoliť delenie slov</string>
-		<key>Attach Files…</key>
-		<string>Priložiť súbory…</string>
 		<key>Baseline</key>
 		<string>Základová čiara</string>
 		<key>Bigger</key>
@@ -6137,7 +5715,7 @@
 		<key>Check Document Now</key>
 		<string>Skontrolovať dokument</string>
 		<key>Check Grammar With Spelling</key>
-		<string>Kontrolovať gramatiku s pravopisom</string>
+		<string>Kontrolovať gramatiku s pravopisom</string>
 		<key>Check Spelling While Typing</key>
 		<string>Kontrolovať pravopis počas písania</string>
 		<key>Clear Menu</key>
@@ -6173,7 +5751,7 @@
 		<key>Find Previous</key>
 		<string>Nájsť predošlé</string>
 		<key>Find and Replace…</key>
-		<string>Nájsť a nahradiť…</string>
+		<string>Nájsť a nahradiť…</string>
 		<key>Find…</key>
 		<string>Nájsť…</string>
 		<key>Font</key>
@@ -6186,8 +5764,6 @@
 		<string>Skryť ostatné</string>
 		<key>Hide APPLICATIONNAME</key>
 		<string>Skryť APPLICATIONNAME</string>
-		<key>Insert</key>
-		<string>Vložiť</string>
 		<key>Italic</key>
 		<string>Kurzíva</string>
 		<key>Jump to Selection</key>
@@ -6200,18 +5776,12 @@
 		<string>Ligatúry</string>
 		<key>Line Break</key>
 		<string>Zlom riadku</string>
-		<key>Link…</key>
-		<string>Odkaz…</string>
-		<key>List…</key>
-		<string>Zoznam…</string>
 		<key>Loosen</key>
 		<string>Zväčšiť</string>
 		<key>Lower</key>
 		<string>Znížiť</string>
 		<key>Make Lower Case</key>
 		<string>Malé písmená</string>
-		<key>Make Rich Text</key>
-		<string>Previesť na formátovaný text</string>
 		<key>Make Upper Case</key>
 		<string>Veľké písmená</string>
 		<key>Make Vertical Layout</key>
@@ -6232,6 +5802,8 @@
 		<string>Zlom strany</string>
 		<key>Page Setup…</key>
 		<string>Nastavenie strany…</string>
+		<key>Page Setup...</key>
+		<string>Nastavenie strany…</string>
 		<key>Paragraph</key>
 		<string>Odstavec</string>
 		<key>Paragraph Break</key>
@@ -6243,7 +5815,7 @@
 		<key>Paste Style</key>
 		<string>Vložiť štýl</string>
 		<key>Paste and Match Style</key>
-		<string>Vložiť a prispôsobiť štýl</string>
+		<string>Vložiť a prispôsobiť štýl</string>
 		<key>Preferences…</key>
 		<string>Nastavenia…</string>
 		<key>Prevent Editing</key>
@@ -6259,6 +5831,8 @@
 		<key>Revert to Saved</key>
 		<string>Vrátiť na uložené</string>
 		<key>Save</key>
+		<string>Uložiť</string>
+		<key>Save…</key>
 		<string>Uložiť</string>
 		<key>Save All</key>
 		<string>Uložiť všetky</string>
@@ -6283,7 +5857,7 @@
 		<key>Show Ruler</key>
 		<string>Zobraziť pravítko</string>
 		<key>Show Spelling and Grammar</key>
-		<string>Zobraziť pravopis a gramatiku</string>
+		<string>Zobraziť pravopis a gramatiku</string>
 		<key>Show Substitutions</key>
 		<string>Zobraziť zámeny</string>
 		<key>Smaller</key>
@@ -6301,7 +5875,7 @@
 		<key>Speech</key>
 		<string>Reč</string>
 		<key>Spelling and Grammar</key>
-		<string>Pravopis a gramatika</string>
+		<string>Pravopis a gramatika</string>
 		<key>Start Speaking</key>
 		<string>Spustiť rozprávanie</string>
 		<key>Stop Speaking</key>
@@ -6314,8 +5888,6 @@
 		<string>Zámeny</string>
 		<key>Superscript</key>
 		<string>Horný index</string>
-		<key>Table…</key>
-		<string>Tabuľka…</string>
 		<key>Text</key>
 		<string>Text</string>
 		<key>Text Replacement</key>
@@ -6344,8 +5916,6 @@
 		<string>Zobraziť</string>
 		<key>Window</key>
 		<string>Okno</string>
-		<key>Wrap to Page</key>
-		<string>Zalomiť podľa strany</string>
 		<key>Writing Direction</key>
 		<string>Smer písania</string>
 		<key>Zoom</key>
@@ -6363,6 +5933,10 @@
 	</dict>
 	<key>sv.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Visa verktygsfältet</string>
+		<key>Customize Toolbar…</key>
+		<string>Anpassa verktygsfältet…</string>
 		<key>About APPLICATIONNAME</key>
 		<string>Om APPLICATIONNAME</string>
 		<key>Actual Size</key>
@@ -6373,8 +5947,6 @@
 		<string>Högerjustera</string>
 		<key>Allow Hyphenation</key>
 		<string>Tillåt avstavning</string>
-		<key>Attach Files…</key>
-		<string>Bifoga filer…</string>
 		<key>Baseline</key>
 		<string>Baslinje</string>
 		<key>Bigger</key>
@@ -6441,8 +6013,6 @@
 		<string>Göm övriga</string>
 		<key>Hide APPLICATIONNAME</key>
 		<string>Göm APPLICATIONNAME</string>
-		<key>Insert</key>
-		<string>Infoga</string>
 		<key>Italic</key>
 		<string>Kursiv</string>
 		<key>Jump to Selection</key>
@@ -6455,18 +6025,12 @@
 		<string>Ligaturer</string>
 		<key>Line Break</key>
 		<string>Radbrytning</string>
-		<key>Link…</key>
-		<string>Länk…</string>
-		<key>List…</key>
-		<string>Lista…</string>
 		<key>Loosen</key>
 		<string>Öka</string>
 		<key>Lower</key>
 		<string>Sänk</string>
 		<key>Make Lower Case</key>
 		<string>Små bokstäver</string>
-		<key>Make Rich Text</key>
-		<string>Gör till formaterad text</string>
 		<key>Make Upper Case</key>
 		<string>Stora bokstäver</string>
 		<key>Make Vertical Layout</key>
@@ -6486,6 +6050,8 @@
 		<key>Page Break</key>
 		<string>Sidobrytning</string>
 		<key>Page Setup…</key>
+		<string>Utskriftsformat…</string>
+		<key>Page Setup...</key>
 		<string>Utskriftsformat…</string>
 		<key>Paragraph</key>
 		<string>Stycke</string>
@@ -6514,6 +6080,8 @@
 		<key>Revert to Saved</key>
 		<string>Återgå till sparat</string>
 		<key>Save</key>
+		<string>Spara</string>
+		<key>Save…</key>
 		<string>Spara</string>
 		<key>Save All</key>
 		<string>Spara alla</string>
@@ -6569,8 +6137,6 @@
 		<string>Ersättningar</string>
 		<key>Superscript</key>
 		<string>Upphöjd</string>
-		<key>Table…</key>
-		<string>Tabell…</string>
 		<key>Text</key>
 		<string>Text</string>
 		<key>Text Replacement</key>
@@ -6599,8 +6165,6 @@
 		<string>Innehåll</string>
 		<key>Window</key>
 		<string>Fönster</string>
-		<key>Wrap to Page</key>
-		<string>Anpassa texten till sidan</string>
 		<key>Writing Direction</key>
 		<string>Skrivriktning</string>
 		<key>Zoom</key>
@@ -6618,6 +6182,10 @@
 	</dict>
 	<key>th.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>แสดงแถบเครื่องมือ</string>
+		<key>Customize Toolbar…</key>
+		<string>กำหนดแถบเครื่องมือเอง…</string>
 		<key>\tDefault</key>
 		<string>\tค่าเริ่มต้น</string>
 		<key>\tLeft to Right</key>
@@ -6634,8 +6202,6 @@
 		<string>จัดชิดขวา</string>
 		<key>Allow Hyphenation</key>
 		<string>สามารถใช้เครื่องหมายยัติภังค์</string>
-		<key>Attach Files…</key>
-		<string>แนบไฟล์...</string>
 		<key>Bigger</key>
 		<string>ใหญ่ขึ้น</string>
 		<key>Bold</key>
@@ -6706,18 +6272,12 @@
 		<string>อักษรควบ</string>
 		<key>Line Break</key>
 		<string>แบ่งบรรทัด</string>
-		<key>Link…</key>
-		<string>ลิงก์…</string>
-		<key>List…</key>
-		<string>รายการ…</string>
 		<key>Loosen</key>
 		<string>หลวม</string>
 		<key>Lower</key>
 		<string>ลดลง</string>
 		<key>Make Lower Case</key>
 		<string>ทำให้เป็นตัวพิมพ์เล็ก</string>
-		<key>Make Rich Text</key>
-		<string>ทําข้อความเข้ารหัสแอสกี (RTF)</string>
 		<key>Make Upper Case</key>
 		<string>ทำให้เป็นตัวพิมพ์ใหญ่</string>
 		<key>Make Vertical Layout</key>
@@ -6735,6 +6295,8 @@
 		<key>Page Break</key>
 		<string>แบ่งหน้า</string>
 		<key>Page Setup…</key>
+		<string>ตั้งค่าหน้ากระดาษ…</string>
+		<key>Page Setup...</key>
 		<string>ตั้งค่าหน้ากระดาษ…</string>
 		<key>Paragraph Break</key>
 		<string>แบ่งย่อหน้า</string>
@@ -6761,6 +6323,8 @@
 		<key>Revert to Saved</key>
 		<string>แปลงกลับเป็นที่บันทึกไว้</string>
 		<key>Save</key>
+		<string>บันทึก</string>
+		<key>Save…</key>
 		<string>บันทึก</string>
 		<key>Save All</key>
 		<string>บันทึกทั้งหมด</string>
@@ -6810,8 +6374,6 @@
 		<string>ตัวห้อย</string>
 		<key>Superscript</key>
 		<string>ตัวยก</string>
-		<key>Table…</key>
-		<string>ตาราง…</string>
 		<key>Text</key>
 		<string>ข้อความ</string>
 		<key>Text Replacement</key>
@@ -6838,39 +6400,19 @@
 		<string>ใช้การเลือกสำหรับค้นหา</string>
 		<key>View</key>
 		<string>มุมมอง</string>
-		<key>Wrap to Page</key>
-		<string>รวมเข้าไว้ในหน้าเดียวกัน</string>
 		<key>Zoom</key>
 		<string>ซูม</string>
 		<key>Zoom In</key>
 		<string>ซูมเข้า</string>
 		<key>Zoom Out</key>
 		<string>ซูมออก</string>
-		<key>_NSFontMenu</key>
-		<string>ลักษณะตัวอักษร</string>
-		<key>_NSMainMenu</key>
-		<string>วิธีใช้</string>
-		<key>_NSServicesMenu</key>
-		<string>บริการ</string>
-		<key>_NSWindowsMenu</key>
-		<string>หน้าต่าง</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\tซ้ายไปขวา</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\tค่าเริ่มต้น</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\tขวาไปซ้าย</string>
-		<key>submenuAction:</key>
-		<string>แก้ไข</string>
-		<key>turnOffKerning:</key>
-		<string>ใช้ไม่มี</string>
-		<key>useStandardKerning:</key>
-		<string>ใช้ค่าเริ่มต้น</string>
-		<key>useStandardLigatures:</key>
-		<string>ใช้ค่าเริ่มต้น</string>
 	</dict>
 	<key>tr.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Araç Çubuğunu Göster</string>
+		<key>Customize Toolbar…</key>
+		<string>Araç Çubuğunu Özelleştir…</string>
 		<key>About APPLICATIONNAME</key>
 		<string>APPLICATIONNAME Hakkında</string>
 		<key>Actual Size</key>
@@ -6881,8 +6423,6 @@
 		<string>Sağa Hizala</string>
 		<key>Allow Hyphenation</key>
 		<string>Tirelemeye İzin Ver</string>
-		<key>Attach Files…</key>
-		<string>Dosya İliştir…</string>
 		<key>Baseline</key>
 		<string>Taban Çizgisi</string>
 		<key>Bigger</key>
@@ -6949,8 +6489,6 @@
 		<string>Diğerlerini Gizle</string>
 		<key>Hide APPLICATIONNAME</key>
 		<string>APPLICATIONNAME’i Gizle</string>
-		<key>Insert</key>
-		<string>Ekle</string>
 		<key>Italic</key>
 		<string>İtalik</string>
 		<key>Jump to Selection</key>
@@ -6963,18 +6501,12 @@
 		<string>Birleşik Harfler</string>
 		<key>Line Break</key>
 		<string>Satır Sonu</string>
-		<key>Link…</key>
-		<string>Bağlantı…</string>
-		<key>List…</key>
-		<string>Liste…</string>
 		<key>Loosen</key>
 		<string>Gevşet</string>
 		<key>Lower</key>
 		<string>Alçalt</string>
 		<key>Make Lower Case</key>
 		<string>Küçük Harf Yap</string>
-		<key>Make Rich Text</key>
-		<string>Zengin Metin (RTF) Yap</string>
 		<key>Make Upper Case</key>
 		<string>Büyük Harf Yap</string>
 		<key>Make Vertical Layout</key>
@@ -6994,6 +6526,8 @@
 		<key>Page Break</key>
 		<string>Sayfa Sonu</string>
 		<key>Page Setup…</key>
+		<string>Sayfa Düzeni…</string>
+		<key>Page Setup...</key>
 		<string>Sayfa Düzeni…</string>
 		<key>Paragraph</key>
 		<string>Paragrafta</string>
@@ -7022,6 +6556,8 @@
 		<key>Revert to Saved</key>
 		<string>Kaydedilene Dön</string>
 		<key>Save</key>
+		<string>Kaydet</string>
+		<key>Save…</key>
 		<string>Kaydet</string>
 		<key>Save All</key>
 		<string>Tümünü Kaydet</string>
@@ -7077,8 +6613,6 @@
 		<string>Değişimler</string>
 		<key>Superscript</key>
 		<string>Üs</string>
-		<key>Table…</key>
-		<string>Tablo…</string>
 		<key>Text</key>
 		<string>Metin</string>
 		<key>Text Replacement</key>
@@ -7109,8 +6643,6 @@
 		<string>Görüntü</string>
 		<key>Window</key>
 		<string>Pencere</string>
-		<key>Wrap to Page</key>
-		<string>Sayfaya Yerleştir</string>
 		<key>Writing Direction</key>
 		<string>Yazma Yönü</string>
 		<key>Zoom</key>
@@ -7128,6 +6660,10 @@
 	</dict>
 	<key>uk.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Показати панель інструментів</string>
+		<key>Customize Toolbar…</key>
+		<string>Настроїти панель інструментів…</string>
 		<key>\tDefault</key>
 		<string>\tЗвичайний</string>
 		<key>\tLeft to Right</key>
@@ -7144,8 +6680,6 @@
 		<string>Вирівняти справа</string>
 		<key>Allow Hyphenation</key>
 		<string>Увімкнути переноси</string>
-		<key>Attach Files…</key>
-		<string>Прикріпити файли…</string>
 		<key>Bigger</key>
 		<string>Більший</string>
 		<key>Bold</key>
@@ -7216,18 +6750,12 @@
 		<string>Лігатури</string>
 		<key>Line Break</key>
 		<string>Розрив рядка</string>
-		<key>Link…</key>
-		<string>Посилання…</string>
-		<key>List…</key>
-		<string>Список…</string>
 		<key>Loosen</key>
 		<string>Розширити</string>
 		<key>Lower</key>
 		<string>Нижче</string>
 		<key>Make Lower Case</key>
 		<string>У нижній регістр</string>
-		<key>Make Rich Text</key>
-		<string>Перетворити на RTF</string>
 		<key>Make Upper Case</key>
 		<string>У верхній регістр</string>
 		<key>Make Vertical Layout</key>
@@ -7245,6 +6773,8 @@
 		<key>Page Break</key>
 		<string>Розрив сторінки</string>
 		<key>Page Setup…</key>
+		<string>Параметри сторінки…</string>
+		<key>Page Setup...</key>
 		<string>Параметри сторінки…</string>
 		<key>Paragraph Break</key>
 		<string>Розрив абзацу</string>
@@ -7271,6 +6801,8 @@
 		<key>Revert to Saved</key>
 		<string>Відновити</string>
 		<key>Save</key>
+		<string>Зберегти</string>
+		<key>Save…</key>
 		<string>Зберегти</string>
 		<key>Save All</key>
 		<string>Зберегти всі</string>
@@ -7320,8 +6852,6 @@
 		<string>Підрядкова</string>
 		<key>Superscript</key>
 		<string>Надрядкова</string>
-		<key>Table…</key>
-		<string>Таблиця…</string>
 		<key>Text</key>
 		<string>Текст</string>
 		<key>Text Replacement</key>
@@ -7348,39 +6878,19 @@
 		<string>Використати виділене для пошуку</string>
 		<key>View</key>
 		<string>Перегляд</string>
-		<key>Wrap to Page</key>
-		<string>Показати рамку</string>
 		<key>Zoom</key>
 		<string>Оптимізувати</string>
 		<key>Zoom In</key>
 		<string>Наблизити</string>
 		<key>Zoom Out</key>
 		<string>Віддалити</string>
-		<key>_NSFontMenu</key>
-		<string>Форма символів</string>
-		<key>_NSMainMenu</key>
-		<string>Довідка</string>
-		<key>_NSServicesMenu</key>
-		<string>Сервіси</string>
-		<key>_NSWindowsMenu</key>
-		<string>Вікно</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\tЗліва направо</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\tЗвичайний</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\tСправа наліво</string>
-		<key>submenuAction:</key>
-		<string>Редагування</string>
-		<key>turnOffKerning:</key>
-		<string>Вимкнути</string>
-		<key>useStandardKerning:</key>
-		<string>Стандартний</string>
-		<key>useStandardLigatures:</key>
-		<string>Стандартні</string>
 	</dict>
 	<key>vi.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>Hiển thị Thanh công cụ</string>
+		<key>Customize Toolbar…</key>
+		<string>Tùy chỉnh Thanh công cụ…</string>
 		<key>\tDefault</key>
 		<string>\tMặc định</string>
 		<key>\tLeft to Right</key>
@@ -7397,8 +6907,6 @@
 		<string>Căn Phải</string>
 		<key>Allow Hyphenation</key>
 		<string>Cho phép Dấu gạch nối</string>
-		<key>Attach Files…</key>
-		<string>Đính kèm Tệp…</string>
 		<key>Bigger</key>
 		<string>Lớn hơn</string>
 		<key>Bold</key>
@@ -7469,18 +6977,12 @@
 		<string>Chữ ghép</string>
 		<key>Line Break</key>
 		<string>Xuống Dòng</string>
-		<key>Link…</key>
-		<string>Liên kết…</string>
-		<key>List…</key>
-		<string>Danh sách…</string>
 		<key>Loosen</key>
 		<string>Giãn</string>
 		<key>Lower</key>
 		<string>Hạ</string>
 		<key>Make Lower Case</key>
 		<string>Viết thường</string>
-		<key>Make Rich Text</key>
-		<string>Tạo Văn bản Đa dạng thức</string>
 		<key>Make Upper Case</key>
 		<string>Viết hoa</string>
 		<key>Make Vertical Layout</key>
@@ -7498,6 +7000,8 @@
 		<key>Page Break</key>
 		<string>Ngắt Trang</string>
 		<key>Page Setup…</key>
+		<string>Thiết lập Trang…</string>
+		<key>Page Setup...</key>
 		<string>Thiết lập Trang…</string>
 		<key>Paragraph Break</key>
 		<string>Dấu ngắt Đoạn</string>
@@ -7524,6 +7028,8 @@
 		<key>Revert to Saved</key>
 		<string>Khôi phục Bản đã lưu</string>
 		<key>Save</key>
+		<string>Lưu</string>
+		<key>Save…</key>
 		<string>Lưu</string>
 		<key>Save All</key>
 		<string>Lưu Tất cả</string>
@@ -7573,8 +7079,6 @@
 		<string>Chỉ số dưới</string>
 		<key>Superscript</key>
 		<string>Chỉ số trên</string>
-		<key>Table…</key>
-		<string>Bảng…</string>
 		<key>Text</key>
 		<string>Văn bản</string>
 		<key>Text Replacement</key>
@@ -7601,39 +7105,19 @@
 		<string>Sử dụng Lựa chọn để Tìm</string>
 		<key>View</key>
 		<string>Xem</string>
-		<key>Wrap to Page</key>
-		<string>Ngắt dòng vừa Trang</string>
 		<key>Zoom</key>
 		<string>Thu phóng</string>
 		<key>Zoom In</key>
 		<string>Phóng to</string>
 		<key>Zoom Out</key>
 		<string>Thu nhỏ</string>
-		<key>_NSFontMenu</key>
-		<string>Hình dạng Ký tự</string>
-		<key>_NSMainMenu</key>
-		<string>Trợ giúp</string>
-		<key>_NSServicesMenu</key>
-		<string>Dịch vụ</string>
-		<key>_NSWindowsMenu</key>
-		<string>Cửa sổ</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\tTrái sang Phải</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\tMặc định</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\tPhải sang Trái</string>
-		<key>submenuAction:</key>
-		<string>Sửa</string>
-		<key>turnOffKerning:</key>
-		<string>Không sử dụng</string>
-		<key>useStandardKerning:</key>
-		<string>Sử dụng Mặc định</string>
-		<key>useStandardLigatures:</key>
-		<string>Sử dụng Mặc định</string>
 	</dict>
 	<key>zh-Hans.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>显示工具栏</string>
+		<key>Customize Toolbar…</key>
+		<string>自定工具栏…</string>
 		<key>\tDefault</key>
 		<string>\t默认</string>
 		<key>\tLeft to Right</key>
@@ -7650,8 +7134,6 @@
 		<string>右对齐</string>
 		<key>Allow Hyphenation</key>
 		<string>允许连字</string>
-		<key>Attach Files…</key>
-		<string>附带文件…</string>
 		<key>Bigger</key>
 		<string>较大</string>
 		<key>Bold</key>
@@ -7722,18 +7204,12 @@
 		<string>连字</string>
 		<key>Line Break</key>
 		<string>换行</string>
-		<key>Link…</key>
-		<string>链接…</string>
-		<key>List…</key>
-		<string>列表…</string>
 		<key>Loosen</key>
 		<string>松排</string>
 		<key>Lower</key>
 		<string>降低</string>
 		<key>Make Lower Case</key>
 		<string>变为小写</string>
-		<key>Make Rich Text</key>
-		<string>制作多信息文本</string>
 		<key>Make Upper Case</key>
 		<string>变为大写</string>
 		<key>Make Vertical Layout</key>
@@ -7751,6 +7227,8 @@
 		<key>Page Break</key>
 		<string>分页</string>
 		<key>Page Setup…</key>
+		<string>页面设置…</string>
+		<key>Page Setup...</key>
 		<string>页面设置…</string>
 		<key>Paragraph Break</key>
 		<string>分段</string>
@@ -7777,6 +7255,8 @@
 		<key>Revert to Saved</key>
 		<string>复原到已存储版本</string>
 		<key>Save</key>
+		<string>存储</string>
+		<key>Save…</key>
 		<string>存储</string>
 		<key>Save All</key>
 		<string>全部存储</string>
@@ -7826,8 +7306,6 @@
 		<string>下标</string>
 		<key>Superscript</key>
 		<string>上标</string>
-		<key>Table…</key>
-		<string>表格…</string>
 		<key>Text</key>
 		<string>文本</string>
 		<key>Text Replacement</key>
@@ -7854,39 +7332,19 @@
 		<string>查找所选内容</string>
 		<key>View</key>
 		<string>显示</string>
-		<key>Wrap to Page</key>
-		<string>按页面换行</string>
 		<key>Zoom</key>
 		<string>缩放</string>
 		<key>Zoom In</key>
 		<string>放大</string>
 		<key>Zoom Out</key>
 		<string>缩小</string>
-		<key>_NSFontMenu</key>
-		<string>字符形状</string>
-		<key>_NSMainMenu</key>
-		<string>帮助</string>
-		<key>_NSServicesMenu</key>
-		<string>服务</string>
-		<key>_NSWindowsMenu</key>
-		<string>窗口</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\t从左到右</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\t默认</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\t从右到左</string>
-		<key>submenuAction:</key>
-		<string>编辑</string>
-		<key>turnOffKerning:</key>
-		<string>取消使用</string>
-		<key>useStandardKerning:</key>
-		<string>使用默认</string>
-		<key>useStandardLigatures:</key>
-		<string>使用默认</string>
 	</dict>
 	<key>zh-Hant.lproj</key>
 	<dict>
+		<key>Show Toolbar</key>
+		<string>顯示工具列</string>
+		<key>Customize Toolbar…</key>
+		<string>自定工具列⋯</string>
 		<key>\tDefault</key>
 		<string>\t預設值</string>
 		<key>\tLeft to Right</key>
@@ -7903,8 +7361,6 @@
 		<string>齊右</string>
 		<key>Allow Hyphenation</key>
 		<string>允許使用連字號</string>
-		<key>Attach Files…</key>
-		<string>附加檔案⋯</string>
 		<key>Bigger</key>
 		<string>放大</string>
 		<key>Bold</key>
@@ -7975,18 +7431,12 @@
 		<string>連字</string>
 		<key>Line Break</key>
 		<string>斷行標記</string>
-		<key>Link…</key>
-		<string>連結⋯</string>
-		<key>List…</key>
-		<string>列表⋯</string>
 		<key>Loosen</key>
 		<string>寬鬆</string>
 		<key>Lower</key>
 		<string>調低</string>
 		<key>Make Lower Case</key>
 		<string>小寫</string>
-		<key>Make Rich Text</key>
-		<string>製作 RTF 格式</string>
 		<key>Make Upper Case</key>
 		<string>大寫</string>
 		<key>Make Vertical Layout</key>
@@ -8004,6 +7454,8 @@
 		<key>Page Break</key>
 		<string>分頁標記</string>
 		<key>Page Setup…</key>
+		<string>設定頁面⋯</string>
+		<key>Page Setup...</key>
 		<string>設定頁面⋯</string>
 		<key>Paragraph Break</key>
 		<string>分段標記</string>
@@ -8030,6 +7482,8 @@
 		<key>Revert to Saved</key>
 		<string>回復成儲存過的版本</string>
 		<key>Save</key>
+		<string>儲存</string>
+		<key>Save…</key>
 		<string>儲存</string>
 		<key>Save All</key>
 		<string>全部儲存</string>
@@ -8079,8 +7533,6 @@
 		<string>下標</string>
 		<key>Superscript</key>
 		<string>上標</string>
-		<key>Table…</key>
-		<string>表格⋯</string>
 		<key>Text</key>
 		<string>文字</string>
 		<key>Text Replacement</key>
@@ -8107,36 +7559,12 @@
 		<string>使用所選範圍尋找</string>
 		<key>View</key>
 		<string>顯示方式</string>
-		<key>Wrap to Page</key>
-		<string>依頁面大小折行</string>
 		<key>Zoom</key>
 		<string>縮放</string>
 		<key>Zoom In</key>
 		<string>放大</string>
 		<key>Zoom Out</key>
 		<string>縮小</string>
-		<key>_NSFontMenu</key>
-		<string>字元字形</string>
-		<key>_NSMainMenu</key>
-		<string>輔助說明</string>
-		<key>_NSServicesMenu</key>
-		<string>服務</string>
-		<key>_NSWindowsMenu</key>
-		<string>視窗</string>
-		<key>makeTextWritingDirectionLeftToRight:</key>
-		<string>\t由左至右</string>
-		<key>makeTextWritingDirectionNatural:</key>
-		<string>\t預設值</string>
-		<key>makeTextWritingDirectionRightToLeft:</key>
-		<string>\t由右至左</string>
-		<key>submenuAction:</key>
-		<string>編輯</string>
-		<key>turnOffKerning:</key>
-		<string>取消使用</string>
-		<key>useStandardKerning:</key>
-		<string>使用預設值</string>
-		<key>useStandardLigatures:</key>
-		<string>使用預設值</string>
 	</dict>
 </dict>
 </plist>

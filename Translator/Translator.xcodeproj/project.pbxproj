@@ -59,6 +59,7 @@
 		B90EFE41188D5F7400210A03 /* NSURL+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CoreCode.h"; sourceTree = "<group>"; };
 		B90EFE42188D5F7400210A03 /* NSURL+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CoreCode.m"; sourceTree = "<group>"; };
 		B90EFE72188D5FE800210A03 /* MainMenuTranslations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainMenuTranslations.plist; sourceTree = "<group>"; };
+		B94017C5188DAA450069568F /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
 		B9677071188D8807001B9A59 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +116,7 @@
 			children = (
 				B90EFDE0188D5F2A00210A03 /* AppDelegate.h */,
 				B90EFDE1188D5F2A00210A03 /* AppDelegate.m */,
+				B94017C5188DAA450069568F /* Read Me.rtf */,
 				B9677070188D8807001B9A59 /* MainMenu.xib */,
 				B90EFDE6188D5F2A00210A03 /* Images.xcassets */,
 				B90EFE02188D5F7300210A03 /* CoreLib */,
