@@ -105,9 +105,10 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 	[AppDelegate cancelPreviousPerformRequestsWithTarget:self];
 	NSDate *now = [NSDate date];
 	NSInteger hour = [now descriptionWithCalendarFormat:@"%H" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"] locale:nil].integerValue;
+	NSString *day = [now descriptionWithCalendarFormat:@"%a" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"] locale:nil];
 
 	int interval = 5*50;
-	if (hour >= 8 && hour <= 22)
+	if (hour >= 8 && hour <= 22 && ![@[@"Sat", @"Sun"] contains:day])
 		interval = 60.0;
 
 	[self performSelector:@selector(load) withObject:nil afterDelay:interval];
@@ -128,10 +129,11 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 	NSArray *names = @[@"TecDAX", @"MDAX", @"E-STOXX 50", @"DOW Jones", @"NASDAQ100", @"S&amp;P 500", @"NIKKEI 225", @"ATX", @"Goldpreis", @"Ölpreis", @"Dollarkurs"];
 	for (NSString *name in names)
 	{
-		@try
+		NSString *link = links[[names indexOfObject:name]];
+		NSStringArray *comp1 = [str split:makeString(@"<a href=\"%@\">%@</a>", link, name)];
+
+		if (comp1.count > 1)
 		{
-			NSString *link = links[[names indexOfObject:name]];
-			NSStringArray *comp1 = [str split:makeString(@"<a href=\"%@\">%@</a>", link, name)];
 			NSStringArray *comp2 = [comp1[1] split:@"</div>"];
 			NSStringArray *comp3 = [comp2[0] split:@">"];
 			NSString *percent = [[comp1[1] split:@"\"changeper\">"][1] split:@"</div>"][0];
@@ -148,7 +150,6 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 			while (datearray.count > 50) [datearray removeFirstObject];
 			while (percarray.count > 50) [percarray removeFirstObject];
 		}
-		@catch (NSException *exception) { }
 	}
 
 
