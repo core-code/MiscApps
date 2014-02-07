@@ -37,10 +37,6 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 {
 	cc = [CoreLib new];
 
-	self.webView = [[WebView alloc] init];
-	self.webView.frameLoadDelegate = self;
-	[self.webView setShouldUpdateWhileOffscreen:YES];
-	[self load];
 
 	self.menu = [[NSMenu alloc] init];
 	self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
@@ -88,11 +84,33 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 	   @"Goldpreis" : makeMutableNSStringArray(),
 	   @"Ölpreis" : makeMutableNSStringArray(),
 	   @"Dollarkurs" : makeMutableNSStringArray()};
+
+	[self reload];
 }
 
 - (void)clicked:(id)sender
 {
 	[kDAXURL.URL open];
+}
+
+- (void)quit:(id)sender
+{
+	[NSApp terminate:self];
+}
+
+- (void)reload
+{
+	for (NSMutableArray *array in @[self.dax, self.daxDates, self.values, self.dates, self.percents])
+		[array removeAllObjects];
+
+	[[self.webView mainFrame] stopLoading];
+	[self.webView removeFromSuperview];
+	self.webView = nil;
+	self.webView = [[WebView alloc] init];
+	self.webView.frameLoadDelegate = self;
+	[self.webView setShouldUpdateWhileOffscreen:YES];
+
+	[self load];
 }
 
 - (void)load
@@ -111,7 +129,12 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 	if (hour >= 8 && hour <= 22 && ![@[@"Sat", @"Sun"] contains:day])
 		interval = 60.0;
 
-	[self performSelector:@selector(load) withObject:nil afterDelay:interval];
+	NSDate *lastDate = self.daxDates.lastObject;
+
+	if (lastDate && ![day isEqualToString:[lastDate descriptionWithCalendarFormat:@"%a" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"] locale:nil]])
+		[self performSelector:@selector(reload) withObject:nil afterDelay:interval];
+	else
+		[self performSelector:@selector(load) withObject:nil afterDelay:interval];
 
 
 	NSStringArray *comp = title.words;
@@ -161,6 +184,8 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 
 		[self.menu addItemWithTitle:makeString(@"%@ %@ (%@)", [name replaced:@"&amp;" with:@"&"], valarray.lastObject, percarray.lastObject) action:@selector(clicked:) keyEquivalent:@""];
 	}
+	[self.menu addItem:[NSMenuItem separatorItem]];
+	[self.menu addItemWithTitle:@"Quit" action:@selector(quit:) keyEquivalent:@""];
 
 	while (self.dax.count > 50) [self.dax removeFirstObject];
 	while (self.daxDates.count > 50) [self.daxDates removeFirstObject];
