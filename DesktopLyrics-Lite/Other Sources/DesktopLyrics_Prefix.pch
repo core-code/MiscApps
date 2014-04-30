@@ -1,0 +1,81 @@
+//
+// Prefix header for all source files of the 'DesktopLyrics' target in the 'DesktopLyrics' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
+
+#import <Carbon/Carbon.h>
+#include <asl.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/sysctl.h>
+#include <ifaddrs.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <net/if.h>
+#include <errno.h>
+
+#import <ShortcutRecorder/ShortcutRecorder.h>
+#include <SystemConfiguration/SystemConfiguration.h>
+
+
+
+#define kTextLineSpacingKey				@"TextLineSpacing"
+#define kTextShadowKey					@"TextShadow"
+#define kTextShadowColorDataKey			@"TextShadowColorData"
+#define kTextShadowOffsetHorizontalKey	@"TextShadowOffsetHorizontal"
+#define kTextShadowOffsetVerticalKey	@"TextShadowOffsetVertical"
+#define kTextShadowBlurRadiusKey		@"TextShadowBlurRadius"
+#define kTextFontNameKey				@"TextFontName"
+#define kTextFontSizeKey				@"TextFontSize"
+#define kTextFontSizeMinimumKey			@"TextFontSizeMinimum"
+#define kTextColorDataKey				@"TextColorData"
+#define kTextFontSizeKey				@"TextFontSize"
+#define kTextFontSizeMinimumKey			@"TextFontSizeMinimum"
+#define kTextColorDataKey				@"TextColorData"
+#define kWindowBackgroundColorDataKey	@"WindowBackgroundColorData"
+#define kPrependAlsoWhenEmptyKey		@"PrependAlsoWhenEmpty"
+#define kPrependSonginfoKey				@"PrependSonginfo"
+#define kSonginfoKey					@"Songinfo"
+#define kAutoTurnKey					@"AutoTurn"
+#define kDisplayLyricsWhilePausedKey	@"DisplayLyricsWhilePaused"
+#define kSubstractDockKey				@"SubstractDock"
+#define kIndentTopKey					@"IndentTop"
+#define kIndentBottomKey				@"IndentBottom"
+#define kIndentLeftKey					@"IndentLeft"
+#define kIndentRightKey					@"IndentRight"
+#define kTextVerticalAlignmentKey		@"TextVerticalAlignment"
+#define kTextHorizontalAlignmentKey		@"TextHorizontalAlignment"
+#define kHideInstrumentalKey			@"hideInstrumental"
+#define kInvisibleKey					@"invisible"
+#define kFirstStartKey					@"firstStart"
+#define kScreenKey						@"screen"
+#define kUpdatecheckMenuindexKey		@"updatecheckMenuindex"
+#define kHiddenOptionLyricsOnTopKey		@"hiddenOptionLyricsOnTop"
+#define kHotKeyToggleVisibilityCombo	@"hotKeyToggleVisibilityCombo"
+#define kHotKeyNextPageCombo			@"hotKeyNextPageCombo"
+#define kHotKeyPrevPageCombo			@"hotKeyPrevPageCombo"
+
+
+
+#define asl_NSLog(level, format, ...) asl_log(NULL, NULL, level, "%s", [[NSString stringWithFormat:format, ##__VA_ARGS__] UTF8String])
+
+#ifdef DEBUG
+#warning DEBUG_OUTOUT_ENABLED
+#define asl_NSLog_debug(format, ...) asl_log(NULL, NULL, ASL_LEVEL_DEBUG, "%s", [[NSString stringWithFormat:format, ##__VA_ARGS__] UTF8String])
+#else
+#define asl_NSLog_debug(format, ...) 
+#endif
+
+#ifndef NSAppKitVersionNumber10_6
+    #define NSAppKitVersionNumber10_6 1038
+#endif
+#ifndef NSAppKitVersionNumber10_7
+    #define NSAppKitVersionNumber10_7 1138
+#endif
+
+
+#define OS_IS_POST_SNOW		(NSAppKitVersionNumber >= (int)NSAppKitVersionNumber10_7) 
+

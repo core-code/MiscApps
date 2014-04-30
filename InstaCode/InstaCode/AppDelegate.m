@@ -10,9 +10,10 @@
  */
 
 #import "AppDelegate.h"
+#import "CoreLib.h"
 
-CONST_KEY(Project)
 CONST_KEY(Runs)
+CONST_KEY(Project)
 CONST_KEY(NextNag)
 CONST_KEY(NagCount)
 CONST_KEY(UserPayed)
@@ -34,8 +35,8 @@ CONST_KEY(XCode)
 {
 	cc = [CoreLib new];
 	
-	self.presetsNames = [@[@"Preset:"] arrayByAddingObjectsFromArray:[[cc.resURL add:@"Presets"].dirContents mapped:^(id input){return [input replaced:@".txt" with:@""];}]];
-	self.snippetNames = [@[@"Snippets:"] arrayByAddingObjectsFromArray:[[cc.resURL add:@"Snippets"].dirContents mapped:^(id input){return [input replaced:@".txt" with:@""];}]];
+	self.presetsNames = [@[@"Preset:"] arrayByAddingObjectsFromArray:[@[cc.resDir, @"Presets"].path.dirContents mapped:^(id input){return [input replaced:@".txt" with:@""];}]];
+	self.snippetNames = [@[@"Snippets:"] arrayByAddingObjectsFromArray:[@[cc.resDir, @"Snippets"].path.dirContents mapped:^(id input){return [input replaced:@".txt" with:@""];}]];
 
 	[_compilationTextView setFont:[NSFont fontWithName:@"Menlo" size:12]];
 
@@ -61,7 +62,7 @@ CONST_KEY(XCode)
 	}
 	if (!kXCodeKey.defaultString.length)
 		kXCodeKey.defaultString = xcodeVersions[0];
-	kXCodeVersionsKey.defaultObj = xcodeVersions;
+	kXCodeVersionsKey.defaultObject = xcodeVersions;
 
 	
 	// first start
@@ -76,7 +77,7 @@ CONST_KEY(XCode)
 	{
 		if (kRunsKey.defaultInt >= kNextNagKey.defaultInt)
 		{
-			NSInteger res = NSRunAlertPanel(@"Info", makeString(@"InstaCode is supported by donations. You've used InstaCode to compile %li programs. Would you like to donate now?", kRunsKey.defaultInt), @"Donate now!", @"Remind me Later", @"I have donated");
+			NSInteger res = alert(@"Info", makeString(@"InstaCode is supported by donations. You've used InstaCode to compile %li programs. Would you like to donate now?", kRunsKey.defaultInt), @"Donate now!", @"Remind me Later", @"I have donated");
 
 			if (res == NSAlertDefaultReturn) // donate now
 			{
@@ -110,11 +111,11 @@ CONST_KEY(XCode)
 	int tag = [[sender valueForKey:@"tag"] intValue];
     
 	if (tag == 1)
-		[makeString(@"mailto:feedback@corecode.at?subject=%@ %@ Feedback", cc.appName, cc.appVersionString).escapedURL open];
+		[makeString(@"mailto:feedback@corecode.at?subject=%@ %@ Feedback", cc.appName, cc.appVersionString).escaped.URL open];
 	else if (tag == 2)
 		[@"Read Me.rtf".resourceURL open];
 	else if (tag == 3)
-		[makeString(@"http://www.corecode.at/%@/", [cc.appName lowercaseString]).escapedURL open];
+		[makeString(@"http://www.corecode.at/%@/", cc.appName.lowercaseString).escaped.URL open];
 }
 
 - (IBAction)compileAndRun:(id)sender
@@ -236,7 +237,7 @@ CONST_KEY(XCode)
 {
 	dirty = TRUE;
 	
-	NSMutableArray *tmp = @[@"Goto:"].mutable;
+	NSMutableArray *tmp = @[@"Goto:"].mutableObject;
 	NSMutableArray *tmpRanges = [NSMutableArray new];
 
 	int level = 0;
@@ -261,8 +262,8 @@ CONST_KEY(XCode)
 		}
 	}
 	
-	self.gotoRanges = tmpRanges.immutable;
-	self.gotoNames = tmp.immutable;
+	self.gotoRanges = tmpRanges.immutableObject;
+	self.gotoNames = tmp.immutableObject;
 }
 
 - (BOOL)textShouldBeginEditing:(NSText *)aTextObject

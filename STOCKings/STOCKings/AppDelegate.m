@@ -100,6 +100,7 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 
 - (void)reload
 {
+	NSLog(@"reload");
 	for (NSMutableArray *array in @[self.dax, self.daxDates, self.values, self.dates, self.percents])
 		[array removeAllObjects];
 
@@ -125,14 +126,22 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 	NSInteger hour = [now descriptionWithCalendarFormat:@"%H" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"] locale:nil].integerValue;
 	NSString *day = [now descriptionWithCalendarFormat:@"%a" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"] locale:nil];
 
-	int interval = 5*50;
+	int interval = 10*60;
 	if (hour >= 8 && hour <= 22 && ![@[@"Sat", @"Sun"] contains:day])
-		interval = 60.0;
+		interval = 1*60.0;
 
 	NSDate *lastDate = self.daxDates.lastObject;
+	NSString *lastDay = [lastDate descriptionWithCalendarFormat:@"%a" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"] locale:nil];
 
-	if (lastDate && ![day isEqualToString:[lastDate descriptionWithCalendarFormat:@"%a" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"] locale:nil]])
-		[self performSelector:@selector(reload) withObject:nil afterDelay:interval];
+	if (!lastDate || [now timeIntervalSinceDate:lastDate] > 3600)
+		NSLog(@"Info: %@ %@  %@", day, lastDay, _daxDates);
+
+	if (lastDate && ![day isEqualToString:lastDay])
+	{
+		LOGSUCC;
+		[self reload];
+		return;
+	}
 	else
 		[self performSelector:@selector(load) withObject:nil afterDelay:interval];
 

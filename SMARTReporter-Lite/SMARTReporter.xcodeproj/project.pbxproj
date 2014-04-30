@@ -1,0 +1,781 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		660AE0F20BB746E60081056B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660AE0F10BB746E60081056B /* Sparkle.framework */; };
+		660AE1060BB746EE0081056B /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 660AE0F10BB746E60081056B /* Sparkle.framework */; };
+		662849F60BA60F61008D88DF /* Read Me.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9CAE98A070CBF740049E37C /* Read Me.rtf */; };
+		662849F70BA60F62008D88DF /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 66D31AA60B8891C400972793 /* FAQ.rtf */; };
+		662849F80BA60F65008D88DF /* History.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 66D31AA50B8891C300972793 /* History.rtf */; };
+		667229B70CC550870008B9CC /* HostInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 667229AF0CC550870008B9CC /* HostInformation.h */; };
+		667229B80CC550870008B9CC /* HostInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 667229B00CC550870008B9CC /* HostInformation.m */; };
+		667229B90CC550870008B9CC /* LoginItemManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 667229B10CC550870008B9CC /* LoginItemManager.h */; };
+		667229BA0CC550870008B9CC /* LoginItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 667229B20CC550870008B9CC /* LoginItemManager.m */; };
+		667229BB0CC550870008B9CC /* JMEmailSender.h in Headers */ = {isa = PBXBuildFile; fileRef = 667229B30CC550870008B9CC /* JMEmailSender.h */; };
+		667229BC0CC550870008B9CC /* JMEmailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 667229B40CC550870008B9CC /* JMEmailSender.m */; };
+		669C31360B2E58BA00345A4C /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = 669C31200B2E58BA00345A4C /* Icons */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B9080D96128F0237003B82F9 /* DocklessApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = B9080D94128F0237003B82F9 /* DocklessApplication.h */; };
+		B9080D97128F0237003B82F9 /* DocklessApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = B9080D95128F0237003B82F9 /* DocklessApplication.m */; };
+		B90E717E1488258600FBC1D2 /* Configuration.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90E71781488258600FBC1D2 /* Configuration.xib */; };
+		B90E717F1488258600FBC1D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B90E717A1488258600FBC1D2 /* Localizable.strings */; };
+		B90E71801488258600FBC1D2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90E717C1488258600FBC1D2 /* MainMenu.xib */; };
+		B90E7185148825A000FBC1D2 /* Configuration.strings in Resources */ = {isa = PBXBuildFile; fileRef = B90E7181148825A000FBC1D2 /* Configuration.strings */; };
+		B90E7186148825A000FBC1D2 /* MainMenu.strings in Resources */ = {isa = PBXBuildFile; fileRef = B90E7183148825A000FBC1D2 /* MainMenu.strings */; };
+		B9117880103DF3D200AD98FC /* Mail.app in Resources */ = {isa = PBXBuildFile; fileRef = B911787F103DF3D200AD98FC /* Mail.app */; };
+		B911788D103DF3F400AD98FC /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B911788C103DF3F400AD98FC /* ScriptingBridge.framework */; };
+		B911ACE814C98EE000B0A092 /* Credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = B911ACE714C98EE000B0A092 /* Credits.rtfd */; };
+		B91B488C070B31D900F19FCF /* Drive.h in Headers */ = {isa = PBXBuildFile; fileRef = B91B4884070B31D900F19FCF /* Drive.h */; };
+		B91B488D070B31D900F19FCF /* Drive.m in Sources */ = {isa = PBXBuildFile; fileRef = B91B4885070B31D900F19FCF /* Drive.m */; };
+		B91B488E070B31D900F19FCF /* DriveList.h in Headers */ = {isa = PBXBuildFile; fileRef = B91B4886070B31D900F19FCF /* DriveList.h */; };
+		B91B488F070B31D900F19FCF /* DriveList.m in Sources */ = {isa = PBXBuildFile; fileRef = B91B4887070B31D900F19FCF /* DriveList.m */; };
+		B91B4892070B31D900F19FCF /* SMARTReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = B91B488A070B31D900F19FCF /* SMARTReporter.h */; };
+		B91B4893070B31D900F19FCF /* SMARTReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = B91B488B070B31D900F19FCF /* SMARTReporter.m */; };
+		B91B4898070B31E000F19FCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B91B4896070B31E000F19FCF /* main.m */; };
+		B91B4899070B31E000F19FCF /* SMARTReporter_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = B91B4897070B31E000F19FCF /* SMARTReporter_Prefix.pch */; };
+		B91B489F070B31EA00F19FCF /* SMARTReporter.icns in Resources */ = {isa = PBXBuildFile; fileRef = B91B489E070B31EA00F19FCF /* SMARTReporter.icns */; };
+		B932B8C7063DC6D500FA79A9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B932B8C6063DC6D500FA79A9 /* IOKit.framework */; };
+		B97ADCEB121468A600B0C6B9 /* ValidEmailValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = B97ADCE9121468A600B0C6B9 /* ValidEmailValueTransformer.h */; };
+		B97ADCEC121468A600B0C6B9 /* ValidEmailValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B97ADCEA121468A600B0C6B9 /* ValidEmailValueTransformer.m */; };
+		B98812830F44BFE7002AF0D9 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = B98812820F44BFE7002AF0D9 /* dsa_pub.pem */; };
+		B99944CF074A988E00CEBD40 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99944CE074A988E00CEBD40 /* Carbon.framework */; };
+		B99B8DF0109FB54100B02E04 /* DriveTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = B99B8DEE109FB54100B02E04 /* DriveTableView.h */; };
+		B99B8DF1109FB54100B02E04 /* DriveTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B99B8DEF109FB54100B02E04 /* DriveTableView.m */; };
+		B9CE33C311FE37D800CDB38E /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = B9CE33C211FE37D800CDB38E /* Growl Registration Ticket.growlRegDict */; };
+		B9CE33C711FE38DF00CDB38E /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CE33C611FE38DF00CDB38E /* Growl.framework */; };
+		B9CE343511FE38E500CDB38E /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9CE33C611FE38DF00CDB38E /* Growl.framework */; };
+		B9DCDCEF1245634C0048498D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DCDCEE1245634C0048498D /* SystemConfiguration.framework */; };
+		B9DCDD4B124570CB0048498D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DCDD4A124570CB0048498D /* Security.framework */; };
+		B9E2D1EC11FCA68E00DA3EBB /* StartFromDiskImageHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E2D1EA11FCA68E00DA3EBB /* StartFromDiskImageHandler.h */; };
+		B9E2D1ED11FCA68E00DA3EBB /* StartFromDiskImageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E2D1EB11FCA68E00DA3EBB /* StartFromDiskImageHandler.m */; };
+		B9E2D20111FCA94900DA3EBB /* ApplicationMovedHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E2D1FF11FCA94900DA3EBB /* ApplicationMovedHandler.h */; };
+		B9E2D20211FCA94900DA3EBB /* ApplicationMovedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E2D20011FCA94900DA3EBB /* ApplicationMovedHandler.m */; };
+		B9E2D2A011FCB6ED00DA3EBB /* MailCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E2D29F11FCB6ED00DA3EBB /* MailCore.framework */; };
+		B9E2D2AB11FCB6FB00DA3EBB /* MailCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9E2D29F11FCB6ED00DA3EBB /* MailCore.framework */; };
+		B9E5D291109F5EE200FDA028 /* smartctl in Resources */ = {isa = PBXBuildFile; fileRef = B9E5D290109F5EE200FDA028 /* smartctl */; };
+		B9F08DCD121338FD00F84B96 /* JMApp.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F08DCB121338FD00F84B96 /* JMApp.h */; };
+		B9F08DCE121338FD00F84B96 /* JMApp.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F08DCC121338FD00F84B96 /* JMApp.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		B911787E103DF3BB00AD98FC /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.app";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILES_DIR)/$(INPUT_FILE_BASE).h",
+			);
+			script = "sdef \"$INPUT_FILE_PATH\" | sdp -fh -o \"$DERIVED_FILES_DIR\" --basename \"$INPUT_FILE_BASE\" --bundleid `defaults read \"$INPUT_FILE_PATH/Contents/Info\" CFBundleIdentifier`";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B9AAA6C40953A97C00045CE9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B9CE343511FE38E500CDB38E /* Growl.framework in CopyFiles */,
+				B9E2D2AB11FCB6FB00DA3EBB /* MailCore.framework in CopyFiles */,
+				660AE1060BB746EE0081056B /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		660AE0F10BB746E60081056B /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
+		667229AF0CC550870008B9CC /* HostInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostInformation.h; sourceTree = "<group>"; };
+		667229B00CC550870008B9CC /* HostInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostInformation.m; sourceTree = "<group>"; };
+		667229B10CC550870008B9CC /* LoginItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginItemManager.h; sourceTree = "<group>"; };
+		667229B20CC550870008B9CC /* LoginItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginItemManager.m; sourceTree = "<group>"; };
+		667229B30CC550870008B9CC /* JMEmailSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMEmailSender.h; sourceTree = "<group>"; };
+		667229B40CC550870008B9CC /* JMEmailSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMEmailSender.m; sourceTree = "<group>"; };
+		669C31200B2E58BA00345A4C /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Icons; path = Resources/Icons; sourceTree = "<group>"; };
+		66D31AA50B8891C300972793 /* History.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = History.rtf; path = Resources/History.rtf; sourceTree = "<group>"; };
+		66D31AA60B8891C400972793 /* FAQ.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = FAQ.rtf; path = Resources/FAQ.rtf; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* SMARTReporter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMARTReporter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9080D94128F0237003B82F9 /* DocklessApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocklessApplication.h; path = Classes/DocklessApplication.h; sourceTree = "<group>"; };
+		B9080D95128F0237003B82F9 /* DocklessApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DocklessApplication.m; path = Classes/DocklessApplication.m; sourceTree = "<group>"; };
+		B90E71791488258600FBC1D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Resources/en.lproj/Configuration.xib; sourceTree = "<group>"; };
+		B90E717B1488258600FBC1D2 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B90E717D1488258600FBC1D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Resources/en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B90E7182148825A000FBC1D2 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B90E7184148825A000FBC1D2 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B911787F103DF3D200AD98FC /* Mail.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Mail.app; path = /Applications/Mail.app; sourceTree = "<absolute>"; };
+		B911788C103DF3F400AD98FC /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = /System/Library/Frameworks/ScriptingBridge.framework; sourceTree = "<absolute>"; };
+		B911ACE714C98EE000B0A092 /* Credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = Credits.rtfd; path = Resources/Credits.rtfd; sourceTree = "<group>"; };
+		B91B4884070B31D900F19FCF /* Drive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Drive.h; path = Classes/Drive.h; sourceTree = "<group>"; };
+		B91B4885070B31D900F19FCF /* Drive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Drive.m; path = Classes/Drive.m; sourceTree = "<group>"; };
+		B91B4886070B31D900F19FCF /* DriveList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DriveList.h; path = Classes/DriveList.h; sourceTree = "<group>"; };
+		B91B4887070B31D900F19FCF /* DriveList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DriveList.m; path = Classes/DriveList.m; sourceTree = "<group>"; };
+		B91B488A070B31D900F19FCF /* SMARTReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMARTReporter.h; path = Classes/SMARTReporter.h; sourceTree = "<group>"; };
+		B91B488B070B31D900F19FCF /* SMARTReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMARTReporter.m; path = Classes/SMARTReporter.m; sourceTree = "<group>"; };
+		B91B4896070B31E000F19FCF /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Other Sources/main.m"; sourceTree = "<group>"; };
+		B91B4897070B31E000F19FCF /* SMARTReporter_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMARTReporter_Prefix.pch; path = "Other Sources/SMARTReporter_Prefix.pch"; sourceTree = "<group>"; };
+		B91B489E070B31EA00F19FCF /* SMARTReporter.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = SMARTReporter.icns; path = Resources/SMARTReporter.icns; sourceTree = "<group>"; };
+		B92287091499359500613A05 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_CN; path = Resources/zh_CN.lproj/Configuration.xib; sourceTree = "<group>"; };
+		B92287211499359C00613A05 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = Resources/zh_CN.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B92287221499359C00613A05 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = Resources/zh_CN.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B92287231499359C00613A05 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_CN; path = Resources/zh_CN.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B92287241499359C00613A05 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = Resources/zh_CN.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B932B8C6063DC6D500FA79A9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		B97ADCE9121468A600B0C6B9 /* ValidEmailValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValidEmailValueTransformer.h; path = Classes/ValidEmailValueTransformer.h; sourceTree = "<group>"; };
+		B97ADCEA121468A600B0C6B9 /* ValidEmailValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ValidEmailValueTransformer.m; path = Classes/ValidEmailValueTransformer.m; sourceTree = "<group>"; };
+		B98812820F44BFE7002AF0D9 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = /Users/julian/.ssh/dsa_pub.pem; sourceTree = "<absolute>"; };
+		B99944CE074A988E00CEBD40 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		B99B8DEE109FB54100B02E04 /* DriveTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DriveTableView.h; path = Classes/DriveTableView.h; sourceTree = "<group>"; };
+		B99B8DEF109FB54100B02E04 /* DriveTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DriveTableView.m; path = Classes/DriveTableView.m; sourceTree = "<group>"; };
+		B9CAE98A070CBF740049E37C /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "Read Me.rtf"; path = "Resources/Read Me.rtf"; sourceTree = "<group>"; };
+		B9CE33C211FE37D800CDB38E /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Growl Registration Ticket.growlRegDict"; path = "Resources/Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
+		B9CE33C611FE38DF00CDB38E /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = Frameworks/Growl.framework; sourceTree = "<group>"; };
+		B9DCDCEE1245634C0048498D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
+		B9DCDD4A124570CB0048498D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		B9E2D1EA11FCA68E00DA3EBB /* StartFromDiskImageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartFromDiskImageHandler.h; sourceTree = "<group>"; };
+		B9E2D1EB11FCA68E00DA3EBB /* StartFromDiskImageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartFromDiskImageHandler.m; sourceTree = "<group>"; };
+		B9E2D1FF11FCA94900DA3EBB /* ApplicationMovedHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationMovedHandler.h; sourceTree = "<group>"; };
+		B9E2D20011FCA94900DA3EBB /* ApplicationMovedHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationMovedHandler.m; sourceTree = "<group>"; };
+		B9E2D29F11FCB6ED00DA3EBB /* MailCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MailCore.framework; path = Frameworks/MailCore.framework; sourceTree = "<group>"; };
+		B9E5D290109F5EE200FDA028 /* smartctl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = smartctl; path = Resources/smartctl; sourceTree = "<group>"; };
+		B9ECDBA81488369B00343919 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = Resources/ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9ECDBC0148836A400343919 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBC1148836B500343919 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBC2148836B500343919 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = Resources/ru.lproj/Configuration.xib; sourceTree = "<group>"; };
+		B9ECDBC3148836B500343919 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBC4148836BE00343919 /* sv */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = sv; path = Resources/sv.lproj/Configuration.xib; sourceTree = "<group>"; };
+		B9ECDBC5148836BE00343919 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = Resources/sv.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBC6148836BE00343919 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = Resources/sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBC7148836BE00343919 /* sv */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = sv; path = Resources/sv.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9ECDBC8148836BE00343919 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = Resources/sv.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBC9148836C800343919 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = Resources/pl.lproj/Configuration.xib; sourceTree = "<group>"; };
+		B9ECDBCA148836C800343919 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = Resources/pl.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBCB148836C800343919 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = Resources/pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBCC148836C800343919 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = Resources/pl.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9ECDBCD148836C800343919 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = Resources/pl.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBCE148836CF00343919 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBCF148836CF00343919 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = Resources/ja.lproj/Configuration.xib; sourceTree = "<group>"; };
+		B9ECDBD0148836CF00343919 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBD1148836CF00343919 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBD2148836CF00343919 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = Resources/ja.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9ECDBD3148836D700343919 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Resources/it.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBD4148836D700343919 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = Resources/it.lproj/Configuration.xib; sourceTree = "<group>"; };
+		B9ECDBD5148836D700343919 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Resources/it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBD6148836D700343919 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Resources/it.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBD7148836D700343919 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = Resources/it.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9ECDBD8148836E000343919 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBD9148836E000343919 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = Resources/fr.lproj/Configuration.xib; sourceTree = "<group>"; };
+		B9ECDBDA148836E000343919 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBDB148836E000343919 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBDC148836E000343919 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = Resources/fr.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9ECDBDD148836E900343919 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBDE148836E900343919 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = Resources/es.lproj/Configuration.xib; sourceTree = "<group>"; };
+		B9ECDBDF148836E900343919 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBE0148836E900343919 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBE1148836E900343919 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = Resources/es.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9ECDBE2148836F200343919 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBE3148836F200343919 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = Resources/de.lproj/Configuration.xib; sourceTree = "<group>"; };
+		B9ECDBE4148836F200343919 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBE5148836F200343919 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBE6148836F200343919 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = Resources/de.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9ECDBE7148836FC00343919 /* ca */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ca; path = Resources/ca.lproj/Configuration.xib; sourceTree = "<group>"; };
+		B9ECDBE8148836FC00343919 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = Resources/ca.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBE9148836FC00343919 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = Resources/ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBEA148836FC00343919 /* ca */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ca; path = Resources/ca.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9ECDBEB148836FC00343919 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = Resources/ca.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9F08DCB121338FD00F84B96 /* JMApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMApp.h; sourceTree = "<group>"; };
+		B9F08DCC121338FD00F84B96 /* JMApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMApp.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				B932B8C7063DC6D500FA79A9 /* IOKit.framework in Frameworks */,
+				B99944CF074A988E00CEBD40 /* Carbon.framework in Frameworks */,
+				660AE0F20BB746E60081056B /* Sparkle.framework in Frameworks */,
+				B911788D103DF3F400AD98FC /* ScriptingBridge.framework in Frameworks */,
+				B9E2D2A011FCB6ED00DA3EBB /* MailCore.framework in Frameworks */,
+				B9CE33C711FE38DF00CDB38E /* Growl.framework in Frameworks */,
+				B9DCDCEF1245634C0048498D /* SystemConfiguration.framework in Frameworks */,
+				B9DCDD4B124570CB0048498D /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B91B4884070B31D900F19FCF /* Drive.h */,
+				B91B4885070B31D900F19FCF /* Drive.m */,
+				B91B4886070B31D900F19FCF /* DriveList.h */,
+				B91B4887070B31D900F19FCF /* DriveList.m */,
+				B91B488A070B31D900F19FCF /* SMARTReporter.h */,
+				B91B488B070B31D900F19FCF /* SMARTReporter.m */,
+				B99B8DEE109FB54100B02E04 /* DriveTableView.h */,
+				B99B8DEF109FB54100B02E04 /* DriveTableView.m */,
+				B97ADCE9121468A600B0C6B9 /* ValidEmailValueTransformer.h */,
+				B97ADCEA121468A600B0C6B9 /* ValidEmailValueTransformer.m */,
+				B9080D94128F0237003B82F9 /* DocklessApplication.h */,
+				B9080D95128F0237003B82F9 /* DocklessApplication.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9DCDD4A124570CB0048498D /* Security.framework */,
+				B9DCDCEE1245634C0048498D /* SystemConfiguration.framework */,
+				B9CE33C611FE38DF00CDB38E /* Growl.framework */,
+				B9E2D29F11FCB6ED00DA3EBB /* MailCore.framework */,
+				B911788C103DF3F400AD98FC /* ScriptingBridge.framework */,
+				660AE0F10BB746E60081056B /* Sparkle.framework */,
+				B932B8C6063DC6D500FA79A9 /* IOKit.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B99944CE074A988E00CEBD40 /* Carbon.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* SMARTReporter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* SMARTReporter */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				667229AC0CC550870008B9CC /* Shared Code */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = SMARTReporter;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B91B4896070B31E000F19FCF /* main.m */,
+				B91B4897070B31E000F19FCF /* SMARTReporter_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B911ACE714C98EE000B0A092 /* Credits.rtfd */,
+				B9CE33C211FE37D800CDB38E /* Growl Registration Ticket.growlRegDict */,
+				B9E5D290109F5EE200FDA028 /* smartctl */,
+				B98812820F44BFE7002AF0D9 /* dsa_pub.pem */,
+				B91B489E070B31EA00F19FCF /* SMARTReporter.icns */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				B9CAE98A070CBF740049E37C /* Read Me.rtf */,
+				66D31AA60B8891C400972793 /* FAQ.rtf */,
+				66D31AA50B8891C300972793 /* History.rtf */,
+				B90E7181148825A000FBC1D2 /* Configuration.strings */,
+				B90E7183148825A000FBC1D2 /* MainMenu.strings */,
+				B90E71781488258600FBC1D2 /* Configuration.xib */,
+				B90E717A1488258600FBC1D2 /* Localizable.strings */,
+				B90E717C1488258600FBC1D2 /* MainMenu.xib */,
+				669C31200B2E58BA00345A4C /* Icons */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		667229AC0CC550870008B9CC /* Shared Code */ = {
+			isa = PBXGroup;
+			children = (
+				B911787F103DF3D200AD98FC /* Mail.app */,
+				B9E2D1EA11FCA68E00DA3EBB /* StartFromDiskImageHandler.h */,
+				B9E2D1EB11FCA68E00DA3EBB /* StartFromDiskImageHandler.m */,
+				B9E2D1FF11FCA94900DA3EBB /* ApplicationMovedHandler.h */,
+				B9E2D20011FCA94900DA3EBB /* ApplicationMovedHandler.m */,
+				667229AF0CC550870008B9CC /* HostInformation.h */,
+				667229B00CC550870008B9CC /* HostInformation.m */,
+				667229B10CC550870008B9CC /* LoginItemManager.h */,
+				667229B20CC550870008B9CC /* LoginItemManager.m */,
+				667229B30CC550870008B9CC /* JMEmailSender.h */,
+				667229B40CC550870008B9CC /* JMEmailSender.m */,
+				B9F08DCB121338FD00F84B96 /* JMApp.h */,
+				B9F08DCC121338FD00F84B96 /* JMApp.m */,
+			);
+			path = "Shared Code";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D1107270486CEB800E47090 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B91B488C070B31D900F19FCF /* Drive.h in Headers */,
+				B91B488E070B31D900F19FCF /* DriveList.h in Headers */,
+				B91B4892070B31D900F19FCF /* SMARTReporter.h in Headers */,
+				B91B4899070B31E000F19FCF /* SMARTReporter_Prefix.pch in Headers */,
+				667229B70CC550870008B9CC /* HostInformation.h in Headers */,
+				667229B90CC550870008B9CC /* LoginItemManager.h in Headers */,
+				667229BB0CC550870008B9CC /* JMEmailSender.h in Headers */,
+				B99B8DF0109FB54100B02E04 /* DriveTableView.h in Headers */,
+				B9E2D1EC11FCA68E00DA3EBB /* StartFromDiskImageHandler.h in Headers */,
+				B9E2D20111FCA94900DA3EBB /* ApplicationMovedHandler.h in Headers */,
+				B9F08DCD121338FD00F84B96 /* JMApp.h in Headers */,
+				B97ADCEB121468A600B0C6B9 /* ValidEmailValueTransformer.h in Headers */,
+				B9080D96128F0237003B82F9 /* DocklessApplication.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* SMARTReporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9EDA9F00856097300F1874E /* Build configuration list for PBXNativeTarget "SMARTReporter" */;
+			buildPhases = (
+				8D1107270486CEB800E47090 /* Headers */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				B9AAA6C40953A97C00045CE9 /* CopyFiles */,
+				B932BB54063DC90300FA79A9 /* ShellScript */,
+			);
+			buildRules = (
+				B911787E103DF3BB00AD98FC /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = SMARTReporter;
+			productInstallPath = "$(HOME)/Applications";
+			productName = SMARTReporter;
+			productReference = 8D1107320486CEB800E47090 /* SMARTReporter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = B9EDA9F40856097300F1874E /* Build configuration list for PBXProject "SMARTReporter" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				ca,
+				Spanish,
+				Italian,
+				Russian,
+				Itallian,
+				pl,
+				sv,
+				en,
+				ja,
+				de,
+				es,
+				fr,
+				it,
+				ru,
+				zh_CN,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* SMARTReporter */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* SMARTReporter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B91B489F070B31EA00F19FCF /* SMARTReporter.icns in Resources */,
+				669C31360B2E58BA00345A4C /* Icons in Resources */,
+				662849F60BA60F61008D88DF /* Read Me.rtf in Resources */,
+				662849F70BA60F62008D88DF /* FAQ.rtf in Resources */,
+				662849F80BA60F65008D88DF /* History.rtf in Resources */,
+				B98812830F44BFE7002AF0D9 /* dsa_pub.pem in Resources */,
+				B9117880103DF3D200AD98FC /* Mail.app in Resources */,
+				B9E5D291109F5EE200FDA028 /* smartctl in Resources */,
+				B9CE33C311FE37D800CDB38E /* Growl Registration Ticket.growlRegDict in Resources */,
+				B90E717E1488258600FBC1D2 /* Configuration.xib in Resources */,
+				B90E717F1488258600FBC1D2 /* Localizable.strings in Resources */,
+				B90E71801488258600FBC1D2 /* MainMenu.xib in Resources */,
+				B90E7185148825A000FBC1D2 /* Configuration.strings in Resources */,
+				B90E7186148825A000FBC1D2 /* MainMenu.strings in Resources */,
+				B911ACE814C98EE000B0A092 /* Credits.rtfd in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B932BB54063DC90300FA79A9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "#####part 1: dmg for binary\n\nVERSNUM=_`grep -E CFBundleVersion -A 1 Resources/Info.plist | grep -o \"string>.*<\" | tr -d \"string>\" | tr -d \"<\"`\nVERSNUM_SOURCE=_source$VERSNUM\nNAME=`echo \"$PRODUCT_NAME\"| tr '[A-Z]' '[a-z]'`\n\n#setup directories & copy stuff over\ncd \"$TARGET_BUILD_DIR\"\ncodesign -f -s \"iPhone Distribution\" -vv $PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\nmkdir \"$PRODUCT_NAME\"\ncp -R \"$SRCROOT/$PRODUCT_NAME\" \"$PRODUCT_NAME/\"\ncp -R \"$PRODUCT_NAME.app\" \"$PRODUCT_NAME/$PRODUCT_NAME/\"\n#make symlinks for readme etc\ncd \"$PRODUCT_NAME/$PRODUCT_NAME/\"\nln -s \"$PRODUCT_NAME.app/Contents/Resources/Read Me.rtf\" \"Read Me.rtf\"\nln -s \"$PRODUCT_NAME.app/Contents/Resources/History.rtf\" \"History.rtf\"\nln -s \"$PRODUCT_NAME.app/Contents/Resources/FAQ.rtf\" \"FAQ.rtf\"\n#clean stuff\nrm -r $PRODUCT_NAME.app/Contents/Frameworks/*.framework/Versions/A/Headers/*\nrm $PRODUCT_NAME.app/Contents/Frameworks/*.framework/Headers\ncd ../..\nfind \"$PRODUCT_NAME/\" -type f -name \\.DS_Store -exec rm -f {} ';'\nchmod -R 755 \"$PRODUCT_NAME\"\n#compress stuff & cleanup\nhdiutil create -srcfolder \"$PRODUCT_NAME\" \"$NAME$VERSNUM.dmg\"\nhdiutil internet-enable -yes \"$NAME$VERSNUM.dmg\"\nrm -r \"$PRODUCT_NAME\"\nruby /usr/local/bin/sign_update.rb \"$PRODUCT_NAME$VERSNUM.dmg\" ~/.ssh/dsa_priv.pem > \"$TARGET_BUILD_DIR/codesign_$PRODUCT_NAME.txt\"\n\n#####part 2: zip for source\n\n#setup directories & copy stuff over\nmkdir \"$PRODUCT_NAME\"\ncp -R \"$SRCROOT/\" \"$PRODUCT_NAME/\"\nrm -r \"$PRODUCT_NAME/Shared Code\"\ncp -RL \"$SRCROOT/Shared Code\" \"$PRODUCT_NAME\"\n#clean stuff\nrm -r $PRODUCT_NAME/_*\nfind \"$PRODUCT_NAME/\" -type f -name \\.DS_Store -exec rm -f {} ';'\nfind -d \"$PRODUCT_NAME/\" -type d -name *~\\.nib -exec rm -rf {} ';'\nfind -d \"$PRODUCT_NAME/\" -type d -name .svn -exec rm -rf {} ';'\nfind -d \"$PRODUCT_NAME/\" -type d -name .git -exec rm -rf {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.mode1 -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.pbxuser -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.perspective -exec rm -f {} ';'\n#compress stuff & cleanup\nditto -ck \"$PRODUCT_NAME\" \"$NAME$VERSNUM_SOURCE.zip\"\nrm -r \"$PRODUCT_NAME\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B91B488D070B31D900F19FCF /* Drive.m in Sources */,
+				B91B488F070B31D900F19FCF /* DriveList.m in Sources */,
+				B91B4893070B31D900F19FCF /* SMARTReporter.m in Sources */,
+				B91B4898070B31E000F19FCF /* main.m in Sources */,
+				667229B80CC550870008B9CC /* HostInformation.m in Sources */,
+				667229BA0CC550870008B9CC /* LoginItemManager.m in Sources */,
+				667229BC0CC550870008B9CC /* JMEmailSender.m in Sources */,
+				B99B8DF1109FB54100B02E04 /* DriveTableView.m in Sources */,
+				B9E2D1ED11FCA68E00DA3EBB /* StartFromDiskImageHandler.m in Sources */,
+				B9E2D20211FCA94900DA3EBB /* ApplicationMovedHandler.m in Sources */,
+				B9F08DCE121338FD00F84B96 /* JMApp.m in Sources */,
+				B97ADCEC121468A600B0C6B9 /* ValidEmailValueTransformer.m in Sources */,
+				B9080D97128F0237003B82F9 /* DocklessApplication.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B90E71781488258600FBC1D2 /* Configuration.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B90E71791488258600FBC1D2 /* en */,
+				B9ECDBC2148836B500343919 /* ru */,
+				B9ECDBC4148836BE00343919 /* sv */,
+				B9ECDBC9148836C800343919 /* pl */,
+				B9ECDBCF148836CF00343919 /* ja */,
+				B9ECDBD4148836D700343919 /* it */,
+				B9ECDBD9148836E000343919 /* fr */,
+				B9ECDBDE148836E900343919 /* es */,
+				B9ECDBE3148836F200343919 /* de */,
+				B9ECDBE7148836FC00343919 /* ca */,
+				B92287091499359500613A05 /* zh_CN */,
+			);
+			name = Configuration.xib;
+			sourceTree = "<group>";
+		};
+		B90E717A1488258600FBC1D2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B90E717B1488258600FBC1D2 /* en */,
+				B9ECDBC3148836B500343919 /* ru */,
+				B9ECDBC6148836BE00343919 /* sv */,
+				B9ECDBCB148836C800343919 /* pl */,
+				B9ECDBD0148836CF00343919 /* ja */,
+				B9ECDBD5148836D700343919 /* it */,
+				B9ECDBDA148836E000343919 /* fr */,
+				B9ECDBDF148836E900343919 /* es */,
+				B9ECDBE4148836F200343919 /* de */,
+				B9ECDBE9148836FC00343919 /* ca */,
+				B92287221499359C00613A05 /* zh_CN */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B90E717C1488258600FBC1D2 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B90E717D1488258600FBC1D2 /* en */,
+				B9ECDBA81488369B00343919 /* ru */,
+				B9ECDBC7148836BE00343919 /* sv */,
+				B9ECDBCC148836C800343919 /* pl */,
+				B9ECDBD2148836CF00343919 /* ja */,
+				B9ECDBD7148836D700343919 /* it */,
+				B9ECDBDC148836E000343919 /* fr */,
+				B9ECDBE1148836E900343919 /* es */,
+				B9ECDBE6148836F200343919 /* de */,
+				B9ECDBEA148836FC00343919 /* ca */,
+				B92287231499359C00613A05 /* zh_CN */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		B90E7181148825A000FBC1D2 /* Configuration.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B90E7182148825A000FBC1D2 /* en */,
+				B9ECDBC1148836B500343919 /* ru */,
+				B9ECDBC5148836BE00343919 /* sv */,
+				B9ECDBCA148836C800343919 /* pl */,
+				B9ECDBCE148836CF00343919 /* ja */,
+				B9ECDBD3148836D700343919 /* it */,
+				B9ECDBD8148836E000343919 /* fr */,
+				B9ECDBDD148836E900343919 /* es */,
+				B9ECDBE2148836F200343919 /* de */,
+				B9ECDBE8148836FC00343919 /* ca */,
+				B92287211499359C00613A05 /* zh_CN */,
+			);
+			name = Configuration.strings;
+			sourceTree = "<group>";
+		};
+		B90E7183148825A000FBC1D2 /* MainMenu.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B90E7184148825A000FBC1D2 /* en */,
+				B9ECDBC0148836A400343919 /* ru */,
+				B9ECDBC8148836BE00343919 /* sv */,
+				B9ECDBCD148836C800343919 /* pl */,
+				B9ECDBD1148836CF00343919 /* ja */,
+				B9ECDBD6148836D700343919 /* it */,
+				B9ECDBDB148836E000343919 /* fr */,
+				B9ECDBE0148836E900343919 /* es */,
+				B9ECDBE5148836F200343919 /* de */,
+				B9ECDBEB148836FC00343919 /* ca */,
+				B92287241499359C00613A05 /* zh_CN */,
+			);
+			name = MainMenu.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B9AAA7090953AB6700045CE9 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = "Release-Deployment";
+		};
+		B9AAA70A0953AB6700045CE9 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Other Sources/SMARTReporter_Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = Frameworks/MailCore.framework/Versions/A/Headers;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PREBINDING = NO;
+				PRODUCT_NAME = SMARTReporter;
+				SDKROOT = macosx10.8;
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = debugging;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = "Release-Deployment";
+		};
+		B9EDA9F10856097300F1874E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		B9EDA9F20856097300F1874E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		B9EDA9F50856097300F1874E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Other Sources/SMARTReporter_Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = Frameworks/MailCore.framework/Versions/A/Headers;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				PRODUCT_NAME = SMARTReporter;
+				SDKROOT = macosx10.8;
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_STYLE = debugging;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wfloat-equal",
+					"-Wundef",
+					"-Wendif-labels",
+					"-Wshadow",
+					"-Wpointer-arith",
+					"-Wcast-align",
+					"-Wwrite-strings",
+					"-Wsign-compare",
+					"-Wmissing-field-initializers",
+					"-Wmissing-noreturn",
+					"-Wmissing-format-attribute",
+					"-Wmultichar",
+					"-Wredundant-decls",
+					"-Winline",
+					"-Wlong-long",
+					"-Wvariadic-macros",
+					"-Wdisabled-optimization",
+					"-Wno-unused-parameter",
+					"-Wstrict-selector-match",
+					"-Wshorten-64-to-32",
+					"-Winvalid-pch",
+				);
+			};
+			name = Debug;
+		};
+		B9EDA9F60856097300F1874E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Other Sources/SMARTReporter_Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = Frameworks/MailCore.framework/Versions/A/Headers;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PREBINDING = NO;
+				PRODUCT_NAME = SMARTReporter;
+				SDKROOT = macosx10.8;
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_STYLE = debugging;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wfloat-equal",
+					"-Wundef",
+					"-Wendif-labels",
+					"-Wshadow",
+					"-Wpointer-arith",
+					"-Wcast-align",
+					"-Wwrite-strings",
+					"-Wsign-compare",
+					"-Wmissing-field-initializers",
+					"-Wmissing-noreturn",
+					"-Wmissing-format-attribute",
+					"-Wmultichar",
+					"-Wredundant-decls",
+					"-Winline",
+					"-Wlong-long",
+					"-Wvariadic-macros",
+					"-Wdisabled-optimization",
+					"-Wno-unused-parameter",
+					"-Wstrict-selector-match",
+					"-Wshorten-64-to-32",
+					"-Winvalid-pch",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9EDA9F00856097300F1874E /* Build configuration list for PBXNativeTarget "SMARTReporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9EDA9F10856097300F1874E /* Debug */,
+				B9EDA9F20856097300F1874E /* Release */,
+				B9AAA7090953AB6700045CE9 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B9EDA9F40856097300F1874E /* Build configuration list for PBXProject "SMARTReporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9EDA9F50856097300F1874E /* Debug */,
+				B9EDA9F60856097300F1874E /* Release */,
+				B9AAA70A0953AB6700045CE9 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

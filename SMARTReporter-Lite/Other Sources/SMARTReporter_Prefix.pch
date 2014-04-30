@@ -1,0 +1,130 @@
+//
+// Prefix header for all source files of the 'SMARTReporter' target in the 'SMARTReporter' project
+//
+
+// imports & includes
+#import <Cocoa/Cocoa.h>
+#import <Carbon/Carbon.h>
+#import <CoreServices/CoreServices.h>
+#import <CoreFoundation/CoreFoundation.h>
+
+#include <asl.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/sysctl.h>
+#include <sys/socket.h>
+#include <ifaddrs.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <net/if.h>
+#include <errno.h>
+
+#include <IOKit/IOKitLib.h>
+#include <IOKit/storage/ata/IOATAStorageDefines.h>
+#include <IOKit/storage/ata/ATASMARTLib.h>
+#include <IOKit/storage/IOBlockStorageDevice.h>
+#include <IOKit/storage/IOStorageDeviceCharacteristics.h>
+#include <IOKit/network/IOEthernetInterface.h>
+#include <IOKit/network/IONetworkInterface.h>
+#include <IOKit/network/IOEthernetController.h>
+#include <IOKit/ps/IOPSKeys.h>
+#include <IOKit/ps/IOPowerSources.h>
+#include <SystemConfiguration/SystemConfiguration.h>
+
+
+
+
+// defines
+#define kNoDataImageString @"unknown.tiff"
+#define kFailingImageString @"failing.tiff"
+#define kVerifiedImageString @"verified.tiff"
+
+
+typedef enum
+{
+	kSmartNoData = 0,
+	kSmartFailing,
+	kSmartVerified,
+	kSmartJustRedisplay
+} smartResult;
+
+typedef enum
+{
+	kSuccess = 0,
+	kScriptingBridgeFailure,
+	kMailCoreFailure,
+	kToNilFailure,
+	kFromNilFailure
+} smtpResult;
+
+#define DRIVE_DATA_FILE [[@"~/Library/Preferences/ByHost/org.corecode.SMARTReporterDriveData." stringByExpandingTildeInPath] stringByAppendingString:[[[HostInformation macAddress] componentsSeparatedByString:@":"] componentsJoinedByString:@""]]
+
+extern aslclient client;
+
+#define asl_NSLog(level, format, ...) asl_log(client, NULL, level, "%s", [[NSString stringWithFormat:format, ##__VA_ARGS__] UTF8String])
+
+#ifdef DEBUG
+	#warning DEBUG_OUTOUT_ENABLED
+	#define asl_NSLog_debug(format, ...) asl_log(client, NULL, ASL_LEVEL_DEBUG, "%s", [[NSString stringWithFormat:format, ##__VA_ARGS__] UTF8String])
+#else
+	//#warning DEBUG_OUTOUT_ENABLED
+	//#define asl_NSLog_debug(format, ...) asl_log(client, NULL, ASL_LEVEL_DEBUG, "%s", [[NSString stringWithFormat:format, ##__VA_ARGS__] UTF8String])
+	#define asl_NSLog_debug(format, ...) 
+#endif
+
+
+#define kCheckRAIDKey					@"do_raidcheck"
+#define kRAIDStatusKey					@"raid_status_check"
+#define kRAIDNotGrowlKey				@"raid_growl"
+#define kRAIDNotPopupKey				@"raid_popup"
+#define kRAIDNotEmailKey				@"raid_email"
+
+#define kFirstStartKeychainKey			@"firstStartWithKeychainsupport"
+#define kDontcheckwhenonbatteryKey		@"dontcheckwhenonbattery"
+#define kUse_logfilelimitKey			@"use_logfilelimit"
+#define kUse_authenticationKey			@"use_authentication"
+#define kUse_encryptionKey              @"use_encryption"
+#define kLogfilelimit_kbKey				@"logfilelimit_kb"
+#define kPopupKey						@"popup"
+#define kExecuteKey						@"execute"
+#define kGrowlKey						@"growl"
+#define kEmailKey						@"email"
+#define kEmail_settingsKey				@"email_settings"
+#define kSmtp_portKey					@"smtp_port"
+#define kExecutenameKey					@"executename"
+#define kLookKey						@"look"
+#define kIconsetKey						@"iconset"
+#define kUse_rediconKey					@"use_redicon"
+#define kLog_filenameKey				@"log_filename"
+#define kMail_bodyKey					@"mail_body"
+#define kTest_mail_headerKey			@"test_mail_header"
+#define kError_mail_headerKey			@"error_mail_header"
+#define kUpdatecheckMenuindexKey		@"updatecheckMenuindex"
+#define kIOErrorCheckKey				@"do_ioerrorcheck"
+#define kIOErrorCheckLastCheckFilesizeKey @"IOErrorCheckLastCheckFilesize"
+
+@interface NSProcessInfo (SRSuddenTermination)
+- (void)enableSuddenTermination;
+- (void)disableSuddenTermination;
+@end
+
+extern NSUserDefaults *userDefaults;
+
+
+#ifndef NSAppKitVersionNumber10_6
+	#define NSAppKitVersionNumber10_6 1038
+#endif
+#ifndef NSAppKitVersionNumber10_7
+	#define NSAppKitVersionNumber10_7 1138
+#endif
+#ifndef NSAppKitVersionNumber10_8
+	#define NSAppKitVersionNumber10_8 1187
+#endif
+
+
+#define OS_IS_PRE_SNOW      (NSAppKitVersionNumber < NSAppKitVersionNumber10_6)
+#define OS_IS_LION			(lround(floor(NSAppKitVersionNumber)) == (int)NSAppKitVersionNumber10_7) 
+#define OS_IS_POST_LION		(NSAppKitVersionNumber >= (int)NSAppKitVersionNumber10_8) 
+
+
+#define IOERRORCHECKLOGFILE ((OS_IS_PRE_SNOW || OS_IS_POST_LION) ?  @"/private/var/log/system.log" : @"/private/var/log/kernel.log")

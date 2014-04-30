@@ -1,0 +1,10 @@
+//
+// Prefix header for all source files of the 'MailboxAlert' target in the 'MailboxAlert' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+	#define DONTAPPEND 1
+	#define USE_SECURITY 1
+	#import "CoreLib.h"
+#endif

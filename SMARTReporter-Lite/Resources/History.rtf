@@ -1,0 +1,469 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;}
+\paperw12240\paperh15840\vieww9000\viewh8400\viewkind0
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\tx10560\tx11520\tx12480\tx13440\tx14400\tx15360\tx16320\tx17280\tx18240\tx19200\tx20160\tx21120\tx22080\tx23040\tx24000\tx24960\tx25920\tx26880\tx27840\tx28800\tx29760\tx30720\tx31680\tx32640\tx33600\tx34560\tx35520\tx36480\tx37440\tx38400\tx39360\tx40320\tx41280\tx42240\tx43200\tx44160\tx45120\tx46080\tx47040\tx48000\tx48960\tx49920\tx50880\tx51840\tx52800\tx53760\tx54720\tx55680\tx56640\tx57600\tx58560\tx59520\tx60480\tx61440\tx62400\tx63360\tx64320\tx65280\tx66240\tx67200\tx68160\tx69120\tx70080\tx71040\tx72000\tx72960\tx73920\tx74880\tx75840\tx76800\tx77760\tx78720\tx79680\tx80640\tx81600\tx82560\tx83520\tx84480\tx85440\tx86400\tx87360\tx88320\tx89280\tx90240\tx91200\tx92160\tx93120\tx94080\tx95040\tx96000
+{\field{\*\fldinst{HYPERLINK "http://www.corecode.at/smartreporter/index.html"}}{\fldrslt 
+\f0\b\fs24 \cf0 \CocoaLigature0 SMARTReporter}}
+\f0\b\fs24 \CocoaLigature0  History:\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\tx10560\tx11520\tx12480\tx13440\tx14400\tx15360\tx16320\tx17280\tx18240\tx19200\tx20160\tx21120\tx22080\tx23040\tx24000\tx24960\tx25920\tx26880\tx27840\tx28800\tx29760\tx30720\tx31680\tx32640\tx33600\tx34560\tx35520\tx36480\tx37440\tx38400\tx39360\tx40320\tx41280\tx42240\tx43200\tx44160\tx45120\tx46080\tx47040\tx48000\tx48960\tx49920\tx50880\tx51840\tx52800\tx53760\tx54720\tx55680\tx56640\tx57600\tx58560\tx59520\tx60480\tx61440\tx62400\tx63360\tx64320\tx65280\tx66240\tx67200\tx68160\tx69120\tx70080\tx71040\tx72000\tx72960\tx73920\tx74880\tx75840\tx76800\tx77760\tx78720\tx79680\tx80640\tx81600\tx82560\tx83520\tx84480\tx85440\tx86400\tx87360\tx88320\tx89280\tx90240\tx91200\tx92160\tx93120\tx94080\tx95040\tx96000
+
+\f1 \cf0 \
+2.7.4 
+\b0 (25 Nov 2013):\
+\'95 IMPORTANT: this is the last version of SMARTReporter 2.x., {\field{\*\fldinst{HYPERLINK "http://www.corecode.at/smartreporter/index.html"}}{\fldrslt visit the website}} to learn how to upgrade to v3.0\
+\'95 IMPORTANT: The minimum system requirements have been raised to Mac OS X 10.7\
+\'95 Fixed the I/O error check to ignore false positives\
+\'95 Added new icon-set (thanks to "Brynjar Saunes Bye")\
+
+\b \
+2.7.3 
+\b0 (23 Jul 2012):\
+\'95 Fixed the I/O error check to work on Mac OS X "Mountain Lion" 10.8\
+
+\b \
+2.7.2 
+\b0 (25 Mar 2012):\
+\'95 Added 2 new icon-sets (thanks to Pietro Faraone)\
+\'95 Added Simplified Chinese localization (thanks to Chuan Liang)\
+\'95 Updated Swedish localization (thanks to P\'e4r Boberg)\
+\'95 Updated Italian localization (thanks to Pietro Faraone)\
+\'95 Fixed a memory leak\
+\'95 Stability improvements\
+\'95 Made some changes in preparation of the discontinuation of SMARTReporter 2.x\
+
+\b \
+2.7.1 
+\b0 (07 Dec 2011):\
+\'95 Added compatibility with Growl version 1.3\
+\'95 Added compatibility with Xserve / SAS hardware\
+\'95 Added 5 new icon-sets (thanks to Pietro Faraone)\
+\'95 Added placeholder replacement for notification e-mail header\
+\'95 Updated Swedish localization (thanks to P\'e4r Boberg)\
+\'95 Updated Japanese localization (thanks to Jumpei Suzuki)\
+\
+
+\b 2.7.0 
+\b0 (30 Aug 2011):\
+\'95 Added display of a "tooltip" with the current status when resting the cursor on the menu-icon\
+\'95 Added option to check attached Software-RAIDs for being degraded or offline\
+\'95 Fix another warning message in the logfile (about inability to read from the system-logfile)\
+\'95 Updated Japanese localization (thanks to Jumpei Suzuki)\
+\'95 Some smaller changes and fixes\
+\
+
+\b 2.6.2 
+\b0 (03 May 2011):\
+\'95 Another fix for error messages about not being able to open the log file \
+\'95 Fixed possible crash while sending e-mails\
+\'95 Added Swedish localization (thanks to P\'e4r Boberg)\
+\
+
+\b 2.6.1 
+\b0 (30 Apr 2011):\
+\'95 Fixes for the new I/O error check system:\
+	\'95 Fixed possible crash\
+	\'95 Fixed error messages about not being able to open the log file \
+\'95 Updated French localization (thanks to Amalrik Dumas)\
+\
+
+\b 2.6.0 
+\b0 (13 Apr 2011):\
+\'95 Completely rewritten the I/O error check option to work great on all systems\
+	\'95 Re-enabled the I/O error check option on Mac OS X 10.5.x (Leopard)\
+	\'95\'a0Make sure this option is enabled since previous versions might have disabled it\
+\'95 Completely rewritten logging , unimportant messages aren't written to the system log file\
+	\'95 Attention, the log-file format has changed\
+	\'95 S.M.A.R.T. failures will be "broadcast" to all connected terminal users\
+\'95 Updated the functionality to check S.M.A.R.T. attributes and perform S.M.A.R.T. self-tests\
+	\'95 Updated {\field{\*\fldinst{HYPERLINK "http://smartmontools.sourceforge.net/"}}{\fldrslt smartmontools}} (r3314) to support newer drives especially on 32bit & PPC\
+	\'95 Added option to perform a "long S.M.A.R.T. self-test"\
+	\'95 Added option to view results of previous self-tests without starting a new self-test\
+	\'95 Various usability improvements to these functions\
+\'95 Add more details including the serial number to the "disk-failure-notification e-mail" \
+\'95 Fixed problem where S.M.A.R.T drive failure notifications could be triggered too often\
+\'95 Updated French localization (thanks to Ronald A. Leroux)\
+\'95 Improved integration with "VoiceOver"\
+\'95 Option to {\field{\*\fldinst{HYPERLINK "http://flattr.com/thing/166423/SMARTReporter"}}{\fldrslt donate via "flattr"}} as well as various sharing/bookmarking links on the website\
+\'95 Some smaller problems fixed\
+\
+
+\b 2.5.8 
+\b0 (20 Mar 2011):\
+\'95 IMPORTANT BUGFIX: Fixed a problem where SMARTReporter could cause Mail.app to forget your Mail server password\
+\'95 Updated the FAQ\
+\'95 Some smaller problems fixed\
+\
+
+\b 2.5.7 
+\b0 (14 Mar 2011):\
+\'95 Disabled I/O error checking on Leopard as system bugs may result in crashes\
+\'95 Inform the user that the I/O error check option needs admin priviledges and don't spam the logfile if this isn't the case\
+\'95 Enabled keyboard shortcuts in the application\
+\'95\'a0Updated (the Intel version of) the integrated {\field{\*\fldinst{HYPERLINK "http://smartmontools.sourceforge.net/"}}{\fldrslt smartmontools}} to version 5.40\
+\'95 Fix progress of S.M.A.R.T. self-tests to count forward\
+\'95 Added hidden option to disable the welcome-screen for enterprise-deployments\
+\'95 Updated Japanese localization (thanks to Jumpei Suzuki)\
+
+\b \
+2.5.6 
+\b0 (19 Oct 2010):\
+\'95 Fixed a problem where automatic updates would result in a broken installation, necessitating a re-download\
+\'95 SMARTReporter's code is now (really really) signed with a digital certificate\
+
+\b \
+2.5.5 
+\b0 (15 Oct 2010):\
+\'95 Fixed a problem where e-mail delivery would not work (introduced in v2.5.1)\
+\'95\'a0Fixed a problem where unchecked drives would still be S.M.A.R.T.-checked at app-start\
+\'95 SMARTReporter's code is now (really) signed with a digital certificate\
+\
+
+\b 2.5.4 
+\b0 (04 Oct 2010):\
+\'95 Fixed two problems related to I/O error checking introduced in 2.5.3:\
+	\'95  Sometimes I/O errors that actually happened some weeks ago were reported as new\
+	\'95  I/O errors occurring on the first 9 days of a month were not detected\
+\'95 Fixed automatic update-check which would not work automatically in some cases\
+\'95 Fixed donation option not to send users to a german version of the paypal website\
+
+\b \
+2.5.3 
+\b0 (20 Sep 2010):\
+\'95 IMPORTANT BUGFIX: finally fixed the I/O error checking option to be high performance and crash-free - if you previously had to disable the option or it turned itself off, you can turn it on again in the preferences\
+\'95 Fixes for e-mail sending using custom settings (only PLAIN authentication was supported between 2.5.0 and 2.5.2)\
+\'95 Keychain integration for the e-mail password when using e-mail sending with custom settings\
+\'95 Fix a problem where sending e-mails could take up to a few minutes\
+\'95 Improved "Growl"-integration\
+\'95 Fixed German localisation (thanks to Oliver Gumprecht)\
+\'95 Extended the localization capabilities\
+
+\b \
+2.5.2 
+\b0 (13 Sep 2010):\
+\'95 IMPORTANT BUGFIX: This update fixes several possible problems (CPU consumption & crashes) related to the I/O error checking option introduced in v2.5\
+	\'95 The CPU consumption for doing an I/O error check should be much lower\
+	\'95 The I/O error check is re-enabled on PPC machines as it actually works fine on most PPC macs and the possible crash is actually related to Mac OS X 10.5 and not PPC\
+	\'95 SMARTReporter should automatically disable I/O error checking if it detects that either of these problems is still occurring on your Mac\
+\'95 Enabled support for S.M.A.R.T. attribute checking on PPC machines\
+
+\b \
+2.5.1 
+\b0 (5 Sep 2010):\
+\'95 Fixed the crash on PPC machines (by temporarily disabling the new "I/O Error" checking feature there)\
+\'95 Fixed a problem where the e-mail settings configuration would not be enabled if multiple addresses to deliver to were entered\
+\'95 Fixed a problem where trying to send custom e-mails without setting an address to send from would result in a crash\
+\
+
+\b 2.5.0 
+\b0 (2 Sep 2010):\
+\'95 IMPORTANT: If you are  using e-mail notification of disk-failures with custom settings, please check that it is still working\
+\'95 Added (optional) automatic check for dangerous "I/O Errors" that are a sign of failing drives\
+\'95 Added support for notifying you of drive failures through {\field{\*\fldinst{HYPERLINK "http://growl.info/"}}{\fldrslt Growl}}, which can notify you via SMS or pushing to your iPhone ({\field{\*\fldinst{HYPERLINK "http://prowl.weks.net/"}}{\fldrslt Prowl}})\
+\'95 Added support for sending e-mails with encryption (SSL/TLS) and custom settings (necessary for GMail)\
+\'95 Usability improvements for seting up e-mail drive failure notifications\
+\'95 Option to sign up for beta-testing to help development\
+\'95 Handle case when SMARTReporter is launched from its disk image\
+\'95 Handle case when SMARTReporter is moved while active\
+\'95 SMARTReporter defaults to starting in 64-bit mode now\
+\'95 Added Polish localization (thanks to Jaros\uc0\u322 aw Teterycz)\
+\'95 Updated Italian localization (thanks to Paolo Zanellati)\
+\'95 Updated French localization (thanks to Ronald A. Leroux)\
+\'95 Updated Japanese localization (thanks to Jumpei Suzuki)\
+\'95 Fixed German localization\
+
+\b \
+2.4.6 
+\b0 (7 Jan 2010):\
+\'95 Fixed German localization (thanks to Stephy Rul)\
+\'95 Updated French localization (thanks to Ronald A. Leroux)\
+\'95 Updated Spanish and Catalan localizations (thanks to Jos\'e9 Gil)\
+\'95 Updated Japanese localization (thanks to Jumpei Suzuki)\
+\
+
+\b 2.4.5 
+\b0 (2 Jan 2010):\
+\'95 SMARTReporter can now display all S.M.A.R.T. attributes by right-clicking a drive in the preferences window\
+ (thanks to the {\field{\*\fldinst{HYPERLINK "http://smartmontools.sourceforge.net/"}}{\fldrslt smartmontools}} project for the attribute calculation)\
+ \'95 SMARTReporter can now perform a short "S.M.A.R.T. self-test" by right-clicking a drive in the preferences window\
+ (thanks to the {\field{\*\fldinst{HYPERLINK "http://smartmontools.sourceforge.net/"}}{\fldrslt smartmontools}} project for the self-test procedure)\
+\'95 Fix annoying messages being printed to SMARTReporter's log-file during its first run\
+\'95 SMARTReporter automatically restarts itself when turning off visibility in the Menubar\
+\
+
+\b 2.4.2 
+\b0 (16 Oct 2009):\
+\'95 Fix a problem introduced in 2.4.1, annoying messages would be printed into the logfile dozens of times\
+
+\b \
+2.4.1 
+\b0 (16 Oct 2009):\
+\'95 Fix a issue with the new e-mail sending through Mail.app would not work with multiple recipients\
+\'95 Fixed French localization (thanks to Amalrik Dumas)\
+\'95\'a0Some smaller fixes and additions\
+\
+
+\b 2.4.0 
+\b0 (17 Sep 2009):\
+\'95 IMPORTANT: The minimum system requirements have been raised to Mac OS X 10.5\
+\'95 IMPORTANT: Do not directly upgrade from a release older than 2.3.5, or your preferences won't be taken over\
+\'95 IMPORTANT: If you are (also) using e-mail notification of disk-failures through Mail.app, please check that it is still working\
+\'95 Added 64-bit support (on Intel), but by defaults starts in 32-bit mode. To change this use the "Get Info" panel in the Finder on SMARTReporter\
+\'95 Rewrote the e-mail sending through Mail.app\
+\'95 Fixed the CrashReport sending facility to only send "real" crashes\
+\'95 Fixed links to the Apple feedback page in the documentation\
+\'95 Fixed a bug where adding or removing a harddisk would cause SMARTReporter to believe it has been freshly installed\
+\'95 Fixed the update-check, which would still check for updates even if disabled (sorry!)\
+\'95 Make Finder keyboard-shortcuts work directly after dismissing the preferences window\
+\'95 Expanded the FAQ\
+\
+
+\b 2.3.9 
+\b0 (28 Dec 2008):\
+\'95 IMPORTANT: Users of Mac OS X 10.3 and 10.4 have to update manually to this release since the update check has been disabled on this platform already\
+\'95 Fixed a problem with disks attached to Sonnettech ATA-cards would not be recognized with the Sonnettech driver 2.1.4+\
+\'95 Fixed a problem where SMARTReporter would loose its preferences and add itself to the Login-Items multiple times\
+\'95 Fixed the "Start on login" feature on Mac OS X 10.5 "Leopard" through a new Leopard-specific implementation (again)\
+\'95 Updated Japanese localization (thanks to Jumpei Suzuki)\
+\
+
+\b 2.3.8 
+\b0 (20 Aug 2008):\
+\'95 Disable the update-check on Mac OS X 10.3 and 10.4 as those won't be supported in future releases\
+\'95 To automatically update to future releases you must first update to this version\
+\'95 Updated "Sparkle" (the Framework used for Version Checking and Automatic Updates), to fix possible crashes\
+\'95 Fixed possible crash while sending CrashReports\
+\'95 Fixed possible problem sending e-mails through broken SMTP-servers\
+
+\b \
+2.3.7 
+\b0 (20 Feb 2008):\
+\'95 IMPORTANT BUGFIX: REALLY fixed the crashes on 10.3.x this time\
+\'95 IMPORTANT BUGFIX: REALLY fixed the crashes with the Spanish, Russian and Catalan localizations\
+\'95 Updated French localization (thanks to Ronald A. Leroux)\
+
+\b \
+2.3.6 
+\b0 (19 Feb 2008):\
+\'95 IMPORTANT BUGFIX: Fixed crashes on 10.3.x caused by the Update-Framework\
+\'95 IMPORTANT BUGFIX: Fixed crashes occurring when the Sytem-Language matches Spanish, Russian or Catalan\
+\'95 Fixed Italian localization\
+
+\b \
+2.3.5.1 
+\b0 (6 Feb 2008):\
+\'95 IMPORTANT BUGFIX: Disabled the new Leopard-specific "Start on login" as it seems to crash\
+
+\b \
+2.3.5 
+\b0 (6 Feb 2008):\
+\'95 Disabled the "Harddrive Configuration seems to have changed" dialogue (as it could be annoying and the defaults for new drives are sane anyway)\
+\'95 Fixed the reporting of crashes (of SMARTReporter) to work under Mac OS X 10.5 "Leopard"\
+\'95 Fixed the "Start on login" feature on Mac OS X 10.5 "Leopard" through a new Leopard-specific implementation\
+\'95 Renamed preferences-files to avoid possible conflicts (the old one is automatically reused)\
+\'95 Renamed & moved drive-data-file to the "ByHost" folder for net-booting support (the old one is automatically reused)\
+\'95 Updated "Sparkle" (the Framework used for Version Checking and Automatic Updates), to fix possible crashes during updates\
+\'95 Added a new menu-icon-set named "Colored Dots" (thanks to Sayyad Glassford)\
+\'95 Expanded the FAQ\
+
+\b \
+2.3.2 
+\b0 (2 Oct 2007):\
+\'95 Updated all hyperlinks in the application and the documentation because of the move to a new hosting for website & e-mail\
+
+\b \
+2.3.1 
+\b0 (7 Sep 2007):\
+\'95 Fixed file permissions which could cause SMARTReporter to fail/crash for unprivileged users\
+
+\b \
+2.3.0 
+\b0 (5 Sep 2007):\
+\'95 SMARTReporter now prints more information about the checked disk to the logfile, so you can distinguish HDDs of the same model\
+\'95 Added Italian localization (thanks to Paolo Zanellati)\
+\'95 Added Russian localization (thanks to Artem Timofeev)\
+\'95 Added more comprehensive localization capabilities\
+\'95 Fixed a crash that could occur while sending an e-mail\
+\'95 Fixed some more crashes (presumably)\
+\'95 Fixed the e-mail sending to default to UTF-8 instead of US-ASCII\
+\'95 Fixed the e-mail sending which would not work under some conditions\
+\'95 Fixed the update-check, which would still check for updates even if disabled (sorry!)\
+\'95 Fixed the reporting of crashes (of SMARTReporter) to work under Mac OS X 10.3.x, include additional information and ignore some crashes which are not related to SMARTReporter\
+\'95 Fixed the "Donate" option which was broken in 2.2.5\
+\'95 Fixed small memory leaks\
+\'95 Fixed problems with hot-plugged disks (eSATA) (added disks would not be checked if not present during SMARTReporter's launch)\
+\'95 Improved handling of hot-plugged disks (eSATA) (don't show dialogue about newly added disks if you open the preferences window manually)\
+\'95 Updated Japanese localization (thanks to Jumpei Suzuki)\
+\'95 Updated the FAQ and ReadMe (including the description and system requirements)\
+
+\b \
+2.2.5 
+\b0 (14 Mar 2007):\
+\pard\pardeftab720
+\cf0 \'95 Added ability to check for updates automatically\
+\pard\tx960\tx1920\tx2880\tx3840\tx4800\tx5760\tx6720\tx7680\tx8640\tx9600\tx10560\tx11520\tx12480\tx13440\tx14400\tx15360\tx16320\tx17280\tx18240\tx19200\tx20160\tx21120\tx22080\tx23040\tx24000\tx24960\tx25920\tx26880\tx27840\tx28800\tx29760\tx30720\tx31680\tx32640\tx33600\tx34560\tx35520\tx36480\tx37440\tx38400\tx39360\tx40320\tx41280\tx42240\tx43200\tx44160\tx45120\tx46080\tx47040\tx48000\tx48960\tx49920\tx50880\tx51840\tx52800\tx53760\tx54720\tx55680\tx56640\tx57600\tx58560\tx59520\tx60480\tx61440\tx62400\tx63360\tx64320\tx65280\tx66240\tx67200\tx68160\tx69120\tx70080\tx71040\tx72000\tx72960\tx73920\tx74880\tx75840\tx76800\tx77760\tx78720\tx79680\tx80640\tx81600\tx82560\tx83520\tx84480\tx85440\tx86400\tx87360\tx88320\tx89280\tx90240\tx91200\tx92160\tx93120\tx94080\tx95040\tx96000
+\cf0 \'95 Added option to use red menu-icon when a disk is failing\
+\'95 Added new menu items: "Send Feedback\'85", "About SMARTReporter", "Open ReadMe\'85", "Open FAQ\'85", "Open History\'85"\
+\'95 Added three new menu-icon-sets (thanks to Alex)\
+\'95 Added Japanese localization (thanks to Jumpei Suzuki)\
+\'95 Added check if SMARTReporter crashed with option to send me the details\
+\'95 Fixed the "Donate" option to point to an english page instead of a german one\
+\'95 Fixed a possible problem with strings not appearing in dialogs, leading to dialogs without text\
+\'95 Fixes for e-mail sending\
+\'95 Fixed a small memory leak\
+\'95 Updated French localization (thanks to Fabio)\
+\'95 Updated Spanish and Catalan localizations (thanks to Jos\'e9 Gil)\
+
+\b \
+2.2.1 
+\b0 (16 Feb 2007):\
+\'95 Fixed an problem sending e-mails introduced in 2.2\
+\'95 Fixed the new option "refrain from checking the disks when on battery power" which produced an infinite dialogue-loop\
+\'95 Added Computer Name to the "disk-failure-notification e-mail"\
+\'95 Added spinning progress indicator while sending test mails\
+\'95 Fixed layout problems in french localization\
+\'95 Fixed a possible crash when re-using the preferences generated on another Mac.\
+
+\b \
+2.2.0 
+\b0 (31 Jan 2007):\
+\'95 Added option to refrain from checking the disks when on battery power\
+\'95 Added option to limit the maximal size of the logfile\
+\'95 Added option to configure the path and name of the logfile\
+\'95 Added a new menu-icon-set named "Grey & Red"\
+\'95 Fixed detection of disks in Intel-Macs if an additional disk is connected to the optical disk bay\
+\'95 Fixed French localization again\
+\'95 Improved User Interface by splitting it into three tabs\
+\'95 Improved folder icon for the SMARTReporter folder (thanks to Merv)\
+\'95 Improved visual display of the disk-checking-interval to make it more clear that it is editable\
+\'95 Improved detection of the IP-address\
+\'95 Modified default text of the "test-e-mail" so it can't be confused with a real "disk-failure-notification e-mail"\
+\'95 Expanded the FAQ\
+
+\b \
+2.1.5 
+\b0 (Mar 2006):\
+\'95 Make SMARTReporter finally work on the Intel-Macs\
+\'95 Fixed a crash on Laptops that had a Flash-Card inserted\
+\'95 Fixed a small memory leak\
+\'95 Fixed a bug in the Disk-Image-packaging\
+\'95 Fixed French localization (thanks to Ronald A. Leroux)\
+\'95 Added a FAQ (Frequently Asked Questions - with answers ;-)\
+\'95 Added some string-localizations\
+
+\b \
+2.1.0 
+\b0 (Dec 2005):
+\b \
+
+\b0 \'95 Compiled as Universal Binary\
+\'95 Added ability to customize the "disk-failure-notification e-mail" message\
+\'95 Added ability to deliver the "disk-failure-notification e-mail" to multiple addresses\
+\'95 Added link to the homepage to the menu\
+\'95 Added a new menu-icon-set named "NewGrey" (thanks to Dolfter Hofst\'e9)\
+\'95 Added an improved icon for SMARTReporter (thanks to Matthew Barry)\
+\'95 Added a folder icon for the SMARTReporter folder (thanks to Matthew Barry)\
+\'95 Fixed crash with sending e-mails to very "capable" servers like CommuniGate Pro using authentication\
+\'95 Fixed small memory leak\
+
+\b \
+2.0.1 
+\b0 (Jul 2005):
+\b \
+
+\b0 \'95 Work around a bug in 10.3.x where the SMARTReporter-menu would not respond\
+\'95 Auto-update login-item if application is moved\
+
+\b \
+2.0 
+\b0 (Apr 2005):\
+\'95 IMPORTANT BUGFIXES: the "disk-failure-notification e-mail" always looked like a "test-email" when sending using Mail.app and otherwise the machines name and address were cut off\
+\'95 Include the MAC-address in the "disk-failure-notification e-mail"\
+\'95 Fixed email-notification not to display a "timeout" error when trying to send with the wrong password with some broken servers (like smtp.mac.com)\
+\'95 Added Spanish and Catalan localizations (thanks to Jos\'e9 Gil)\
+\'95 Spelling fixes in the application and documentation\
+\'95 Now brings up the preferences window when in invisible-mode and SMARTReporter is double-clicked\
+\'95 Auto-add to login-items on first start\
+
+\b \
+2.0b5 
+\b0 (Dec 2004):\
+\'95 Fixed an e-mail related crash-bug\
+\'95 Added German localization (thanks to Hans Hermann Meyer)\
+\'95 Don't select first row in the disk list (for better readability)\
+\'95 Bugfix: the disk name shouldn't be editable\
+\'95 Now it's possible to get the hidden menu-item even back when SMARTReporter is already running, by launching it again and holding down alt (option)\
+\'95 The icon now looks better on dark background\
+\'95 Fixed some memory-leaks\
+
+\b \
+2.0b4 
+\b0 (Nov 2004):\
+\'95 IMPORTANT BUGFIX: if you've used 2.0b1 or 2.0b2 and have set "display as colored dot" and then upgraded to 2.0b3 you won't see the menu of SMARTReporter! this has been fixed\
+\'95 Added hostname and ip-address to the "disk-failure-notification e-mail"\
+\'95 Added French localization (thanks to Jean-Luc Evrard)
+\f0\b \
+
+\f1 \
+2.0b3 
+\b0 (Nov 2004):\
+\'95 Display the finder-visible disk (partition) name(s) in the disk list, for better usability, and to be able to distinguish two disks of the same model\
+\'95 Add option to refrain from displaying SMARTReporter in the menu-bar. You will have to hold down alt (option) during a future application launch to make it visible again.\
+
+\b \
+2.0b2 
+\b0 (Nov 2004):\
+\'95 Completely reworked the "notification by e-mail" feature\
+\'95 Changed the 'Display Log\'85' feature to be handled by 'Console.app'\
+\'95 The Log file is now persistent across sessions and is stored in '~/Library/Logs/SMARTReporter.log'\
+\'95 Opening multiple instances of SMARTReporter on the same machine at the same time is now disabled\
+\'95 Renamed Quit menu item & Preferences window for better usability\
+
+\b \
+2.0b1 
+\b0 (Oct 2004):\
+\'95 Redesigned, intuitive user-interface\
+\'95 Added options what to do on a disk-failure:\
+	\'95 Send an e-mail\
+	\'95 Launch an application/applescript/file\
+	\'95 Display an alert\
+\'95 Added options to change the appearance in the menu-bar:\
+	\'95 Ability to choose "icon sets" for the menu-icon\
+	\'95 Added a menu-icon-set which is completely grey for better integration with other menu-icons (thanks to Jim Younkin)\
+	\'95 Ability to use small colored dots instead of beautiful icons (ugly, but saves menu-bar-space)\
+\'95 Improved the documentation and added section about what to do when a disk-failure is predicted\
+\'95 Improved the textual output of the application for better usability\
+\'95 Live-update the log window\
+\'95 Fixed a bug related to detecting a self-installed launch-item
+\f0\b \
+
+\f1 \
+1.0 
+\b0 (Jul 2004):\
+\'95 Should be compatible with all disks attached to ATA-cards (if Apple supports S.M.A.R.T. for the ATA-card)\
+\'95 Ask user on first usage if SMARTReporter should launch after boot.\
+\'95 Made the "Current Status" values in the Disk-Configuration window more readable
+\f0\b \
+
+\f1 \
+1.0b3 
+\b0 (Jun 2004):\
+\'95 Made "start at login" menu item work (toggle if SMARTReporter should start at login)\
+\'95 The windows and dialogs of SMARTReporter will now always be displayed in front, so you can't miss them\
+\'95 Colorized the "Current Status" values in the Disk-Configuration window\
+\'95 Now tests for Mac OS X 10.3
+\f0\b \
+
+\f1 \
+1.0b2 
+\b0 (May 2004):
+\f0\b \
+
+\f1\b0 \'95 Fixed documentation\
+\'95 Added log window\
+\'95 Removed unnecessary debug output (to Console.app)\
+\
+
+\b 1.0b1 
+\b0 (Apr 2004):\
+\'95 Initial public release}

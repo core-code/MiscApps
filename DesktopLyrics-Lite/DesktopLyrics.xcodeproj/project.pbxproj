@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66284A240BA61620008D88DF /* Read Me.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 66C3A1DC0B6FF10000B3A9C3 /* Read Me.rtf */; };
+		664586C30B860BB200FD1F89 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 664586C20B860BB200FD1F89 /* Sparkle.framework */; };
+		664586E20B860BF600FD1F89 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 664586C20B860BB200FD1F89 /* Sparkle.framework */; };
+		6648DA3F0ACC0BD2003AC28D /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6648DA3E0ACC0BD2003AC28D /* Carbon.framework */; };
+		667229F90CC550D00008B9CC /* CrashReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 667229F50CC550D00008B9CC /* CrashReporter.m */; };
+		667229FB0CC550D00008B9CC /* LoginItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 667229F70CC550D00008B9CC /* LoginItemManager.m */; };
+		66C3A1AD0B6FEFE700B3A9C3 /* DesktopLyrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C3A1A80B6FEFE700B3A9C3 /* DesktopLyrics.m */; };
+		66C3A1AE0B6FEFE700B3A9C3 /* DesktopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C3A1AA0B6FEFE700B3A9C3 /* DesktopWindow.m */; };
+		66C3A1AF0B6FEFE700B3A9C3 /* DesktopWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C3A1AC0B6FEFE700B3A9C3 /* DesktopWindowController.m */; };
+		66C3A1B20B6FEFF600B3A9C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C3A1B10B6FEFF600B3A9C3 /* main.m */; };
+		66C3A1B50B6FF00800B3A9C3 /* DesktopLyrics.icns in Resources */ = {isa = PBXBuildFile; fileRef = 66C3A1B30B6FF00800B3A9C3 /* DesktopLyrics.icns */; };
+		66E1E0D30CB2E1A2004B79FD /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 66E1E0D10CB2E1A2004B79FD /* FAQ.rtf */; };
+		66E1E0D40CB2E1A2004B79FD /* History.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 66E1E0D20CB2E1A2004B79FD /* History.rtf */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B90FF52B11FA510000E1CC99 /* SGHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = B90FF52311FA510000E1CC99 /* SGHotKey.m */; };
+		B90FF52C11FA510000E1CC99 /* SGHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B90FF52511FA510000E1CC99 /* SGHotKeyCenter.m */; };
+		B90FF52D11FA510000E1CC99 /* SGKeyCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = B90FF52611FA510000E1CC99 /* SGKeyCodes.plist */; };
+		B90FF52E11FA510000E1CC99 /* SGKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = B90FF52811FA510000E1CC99 /* SGKeyCodeTranslator.m */; };
+		B90FF52F11FA510000E1CC99 /* SGKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = B90FF52A11FA510000E1CC99 /* SGKeyCombo.m */; };
+		B90FF56B11FA556100E1CC99 /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B91DD40A11FA4E90008922E1 /* ShortcutRecorder.framework */; };
+		B912D5941242BA09002A98BB /* HostInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B912D5931242BA09002A98BB /* HostInformation.m */; };
+		B912D6111242BA8B002A98BB /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B912D6101242BA8B002A98BB /* IOKit.framework */; };
+		B91DD40B11FA4E90008922E1 /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91DD40A11FA4E90008922E1 /* ShortcutRecorder.framework */; };
+		B95F7D5210404173001D6A1D /* iTunesController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95F7D5110404173001D6A1D /* iTunesController.m */; };
+		B970196C126E2AC6005265EA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B970196B126E2AC6005265EA /* SystemConfiguration.framework */; };
+		B9769EF310F4FCEE00120707 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9769EF010F4FCEE00120707 /* MainMenu.xib */; };
+		B98812940F44BFFD002AF0D9 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = B98812930F44BFFD002AF0D9 /* dsa_pub.pem */; };
+		B988AB38103F3D4B007A6873 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B988AB37103F3D4B007A6873 /* ScriptingBridge.framework */; };
+		B988AB6F103F3D85007A6873 /* iTunes.app in Resources */ = {isa = PBXBuildFile; fileRef = B988AB6E103F3D85007A6873 /* iTunes.app */; };
+		B9BBA70114F446D2005EF391 /* button_left.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BBA6FF14F446D2005EF391 /* button_left.png */; };
+		B9BBA70214F446D2005EF391 /* button_right.png in Resources */ = {isa = PBXBuildFile; fileRef = B9BBA70014F446D2005EF391 /* button_right.png */; };
+		B9C6066211FB1822007A895A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9C6066011FB1822007A895A /* Localizable.strings */; };
+		B9E31E2411FB1A320075EE8F /* DesktopWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E31E2211FB1A320075EE8F /* DesktopWindow.xib */; };
+		B9F08E431213421F00F84B96 /* JMApp.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F08E421213421F00F84B96 /* JMApp.m */; };
+		B9F08E541213427400F84B96 /* ApplicationMovedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F08E511213427400F84B96 /* ApplicationMovedHandler.m */; };
+		B9F08E551213427400F84B96 /* StartFromDiskImageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F08E531213427400F84B96 /* StartFromDiskImageHandler.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		B988AB6D103F3D7F007A6873 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.app";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILES_DIR)/$(INPUT_FILE_BASE).h",
+			);
+			script = "sdef \"$INPUT_FILE_PATH\" | sdp -fh -o \"$DERIVED_FILES_DIR\" --basename \"$INPUT_FILE_BASE\" --bundleid `defaults read \"$INPUT_FILE_PATH/Contents/Info\" CFBundleIdentifier`";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		664586D80B860BE400FD1F89 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B90FF56B11FA556100E1CC99 /* ShortcutRecorder.framework in CopyFiles */,
+				664586E20B860BF600FD1F89 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		664586C20B860BB200FD1F89 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
+		6648DA3E0ACC0BD2003AC28D /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		667229F40CC550D00008B9CC /* CrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashReporter.h; sourceTree = "<group>"; };
+		667229F50CC550D00008B9CC /* CrashReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrashReporter.m; sourceTree = "<group>"; };
+		667229F60CC550D00008B9CC /* LoginItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginItemManager.h; sourceTree = "<group>"; };
+		667229F70CC550D00008B9CC /* LoginItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginItemManager.m; sourceTree = "<group>"; };
+		66C3A1A70B6FEFE700B3A9C3 /* DesktopLyrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DesktopLyrics.h; sourceTree = "<group>"; };
+		66C3A1A80B6FEFE700B3A9C3 /* DesktopLyrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DesktopLyrics.m; sourceTree = "<group>"; };
+		66C3A1A90B6FEFE700B3A9C3 /* DesktopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DesktopWindow.h; sourceTree = "<group>"; };
+		66C3A1AA0B6FEFE700B3A9C3 /* DesktopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DesktopWindow.m; sourceTree = "<group>"; };
+		66C3A1AB0B6FEFE700B3A9C3 /* DesktopWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DesktopWindowController.h; sourceTree = "<group>"; };
+		66C3A1AC0B6FEFE700B3A9C3 /* DesktopWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DesktopWindowController.m; sourceTree = "<group>"; };
+		66C3A1B00B6FEFF600B3A9C3 /* DesktopLyrics_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DesktopLyrics_Prefix.pch; path = "Other Sources/DesktopLyrics_Prefix.pch"; sourceTree = "<group>"; };
+		66C3A1B10B6FEFF600B3A9C3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Other Sources/main.m"; sourceTree = "<group>"; };
+		66C3A1B30B6FF00800B3A9C3 /* DesktopLyrics.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = DesktopLyrics.icns; path = Resources/DesktopLyrics.icns; sourceTree = "<group>"; };
+		66C3A1B40B6FF00800B3A9C3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		66C3A1DC0B6FF10000B3A9C3 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "Read Me.rtf"; path = "Resources/Read Me.rtf"; sourceTree = "<group>"; };
+		66E1E0D10CB2E1A2004B79FD /* FAQ.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = FAQ.rtf; path = Resources/FAQ.rtf; sourceTree = "<group>"; };
+		66E1E0D20CB2E1A2004B79FD /* History.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = History.rtf; path = Resources/History.rtf; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* DesktopLyrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesktopLyrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B90FF52211FA510000E1CC99 /* SGHotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHotKey.h; sourceTree = "<group>"; };
+		B90FF52311FA510000E1CC99 /* SGHotKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHotKey.m; sourceTree = "<group>"; };
+		B90FF52411FA510000E1CC99 /* SGHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHotKeyCenter.h; sourceTree = "<group>"; };
+		B90FF52511FA510000E1CC99 /* SGHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHotKeyCenter.m; sourceTree = "<group>"; };
+		B90FF52611FA510000E1CC99 /* SGKeyCodes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SGKeyCodes.plist; sourceTree = "<group>"; };
+		B90FF52711FA510000E1CC99 /* SGKeyCodeTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGKeyCodeTranslator.h; sourceTree = "<group>"; };
+		B90FF52811FA510000E1CC99 /* SGKeyCodeTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGKeyCodeTranslator.m; sourceTree = "<group>"; };
+		B90FF52911FA510000E1CC99 /* SGKeyCombo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGKeyCombo.h; sourceTree = "<group>"; };
+		B90FF52A11FA510000E1CC99 /* SGKeyCombo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGKeyCombo.m; sourceTree = "<group>"; };
+		B912D5921242BA09002A98BB /* HostInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostInformation.h; sourceTree = "<group>"; };
+		B912D5931242BA09002A98BB /* HostInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostInformation.m; sourceTree = "<group>"; };
+		B912D6101242BA8B002A98BB /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		B91DD40A11FA4E90008922E1 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = Frameworks/ShortcutRecorder.framework; sourceTree = "<group>"; };
+		B9281E6711820998004895BA /* French */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = French; path = Resources/French.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9281E681182099A004895BA /* German */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = German; path = Resources/German.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B95F7D5010404173001D6A1D /* iTunesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = iTunesController.h; sourceTree = "<group>"; };
+		B95F7D5110404173001D6A1D /* iTunesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = iTunesController.m; sourceTree = "<group>"; };
+		B970196B126E2AC6005265EA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
+		B9769EF110F4FCEE00120707 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B98812930F44BFFD002AF0D9 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = /Users/julian/.ssh/dsa_pub.pem; sourceTree = "<absolute>"; };
+		B988AB37103F3D4B007A6873 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = /System/Library/Frameworks/ScriptingBridge.framework; sourceTree = "<absolute>"; };
+		B988AB6E103F3D85007A6873 /* iTunes.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = iTunes.app; path = /Applications/iTunes.app; sourceTree = "<absolute>"; };
+		B9BBA6FF14F446D2005EF391 /* button_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_left.png; path = Resources/button_left.png; sourceTree = "<group>"; };
+		B9BBA70014F446D2005EF391 /* button_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_right.png; path = Resources/button_right.png; sourceTree = "<group>"; };
+		B9C6066111FB1822007A895A /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = Resources/English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9E31E2311FB1A320075EE8F /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/DesktopWindow.xib; sourceTree = "<group>"; };
+		B9F08E411213421F00F84B96 /* JMApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMApp.h; sourceTree = "<group>"; };
+		B9F08E421213421F00F84B96 /* JMApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMApp.m; sourceTree = "<group>"; };
+		B9F08E501213427400F84B96 /* ApplicationMovedHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationMovedHandler.h; sourceTree = "<group>"; };
+		B9F08E511213427400F84B96 /* ApplicationMovedHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationMovedHandler.m; sourceTree = "<group>"; };
+		B9F08E521213427400F84B96 /* StartFromDiskImageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartFromDiskImageHandler.h; sourceTree = "<group>"; };
+		B9F08E531213427400F84B96 /* StartFromDiskImageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartFromDiskImageHandler.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				6648DA3F0ACC0BD2003AC28D /* Carbon.framework in Frameworks */,
+				664586C30B860BB200FD1F89 /* Sparkle.framework in Frameworks */,
+				B988AB38103F3D4B007A6873 /* ScriptingBridge.framework in Frameworks */,
+				B91DD40B11FA4E90008922E1 /* ShortcutRecorder.framework in Frameworks */,
+				B912D6111242BA8B002A98BB /* IOKit.framework in Frameworks */,
+				B970196C126E2AC6005265EA /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B970196B126E2AC6005265EA /* SystemConfiguration.framework */,
+				B912D6101242BA8B002A98BB /* IOKit.framework */,
+				B91DD40A11FA4E90008922E1 /* ShortcutRecorder.framework */,
+				B988AB37103F3D4B007A6873 /* ScriptingBridge.framework */,
+				664586C20B860BB200FD1F89 /* Sparkle.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				6648DA3E0ACC0BD2003AC28D /* Carbon.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* DesktopLyrics.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* DesktopLyrics */ = {
+			isa = PBXGroup;
+			children = (
+				66C3A1A60B6FEFE700B3A9C3 /* Classes */,
+				667229F30CC550D00008B9CC /* Shared Code */,
+				B90FF52011FA510000E1CC99 /* Foreign Code */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = DesktopLyrics;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				66C3A1B10B6FEFF600B3A9C3 /* main.m */,
+				66C3A1B00B6FEFF600B3A9C3 /* DesktopLyrics_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B98812930F44BFFD002AF0D9 /* dsa_pub.pem */,
+				B9BBA6FF14F446D2005EF391 /* button_left.png */,
+				B9BBA70014F446D2005EF391 /* button_right.png */,
+				B9C6066011FB1822007A895A /* Localizable.strings */,
+				B9E31E2211FB1A320075EE8F /* DesktopWindow.xib */,
+				B9769EF010F4FCEE00120707 /* MainMenu.xib */,
+				66C3A1B30B6FF00800B3A9C3 /* DesktopLyrics.icns */,
+				66C3A1DC0B6FF10000B3A9C3 /* Read Me.rtf */,
+				66E1E0D10CB2E1A2004B79FD /* FAQ.rtf */,
+				66E1E0D20CB2E1A2004B79FD /* History.rtf */,
+				66C3A1B40B6FF00800B3A9C3 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		667229F30CC550D00008B9CC /* Shared Code */ = {
+			isa = PBXGroup;
+			children = (
+				B912D5921242BA09002A98BB /* HostInformation.h */,
+				B912D5931242BA09002A98BB /* HostInformation.m */,
+				B9F08E501213427400F84B96 /* ApplicationMovedHandler.h */,
+				B9F08E511213427400F84B96 /* ApplicationMovedHandler.m */,
+				B9F08E521213427400F84B96 /* StartFromDiskImageHandler.h */,
+				B9F08E531213427400F84B96 /* StartFromDiskImageHandler.m */,
+				B9F08E411213421F00F84B96 /* JMApp.h */,
+				B9F08E421213421F00F84B96 /* JMApp.m */,
+				667229F40CC550D00008B9CC /* CrashReporter.h */,
+				667229F50CC550D00008B9CC /* CrashReporter.m */,
+				667229F60CC550D00008B9CC /* LoginItemManager.h */,
+				667229F70CC550D00008B9CC /* LoginItemManager.m */,
+			);
+			path = "Shared Code";
+			sourceTree = "<group>";
+		};
+		66C3A1A60B6FEFE700B3A9C3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B988AB6E103F3D85007A6873 /* iTunes.app */,
+				66C3A1A70B6FEFE700B3A9C3 /* DesktopLyrics.h */,
+				66C3A1A80B6FEFE700B3A9C3 /* DesktopLyrics.m */,
+				66C3A1A90B6FEFE700B3A9C3 /* DesktopWindow.h */,
+				66C3A1AA0B6FEFE700B3A9C3 /* DesktopWindow.m */,
+				66C3A1AB0B6FEFE700B3A9C3 /* DesktopWindowController.h */,
+				66C3A1AC0B6FEFE700B3A9C3 /* DesktopWindowController.m */,
+				B95F7D5010404173001D6A1D /* iTunesController.h */,
+				B95F7D5110404173001D6A1D /* iTunesController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B90FF52011FA510000E1CC99 /* Foreign Code */ = {
+			isa = PBXGroup;
+			children = (
+				B90FF52111FA510000E1CC99 /* SGHotKeysLib */,
+			);
+			path = "Foreign Code";
+			sourceTree = "<group>";
+		};
+		B90FF52111FA510000E1CC99 /* SGHotKeysLib */ = {
+			isa = PBXGroup;
+			children = (
+				B90FF52611FA510000E1CC99 /* SGKeyCodes.plist */,
+				B90FF52211FA510000E1CC99 /* SGHotKey.h */,
+				B90FF52311FA510000E1CC99 /* SGHotKey.m */,
+				B90FF52411FA510000E1CC99 /* SGHotKeyCenter.h */,
+				B90FF52511FA510000E1CC99 /* SGHotKeyCenter.m */,
+				B90FF52711FA510000E1CC99 /* SGKeyCodeTranslator.h */,
+				B90FF52811FA510000E1CC99 /* SGKeyCodeTranslator.m */,
+				B90FF52911FA510000E1CC99 /* SGKeyCombo.h */,
+				B90FF52A11FA510000E1CC99 /* SGKeyCombo.m */,
+			);
+			path = SGHotKeysLib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* DesktopLyrics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "DesktopLyrics" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				664586D80B860BE400FD1F89 /* CopyFiles */,
+				66C3A2240B6FF26300B3A9C3 /* Run Script */,
+			);
+			buildRules = (
+				B988AB6D103F3D7F007A6873 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = DesktopLyrics;
+			productInstallPath = "$(HOME)/Applications";
+			productName = DesktopLyrics;
+			productReference = 8D1107320486CEB800E47090 /* DesktopLyrics.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DesktopLyrics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* DesktopLyrics */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* DesktopLyrics */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66C3A1B50B6FF00800B3A9C3 /* DesktopLyrics.icns in Resources */,
+				66284A240BA61620008D88DF /* Read Me.rtf in Resources */,
+				66E1E0D30CB2E1A2004B79FD /* FAQ.rtf in Resources */,
+				66E1E0D40CB2E1A2004B79FD /* History.rtf in Resources */,
+				B98812940F44BFFD002AF0D9 /* dsa_pub.pem in Resources */,
+				B988AB6F103F3D85007A6873 /* iTunes.app in Resources */,
+				B9769EF310F4FCEE00120707 /* MainMenu.xib in Resources */,
+				B90FF52D11FA510000E1CC99 /* SGKeyCodes.plist in Resources */,
+				B9C6066211FB1822007A895A /* Localizable.strings in Resources */,
+				B9E31E2411FB1A320075EE8F /* DesktopWindow.xib in Resources */,
+				B9BBA70114F446D2005EF391 /* button_left.png in Resources */,
+				B9BBA70214F446D2005EF391 /* button_right.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66C3A2240B6FF26300B3A9C3 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "#####part 1: dmg for binary\n\nVERSNUM=_`grep -E CFBundleVersion -A 1 Resources/Info.plist | grep -o \"string>.*<\" | tr -d \"string>\" | tr -d \"<\"`\nVERSNUM_SOURCE=_source$VERSNUM\nNAME=`echo \"$PRODUCT_NAME\"| tr '[A-Z]' '[a-z]'`\n\n#setup directories & copy stuff over\ncd \"$TARGET_BUILD_DIR\"\ncodesign -f -s \"iPhone Distribution\" -vv $PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\nmkdir \"$PRODUCT_NAME\"\ncp -R \"$SRCROOT/$PRODUCT_NAME\" \"$PRODUCT_NAME/\"\ncp -R \"$PRODUCT_NAME.app\" \"$PRODUCT_NAME/$PRODUCT_NAME/\"\n#make symlinks for readme etc\ncd \"$PRODUCT_NAME/$PRODUCT_NAME/\"\nln -s \"$PRODUCT_NAME.app/Contents/Resources/Read Me.rtf\" \"Read Me.rtf\"\nln -s \"$PRODUCT_NAME.app/Contents/Resources/History.rtf\" \"History.rtf\"\nln -s \"$PRODUCT_NAME.app/Contents/Resources/FAQ.rtf\" \"FAQ.rtf\"\n#clean stuff\nrm -r $PRODUCT_NAME.app/Contents/Frameworks/*.framework/Versions/A/Headers/*\nrm $PRODUCT_NAME.app/Contents/Frameworks/*.framework/Headers\ncd ../..\nfind \"$PRODUCT_NAME/\" -type f -name \\.DS_Store -exec rm -f {} ';'\nchmod -R 755 \"$PRODUCT_NAME\"\n#compress stuff & cleanup\nhdiutil create -srcfolder \"$PRODUCT_NAME\" \"$NAME$VERSNUM.dmg\"\nhdiutil internet-enable -yes \"$NAME$VERSNUM.dmg\"\nrm -r \"$PRODUCT_NAME\"\nruby /usr/local/bin/sign_update.rb \"$PRODUCT_NAME$VERSNUM.dmg\" ~/.ssh/dsa_priv.pem > \"$TARGET_BUILD_DIR/codesign_$PRODUCT_NAME.txt\"\n\n#####part 2: zip for source\n\n#setup directories & copy stuff over\nmkdir \"$PRODUCT_NAME\"\ncp -R \"$SRCROOT/\" \"$PRODUCT_NAME/\"\nrm -r \"$PRODUCT_NAME/Shared Code\"\ncp -RL \"$SRCROOT/Shared Code\" \"$PRODUCT_NAME\"\n#clean stuff\nrm -r $PRODUCT_NAME/_*\nfind \"$PRODUCT_NAME/\" -type f -name \\.DS_Store -exec rm -f {} ';'\nfind -d \"$PRODUCT_NAME/\" -type d -name *~\\.nib -exec rm -rf {} ';'\nfind -d \"$PRODUCT_NAME/\" -type d -name .svn -exec rm -rf {} ';'\nfind -d \"$PRODUCT_NAME/\" -type d -name .git -exec rm -rf {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.mode1 -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.pbxuser -exec rm -f {} ';'\nfind \"$PRODUCT_NAME/$PRODUCT_NAME.xcodeproj\" -type f -name *\\.perspective -exec rm -f {} ';'\n#compress stuff & cleanup\nditto -ck \"$PRODUCT_NAME\" \"$NAME$VERSNUM_SOURCE.zip\"\nrm -r \"$PRODUCT_NAME\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66C3A1AD0B6FEFE700B3A9C3 /* DesktopLyrics.m in Sources */,
+				66C3A1AE0B6FEFE700B3A9C3 /* DesktopWindow.m in Sources */,
+				66C3A1AF0B6FEFE700B3A9C3 /* DesktopWindowController.m in Sources */,
+				66C3A1B20B6FEFF600B3A9C3 /* main.m in Sources */,
+				667229F90CC550D00008B9CC /* CrashReporter.m in Sources */,
+				667229FB0CC550D00008B9CC /* LoginItemManager.m in Sources */,
+				B95F7D5210404173001D6A1D /* iTunesController.m in Sources */,
+				B90FF52B11FA510000E1CC99 /* SGHotKey.m in Sources */,
+				B90FF52C11FA510000E1CC99 /* SGHotKeyCenter.m in Sources */,
+				B90FF52E11FA510000E1CC99 /* SGKeyCodeTranslator.m in Sources */,
+				B90FF52F11FA510000E1CC99 /* SGKeyCombo.m in Sources */,
+				B9F08E431213421F00F84B96 /* JMApp.m in Sources */,
+				B9F08E541213427400F84B96 /* ApplicationMovedHandler.m in Sources */,
+				B9F08E551213427400F84B96 /* StartFromDiskImageHandler.m in Sources */,
+				B912D5941242BA09002A98BB /* HostInformation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B9769EF010F4FCEE00120707 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9769EF110F4FCEE00120707 /* English */,
+				B9281E6711820998004895BA /* French */,
+				B9281E681182099A004895BA /* German */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		B9C6066011FB1822007A895A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9C6066111FB1822007A895A /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B9E31E2211FB1A320075EE8F /* DesktopWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9E31E2311FB1A320075EE8F /* English */,
+			);
+			name = DesktopWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66C3A24A0B6FF46B00B3A9C3 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = macosx;
+			};
+			name = "Release-Deployment";
+		};
+		66C3A24B0B6FF46B00B3A9C3 /* Release-Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_POSTPROCESSING = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Other Sources/DesktopLyrics_Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = DesktopLyrics;
+				SDKROOT = macosx10.6;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = "Release-Deployment";
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Other Sources/DesktopLyrics_Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = DesktopLyrics;
+				SDKROOT = macosx10.6;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wfloat-equal",
+					"-Wundef",
+					"-Wendif-labels",
+					"-Wshadow",
+					"-Wpointer-arith",
+					"-Wwrite-strings",
+					"-Wsign-compare",
+					"-Wmissing-field-initializers",
+					"-Wmissing-noreturn",
+					"-Wmissing-format-attribute",
+					"-Wmultichar",
+					"-Wredundant-decls",
+					"-Winline",
+					"-Wlong-long",
+					"-Wvariadic-macros",
+					"-Wdisabled-optimization",
+					"-Wno-unused-parameter",
+					"-Wstrict-selector-match",
+				);
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					x86_64,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Other Sources/DesktopLyrics_Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = DesktopLyrics;
+				SDKROOT = macosx10.6;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wfloat-equal",
+					"-Wundef",
+					"-Wendif-labels",
+					"-Wshadow",
+					"-Wpointer-arith",
+					"-Wwrite-strings",
+					"-Wsign-compare",
+					"-Wmissing-field-initializers",
+					"-Wmissing-noreturn",
+					"-Wmissing-format-attribute",
+					"-Wmultichar",
+					"-Wredundant-decls",
+					"-Winline",
+					"-Wlong-long",
+					"-Wvariadic-macros",
+					"-Wdisabled-optimization",
+					"-Wno-unused-parameter",
+					"-Wstrict-selector-match",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "DesktopLyrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+				66C3A24A0B6FF46B00B3A9C3 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DesktopLyrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				66C3A24B0B6FF46B00B3A9C3 /* Release-Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
