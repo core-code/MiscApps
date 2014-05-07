@@ -21,6 +21,7 @@ int durationSecs;
 	@"sourceMovie".defaultObject = nil;
 	@"cutStart".defaultInt = 120;
 	@"cutDuration".defaultInt = 10;
+	@"cutType".defaultInt = 0;
 	@"fileDescription".defaultString = @"";
 }
 
@@ -62,10 +63,21 @@ int durationSecs;
 		return;
 	}
 
-	if (@"cutStart".defaultInt + @"cutDuration".defaultInt > durationSecs)
+	if (@"cutType".defaultInt == 0)
 	{
-		alert_apptitled(makeString(@"the movie only has %i seconds", durationSecs), @"OK", nil, nil);
-		return;
+		if (@"cutStart".defaultInt + @"cutDuration".defaultInt > durationSecs)
+		{
+			alert_apptitled(makeString(@"the movie only has %i seconds", durationSecs), @"OK", nil, nil);
+			return;
+		}
+	}
+	else
+	{
+		if (@"cutStart".defaultInt >= @"cutDuration".defaultInt)
+		{
+			alert_apptitled(@"the cut end needs to be after the cut start", @"OK", nil, nil);
+			return;
+		}
 	}
 
 
@@ -99,6 +111,7 @@ int durationSecs;
 			 [[progressPanel contentView] addSubview:ind];
 			 dispatch_async_back(^
 			 {
+				 NSString *duration = (@"cutType".defaultInt == 0) ? @"cutDuration".defaultString : @(@"cutDuration".defaultInt - @"cutStart".defaultInt).stringValue;
 
 				 NSString *res = @[[[NSBundle mainBundle] pathForResource:@"ffmpeg" ofType:nil],
 							   @"-i",
@@ -111,7 +124,7 @@ int durationSecs;
 							   @"-scodec", @"copy",
 							   @"-y",
 							   @"-t",
-							   @"cutDuration".defaultString,
+							   duration,
 							   panel.URL.path].runAsTask;
 				 LOG(res);
 

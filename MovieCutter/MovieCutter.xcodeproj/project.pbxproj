@@ -7,26 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B95B1CBB1919429D00A9657D /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B95B1CB11919429D00A9657D /* AppKit+CoreCode.m */; };
+		B95B1CBC1919429D00A9657D /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B95B1CB31919429D00A9657D /* AppKit+Properties.m */; };
+		B95B1CBD1919429D00A9657D /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B95B1CB51919429D00A9657D /* CoreLib.m */; };
+		B95B1CBE1919429D00A9657D /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B95B1CB71919429D00A9657D /* Foundation+CoreCode.m */; };
+		B95B1CBF1919429D00A9657D /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B95B1CBA1919429D00A9657D /* Foundation+Properties.m */; };
 		B9E60B051885EE0400FD5922 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E60B041885EE0400FD5922 /* Cocoa.framework */; };
 		B9E60B151885EE0400FD5922 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9E60B131885EE0400FD5922 /* Credits.rtf */; };
 		B9E60B181885EE0400FD5922 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B171885EE0400FD5922 /* AppDelegate.m */; };
 		B9E60B1B1885EE0400FD5922 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E60B191885EE0400FD5922 /* MainMenu.xib */; };
 		B9E60B1D1885EE0400FD5922 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E60B1C1885EE0400FD5922 /* Images.xcassets */; };
-		B9E60B7F1885EE1200FD5922 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B3F1885EE1200FD5922 /* CoreLib.m */; };
-		B9E60B901885EE1200FD5922 /* NSArray+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B661885EE1200FD5922 /* NSArray+CoreCode.m */; };
-		B9E60B911885EE1200FD5922 /* NSData+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B681885EE1200FD5922 /* NSData+CoreCode.m */; };
-		B9E60B921885EE1200FD5922 /* NSDate+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B6A1885EE1200FD5922 /* NSDate+CoreCode.m */; };
-		B9E60B931885EE1200FD5922 /* NSDictionary+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B6C1885EE1200FD5922 /* NSDictionary+CoreCode.m */; };
-		B9E60B941885EE1200FD5922 /* NSFileHandle+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B6E1885EE1200FD5922 /* NSFileHandle+CoreCode.m */; };
-		B9E60B951885EE1200FD5922 /* NSLocale+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B701885EE1200FD5922 /* NSLocale+CoreCode.m */; };
-		B9E60B961885EE1200FD5922 /* NSNumber+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B721885EE1200FD5922 /* NSNumber+CoreCode.m */; };
-		B9E60B971885EE1200FD5922 /* NSObject+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B741885EE1200FD5922 /* NSObject+CoreCode.m */; };
-		B9E60B981885EE1200FD5922 /* NSString+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B761885EE1200FD5922 /* NSString+CoreCode.m */; };
-		B9E60B991885EE1200FD5922 /* NSURL+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E60B781885EE1200FD5922 /* NSURL+CoreCode.m */; };
 		B9E60BA91885F39800FD5922 /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = B9E60BA81885F39800FD5922 /* ffmpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B95B1CB01919429D00A9657D /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
+		B95B1CB11919429D00A9657D /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
+		B95B1CB21919429D00A9657D /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
+		B95B1CB31919429D00A9657D /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
+		B95B1CB41919429D00A9657D /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
+		B95B1CB51919429D00A9657D /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
+		B95B1CB61919429D00A9657D /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
+		B95B1CB71919429D00A9657D /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
+		B95B1CB81919429D00A9657D /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
+		B95B1CB91919429D00A9657D /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
+		B95B1CBA1919429D00A9657D /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
 		B9E60B011885EE0400FD5922 /* MovieCutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieCutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E60B041885EE0400FD5922 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B9E60B071885EE0400FD5922 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -40,31 +45,6 @@
 		B9E60B1A1885EE0400FD5922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B9E60B1C1885EE0400FD5922 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B9E60B231885EE0400FD5922 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B9E60B2A1885EE0400FD5922 /* MovieCutterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MovieCutterTests-Info.plist"; sourceTree = "<group>"; };
-		B9E60B2C1885EE0400FD5922 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B9E60B2E1885EE0400FD5922 /* MovieCutterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCutterTests.m; sourceTree = "<group>"; };
-		B9E60B3E1885EE1200FD5922 /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
-		B9E60B3F1885EE1200FD5922 /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
-		B9E60B651885EE1200FD5922 /* NSArray+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CoreCode.h"; sourceTree = "<group>"; };
-		B9E60B661885EE1200FD5922 /* NSArray+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CoreCode.m"; sourceTree = "<group>"; };
-		B9E60B671885EE1200FD5922 /* NSData+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CoreCode.h"; sourceTree = "<group>"; };
-		B9E60B681885EE1200FD5922 /* NSData+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CoreCode.m"; sourceTree = "<group>"; };
-		B9E60B691885EE1200FD5922 /* NSDate+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CoreCode.h"; sourceTree = "<group>"; };
-		B9E60B6A1885EE1200FD5922 /* NSDate+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CoreCode.m"; sourceTree = "<group>"; };
-		B9E60B6B1885EE1200FD5922 /* NSDictionary+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CoreCode.h"; sourceTree = "<group>"; };
-		B9E60B6C1885EE1200FD5922 /* NSDictionary+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CoreCode.m"; sourceTree = "<group>"; };
-		B9E60B6D1885EE1200FD5922 /* NSFileHandle+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileHandle+CoreCode.h"; sourceTree = "<group>"; };
-		B9E60B6E1885EE1200FD5922 /* NSFileHandle+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileHandle+CoreCode.m"; sourceTree = "<group>"; };
-		B9E60B6F1885EE1200FD5922 /* NSLocale+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLocale+CoreCode.h"; sourceTree = "<group>"; };
-		B9E60B701885EE1200FD5922 /* NSLocale+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+CoreCode.m"; sourceTree = "<group>"; };
-		B9E60B711885EE1200FD5922 /* NSNumber+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+CoreCode.h"; sourceTree = "<group>"; };
-		B9E60B721885EE1200FD5922 /* NSNumber+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CoreCode.m"; sourceTree = "<group>"; };
-		B9E60B731885EE1200FD5922 /* NSObject+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CoreCode.h"; sourceTree = "<group>"; };
-		B9E60B741885EE1200FD5922 /* NSObject+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CoreCode.m"; sourceTree = "<group>"; };
-		B9E60B751885EE1200FD5922 /* NSString+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CoreCode.h"; sourceTree = "<group>"; };
-		B9E60B761885EE1200FD5922 /* NSString+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CoreCode.m"; sourceTree = "<group>"; };
-		B9E60B771885EE1200FD5922 /* NSURL+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CoreCode.h"; sourceTree = "<group>"; };
-		B9E60B781885EE1200FD5922 /* NSURL+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CoreCode.m"; sourceTree = "<group>"; };
 		B9E60BA81885F39800FD5922 /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ffmpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,11 +60,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B95B1CAF1919429D00A9657D /* CoreLib */ = {
+			isa = PBXGroup;
+			children = (
+				B95B1CB01919429D00A9657D /* AppKit+CoreCode.h */,
+				B95B1CB11919429D00A9657D /* AppKit+CoreCode.m */,
+				B95B1CB21919429D00A9657D /* AppKit+Properties.h */,
+				B95B1CB31919429D00A9657D /* AppKit+Properties.m */,
+				B95B1CB41919429D00A9657D /* CoreLib.h */,
+				B95B1CB51919429D00A9657D /* CoreLib.m */,
+				B95B1CB61919429D00A9657D /* Foundation+CoreCode.h */,
+				B95B1CB71919429D00A9657D /* Foundation+CoreCode.m */,
+				B95B1CB81919429D00A9657D /* Foundation+Indexing.h */,
+				B95B1CB91919429D00A9657D /* Foundation+Properties.h */,
+				B95B1CBA1919429D00A9657D /* Foundation+Properties.m */,
+			);
+			name = CoreLib;
+			path = ../../CoreLib/CoreLib;
+			sourceTree = "<group>";
+		};
 		B9E60AF81885EE0400FD5922 = {
 			isa = PBXGroup;
 			children = (
 				B9E60B0A1885EE0400FD5922 /* MovieCutter */,
-				B9E60B281885EE0400FD5922 /* MovieCutterTests */,
 				B9E60B031885EE0400FD5922 /* Frameworks */,
 				B9E60B021885EE0400FD5922 /* Products */,
 			);
@@ -121,7 +119,7 @@
 		B9E60B0A1885EE0400FD5922 /* MovieCutter */ = {
 			isa = PBXGroup;
 			children = (
-				B9E60B381885EE1200FD5922 /* CoreLib */,
+				B95B1CAF1919429D00A9657D /* CoreLib */,
 				B9E60B161885EE0400FD5922 /* AppDelegate.h */,
 				B9E60B171885EE0400FD5922 /* AppDelegate.m */,
 				B9E60BA81885F39800FD5922 /* ffmpeg */,
@@ -140,54 +138,6 @@
 				B9E60B131885EE0400FD5922 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B9E60B281885EE0400FD5922 /* MovieCutterTests */ = {
-			isa = PBXGroup;
-			children = (
-				B9E60B2E1885EE0400FD5922 /* MovieCutterTests.m */,
-				B9E60B291885EE0400FD5922 /* Supporting Files */,
-			);
-			path = MovieCutterTests;
-			sourceTree = "<group>";
-		};
-		B9E60B291885EE0400FD5922 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B9E60B2A1885EE0400FD5922 /* MovieCutterTests-Info.plist */,
-				B9E60B2B1885EE0400FD5922 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B9E60B381885EE1200FD5922 /* CoreLib */ = {
-			isa = PBXGroup;
-			children = (
-				B9E60B3E1885EE1200FD5922 /* CoreLib.h */,
-				B9E60B3F1885EE1200FD5922 /* CoreLib.m */,
-				B9E60B651885EE1200FD5922 /* NSArray+CoreCode.h */,
-				B9E60B661885EE1200FD5922 /* NSArray+CoreCode.m */,
-				B9E60B671885EE1200FD5922 /* NSData+CoreCode.h */,
-				B9E60B681885EE1200FD5922 /* NSData+CoreCode.m */,
-				B9E60B691885EE1200FD5922 /* NSDate+CoreCode.h */,
-				B9E60B6A1885EE1200FD5922 /* NSDate+CoreCode.m */,
-				B9E60B6B1885EE1200FD5922 /* NSDictionary+CoreCode.h */,
-				B9E60B6C1885EE1200FD5922 /* NSDictionary+CoreCode.m */,
-				B9E60B6D1885EE1200FD5922 /* NSFileHandle+CoreCode.h */,
-				B9E60B6E1885EE1200FD5922 /* NSFileHandle+CoreCode.m */,
-				B9E60B6F1885EE1200FD5922 /* NSLocale+CoreCode.h */,
-				B9E60B701885EE1200FD5922 /* NSLocale+CoreCode.m */,
-				B9E60B711885EE1200FD5922 /* NSNumber+CoreCode.h */,
-				B9E60B721885EE1200FD5922 /* NSNumber+CoreCode.m */,
-				B9E60B731885EE1200FD5922 /* NSObject+CoreCode.h */,
-				B9E60B741885EE1200FD5922 /* NSObject+CoreCode.m */,
-				B9E60B751885EE1200FD5922 /* NSString+CoreCode.h */,
-				B9E60B761885EE1200FD5922 /* NSString+CoreCode.m */,
-				B9E60B771885EE1200FD5922 /* NSURL+CoreCode.h */,
-				B9E60B781885EE1200FD5922 /* NSURL+CoreCode.m */,
-			);
-			name = CoreLib;
-			path = ../../../../CoreLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,18 +206,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9E60B901885EE1200FD5922 /* NSArray+CoreCode.m in Sources */,
-				B9E60B991885EE1200FD5922 /* NSURL+CoreCode.m in Sources */,
-				B9E60B941885EE1200FD5922 /* NSFileHandle+CoreCode.m in Sources */,
-				B9E60B931885EE1200FD5922 /* NSDictionary+CoreCode.m in Sources */,
-				B9E60B981885EE1200FD5922 /* NSString+CoreCode.m in Sources */,
-				B9E60B951885EE1200FD5922 /* NSLocale+CoreCode.m in Sources */,
+				B95B1CBE1919429D00A9657D /* Foundation+CoreCode.m in Sources */,
 				B9E60B181885EE0400FD5922 /* AppDelegate.m in Sources */,
-				B9E60B7F1885EE1200FD5922 /* CoreLib.m in Sources */,
-				B9E60B971885EE1200FD5922 /* NSObject+CoreCode.m in Sources */,
-				B9E60B911885EE1200FD5922 /* NSData+CoreCode.m in Sources */,
-				B9E60B921885EE1200FD5922 /* NSDate+CoreCode.m in Sources */,
-				B9E60B961885EE1200FD5922 /* NSNumber+CoreCode.m in Sources */,
+				B95B1CBD1919429D00A9657D /* CoreLib.m in Sources */,
+				B95B1CBB1919429D00A9657D /* AppKit+CoreCode.m in Sources */,
+				B95B1CBF1919429D00A9657D /* Foundation+Properties.m in Sources */,
+				B95B1CBC1919429D00A9657D /* AppKit+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,14 +232,6 @@
 				B9E60B1A1885EE0400FD5922 /* Base */,
 			);
 			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		B9E60B2B1885EE0400FD5922 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B9E60B2C1885EE0400FD5922 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
