@@ -4,6 +4,8 @@
 <dict>
 	<key>ar.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>شاشة البداية</string>
 		<key>Show Toolbar</key>
 		<string>إظهار شريط الأدوات</string>
 		<key>Customize Toolbar…</key>
@@ -231,6 +233,8 @@
 	</dict>
 	<key>ca.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Pantalla de benvinguda</string>
 		<key>Show Toolbar</key>
 		<string>Mostrar la barra d’eines</string>
 		<key>Customize Toolbar…</key>
@@ -458,6 +462,8 @@
 	</dict>
 	<key>cs.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Uvítací obrazovka</string>
 		<key>Show Toolbar</key>
 		<string>Zobrazit panel nástrojů</string>
 		<key>Customize Toolbar…</key>
@@ -707,6 +713,8 @@
 	</dict>
 	<key>da.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Velkommen</string>
 		<key>Show Toolbar</key>
 		<string>Vis værktøjslinje</string>
 		<key>Customize Toolbar…</key>
@@ -958,6 +966,8 @@
 	</dict>
 	<key>de.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Willkommensbildschirm</string>
 		<key>Show Toolbar</key>
 		<string>Symbolleiste einblenden</string>
 		<key>Customize Toolbar…</key>
@@ -1209,6 +1219,8 @@
 	</dict>
 	<key>el.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Οθόνη καλωσορίσματος</string>
 		<key>Show Toolbar</key>
 		<string>Εμφάνιση γραμμής εργαλείων</string>
 		<key>Customize Toolbar…</key>
@@ -1436,6 +1448,10 @@
 	</dict>
 	<key>es.lproj</key>
 	<dict>
+		<key>Window</key>
+		<string>Ventana</string>
+		<key>Welcome</key>
+		<string>Pantalla de bienvenida</string>
 		<key>Show Toolbar</key>
 		<string>Mostrar barra de herramientas</string>
 		<key>Customize Toolbar…</key>
@@ -1663,6 +1679,8 @@
 	</dict>
 	<key>fi.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Tervetuloa-näyttö</string>
 		<key>Show Toolbar</key>
 		<string>Näytä työkalupalkki</string>
 		<key>Customize Toolbar…</key>
@@ -1914,6 +1932,8 @@
 	</dict>
 	<key>fr.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Écran d&apos;accueil</string>
 		<key>Show Toolbar</key>
 		<string>Afficher la barre d’outils</string>
 		<key>Customize Toolbar…</key>
@@ -2163,6 +2183,8 @@
 	</dict>
 	<key>he.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>ברוכים הבאים</string>
 		<key>Show Toolbar</key>
 		<string>הצג את סרגל הכלים</string>
 		<key>Customize Toolbar…</key>
@@ -2390,6 +2412,8 @@
 	</dict>
 	<key>hr.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Dobrodošli</string>
 		<key>Show Toolbar</key>
 		<string>Prikaži alatnu traku</string>
 		<key>Customize Toolbar…</key>
@@ -2641,6 +2665,8 @@
 	</dict>
 	<key>hu.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Üdvözlő képernyő</string>
 		<key>Show Toolbar</key>
 		<string>Eszköztár megjelenítése</string>
 		<key>Customize Toolbar…</key>
@@ -2892,6 +2918,8 @@
 	</dict>
 	<key>id.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Selamat</string>
 		<key>Show Toolbar</key>
 		<string>Tampilkan Bar Alat</string>
 		<key>Customize Toolbar…</key>
@@ -3119,6 +3147,8 @@
 	</dict>
 	<key>it.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Benvenuto</string>
 		<key>Show Toolbar</key>
 		<string>Mostra la barra strumenti</string>
 		<key>Customize Toolbar…</key>
@@ -3368,6 +3398,8 @@
 	</dict>
 	<key>ja.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>初期画面</string>
 		<key>Show Toolbar</key>
 		<string>ツールバーを表示</string>
 		<key>Customize Toolbar…</key>
@@ -3595,6 +3627,8 @@
 	</dict>
 	<key>ko.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>시작 화면</string>
 		<key>Show Toolbar</key>
 		<string>도구 막대 보기</string>
 		<key>Customize Toolbar…</key>
@@ -3822,6 +3856,8 @@
 	</dict>
 	<key>ms.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Selamat Datang</string>
 		<key>Show Toolbar</key>
 		<string>Tunjukkan Bar Alat</string>
 		<key>Customize Toolbar…</key>
@@ -4049,6 +4085,8 @@
 	</dict>
 	<key>nl.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Welkom</string>
 		<key>Show Toolbar</key>
 		<string>Toon knoppenbalk</string>
 		<key>Customize Toolbar…</key>
@@ -4276,6 +4314,8 @@
 	</dict>
 	<key>no.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Velkommen</string>
 		<key>Show Toolbar</key>
 		<string>Vis verktøylinje</string>
 		<key>Customize Toolbar…</key>
@@ -4527,6 +4567,8 @@
 	</dict>
 	<key>pl.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Witamy</string>
 		<key>Show Toolbar</key>
 		<string>Pokaż pasek narzędzi</string>
 		<key>Customize Toolbar…</key>
@@ -4754,6 +4796,8 @@
 	</dict>
 	<key>pt.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Bem-vindo</string>
 		<key>Show Toolbar</key>
 		<string>Mostrar Barra de Ferramentas</string>
 		<key>Customize Toolbar…</key>
@@ -4981,6 +5025,8 @@
 	</dict>
 	<key>pt-PT.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Bem-vindo</string>
 		<key>Show Toolbar</key>
 		<string>Mostrar barra de ferramentas</string>
 		<key>Customize Toolbar…</key>
@@ -5230,6 +5276,8 @@
 	</dict>
 	<key>ro.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Ecran de întâmpinare</string>
 		<key>Show Toolbar</key>
 		<string>Afișează bara de instrumente</string>
 		<key>Customize Toolbar…</key>
@@ -5457,6 +5505,10 @@
 	</dict>
 	<key>ru.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Заставка</string>
+		<key>Window</key>
+		<string>Окно</string>
 		<key>Show Toolbar</key>
 		<string>Показать панель инструментов</string>
 		<key>Customize Toolbar…</key>
@@ -5684,6 +5736,8 @@
 	</dict>
 	<key>sk.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Uvítacia obrazovka</string>
 		<key>Show Toolbar</key>
 		<string>Zobraziť panel s nástrojmi</string>
 		<key>Customize Toolbar…</key>
@@ -5933,6 +5987,8 @@
 	</dict>
 	<key>sv.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Välkommen</string>
 		<key>Show Toolbar</key>
 		<string>Visa verktygsfältet</string>
 		<key>Customize Toolbar…</key>
@@ -6182,6 +6238,8 @@
 	</dict>
 	<key>th.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>หน้าจอต้อนรับ</string>
 		<key>Show Toolbar</key>
 		<string>แสดงแถบเครื่องมือ</string>
 		<key>Customize Toolbar…</key>
@@ -6409,6 +6467,8 @@
 	</dict>
 	<key>tr.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Hoşgeldiniz</string>
 		<key>Show Toolbar</key>
 		<string>Araç Çubuğunu Göster</string>
 		<key>Customize Toolbar…</key>
@@ -6660,6 +6720,8 @@
 	</dict>
 	<key>uk.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Заставка</string>
 		<key>Show Toolbar</key>
 		<string>Показати панель інструментів</string>
 		<key>Customize Toolbar…</key>
@@ -6887,6 +6949,8 @@
 	</dict>
 	<key>vi.lproj</key>
 	<dict>
+		<key>Welcome</key>
+		<string>Màn hình ban đầu</string>
 		<key>Show Toolbar</key>
 		<string>Hiển thị Thanh công cụ</string>
 		<key>Customize Toolbar…</key>
@@ -7114,6 +7178,10 @@
 	</dict>
 	<key>zh-Hans.lproj</key>
 	<dict>
+		<key>Window</key>
+		<string>的窗口</string>
+		<key>Welcome</key>
+		<string>初始画面</string>
 		<key>Show Toolbar</key>
 		<string>显示工具栏</string>
 		<key>Customize Toolbar…</key>
@@ -7341,6 +7409,10 @@
 	</dict>
 	<key>zh-Hant.lproj</key>
 	<dict>
+		<key>Window</key>
+		<string>的窗口</string>
+		<key>Welcome</key>
+		<string>初始畫面</string>
 		<key>Show Toolbar</key>
 		<string>顯示工具列</string>
 		<key>Customize Toolbar…</key>

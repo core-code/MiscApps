@@ -91,7 +91,7 @@ static CONST_KEY(WelcomeShown)
 	self.accountArray = (MutableAccountArray *)accounts.mutableObject;
 
 
-	self.build = makeString(@"%@ %i", @"Build:".localized, cc.appVersion);
+	self.build = makeString(@"%@ %i", @"Build:".localized, cc.appBuild);
 	self.version = makeString(@"%@ %@", @"Version:".localized, cc.appVersionString);
 	self.aboutURL = @"Credits.rtfd".resourceURL;
 	self.historyURL = @"History.rtf".resourceURL;
@@ -410,7 +410,7 @@ static CONST_KEY(WelcomeShown)
 	NSString *urlString = @"";
 
 	if (tag == 1)
-		urlString = makeString(@"mailto:feedback@corecode.at?subject=%@ %@ Support Request (License code: %@)&body=Insert Support Request Here\n\n\n\nP.S: Hardware: %@ Software: %@ %@: %i%@", cc.appName, cc.appVersionString, cc.appSHA, [JMHostInformation machineType], [[NSProcessInfo processInfo] operatingSystemVersionString], cc.appName, cc.appVersion, ([cc.appCrashLogs count] ? makeString(@" Problems: %li", [cc.appCrashLogs count]) : @""));
+		urlString = makeString(@"mailto:feedback@corecode.at?subject=%@ %@ Support Request (License code: %@)&body=Insert Support Request Here\n\n\n\nP.S: Hardware: %@ Software: %@ %@: %i%@", cc.appName, cc.appVersionString, cc.appSHA, [JMHostInformation machineType], [[NSProcessInfo processInfo] operatingSystemVersionString], cc.appName, cc.appBuild, ([cc.appCrashLogs count] ? makeString(@" Problems: %li", [cc.appCrashLogs count]) : @""));
 	else if (tag == 2)
 		urlString = makeString(@"mailto:feedback@corecode.at?subject=%@ Beta Versions&body=Hello\nI would like to test upcoming beta versions of %@.\nBye\n", cc.appName, cc.appName);
 	else if (tag == 3)

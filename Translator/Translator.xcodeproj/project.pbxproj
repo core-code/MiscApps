@@ -10,18 +10,12 @@
 		B90EFDCF188D5F2A00210A03 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90EFDCE188D5F2A00210A03 /* Cocoa.framework */; };
 		B90EFDE2188D5F2A00210A03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFDE1188D5F2A00210A03 /* AppDelegate.m */; };
 		B90EFDE7188D5F2A00210A03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90EFDE6188D5F2A00210A03 /* Images.xcassets */; };
-		B90EFE49188D5F7400210A03 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE09188D5F7300210A03 /* CoreLib.m */; };
-		B90EFE5A188D5F7400210A03 /* NSArray+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE30188D5F7300210A03 /* NSArray+CoreCode.m */; };
-		B90EFE5B188D5F7400210A03 /* NSData+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE32188D5F7300210A03 /* NSData+CoreCode.m */; };
-		B90EFE5C188D5F7400210A03 /* NSDate+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE34188D5F7400210A03 /* NSDate+CoreCode.m */; };
-		B90EFE5D188D5F7400210A03 /* NSDictionary+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE36188D5F7400210A03 /* NSDictionary+CoreCode.m */; };
-		B90EFE5E188D5F7400210A03 /* NSFileHandle+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE38188D5F7400210A03 /* NSFileHandle+CoreCode.m */; };
-		B90EFE5F188D5F7400210A03 /* NSLocale+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE3A188D5F7400210A03 /* NSLocale+CoreCode.m */; };
-		B90EFE60188D5F7400210A03 /* NSNumber+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE3C188D5F7400210A03 /* NSNumber+CoreCode.m */; };
-		B90EFE61188D5F7400210A03 /* NSObject+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE3E188D5F7400210A03 /* NSObject+CoreCode.m */; };
-		B90EFE62188D5F7400210A03 /* NSString+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE40188D5F7400210A03 /* NSString+CoreCode.m */; };
-		B90EFE63188D5F7400210A03 /* NSURL+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFE42188D5F7400210A03 /* NSURL+CoreCode.m */; };
 		B90EFE73188D5FE800210A03 /* MainMenuTranslations.plist in Resources */ = {isa = PBXBuildFile; fileRef = B90EFE72188D5FE800210A03 /* MainMenuTranslations.plist */; };
+		B960E10219D2E19100FAAAE4 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B960E0C819D2E19100FAAAE4 /* AppKit+CoreCode.m */; };
+		B960E10319D2E19100FAAAE4 /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B960E0CA19D2E19100FAAAE4 /* AppKit+Properties.m */; };
+		B960E10419D2E19100FAAAE4 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B960E0CC19D2E19100FAAAE4 /* CoreLib.m */; };
+		B960E10519D2E19100FAAAE4 /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B960E0CF19D2E19100FAAAE4 /* Foundation+CoreCode.m */; };
+		B960E10619D2E19100FAAAE4 /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B960E0D219D2E19100FAAAE4 /* Foundation+Properties.m */; };
 		B9677072188D8807001B9A59 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9677070188D8807001B9A59 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
@@ -36,30 +30,20 @@
 		B90EFDE0188D5F2A00210A03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B90EFDE1188D5F2A00210A03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B90EFDE6188D5F2A00210A03 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B90EFE08188D5F7300210A03 /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
-		B90EFE09188D5F7300210A03 /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
-		B90EFE2F188D5F7300210A03 /* NSArray+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CoreCode.h"; sourceTree = "<group>"; };
-		B90EFE30188D5F7300210A03 /* NSArray+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CoreCode.m"; sourceTree = "<group>"; };
-		B90EFE31188D5F7300210A03 /* NSData+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CoreCode.h"; sourceTree = "<group>"; };
-		B90EFE32188D5F7300210A03 /* NSData+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CoreCode.m"; sourceTree = "<group>"; };
-		B90EFE33188D5F7400210A03 /* NSDate+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CoreCode.h"; sourceTree = "<group>"; };
-		B90EFE34188D5F7400210A03 /* NSDate+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CoreCode.m"; sourceTree = "<group>"; };
-		B90EFE35188D5F7400210A03 /* NSDictionary+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CoreCode.h"; sourceTree = "<group>"; };
-		B90EFE36188D5F7400210A03 /* NSDictionary+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CoreCode.m"; sourceTree = "<group>"; };
-		B90EFE37188D5F7400210A03 /* NSFileHandle+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileHandle+CoreCode.h"; sourceTree = "<group>"; };
-		B90EFE38188D5F7400210A03 /* NSFileHandle+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileHandle+CoreCode.m"; sourceTree = "<group>"; };
-		B90EFE39188D5F7400210A03 /* NSLocale+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLocale+CoreCode.h"; sourceTree = "<group>"; };
-		B90EFE3A188D5F7400210A03 /* NSLocale+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+CoreCode.m"; sourceTree = "<group>"; };
-		B90EFE3B188D5F7400210A03 /* NSNumber+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+CoreCode.h"; sourceTree = "<group>"; };
-		B90EFE3C188D5F7400210A03 /* NSNumber+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CoreCode.m"; sourceTree = "<group>"; };
-		B90EFE3D188D5F7400210A03 /* NSObject+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CoreCode.h"; sourceTree = "<group>"; };
-		B90EFE3E188D5F7400210A03 /* NSObject+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CoreCode.m"; sourceTree = "<group>"; };
-		B90EFE3F188D5F7400210A03 /* NSString+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CoreCode.h"; sourceTree = "<group>"; };
-		B90EFE40188D5F7400210A03 /* NSString+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CoreCode.m"; sourceTree = "<group>"; };
-		B90EFE41188D5F7400210A03 /* NSURL+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CoreCode.h"; sourceTree = "<group>"; };
-		B90EFE42188D5F7400210A03 /* NSURL+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CoreCode.m"; sourceTree = "<group>"; };
 		B90EFE72188D5FE800210A03 /* MainMenuTranslations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainMenuTranslations.plist; sourceTree = "<group>"; };
 		B94017C5188DAA450069568F /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		B960E0C719D2E19100FAAAE4 /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
+		B960E0C819D2E19100FAAAE4 /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
+		B960E0C919D2E19100FAAAE4 /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
+		B960E0CA19D2E19100FAAAE4 /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
+		B960E0CB19D2E19100FAAAE4 /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
+		B960E0CC19D2E19100FAAAE4 /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
+		B960E0CD19D2E19100FAAAE4 /* CoreLib_Availability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib_Availability.h; sourceTree = "<group>"; };
+		B960E0CE19D2E19100FAAAE4 /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
+		B960E0CF19D2E19100FAAAE4 /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
+		B960E0D019D2E19100FAAAE4 /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
+		B960E0D119D2E19100FAAAE4 /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
+		B960E0D219D2E19100FAAAE4 /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
 		B9677071188D8807001B9A59 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +103,7 @@
 				B94017C5188DAA450069568F /* Read Me.rtf */,
 				B9677070188D8807001B9A59 /* MainMenu.xib */,
 				B90EFDE6188D5F2A00210A03 /* Images.xcassets */,
-				B90EFE02188D5F7300210A03 /* CoreLib */,
+				B960E0C019D2E19100FAAAE4 /* CoreLib */,
 				B90EFDD5188D5F2A00210A03 /* Supporting Files */,
 			);
 			path = Translator;
@@ -135,34 +119,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B90EFE02188D5F7300210A03 /* CoreLib */ = {
+		B960E0C019D2E19100FAAAE4 /* CoreLib */ = {
 			isa = PBXGroup;
 			children = (
-				B90EFE08188D5F7300210A03 /* CoreLib.h */,
-				B90EFE09188D5F7300210A03 /* CoreLib.m */,
-				B90EFE2F188D5F7300210A03 /* NSArray+CoreCode.h */,
-				B90EFE30188D5F7300210A03 /* NSArray+CoreCode.m */,
-				B90EFE31188D5F7300210A03 /* NSData+CoreCode.h */,
-				B90EFE32188D5F7300210A03 /* NSData+CoreCode.m */,
-				B90EFE33188D5F7400210A03 /* NSDate+CoreCode.h */,
-				B90EFE34188D5F7400210A03 /* NSDate+CoreCode.m */,
-				B90EFE35188D5F7400210A03 /* NSDictionary+CoreCode.h */,
-				B90EFE36188D5F7400210A03 /* NSDictionary+CoreCode.m */,
-				B90EFE37188D5F7400210A03 /* NSFileHandle+CoreCode.h */,
-				B90EFE38188D5F7400210A03 /* NSFileHandle+CoreCode.m */,
-				B90EFE39188D5F7400210A03 /* NSLocale+CoreCode.h */,
-				B90EFE3A188D5F7400210A03 /* NSLocale+CoreCode.m */,
-				B90EFE3B188D5F7400210A03 /* NSNumber+CoreCode.h */,
-				B90EFE3C188D5F7400210A03 /* NSNumber+CoreCode.m */,
-				B90EFE3D188D5F7400210A03 /* NSObject+CoreCode.h */,
-				B90EFE3E188D5F7400210A03 /* NSObject+CoreCode.m */,
-				B90EFE3F188D5F7400210A03 /* NSString+CoreCode.h */,
-				B90EFE40188D5F7400210A03 /* NSString+CoreCode.m */,
-				B90EFE41188D5F7400210A03 /* NSURL+CoreCode.h */,
-				B90EFE42188D5F7400210A03 /* NSURL+CoreCode.m */,
+				B960E0C619D2E19100FAAAE4 /* CoreLib */,
 			);
 			name = CoreLib;
-			path = ../../../../CoreLib;
+			path = ../../CoreLib;
+			sourceTree = "<group>";
+		};
+		B960E0C619D2E19100FAAAE4 /* CoreLib */ = {
+			isa = PBXGroup;
+			children = (
+				B960E0C719D2E19100FAAAE4 /* AppKit+CoreCode.h */,
+				B960E0C819D2E19100FAAAE4 /* AppKit+CoreCode.m */,
+				B960E0C919D2E19100FAAAE4 /* AppKit+Properties.h */,
+				B960E0CA19D2E19100FAAAE4 /* AppKit+Properties.m */,
+				B960E0CB19D2E19100FAAAE4 /* CoreLib.h */,
+				B960E0CC19D2E19100FAAAE4 /* CoreLib.m */,
+				B960E0CD19D2E19100FAAAE4 /* CoreLib_Availability.h */,
+				B960E0CE19D2E19100FAAAE4 /* Foundation+CoreCode.h */,
+				B960E0CF19D2E19100FAAAE4 /* Foundation+CoreCode.m */,
+				B960E0D019D2E19100FAAAE4 /* Foundation+Indexing.h */,
+				B960E0D119D2E19100FAAAE4 /* Foundation+Properties.h */,
+				B960E0D219D2E19100FAAAE4 /* Foundation+Properties.m */,
+			);
+			path = CoreLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,18 +212,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B90EFE5A188D5F7400210A03 /* NSArray+CoreCode.m in Sources */,
-				B90EFE63188D5F7400210A03 /* NSURL+CoreCode.m in Sources */,
-				B90EFE5E188D5F7400210A03 /* NSFileHandle+CoreCode.m in Sources */,
-				B90EFE5D188D5F7400210A03 /* NSDictionary+CoreCode.m in Sources */,
-				B90EFE62188D5F7400210A03 /* NSString+CoreCode.m in Sources */,
-				B90EFE5F188D5F7400210A03 /* NSLocale+CoreCode.m in Sources */,
+				B960E10519D2E19100FAAAE4 /* Foundation+CoreCode.m in Sources */,
+				B960E10419D2E19100FAAAE4 /* CoreLib.m in Sources */,
+				B960E10319D2E19100FAAAE4 /* AppKit+Properties.m in Sources */,
+				B960E10219D2E19100FAAAE4 /* AppKit+CoreCode.m in Sources */,
 				B90EFDE2188D5F2A00210A03 /* AppDelegate.m in Sources */,
-				B90EFE49188D5F7400210A03 /* CoreLib.m in Sources */,
-				B90EFE61188D5F7400210A03 /* NSObject+CoreCode.m in Sources */,
-				B90EFE5B188D5F7400210A03 /* NSData+CoreCode.m in Sources */,
-				B90EFE5C188D5F7400210A03 /* NSDate+CoreCode.m in Sources */,
-				B90EFE60188D5F7400210A03 /* NSNumber+CoreCode.m in Sources */,
+				B960E10619D2E19100FAAAE4 /* Foundation+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

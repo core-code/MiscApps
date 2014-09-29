@@ -23,8 +23,9 @@
 
 	NSURL *url = [panel URL];
 
-
-	NSString *n = url.path.contents.string;
+	NSString *path = url.path;
+	NSData *contents = path.contents;
+	NSString *n = contents.string;
 	NSString *sep = @".title\" = \"";
 	NSDictionary *trans = [NSDictionary dictionaryWithContentsOfURL:@"MainMenuTranslations.plist".resourceURL];
 	NSString *appname;

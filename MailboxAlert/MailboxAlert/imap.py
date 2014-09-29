@@ -30,18 +30,34 @@ except:
 result,mailboxList = M.list()
 
 for mbox in mailboxList:
-	x = mbox.split("\" \"")
-	mailbox = x[-1].replace('\"', '')
+	x = ")".join(mbox.split(")")[1:]).strip()
+	mailbox = ""
+
+	if (x.find(" NIL ") != -1):
+		mailbox = x.split(" NIL ")[1].replace('\"', '')
+	elif (x.find("\" \"") != -1):
+		mailbox = x.split("\" \"")[-1].replace('\"', '')
+	elif (x.find("\"") != -1):
+		mailbox = x.split("\"")[-1].strip()
+	else:
+		mailbox = " ".join(x.split(" ")[1:])
 
 	if not "Noselect" in mbox:
 		folderSize = 0
 
 		result, num = M.select(mailbox, readonly=1)
 
+
+		numnum = 0
+		try: 
+			numnum = int(num[0])
+		except:
+			print "SHIT"
+
 		if "\All" in mbox:
-			msgCount_sum += int(num[0])
+			msgCount_sum += numnum
 		else:
-			msgCount += int(num[0])
+			msgCount += numnum
 		
 		typ, msg = M.search(None, 'ALL')
 		m = [int(x) for x in msg[0].split()]
