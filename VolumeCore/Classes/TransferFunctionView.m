@@ -26,9 +26,7 @@
 //		cantChangeOpacity = TRUE;
 		dragging = -1;
 		float h = [self bounds].size.height, w = [self bounds].size.width;
-#ifdef __APPLE__
-		[[HUDHack class] poseAsClass:[NSColorPanel class]];
-#endif		
+
 		dragging = 0;
 		points = [[NSMutableArray alloc] initWithCapacity:10];
 		
@@ -268,12 +266,5 @@
     self = [super initWithFrame:frame];
     
     return self;
-}
-@end
-
-@implementation HUDHack
-- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)windowStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation
-{
-	return [super initWithContentRect:contentRect styleMask:windowStyle | 8223 backing:bufferingType defer:deferCreation];
 }
 @end

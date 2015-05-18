@@ -68,14 +68,12 @@
 		int result;
 		NSOpenPanel *oPanel = [NSOpenPanel openPanel];
 		
-		result = [oPanel runModalForDirectory:NSHomeDirectory() file:nil types:[NSArray arrayWithObjects:@"dat", @"bz2", nil]];
+		result = [oPanel runModalForDirectory:NSHomeDirectory() file:nil types:[NSArray arrayWithObjects:@"dat", nil]];
 		if (result == NSOKButton)
 		{
 			NSString *destpath = [oPanel filename];
 			
 			data = [NSData dataWithContentsOfFile:destpath];
-			if ([destpath hasSuffix:@"bz2"])
-				data = [data bunzip2];
 		}
 		else
 		{
@@ -85,17 +83,14 @@
 	if ([[doc datasetPopUp] indexOfSelectedItem] < 2)
 	{
 		NSArray *array = [NSArray arrayWithObjects:@"stagbeetle277x277x164", @"XMasTree", nil];
-#ifdef __APPLE__
-		data = [[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[array objectAtIndex:[[doc datasetPopUp] indexOfSelectedItem]] ofType:@"dat.bz2"]] bunzip2];
-#else
+
 		data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[array objectAtIndex:[[doc datasetPopUp] indexOfSelectedItem]] ofType:@"dat"]];
-#endif
 	}
 	voxels = malloc([data length]);
 	[data getBytes:voxels];	
 
 	if ([data length] != voxels->sizeX * voxels->sizeY * voxels->sizeZ * 2 + 6)
-		fatal("Error: data doesn't seem to be in .dat or .dat.bz2 format");
+		fatal("Error: data doesn't seem to be in .dat format");
 	
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_3D, voxel_texture);	

@@ -21,7 +21,6 @@
 
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
-	#import "NSData+Bzip2.h"	
 #endif
 
 #ifdef __APPLE__
