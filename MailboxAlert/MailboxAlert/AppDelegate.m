@@ -11,15 +11,19 @@
 #import "JMLoginItemManager.h"
 #import "JMHostInformation.h"
 #import "JMVisibilityManager.h"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Woverriding-method-mismatch"
 #import "Mail.h"
+#pragma clang diagnostic pop
+
 
 
 CUSTOM_MUTABLE_ARRAY(Account)
-CONST_KEY(NotificationAlert)
-CONST_KEY(NotificationOnscreen)
-CONST_KEY(NotificationMenubar)
-static CONST_KEY(AccountData)
-static CONST_KEY(WelcomeShown)
+CONST_KEY_IMPLEMENTATION(NotificationAlert)
+CONST_KEY_IMPLEMENTATION(NotificationOnscreen)
+CONST_KEY_IMPLEMENTATION(NotificationMenubar)
+CONST_KEY(AccountData)
+CONST_KEY(WelcomeShown)
 
 
 @interface AppDelegate ()
@@ -58,6 +62,7 @@ static CONST_KEY(WelcomeShown)
 @property (strong, nonatomic) NSMutableDictionary *currentAccount;
 @property (strong, nonatomic) NSMutableArray *mailAccounts;
 @property (assign, nonatomic) BOOL isNotificationInstalled;
+@property (weak, nonatomic) IBOutlet NSTableView *tableView;
 
 
 @end
@@ -84,7 +89,9 @@ static CONST_KEY(WelcomeShown)
 
 	self.visibilityManager = [VisibilityManager new];
 	self.visibilityManager.statusItemMenu = self.statusItemMenu;
-	self.visibilityManager.menubarIcon = [NSImage imageNamed:@"menuicon_ok"];
+	NSImage *image = [NSImage imageNamed:@"menuicon_ok"];
+	[image setTemplate:YES];
+	self.visibilityManager.menubarIcon = image;
 	self.loginItemManager = [LoginItemManager new];
 
 	NSArray *accounts = [NSKeyedUnarchiver unarchiveObjectWithData:kAccountDataKey.defaultObject];
@@ -99,6 +106,10 @@ static CONST_KEY(WelcomeShown)
 	self.readmeURL = @"Read Me.rtf".resourceURL;
 	self.isNotificationInstalled = (NSAppKitVersionNumber >= NSAppKitVersionNumber10_8);
 
+
+
+
+
 	[notificationCenter addObserverForName:@"accountUpdate"
 									object:nil
 									 queue:[NSOperationQueue mainQueue]
@@ -109,7 +120,9 @@ static CONST_KEY(WelcomeShown)
 		
 		[self.summaryLabel setStringValue:makeString(@"%li accounts, %li problems", self.accountArray.count, problems)];
 
-		self.visibilityManager.menubarIcon = [NSImage imageNamed:(problems && kNotificationMenubarKey.defaultInt) ? @"menuicon_error" : @"menuicon_ok"];
+		NSImage *image = [NSImage imageNamed:(problems && kNotificationMenubarKey.defaultInt) ? @"menuicon_error" : @"menuicon_ok"];
+		[image setTemplate:YES];
+		self.visibilityManager.menubarIcon = image;
 
 		self.visibilityManager.menuTooltip = makeString(@"MailboxAlert: %li accounts, %li problems (last check: %@)", self.accountArray.count, problems, [NSDateFormatter localizedStringFromDate:[NSDate date] dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterMediumStyle]);
 
@@ -119,7 +132,7 @@ static CONST_KEY(WelcomeShown)
 		for (Account *a in accounts)
 		{
 			NSMenuItem *item = [NSMenuItem new];
-			[item setTitle:makeString(@"%@ %@", a.description, a.status)];
+			[item setTitle:makeString(@"%@ %@", a.information, a.status)];
 			[item setEnabled:NO];
 			[self.statusItemMenu insertItem:item atIndex:2];
 		}
@@ -136,6 +149,9 @@ static CONST_KEY(WelcomeShown)
 		[self openMainWindow:nil];
 		kWelcomeShownKey.defaultInt = 1;
 	}
+
+	[_tableView setDoubleAction:@selector(editAccount:)];
+	[_tableView setTarget:self];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
@@ -176,16 +192,6 @@ static CONST_KEY(WelcomeShown)
     NSInteger index = [sender isKindOfClass:[NSNumber class]] ? [sender intValue] : [sender tag];
     [[_mainTabView tabViewItemAtIndex:index] setView:views[(NSUInteger) index]];
     [_mainTabView selectTabViewItemAtIndex:index];
-
-//	if (index == 0)
-//	{
-//		[startbutton setState:IsLoginItem()];
-//        [startInfoText setHidden:IsLoginItem()];
-//	}
-//	if (index == 1)
-//	{m
-//		[self updateIndent:nil];
-//	}
 }
 
 - (void)startAccountEditing

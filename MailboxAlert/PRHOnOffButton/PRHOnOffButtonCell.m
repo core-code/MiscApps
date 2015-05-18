@@ -37,6 +37,19 @@
 
 #define DOWNWARD_ANGLE_IN_DEGREES_FOR_VIEW(view) ([view isFlipped] ? 90.0f : 270.0f)
 
+@interface PRHOnOffButtonCell ()
+{
+	BOOL tracking;
+	NSPoint initialTrackingPoint, trackingPoint;
+	NSTimeInterval initialTrackingTime, trackingTime;
+	NSRect trackingCellFrame; //Set by drawWithFrame: when tracking is true.
+	CGFloat trackingThumbCenterX; //Set by drawWithFrame: when tracking is true.
+
+	struct PRHOOBCStuffYouWouldNeedToIncludeCarbonHeadersFor *stuff;
+}
+
+@end
+
 struct PRHOOBCStuffYouWouldNeedToIncludeCarbonHeadersFor {
 	EventTime clickTimeout;
 	HISize clickMaxDistance;
@@ -223,7 +236,7 @@ struct PRHOOBCStuffYouWouldNeedToIncludeCarbonHeadersFor {
 	}
 }
 
-- (NSUInteger)hitTestForEvent:(NSEvent *)event inRect:(NSRect)cellFrame ofView:(NSView *)controlView {
+- (NSCellHitResult)hitTestForEvent:(NSEvent *)event inRect:(NSRect)cellFrame ofView:(NSView *)controlView {
 	NSPoint mouseLocation = [controlView convertPoint:[event locationInWindow] fromView:nil];
 	return NSPointInRect(mouseLocation, cellFrame) ? (NSCellHitContentArea | NSCellHitTrackableArea) : NSCellHitNone;
 }

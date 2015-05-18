@@ -15,7 +15,7 @@
 @property (assign, nonatomic) int msgCount;
 @property (assign, nonatomic) float msgSize;
 @property (assign, nonatomic) BOOL failing;
-@property (strong, nonatomic) NSString *description;
+@property (strong, nonatomic) NSString *information;
 @property (strong, nonatomic) NSString *settings;
 @property (strong, nonatomic) NSString *status;
 @property (strong, nonatomic) NSURL *iconURL;
@@ -48,6 +48,11 @@
 //	NSLog(@"post accountUpdate update");
 }
 
+- (NSString *)description
+{
+	return self.information;
+}
+
 - (void)stopTimer
 {
 	[self.timer invalidate];
@@ -56,7 +61,7 @@
 
 - (void)scheduleTests
 {
-	self.description = makeString(@"%@ | %@", self.username, self.server);
+	self.information = makeString(@"%@ | %@", self.username, self.server);
 
 	[self updateSettings];
 	
@@ -146,7 +151,7 @@
 	}
 
 	if (kNotificationAlertKey.defaultInt)
-		NSRunAlertPanel(@"MailboxAlert Warning", infoString, @"OK", nil, nil);
+		alert_apptitled(infoString, @"OK", nil, nil);
 }
 
 - (void)dealloc
@@ -167,8 +172,15 @@
 		_password = [SSKeychain passwordForService:makeString(@"mailbox://%@", self.server) account:self.username error:&error];
 		if (!_password || error)
 		{
-			NSRunAlertPanel(@"MailboxAlert Problem", @"MailboxAlert could not retrieve your mailbox password from the system keychain. Please make sure you've allowed MailboxAlert to access the keychain and try again.", @"OK", nil, nil);
-			exit(1);
+			NSString *result;
+			NSInteger res = alert_inputsecure(makeString(@"MailboxAlert could not retrieve your mailbox password from the system keychain. Please enter the password for the account: %@", self.server), @[@"OK", @"Quit"], &result);
+
+			if (res == NSAlertFirstButtonReturn && result && result.length)
+			{
+				_password = result;
+			}
+			else
+				exit(1);
 		}
 
 		_interval = [coder decodeIntForKey:@"interval"];

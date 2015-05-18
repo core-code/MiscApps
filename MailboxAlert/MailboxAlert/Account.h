@@ -8,7 +8,7 @@
 
 @interface Account : NSObject
 
-@property (readonly, strong, nonatomic) NSString *description;
+@property (readonly, strong, nonatomic) NSString *information;
 @property (readonly, strong, nonatomic) NSString *settings;
 @property (readonly, strong, nonatomic) NSString *status;
 @property (readonly, strong, nonatomic) NSURL *iconURL;

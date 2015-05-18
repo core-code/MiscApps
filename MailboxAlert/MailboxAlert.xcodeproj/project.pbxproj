@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B90970A01B0A641A0086CCA2 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B909709F1B0A641A0086CCA2 /* ScriptingBridge.framework */; };
+		B90970A21B0A66230086CCA2 /* LaunchMainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90970A11B0A66230086CCA2 /* LaunchMainMenu.xib */; };
 		B90AE4BB16A71998002EBA58 /* Mail.app in Sources */ = {isa = PBXBuildFile; fileRef = B90AE4BA16A71998002EBA58 /* Mail.app */; };
-		B90AE4C116A71B69002EBA58 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90AE4C016A71B69002EBA58 /* ScriptingBridge.framework */; };
 		B93844991699F79C001773E8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93844981699F79C001773E8 /* Cocoa.framework */; };
 		B93844AC1699F79C001773E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B93844AB1699F79C001773E8 /* AppDelegate.m */; };
 		B93844AF1699F79C001773E8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93844AD1699F79C001773E8 /* MainMenu.xib */; };
@@ -34,9 +35,8 @@
 		B99AAB5D169B734900290EC5 /* toolbar_documentation.png in Resources */ = {isa = PBXBuildFile; fileRef = B99AAB5C169B734900290EC5 /* toolbar_documentation.png */; };
 		B99AAB72169B784700290EC5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93844981699F79C001773E8 /* Cocoa.framework */; };
 		B99AAB8F169B787D00290EC5 /* LaunchAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B99AAB8A169B787D00290EC5 /* LaunchAppDelegate.m */; };
-		B99AAB90169B787D00290EC5 /* LaunchMainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99AAB8B169B787D00290EC5 /* LaunchMainMenu.xib */; };
 		B99AAB94169B7B3C00290EC5 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99AAB93169B7B3C00290EC5 /* ServiceManagement.framework */; };
-		B99AAB98169B7C4900290EC5 /* LaunchHelper.app in Copy Files */ = {isa = PBXBuildFile; fileRef = B99AAB85169B784700290EC5 /* LaunchHelper.app */; };
+		B99AAB98169B7C4900290EC5 /* MailboxAlertLaunchHelper.app in Copy Files */ = {isa = PBXBuildFile; fileRef = B99AAB85169B784700290EC5 /* MailboxAlertLaunchHelper.app */; };
 		B9C278E116A761A000D355A1 /* ValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C278E016A761A000D355A1 /* ValueTransformer.m */; };
 		B9C2AFA01911578B0053456F /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C2AF831911578B0053456F /* AppKit+CoreCode.m */; };
 		B9C2AFA11911578B0053456F /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C2AF851911578B0053456F /* AppKit+Properties.m */; };
@@ -88,7 +88,7 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				B99AAB98169B7C4900290EC5 /* LaunchHelper.app in Copy Files */,
+				B99AAB98169B7C4900290EC5 /* MailboxAlertLaunchHelper.app in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,8 +96,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B909709F1B0A641A0086CCA2 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		B90970A11B0A66230086CCA2 /* LaunchMainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchMainMenu.xib; sourceTree = "<group>"; };
 		B90AE4BA16A71998002EBA58 /* Mail.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Mail.app; path = /Applications/Mail.app; sourceTree = "<absolute>"; };
-		B90AE4C016A71B69002EBA58 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = ../../../../../System/Library/Frameworks/ScriptingBridge.framework; sourceTree = "<group>"; };
 		B93844941699F79C001773E8 /* MailboxAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailboxAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93844981699F79C001773E8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B938449B1699F79C001773E8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -133,10 +134,9 @@
 		B99AAB53169B71C400290EC5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B99AAB55169B71CA00290EC5 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		B99AAB5C169B734900290EC5 /* toolbar_documentation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toolbar_documentation.png; sourceTree = "<group>"; };
-		B99AAB85169B784700290EC5 /* LaunchHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B99AAB85169B784700290EC5 /* MailboxAlertLaunchHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailboxAlertLaunchHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99AAB89169B787D00290EC5 /* LaunchAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAppDelegate.h; sourceTree = "<group>"; };
 		B99AAB8A169B787D00290EC5 /* LaunchAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAppDelegate.m; sourceTree = "<group>"; };
-		B99AAB8C169B787D00290EC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LaunchMainMenu.xib; sourceTree = "<group>"; };
 		B99AAB8D169B787D00290EC5 /* LaunchHelper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LaunchHelper-Info.plist"; sourceTree = "<group>"; };
 		B99AAB8E169B787D00290EC5 /* LaunchHelper.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = LaunchHelper.entitlements; sourceTree = "<group>"; };
 		B99AAB93169B7B3C00290EC5 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
@@ -185,8 +185,8 @@
 				B99AAA8D169B557500290EC5 /* Carbon.framework in Frameworks */,
 				B99AAB54169B71C400290EC5 /* Security.framework in Frameworks */,
 				B99AAB56169B71CA00290EC5 /* IOKit.framework in Frameworks */,
+				B90970A01B0A641A0086CCA2 /* ScriptingBridge.framework in Frameworks */,
 				B99AAB94169B7B3C00290EC5 /* ServiceManagement.framework in Frameworks */,
-				B90AE4C116A71B69002EBA58 /* ScriptingBridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				B93844941699F79C001773E8 /* MailboxAlert.app */,
-				B99AAB85169B784700290EC5 /* LaunchHelper.app */,
+				B99AAB85169B784700290EC5 /* MailboxAlertLaunchHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 		B93844971699F79C001773E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B90AE4C016A71B69002EBA58 /* ScriptingBridge.framework */,
+				B909709F1B0A641A0086CCA2 /* ScriptingBridge.framework */,
 				B99AAB93169B7B3C00290EC5 /* ServiceManagement.framework */,
 				B99AAB55169B71CA00290EC5 /* IOKit.framework */,
 				B99AAB53169B71C400290EC5 /* Security.framework */,
@@ -304,11 +304,12 @@
 			children = (
 				B99AAB89169B787D00290EC5 /* LaunchAppDelegate.h */,
 				B99AAB8A169B787D00290EC5 /* LaunchAppDelegate.m */,
-				B99AAB8B169B787D00290EC5 /* LaunchMainMenu.xib */,
+				B90970A11B0A66230086CCA2 /* LaunchMainMenu.xib */,
 				B99AAB8D169B787D00290EC5 /* LaunchHelper-Info.plist */,
 				B99AAB8E169B787D00290EC5 /* LaunchHelper.entitlements */,
 			);
-			path = LaunchHelper;
+			name = LaunchHelper;
+			path = ../../CoreLib/LaunchHelper;
 			sourceTree = SOURCE_ROOT;
 		};
 		B9C2AF811911578B0053456F /* CoreLib */ = {
@@ -327,7 +328,7 @@
 				B9C2AF8C1911578B0053456F /* Foundation+Properties.m */,
 			);
 			name = CoreLib;
-			path = ../../CoreLib/CoreLib;
+			path = ../../../CoreLib/CoreLib;
 			sourceTree = "<group>";
 		};
 		B9C2AF8D1911578B0053456F /* Mac */ = {
@@ -353,7 +354,7 @@
 				B9C2AF9F1911578B0053456F /* JMVisibilityManager.m */,
 			);
 			name = Mac;
-			path = ../../CoreLib/Mac;
+			path = ../../../CoreLib/Mac;
 			sourceTree = "<group>";
 		};
 		B9C2AFAE191158820053456F /* PRHOnOffButton */ = {
@@ -391,9 +392,9 @@
 			productReference = B93844941699F79C001773E8 /* MailboxAlert.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B99AAB5E169B784700290EC5 /* LaunchHelper */ = {
+		B99AAB5E169B784700290EC5 /* MailboxAlertLaunchHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B99AAB82169B784700290EC5 /* Build configuration list for PBXNativeTarget "LaunchHelper" */;
+			buildConfigurationList = B99AAB82169B784700290EC5 /* Build configuration list for PBXNativeTarget "MailboxAlertLaunchHelper" */;
 			buildPhases = (
 				B99AAB5F169B784700290EC5 /* Sources */,
 				B99AAB71169B784700290EC5 /* Frameworks */,
@@ -403,9 +404,9 @@
 			);
 			dependencies = (
 			);
-			name = LaunchHelper;
+			name = MailboxAlertLaunchHelper;
 			productName = MailboxAlert;
-			productReference = B99AAB85169B784700290EC5 /* LaunchHelper.app */;
+			productReference = B99AAB85169B784700290EC5 /* MailboxAlertLaunchHelper.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -430,7 +431,7 @@
 			projectRoot = "";
 			targets = (
 				B93844931699F79C001773E8 /* MailboxAlert */,
-				B99AAB5E169B784700290EC5 /* LaunchHelper */,
+				B99AAB5E169B784700290EC5 /* MailboxAlertLaunchHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -464,7 +465,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B99AAB90169B787D00290EC5 /* LaunchMainMenu.xib in Resources */,
+				B90970A21B0A66230086CCA2 /* LaunchMainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +529,7 @@
 /* Begin PBXTargetDependency section */
 		B99AAB96169B7C3100290EC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B99AAB5E169B784700290EC5 /* LaunchHelper */;
+			target = B99AAB5E169B784700290EC5 /* MailboxAlertLaunchHelper */;
 			targetProxy = B99AAB95169B7C3100290EC5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -548,14 +549,6 @@
 				B99AAAA9169B6E0600290EC5 /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		B99AAB8B169B787D00290EC5 /* LaunchMainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B99AAB8C169B787D00290EC5 /* en */,
-			);
-			name = LaunchMainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -672,15 +665,12 @@
 		B99AAB83169B784700290EC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = LaunchHelper/LaunchHelper.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ../CoreLib/LaunchHelper/LaunchHelper.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "LaunchHelper/LaunchHelper-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/ValidateStoreReceipt\"",
-				);
-				PRODUCT_NAME = LaunchHelper;
+				INFOPLIST_FILE = "../CoreLib/LaunchHelper/LaunchHelper-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = MailboxAlertLaunchHelper;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -689,15 +679,12 @@
 		B99AAB84169B784700290EC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = LaunchHelper/LaunchHelper.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ../CoreLib/LaunchHelper/LaunchHelper.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "LaunchHelper/LaunchHelper-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/ValidateStoreReceipt\"",
-				);
-				PRODUCT_NAME = LaunchHelper;
+				INFOPLIST_FILE = "../CoreLib/LaunchHelper/LaunchHelper-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = MailboxAlertLaunchHelper;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -724,7 +711,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B99AAB82169B784700290EC5 /* Build configuration list for PBXNativeTarget "LaunchHelper" */ = {
+		B99AAB82169B784700290EC5 /* Build configuration list for PBXNativeTarget "MailboxAlertLaunchHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B99AAB83169B784700290EC5 /* Debug */,

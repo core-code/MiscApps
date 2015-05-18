@@ -193,8 +193,7 @@ extern NSString *const kSSKeychainWhereKey;
  
  @param account The account for which to return the corresponding password.
  
- @param error If accessing the password fails, upon return contains an error that describes the problem.
- 
+
  @return Returns a the password data for the given account and service, or `nil` if the Keychain doesn't
  have data for the given parameters.
  
@@ -209,9 +208,7 @@ extern NSString *const kSSKeychainWhereKey;
  @param serviceName The service for which to return the corresponding password.
  
  @param account The account for which to return the corresponding password.
- 
- @param error If accessing the password fails, upon return contains an error that describes the problem.
- 
+
  @return Returns a the password data for the given account and service, or `nil` if the Keychain doesn't
  have a password for the given parameters.
  
@@ -298,7 +295,6 @@ extern NSString *const kSSKeychainWhereKey;
  
  @param account The account for which to set the corresponding password.
  
- @param error If setting the password fails, upon return contains an error that describes the problem.
  
  @return Returns `YES` on success, or `NO` on failure.
  

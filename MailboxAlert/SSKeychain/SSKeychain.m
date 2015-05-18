@@ -35,7 +35,7 @@ CFTypeRef SSKeychainAccessibilityType = NULL;
 }
 
 
-+ (NSArray *)allAccounts:(NSError **)error {
++ (NSArray *)allAccounts:(__autoreleasing NSError **)error {
     return [self accountsForService:nil error:error];
 }
 
@@ -45,7 +45,7 @@ CFTypeRef SSKeychainAccessibilityType = NULL;
 }
 
 
-+ (NSArray *)accountsForService:(NSString *)service error:(NSError **)error {
++ (NSArray *)accountsForService:(NSString *)service error:(__autoreleasing NSError **)error {
     OSStatus status = SSKeychainErrorBadArguments;
     NSMutableDictionary *query = [self _queryForService:service account:nil];
 #if __has_feature(objc_arc)
@@ -82,7 +82,7 @@ CFTypeRef SSKeychainAccessibilityType = NULL;
 }
 
 
-+ (NSString *)passwordForService:(NSString *)service account:(NSString *)account error:(NSError **)error {
++ (NSString *)passwordForService:(NSString *)service account:(NSString *)account error:(__autoreleasing NSError **)error {
     NSData *data = [self passwordDataForService:service account:account error:error];
 	if (data.length > 0) {
 		NSString *string = [[NSString alloc] initWithData:(NSData *)data encoding:NSUTF8StringEncoding];
@@ -101,7 +101,7 @@ CFTypeRef SSKeychainAccessibilityType = NULL;
 }
 
 
-+ (NSData *)passwordDataForService:(NSString *)service account:(NSString *)account error:(NSError **)error {
++ (NSData *)passwordDataForService:(NSString *)service account:(NSString *)account error:(__autoreleasing NSError **)error {
     OSStatus status = SSKeychainErrorBadArguments;
 	if (!service || !account) {
 		if (error) {
@@ -142,7 +142,7 @@ CFTypeRef SSKeychainAccessibilityType = NULL;
 }
 
 
-+ (BOOL)deletePasswordForService:(NSString *)service account:(NSString *)account error:(NSError **)error {
++ (BOOL)deletePasswordForService:(NSString *)service account:(NSString *)account error:(__autoreleasing NSError **)error {
 	OSStatus status = SSKeychainErrorBadArguments;
 	if (service && account) {
 		NSMutableDictionary *query = [self _queryForService:service account:account];
@@ -167,7 +167,7 @@ CFTypeRef SSKeychainAccessibilityType = NULL;
 }
 
 
-+ (BOOL)setPassword:(NSString *)password forService:(NSString *)service account:(NSString *)account error:(NSError **)error {
++ (BOOL)setPassword:(NSString *)password forService:(NSString *)service account:(NSString *)account error:(__autoreleasing NSError **)error {
     NSData *data = [password dataUsingEncoding:NSUTF8StringEncoding];
     return [self setPasswordData:data forService:service account:account error:error];
 }
@@ -178,7 +178,7 @@ CFTypeRef SSKeychainAccessibilityType = NULL;
 }
 
 
-+ (BOOL)setPasswordData:(NSData *)password forService:(NSString *)service account:(NSString *)account error:(NSError **)error {
++ (BOOL)setPasswordData:(NSData *)password forService:(NSString *)service account:(NSString *)account error:(__autoreleasing NSError **)error {
     OSStatus status = SSKeychainErrorBadArguments;
 	if (password && service && account) {
         [self deletePasswordForService:service account:account];

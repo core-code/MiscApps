@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 CoreCode. All rights reserved.
 //
 
-CONST_KEY_EXTERN(NotificationAlert)
-CONST_KEY_EXTERN(NotificationOnscreen)
-CONST_KEY_EXTERN(NotificationMenubar)
+CONST_KEY_DECLARATION(NotificationAlert)
+CONST_KEY_DECLARATION(NotificationOnscreen)
+CONST_KEY_DECLARATION(NotificationMenubar)
 
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
