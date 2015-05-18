@@ -3,22 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		B909709D1B0A63BF0086CCA2 /* block.dat in Resources */ = {isa = PBXBuildFile; fileRef = B909709B1B0A62B90086CCA2 /* block.dat */; };
+		B909709E1B0A63C10086CCA2 /* block.gri in Resources */ = {isa = PBXBuildFile; fileRef = B909709C1B0A62B90086CCA2 /* block.gri */; };
 		B975C1FF0EAFD19B00932C34 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B975C1FE0EAFD19B00932C34 /* OpenGL.framework */; };
 		B985D4650F5A10F700AB21D0 /* CocoaOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = B985D45E0F5A10F700AB21D0 /* CocoaOpenGLView.mm */; };
 		B985D4660F5A10F700AB21D0 /* FlowDocument.mm in Sources */ = {isa = PBXBuildFile; fileRef = B985D4600F5A10F700AB21D0 /* FlowDocument.mm */; };
 		B985D4680F5A10F700AB21D0 /* TransferFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B985D4640F5A10F700AB21D0 /* TransferFunctionView.m */; };
 		B985D46F0F5A110B00AB21D0 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = B985D46C0F5A110B00AB21D0 /* main.mm */; };
-		B985D4700F5A110B00AB21D0 /* NSData+Bzip2.m in Sources */ = {isa = PBXBuildFile; fileRef = B985D46E0F5A110B00AB21D0 /* NSData+Bzip2.m */; };
 		B985D4880F5A111200AB21D0 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B985D4720F5A111200AB21D0 /* arrow.png */; };
 		B985D4890F5A111200AB21D0 /* arrows.frag in Resources */ = {isa = PBXBuildFile; fileRef = B985D4730F5A111200AB21D0 /* arrows.frag */; };
 		B985D48A0F5A111200AB21D0 /* arrows.vert in Resources */ = {isa = PBXBuildFile; fileRef = B985D4740F5A111200AB21D0 /* arrows.vert */; };
-		B985D48B0F5A111200AB21D0 /* block.dat.bz2 in Resources */ = {isa = PBXBuildFile; fileRef = B985D4750F5A111200AB21D0 /* block.dat.bz2 */; };
-		B985D48C0F5A111200AB21D0 /* block.gri.bz2 in Resources */ = {isa = PBXBuildFile; fileRef = B985D4760F5A111200AB21D0 /* block.gri.bz2 */; };
 		B985D48D0F5A111200AB21D0 /* color.frag in Resources */ = {isa = PBXBuildFile; fileRef = B985D4770F5A111200AB21D0 /* color.frag */; };
 		B985D48E0F5A111200AB21D0 /* color.vert in Resources */ = {isa = PBXBuildFile; fileRef = B985D4780F5A111200AB21D0 /* color.vert */; };
 		B985D48F0F5A111200AB21D0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B985D4790F5A111200AB21D0 /* Credits.rtf */; };
@@ -26,8 +25,6 @@
 		B985D4910F5A111200AB21D0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B985D47D0F5A111200AB21D0 /* MainMenu.xib */; };
 		B985D4920F5A111200AB21D0 /* FlowCore.icns in Resources */ = {isa = PBXBuildFile; fileRef = B985D47F0F5A111200AB21D0 /* FlowCore.icns */; };
 		B985D4930F5A111200AB21D0 /* FlowCoreDocument.icns in Resources */ = {isa = PBXBuildFile; fileRef = B985D4800F5A111200AB21D0 /* FlowCoreDocument.icns */; };
-		B985D4A30F5A113100AB21D0 /* BGHUDAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B985D4A20F5A113100AB21D0 /* BGHUDAppKit.framework */; };
-		B985D4C10F5A113800AB21D0 /* BGHUDAppKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B985D4A20F5A113100AB21D0 /* BGHUDAppKit.framework */; };
 		B9CA93270F62068A0059E7D1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CA93260F62068A0059E7D1 /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +35,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B985D4C10F5A113800AB21D0 /* BGHUDAppKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +45,8 @@
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D15AC370486D014006FF6A4 /* FlowCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B909709B1B0A62B90086CCA2 /* block.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = block.dat; sourceTree = "<group>"; };
+		B909709C1B0A62B90086CCA2 /* block.gri */ = {isa = PBXFileReference; lastKnownFileType = file; path = block.gri; sourceTree = "<group>"; };
 		B93CE6150F61B17500E073A7 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
 		B975C1FE0EAFD19B00932C34 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		B985D45D0F5A10F700AB21D0 /* CocoaOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaOpenGLView.h; sourceTree = "<group>"; };
@@ -60,13 +58,9 @@
 		B985D46A0F5A110B00AB21D0 /* FlowCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowCore.h; sourceTree = "<group>"; };
 		B985D46B0F5A110B00AB21D0 /* FlowCore_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowCore_Prefix.pch; sourceTree = "<group>"; };
 		B985D46C0F5A110B00AB21D0 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
-		B985D46D0F5A110B00AB21D0 /* NSData+Bzip2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Bzip2.h"; sourceTree = "<group>"; };
-		B985D46E0F5A110B00AB21D0 /* NSData+Bzip2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Bzip2.m"; sourceTree = "<group>"; };
 		B985D4720F5A111200AB21D0 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		B985D4730F5A111200AB21D0 /* arrows.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = arrows.frag; sourceTree = "<group>"; };
 		B985D4740F5A111200AB21D0 /* arrows.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = arrows.vert; sourceTree = "<group>"; };
-		B985D4750F5A111200AB21D0 /* block.dat.bz2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = block.dat.bz2; sourceTree = "<group>"; };
-		B985D4760F5A111200AB21D0 /* block.gri.bz2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = block.gri.bz2; sourceTree = "<group>"; };
 		B985D4770F5A111200AB21D0 /* color.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = color.frag; sourceTree = "<group>"; };
 		B985D4780F5A111200AB21D0 /* color.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = color.vert; sourceTree = "<group>"; };
 		B985D47A0F5A111200AB21D0 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -75,7 +69,6 @@
 		B985D47F0F5A111200AB21D0 /* FlowCore.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = FlowCore.icns; sourceTree = "<group>"; };
 		B985D4800F5A111200AB21D0 /* FlowCoreDocument.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = FlowCoreDocument.icns; sourceTree = "<group>"; };
 		B985D4850F5A111200AB21D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B985D4A20F5A113100AB21D0 /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = Frameworks/BGHUDAppKit.framework; sourceTree = "<group>"; };
 		B9CA93260F62068A0059E7D1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +79,6 @@
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
 				B975C1FF0EAFD19B00932C34 /* OpenGL.framework in Frameworks */,
-				B985D4A30F5A113100AB21D0 /* BGHUDAppKit.framework in Frameworks */,
 				B9CA93270F62068A0059E7D1 /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				B9CA93260F62068A0059E7D1 /* Carbon.framework */,
-				B985D4A20F5A113100AB21D0 /* BGHUDAppKit.framework */,
 				B975C1FE0EAFD19B00932C34 /* OpenGL.framework */,
 				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
 				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
@@ -162,8 +153,6 @@
 				B985D46A0F5A110B00AB21D0 /* FlowCore.h */,
 				B985D46B0F5A110B00AB21D0 /* FlowCore_Prefix.pch */,
 				B985D46C0F5A110B00AB21D0 /* main.mm */,
-				B985D46D0F5A110B00AB21D0 /* NSData+Bzip2.h */,
-				B985D46E0F5A110B00AB21D0 /* NSData+Bzip2.m */,
 			);
 			path = "Other Sources";
 			sourceTree = "<group>";
@@ -175,8 +164,8 @@
 				B985D4720F5A111200AB21D0 /* arrow.png */,
 				B985D4730F5A111200AB21D0 /* arrows.frag */,
 				B985D4740F5A111200AB21D0 /* arrows.vert */,
-				B985D4750F5A111200AB21D0 /* block.dat.bz2 */,
-				B985D4760F5A111200AB21D0 /* block.gri.bz2 */,
+				B909709B1B0A62B90086CCA2 /* block.dat */,
+				B909709C1B0A62B90086CCA2 /* block.gri */,
 				B985D4770F5A111200AB21D0 /* color.frag */,
 				B985D4780F5A111200AB21D0 /* color.vert */,
 				B985D4790F5A111200AB21D0 /* Credits.rtf */,
@@ -217,9 +206,16 @@
 /* Begin PBXProject section */
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+			};
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "FlowCore" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* FlowCore */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,13 +232,13 @@
 			files = (
 				B985D4880F5A111200AB21D0 /* arrow.png in Resources */,
 				B985D4890F5A111200AB21D0 /* arrows.frag in Resources */,
+				B909709D1B0A63BF0086CCA2 /* block.dat in Resources */,
 				B985D48A0F5A111200AB21D0 /* arrows.vert in Resources */,
-				B985D48B0F5A111200AB21D0 /* block.dat.bz2 in Resources */,
-				B985D48C0F5A111200AB21D0 /* block.gri.bz2 in Resources */,
 				B985D48D0F5A111200AB21D0 /* color.frag in Resources */,
 				B985D48E0F5A111200AB21D0 /* color.vert in Resources */,
 				B985D48F0F5A111200AB21D0 /* Credits.rtf in Resources */,
 				B985D4900F5A111200AB21D0 /* FlowDocument.xib in Resources */,
+				B909709E1B0A63C10086CCA2 /* block.gri in Resources */,
 				B985D4910F5A111200AB21D0 /* MainMenu.xib in Resources */,
 				B985D4920F5A111200AB21D0 /* FlowCore.icns in Resources */,
 				B985D4930F5A111200AB21D0 /* FlowCoreDocument.icns in Resources */,
@@ -276,7 +272,6 @@
 				B985D4660F5A10F700AB21D0 /* FlowDocument.mm in Sources */,
 				B985D4680F5A10F700AB21D0 /* TransferFunctionView.m in Sources */,
 				B985D46F0F5A110B00AB21D0 /* main.mm in Sources */,
-				B985D4700F5A110B00AB21D0 /* NSData+Bzip2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +308,6 @@
 		B985D4EB0F5A14C000AB21D0 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = i386;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -323,15 +317,13 @@
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/FlowCore_Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"Foreign Code/cml/\"",
-				);
+				HEADER_SEARCH_PATHS = "\"Foreign Code/cml/\"";
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_LDFLAGS = "-lbz2";
 				PREBINDING = NO;
 				PRODUCT_NAME = FlowCore;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -340,25 +332,27 @@
 		B985D4EC0F5A14C000AB21D0 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = "Release-Deployment";
 		};
 		C05733C808A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Debug;
 		};
 		C05733C908A9546B00998B17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Release;
 		};
 		C05733CC08A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = i386;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks/\"",
@@ -367,15 +361,14 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/FlowCore_Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"Foreign Code/cml/\"",
-				);
+				HEADER_SEARCH_PATHS = "\"Foreign Code/cml/\"";
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lbz2";
 				PREBINDING = NO;
 				PRODUCT_NAME = FlowCore;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -384,7 +377,6 @@
 		C05733CD08A9546B00998B17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = i386;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks/\"",
@@ -393,15 +385,13 @@
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/FlowCore_Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"Foreign Code/cml/\"",
-				);
+				HEADER_SEARCH_PATHS = "\"Foreign Code/cml/\"";
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_LDFLAGS = "-lbz2";
 				PREBINDING = NO;
 				PRODUCT_NAME = FlowCore;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};

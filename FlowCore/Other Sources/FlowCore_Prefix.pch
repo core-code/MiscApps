@@ -11,7 +11,6 @@
 
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
-	#import "NSData+Bzip2.h"	
 #endif
 
 #define fatal(fmt, ...) {char *tmp = NULL; asprintf (&tmp, fmt, ## __VA_ARGS__); fprintf(stderr, fmt, ## __VA_ARGS__); NSRunCriticalAlertPanel(@"Core3D", [NSString stringWithUTF8String:tmp], @"OK", nil, nil); exit(1);}

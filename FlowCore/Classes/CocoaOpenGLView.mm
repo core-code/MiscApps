@@ -70,19 +70,16 @@
 		int result;
 		NSOpenPanel *oPanel = [NSOpenPanel openPanel];
 		
-		result = [oPanel runModalForDirectory:NSHomeDirectory() file:nil types:[NSArray arrayWithObjects:@"dat", @"bz2", nil]];
+		result = [oPanel runModalForDirectory:NSHomeDirectory() file:nil types:[NSArray arrayWithObjects:@"dat", nil]];
 		if (result == NSOKButton)
 		{			
 			datData = [NSData dataWithContentsOfFile:[oPanel filename]];
-			if ([[oPanel filename] hasSuffix:@"bz2"])
-				datData = [datData bunzip2];
 			
-			result = [oPanel runModalForDirectory:NSHomeDirectory() file:nil types:[NSArray arrayWithObjects:@"gri", @"bz2", nil]];
+			result = [oPanel runModalForDirectory:NSHomeDirectory() file:nil types:[NSArray arrayWithObjects:@"gri", nil]];
 			if (result == NSOKButton)
 			{			
 				griData = [NSData dataWithContentsOfFile:[oPanel filename]];
-				if ([[oPanel filename] hasSuffix:@"bz2"])
-					griData = [griData bunzip2];
+
 			}
 			else
 				[[doc datasetPopUp] selectItemAtIndex:1];			
@@ -94,8 +91,8 @@
 	if ([[doc datasetPopUp] indexOfSelectedItem] < 1)
 	{
 		NSArray *array = [NSArray arrayWithObjects:@"block", nil];
-		datData = [[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[array objectAtIndex:[[doc datasetPopUp] indexOfSelectedItem]] ofType:@"dat.bz2"]] bunzip2];
-		griData = [[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[array objectAtIndex:[[doc datasetPopUp] indexOfSelectedItem]] ofType:@"gri.bz2"]] bunzip2];
+		datData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[array objectAtIndex:[[doc datasetPopUp] indexOfSelectedItem]] ofType:@"dat"]];
+		griData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:[array objectAtIndex:[[doc datasetPopUp] indexOfSelectedItem]] ofType:@"gri"]];
 	}
 
 	char buf[40];
