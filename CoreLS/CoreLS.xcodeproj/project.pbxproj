@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		B985CF460F4B0AE800CE9205 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		B985CF470F4B0AE800CE9205 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B999E3780EF45AC10023592E /* OpenGL.framework */; };
-		B985CF480F4B0AE800CE9205 /* BGHUDAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B934FA5B0EF7195200B0FC5F /* BGHUDAppKit.framework */; };
-		B985CF4A0F4B0AE800CE9205 /* BGHUDAppKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B934FA5B0EF7195200B0FC5F /* BGHUDAppKit.framework */; };
 		B99DD22C1482C0CF00A8162F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99DD22B1482C0CF00A8162F /* MainMenu.xib */; };
 		B9C9EDAB0F560E4300FCBFA2 /* Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D0C00F56078600438E31 /* Camera.mm */; };
 		B9C9EDAD0F560E4300FCBFA2 /* CocoaOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1960F56078600438E31 /* CocoaOpenGLView.mm */; };
@@ -30,7 +28,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B985CF4A0F4B0AE800CE9205 /* BGHUDAppKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +37,6 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		B934FA5B0EF7195200B0FC5F /* BGHUDAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BGHUDAppKit.framework; path = Frameworks/BGHUDAppKit.framework; sourceTree = "<group>"; };
 		B985CF4E0F4B0AE800CE9205 /* CoreLS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreLS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B999E3780EF45AC10023592E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		B99DD22B1482C0CF00A8162F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
@@ -74,7 +70,6 @@
 			files = (
 				B985CF460F4B0AE800CE9205 /* Cocoa.framework in Frameworks */,
 				B985CF470F4B0AE800CE9205 /* OpenGL.framework in Frameworks */,
-				B985CF480F4B0AE800CE9205 /* BGHUDAppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +79,6 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B934FA5B0EF7195200B0FC5F /* BGHUDAppKit.framework */,
 				B999E3780EF45AC10023592E /* OpenGL.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
@@ -201,7 +195,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0640;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CoreLS" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -269,19 +263,20 @@
 		B985CF4C0F4B0AE800CE9205 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Debug;
 		};
 		B985CF4D0F4B0AE800CE9205 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = Release;
 		};
 		B9C9EDEC0F560ED000FCBFA2 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = i386;
 				DEPLOYMENT_POSTPROCESSING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,13 +288,12 @@
 				GCC_PREFIX_HEADER = Classes/Engine/Core3D_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"Classes/Engine/**",
-					Foreign,
-					"Code/**",
+					"\"Foreign Code\"/**",
 				);
 				INFOPLIST_FILE = Resources/Info.plist;
 				OTHER_LDFLAGS = "-lbz2";
 				PRODUCT_NAME = CoreLS;
-				SDKROOT = "";
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -308,13 +302,13 @@
 		B9C9EDED0F560ED000FCBFA2 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 			};
 			name = "Release-Deployment";
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = i386;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks/\"",
@@ -324,13 +318,13 @@
 				GCC_PREFIX_HEADER = Classes/Engine/Core3D_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"Classes/Engine/**",
-					Foreign,
-					"Code/**",
+					"\"Foreign Code\"/**",
 				);
 				INFOPLIST_FILE = Resources/Info.plist;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lbz2";
 				PRODUCT_NAME = CoreLS;
-				SDKROOT = "";
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -339,7 +333,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = i386;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks/\"",
@@ -350,13 +343,12 @@
 				GCC_PREFIX_HEADER = Classes/Engine/Core3D_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"Classes/Engine/**",
-					Foreign,
-					"Code/**",
+					"\"Foreign Code\"/**",
 				);
 				INFOPLIST_FILE = Resources/Info.plist;
 				OTHER_LDFLAGS = "-lbz2";
 				PRODUCT_NAME = CoreLS;
-				SDKROOT = "";
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
