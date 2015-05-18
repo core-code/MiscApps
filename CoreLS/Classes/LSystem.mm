@@ -75,6 +75,9 @@ LSystem *gLSystem;
 
 - (IBAction)presetActivated:(id)sender
 {
+	[gField setStringValue:@""];
+	primitiveMode = 1;
+
 	if ([sender indexOfSelectedItem] == 1)
 	{
 		[axiomField setStringValue:@"F[zF][F][ZF][xF][XF][yF][YF]"];
@@ -119,7 +122,22 @@ LSystem *gLSystem;
 		[self setRadius:10];
 		[self rebuild:self];
 		[self resetCameraFront:self];	
-	}	
+	}
+
+	else if ([sender indexOfSelectedItem] == 5)
+	{
+		primitiveMode = 0;
+		[axiomField setStringValue:@"CF"];
+		[fField setStringValue:@"FzGCz"];
+		[gField setStringValue:@"ZCFZG"];
+		[self setAngle:90];
+		[self setColor:[NSColor whiteColor]];
+		[self setSubdivision:14];
+		[self setLength:1];
+		[self setRadius:1];
+		[self rebuild:self];
+		[self resetCameraFront:self];
+	}
 }
 
 #define MAGICNUM 1.35 // why do we need this magic number? my trigonometry sucks
@@ -189,35 +207,6 @@ LSystem *gLSystem;
 	{
 		switch ([system characterAtIndex:i])
 		{
-			case 'F':
-			case 'G':
-				if (primitiveMode)
-				{
-					glPushMatrix();		
-					glTranslatef(0, length, 0);				
-					glRotatef(90, 1, 0, 0);		
-					gluCylinder(quadric, radius, radius, length, [slicesField intValue], [stacksField intValue]);
-					glPopMatrix();	
-				}
-				else
-				{
-					glBegin(GL_LINES);	
-					glVertex3f(0, 0, 0);
-					glVertex3f(0, length, 0);				
-					glEnd();
-				}
-
-				glTranslatef(0, length, 0);		
-				
-				GLfloat mvm[16];
-				glGetFloatv(GL_MODELVIEW_MATRIX, mvm);		// (ab)use opengl to record maximum extents for camera placement
-				if  (mvm[12] < min[0]) min[0] = mvm [12];
-				if  (mvm[13] < min[1]) min[1] = mvm [13];
-				if  (mvm[14] < min[2]) min[2] = mvm [14];
-				if  (mvm[12] > max[0]) max[0] = mvm [12];
-				if  (mvm[13] > max[1]) max[1] = mvm [13];
-				if  (mvm[14] > max[2]) max[2] = mvm [14];
-				break;
 			case 'x':
 				glRotatef(-angle, 1, 0, 0);			
 				break;
@@ -241,7 +230,37 @@ LSystem *gLSystem;
 				break;
 			case ']':
 				glPopMatrix();				
-				break;						
+				break;
+			case 'F':
+			case 'G':
+			default:
+				if (primitiveMode)
+				{
+					glPushMatrix();
+					glTranslatef(0, length, 0);
+					glRotatef(90, 1, 0, 0);
+					gluCylinder(quadric, radius, radius, length, [slicesField intValue], [stacksField intValue]);
+					glPopMatrix();
+				}
+				else
+				{
+					glBegin(GL_LINES);
+					glVertex3f(0, 0, 0);
+					glVertex3f(0, length, 0);
+					glEnd();
+				}
+
+				glTranslatef(0, length, 0);
+
+				GLfloat mvm[16];
+				glGetFloatv(GL_MODELVIEW_MATRIX, mvm);		// (ab)use opengl to record maximum extents for camera placement
+				if  (mvm[12] < min[0]) min[0] = mvm [12];
+				if  (mvm[13] < min[1]) min[1] = mvm [13];
+				if  (mvm[14] < min[2]) min[2] = mvm [14];
+				if  (mvm[12] > max[0]) max[0] = mvm [12];
+				if  (mvm[13] > max[1]) max[1] = mvm [13];
+				if  (mvm[14] > max[2]) max[2] = mvm [14];
+				break;
 		}
 	}
 
