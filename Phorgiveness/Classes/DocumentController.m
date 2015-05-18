@@ -30,7 +30,7 @@ int 	items [2] = {39, 40};
 - (IBAction)PowerupsTFSet:(id)sender
 {
 	printf("PowerupsTFSet\n");
-	printf("[PowerupsPU indexOfSelectedItem] %i \n",[PowerupsPU indexOfSelectedItem]);
+	printf("[PowerupsPU indexOfSelectedItem] %li \n",(long)[PowerupsPU indexOfSelectedItem]);
 	printf("sData.items[powerups[[PowerupsPU indexOfSelectedItem]]] %i \n", sData.items[powerups[[PowerupsPU indexOfSelectedItem]]]);
 	printf("[sender intValue] %i \n", [sender intValue]);
 
@@ -185,8 +185,8 @@ int 	items [2] = {39, 40};
 	FILE *fp;
 	int itemswritten;
 
-	printf([fileName cString]);
-	printf([type cString]);
+	printf("%s", [fileName UTF8String]);
+	printf("%s", [type UTF8String]);
 
 	sData.items[0] = [EnergyTF intValue];
 	sData.items[1] = [OxygenTF intValue];
@@ -201,7 +201,7 @@ int 	items [2] = {39, 40};
 		exit(1);
 	}
 
-	BlockMove(&sData, filebuffer + datalocation, sizeof(SavedData));
+	memcpy(filebuffer + datalocation, &sData, sizeof(SavedData));
 	itemswritten = fwrite(filebuffer, filesize, 1, fp);
 
 	if (itemswritten != 1)
@@ -219,7 +219,7 @@ int 	items [2] = {39, 40};
 	FILE *fp;
 	int i;
 
-	printf([fileName cString]);
+	printf("%s", [fileName cString]);
 	filebuffer = (char *) malloc(1024 * 1024);
 
 	if ((fp = fopen([fileName cString], "rb")) == NULL)
@@ -229,9 +229,10 @@ int 	items [2] = {39, 40};
 	}
 
 	filesize = fread(filebuffer, 1, 1024 * 1024, fp);
+	#error this worked on ppc but is surely broken on x64
 	datalocation = [self FindDataLocation:filebuffer bufferSize:filesize];
 	datalocation += 68;
-	BlockMove(filebuffer + datalocation, &sData, sizeof(SavedData));
+	memcpy(&sData, filebuffer + datalocation, sizeof(SavedData));
 
 	for (i = 0; i < 80; i++)
 		printf("item %i is %i\n", i, sData.items[i]);
@@ -244,7 +245,7 @@ int 	items [2] = {39, 40};
 {
 	NSMutableDictionary	*dict = [NSMutableDictionary dictionaryWithDictionary: [super fileAttributesToWriteToFile:fullDocumentPath ofType:documentTypeName saveOperation:saveOperationType]];
 
-	[dict setObject:[NSNumber numberWithUnsignedLong:'sga°'] forKey:NSFileHFSTypeCode];
+	[dict setObject:[NSNumber numberWithUnsignedLong:'sga\xA1'] forKey:NSFileHFSTypeCode];
 	[dict setObject:[NSNumber numberWithUnsignedLong:'26.A'] forKey:NSFileHFSCreatorCode];
 
 	return dict;
