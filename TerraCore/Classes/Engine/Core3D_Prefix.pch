@@ -2,6 +2,8 @@
 #include <mach/mach.h>
 #include <mach/mach_time.h>
 
+#undef TARGET_OS_IPHONE
+
 #ifdef TARGET_OS_IPHONE
 	#import <QuartzCore/QuartzCore.h>
 	#ifdef __OBJC__
@@ -25,7 +27,6 @@
 	
 	#ifdef __OBJC__
 		#import <Cocoa/Cocoa.h>
-		#import "NSData+Bzip2.h"	
 	#endif
 	#define Color NSColor	
 #endif

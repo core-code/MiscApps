@@ -31,8 +31,6 @@ static void vfcTestOctreeNode(struct octree_struct *octree, uint16 *visibleNodeS
 
 		NSData *octreeData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:@"octree"]];
 	
-		if (!octreeData)
-			octreeData = [[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:@"octree.bz2"]] bunzip2];
 		
 		if (!octreeData)
 			fatal("Error: there is no octree named: %s", [name UTF8String]);
@@ -171,9 +169,11 @@ static void vfcTestOctreeNode(struct octree_struct *octree, uint16 *visibleNodeS
 		#ifndef TARGET_OS_IPHONE
 		CGFloat rgba[4];
 		[[color colorUsingColorSpaceName:NSCalibratedRGBColorSpace] getRed:&rgba[0] green:&rgba[1] blue:&rgba[2] alpha:&rgba[3]];
-		glColor4fv(rgba);
+		GLfloat rgba2[4] = {rgba[0],rgba[1],rgba[2],rgba[3]};
+		glColor4fv(rgba2);
 		[[specularColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace] getRed:&rgba[0] green:&rgba[1] blue:&rgba[2] alpha:&rgba[3]];
-		glMaterialfv(GL_FRONT, GL_SPECULAR, rgba);
+		GLfloat rgba3[4] = {rgba[0],rgba[1],rgba[2],rgba[3]};
+		glMaterialfv(GL_FRONT, GL_SPECULAR, rgba3);
 		#else
 		const CGFloat *rgba = CGColorGetComponents(color.CGColor);
 		glColor4fv(rgba);

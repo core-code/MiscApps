@@ -33,7 +33,7 @@ Scene *scene = nil;
 		globalInfo.renderpass = kMainRenderPass;	
 		globalInfo.frame = 0;
 			
-		([[NSString stringWithCString:(const char *)glGetString(GL_VENDOR)] hasPrefix:@"NVIDIA"]) ? globalInfo.gpuVendor = kNVIDIA : globalInfo.gpuVendor = kATI; // FIXME: if we ever get intel ogl 2.0 cards ...
+		([@((const char *)glGetString(GL_VENDOR)) hasPrefix:@"NVIDIA"]) ? globalInfo.gpuVendor = kNVIDIA : globalInfo.gpuVendor = kATI; // FIXME: if we ever get intel ogl 2.0 cards ...
 
 		globalSettings.shadowFiltering = (shadowFilteringEnum) [[NSUserDefaults standardUserDefaults] integerForKey:@"shadowFiltering"];
 		globalSettings.shadowMode = (shadowModeEnum) [[NSUserDefaults standardUserDefaults] integerForKey:@"shadowMode"];

@@ -14,7 +14,6 @@
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<string>com.binarymethod.BGHUDAppKitPlugin</string>
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.Metadata">
@@ -292,7 +291,7 @@
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="BGHUDLabel" id="598939889">
+						<object class="NSTextField" id="598939889">
 							<reference key="NSNextResponder" ref="1026640728"/>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{20, 601}, {124, 17}}</string>
@@ -312,7 +311,7 @@
 							</object>
 							<string key="themeKey">gradientTheme</string>
 						</object>
-						<object class="BGHUDLabel" id="889563447">
+						<object class="NSTextField" id="889563447">
 							<reference key="NSNextResponder" ref="1026640728"/>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{20, 428}, {124, 11}}</string>
@@ -333,7 +332,7 @@
 							</object>
 							<string key="themeKey">gradientTheme</string>
 						</object>
-						<object class="BGHUDLabel" id="26277552">
+						<object class="NSTextField" id="26277552">
 							<reference key="NSNextResponder" ref="1026640728"/>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{24, 554}, {108, 11}}</string>
@@ -370,7 +369,7 @@
 											<int key="NSNumCols">1</int>
 											<object class="NSMutableArray" key="NSCells">
 												<bool key="EncodedWithXMLCoder">YES</bool>
-												<object class="BGHUDButtonCell" id="539252958">
+												<object class="NSButtonCell" id="539252958">
 													<int key="NSCellFlags">-2080244224</int>
 													<int key="NSCellFlags2">0</int>
 													<string key="NSContents">Wireframe only</string>
@@ -391,7 +390,7 @@
 													<int key="NSPeriodicInterval">25</int>
 													<string key="themeKey">gradientTheme</string>
 												</object>
-												<object class="BGHUDButtonCell" id="384544166">
+												<object class="NSButtonCell" id="384544166">
 													<int key="NSCellFlags">67239424</int>
 													<int key="NSCellFlags2">0</int>
 													<string key="NSContents">Shaded</string>
@@ -407,7 +406,7 @@
 													<int key="NSPeriodicInterval">25</int>
 													<string key="themeKey">gradientTheme</string>
 												</object>
-												<object class="BGHUDButtonCell" id="836951683">
+												<object class="NSButtonCell" id="836951683">
 													<int key="NSCellFlags">67239424</int>
 													<int key="NSCellFlags2">0</int>
 													<string key="NSContents">Shaded + Heightcoding</string>
@@ -423,7 +422,7 @@
 													<int key="NSPeriodicInterval">25</int>
 													<string key="themeKey">gradientTheme</string>
 												</object>
-												<object class="BGHUDButtonCell" id="953361505">
+												<object class="NSButtonCell" id="953361505">
 													<int key="NSCellFlags">67239424</int>
 													<int key="NSCellFlags2">0</int>
 													<string key="NSContents">Shaded + Terraintexturing</string>
@@ -444,7 +443,7 @@
 											<string key="NSIntercellSpacing">{0, 3}</string>
 											<int key="NSMatrixFlags">1140858880</int>
 											<nil key="NSCellClass"/>
-											<object class="BGHUDButtonCell" key="NSProtoCell" id="13161144">
+											<object class="NSButtonCell" key="NSProtoCell" id="13161144">
 												<int key="NSCellFlags">-2080244224</int>
 												<int key="NSCellFlags2">0</int>
 												<string key="NSContents">Wireframe</string>
@@ -469,7 +468,7 @@
 											<string key="NSFrame">{{18, 106}, {141, 18}}</string>
 											<reference key="NSSuperview" ref="412911901"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="BGHUDButtonCell" key="NSCell" id="312778191">
+											<object class="NSButtonCell" key="NSCell" id="312778191">
 												<int key="NSCellFlags">-2080244224</int>
 												<int key="NSCellFlags2">0</int>
 												<string key="NSContents">Overlay heightmap</string>
@@ -497,7 +496,7 @@
 											<string key="NSFrame">{{18, 86}, {202, 18}}</string>
 											<reference key="NSSuperview" ref="412911901"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="BGHUDButtonCell" key="NSCell" id="78568954">
+											<object class="NSButtonCell" key="NSCell" id="78568954">
 												<int key="NSCellFlags">-2080244224</int>
 												<int key="NSCellFlags2">0</int>
 												<string key="NSContents">Bi-linear heightmap filtering</string>
@@ -520,7 +519,7 @@
 											<string key="NSFrame">{{18, 126}, {141, 18}}</string>
 											<reference key="NSSuperview" ref="412911901"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="BGHUDButtonCell" key="NSCell" id="153585748">
+											<object class="NSButtonCell" key="NSCell" id="153585748">
 												<int key="NSCellFlags">-2080244224</int>
 												<int key="NSCellFlags2">0</int>
 												<string key="NSContents">Add Wireframe</string>
@@ -543,7 +542,7 @@
 											<string key="NSFrame">{{221, 44}, {41, 22}}</string>
 											<reference key="NSSuperview" ref="412911901"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="BGHUDTextFieldCell" key="NSCell" id="303775351">
+											<object class="NSTextFieldCell" key="NSCell" id="303775351">
 												<int key="NSCellFlags">-2075001280</int>
 												<int key="NSCellFlags2">272630784</int>
 												<string key="NSContents"/>
@@ -558,7 +557,7 @@
 												<reference key="NSTextColor" ref="143457013"/>
 											</object>
 										</object>
-										<object class="BGHUDLabel" id="885345619">
+										<object class="NSTextField" id="885345619">
 											<reference key="NSNextResponder" ref="412911901"/>
 											<int key="NSvFlags">268</int>
 											<string key="NSFrame">{{20, 47}, {89, 17}}</string>
@@ -581,7 +580,7 @@
 											<string key="NSFrame">{{112, 43}, {104, 21}}</string>
 											<reference key="NSSuperview" ref="412911901"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="BGHUDSliderCell" key="NSCell" id="444336641">
+											<object class="NSSliderCell" key="NSCell" id="444336641">
 												<int key="NSCellFlags">67239424</int>
 												<int key="NSCellFlags2">0</int>
 												<string key="NSContents"/>
@@ -608,7 +607,7 @@
 											<string key="NSFrame">{{221, 14}, {41, 22}}</string>
 											<reference key="NSSuperview" ref="412911901"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="BGHUDTextFieldCell" key="NSCell" id="17557410">
+											<object class="NSTextFieldCell" key="NSCell" id="17557410">
 												<int key="NSCellFlags">-2075001280</int>
 												<int key="NSCellFlags2">-1874852864</int>
 												<string key="NSContents"/>
@@ -685,7 +684,7 @@
 												<reference key="NSTextColor" ref="143457013"/>
 											</object>
 										</object>
-										<object class="BGHUDLabel" id="792762606">
+										<object class="NSTextField" id="792762606">
 											<reference key="NSNextResponder" ref="412911901"/>
 											<int key="NSvFlags">268</int>
 											<string key="NSFrame">{{23, 17}, {86, 17}}</string>
@@ -708,7 +707,7 @@
 											<string key="NSFrame">{{112, 13}, {104, 21}}</string>
 											<reference key="NSSuperview" ref="412911901"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="BGHUDSliderCell" key="NSCell" id="1050422236">
+											<object class="NSSliderCell" key="NSCell" id="1050422236">
 												<int key="NSCellFlags">-2080244224</int>
 												<int key="NSCellFlags2">0</int>
 												<string key="NSContents"/>
@@ -776,7 +775,7 @@
 							<int key="NSTitlePosition">2</int>
 							<bool key="NSTransparent">NO</bool>
 						</object>
-						<object class="BGHUDLabel" id="827689875">
+						<object class="NSTextField" id="827689875">
 							<reference key="NSNextResponder" ref="1026640728"/>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{17, 326}, {124, 11}}</string>
@@ -799,7 +798,7 @@
 							<string key="NSFrame">{{143, 595}, {154, 26}}</string>
 							<reference key="NSSuperview" ref="1026640728"/>
 							<bool key="NSEnabled">YES</bool>
-							<object class="BGHUDPopUpButtonCell" key="NSCell" id="1001625477">
+							<object class="NSPopUpButtonCell" key="NSCell" id="1001625477">
 								<int key="NSCellFlags">-2076049856</int>
 								<int key="NSCellFlags2">2048</int>
 								<reference key="NSSupport" ref="331131623"/>
@@ -903,7 +902,7 @@
 									<int key="NSvFlags">256</int>
 									<object class="NSMutableArray" key="NSSubviews">
 										<bool key="EncodedWithXMLCoder">YES</bool>
-										<object class="BGHUDLabel" id="554290304">
+										<object class="NSTextField" id="554290304">
 											<reference key="NSNextResponder" ref="705092271"/>
 											<int key="NSvFlags">268</int>
 											<string key="NSFrame">{{15, 9}, {123, 68}}</string>
@@ -921,7 +920,7 @@ cmlhbmdsZXM6A</string>
 											</object>
 											<string key="themeKey">gradientTheme</string>
 										</object>
-										<object class="BGHUDLabel" id="558827539">
+										<object class="NSTextField" id="558827539">
 											<reference key="NSNextResponder" ref="705092271"/>
 											<int key="NSvFlags">268</int>
 											<string key="NSFrame">{{152, 9}, {113, 68}}</string>
@@ -991,7 +990,7 @@ cmlhbmdsZXM6A</string>
 							<string key="NSFrame">{{20, 18}, {274, 19}}</string>
 							<reference key="NSSuperview" ref="1026640728"/>
 							<bool key="NSEnabled">YES</bool>
-							<object class="BGHUDButtonCell" key="NSCell" id="635570280">
+							<object class="NSButtonCell" key="NSCell" id="635570280">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
 								<string key="NSContents">Regenerate Terrain with new seed value</string>
@@ -1017,7 +1016,7 @@ cmlhbmdsZXM6A</string>
 							<string key="NSFrame">{{20, 43}, {133, 19}}</string>
 							<reference key="NSSuperview" ref="1026640728"/>
 							<bool key="NSEnabled">YES</bool>
-							<object class="BGHUDButtonCell" key="NSCell" id="774327092">
+							<object class="NSButtonCell" key="NSCell" id="774327092">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
 								<string key="NSContents">Stop Camera</string>
@@ -1039,7 +1038,7 @@ cmlhbmdsZXM6A</string>
 							<string key="NSFrame">{{161, 43}, {133, 19}}</string>
 							<reference key="NSSuperview" ref="1026640728"/>
 							<bool key="NSEnabled">YES</bool>
-							<object class="BGHUDButtonCell" key="NSCell" id="120477879">
+							<object class="NSButtonCell" key="NSCell" id="120477879">
 								<int key="NSCellFlags">-2080244224</int>
 								<int key="NSCellFlags2">134217728</int>
 								<string key="NSContents">Reset Camera</string>
@@ -1093,7 +1092,7 @@ cmlhbmdsZXM6A</string>
 											<string key="NSFrame">{{109, 13}, {104, 21}}</string>
 											<reference key="NSSuperview" ref="754925191"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="BGHUDSliderCell" key="NSCell" id="446962398">
+											<object class="NSSliderCell" key="NSCell" id="446962398">
 												<int key="NSCellFlags">67239424</int>
 												<int key="NSCellFlags2">0</int>
 												<string key="NSContents"/>
@@ -1110,7 +1109,7 @@ cmlhbmdsZXM6A</string>
 												<string key="themeKey">gradientTheme</string>
 											</object>
 										</object>
-										<object class="BGHUDLabel" id="1042702764">
+										<object class="NSTextField" id="1042702764">
 											<reference key="NSNextResponder" ref="754925191"/>
 											<int key="NSvFlags">268</int>
 											<string key="NSFrame">{{15, 17}, {91, 17}}</string>
@@ -1133,7 +1132,7 @@ cmlhbmdsZXM6A</string>
 											<string key="NSFrame">{{218, 44}, {41, 22}}</string>
 											<reference key="NSSuperview" ref="754925191"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="BGHUDTextFieldCell" key="NSCell" id="45601995">
+											<object class="NSTextFieldCell" key="NSCell" id="45601995">
 												<int key="NSCellFlags">-2075001280</int>
 												<int key="NSCellFlags2">-1874852864</int>
 												<string key="NSContents"/>
@@ -1197,7 +1196,7 @@ cmlhbmdsZXM6A</string>
 											<string key="NSFrame">{{109, 43}, {104, 21}}</string>
 											<reference key="NSSuperview" ref="754925191"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="BGHUDSliderCell" key="NSCell" id="357320461">
+											<object class="NSSliderCell" key="NSCell" id="357320461">
 												<int key="NSCellFlags">67239424</int>
 												<int key="NSCellFlags2">0</int>
 												<string key="NSContents"/>
@@ -1220,7 +1219,7 @@ cmlhbmdsZXM6A</string>
 											<string key="NSFrame">{{218, 74}, {41, 22}}</string>
 											<reference key="NSSuperview" ref="754925191"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="BGHUDTextFieldCell" key="NSCell" id="445369861">
+											<object class="NSTextFieldCell" key="NSCell" id="445369861">
 												<int key="NSCellFlags">-2075001280</int>
 												<int key="NSCellFlags2">272630784</int>
 												<string key="NSContents"/>
@@ -1230,7 +1229,7 @@ cmlhbmdsZXM6A</string>
 												<reference key="NSTextColor" ref="143457013"/>
 											</object>
 										</object>
-										<object class="BGHUDLabel" id="923260049">
+										<object class="NSTextField" id="923260049">
 											<reference key="NSNextResponder" ref="754925191"/>
 											<int key="NSvFlags">268</int>
 											<string key="NSFrame">{{25, 76}, {81, 17}}</string>
@@ -1247,7 +1246,7 @@ cmlhbmdsZXM6A</string>
 											</object>
 											<string key="themeKey">gradientTheme</string>
 										</object>
-										<object class="BGHUDLabel" id="944328966">
+										<object class="NSTextField" id="944328966">
 											<reference key="NSNextResponder" ref="754925191"/>
 											<int key="NSvFlags">268</int>
 											<string key="NSFrame">{{23, 47}, {83, 17}}</string>
@@ -1270,7 +1269,7 @@ cmlhbmdsZXM6A</string>
 											<string key="NSFrame">{{218, 14}, {41, 22}}</string>
 											<reference key="NSSuperview" ref="754925191"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="BGHUDTextFieldCell" key="NSCell" id="339871971">
+											<object class="NSTextFieldCell" key="NSCell" id="339871971">
 												<int key="NSCellFlags">-2075001280</int>
 												<int key="NSCellFlags2">272630784</int>
 												<string key="NSContents"/>
@@ -1286,7 +1285,7 @@ cmlhbmdsZXM6A</string>
 											<string key="NSFrame">{{111, 75}, {100, 18}}</string>
 											<reference key="NSSuperview" ref="754925191"/>
 											<bool key="NSEnabled">YES</bool>
-											<object class="BGHUDSliderCell" key="NSCell" id="859873299">
+											<object class="NSSliderCell" key="NSCell" id="859873299">
 												<int key="NSCellFlags">-2080244224</int>
 												<int key="NSCellFlags2">131072</int>
 												<string key="NSContents"/>
@@ -2780,75 +2779,40 @@ cmlhbmdsZXM6A</string>
 					<object class="NSMutableArray">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 					</object>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<reference ref="5"/>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{948, 802}, {154, 113}}</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2859,20 +2823,55 @@ cmlhbmdsZXM6A</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
-					<string>com.binarymethod.BGHUDAppKitPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
