@@ -70,3 +70,6 @@ An application for converting Video-DVDs to high-quality MPEG4 video files.
 
 LayoutTest
 Source code for verifying whether a large number of dynamic strings in numerous translations fit their given text fields.
+
+WindowTiler
+When launched, tiles all windows of the frontmost app to cover the screen equally. Must use external mechanism to launch with hotkey.
