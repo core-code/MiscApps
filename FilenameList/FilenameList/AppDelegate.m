@@ -67,8 +67,8 @@
 
 - (void)updatePreview
 {
-	NSStringArray *names = _txtPathControl.URL.contents.string.trimmedOfWhitespaceAndNewlines.lines;
-	NSURLArray *filenames = [_dirPathControl.URL.dirContents filtered:^int(NSURL *input)
+	NSArray <NSString *> *names = _txtPathControl.URL.contents.string.trimmedOfWhitespaceAndNewlines.lines;
+	NSArray <NSURL *> *filenames = [_dirPathControl.URL.dirContents filtered:^BOOL(NSURL *input)
 	{
 		 return ![input.path contains:@"/."];
 	}].id;
@@ -103,8 +103,8 @@
 
 - (IBAction)continue:(id)sender
 {
-	NSStringArray *names = _txtPathControl.URL.contents.string.lines;
-	NSURLArray *filenames = [_dirPathControl.URL.dirContents filtered:^int(NSURL *input)
+	NSArray <NSString *> *names = _txtPathControl.URL.contents.string.lines;
+	NSArray <NSURL *> *filenames = [_dirPathControl.URL.dirContents filtered:^BOOL(NSURL *input)
 	{
 		return ![input.path contains:@"/."];
 	}].id;

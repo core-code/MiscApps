@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B9C109A91BC44502008CF4DB /* JMHostInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C109A81BC44502008CF4DB /* JMHostInformation.m */; settings = {ASSET_TAGS = (); }; };
+		B9C109A91BC44502008CF4DB /* JMHostInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C109A81BC44502008CF4DB /* JMHostInformation.m */; };
 		B9EED2EA195482C200EB9FC1 /* DragDestinationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EED2E9195482C200EB9FC1 /* DragDestinationView.m */; };
 		B9F8361D1950A1CC00400BFC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F8361C1950A1CC00400BFC /* Cocoa.framework */; };
 		B9F8362D1950A1CC00400BFC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9F8362B1950A1CC00400BFC /* Credits.rtf */; };
@@ -173,7 +173,7 @@
 		B9F836111950A1CC00400BFC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = corecode;
 			};
 			buildConfigurationList = B9F836141950A1CC00400BFC /* Build configuration list for PBXProject "FilenameList" */;
@@ -262,6 +262,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -323,6 +324,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FilenameList/FilenameList-Prefix.pch";
 				INFOPLIST_FILE = "FilenameList/FilenameList-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -336,6 +338,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FilenameList/FilenameList-Prefix.pch";
 				INFOPLIST_FILE = "FilenameList/FilenameList-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
