@@ -10,22 +10,18 @@
  */
 
 #import "AppDelegate.h"
-@import WebKit;
-CUSTOM_MUTABLE_ARRAY(NSDate)
-CUSTOM_DICTIONARY(MutableNSNumberArray)
-CUSTOM_DICTIONARY(MutableNSDateArray)
-CUSTOM_DICTIONARY(MutableNSStringArray)
+
 
 @interface AppDelegate ()
 
 @property (strong) IBOutlet WebView *webView;
 @property (strong) NSMenu *menu;
 @property (strong) NSStatusItem *statusItem;
-@property (strong) MutableNSNumberArray *dax;
-@property (strong) MutableNSDateArray *daxDates;
-@property (strong) MutableNSNumberArrayDictionary *values;
-@property (strong) MutableNSDateArrayDictionary *dates;
-@property (strong) MutableNSStringArrayDictionary *percents;
+@property (strong) NSMutableArray <NSNumber *> *dax;
+@property (strong) NSMutableArray <NSDate *> *daxDates;
+@property (strong) NSDictionary <NSString *, NSMutableArray <NSNumber *> *> *values;
+@property (strong) NSDictionary <NSString *, NSMutableArray <NSDate *> *> *dates;
+@property (strong) NSDictionary <NSString *, NSMutableArray <NSString *> *> *percents;
 
 @end
 
@@ -43,47 +39,47 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 	[self.statusItem setMenu:self.menu];
 
 
-	self.dax = makeMutableNSNumberArray();
-	self.daxDates = makeMutableNSDateArray();
+	self.dax = makeMutableArray();
+	self.daxDates = makeMutableArray();
 
-	self.values = (MutableNSNumberArrayDictionary *)
-	@{ @"TecDAX" : makeMutableNSNumberArray(),
-		 @"MDAX" : makeMutableNSNumberArray(),
-		 @"E-STOXX 50" : makeMutableNSNumberArray(),
-		 @"DOW Jones" : makeMutableNSNumberArray(),
-		 @"NASDAQ100" : makeMutableNSNumberArray(),
-		 @"S&amp;P 500" : makeMutableNSNumberArray(),
-		 @"NIKKEI 225" : makeMutableNSNumberArray(),
-		 @"ATX" : makeMutableNSNumberArray(),
-		 @"Goldpreis" : makeMutableNSNumberArray(),
-		 @"Ölpreis" : makeMutableNSNumberArray(),
-		 @"Dollarkurs" : makeMutableNSNumberArray()};
+	self.values =
+	@{ @"TecDAX" : makeMutableArray(),
+		 @"MDAX" : makeMutableArray(),
+		 @"ESTX50" : makeMutableArray(),
+		 @"DOW.J" : makeMutableArray(),
+		 @"NAS100" : makeMutableArray(),
+		 @"S&amp;P 500" : makeMutableArray(),
+		 @"NIKKEI" : makeMutableArray(),
+		 @"ATX" : makeMutableArray(),
+		 @"Goldpreis" : makeMutableArray(),
+		 @"Ölpreis" : makeMutableArray(),
+		 @"Dollarkurs" : makeMutableArray()};
 
-	self.dates = (MutableNSDateArrayDictionary *)
-	@{ @"TecDAX" : makeMutableNSDateArray(),
-	   @"MDAX" : makeMutableNSDateArray(),
-	   @"E-STOXX 50" : makeMutableNSDateArray(),
-	   @"DOW Jones" : makeMutableNSDateArray(),
-	   @"NASDAQ100" : makeMutableNSDateArray(),
-	   @"S&amp;P 500" : makeMutableNSDateArray(),
-	   @"NIKKEI 225" : makeMutableNSDateArray(),
-	   @"ATX" : makeMutableNSDateArray(),
-	   @"Goldpreis" : makeMutableNSDateArray(),
-	   @"Ölpreis" : makeMutableNSDateArray(),
-	   @"Dollarkurs" : makeMutableNSDateArray()};
+	self.dates =
+	@{ @"TecDAX" : makeMutableArray(),
+	   @"MDAX" : makeMutableArray(),
+	   @"ESTX50" : makeMutableArray(),
+	   @"DOW.J" : makeMutableArray(),
+	   @"NAS100" : makeMutableArray(),
+	   @"S&amp;P 500" : makeMutableArray(),
+	   @"NIKKEI" : makeMutableArray(),
+	   @"ATX" : makeMutableArray(),
+	   @"Goldpreis" : makeMutableArray(),
+	   @"Ölpreis" : makeMutableArray(),
+	   @"Dollarkurs" : makeMutableArray()};
 
-	self.percents = (MutableNSStringArrayDictionary *)
-	@{ @"TecDAX" : makeMutableNSStringArray(),
-	   @"MDAX" : makeMutableNSStringArray(),
-	   @"E-STOXX 50" : makeMutableNSStringArray(),
-	   @"DOW Jones" : makeMutableNSStringArray(),
-	   @"NASDAQ100" : makeMutableNSStringArray(),
-	   @"S&amp;P 500" : makeMutableNSStringArray(),
-	   @"NIKKEI 225" : makeMutableNSStringArray(),
-	   @"ATX" : makeMutableNSStringArray(),
-	   @"Goldpreis" : makeMutableNSStringArray(),
-	   @"Ölpreis" : makeMutableNSStringArray(),
-	   @"Dollarkurs" : makeMutableNSStringArray()};
+	self.percents =
+	@{ @"TecDAX" : makeMutableArray(),
+	   @"MDAX" : makeMutableArray(),
+	   @"ESTX50" : makeMutableArray(),
+	   @"DOW.J" : makeMutableArray(),
+	   @"NAS100" : makeMutableArray(),
+	   @"S&amp;P 500" : makeMutableArray(),
+	   @"NIKKEI" : makeMutableArray(),
+	   @"ATX" : makeMutableArray(),
+	   @"Goldpreis" : makeMutableArray(),
+	   @"Ölpreis" : makeMutableArray(),
+	   @"Dollarkurs" : makeMutableArray()};
 
 	[self reload];
 }
@@ -100,7 +96,7 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 
 - (void)reload
 {
-	NSLog(@"reload");
+	asl_NSLog_debug(@"reload");
 	for (NSMutableArray *array in @[self.dax, self.daxDates, self.values, self.dates, self.percents])
 		[array removeAllObjects];
 
@@ -134,7 +130,7 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 	NSString *lastDay = [lastDate descriptionWithCalendarFormat:@"%a" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"] locale:nil];
 
 	if (!lastDate || [now timeIntervalSinceDate:lastDate] > 3600)
-		NSLog(@"Info: %@ %@  %@", day, lastDay, _daxDates);
+		asl_NSLog_debug(@"Info: %@ %@  %@", day, lastDay, _daxDates);
 
 	if (lastDate && ![day isEqualToString:lastDay])
 	{
@@ -146,65 +142,89 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 		[self performSelector:@selector(load) withObject:nil afterDelay:interval];
 
 
-	NSStringArray *comp = title.words;
+	NSArray <NSString *> *comp = title.words;
 	if ([comp.firstObject isEqualToString:@"DAX"] && comp.count == 3)
 	{
-		[self.dax addObject:comp[1].numberValue];
+		[self.dax addObject:@(comp[1].floatValue)];
 		[self.daxDates addObject:now];
 
-
-		[self.statusItem setTitle:title];
+		if (title.length)
+			[self.statusItem setTitle:title];
 	}
 
 	NSString *str = [(DOMHTMLElement *)[[[self.webView mainFrame] DOMDocument] documentElement] outerHTML];
 	NSArray *links = @[@"/index/TecDAX-Realtime", @"/index/MDAX-Realtime", @"/index/Euro_Stoxx_50-Realtime", @"/index/Dow_Jones-Realtime", @"/index/Nasdaq_100-Realtime", @"/index/S&amp;P_500-Realtime", @"/index/Nikkei_225-Realtime", @"/index/ATX-Realtime", @"/rohstoffe/goldpreis/Realtimekurse", @"/rohstoffe/oelpreis@brent/Realtimekurse", @"/devisen/realtimekurs/dollarkurs"];
-	NSArray *names = @[@"TecDAX", @"MDAX", @"E-STOXX 50", @"DOW Jones", @"NASDAQ100", @"S&amp;P 500", @"NIKKEI 225", @"ATX", @"Goldpreis", @"Ölpreis", @"Dollarkurs"];
+	NSArray *names = @[@"TecDAX", @"MDAX", @"ESTX50", @"DOW.J", @"NAS100", @"S&amp;P 500", @"NIKKEI", @"ATX", @"Goldpreis", @"Ölpreis", @"Dollarkurs"];
 	for (NSString *name in names)
 	{
 		NSString *link = links[[names indexOfObject:name]];
-		NSStringArray *comp1 = [str split:makeString(@"<a href=\"%@\">%@</a>", link, name)];
+		NSString *splitter = makeString(@"<a href=\"%@\">%@</a></td>", link, name);
+		NSArray <NSString *> *comp1 = [str split:splitter];
 
 		if (comp1.count > 1)
 		{
-			NSStringArray *comp2 = [comp1[1] split:@"</div>"];
-			NSStringArray *comp3 = [comp2[0] split:@">"];
-			NSString *percent = [[comp1[1] split:@"\"changeper\">"][1] split:@"</div>"][0];
 
-			MutableNSNumberArray *valarray = self.values[name];
-			MutableNSDateArray *datearray = self.dates[name];
-			MutableNSStringArray *percarray = self.percents[name];
-			NSString *valstr = [[comp3.lastObject replaced:@"." with:@""] replaced:@"," with:@"."];
-			[valarray addObject:valstr.numberValue];
-			[datearray addObject:now];
-			[percarray addObject:percent];
 
-			while (valarray.count > 50) [valarray removeFirstObject];
-			while (datearray.count > 50) [datearray removeFirstObject];
-			while (percarray.count > 50) [percarray removeFirstObject];
+			@try {
+				NSString *field = [comp1[1] split:@"</tr>"][0];
+				NSString *percent = [[field split:@"\"changeper\">"][1] split:@"</div>"][0];
+				NSString *valstr = [[[[field split:@"field=\"bid\">"][1] split:@"<"][0] replaced:@"." with:@""] replaced:@"," with:@"."];
+
+				assert(percent);
+				NSMutableArray <NSNumber *> *valarray = self.values[name];
+				NSMutableArray <NSDate *> *datearray = self.dates[name];
+				NSMutableArray <NSString *>*percarray = self.percents[name];
+
+				[valarray addObject:@(valstr.floatValue)];
+				[datearray addObject:now];
+				[percarray addObject:percent];
+
+				while (valarray.count > 50) [valarray removeFirstObject];
+				while (datearray.count > 50) [datearray removeFirstObject];
+				while (percarray.count > 50) [percarray removeFirstObject];
+			}
+			@catch (NSException *exception) {
+
+
+			}
+			@finally {
+
+
+
+			}
+
+		}
+		else
+		{
+			asl_NSLog_debug(@"could not find splitter %@", splitter);
 		}
 	}
 
 
+	// regenerate menu
 	[self.menu removeAllItems];
 	for (NSString *name in names)
 	{
-		MutableNSNumberArray *valarray = self.values[name];
-		MutableNSStringArray *percarray = self.percents[name];
+		NSMutableArray <NSNumber *>*valarray = self.values[name];
+		NSMutableArray <NSString *> *percarray = self.percents[name];
 
 		[self.menu addItemWithTitle:makeString(@"%@ %@ (%@)", [name replaced:@"&amp;" with:@"&"], valarray.lastObject, percarray.lastObject) action:@selector(clicked:) keyEquivalent:@""];
 	}
 	[self.menu addItem:[NSMenuItem separatorItem]];
 	[self.menu addItemWithTitle:@"Quit" action:@selector(quit:) keyEquivalent:@""];
 
+
+	// prune data structures
 	while (self.dax.count > 50) [self.dax removeFirstObject];
 	while (self.daxDates.count > 50) [self.daxDates removeFirstObject];
 
 
+	// notifications
 	for (int i = (int)self.dax.count - 1; i > 0; i--)
 	{
 		NSDate *date = self.daxDates[i];
 
-		if ([now timeIntervalSinceDate:date] < 3 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 3))
+		if ([now timeIntervalSinceDate:date] < 10 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 10))
 		{
 			NSUserNotification *notification = [[NSUserNotification alloc] init];
 
@@ -212,7 +232,7 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 
 			[[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
 		}
-		if ([now timeIntervalSinceDate:date] < 20 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 6))
+		if ([now timeIntervalSinceDate:date] < 50 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 20))
 		{
 			NSUserNotification *notification = [[NSUserNotification alloc] init];
 
@@ -220,7 +240,7 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 
 			[[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
 		}
-		if ([now timeIntervalSinceDate:date] < 60 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 10))
+		if ([now timeIntervalSinceDate:date] < 250 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 30))
 		{
 			NSUserNotification *notification = [[NSUserNotification alloc] init];
 
@@ -230,7 +250,7 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 		}
 
 
-		if ([now timeIntervalSinceDate:date] < 3 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -3))
+		if ([now timeIntervalSinceDate:date] < 10 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -10))
 		{
 			NSUserNotification *notification = [[NSUserNotification alloc] init];
 
@@ -238,7 +258,7 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 
 			[[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
 		}
-		if ([now timeIntervalSinceDate:date] < 20 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -6))
+		if ([now timeIntervalSinceDate:date] < 50 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -20))
 		{
 			NSUserNotification *notification = [[NSUserNotification alloc] init];
 
@@ -246,7 +266,7 @@ CUSTOM_DICTIONARY(MutableNSStringArray)
 
 			[[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
 		}
-		if ([now timeIntervalSinceDate:date] < 60 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -10))
+		if ([now timeIntervalSinceDate:date] < 250 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -30))
 		{
 			NSUserNotification *notification = [[NSUserNotification alloc] init];
 

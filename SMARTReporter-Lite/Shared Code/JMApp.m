@@ -57,7 +57,7 @@ SUUpdater *updater;
 			path = [NSString stringWithFormat:@"mailto:feedback@corecode.at?subject=%@ Feedback", name];
 			break;
 		case 2:
-			path = [NSString stringWithFormat:@"http://www.corecode.at/%@/", [name lowercaseString]];
+			path = [NSString stringWithFormat:@"https://www.corecode.at/%@/", [name lowercaseString]];
 			break;
 		case 3:
 			path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Read Me.rtf"];

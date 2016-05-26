@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B90970A01B0A641A0086CCA2 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B909709F1B0A641A0086CCA2 /* ScriptingBridge.framework */; };
 		B90970A21B0A66230086CCA2 /* LaunchMainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90970A11B0A66230086CCA2 /* LaunchMainMenu.xib */; };
-		B90AE4BB16A71998002EBA58 /* Mail.app in Sources */ = {isa = PBXBuildFile; fileRef = B90AE4BA16A71998002EBA58 /* Mail.app */; };
 		B93844991699F79C001773E8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93844981699F79C001773E8 /* Cocoa.framework */; };
 		B93844AC1699F79C001773E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B93844AB1699F79C001773E8 /* AppDelegate.m */; };
 		B93844AF1699F79C001773E8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93844AD1699F79C001773E8 /* MainMenu.xib */; };
@@ -98,7 +97,6 @@
 /* Begin PBXFileReference section */
 		B909709F1B0A641A0086CCA2 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		B90970A11B0A66230086CCA2 /* LaunchMainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchMainMenu.xib; sourceTree = "<group>"; };
-		B90AE4BA16A71998002EBA58 /* Mail.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Mail.app; path = /Applications/Mail.app; sourceTree = "<absolute>"; };
 		B93844941699F79C001773E8 /* MailboxAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailboxAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93844981699F79C001773E8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B938449B1699F79C001773E8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -174,6 +172,7 @@
 		B9E6F91B16A6B72200AE02F0 /* Credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = Credits.rtfd; sourceTree = "<group>"; };
 		B9E6F91C16A6B72200AE02F0 /* FAQ.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = FAQ.rtf; sourceTree = "<group>"; };
 		B9E6F91D16A6B72200AE02F0 /* Read Me.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		B9EBFA331C25D71600B77374 /* Mail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mail.h; path = ../SDEF/Mail.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,7 +264,6 @@
 				B9C278E016A761A000D355A1 /* ValueTransformer.m */,
 				B93844A01699F79C001773E8 /* MailboxAlert-Info.plist */,
 				B938450E169AF44C001773E8 /* imap.py */,
-				B90AE4BA16A71998002EBA58 /* Mail.app */,
 				B93844A61699F79C001773E8 /* MailboxAlert-Prefix.pch */,
 				B99AAA80169B547400290EC5 /* MailboxAlert.icns */,
 				B99AAB5C169B734900290EC5 /* toolbar_documentation.png */,
@@ -334,6 +332,7 @@
 		B9C2AF8D1911578B0053456F /* Mac */ = {
 			isa = PBXGroup;
 			children = (
+				B9EBFA331C25D71600B77374 /* Mail.h */,
 				B9C2AF8E1911578B0053456F /* JMAppMovedHandler.h */,
 				B9C2AF8F1911578B0053456F /* JMAppMovedHandler.m */,
 				B9C2AF901911578B0053456F /* JMClickableImageView.h */,
@@ -493,7 +492,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C2AFA71911578B0053456F /* JMCorrectTimer.m in Sources */,
-				B90AE4BB16A71998002EBA58 /* Mail.app in Sources */,
 				B93844AC1699F79C001773E8 /* AppDelegate.m in Sources */,
 				B9C2AFA21911578B0053456F /* CoreLib.m in Sources */,
 				B99AAA8A169B554600290EC5 /* PRHOnOffButton.m in Sources */,
@@ -581,6 +579,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = (
 					"-Weverything",
 					"-Wno-objc-missing-property-synthesis",
@@ -605,19 +604,17 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"SANDBOX=1",
-					"NDEBUG=1",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "SANDBOX=1";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = (
 					"-Weverything",
 					"-Wno-objc-missing-property-synthesis",

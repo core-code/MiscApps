@@ -1,6 +1,6 @@
 MiscApps: A collection of mac applications and tools for developers
 
-http://www.corecode.at/miscstuff/	
+https://www.corecode.at/miscstuff/	
 	
 QTPresenter
 An application that tells "QuickTime Player" to present a movie on the second monitor while it displays playback progress on the first monitor.
@@ -47,6 +47,9 @@ An application that lets the current foreground text selection flash in differen
 OmniExpose
 An application that extends the Exposé feature to include applications that are currently hidden.
 
+ReadingListPro
+An application that parses Safari's 'ReadingList', shows the items grouped by domain/host and allows you to open many items at once or export them to (InstaPaper) CSV.
+
 VolumeCore
 An application for realtime visualization of volumetric data.
 	
@@ -58,6 +61,9 @@ An application for realtime generation and visualization of fractal terrain.
 	
 CoreLS
 An application for realtime generation and visualization of 3D L-Systems.
+
+MacEVO
+An application that displays articles of the fantastic EVO.CO.UK magazine. Make sure to buy the issues in paper or digital.
 
 Leaker
 An application for showing the number and size of the memory leaks in all running processes.

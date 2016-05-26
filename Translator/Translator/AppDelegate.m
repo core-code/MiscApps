@@ -12,7 +12,7 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
-todo doesn't seem to translate "show toolbar"
+#warning todo doesn't seem to translate "show toolbar"
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	cc = [CoreLib new];
@@ -29,7 +29,7 @@ todo doesn't seem to translate "show toolbar"
 	NSString *sep = @".title\" = \"";
 	NSDictionary *trans = [NSDictionary dictionaryWithContentsOfURL:@"MainMenuTranslations.plist".resourceURL];
 	NSString *appname;
-	input(@"enter app name", @[@"ok"], &appname);
+	alert_input(@"enter app name", @[@"ok"], &appname);
 
 	for (NSString *translationName in trans)
 	{
@@ -40,7 +40,7 @@ todo doesn't seem to translate "show toolbar"
 		{
 			if ([line contains:sep])
 			{
-				NSStringArray * comp = [line split:sep];
+				NSArray <NSString *>* comp = [line split:sep];
 				NSString *cont = [comp[1] substringToIndex:comp[1].length - 2];
 
 				NSString *translat = translation[[cont replaced:appname with:@"APPLICATIONNAME"]];

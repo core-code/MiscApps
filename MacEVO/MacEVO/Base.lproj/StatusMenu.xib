@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AppDelegate">
+            <connections>
+                <outlet property="statusItemMenu" destination="bYI-cr-3gm" id="5nn-oX-tG1"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <menu id="bYI-cr-3gm">
+            <items>
+                <menuItem title="Open MacEVO…" id="FuK-4B-1Qq">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openMainWindow:" target="-2" id="3kd-GK-54G"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="JzP-Rv-RmR"/>
+                <menuItem title="Quit MacEVO" id="l6o-TO-dmE">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="terminate:" target="-2" id="X3a-88-a38"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="320" y="422.5"/>
+        </menu>
+    </objects>
+</document>

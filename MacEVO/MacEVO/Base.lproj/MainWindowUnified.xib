@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AppDelegate">
+            <connections>
+                <outlet property="mainWindow" destination="QvC-M9-y7g" id="vsj-uK-QPQ"/>
+                <outlet property="settingsView" destination="T5t-JK-Das" id="VWN-Uc-y7g"/>
+                <outlet property="toolbar" destination="a0H-dt-1Uy" id="Z8Z-8Z-txk"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="MacEVO" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <rect key="contentRect" x="196" y="240" width="550" height="600"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <value key="minSize" type="size" width="550" height="600"/>
+            <value key="maxSize" type="size" width="550" height="600"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="550" height="600"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <tabView fixedFrame="YES" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="op1-9x-ULS">
+                        <rect key="frame" x="0.0" y="0.0" width="550" height="600"/>
+                        <font key="font" metaFont="system"/>
+                        <tabViewItems>
+                            <tabViewItem label="Tab" identifier="1" id="mMP-AA-kJJ">
+                                <view key="view" id="Xgc-49-sj7">
+                                    <rect key="frame" x="0.0" y="0.0" width="550" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="View" identifier="2" id="6am-QW-eW6">
+                                <view key="view" id="d4V-iP-FAQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="550" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Item 2" identifier="" id="zJg-TG-MHH">
+                                <view key="view" id="kdS-N1-Uix">
+                                    <rect key="frame" x="0.0" y="0.0" width="550" height="600"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </tabViewItem>
+                        </tabViewItems>
+                    </tabView>
+                </subviews>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="CDDE344B-29B4-42CB-945F-77F974DEACAA" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="a0H-dt-1Uy">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="1LX-XW-Bj7"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="VfN-w2-dLT"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="8wa-BC-9n1"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="763-Wx-vlU"/>
+                    <toolbarItem implicitItemIdentifier="D98425BE-71F2-4341-8E06-503D7E9C527E" label="Settings" paletteLabel="Settings" tag="1" image="NSAdvanced" autovalidates="NO" selectable="YES" id="EIg-IP-aZj">
+                        <connections>
+                            <action selector="toolbarClicked:" target="-2" id="ave-6n-q36"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="FFY-Bl-cJe"/>
+                    <toolbarItem implicitItemIdentifier="95CA8394-12FE-41EF-8A0B-0A5E0F0AE81E" label="Documentation" paletteLabel="Documentation" tag="1" image="icon_toolbar_documentation" autovalidates="NO" selectable="YES" id="UtA-ma-fpp">
+                        <connections>
+                            <action selector="toolbarClicked:" target="-2" id="v58-oJ-8oS"/>
+                        </connections>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="EIg-IP-aZj"/>
+                    <toolbarItem reference="FFY-Bl-cJe"/>
+                    <toolbarItem reference="UtA-ma-fpp"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <connections>
+                <outlet property="delegate" destination="-2" id="fp9-1u-DpN"/>
+            </connections>
+            <point key="canvasLocation" x="396" y="405"/>
+        </window>
+        <userDefaultsController representsSharedInstance="YES" id="5HP-2s-Am5"/>
+        <view id="T5t-JK-Das">
+            <rect key="frame" x="0.0" y="0.0" width="550" height="600"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TWx-V6-jBq">
+                    <rect key="frame" x="199" y="315" width="152" height="21"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Hello cruel World!" id="FmD-Zn-9xb">
+                        <font key="font" metaFont="systemBold" size="17"/>
+                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jhh-Mq-nTa">
+                    <rect key="frame" x="-2" y="516" width="206" height="17"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Launch at Login:" id="xbL-E5-BCr">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N7q-sX-prt">
+                    <rect key="frame" x="350" y="505" width="183" height="33"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="right" title="Warning: automatic launching is recommended for best operation" id="j36-mn-QrU">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="hidden" keyPath="loginItemManager.launchesAtLogin" id="I22-YP-92W"/>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fmf-Gi-d2f">
+                    <rect key="frame" x="206" y="517" width="40" height="17"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="OFF" id="HMb-FD-vkY">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E2A-BN-gea">
+                    <rect key="frame" x="329" y="517" width="40" height="17"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="ON" id="4SM-5b-Uur">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T54-iJ-dDD" customClass="PRHOnOffButton">
+                    <rect key="frame" x="256" y="513" width="69" height="22"/>
+                    <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="2Jx-TM-jmj" customClass="PRHOnOffButtonCell">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="loginItemManager.launchesAtLogin" id="lSc-Yt-d75"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H01-hR-5d1">
+                    <rect key="frame" x="18" y="568" width="256" height="21"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Settings" id="AAz-Pk-2Jh">
+                        <font key="font" metaFont="systemBold" size="17"/>
+                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P11-yb-RaQ">
+                    <rect key="frame" x="-2" y="476" width="206" height="17"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Display App-Icon:" id="7o2-3Q-5P2">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ice-tZ-W88">
+                    <rect key="frame" x="217" y="472" width="140" height="22"/>
+                    <popUpButtonCell key="cell" type="push" title="Nowhere" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="Pgm-bM-Kyy">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                        <menu key="menu" title="OtherViews" id="5jW-hw-MpL">
+                            <items>
+                                <menuItem title="Nowhere" state="on" id="UpR-SV-fRq">
+                                    <connections>
+                                        <action selector="changeAppVisibility:" target="-2" id="Zw5-8J-opx"/>
+                                    </connections>
+                                </menuItem>
+                                <menuItem title="Dock" id="8bR-ZF-zXM"/>
+                                <menuItem title="Menubar" id="W3s-hR-9u2"/>
+                                <menuItem title="Dock and Menubar" id="TYL-Et-knT"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <binding destination="-2" name="selectedIndex" keyPath="visibilityManager.visibilitySetting" id="AbT-jw-Uy1"/>
+                    </connections>
+                </popUpButton>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAi-Up-0J1">
+                    <rect key="frame" x="373" y="471" width="170" height="26"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="right" title="Info: consult the documentation on how to get the interface back" id="RQE-kI-vXv">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="hidden" keyPath="visibilityManager.visibilitySetting" id="6wm-AI-Ahi"/>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kip-sz-ylW">
+                    <rect key="frame" x="373" y="468" width="170" height="26"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="right" title="Info: displaying only in the menubar is recommended" id="jUZ-hJ-5bv">
+                        <font key="font" metaFont="system" size="10"/>
+                        <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="hidden2" keyPath="visibilityManager.visibilitySetting" previousBinding="HwA-US-PGO" id="Ggc-xU-Bwa">
+                            <dictionary key="options">
+                                <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                <integer key="NSNullPlaceholder" value="-1"/>
+                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                            </dictionary>
+                        </binding>
+                        <binding destination="-2" name="hidden" keyPath="visibilityManager.visibilitySetting" id="HwA-US-PGO">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">Equalto2ValueTransformer</string>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="396" y="1026"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="NSAdvanced" width="32" height="32"/>
+        <image name="icon_toolbar_documentation" width="64" height="64"/>
+    </resources>
+</document>

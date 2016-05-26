@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B90970B91B0B27090086CCA2 /* DocumentationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90970B51B0B27090086CCA2 /* DocumentationWindow.xib */; };
+		B90970BA1B0B27090086CCA2 /* PromotionWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90970B71B0B27090086CCA2 /* PromotionWindow.xib */; };
+		B90970C01B0B2D610086CCA2 /* credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = B90970BC1B0B2D610086CCA2 /* credits.rtfd */; };
+		B90970C11B0B2D610086CCA2 /* faq.html in Resources */ = {isa = PBXBuildFile; fileRef = B90970BD1B0B2D610086CCA2 /* faq.html */; };
+		B90970C21B0B2D610086CCA2 /* history.html in Resources */ = {isa = PBXBuildFile; fileRef = B90970BE1B0B2D610086CCA2 /* history.html */; };
+		B90970C31B0B2D610086CCA2 /* readme.html in Resources */ = {isa = PBXBuildFile; fileRef = B90970BF1B0B2D610086CCA2 /* readme.html */; };
+		B91B81781AF93EF500406EEA /* JMRTFView.m in Sources */ = {isa = PBXBuildFile; fileRef = B91B81771AF93EF500406EEA /* JMRTFView.m */; };
+		B91B817B1AF9469B00406EEA /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B91B81791AF9469B00406EEA /* MainWindow.xib */; };
+		B91B817E1AF9488B00406EEA /* JMApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B91B817D1AF9488B00406EEA /* JMApplicationDelegate.m */; };
+		B98183BF1CF4D302008E2B98 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B98183BE1CF4D302008E2B98 /* placeholder.png */; };
+		B98A54B01B0B53770009C028 /* JMEmailSender+CGIDelivery.m in Sources */ = {isa = PBXBuildFile; fileRef = B98A54AF1B0B53770009C028 /* JMEmailSender+CGIDelivery.m */; };
+		B98DBBF61B162E9900772BCA /* privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = B98DBBF51B162E9900772BCA /* privacy.html */; };
+		B990228C1CB6AADA0007CB04 /* JMReceiptValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = B990228B1CB6AADA0007CB04 /* JMReceiptValidation.m */; };
+		B9B6BD361AC9B0C100D13BBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD351AC9B0C100D13BBC /* AppDelegate.m */; };
+		B9B6BD3A1AC9B0C100D13BBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B6BD391AC9B0C100D13BBC /* Images.xcassets */; };
+		B9B6BD3D1AC9B0C100D13BBC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B6BD3B1AC9B0C100D13BBC /* MainMenu.xib */; };
+		B9B6BD7A1AC9CEF300D13BBC /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD561AC9CEF300D13BBC /* AppKit+CoreCode.m */; };
+		B9B6BD7B1AC9CEF300D13BBC /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD581AC9CEF300D13BBC /* AppKit+Properties.m */; };
+		B9B6BD7C1AC9CEF300D13BBC /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD5A1AC9CEF300D13BBC /* CoreLib.m */; };
+		B9B6BD7D1AC9CEF300D13BBC /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD5D1AC9CEF300D13BBC /* Foundation+CoreCode.m */; };
+		B9B6BD7E1AC9CEF300D13BBC /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD601AC9CEF300D13BBC /* Foundation+Properties.m */; };
+		B9B6BD7F1AC9CEF300D13BBC /* JMAppMovedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD631AC9CEF300D13BBC /* JMAppMovedHandler.m */; };
+		B9B6BD801AC9CEF300D13BBC /* JMClickableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD651AC9CEF300D13BBC /* JMClickableImageView.m */; };
+		B9B6BD811AC9CEF300D13BBC /* JMCorrectTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD671AC9CEF300D13BBC /* JMCorrectTimer.m */; };
+		B9B6BD821AC9CEF300D13BBC /* JMCrashReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD691AC9CEF300D13BBC /* JMCrashReporter.m */; };
+		B9B6BD831AC9CEF300D13BBC /* JMDocklessApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD6B1AC9CEF300D13BBC /* JMDocklessApplication.m */; };
+		B9B6BD841AC9CEF300D13BBC /* JMEmailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD6D1AC9CEF300D13BBC /* JMEmailSender.m */; };
+		B9B6BD851AC9CEF300D13BBC /* JMFontPopUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD6F1AC9CEF300D13BBC /* JMFontPopUpButton.m */; };
+		B9B6BD861AC9CEF300D13BBC /* JMHostInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD711AC9CEF300D13BBC /* JMHostInformation.m */; };
+		B9B6BD871AC9CEF300D13BBC /* JMLoginItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD731AC9CEF300D13BBC /* JMLoginItemManager.m */; };
+		B9B6BD881AC9CEF300D13BBC /* JMValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD751AC9CEF300D13BBC /* JMValueTransformer.m */; };
+		B9B6BD891AC9CEF300D13BBC /* JMVisibilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD771AC9CEF300D13BBC /* JMVisibilityManager.m */; };
+		B9B6BD8A1AC9CEF300D13BBC /* JMWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD791AC9CEF300D13BBC /* JMWebView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		B99FD3731AE84B0B0026CB42 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.app";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILES_DIR)/$(INPUT_FILE_BASE).h",
+			);
+			script = "sdef \"$INPUT_FILE_PATH\" | sdp -fh -o \"$DERIVED_FILES_DIR\" --basename \"$INPUT_FILE_BASE\" --bundleid `defaults read \"$INPUT_FILE_PATH/Contents/Info\" CFBundleIdentifier`";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXFileReference section */
+		B90970B61B0B27090086CCA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DocumentationWindow.xib; sourceTree = "<group>"; };
+		B90970B81B0B27090086CCA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PromotionWindow.xib; sourceTree = "<group>"; };
+		B90970BC1B0B2D610086CCA2 /* credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = credits.rtfd; sourceTree = "<group>"; };
+		B90970BD1B0B2D610086CCA2 /* faq.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = faq.html; sourceTree = "<group>"; };
+		B90970BE1B0B2D610086CCA2 /* history.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = history.html; sourceTree = "<group>"; };
+		B90970BF1B0B2D610086CCA2 /* readme.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = readme.html; sourceTree = "<group>"; };
+		B91B81761AF93EF500406EEA /* JMRTFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMRTFView.h; sourceTree = "<group>"; };
+		B91B81771AF93EF500406EEA /* JMRTFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMRTFView.m; sourceTree = "<group>"; };
+		B91B817A1AF9469B00406EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		B91B817C1AF9488B00406EEA /* JMApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMApplicationDelegate.h; sourceTree = "<group>"; };
+		B91B817D1AF9488B00406EEA /* JMApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMApplicationDelegate.m; sourceTree = "<group>"; };
+		B98183BE1CF4D302008E2B98 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		B98A54AF1B0B53770009C028 /* JMEmailSender+CGIDelivery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JMEmailSender+CGIDelivery.m"; path = "../Private/JMEmailSender+CGIDelivery.m"; sourceTree = "<group>"; };
+		B98DBBF51B162E9900772BCA /* privacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = privacy.html; sourceTree = "<group>"; };
+		B990228A1CB6AADA0007CB04 /* JMReceiptValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMReceiptValidation.h; path = ../Private/JMReceiptValidation.h; sourceTree = "<group>"; };
+		B990228B1CB6AADA0007CB04 /* JMReceiptValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMReceiptValidation.m; path = ../Private/JMReceiptValidation.m; sourceTree = "<group>"; };
+		B9B6BD2F1AC9B0C100D13BBC /* MacEVO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacEVO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B6BD331AC9B0C100D13BBC /* MacEVO-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacEVO-Info.plist"; sourceTree = "<group>"; };
+		B9B6BD341AC9B0C100D13BBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B9B6BD351AC9B0C100D13BBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B9B6BD391AC9B0C100D13BBC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B9B6BD3C1AC9B0C100D13BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9B6BD521AC9B0F900D13BBC /* MacEVO.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MacEVO.entitlements; sourceTree = "<group>"; };
+		B9B6BD551AC9CEF300D13BBC /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
+		B9B6BD561AC9CEF300D13BBC /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
+		B9B6BD571AC9CEF300D13BBC /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
+		B9B6BD581AC9CEF300D13BBC /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
+		B9B6BD591AC9CEF300D13BBC /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
+		B9B6BD5A1AC9CEF300D13BBC /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
+		B9B6BD5B1AC9CEF300D13BBC /* CoreLib_Availability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib_Availability.h; sourceTree = "<group>"; };
+		B9B6BD5C1AC9CEF300D13BBC /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
+		B9B6BD5D1AC9CEF300D13BBC /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
+		B9B6BD5E1AC9CEF300D13BBC /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
+		B9B6BD5F1AC9CEF300D13BBC /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
+		B9B6BD601AC9CEF300D13BBC /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
+		B9B6BD621AC9CEF300D13BBC /* JMAppMovedHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAppMovedHandler.h; sourceTree = "<group>"; };
+		B9B6BD631AC9CEF300D13BBC /* JMAppMovedHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAppMovedHandler.m; sourceTree = "<group>"; };
+		B9B6BD641AC9CEF300D13BBC /* JMClickableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMClickableImageView.h; sourceTree = "<group>"; };
+		B9B6BD651AC9CEF300D13BBC /* JMClickableImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMClickableImageView.m; sourceTree = "<group>"; };
+		B9B6BD661AC9CEF300D13BBC /* JMCorrectTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCorrectTimer.h; sourceTree = "<group>"; };
+		B9B6BD671AC9CEF300D13BBC /* JMCorrectTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCorrectTimer.m; sourceTree = "<group>"; };
+		B9B6BD681AC9CEF300D13BBC /* JMCrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCrashReporter.h; sourceTree = "<group>"; };
+		B9B6BD691AC9CEF300D13BBC /* JMCrashReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCrashReporter.m; sourceTree = "<group>"; };
+		B9B6BD6A1AC9CEF300D13BBC /* JMDocklessApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDocklessApplication.h; sourceTree = "<group>"; };
+		B9B6BD6B1AC9CEF300D13BBC /* JMDocklessApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDocklessApplication.m; sourceTree = "<group>"; };
+		B9B6BD6C1AC9CEF300D13BBC /* JMEmailSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMEmailSender.h; sourceTree = "<group>"; };
+		B9B6BD6D1AC9CEF300D13BBC /* JMEmailSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMEmailSender.m; sourceTree = "<group>"; };
+		B9B6BD6E1AC9CEF300D13BBC /* JMFontPopUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMFontPopUpButton.h; sourceTree = "<group>"; };
+		B9B6BD6F1AC9CEF300D13BBC /* JMFontPopUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMFontPopUpButton.m; sourceTree = "<group>"; };
+		B9B6BD701AC9CEF300D13BBC /* JMHostInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMHostInformation.h; sourceTree = "<group>"; };
+		B9B6BD711AC9CEF300D13BBC /* JMHostInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMHostInformation.m; sourceTree = "<group>"; };
+		B9B6BD721AC9CEF300D13BBC /* JMLoginItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLoginItemManager.h; sourceTree = "<group>"; };
+		B9B6BD731AC9CEF300D13BBC /* JMLoginItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLoginItemManager.m; sourceTree = "<group>"; };
+		B9B6BD741AC9CEF300D13BBC /* JMValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMValueTransformer.h; sourceTree = "<group>"; };
+		B9B6BD751AC9CEF300D13BBC /* JMValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMValueTransformer.m; sourceTree = "<group>"; };
+		B9B6BD761AC9CEF300D13BBC /* JMVisibilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMVisibilityManager.h; sourceTree = "<group>"; };
+		B9B6BD771AC9CEF300D13BBC /* JMVisibilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMVisibilityManager.m; sourceTree = "<group>"; };
+		B9B6BD781AC9CEF300D13BBC /* JMWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMWebView.h; sourceTree = "<group>"; };
+		B9B6BD791AC9CEF300D13BBC /* JMWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMWebView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9B6BD2C1AC9B0C100D13BBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B90970BB1B0B2D610086CCA2 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				B90970BC1B0B2D610086CCA2 /* credits.rtfd */,
+				B98DBBF51B162E9900772BCA /* privacy.html */,
+				B90970BD1B0B2D610086CCA2 /* faq.html */,
+				B90970BE1B0B2D610086CCA2 /* history.html */,
+				B90970BF1B0B2D610086CCA2 /* readme.html */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
+		B9B6BD261AC9B0C100D13BBC = {
+			isa = PBXGroup;
+			children = (
+				B9B6BD311AC9B0C100D13BBC /* MacEVO */,
+				B9B6BD301AC9B0C100D13BBC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B9B6BD301AC9B0C100D13BBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6BD2F1AC9B0C100D13BBC /* MacEVO.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9B6BD311AC9B0C100D13BBC /* MacEVO */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6BD341AC9B0C100D13BBC /* AppDelegate.h */,
+				B9B6BD351AC9B0C100D13BBC /* AppDelegate.m */,
+				B91B81791AF9469B00406EEA /* MainWindow.xib */,
+				B9B6BD3B1AC9B0C100D13BBC /* MainMenu.xib */,
+				B90970B51B0B27090086CCA2 /* DocumentationWindow.xib */,
+				B90970B71B0B27090086CCA2 /* PromotionWindow.xib */,
+				B9B6BD321AC9B0C100D13BBC /* Supporting Files */,
+			);
+			path = MacEVO;
+			sourceTree = "<group>";
+		};
+		B9B6BD321AC9B0C100D13BBC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B98183BE1CF4D302008E2B98 /* placeholder.png */,
+				B9B6BD391AC9B0C100D13BBC /* Images.xcassets */,
+				B9B6BD521AC9B0F900D13BBC /* MacEVO.entitlements */,
+				B9B6BD331AC9B0C100D13BBC /* MacEVO-Info.plist */,
+				B90970BB1B0B2D610086CCA2 /* Documentation */,
+				B9B6BD541AC9CEF300D13BBC /* CoreLib */,
+				B9B6BD611AC9CEF300D13BBC /* Mac */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9B6BD541AC9CEF300D13BBC /* CoreLib */ = {
+			isa = PBXGroup;
+			children = (
+				B9B6BD551AC9CEF300D13BBC /* AppKit+CoreCode.h */,
+				B9B6BD561AC9CEF300D13BBC /* AppKit+CoreCode.m */,
+				B9B6BD571AC9CEF300D13BBC /* AppKit+Properties.h */,
+				B9B6BD581AC9CEF300D13BBC /* AppKit+Properties.m */,
+				B9B6BD591AC9CEF300D13BBC /* CoreLib.h */,
+				B9B6BD5A1AC9CEF300D13BBC /* CoreLib.m */,
+				B9B6BD5B1AC9CEF300D13BBC /* CoreLib_Availability.h */,
+				B9B6BD5C1AC9CEF300D13BBC /* Foundation+CoreCode.h */,
+				B9B6BD5D1AC9CEF300D13BBC /* Foundation+CoreCode.m */,
+				B9B6BD5E1AC9CEF300D13BBC /* Foundation+Indexing.h */,
+				B9B6BD5F1AC9CEF300D13BBC /* Foundation+Properties.h */,
+				B9B6BD601AC9CEF300D13BBC /* Foundation+Properties.m */,
+			);
+			name = CoreLib;
+			path = ../../CoreLib/CoreLib;
+			sourceTree = "<group>";
+		};
+		B9B6BD611AC9CEF300D13BBC /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				B990228A1CB6AADA0007CB04 /* JMReceiptValidation.h */,
+				B990228B1CB6AADA0007CB04 /* JMReceiptValidation.m */,
+				B91B817C1AF9488B00406EEA /* JMApplicationDelegate.h */,
+				B91B817D1AF9488B00406EEA /* JMApplicationDelegate.m */,
+				B9B6BD621AC9CEF300D13BBC /* JMAppMovedHandler.h */,
+				B9B6BD631AC9CEF300D13BBC /* JMAppMovedHandler.m */,
+				B9B6BD641AC9CEF300D13BBC /* JMClickableImageView.h */,
+				B9B6BD651AC9CEF300D13BBC /* JMClickableImageView.m */,
+				B9B6BD661AC9CEF300D13BBC /* JMCorrectTimer.h */,
+				B9B6BD671AC9CEF300D13BBC /* JMCorrectTimer.m */,
+				B9B6BD681AC9CEF300D13BBC /* JMCrashReporter.h */,
+				B9B6BD691AC9CEF300D13BBC /* JMCrashReporter.m */,
+				B9B6BD6A1AC9CEF300D13BBC /* JMDocklessApplication.h */,
+				B9B6BD6B1AC9CEF300D13BBC /* JMDocklessApplication.m */,
+				B9B6BD6C1AC9CEF300D13BBC /* JMEmailSender.h */,
+				B9B6BD6D1AC9CEF300D13BBC /* JMEmailSender.m */,
+				B98A54AF1B0B53770009C028 /* JMEmailSender+CGIDelivery.m */,
+				B9B6BD6E1AC9CEF300D13BBC /* JMFontPopUpButton.h */,
+				B9B6BD6F1AC9CEF300D13BBC /* JMFontPopUpButton.m */,
+				B9B6BD701AC9CEF300D13BBC /* JMHostInformation.h */,
+				B9B6BD711AC9CEF300D13BBC /* JMHostInformation.m */,
+				B9B6BD721AC9CEF300D13BBC /* JMLoginItemManager.h */,
+				B9B6BD731AC9CEF300D13BBC /* JMLoginItemManager.m */,
+				B9B6BD741AC9CEF300D13BBC /* JMValueTransformer.h */,
+				B9B6BD751AC9CEF300D13BBC /* JMValueTransformer.m */,
+				B9B6BD761AC9CEF300D13BBC /* JMVisibilityManager.h */,
+				B9B6BD771AC9CEF300D13BBC /* JMVisibilityManager.m */,
+				B91B81761AF93EF500406EEA /* JMRTFView.h */,
+				B91B81771AF93EF500406EEA /* JMRTFView.m */,
+				B9B6BD781AC9CEF300D13BBC /* JMWebView.h */,
+				B9B6BD791AC9CEF300D13BBC /* JMWebView.m */,
+			);
+			name = Mac;
+			path = ../../CoreLib/Mac;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9B6BD2E1AC9B0C100D13BBC /* MacEVO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9B6BD4C1AC9B0C100D13BBC /* Build configuration list for PBXNativeTarget "MacEVO" */;
+			buildPhases = (
+				B9B6BD2B1AC9B0C100D13BBC /* Sources */,
+				B9B6BD2C1AC9B0C100D13BBC /* Frameworks */,
+				B9B6BD2D1AC9B0C100D13BBC /* Resources */,
+				B98DBBF71B16329000772BCA /* ShellScript */,
+			);
+			buildRules = (
+				B99FD3731AE84B0B0026CB42 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = MacEVO;
+			productName = MacEVO;
+			productReference = B9B6BD2F1AC9B0C100D13BBC /* MacEVO.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9B6BD271AC9B0C100D13BBC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = corecode;
+				TargetAttributes = {
+					B9B6BD2E1AC9B0C100D13BBC = {
+						CreatedOnToolsVersion = 6.2;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = B9B6BD2A1AC9B0C100D13BBC /* Build configuration list for PBXProject "MacEVO" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B9B6BD261AC9B0C100D13BBC;
+			productRefGroup = B9B6BD301AC9B0C100D13BBC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9B6BD2E1AC9B0C100D13BBC /* MacEVO */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9B6BD2D1AC9B0C100D13BBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B6BD3A1AC9B0C100D13BBC /* Images.xcassets in Resources */,
+				B90970C31B0B2D610086CCA2 /* readme.html in Resources */,
+				B90970C21B0B2D610086CCA2 /* history.html in Resources */,
+				B9B6BD3D1AC9B0C100D13BBC /* MainMenu.xib in Resources */,
+				B90970B91B0B27090086CCA2 /* DocumentationWindow.xib in Resources */,
+				B98DBBF61B162E9900772BCA /* privacy.html in Resources */,
+				B90970C11B0B2D610086CCA2 /* faq.html in Resources */,
+				B91B817B1AF9469B00406EEA /* MainWindow.xib in Resources */,
+				B90970C01B0B2D610086CCA2 /* credits.rtfd in Resources */,
+				B98183BF1CF4D302008E2B98 /* placeholder.png in Resources */,
+				B90970BA1B0B27090086CCA2 /* PromotionWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B98DBBF71B16329000772BCA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" MacEVO/MacEVO-Info.plist)\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" MacEVO/MacEVO-Info.plist";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9B6BD2B1AC9B0C100D13BBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9B6BD801AC9CEF300D13BBC /* JMClickableImageView.m in Sources */,
+				B9B6BD821AC9CEF300D13BBC /* JMCrashReporter.m in Sources */,
+				B9B6BD7D1AC9CEF300D13BBC /* Foundation+CoreCode.m in Sources */,
+				B9B6BD7F1AC9CEF300D13BBC /* JMAppMovedHandler.m in Sources */,
+				B9B6BD8A1AC9CEF300D13BBC /* JMWebView.m in Sources */,
+				B9B6BD7C1AC9CEF300D13BBC /* CoreLib.m in Sources */,
+				B9B6BD851AC9CEF300D13BBC /* JMFontPopUpButton.m in Sources */,
+				B91B81781AF93EF500406EEA /* JMRTFView.m in Sources */,
+				B98A54B01B0B53770009C028 /* JMEmailSender+CGIDelivery.m in Sources */,
+				B91B817E1AF9488B00406EEA /* JMApplicationDelegate.m in Sources */,
+				B9B6BD881AC9CEF300D13BBC /* JMValueTransformer.m in Sources */,
+				B9B6BD7B1AC9CEF300D13BBC /* AppKit+Properties.m in Sources */,
+				B9B6BD891AC9CEF300D13BBC /* JMVisibilityManager.m in Sources */,
+				B9B6BD841AC9CEF300D13BBC /* JMEmailSender.m in Sources */,
+				B9B6BD7A1AC9CEF300D13BBC /* AppKit+CoreCode.m in Sources */,
+				B9B6BD831AC9CEF300D13BBC /* JMDocklessApplication.m in Sources */,
+				B990228C1CB6AADA0007CB04 /* JMReceiptValidation.m in Sources */,
+				B9B6BD811AC9CEF300D13BBC /* JMCorrectTimer.m in Sources */,
+				B9B6BD861AC9CEF300D13BBC /* JMHostInformation.m in Sources */,
+				B9B6BD871AC9CEF300D13BBC /* JMLoginItemManager.m in Sources */,
+				B9B6BD361AC9B0C100D13BBC /* AppDelegate.m in Sources */,
+				B9B6BD7E1AC9CEF300D13BBC /* Foundation+Properties.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B90970B51B0B27090086CCA2 /* DocumentationWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B90970B61B0B27090086CCA2 /* Base */,
+			);
+			name = DocumentationWindow.xib;
+			sourceTree = "<group>";
+		};
+		B90970B71B0B27090086CCA2 /* PromotionWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B90970B81B0B27090086CCA2 /* Base */,
+			);
+			name = PromotionWindow.xib;
+			sourceTree = "<group>";
+		};
+		B91B81791AF9469B00406EEA /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B91B817A1AF9469B00406EEA /* Base */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		B9B6BD3B1AC9B0C100D13BBC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9B6BD3C1AC9B0C100D13BBC /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B9B6BD4A1AC9B0C100D13BBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"USE_SECURITY=1",
+					"SANDBOX=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"-Wextra",
+					"-Wassign-enum",
+					"-Wbool-conversions",
+					"-Wcast-align",
+					"-Wdisabled-optimization",
+					"-Wendif-labels",
+					"-Wfloat-equal",
+					"-Wformat",
+					"-Winline",
+					"-Winvalid-pch",
+					"-Wliteral-conversion",
+					"-Wlong-long",
+					"-Wmissing-field-initializers",
+					"-Wmissing-format-attribute",
+					"-Wmissing-noreturn",
+					"-Wmost",
+					"-Wmultichar",
+					"-Wpointer-arith",
+					"-Wredundant-decls",
+					"-Wreturn-type",
+					"-Wshadow",
+					"-Wshift-overflow",
+					"-Wshorten-64-to-32",
+					"-Wsign-compare",
+					"-Wstrict-selector-match",
+					"-Wundeclared-selector",
+					"-Wundef",
+					"-Wuninitialized",
+					"-Wunused-function",
+					"-Wunused-variable",
+					"-Wvariadic-macros",
+					"-Wwrite-strings",
+					"-Wno-objc-missing-property-synthesis",
+					"-Wno-unused-parameter",
+					"-Wno-direct-ivar-access",
+					"-Wno-pedantic",
+					"-Rno-module-build",
+					"-Wno-date-time",
+				);
+			};
+			name = Debug;
+		};
+		B9B6BD4B1AC9B0C100D13BBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"USE_SECURITY=1",
+					"SANDBOX=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"-Wextra",
+					"-Wassign-enum",
+					"-Wbool-conversions",
+					"-Wcast-align",
+					"-Wdisabled-optimization",
+					"-Wendif-labels",
+					"-Wfloat-equal",
+					"-Wformat",
+					"-Winline",
+					"-Winvalid-pch",
+					"-Wliteral-conversion",
+					"-Wlong-long",
+					"-Wmissing-field-initializers",
+					"-Wmissing-format-attribute",
+					"-Wmissing-noreturn",
+					"-Wmost",
+					"-Wmultichar",
+					"-Wpointer-arith",
+					"-Wredundant-decls",
+					"-Wreturn-type",
+					"-Wshadow",
+					"-Wshift-overflow",
+					"-Wshorten-64-to-32",
+					"-Wsign-compare",
+					"-Wstrict-selector-match",
+					"-Wundeclared-selector",
+					"-Wundef",
+					"-Wuninitialized",
+					"-Wunused-function",
+					"-Wunused-variable",
+					"-Wvariadic-macros",
+					"-Wwrite-strings",
+					"-Wno-objc-missing-property-synthesis",
+					"-Wno-unused-parameter",
+					"-Wno-direct-ivar-access",
+					"-Wno-pedantic",
+					"-Rno-module-build",
+					"-Wno-date-time",
+				);
+			};
+			name = Release;
+		};
+		B9B6BD4D1AC9B0C100D13BBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacEVO/MacEVO.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				INFOPLIST_FILE = "MacEVO/MacEVO-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B9B6BD4E1AC9B0C100D13BBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacEVO/MacEVO.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"NDEBUG=1",
+				);
+				INFOPLIST_FILE = "MacEVO/MacEVO-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9B6BD2A1AC9B0C100D13BBC /* Build configuration list for PBXProject "MacEVO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B6BD4A1AC9B0C100D13BBC /* Debug */,
+				B9B6BD4B1AC9B0C100D13BBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9B6BD4C1AC9B0C100D13BBC /* Build configuration list for PBXNativeTarget "MacEVO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9B6BD4D1AC9B0C100D13BBC /* Debug */,
+				B9B6BD4E1AC9B0C100D13BBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9B6BD271AC9B0C100D13BBC /* Project object */;
+}

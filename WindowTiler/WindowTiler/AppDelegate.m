@@ -43,8 +43,15 @@
 	NSString *str43 = [NSString stringWithFormat:@"{{%i, %i}, {%i, %i}}", 0, (int)[NSScreen mainScreen].frame.size.height/2, (int)[NSScreen mainScreen].frame.size.width/2, (int)[NSScreen mainScreen].frame.size.height/2];
 	NSString *str44 = [NSString stringWithFormat:@"{{%i, %i}, {%i, %i}}", (int)[NSScreen mainScreen].frame.size.width/2, (int)[NSScreen mainScreen].frame.size.height/2, (int)[NSScreen mainScreen].frame.size.width/2, (int)[NSScreen mainScreen].frame.size.height/2];
 
+	NSString *str61 = [NSString stringWithFormat:@"{{%i, %i}, {%i, %i}}", 0, 0, (int)[NSScreen mainScreen].frame.size.width/3, (int)[NSScreen mainScreen].frame.size.height/2];
+	NSString *str62 = [NSString stringWithFormat:@"{{%i, %i}, {%i, %i}}", (int)[NSScreen mainScreen].frame.size.width/3, 0, (int)[NSScreen mainScreen].frame.size.width/3, (int)[NSScreen mainScreen].frame.size.height/2];
+	NSString *str63 = [NSString stringWithFormat:@"{{%i, %i}, {%i, %i}}", (int)[NSScreen mainScreen].frame.size.width*2/3, 0, (int)[NSScreen mainScreen].frame.size.width/3, (int)[NSScreen mainScreen].frame.size.height/2];
+	NSString *str64 = [NSString stringWithFormat:@"{{%i, %i}, {%i, %i}}", 0, (int)[NSScreen mainScreen].frame.size.height/2, (int)[NSScreen mainScreen].frame.size.width/3, (int)[NSScreen mainScreen].frame.size.height/2];
+	NSString *str65 = [NSString stringWithFormat:@"{{%i, %i}, {%i, %i}}", (int)[NSScreen mainScreen].frame.size.width/3, (int)[NSScreen mainScreen].frame.size.height/2, (int)[NSScreen mainScreen].frame.size.width/3, (int)[NSScreen mainScreen].frame.size.height/2];
+	NSString *str66 = [NSString stringWithFormat:@"{{%i, %i}, {%i, %i}}", (int)[NSScreen mainScreen].frame.size.width*2/3, (int)[NSScreen mainScreen].frame.size.height/2, (int)[NSScreen mainScreen].frame.size.width/3, (int)[NSScreen mainScreen].frame.size.height/2];
 
-	NSDictionary *values = @{@(1) : @[str1], @(2) : @[str21, str22], @(3) : @[str31, str32, str33], @(4) : @[str41, str42, str43, str44]};
+
+	NSDictionary *values = @{@(1) : @[str1], @(2) : @[str21, str22], @(3) : @[str31, str32, str33], @(4) : @[str41, str42, str43, str44], @(6) : @[str61, str62, str63, str64, str65, str66]};
 
 
 	if ([app respondsToSelector:@selector(windows)])
@@ -52,6 +59,12 @@
 		SBElementArray *windows = [app performSelector:@selector(windows) withObject:nil];
 
 		NSArray *strings = values[@(windows.count)];
+		if (!strings)
+		{
+			NSLog(@"WindowTiler: wrong window count %lu", (unsigned long)windows.count);
+			return;
+		}
+
 		int i = 0;
 
 		for (GenericWindow *window in windows)

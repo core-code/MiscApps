@@ -115,7 +115,7 @@ CONST_KEY(XCode)
 	else if (tag == 2)
 		[@"Read Me.rtf".resourceURL open];
 	else if (tag == 3)
-		[makeString(@"http://www.corecode.at/%@/", cc.appName.lowercaseString).escaped.URL open];
+		[makeString(@"https://www.corecode.at/%@/", cc.appName.lowercaseString).escaped.URL open];
 }
 
 - (IBAction)compileAndRun:(id)sender

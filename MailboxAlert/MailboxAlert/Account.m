@@ -80,6 +80,10 @@
 {
 	dispatch_async_back(^
 	{
+		assert(self.username);
+		assert(self.password);
+		assert(self.server);
+
 		NSDictionary *mb = [AppDelegate checkMailbox:@{@"username" : self.username, @"password" : self.password, @"server" : self.server}];
 		self.failing = NO;
 
@@ -96,7 +100,7 @@
 		}
 		else
 		{
-			if ([mb objectForKey:@"quota"] && [mb[@"quota"] intValue])
+			if (mb[@"quota"] && [mb[@"quota"] intValue])
 				self.serverquota = [mb[@"quota"] intValue];
 
 			
@@ -159,7 +163,7 @@
     // TODO: this seems never to be called
 }
 
-- (id)initWithCoder:(NSCoder *)coder
+- (instancetype)initWithCoder:(NSCoder *)coder
 {
 	if ((self = [super init]))
 	{

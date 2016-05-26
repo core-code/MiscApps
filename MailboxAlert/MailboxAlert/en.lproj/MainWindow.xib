@@ -349,7 +349,7 @@
 														<object class="NSTextFieldCell" key="NSCell" id="282707174">
 															<int key="NSCellFlags">67108928</int>
 															<int key="NSCellFlags2">272631808</int>
-															<string key="NSContents">mayer.julian@googlemail.com | mail.gmail.com</string>
+															<string key="NSContents">username@gmail.com | mail.gmail.com</string>
 															<reference key="NSSupport" ref="730267292"/>
 															<reference key="NSControlView" ref="980476002"/>
 															<reference key="NSBackgroundColor" ref="553822935"/>

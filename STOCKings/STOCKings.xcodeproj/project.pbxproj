@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B99536B21C69E48F00B644A6 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B99536AA1C69E48F00B644A6 /* AppKit+CoreCode.m */; };
+		B99536B31C69E48F00B644A6 /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B99536AC1C69E48F00B644A6 /* AppKit+Properties.m */; };
+		B99536B41C69E48F00B644A6 /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B99536AE1C69E48F00B644A6 /* Foundation+CoreCode.m */; };
+		B99536B51C69E48F00B644A6 /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B99536B11C69E48F00B644A6 /* Foundation+Properties.m */; };
 		B9C80BE5187FF5A400613CA4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C80BE4187FF5A400613CA4 /* Cocoa.framework */; };
 		B9C80BF5187FF5A400613CA4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9C80BF3187FF5A400613CA4 /* Credits.rtf */; };
 		B9C80BF8187FF5A400613CA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C80BF7187FF5A400613CA4 /* AppDelegate.m */; };
@@ -14,19 +18,18 @@
 		B9C80BFD187FF5A400613CA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C80BFC187FF5A400613CA4 /* Images.xcassets */; };
 		B9C80C3C187FFC3800613CA4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C80C3B187FFC3800613CA4 /* WebKit.framework */; };
 		B9C80C84188003AA00613CA4 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C80C44188003AA00613CA4 /* CoreLib.m */; };
-		B9C80C95188003AA00613CA4 /* NSArray+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C80C6B188003AA00613CA4 /* NSArray+CoreCode.m */; };
-		B9C80C96188003AA00613CA4 /* NSData+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C80C6D188003AA00613CA4 /* NSData+CoreCode.m */; };
-		B9C80C97188003AA00613CA4 /* NSDate+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C80C6F188003AA00613CA4 /* NSDate+CoreCode.m */; };
-		B9C80C98188003AA00613CA4 /* NSDictionary+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C80C71188003AA00613CA4 /* NSDictionary+CoreCode.m */; };
-		B9C80C99188003AA00613CA4 /* NSFileHandle+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C80C73188003AA00613CA4 /* NSFileHandle+CoreCode.m */; };
-		B9C80C9A188003AA00613CA4 /* NSLocale+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C80C75188003AA00613CA4 /* NSLocale+CoreCode.m */; };
-		B9C80C9B188003AA00613CA4 /* NSNumber+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C80C77188003AA00613CA4 /* NSNumber+CoreCode.m */; };
-		B9C80C9C188003AA00613CA4 /* NSObject+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C80C79188003AA00613CA4 /* NSObject+CoreCode.m */; };
-		B9C80C9D188003AA00613CA4 /* NSString+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C80C7B188003AA00613CA4 /* NSString+CoreCode.m */; };
-		B9C80C9E188003AA00613CA4 /* NSURL+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C80C7D188003AA00613CA4 /* NSURL+CoreCode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B99536A91C69E48F00B644A6 /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
+		B99536AA1C69E48F00B644A6 /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
+		B99536AB1C69E48F00B644A6 /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
+		B99536AC1C69E48F00B644A6 /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
+		B99536AD1C69E48F00B644A6 /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
+		B99536AE1C69E48F00B644A6 /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
+		B99536AF1C69E48F00B644A6 /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
+		B99536B01C69E48F00B644A6 /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
+		B99536B11C69E48F00B644A6 /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
 		B9C80BE1187FF5A400613CA4 /* STOCKings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STOCKings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C80BE4187FF5A400613CA4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B9C80BE7187FF5A400613CA4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -42,26 +45,6 @@
 		B9C80C3B187FFC3800613CA4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B9C80C43188003AA00613CA4 /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
 		B9C80C44188003AA00613CA4 /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
-		B9C80C6A188003AA00613CA4 /* NSArray+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CoreCode.h"; sourceTree = "<group>"; };
-		B9C80C6B188003AA00613CA4 /* NSArray+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CoreCode.m"; sourceTree = "<group>"; };
-		B9C80C6C188003AA00613CA4 /* NSData+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CoreCode.h"; sourceTree = "<group>"; };
-		B9C80C6D188003AA00613CA4 /* NSData+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CoreCode.m"; sourceTree = "<group>"; };
-		B9C80C6E188003AA00613CA4 /* NSDate+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CoreCode.h"; sourceTree = "<group>"; };
-		B9C80C6F188003AA00613CA4 /* NSDate+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CoreCode.m"; sourceTree = "<group>"; };
-		B9C80C70188003AA00613CA4 /* NSDictionary+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CoreCode.h"; sourceTree = "<group>"; };
-		B9C80C71188003AA00613CA4 /* NSDictionary+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CoreCode.m"; sourceTree = "<group>"; };
-		B9C80C72188003AA00613CA4 /* NSFileHandle+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileHandle+CoreCode.h"; sourceTree = "<group>"; };
-		B9C80C73188003AA00613CA4 /* NSFileHandle+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileHandle+CoreCode.m"; sourceTree = "<group>"; };
-		B9C80C74188003AA00613CA4 /* NSLocale+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLocale+CoreCode.h"; sourceTree = "<group>"; };
-		B9C80C75188003AA00613CA4 /* NSLocale+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLocale+CoreCode.m"; sourceTree = "<group>"; };
-		B9C80C76188003AA00613CA4 /* NSNumber+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+CoreCode.h"; sourceTree = "<group>"; };
-		B9C80C77188003AA00613CA4 /* NSNumber+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CoreCode.m"; sourceTree = "<group>"; };
-		B9C80C78188003AA00613CA4 /* NSObject+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CoreCode.h"; sourceTree = "<group>"; };
-		B9C80C79188003AA00613CA4 /* NSObject+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CoreCode.m"; sourceTree = "<group>"; };
-		B9C80C7A188003AA00613CA4 /* NSString+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CoreCode.h"; sourceTree = "<group>"; };
-		B9C80C7B188003AA00613CA4 /* NSString+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CoreCode.m"; sourceTree = "<group>"; };
-		B9C80C7C188003AA00613CA4 /* NSURL+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CoreCode.h"; sourceTree = "<group>"; };
-		B9C80C7D188003AA00613CA4 /* NSURL+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CoreCode.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,29 +125,18 @@
 			children = (
 				B9C80C43188003AA00613CA4 /* CoreLib.h */,
 				B9C80C44188003AA00613CA4 /* CoreLib.m */,
-				B9C80C6A188003AA00613CA4 /* NSArray+CoreCode.h */,
-				B9C80C6B188003AA00613CA4 /* NSArray+CoreCode.m */,
-				B9C80C6C188003AA00613CA4 /* NSData+CoreCode.h */,
-				B9C80C6D188003AA00613CA4 /* NSData+CoreCode.m */,
-				B9C80C6E188003AA00613CA4 /* NSDate+CoreCode.h */,
-				B9C80C6F188003AA00613CA4 /* NSDate+CoreCode.m */,
-				B9C80C70188003AA00613CA4 /* NSDictionary+CoreCode.h */,
-				B9C80C71188003AA00613CA4 /* NSDictionary+CoreCode.m */,
-				B9C80C72188003AA00613CA4 /* NSFileHandle+CoreCode.h */,
-				B9C80C73188003AA00613CA4 /* NSFileHandle+CoreCode.m */,
-				B9C80C74188003AA00613CA4 /* NSLocale+CoreCode.h */,
-				B9C80C75188003AA00613CA4 /* NSLocale+CoreCode.m */,
-				B9C80C76188003AA00613CA4 /* NSNumber+CoreCode.h */,
-				B9C80C77188003AA00613CA4 /* NSNumber+CoreCode.m */,
-				B9C80C78188003AA00613CA4 /* NSObject+CoreCode.h */,
-				B9C80C79188003AA00613CA4 /* NSObject+CoreCode.m */,
-				B9C80C7A188003AA00613CA4 /* NSString+CoreCode.h */,
-				B9C80C7B188003AA00613CA4 /* NSString+CoreCode.m */,
-				B9C80C7C188003AA00613CA4 /* NSURL+CoreCode.h */,
-				B9C80C7D188003AA00613CA4 /* NSURL+CoreCode.m */,
+				B99536A91C69E48F00B644A6 /* AppKit+CoreCode.h */,
+				B99536AA1C69E48F00B644A6 /* AppKit+CoreCode.m */,
+				B99536AB1C69E48F00B644A6 /* AppKit+Properties.h */,
+				B99536AC1C69E48F00B644A6 /* AppKit+Properties.m */,
+				B99536AD1C69E48F00B644A6 /* Foundation+CoreCode.h */,
+				B99536AE1C69E48F00B644A6 /* Foundation+CoreCode.m */,
+				B99536AF1C69E48F00B644A6 /* Foundation+Indexing.h */,
+				B99536B01C69E48F00B644A6 /* Foundation+Properties.h */,
+				B99536B11C69E48F00B644A6 /* Foundation+Properties.m */,
 			);
 			name = CoreLib;
-			path = ../../../../CoreLib;
+			path = ../../../CoreLib/CoreLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +165,7 @@
 		B9C80BD9187FF5A400613CA4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = corecode;
 			};
 			buildConfigurationList = B9C80BDC187FF5A400613CA4 /* Build configuration list for PBXProject "STOCKings" */;
@@ -232,18 +204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9C80C95188003AA00613CA4 /* NSArray+CoreCode.m in Sources */,
-				B9C80C9E188003AA00613CA4 /* NSURL+CoreCode.m in Sources */,
-				B9C80C99188003AA00613CA4 /* NSFileHandle+CoreCode.m in Sources */,
-				B9C80C98188003AA00613CA4 /* NSDictionary+CoreCode.m in Sources */,
-				B9C80C9D188003AA00613CA4 /* NSString+CoreCode.m in Sources */,
-				B9C80C9A188003AA00613CA4 /* NSLocale+CoreCode.m in Sources */,
+				B99536B51C69E48F00B644A6 /* Foundation+Properties.m in Sources */,
 				B9C80BF8187FF5A400613CA4 /* AppDelegate.m in Sources */,
+				B99536B21C69E48F00B644A6 /* AppKit+CoreCode.m in Sources */,
 				B9C80C84188003AA00613CA4 /* CoreLib.m in Sources */,
-				B9C80C9C188003AA00613CA4 /* NSObject+CoreCode.m in Sources */,
-				B9C80C96188003AA00613CA4 /* NSData+CoreCode.m in Sources */,
-				B9C80C97188003AA00613CA4 /* NSDate+CoreCode.m in Sources */,
-				B9C80C9B188003AA00613CA4 /* NSNumber+CoreCode.m in Sources */,
+				B99536B41C69E48F00B644A6 /* Foundation+CoreCode.m in Sources */,
+				B99536B31C69E48F00B644A6 /* AppKit+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +251,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -302,6 +269,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -333,6 +301,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -346,6 +315,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "STOCKings/STOCKings-Prefix.pch";
 				INFOPLIST_FILE = "STOCKings/STOCKings-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -360,6 +330,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "STOCKings/STOCKings-Prefix.pch";
 				INFOPLIST_FILE = "STOCKings/STOCKings-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

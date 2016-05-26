@@ -25,7 +25,7 @@
 	<key>CFBundleSignature</key>
 	<string>SMAR</string>
 	<key>SUFeedURL</key>
-	<string>http://www.corecode.at/smartreporter/smartreporter.xml</string>
+	<string>https://www.corecode.at/smartreporter/smartreporter.xml</string>
 	<key>SUScheduledCheckInterval</key>
 	<integer>604800</integer>
 	<key>LSUIElement</key>

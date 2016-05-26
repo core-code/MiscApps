@@ -18,7 +18,6 @@
 
 
 
-CUSTOM_MUTABLE_ARRAY(Account)
 CONST_KEY_IMPLEMENTATION(NotificationAlert)
 CONST_KEY_IMPLEMENTATION(NotificationOnscreen)
 CONST_KEY_IMPLEMENTATION(NotificationMenubar)
@@ -30,6 +29,7 @@ CONST_KEY(WelcomeShown)
 
 @property (unsafe_unretained, nonatomic) IBOutlet NSPanel *setupPanel1;
 @property (unsafe_unretained, nonatomic) IBOutlet NSPanel *setupPanel2;
+@property (weak, nonatomic) IBOutlet NSTableView *tableView;
 @property (weak, nonatomic) IBOutlet NSMatrix *quotaMatrix;
 @property (weak, nonatomic) IBOutlet NSProgressIndicator *progressIndicator;
 @property (weak, nonatomic) IBOutlet NSTextField *customquotaField;
@@ -52,7 +52,6 @@ CONST_KEY(WelcomeShown)
 @property (weak, nonatomic) IBOutlet NSView *blockView;
 @property (strong, nonatomic) LoginItemManager *loginItemManager;
 @property (strong, nonatomic) VisibilityManager *visibilityManager;
-@property (strong, nonatomic) MutableAccountArray *accountArray;
 @property (strong, nonatomic) NSString *version;
 @property (strong, nonatomic) NSString *build;
 @property (strong, nonatomic) NSURL *faqURL;
@@ -60,10 +59,9 @@ CONST_KEY(WelcomeShown)
 @property (strong, nonatomic) NSURL *readmeURL;
 @property (strong, nonatomic) NSURL *aboutURL;
 @property (strong, nonatomic) NSMutableDictionary *currentAccount;
-@property (strong, nonatomic) NSMutableArray *mailAccounts;
+@property (strong, nonatomic) NSMutableArray <NSDictionary *> *mailAccounts;
+@property (strong, nonatomic) NSMutableArray <Account *> *accountArray;
 @property (assign, nonatomic) BOOL isNotificationInstalled;
-@property (weak, nonatomic) IBOutlet NSTableView *tableView;
-
 
 @end
 
@@ -94,11 +92,11 @@ CONST_KEY(WelcomeShown)
 	self.visibilityManager.menubarIcon = image;
 	self.loginItemManager = [LoginItemManager new];
 
-	NSArray *accounts = [NSKeyedUnarchiver unarchiveObjectWithData:kAccountDataKey.defaultObject];
-	self.accountArray = (MutableAccountArray *)accounts.mutableObject;
+	NSArray <Account *>*accounts = [NSKeyedUnarchiver unarchiveObjectWithData:kAccountDataKey.defaultObject];
+	self.accountArray = accounts.mutableObject;
 
 
-	self.build = makeString(@"%@ %i", @"Build:".localized, cc.appBuild);
+	self.build = makeString(@"%@ %i", @"Build:".localized, cc.appBuildNumber);
 	self.version = makeString(@"%@ %@", @"Version:".localized, cc.appVersionString);
 	self.aboutURL = @"Credits.rtfd".resourceURL;
 	self.historyURL = @"History.rtf".resourceURL;
@@ -116,9 +114,9 @@ CONST_KEY(WelcomeShown)
 								usingBlock:^(NSNotification *note)
 	{
 //		NSLog(@"got accountUpdate");
-		NSUInteger problems = [self.accountArray filtered:^int(Account *a) { return a.failing; }].count;
+		NSUInteger problems = [self.accountArray filtered:^BOOL(Account *a) { return a.failing; }].count;
 		
-		[self.summaryLabel setStringValue:makeString(@"%li accounts, %li problems", self.accountArray.count, problems)];
+		(self.summaryLabel).stringValue = makeString(@"%li accounts, %li problems", self.accountArray.count, problems);
 
 		NSImage *image = [NSImage imageNamed:(problems && kNotificationMenubarKey.defaultInt) ? @"menuicon_error" : @"menuicon_ok"];
 		[image setTemplate:YES];
@@ -126,13 +124,13 @@ CONST_KEY(WelcomeShown)
 
 		self.visibilityManager.menuTooltip = makeString(@"MailboxAlert: %li accounts, %li problems (last check: %@)", self.accountArray.count, problems, [NSDateFormatter localizedStringFromDate:[NSDate date] dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterMediumStyle]);
 
-		while (![((NSMenuItem *)[self.statusItemMenu itemAtIndex:2]) isSeparatorItem])
+		while (!((NSMenuItem *)[self.statusItemMenu itemAtIndex:2]).separatorItem)
 			[self.statusItemMenu removeItemAtIndex:2];
 		// TODO: bug this isn't updated when changing to menu display
 		for (Account *a in accounts)
 		{
 			NSMenuItem *item = [NSMenuItem new];
-			[item setTitle:makeString(@"%@ %@", a.information, a.status)];
+			item.title = makeString(@"%@ %@", a.information, a.status);
 			[item setEnabled:NO];
 			[self.statusItemMenu insertItem:item atIndex:2];
 		}
@@ -150,8 +148,8 @@ CONST_KEY(WelcomeShown)
 		kWelcomeShownKey.defaultInt = 1;
 	}
 
-	[_tableView setDoubleAction:@selector(editAccount:)];
-	[_tableView setTarget:self];
+	_tableView.doubleAction = @selector(editAccount:);
+	_tableView.target = self;
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
@@ -169,7 +167,7 @@ CONST_KEY(WelcomeShown)
     {
         [NSBundle loadNibNamed:@"MainWindow" owner:self];
         [self toolbarClicked:@(0)];
-        [_toolbar setSelectedItemIdentifier:[[_toolbar items][0] itemIdentifier]];
+        _toolbar.selectedItemIdentifier = (_toolbar.items[0]).itemIdentifier;
     }
 
     [NSApp activateIgnoringOtherApps:YES];
@@ -181,7 +179,7 @@ CONST_KEY(WelcomeShown)
 	[self openMainWindow:self];
 	
 	[self toolbarClicked:@(1)];
-	[_toolbar setSelectedItemIdentifier:[[_toolbar items][1] itemIdentifier]];
+	_toolbar.selectedItemIdentifier = (_toolbar.items[1]).itemIdentifier;
 
 	[_documentationTabView selectTabViewItemAtIndex:1];
 }
@@ -190,7 +188,7 @@ CONST_KEY(WelcomeShown)
 {
     NSArray *views = @[_settingsView, _aboutView];
     NSInteger index = [sender isKindOfClass:[NSNumber class]] ? [sender intValue] : [sender tag];
-    [[_mainTabView tabViewItemAtIndex:index] setView:views[(NSUInteger) index]];
+    [_mainTabView tabViewItemAtIndex:index].view = views[(NSUInteger) index];
     [_mainTabView selectTabViewItemAtIndex:index];
 }
 
@@ -202,42 +200,45 @@ CONST_KEY(WelcomeShown)
 	   didEndSelector:nil
 		  contextInfo:NULL];
 
-	[self.passwordField setStringValue:NON_NIL_STR(self.currentAccount[@"password"])];
-	[self.usernameField setStringValue:NON_NIL_STR(self.currentAccount[@"username"])];
-	[self.serverField setStringValue:NON_NIL_STR(self.currentAccount[@"server"])];
+	self.passwordField.stringValue = NON_NIL_STR(self.currentAccount[@"password"]);
+	self.usernameField.stringValue = NON_NIL_STR(self.currentAccount[@"username"]);
+	self.serverField.stringValue = NON_NIL_STR(self.currentAccount[@"server"]);
 
 	self.mailAccounts = [NSMutableArray array];
-	while ([self.importButton numberOfItems] > 1)
+	while (self.importButton.numberOfItems > 1)
 		[self.importButton removeItemAtIndex:1];
 
-	[((NSMenuItem *)[self.importButton itemAtIndex:0]) setTitle:@"Import Account (please wait)"];
+	[self.importButton itemAtIndex:0].title = @"Import Account (please wait)";
 
     dispatch_async_back(^
 	{
 		MailApplication *mail = [SBApplication applicationWithBundleIdentifier:@"com.apple.Mail"];
-		for (MailAccount *account in [mail imapAccounts])
+		for (MailAccount *account in mail.imapAccounts)
 		{
-			dispatch_async_main(^
-			{
-				[self.mailAccounts addObject:@{@"username" : account.userName, @"server" : account.serverName, @"accountname" : account.name}];
+			if (account.userName && account.serverName && account.name)
+				dispatch_async_main(^
+				{
+					[self.mailAccounts addObject:@{@"username" : account.userName,
+												   @"server" : account.serverName,
+												   @"accountname" : account.name}];
 
-				[self.importButton addItemWithTitle:account.name];
-			});
+					[self.importButton addItemWithTitle:account.name];
+				});
 		}
 		dispatch_async_main(^
 		{
-			[((NSMenuItem *)[self.importButton itemAtIndex:0]) setTitle:@"Import Account"];
+			[self.importButton itemAtIndex:0].title = @"Import Account";
 		});
 	});
 }
 
 - (IBAction)importAccount:(NSPopUpButton *)sender
 {
-	NSDictionary *accountInfo = self.mailAccounts[[sender indexOfSelectedItem]-1];
+	NSDictionary *accountInfo = self.mailAccounts[sender.indexOfSelectedItem-1];
 	
-	[self.serverField setStringValue:@""];
-	[self.usernameField setStringValue:NON_NIL_STR(accountInfo[@"username"])];
-	[self.serverField setStringValue:NON_NIL_STR(accountInfo[@"server"])];
+	self.serverField.stringValue = @"";
+	self.usernameField.stringValue = NON_NIL_STR(accountInfo[@"username"]);
+	self.serverField.stringValue = NON_NIL_STR(accountInfo[@"server"]);
 }
 
 - (IBAction)addAccount:(id)sender
@@ -249,7 +250,7 @@ CONST_KEY(WelcomeShown)
 
 - (IBAction)deleteAccount:(id)sender
 {
-	Account *account = [self.arrayController selectedObjects][0];
+	Account *account = (self.arrayController).selectedObjects[0];
 	[account stopTimer];
 
 	[self.arrayController remove:sender];
@@ -259,7 +260,7 @@ CONST_KEY(WelcomeShown)
 
 - (IBAction)editAccount:(id)sender
 {
-	Account *account = [self.arrayController selectedObjects][0]; //selection];
+	Account *account = (self.arrayController).selectedObjects[0]; //selection];
 	
 	self.currentAccount = [NSMutableDictionary new];
 
@@ -268,9 +269,9 @@ CONST_KEY(WelcomeShown)
 	self.currentAccount[@"username"] = account.username;
 	self.currentAccount[@"server"] = account.server;
 	if (account.customquota)
-		self.currentAccount[@"customquota"] = [@(account.customquota) stringValue];
-	self.currentAccount[@"interval"] = [@(account.interval) stringValue];
-	self.currentAccount[@"threshold"] = [@(account.percent) stringValue];
+		self.currentAccount[@"customquota"] = @(account.customquota).stringValue;
+	self.currentAccount[@"interval"] = @(account.interval).stringValue;
+	self.currentAccount[@"threshold"] = @(account.percent).stringValue;
 
 	[self startAccountEditing];
 }
@@ -286,19 +287,19 @@ CONST_KEY(WelcomeShown)
 
 - (IBAction)updateThresholdField:(id)sender
 {
-	float threshold = [[self.thresholdField stringValue] floatValue] / 100.0;
+	float threshold = (self.thresholdField).stringValue.floatValue / 100.0;
 	
-	if ([self.quotaMatrix selectedRow] == 0)
-		[self.thresholdLabel setStringValue:makeString(@"(%i MB)", (int)(threshold * [self.currentAccount[@"quota"] floatValue]))];
+	if (self.quotaMatrix.selectedRow == 0)
+		self.thresholdLabel.stringValue = makeString(@"(%i MB)", (int)(threshold * [self.currentAccount[@"quota"] floatValue]));
 	else
-		[self.thresholdLabel setStringValue:makeString(@"(%i MB)", (int)(threshold * [[self.customquotaField stringValue] floatValue]))];
+		self.thresholdLabel.stringValue = makeString(@"(%i MB)", (int)(threshold * self.customquotaField.stringValue.floatValue));
 }
 
 - (IBAction)continueAccount:(NSButton *)sender
 {
-	if ([[self.serverField stringValue] length] &&
-		[[self.usernameField stringValue] length] &&
-		[[self.passwordField stringValue] length])
+	if ((self.serverField).stringValue.length &&
+		(self.usernameField).stringValue.length &&
+		(self.passwordField).stringValue.length)
 	{
 		self.blockView.hidden = NO;
 		self.progressIndicator.hidden = NO;
@@ -307,9 +308,9 @@ CONST_KEY(WelcomeShown)
 		
 		dispatch_async_back(^
 		{
-			self.currentAccount[@"password"] = [self.passwordField stringValue];
-			self.currentAccount[@"username"] = [self.usernameField stringValue];
-			self.currentAccount[@"server"] = [self.serverField stringValue];
+			self.currentAccount[@"password"] = (self.passwordField).stringValue;
+			self.currentAccount[@"username"] = (self.usernameField).stringValue;
+			self.currentAccount[@"server"] = (self.serverField).stringValue;
 
 			NSDictionary *mb = [AppDelegate checkMailbox:self.currentAccount];
 
@@ -335,17 +336,17 @@ CONST_KEY(WelcomeShown)
 
 					[self.currentAccount addEntriesFromDictionary:mb];
 
-					if ([mb objectForKey:@"quota"] && [mb[@"quota"] intValue])
+					if (mb[@"quota"] && [mb[@"quota"] intValue])
 					{
 						[self.quotaMatrix selectCellAtRow:0 column:0];
-						[self.serverquotaLabel setStringValue:makeString(@"(%i MB)", [mb[@"quota"] intValue])];
-						[self.quotaMatrix setEnabled:YES];
+						(self.serverquotaLabel).stringValue = makeString(@"(%i MB)", [mb[@"quota"] intValue]);
+						self.quotaMatrix.enabled = YES;
 					}
 					else
 					{
-						[self.serverquotaLabel setStringValue:@"(unavailable)"];
+						self.serverquotaLabel.stringValue = @"(unavailable)";
 						[self.quotaMatrix selectCellAtRow:1 column:0];
-						[self.quotaMatrix setEnabled:NO];
+						self.quotaMatrix.enabled = NO;
 					}
 
 
@@ -388,15 +389,15 @@ CONST_KEY(WelcomeShown)
 	Account *oldAccount = self.currentAccount[@"account"];
 	Account *newAccount = OBJECT_OR(oldAccount, [Account new]);
 
-	newAccount.server = self.currentAccount[@"server"];
-	newAccount.username = self.currentAccount[@"username"];
-	newAccount.password = self.currentAccount[@"password"];
-	newAccount.interval = [[self.intervalField stringValue] intValue];
-	newAccount.percent = [[self.thresholdField stringValue] intValue];
-	if ([self.quotaMatrix selectedRow] == 0)
+	newAccount.server = NON_NIL_STR(self.currentAccount[@"server"]);
+	newAccount.username = NON_NIL_STR(self.currentAccount[@"username"]);
+	newAccount.password = NON_NIL_STR(self.currentAccount[@"password"]);
+	newAccount.interval = (self.intervalField).stringValue.intValue;
+	newAccount.percent = (self.thresholdField).stringValue.intValue;
+	if ((self.quotaMatrix).selectedRow == 0)
 		newAccount.customquota = 0;
 	else
-		newAccount.customquota = [[self.customquotaField stringValue] intValue];
+		newAccount.customquota = (self.customquotaField).stringValue.intValue;
 
 	[newAccount scheduleTests];
 
@@ -416,11 +417,11 @@ CONST_KEY(WelcomeShown)
 	NSString *urlString = @"";
 
 	if (tag == 1)
-		urlString = makeString(@"mailto:feedback@corecode.at?subject=%@ %@ Support Request (License code: %@)&body=Insert Support Request Here\n\n\n\nP.S: Hardware: %@ Software: %@ %@: %i%@", cc.appName, cc.appVersionString, cc.appSHA, [JMHostInformation machineType], [[NSProcessInfo processInfo] operatingSystemVersionString], cc.appName, cc.appBuild, ([cc.appCrashLogs count] ? makeString(@" Problems: %li", [cc.appCrashLogs count]) : @""));
+		urlString = makeString(@"mailto:feedback@corecode.at?subject=%@ %@ Support Request (License code: %@)&body=Insert Support Request Here\n\n\n\nP.S: Hardware: %@ Software: %@ %@: %i%@", cc.appName, cc.appVersionString, cc.appChecksumSHA, [JMHostInformation machineType], [NSProcessInfo processInfo].operatingSystemVersionString, cc.appName, cc.appBuildNumber, ((cc.appCrashLogs).count ? makeString(@" Problems: %li", (cc.appCrashLogs).count) : @""));
 	else if (tag == 2)
 		urlString = makeString(@"mailto:feedback@corecode.at?subject=%@ Beta Versions&body=Hello\nI would like to test upcoming beta versions of %@.\nBye\n", cc.appName, cc.appName);
 	else if (tag == 3)
-		urlString = makeString(@"http://www.corecode.at/%@/", [cc.appName lowercaseString]);
+		urlString = makeString(@"https://www.corecode.at/%@/", (cc.appName).lowercaseString);
 	else if (tag == 4)
 		urlString = @"https://itunes.apple.com/us/app/mailboxalert/id595630519?mt=12";
 
@@ -449,20 +450,20 @@ CONST_KEY(WelcomeShown)
 		int maxCount = 0;
 		float maxSize = 0;
 
-		for (NSString *line in [res lines])
+		for (NSString *line in res.lines)
 		{
 			if ([line hasPrefix:@"Sum"])
 			{
-				int count = [[line split:@" "][1] intValue];
-				float size = [[line split:@" "][2] floatValue];
+				int count = ([line split:@" "][1]).intValue;
+				float size = ([line split:@" "][2]).floatValue;
 
 				maxSize = MAX(size, maxSize);
 				maxCount = MAX(count, maxCount);
 			}
 			if ([line hasPrefix:@"Quota"])
 			{
-				float size = [[line split:@" "][1] floatValue];
-				float quota = [[line split:@" "][2] floatValue];
+				float size = ([line split:@" "][1]).floatValue;
+				float quota = ([line split:@" "][2]).floatValue;
 
 				maxSize = MAX(size, maxSize);
 				out[@"quota"] = @(quota);
@@ -483,7 +484,7 @@ CONST_KEY(WelcomeShown)
 }
 @end
 
-int main(int argc, char *argv[])
+int main(int argc, const char *argv[])
 {
     return NSApplicationMain(argc, (const char **)argv);
 }
