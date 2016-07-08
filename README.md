@@ -50,6 +50,9 @@ An application that extends the Exposé feature to include applications that are
 ReadingListPro
 An application that parses Safari's 'ReadingList', shows the items grouped by domain/host and allows you to open many items at once or export them to (InstaPaper) CSV.
 
+Diagnostics
+Various applications that can collect data to debug problems - mostly specific to problems for various apps.
+
 VolumeCore
 An application for realtime visualization of volumetric data.
 	

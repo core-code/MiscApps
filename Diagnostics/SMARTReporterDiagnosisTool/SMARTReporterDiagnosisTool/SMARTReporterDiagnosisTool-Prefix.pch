@@ -1,0 +1,13 @@
+//
+// Prefix header for all source files of the 'SMARTReporterDiagnosisTool' target in the 'SMARTReporterDiagnosisTool' project
+//
+
+#define USE_APPLEMAIL 1
+#define USE_IOKIT 1
+#define USE_DISKARBITRATION 1
+#define FORCE_LOG 1
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+	#import "CoreLib.h"
+#endif
