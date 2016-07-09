@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B9C109A91BC44502008CF4DB /* JMHostInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C109A81BC44502008CF4DB /* JMHostInformation.m */; };
 		B9EED2EA195482C200EB9FC1 /* DragDestinationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EED2E9195482C200EB9FC1 /* DragDestinationView.m */; };
 		B9F8361D1950A1CC00400BFC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F8361C1950A1CC00400BFC /* Cocoa.framework */; };
 		B9F8362D1950A1CC00400BFC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9F8362B1950A1CC00400BFC /* Credits.rtf */; };
@@ -22,8 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B9C109A71BC44502008CF4DB /* JMHostInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMHostInformation.h; path = ../../../CoreLib/Mac/JMHostInformation.h; sourceTree = "<group>"; };
-		B9C109A81BC44502008CF4DB /* JMHostInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMHostInformation.m; path = ../../../CoreLib/Mac/JMHostInformation.m; sourceTree = "<group>"; };
 		B9EED2E8195482C200EB9FC1 /* DragDestinationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDestinationView.h; sourceTree = "<group>"; };
 		B9EED2E9195482C200EB9FC1 /* DragDestinationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDestinationView.m; sourceTree = "<group>"; };
 		B9F836191950A1CC00400BFC /* FilenameList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilenameList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,8 +131,6 @@
 				B9F836541950A2CA00400BFC /* AppKit+Properties.m */,
 				B9F836551950A2CA00400BFC /* CoreLib.h */,
 				B9F836561950A2CA00400BFC /* CoreLib.m */,
-				B9C109A71BC44502008CF4DB /* JMHostInformation.h */,
-				B9C109A81BC44502008CF4DB /* JMHostInformation.m */,
 				B9F836571950A2CA00400BFC /* CoreLib_Availability.h */,
 				B9F836581950A2CA00400BFC /* Foundation+CoreCode.h */,
 				B9F836591950A2CA00400BFC /* Foundation+CoreCode.m */,
@@ -173,7 +168,7 @@
 		B9F836111950A1CC00400BFC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = corecode;
 			};
 			buildConfigurationList = B9F836141950A1CC00400BFC /* Build configuration list for PBXProject "FilenameList" */;
@@ -213,7 +208,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9F836301950A1CC00400BFC /* AppDelegate.m in Sources */,
-				B9C109A91BC44502008CF4DB /* JMHostInformation.m in Sources */,
 				B9F836611950A2CA00400BFC /* Foundation+Properties.m in Sources */,
 				B9F8365D1950A2CA00400BFC /* AppKit+CoreCode.m in Sources */,
 				B9EED2EA195482C200EB9FC1 /* DragDestinationView.m in Sources */,
@@ -260,12 +254,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -299,12 +296,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

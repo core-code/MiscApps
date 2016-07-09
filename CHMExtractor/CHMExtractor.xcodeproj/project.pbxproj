@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		665C7B740CBAA08800A399E0 /* CHMExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = 665C7B6E0CBAA08800A399E0 /* CHMExtractor.h */; };
-		665C7B750CBAA08800A399E0 /* CHMExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 665C7B6F0CBAA08800A399E0 /* CHMExtractor.m */; };
-		665C7B760CBAA08800A399E0 /* StatusPanelController.h in Headers */ = {isa = PBXBuildFile; fileRef = 665C7B700CBAA08800A399E0 /* StatusPanelController.h */; };
-		665C7B770CBAA08800A399E0 /* StatusPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665C7B710CBAA08800A399E0 /* StatusPanelController.m */; };
-		665C7B780CBAA08800A399E0 /* View.h in Headers */ = {isa = PBXBuildFile; fileRef = 665C7B720CBAA08800A399E0 /* View.h */; };
-		665C7B790CBAA08800A399E0 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 665C7B730CBAA08800A399E0 /* View.m */; };
 		665C7B870CBAA09800A399E0 /* chm.icns in Resources */ = {isa = PBXBuildFile; fileRef = 665C7B7F0CBAA09800A399E0 /* chm.icns */; };
 		665C7B880CBAA09800A399E0 /* chmdump in Resources */ = {isa = PBXBuildFile; fileRef = 665C7B800CBAA09800A399E0 /* chmdump */; };
 		665C7B890CBAA09800A399E0 /* CHMExtractor.icns in Resources */ = {isa = PBXBuildFile; fileRef = 665C7B810CBAA09800A399E0 /* CHMExtractor.icns */; };
@@ -24,18 +18,18 @@
 		6672283B0CC54F700008B9CC /* TaskWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 667228370CC54F700008B9CC /* TaskWrapper.h */; };
 		6672283C0CC54F700008B9CC /* TaskWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 667228380CC54F700008B9CC /* TaskWrapper.m */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B971FD871D302409004D8851 /* CHMExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = B971FD811D302409004D8851 /* CHMExtractor.h */; };
+		B971FD881D302409004D8851 /* CHMExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FD821D302409004D8851 /* CHMExtractor.m */; };
+		B971FD891D302409004D8851 /* StatusPanelController.h in Headers */ = {isa = PBXBuildFile; fileRef = B971FD831D302409004D8851 /* StatusPanelController.h */; };
+		B971FD8A1D302409004D8851 /* StatusPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FD841D302409004D8851 /* StatusPanelController.m */; };
+		B971FD8B1D302409004D8851 /* View.h in Headers */ = {isa = PBXBuildFile; fileRef = B971FD851D302409004D8851 /* View.h */; };
+		B971FD8C1D302409004D8851 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FD861D302409004D8851 /* View.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		665C7B6E0CBAA08800A399E0 /* CHMExtractor.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = CHMExtractor.h; sourceTree = "<group>"; };
-		665C7B6F0CBAA08800A399E0 /* CHMExtractor.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = CHMExtractor.m; sourceTree = "<group>"; };
-		665C7B700CBAA08800A399E0 /* StatusPanelController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = StatusPanelController.h; sourceTree = "<group>"; };
-		665C7B710CBAA08800A399E0 /* StatusPanelController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = StatusPanelController.m; sourceTree = "<group>"; };
-		665C7B720CBAA08800A399E0 /* View.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
-		665C7B730CBAA08800A399E0 /* View.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
 		665C7B7F0CBAA09800A399E0 /* chm.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = chm.icns; sourceTree = "<group>"; };
 		665C7B800CBAA09800A399E0 /* chmdump */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = chmdump; sourceTree = "<group>"; };
 		665C7B810CBAA09800A399E0 /* CHMExtractor.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CHMExtractor.icns; sourceTree = "<group>"; };
@@ -48,6 +42,12 @@
 		667228370CC54F700008B9CC /* TaskWrapper.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TaskWrapper.h; sourceTree = "<group>"; };
 		667228380CC54F700008B9CC /* TaskWrapper.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TaskWrapper.m; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* CHMExtractor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHMExtractor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B971FD811D302409004D8851 /* CHMExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMExtractor.h; sourceTree = "<group>"; };
+		B971FD821D302409004D8851 /* CHMExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHMExtractor.m; sourceTree = "<group>"; };
+		B971FD831D302409004D8851 /* StatusPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusPanelController.h; sourceTree = "<group>"; };
+		B971FD841D302409004D8851 /* StatusPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusPanelController.m; sourceTree = "<group>"; };
+		B971FD851D302409004D8851 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		B971FD861D302409004D8851 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 		29B97314FDCFA39411CA2CEA /* CHMExtractor */ = {
 			isa = PBXGroup;
 			children = (
-				665C7B6D0CBAA08800A399E0 /* Classes */,
+				B971FD801D302409004D8851 /* CHMExtractor */,
 				667228340CC54F700008B9CC /* Foreign Code */,
 				665C7B7E0CBAA09800A399E0 /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -106,19 +106,6 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		665C7B6D0CBAA08800A399E0 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				665C7B6E0CBAA08800A399E0 /* CHMExtractor.h */,
-				665C7B6F0CBAA08800A399E0 /* CHMExtractor.m */,
-				665C7B700CBAA08800A399E0 /* StatusPanelController.h */,
-				665C7B710CBAA08800A399E0 /* StatusPanelController.m */,
-				665C7B720CBAA08800A399E0 /* View.h */,
-				665C7B730CBAA08800A399E0 /* View.m */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		665C7B7E0CBAA09800A399E0 /* Resources */ = {
@@ -146,6 +133,19 @@
 			path = "Foreign Code";
 			sourceTree = "<group>";
 		};
+		B971FD801D302409004D8851 /* CHMExtractor */ = {
+			isa = PBXGroup;
+			children = (
+				B971FD811D302409004D8851 /* CHMExtractor.h */,
+				B971FD821D302409004D8851 /* CHMExtractor.m */,
+				B971FD831D302409004D8851 /* StatusPanelController.h */,
+				B971FD841D302409004D8851 /* StatusPanelController.m */,
+				B971FD851D302409004D8851 /* View.h */,
+				B971FD861D302409004D8851 /* View.m */,
+			);
+			path = CHMExtractor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -153,11 +153,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				665C7B740CBAA08800A399E0 /* CHMExtractor.h in Headers */,
-				665C7B760CBAA08800A399E0 /* StatusPanelController.h in Headers */,
-				665C7B780CBAA08800A399E0 /* View.h in Headers */,
+				B971FD891D302409004D8851 /* StatusPanelController.h in Headers */,
+				B971FD871D302409004D8851 /* CHMExtractor.h in Headers */,
 				667228390CC54F700008B9CC /* FileUtilities.h in Headers */,
 				6672283B0CC54F700008B9CC /* TaskWrapper.h in Headers */,
+				B971FD8B1D302409004D8851 /* View.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,9 +189,15 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 665FFCA30CB15F76000718DA /* Build configuration list for PBXProject "CHMExtractor" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CHMExtractor */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -238,9 +244,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				665C7B750CBAA08800A399E0 /* CHMExtractor.m in Sources */,
-				665C7B770CBAA08800A399E0 /* StatusPanelController.m in Sources */,
-				665C7B790CBAA08800A399E0 /* View.m in Sources */,
+				B971FD881D302409004D8851 /* CHMExtractor.m in Sources */,
+				B971FD8C1D302409004D8851 /* View.m in Sources */,
+				B971FD8A1D302409004D8851 /* StatusPanelController.m in Sources */,
 				6672283A0CC54F700008B9CC /* FileUtilities.m in Sources */,
 				6672283C0CC54F700008B9CC /* TaskWrapper.m in Sources */,
 			);
@@ -283,13 +289,13 @@
 		665FFCA40CB15F76000718DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = ppc;
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.2;
 				PREBINDING = NO;
 				PRODUCT_NAME = CHMExtractor;
-				SDKROOT = /Developer/SDKs/MacOSX10.2.8.sdk;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -298,13 +304,13 @@
 		665FFCA50CB15F76000718DA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = ppc;
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_DYNAMIC_NO_PIC = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.2;
 				PREBINDING = NO;
 				PRODUCT_NAME = CHMExtractor;
-				SDKROOT = /Developer/SDKs/MacOSX10.2.8.sdk;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -319,14 +325,14 @@
 		6671ABDE0CBABB8300FF0854 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = ppc;
+				ARCHS = "$(ARCHS_STANDARD)";
 				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.2;
 				PREBINDING = NO;
 				PRODUCT_NAME = CHMExtractor;
-				SDKROOT = /Developer/SDKs/MacOSX10.2.8.sdk;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};

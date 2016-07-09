@@ -53,7 +53,7 @@ CONST_KEY(XCode)
 	
 	
 	// check xcode versions
-	NSArray *xcodeVersions = [[@"/Applications".dirContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'Xcode'"] filtered:^int(NSString *s){return makeString(@"/Applications/%@/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/ToolchainInfo.plist", s).fileExists;}];
+	NSArray *xcodeVersions = [[@"/Applications".dirContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'Xcode'"] filtered:^BOOL(NSString *s){return makeString(@"/Applications/%@/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/ToolchainInfo.plist", s).fileExists;}];
 	if (xcodeVersions.empty)
 	{
 		NSRunAlertPanel(@"Error", @"You need to install Xcode to use InstaCode.\n\nIt is a free download on the Mac App Store.\n\nIf you already have it installed, make sure it is in your /Applications folder and its name still begins with 'Xcode'.", @"OK", nil, nil);
@@ -79,11 +79,11 @@ CONST_KEY(XCode)
 		{
 			NSInteger res = alert(@"Info", makeString(@"InstaCode is supported by donations. You've used InstaCode to compile %li programs. Would you like to donate now?", kRunsKey.defaultInt), @"Donate now!", @"Remind me Later", @"I have donated");
 
-			if (res == NSAlertDefaultReturn) // donate now
+            if (res == NSAlertFirstButtonReturn) // donate now
 			{
 				[@"https://www.paypal.com/xclick/business=donations@corecode.at&item_name=InstaCode+Payment&no_shipping=1&cn=Suggestions&tax=0&currency_code=EUR&lc=us&locale.x=en_US".URL open];
 			}
-			else if (res == NSAlertOtherReturn) // says he has donated
+			else if (res == NSAlertSecondButtonReturn) // says he has donated
 			{
 				kUserPayedKey.defaultInt = 1;
 			}
@@ -221,7 +221,7 @@ CONST_KEY(XCode)
 
 - (IBAction)choosePreset:(id)sender
 {
-	if (!dirty || (dirty && NSRunAlertPanel(@"InstaCode", @"Choosing a new preset will erase your current project.", @"Continue", @"Cancel", nil) == NSOKButton))
+	if (!dirty || (dirty && alert(@"InstaCode", @"Choosing a new preset will erase your current project.", @"Continue", @"Cancel", nil) == NSAlertFirstButtonReturn))
 	{
 		NSURL *path = [[cc.resURL add:@"Presets"] add:[[[sender selectedItem] title] stringByAppendingString:@".txt"]];
 		NSString *str = [NSString stringWithContentsOfURL:path encoding:NSUTF8StringEncoding error:NULL];
@@ -246,7 +246,7 @@ CONST_KEY(XCode)
 	{
 		if (level == 0)
 		{
-			if ([line hasPrefix:@"-"] || [line hasPrefix:@"+"] || [[[line split:@"{"][0] trimmed] hasSuffix:@")"])
+			if ([line hasPrefix:@"-"] || [line hasPrefix:@"+"] || [[[line split:@"{"][0] trimmedOfWhitespace] hasSuffix:@")"])
 			{
 				[tmp addObject:[line split:@"{"][0]];
 

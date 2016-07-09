@@ -86,8 +86,8 @@
 	
 	if ([JMEmailSender sendMailWithScriptingBridge:@"hello corecode,\nhelpful files to diagnose product problems are attached.\nbye\n\n "
 										   subject:@"CoreCode Diagnose Files"
+                                                to:@"feedback@corecode.at"
 										   timeout:60
-												to:@"feedback@corecode.at"
 										attachment:attachment.path] == kSMTPSuccess)
 	{
 		NSRunAlertPanel(@"Result", @"Sending succeeded. You can look into your Mail.app outbox", @"OK", nil, nil);
