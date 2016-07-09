@@ -21,6 +21,17 @@ enum QuickTimePlayerXPrintingErrorHandling {
 };
 typedef enum QuickTimePlayerXPrintingErrorHandling QuickTimePlayerXPrintingErrorHandling;
 
+@protocol QuickTimePlayerXGenericMethods
+
+- (void) closeSaving:(QuickTimePlayerXSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
+- (void) saveIn:(NSURL *)in_ as:(id)as;  // Save a document.
+- (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
+- (void) delete;  // Delete an object.
+- (void) duplicateTo:(SBObject *)to withProperties:(NSDictionary *)withProperties;  // Copy an object.
+- (void) moveTo:(SBObject *)to;  // Move an object to a new location.
+
+@end
+
 
 
 /*
@@ -29,9 +40,10 @@ typedef enum QuickTimePlayerXPrintingErrorHandling QuickTimePlayerXPrintingError
 
 // The application's top-level scripting object.
 @interface QuickTimePlayerXApplication : SBApplication
++ (QuickTimePlayerXApplication *) application;
 
-- (SBElementArray *) documents;
-- (SBElementArray *) windows;
+- (SBElementArray<QuickTimePlayerXDocument *> *) documents;
+- (SBElementArray<QuickTimePlayerXWindow *> *) windows;
 
 @property (copy, readonly) NSString *name;  // The name of the application.
 @property (readonly) BOOL frontmost;  // Is this the active application?
@@ -42,25 +54,19 @@ typedef enum QuickTimePlayerXPrintingErrorHandling QuickTimePlayerXPrintingError
 - (void) quitSaving:(QuickTimePlayerXSaveOptions)saving;  // Quit the application.
 - (BOOL) exists:(id)x;  // Verify that an object exists.
 - (void) openURL:(NSString *)x;  // Open a URL.
-- (QuickTimePlayerXDocument *) newMovieRecording;  // Create a new movie recording document.
-- (QuickTimePlayerXDocument *) newAudioRecording;  // Create a new audio recording document.
-- (QuickTimePlayerXDocument *) newScreenRecording;  // Create a new screen recording document.
+- (QuickTimePlayerXDocument *) newMovieRecording NS_RETURNS_NOT_RETAINED;  // Create a new movie recording document.
+- (QuickTimePlayerXDocument *) newAudioRecording NS_RETURNS_NOT_RETAINED;  // Create a new audio recording document.
+- (QuickTimePlayerXDocument *) newScreenRecording NS_RETURNS_NOT_RETAINED;  // Create a new screen recording document.
 
 @end
 
 // A document.
-@interface QuickTimePlayerXDocument : SBObject
+@interface QuickTimePlayerXDocument : SBObject <QuickTimePlayerXGenericMethods>
 
 @property (copy, readonly) NSString *name;  // Its name.
 @property (readonly) BOOL modified;  // Has it been modified since the last save?
 @property (copy, readonly) NSURL *file;  // Its location on disk, if it has one.
 
-- (void) closeSaving:(QuickTimePlayerXSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
-- (void) saveIn:(NSURL *)in_ as:(id)as;  // Save a document.
-- (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
-- (void) delete;  // Delete an object.
-- (void) duplicateTo:(SBObject *)to withProperties:(NSDictionary *)withProperties;  // Copy an object.
-- (void) moveTo:(SBObject *)to;  // Move an object to a new location.
 - (void) play;  // Play the movie.
 - (void) start;  // Start the movie recording.
 - (void) pause;  // Pause the recording.
@@ -75,7 +81,7 @@ typedef enum QuickTimePlayerXPrintingErrorHandling QuickTimePlayerXPrintingError
 @end
 
 // A window.
-@interface QuickTimePlayerXWindow : SBObject
+@interface QuickTimePlayerXWindow : SBObject <QuickTimePlayerXGenericMethods>
 
 @property (copy, readonly) NSString *name;  // The title of the window.
 - (NSInteger) id;  // The unique identifier of the window.
@@ -90,12 +96,6 @@ typedef enum QuickTimePlayerXPrintingErrorHandling QuickTimePlayerXPrintingError
 @property BOOL zoomed;  // Is the window zoomed right now?
 @property (copy, readonly) QuickTimePlayerXDocument *document;  // The document whose contents are displayed in the window.
 
-- (void) closeSaving:(QuickTimePlayerXSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
-- (void) saveIn:(NSURL *)in_ as:(id)as;  // Save a document.
-- (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
-- (void) delete;  // Delete an object.
-- (void) duplicateTo:(SBObject *)to withProperties:(NSDictionary *)withProperties;  // Copy an object.
-- (void) moveTo:(SBObject *)to;  // Move an object to a new location.
 
 @end
 
@@ -116,87 +116,57 @@ typedef enum QuickTimePlayerXPrintingErrorHandling QuickTimePlayerXPrintingError
  */
 
 // A video recording device
-@interface QuickTimePlayerXVideoRecordingDevice : SBObject
+@interface QuickTimePlayerXVideoRecordingDevice : SBObject <QuickTimePlayerXGenericMethods>
 
 @property (copy, readonly) NSString *name;  // The name of the device.
 - (NSString *) id;  // The unique identifier of the device.
 
-- (void) closeSaving:(QuickTimePlayerXSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
-- (void) saveIn:(NSURL *)in_ as:(id)as;  // Save a document.
-- (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
-- (void) delete;  // Delete an object.
-- (void) duplicateTo:(SBObject *)to withProperties:(NSDictionary *)withProperties;  // Copy an object.
-- (void) moveTo:(SBObject *)to;  // Move an object to a new location.
 
 @end
 
 // An audio recording device
-@interface QuickTimePlayerXAudioRecordingDevice : SBObject
+@interface QuickTimePlayerXAudioRecordingDevice : SBObject <QuickTimePlayerXGenericMethods>
 
 @property (copy, readonly) NSString *name;  // The name of the device.
 - (NSString *) id;  // The unique identifier of the device.
 
-- (void) closeSaving:(QuickTimePlayerXSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
-- (void) saveIn:(NSURL *)in_ as:(id)as;  // Save a document.
-- (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
-- (void) delete;  // Delete an object.
-- (void) duplicateTo:(SBObject *)to withProperties:(NSDictionary *)withProperties;  // Copy an object.
-- (void) moveTo:(SBObject *)to;  // Move an object to a new location.
 
 @end
 
 // An audio recording compression preset
-@interface QuickTimePlayerXAudioCompressionPreset : SBObject
+@interface QuickTimePlayerXAudioCompressionPreset : SBObject <QuickTimePlayerXGenericMethods>
 
 @property (copy, readonly) NSString *name;  // The name of the preset.
 - (NSString *) id;  // The unique identifier of the preset.
 
-- (void) closeSaving:(QuickTimePlayerXSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
-- (void) saveIn:(NSURL *)in_ as:(id)as;  // Save a document.
-- (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
-- (void) delete;  // Delete an object.
-- (void) duplicateTo:(SBObject *)to withProperties:(NSDictionary *)withProperties;  // Copy an object.
-- (void) moveTo:(SBObject *)to;  // Move an object to a new location.
 
 @end
 
 // A movie recording compression preset
-@interface QuickTimePlayerXMovieCompressionPreset : SBObject
+@interface QuickTimePlayerXMovieCompressionPreset : SBObject <QuickTimePlayerXGenericMethods>
 
 @property (copy, readonly) NSString *name;  // The name of the preset.
 - (NSString *) id;  // The unique identifier of the preset.
 
-- (void) closeSaving:(QuickTimePlayerXSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
-- (void) saveIn:(NSURL *)in_ as:(id)as;  // Save a document.
-- (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
-- (void) delete;  // Delete an object.
-- (void) duplicateTo:(SBObject *)to withProperties:(NSDictionary *)withProperties;  // Copy an object.
-- (void) moveTo:(SBObject *)to;  // Move an object to a new location.
 
 @end
 
 // A screen recording compression preset
-@interface QuickTimePlayerXScreenCompressionPreset : SBObject
+@interface QuickTimePlayerXScreenCompressionPreset : SBObject <QuickTimePlayerXGenericMethods>
 
 @property (copy, readonly) NSString *name;  // The name of the preset.
 - (NSString *) id;  // The unique identifier of the preset.
 
-- (void) closeSaving:(QuickTimePlayerXSaveOptions)saving savingIn:(NSURL *)savingIn;  // Close a document.
-- (void) saveIn:(NSURL *)in_ as:(id)as;  // Save a document.
-- (void) printWithProperties:(NSDictionary *)withProperties printDialog:(BOOL)printDialog;  // Print a document.
-- (void) delete;  // Delete an object.
-- (void) duplicateTo:(SBObject *)to withProperties:(NSDictionary *)withProperties;  // Copy an object.
-- (void) moveTo:(SBObject *)to;  // Move an object to a new location.
 
 @end
 
 @interface QuickTimePlayerXApplication (QuickTimePlayerSuite)
 
-- (SBElementArray *) videoRecordingDevices;
-- (SBElementArray *) audioRecordingDevices;
-- (SBElementArray *) audioCompressionPresets;
-- (SBElementArray *) movieCompressionPresets;
-- (SBElementArray *) screenCompressionPresets;
+- (SBElementArray<QuickTimePlayerXVideoRecordingDevice *> *) videoRecordingDevices;
+- (SBElementArray<QuickTimePlayerXAudioRecordingDevice *> *) audioRecordingDevices;
+- (SBElementArray<QuickTimePlayerXAudioCompressionPreset *> *) audioCompressionPresets;
+- (SBElementArray<QuickTimePlayerXMovieCompressionPreset *> *) movieCompressionPresets;
+- (SBElementArray<QuickTimePlayerXScreenCompressionPreset *> *) screenCompressionPresets;
 
 @end
 

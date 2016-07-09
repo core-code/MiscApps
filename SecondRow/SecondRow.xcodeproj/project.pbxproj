@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		B9DCB32D0E2BD8080066EEBE /* SecondRow.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DCB32C0E2BD8080066EEBE /* SecondRow.m */; };
+		B971FDF81D312040004D8851 /* SecondRow.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDF71D312040004D8851 /* SecondRow.m */; };
 		B9DCB3400E2BD8220066EEBE /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = B9DCB33D0E2BD8220066EEBE /* MainMenu.nib */; };
 		B9DCB36F0E2BDC720066EEBE /* SecondRow.icns in Resources */ = {isa = PBXBuildFile; fileRef = B9DCB36E0E2BDC720066EEBE /* SecondRow.icns */; };
 		B9DCB3A10E2BDEA20066EEBE /* CGDisplay.c in Sources */ = {isa = PBXBuildFile; fileRef = B9DCB39F0E2BDEA20066EEBE /* CGDisplay.c */; };
@@ -20,8 +20,8 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107320486CEB800E47090 /* SecondRow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecondRow.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9DCB32B0E2BD8080066EEBE /* SecondRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondRow.h; sourceTree = "<group>"; };
-		B9DCB32C0E2BD8080066EEBE /* SecondRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondRow.m; sourceTree = "<group>"; };
+		B971FDF61D312040004D8851 /* SecondRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondRow.h; sourceTree = "<group>"; };
+		B971FDF71D312040004D8851 /* SecondRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondRow.m; sourceTree = "<group>"; };
 		B9DCB33E0E2BD8220066EEBE /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		B9DCB33F0E2BD8220066EEBE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9DCB36E0E2BDC720066EEBE /* SecondRow.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SecondRow.icns; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		29B97314FDCFA39411CA2CEA /* SecondRow */ = {
 			isa = PBXGroup;
 			children = (
-				B9DCB32A0E2BD8080066EEBE /* Classes */,
+				B971FDF51D312040004D8851 /* SecondRow */,
 				B9DCB39E0E2BDEA20066EEBE /* Foreign Code */,
 				B9DCB33C0E2BD8220066EEBE /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -90,13 +90,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B9DCB32A0E2BD8080066EEBE /* Classes */ = {
+		B971FDF51D312040004D8851 /* SecondRow */ = {
 			isa = PBXGroup;
 			children = (
-				B9DCB32B0E2BD8080066EEBE /* SecondRow.h */,
-				B9DCB32C0E2BD8080066EEBE /* SecondRow.m */,
+				B971FDF61D312040004D8851 /* SecondRow.h */,
+				B971FDF71D312040004D8851 /* SecondRow.m */,
 			);
-			path = Classes;
+			path = SecondRow;
 			sourceTree = "<group>";
 		};
 		B9DCB33C0E2BD8220066EEBE /* Resources */ = {
@@ -145,9 +145,15 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SecondRow" */;
 			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* SecondRow */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -190,7 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9DCB32D0E2BD8080066EEBE /* SecondRow.m in Sources */,
+				B971FDF81D312040004D8851 /* SecondRow.m in Sources */,
 				B9DCB3A10E2BDEA20066EEBE /* CGDisplay.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,17 +218,12 @@
 		B9DCB3130E2BD7B40066EEBE /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
 				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PREBINDING = NO;
 				PRODUCT_NAME = SecondRow;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -254,7 +255,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PREBINDING = NO;
 				PRODUCT_NAME = SecondRow;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -263,16 +263,11 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
 				GCC_DYNAMIC_NO_PIC = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PREBINDING = NO;
 				PRODUCT_NAME = SecondRow;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};

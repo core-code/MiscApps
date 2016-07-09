@@ -61,9 +61,9 @@ Subtract the starting position from the ending position to determine the width o
 	else
 		destRect.size.height = pdfRect.size.height * (screenRect.size.width / pdfRect.size.width); // then dest H…HE becomes
 
-NSLog([NSString stringWithFormat:@"screenAspect: %f pdfAspect:%f", screenAspect, pdfAspect]);
-NSLog([NSString stringWithFormat:@"pdfRect: %f %f %f %f", pdfRect.size.width, pdfRect.size.height, pdfRect.origin.x, pdfRect.origin.y]);
-NSLog([NSString stringWithFormat:@"destRect: %f %f %f %f", destRect.size.width, destRect.size.height, destRect.origin.x, destRect.origin.y]);
+NSLog(@"%@", [NSString stringWithFormat:@"screenAspect: %f pdfAspect:%f", screenAspect, pdfAspect]);
+NSLog(@"%@", [NSString stringWithFormat:@"pdfRect: %f %f %f %f", pdfRect.size.width, pdfRect.size.height, pdfRect.origin.x, pdfRect.origin.y]);
+NSLog(@"%@", [NSString stringWithFormat:@"destRect: %f %f %f %f", destRect.size.width, destRect.size.height, destRect.origin.x, destRect.origin.y]);
 
 	// BACKGROUND GREY
 	if (screenAspect == pdfAspect) // if they are the same aspect we want the whole screen white
@@ -91,7 +91,7 @@ NSLog([NSString stringWithFormat:@"destRect: %f %f %f %f", destRect.size.width, 
 	{
 		float factor = destRect.size.width / pdfRect.size.width;
 
-		NSLog([NSString stringWithFormat:@"SCALING: %f", factor]);
+		NSLog(@"%@", [NSString stringWithFormat:@"SCALING: %f", factor]);
 
 		CGContextTranslateCTM (gc, -((screenRect.size.width - pdfRect.size.width) / 2), -((screenRect.size.height - pdfRect.size.height) / 2));
 
@@ -109,7 +109,7 @@ NSLog([NSString stringWithFormat:@"destRect: %f %f %f %f", destRect.size.width, 
 - (void)scrollWheel:(NSEvent *)theEvent
 {
 	int i;
-	for (i = abs((int)[theEvent deltaY]); i > 0 ; i--);
+	for (i = abs((int)[theEvent deltaY]); i > 0 ; i--)
 		[theEvent deltaY] > 0 ? [self decrementPageNumber:self] : [self incrementPageNumber:self];
 }
 

@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11163.2" systemVersion="16A239j" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment version="1050" defaultVersion="1050" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11163.2"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="DriveList">
@@ -25,7 +26,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <arrayController objectClassName="Drive" automaticallyPreparesContent="YES" clearsFilterPredicateOnInsertion="NO" id="5" userLabel="Array Controller">
             <declaredKeys>
                 <string>size</string>
@@ -44,7 +45,7 @@
                 <binding destination="-2" name="contentArray" keyPath="drives" id="44"/>
             </connections>
         </arrayController>
-        <window title="SMARTReporter 偏好设置" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" wantsToBeColor="NO" visibleAtLaunch="NO" animationBehavior="default" id="15" userLabel="Window">
+        <window title="SMARTReporter 偏好设置" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" animationBehavior="default" id="15" userLabel="Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="1025" y="429" width="500" height="550"/>
@@ -63,20 +64,20 @@
                             <tabViewItem label="硬盘" identifier="" id="106">
                                 <view key="view" id="108">
                                     <rect key="frame" x="10" y="33" width="454" height="488"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="6">
                                             <rect key="frame" x="20" y="317" width="417" height="126"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                             <clipView key="contentView" id="hmP-mX-C2a">
                                                 <rect key="frame" x="1" y="17" width="415" height="108"/>
-                                                <autoresizingMask key="autoresizingMask"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" headerView="784" id="9" customClass="DriveTableView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="415" height="108"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414.5" height="19"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="gridColor" red="0.80000001190000003" green="0.7901234627" blue="0.7901234627" alpha="1" colorSpace="calibratedRGB"/>
                                                         <tableColumns>
                                                             <tableColumn width="15" minWidth="10" maxWidth="1000" id="10">
@@ -155,11 +156,11 @@
                                                                 </textFieldCell>
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <connections>
-                                                                    <binding destination="5" name="textColor" keyPath="arrangedObjects.smartColor" id="50"/>
                                                                     <binding destination="5" name="value" keyPath="arrangedObjects.smart" id="46"/>
+                                                                    <binding destination="5" name="textColor" keyPath="arrangedObjects.smartColor" id="50"/>
                                                                 </connections>
                                                             </tableColumn>
-                                                            <tableColumn width="85.696998596191406" minWidth="43.696998596191406" maxWidth="1000" id="12">
+                                                            <tableColumn width="86.196998596191406" minWidth="43.696998596191406" maxWidth="1000" id="12">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="间隔">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -197,7 +198,6 @@
                                                         </connections>
                                                     </tableView>
                                                 </subviews>
-                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </clipView>
                                             <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="783">
                                                 <rect key="frame" x="1" y="-30" width="370" height="15"/>
@@ -251,7 +251,7 @@
                                         <box titlePosition="noTitle" id="131">
                                             <rect key="frame" x="17" y="9" width="423" height="196"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                                            <view key="contentView">
+                                            <view key="contentView" id="hnI-DO-0Ft">
                                                 <rect key="frame" x="2" y="2" width="419" height="192"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
@@ -260,7 +260,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="120" id="731">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="menu"/>
                                                             <menu key="menu" id="118">
                                                                 <items>
                                                                     <menuItem state="on" id="120">
@@ -339,9 +339,9 @@
                                                             <action selector="configureAction:" target="-2" id="230"/>
                                                             <binding destination="69" name="enabled2" keyPath="values.email" previousBinding="854" id="857">
                                                                 <dictionary key="options">
-                                                                    <integer key="NSNotApplicablePlaceholder" value="-1"/>
-                                                                    <integer key="NSNoSelectionPlaceholder" value="-1"/>
                                                                     <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                                    <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                                    <integer key="NSNotApplicablePlaceholder" value="-1"/>
                                                                     <integer key="NSNullPlaceholder" value="-1"/>
                                                                 </dictionary>
                                                             </binding>
@@ -357,7 +357,7 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <clipView key="contentView" id="mux-Bn-AHL">
                                                             <rect key="frame" x="1" y="1" width="198" height="54"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textView importsGraphics="NO" richText="NO" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" smartInsertDelete="YES" id="339">
                                                                     <rect key="frame" x="0.0" y="0.0" width="198" height="54"/>
@@ -408,10 +408,10 @@
                                                         <connections>
                                                             <binding destination="69" name="hidden2" keyPath="values.email" previousBinding="883" id="884">
                                                                 <dictionary key="options">
-                                                                    <integer key="NSNullPlaceholder" value="-1"/>
-                                                                    <integer key="NSNotApplicablePlaceholder" value="-1"/>
-                                                                    <integer key="NSNoSelectionPlaceholder" value="-1"/>
                                                                     <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                                    <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                                    <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                                                    <integer key="NSNullPlaceholder" value="-1"/>
                                                                     <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                                 </dictionary>
                                                             </binding>
@@ -424,15 +424,10 @@
                                                     </textField>
                                                 </subviews>
                                             </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
-                                        <box verticalHuggingPriority="750" boxType="separator" titlePosition="noTitle" id="134">
+                                        <box verticalHuggingPriority="750" boxType="separator" id="134">
                                             <rect key="frame" x="20" y="234" width="417" height="5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <font key="titleFont" metaFont="system"/>
                                         </box>
                                     </subviews>
                                 </view>
@@ -493,7 +488,7 @@
                                         <box titlePosition="noTitle" id="373">
                                             <rect key="frame" x="29" y="224" width="411" height="144"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                                            <view key="contentView">
+                                            <view key="contentView" id="4ef-BI-8v8">
                                                 <rect key="frame" x="2" y="2" width="407" height="140"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
@@ -502,7 +497,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="clipping" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" id="738">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="menu"/>
                                                             <menu key="menu" id="142">
                                                                 <items>
                                                                     <menuItem title="彩色" id="140"/>
@@ -525,8 +520,8 @@
                                                         </popUpButtonCell>
                                                         <connections>
                                                             <action selector="iconAction:" target="-2" id="193"/>
-                                                            <binding destination="69" name="enabled" keyPath="values.look" id="186"/>
                                                             <binding destination="69" name="selectedIndex" keyPath="values.iconset" id="195"/>
+                                                            <binding destination="69" name="enabled" keyPath="values.look" id="186"/>
                                                         </connections>
                                                     </popUpButton>
                                                     <imageView id="143">
@@ -603,8 +598,6 @@
                                                     </button>
                                                 </subviews>
                                             </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                     </subviews>
                                 </view>
@@ -685,8 +678,8 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
-                                                <binding destination="69" name="enabled" keyPath="values.use_logfilelimit" id="366"/>
                                                 <binding destination="69" name="value" keyPath="values.logfilelimit_kb" id="363"/>
+                                                <binding destination="69" name="enabled" keyPath="values.use_logfilelimit" id="366"/>
                                             </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" id="377">
@@ -703,7 +696,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <popUpButtonCell key="cell" type="push" title="一天一次" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="392" id="755">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
+                                                <font key="font" metaFont="menu"/>
                                                 <menu key="menu" id="390">
                                                     <items>
                                                         <menuItem title="一天一次" state="on" id="392"/>
@@ -779,7 +772,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <popUpButtonCell key="cell" type="push" title="降级或脱机时提示" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="911" id="908">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
+                                                <font key="font" metaFont="menu"/>
                                                 <menu key="menu" title="OtherViews" id="909">
                                                     <items>
                                                         <menuItem title="降级或脱机时提示" state="on" id="911"/>
@@ -842,9 +835,9 @@
                                             <connections>
                                                 <binding destination="69" name="enabled2" keyPath="values.email" previousBinding="949" id="950">
                                                     <dictionary key="options">
-                                                        <integer key="NSNotApplicablePlaceholder" value="-1"/>
-                                                        <integer key="NSNoSelectionPlaceholder" value="-1"/>
                                                         <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                        <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                        <integer key="NSNotApplicablePlaceholder" value="-1"/>
                                                         <integer key="NSNullPlaceholder" value="-1"/>
                                                     </dictionary>
                                                 </binding>
@@ -880,7 +873,7 @@
             </connections>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="69" userLabel="Shared Defaults"/>
-        <window title="电子邮件设置" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" wantsToBeColor="NO" visibleAtLaunch="NO" animationBehavior="default" id="203" userLabel="Panel" customClass="NSPanel">
+        <window title="电子邮件设置" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="203" userLabel="Panel" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="695" y="281" width="450" height="407"/>
@@ -984,7 +977,7 @@
                                         <box title="SMTP-服务器" id="343">
                                             <rect key="frame" x="16" y="62" width="377" height="191"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <view key="contentView">
+                                            <view key="contentView" id="Mfs-WX-rCJ">
                                                 <rect key="frame" x="2" y="2" width="373" height="174"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
@@ -1083,16 +1076,16 @@
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                         <connections>
+                                                            <binding destination="69" name="value" keyPath="values.auth_user" id="242"/>
+                                                            <binding destination="69" name="enabled" keyPath="values.email_settings" id="256"/>
                                                             <binding destination="69" name="enabled2" keyPath="values.use_authentication" previousBinding="256" id="262">
                                                                 <dictionary key="options">
-                                                                    <integer key="NSNotApplicablePlaceholder" value="-1"/>
-                                                                    <integer key="NSNoSelectionPlaceholder" value="-1"/>
                                                                     <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                                    <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                                    <integer key="NSNotApplicablePlaceholder" value="-1"/>
                                                                     <integer key="NSNullPlaceholder" value="-1"/>
                                                                 </dictionary>
                                                             </binding>
-                                                            <binding destination="69" name="enabled" keyPath="values.email_settings" id="256"/>
-                                                            <binding destination="69" name="value" keyPath="values.auth_user" id="242"/>
                                                         </connections>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" id="217" customClass="NSSecureTextField">
@@ -1105,15 +1098,15 @@
                                                         </textFieldCell>
                                                         <connections>
                                                             <action selector="updatePassword:" target="-2" id="886"/>
+                                                            <binding destination="69" name="enabled" keyPath="values.email_settings" id="258"/>
                                                             <binding destination="69" name="enabled2" keyPath="values.use_authentication" previousBinding="258" id="264">
                                                                 <dictionary key="options">
-                                                                    <integer key="NSNotApplicablePlaceholder" value="-1"/>
-                                                                    <integer key="NSNoSelectionPlaceholder" value="-1"/>
                                                                     <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                                    <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                                    <integer key="NSNotApplicablePlaceholder" value="-1"/>
                                                                     <integer key="NSNullPlaceholder" value="-1"/>
                                                                 </dictionary>
                                                             </binding>
-                                                            <binding destination="69" name="enabled" keyPath="values.email_settings" id="258"/>
                                                         </connections>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" id="218">
@@ -1127,8 +1120,6 @@
                                                     </textField>
                                                 </subviews>
                                             </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
                                         <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="378">
                                             <rect key="frame" x="19" y="16" width="16" height="16"/>
@@ -1294,7 +1285,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="811">
-                                    <rect key="frame" x="0.0" y="0.0" width="625" height="480"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <size key="minSize" width="625" height="480"/>
@@ -1335,7 +1326,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="822">
-                                    <rect key="frame" x="0.0" y="0.0" width="625" height="409"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="640" height="409"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <size key="minSize" width="625" height="409"/>

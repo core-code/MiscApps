@@ -26,7 +26,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #pragma mark *** NSDraggingDestination protocol-methods ***
 
-- (unsigned int)draggingEntered:(id <NSDraggingInfo>)sender
+- (NSDragOperation)draggingEntered:(id <NSDraggingInfo>)sender
 {
 	if ([sender draggingSource] != self)
 	{

@@ -21,7 +21,7 @@
 	
 	[panel setAllowsMultipleSelection:NO];
 
-	if (NSRunInformationalAlertPanel(name, [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CHOOSER_MSG"], @"Proceed", @"Cancel", nil) != NSCancelButton)
+	if (NSRunInformationalAlertPanel(name, @"%@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CHOOSER_MSG"], @"Proceed", @"Cancel", nil) != NSCancelButton)
 	{
 		if ([panel runModalForDirectory:@"/Applications" file:nil types:[NSArray arrayWithObjects:@"app", nil]] == NSOKButton)
 		{
@@ -32,7 +32,7 @@
 			
 			if (![[appPath lastPathComponent] isEqualToString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"APP_NAME"]])
 			{
-				NSRunCriticalAlertPanel(name, [NSString stringWithFormat:@"You must choose: %@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"APP_NAME"]], @"I'll try again", nil, nil);			
+				NSRunCriticalAlertPanel(name, @"%@", [NSString stringWithFormat:@"You must choose: %@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"APP_NAME"]], @"I'll try again", nil, nil);			
 				exit(1);
 			}
 				

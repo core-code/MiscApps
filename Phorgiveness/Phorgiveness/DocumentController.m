@@ -229,8 +229,8 @@ int 	items [2] = {39, 40};
 	}
 
 	filesize = fread(filebuffer, 1, 1024 * 1024, fp);
-	#error this worked on ppc but is surely broken on x64
-	datalocation = [self FindDataLocation:filebuffer bufferSize:filesize];
+
+    datalocation = [self FindDataLocation:filebuffer bufferSize:filesize];
 	datalocation += 68;
 	memcpy(&sData, filebuffer + datalocation, sizeof(SavedData));
 

@@ -3,15 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		B90C234F0F61D3AD00A55433 /* Updater.icns in Resources */ = {isa = PBXBuildFile; fileRef = B90C234E0F61D3AD00A55433 /* Updater.icns */; };
-		B923C1EC0F0960B300FB17EC /* Updater.m in Sources */ = {isa = PBXBuildFile; fileRef = B923C1EB0F0960B300FB17EC /* Updater.m */; };
 		B923C1F10F0960CE00FB17EC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B923C1EE0F0960CE00FB17EC /* MainMenu.xib */; };
 		B923C20E0F09622D00FB17EC /* Read Me.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B923C20D0F09622D00FB17EC /* Read Me.rtf */; };
+		B971FE291D3124C7004D8851 /* Updater.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FE281D3124C7004D8851 /* Updater.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +20,11 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107320486CEB800E47090 /* Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Updater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90C234E0F61D3AD00A55433 /* Updater.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Updater.icns; sourceTree = "<group>"; };
-		B923C1EA0F0960B300FB17EC /* Updater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Updater.h; sourceTree = "<group>"; };
-		B923C1EB0F0960B300FB17EC /* Updater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Updater.m; sourceTree = "<group>"; };
 		B923C1EF0F0960CE00FB17EC /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B923C1F00F0960CE00FB17EC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B923C20D0F09622D00FB17EC /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		B971FE271D3124C7004D8851 /* Updater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Updater.h; sourceTree = "<group>"; };
+		B971FE281D3124C7004D8851 /* Updater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Updater.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 		29B97314FDCFA39411CA2CEA /* Updater */ = {
 			isa = PBXGroup;
 			children = (
-				B923C1E90F0960B300FB17EC /* Classes */,
+				B971FE261D3124C7004D8851 /* Updater */,
 				B923C1ED0F0960CE00FB17EC /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -84,15 +84,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B923C1E90F0960B300FB17EC /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				B923C1EA0F0960B300FB17EC /* Updater.h */,
-				B923C1EB0F0960B300FB17EC /* Updater.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		B923C1ED0F0960CE00FB17EC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +93,15 @@
 				B90C234E0F61D3AD00A55433 /* Updater.icns */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B971FE261D3124C7004D8851 /* Updater */ = {
+			isa = PBXGroup;
+			children = (
+				B971FE271D3124C7004D8851 /* Updater.h */,
+				B971FE281D3124C7004D8851 /* Updater.m */,
+			);
+			path = Updater;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,9 +131,16 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Updater" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Updater */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -177,7 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B923C1EC0F0960B300FB17EC /* Updater.m in Sources */,
+				B971FE291D3124C7004D8851 /* Updater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,14 +205,27 @@
 		B923C1F50F0961C300FB17EC /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = Updater;
-				SDKROOT = macosx10.4;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -214,32 +234,52 @@
 		B923C1F60F0961C300FB17EC /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = "Release-Deployment";
 		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Debug;
 		};
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Release;
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = Updater;
-				SDKROOT = macosx10.4;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -248,13 +288,26 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = Updater;
-				SDKROOT = macosx10.4;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};

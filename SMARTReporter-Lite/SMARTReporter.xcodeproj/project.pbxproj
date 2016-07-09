@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		660AE0F20BB746E60081056B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660AE0F10BB746E60081056B /* Sparkle.framework */; };
-		660AE1060BB746EE0081056B /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 660AE0F10BB746E60081056B /* Sparkle.framework */; };
+		660AE1060BB746EE0081056B /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 660AE0F10BB746E60081056B /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		662849F60BA60F61008D88DF /* Read Me.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9CAE98A070CBF740049E37C /* Read Me.rtf */; };
 		662849F70BA60F62008D88DF /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 66D31AA60B8891C400972793 /* FAQ.rtf */; };
 		662849F80BA60F65008D88DF /* History.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 66D31AA50B8891C300972793 /* History.rtf */; };
@@ -48,7 +48,7 @@
 		B99B8DF1109FB54100B02E04 /* DriveTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B99B8DEF109FB54100B02E04 /* DriveTableView.m */; };
 		B9CE33C311FE37D800CDB38E /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = B9CE33C211FE37D800CDB38E /* Growl Registration Ticket.growlRegDict */; };
 		B9CE33C711FE38DF00CDB38E /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9CE33C611FE38DF00CDB38E /* Growl.framework */; };
-		B9CE343511FE38E500CDB38E /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9CE33C611FE38DF00CDB38E /* Growl.framework */; };
+		B9CE343511FE38E500CDB38E /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9CE33C611FE38DF00CDB38E /* Growl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B9DCDCEF1245634C0048498D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DCDCEE1245634C0048498D /* SystemConfiguration.framework */; };
 		B9DCDD4B124570CB0048498D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DCDD4A124570CB0048498D /* Security.framework */; };
 		B9E2D1EC11FCA68E00DA3EBB /* StartFromDiskImageHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E2D1EA11FCA68E00DA3EBB /* StartFromDiskImageHandler.h */; };
@@ -56,7 +56,7 @@
 		B9E2D20111FCA94900DA3EBB /* ApplicationMovedHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E2D1FF11FCA94900DA3EBB /* ApplicationMovedHandler.h */; };
 		B9E2D20211FCA94900DA3EBB /* ApplicationMovedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E2D20011FCA94900DA3EBB /* ApplicationMovedHandler.m */; };
 		B9E2D2A011FCB6ED00DA3EBB /* MailCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E2D29F11FCB6ED00DA3EBB /* MailCore.framework */; };
-		B9E2D2AB11FCB6FB00DA3EBB /* MailCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9E2D29F11FCB6ED00DA3EBB /* MailCore.framework */; };
+		B9E2D2AB11FCB6FB00DA3EBB /* MailCore.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9E2D29F11FCB6ED00DA3EBB /* MailCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B9E5D291109F5EE200FDA028 /* smartctl in Resources */ = {isa = PBXBuildFile; fileRef = B9E5D290109F5EE200FDA028 /* smartctl */; };
 		B9F08DCD121338FD00F84B96 /* JMApp.h in Headers */ = {isa = PBXBuildFile; fileRef = B9F08DCB121338FD00F84B96 /* JMApp.h */; };
 		B9F08DCE121338FD00F84B96 /* JMApp.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F08DCC121338FD00F84B96 /* JMApp.m */; };
@@ -112,8 +112,8 @@
 		B90E71791488258600FBC1D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Resources/en.lproj/Configuration.xib; sourceTree = "<group>"; };
 		B90E717B1488258600FBC1D2 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B90E717D1488258600FBC1D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Resources/en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B90E7182148825A000FBC1D2 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Configuration.strings; sourceTree = "<group>"; };
-		B90E7184148825A000FBC1D2 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B90E7182148825A000FBC1D2 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B90E7184148825A000FBC1D2 /* en */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		B911787F103DF3D200AD98FC /* Mail.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Mail.app; path = /Applications/Mail.app; sourceTree = "<absolute>"; };
 		B911788C103DF3F400AD98FC /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = /System/Library/Frameworks/ScriptingBridge.framework; sourceTree = "<absolute>"; };
 		B911ACE714C98EE000B0A092 /* Credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = Credits.rtfd; path = Resources/Credits.rtfd; sourceTree = "<group>"; };
@@ -127,10 +127,10 @@
 		B91B4897070B31E000F19FCF /* SMARTReporter_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMARTReporter_Prefix.pch; path = "Other Sources/SMARTReporter_Prefix.pch"; sourceTree = "<group>"; };
 		B91B489E070B31EA00F19FCF /* SMARTReporter.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = SMARTReporter.icns; path = Resources/SMARTReporter.icns; sourceTree = "<group>"; };
 		B92287091499359500613A05 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_CN; path = Resources/zh_CN.lproj/Configuration.xib; sourceTree = "<group>"; };
-		B92287211499359C00613A05 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = Resources/zh_CN.lproj/Configuration.strings; sourceTree = "<group>"; };
-		B92287221499359C00613A05 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = Resources/zh_CN.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B92287211499359C00613A05 /* zh_CN */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = zh_CN; path = Resources/zh_CN.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B92287221499359C00613A05 /* zh_CN */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = zh_CN; path = Resources/zh_CN.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B92287231499359C00613A05 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_CN; path = Resources/zh_CN.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B92287241499359C00613A05 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_CN; path = Resources/zh_CN.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B92287241499359C00613A05 /* zh_CN */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = zh_CN; path = Resources/zh_CN.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		B932B8C6063DC6D500FA79A9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		B97ADCE9121468A600B0C6B9 /* ValidEmailValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValidEmailValueTransformer.h; path = Classes/ValidEmailValueTransformer.h; sourceTree = "<group>"; };
 		B97ADCEA121468A600B0C6B9 /* ValidEmailValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ValidEmailValueTransformer.m; path = Classes/ValidEmailValueTransformer.m; sourceTree = "<group>"; };
@@ -150,50 +150,50 @@
 		B9E2D29F11FCB6ED00DA3EBB /* MailCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MailCore.framework; path = Frameworks/MailCore.framework; sourceTree = "<group>"; };
 		B9E5D290109F5EE200FDA028 /* smartctl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = smartctl; path = Resources/smartctl; sourceTree = "<group>"; };
 		B9ECDBA81488369B00343919 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = Resources/ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B9ECDBC0148836A400343919 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		B9ECDBC1148836B500343919 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBC0148836A400343919 /* ru */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBC1148836B500343919 /* ru */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Configuration.strings; sourceTree = "<group>"; };
 		B9ECDBC2148836B500343919 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = Resources/ru.lproj/Configuration.xib; sourceTree = "<group>"; };
-		B9ECDBC3148836B500343919 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBC3148836B500343919 /* ru */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B9ECDBC4148836BE00343919 /* sv */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = sv; path = Resources/sv.lproj/Configuration.xib; sourceTree = "<group>"; };
-		B9ECDBC5148836BE00343919 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = Resources/sv.lproj/Configuration.strings; sourceTree = "<group>"; };
-		B9ECDBC6148836BE00343919 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = Resources/sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBC5148836BE00343919 /* sv */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = sv; path = Resources/sv.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBC6148836BE00343919 /* sv */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = sv; path = Resources/sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B9ECDBC7148836BE00343919 /* sv */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = sv; path = Resources/sv.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B9ECDBC8148836BE00343919 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = Resources/sv.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBC8148836BE00343919 /* sv */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = sv; path = Resources/sv.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		B9ECDBC9148836C800343919 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = Resources/pl.lproj/Configuration.xib; sourceTree = "<group>"; };
-		B9ECDBCA148836C800343919 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = Resources/pl.lproj/Configuration.strings; sourceTree = "<group>"; };
-		B9ECDBCB148836C800343919 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = Resources/pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBCA148836C800343919 /* pl */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = pl; path = Resources/pl.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBCB148836C800343919 /* pl */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = pl; path = Resources/pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B9ECDBCC148836C800343919 /* pl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pl; path = Resources/pl.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B9ECDBCD148836C800343919 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = Resources/pl.lproj/MainMenu.strings; sourceTree = "<group>"; };
-		B9ECDBCE148836CF00343919 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBCD148836C800343919 /* pl */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = pl; path = Resources/pl.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBCE148836CF00343919 /* ja */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/Configuration.strings; sourceTree = "<group>"; };
 		B9ECDBCF148836CF00343919 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = Resources/ja.lproj/Configuration.xib; sourceTree = "<group>"; };
-		B9ECDBD0148836CF00343919 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B9ECDBD1148836CF00343919 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBD0148836CF00343919 /* ja */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBD1148836CF00343919 /* ja */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		B9ECDBD2148836CF00343919 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = Resources/ja.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B9ECDBD3148836D700343919 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Resources/it.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBD3148836D700343919 /* it */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = it; path = Resources/it.lproj/Configuration.strings; sourceTree = "<group>"; };
 		B9ECDBD4148836D700343919 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = Resources/it.lproj/Configuration.xib; sourceTree = "<group>"; };
-		B9ECDBD5148836D700343919 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Resources/it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B9ECDBD6148836D700343919 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Resources/it.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBD5148836D700343919 /* it */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = it; path = Resources/it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBD6148836D700343919 /* it */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = it; path = Resources/it.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		B9ECDBD7148836D700343919 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = Resources/it.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B9ECDBD8148836E000343919 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBD8148836E000343919 /* fr */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/Configuration.strings; sourceTree = "<group>"; };
 		B9ECDBD9148836E000343919 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = Resources/fr.lproj/Configuration.xib; sourceTree = "<group>"; };
-		B9ECDBDA148836E000343919 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B9ECDBDB148836E000343919 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBDA148836E000343919 /* fr */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBDB148836E000343919 /* fr */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		B9ECDBDC148836E000343919 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = Resources/fr.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B9ECDBDD148836E900343919 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBDD148836E900343919 /* es */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Configuration.strings; sourceTree = "<group>"; };
 		B9ECDBDE148836E900343919 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = Resources/es.lproj/Configuration.xib; sourceTree = "<group>"; };
-		B9ECDBDF148836E900343919 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B9ECDBE0148836E900343919 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBDF148836E900343919 /* es */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBE0148836E900343919 /* es */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		B9ECDBE1148836E900343919 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = Resources/es.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B9ECDBE2148836F200343919 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBE2148836F200343919 /* de */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Configuration.strings; sourceTree = "<group>"; };
 		B9ECDBE3148836F200343919 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = Resources/de.lproj/Configuration.xib; sourceTree = "<group>"; };
-		B9ECDBE4148836F200343919 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B9ECDBE5148836F200343919 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBE4148836F200343919 /* de */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBE5148836F200343919 /* de */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		B9ECDBE6148836F200343919 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = Resources/de.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B9ECDBE7148836FC00343919 /* ca */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ca; path = Resources/ca.lproj/Configuration.xib; sourceTree = "<group>"; };
-		B9ECDBE8148836FC00343919 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = Resources/ca.lproj/Configuration.strings; sourceTree = "<group>"; };
-		B9ECDBE9148836FC00343919 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = Resources/ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B9ECDBE8148836FC00343919 /* ca */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ca; path = Resources/ca.lproj/Configuration.strings; sourceTree = "<group>"; };
+		B9ECDBE9148836FC00343919 /* ca */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ca; path = Resources/ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B9ECDBEA148836FC00343919 /* ca */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ca; path = Resources/ca.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B9ECDBEB148836FC00343919 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = Resources/ca.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		B9ECDBEB148836FC00343919 /* ca */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = ca; path = Resources/ca.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		B9F08DCB121338FD00F84B96 /* JMApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMApp.h; sourceTree = "<group>"; };
 		B9F08DCC121338FD00F84B96 /* JMApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMApp.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -397,9 +397,10 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0800;
 			};
 			buildConfigurationList = B9EDA9F40856097300F1874E /* Build configuration list for PBXProject "SMARTReporter" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -593,30 +594,46 @@
 		B9AAA7090953AB6700045CE9 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = "Release-Deployment";
 		};
 		B9AAA70A0953AB6700045CE9 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/SMARTReporter_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = Frameworks/MailCore.framework/Versions/A/Headers;
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = SMARTReporter;
-				SDKROOT = macosx10.9;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
 				WARNING_CFLAGS = (
@@ -630,36 +647,55 @@
 		B9EDA9F10856097300F1874E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Debug;
 		};
 		B9EDA9F20856097300F1874E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Release;
 		};
 		B9EDA9F50856097300F1874E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/SMARTReporter_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = Frameworks/MailCore.framework/Versions/A/Headers;
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = SMARTReporter;
-				SDKROOT = macosx10.9;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = debugging;
 				WARNING_CFLAGS = (
@@ -693,23 +729,37 @@
 		B9EDA9F60856097300F1874E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/SMARTReporter_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = Frameworks/MailCore.framework/Versions/A/Headers;
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = SMARTReporter;
-				SDKROOT = macosx10.9;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = debugging;
 				WARNING_CFLAGS = (

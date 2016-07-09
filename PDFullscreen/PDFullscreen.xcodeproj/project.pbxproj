@@ -3,18 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		664FE0870CBA8C6C00A14689 /* PDFullscreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 664FE0750CBA8C6C00A14689 /* PDFullscreen.m */; };
-		664FE0890CBA8C6C00A14689 /* PDFullscreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 664FE0790CBA8C6C00A14689 /* PDFullscreenView.m */; };
 		664FE08C0CBA8C6C00A14689 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 664FE07F0CBA8C6C00A14689 /* MainMenu.nib */; };
-		664FE08E0CBA8C6C00A14689 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 664FE0830CBA8C6C00A14689 /* Info.plist */; };
 		664FE08F0CBA8C6C00A14689 /* PDF.icns in Resources */ = {isa = PBXBuildFile; fileRef = 664FE0840CBA8C6C00A14689 /* PDF.icns */; };
 		664FE0900CBA8C6C00A14689 /* PDFullscreen.icns in Resources */ = {isa = PBXBuildFile; fileRef = 664FE0850CBA8C6C00A14689 /* PDFullscreen.icns */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		B9256DE0079EFD8100F298A5 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9256DDF079EFD8100F298A5 /* ApplicationServices.framework */; };
+		B971FDE91D311CC6004D8851 /* PDFullscreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDE61D311CC6004D8851 /* PDFullscreen.m */; };
+		B971FDEA1D311CC6004D8851 /* PDFullscreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDE81D311CC6004D8851 /* PDFullscreenView.m */; };
 		B9F7DB750CE49FAE00ABBC9C /* PDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F7DB740CE49FAE00ABBC9C /* PDFView.m */; };
 /* End PBXBuildFile section */
 
@@ -22,17 +21,17 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		664FE0740CBA8C6C00A14689 /* PDFullscreen.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PDFullscreen.h; sourceTree = "<group>"; };
-		664FE0750CBA8C6C00A14689 /* PDFullscreen.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PDFullscreen.m; sourceTree = "<group>"; };
-		664FE0780CBA8C6C00A14689 /* PDFullscreenView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PDFullscreenView.h; sourceTree = "<group>"; };
-		664FE0790CBA8C6C00A14689 /* PDFullscreenView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PDFullscreenView.m; sourceTree = "<group>"; };
 		664FE0800CBA8C6C00A14689 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
-		664FE0830CBA8C6C00A14689 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = Info.plist; sourceTree = "<group>"; };
+		664FE0830CBA8C6C00A14689 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		664FE0840CBA8C6C00A14689 /* PDF.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PDF.icns; sourceTree = "<group>"; };
 		664FE0850CBA8C6C00A14689 /* PDFullscreen.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PDFullscreen.icns; sourceTree = "<group>"; };
 		6693C2E90CBA927D00CD727C /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* PDFullscreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDFullscreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9256DDF079EFD8100F298A5 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
+		B971FDE51D311CC6004D8851 /* PDFullscreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFullscreen.h; sourceTree = "<group>"; };
+		B971FDE61D311CC6004D8851 /* PDFullscreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFullscreen.m; sourceTree = "<group>"; };
+		B971FDE71D311CC6004D8851 /* PDFullscreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFullscreenView.h; sourceTree = "<group>"; };
+		B971FDE81D311CC6004D8851 /* PDFullscreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFullscreenView.m; sourceTree = "<group>"; };
 		B9F7DB730CE49FAE00ABBC9C /* PDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFView.h; sourceTree = "<group>"; };
 		B9F7DB740CE49FAE00ABBC9C /* PDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +78,7 @@
 		29B97314FDCFA39411CA2CEA /* PDFullscreen */ = {
 			isa = PBXGroup;
 			children = (
-				664FE0730CBA8C6C00A14689 /* Classes */,
+				B971FDE41D311CC6004D8851 /* PDFullscreen */,
 				B9F7DB720CE49FAE00ABBC9C /* Foreign Code */,
 				664FE07C0CBA8C6C00A14689 /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -97,17 +96,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		664FE0730CBA8C6C00A14689 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				664FE0740CBA8C6C00A14689 /* PDFullscreen.h */,
-				664FE0750CBA8C6C00A14689 /* PDFullscreen.m */,
-				664FE0780CBA8C6C00A14689 /* PDFullscreenView.h */,
-				664FE0790CBA8C6C00A14689 /* PDFullscreenView.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		664FE07C0CBA8C6C00A14689 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +106,17 @@
 				6693C2E90CBA927D00CD727C /* Read Me.rtf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B971FDE41D311CC6004D8851 /* PDFullscreen */ = {
+			isa = PBXGroup;
+			children = (
+				B971FDE51D311CC6004D8851 /* PDFullscreen.h */,
+				B971FDE61D311CC6004D8851 /* PDFullscreen.m */,
+				B971FDE71D311CC6004D8851 /* PDFullscreenView.h */,
+				B971FDE81D311CC6004D8851 /* PDFullscreenView.m */,
+			);
+			path = PDFullscreen;
 			sourceTree = "<group>";
 		};
 		B9F7DB720CE49FAE00ABBC9C /* Foreign Code */ = {
@@ -156,9 +155,16 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+			};
 			buildConfigurationList = 66FAD3280C949A9A000C76B5 /* Build configuration list for PBXProject "PDFullscreen" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* PDFullscreen */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -174,7 +180,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				664FE08C0CBA8C6C00A14689 /* MainMenu.nib in Resources */,
-				664FE08E0CBA8C6C00A14689 /* Info.plist in Resources */,
 				664FE08F0CBA8C6C00A14689 /* PDF.icns in Resources */,
 				664FE0900CBA8C6C00A14689 /* PDFullscreen.icns in Resources */,
 			);
@@ -203,9 +208,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				664FE0870CBA8C6C00A14689 /* PDFullscreen.m in Sources */,
-				664FE0890CBA8C6C00A14689 /* PDFullscreenView.m in Sources */,
+				B971FDE91D311CC6004D8851 /* PDFullscreen.m in Sources */,
 				B9F7DB750CE49FAE00ABBC9C /* PDFView.m in Sources */,
+				B971FDEA1D311CC6004D8851 /* PDFullscreenView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,23 +231,35 @@
 		6671ABAD0CBABAE100FF0854 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = "Release-Deployment";
 		};
 		6671ABAE0CBABAE100FF0854 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = PDFullscreen;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -251,24 +268,44 @@
 		66FAD3250C949A9A000C76B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Debug;
 		};
 		66FAD3260C949A9A000C76B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Release;
 		};
 		66FAD3290C949A9A000C76B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = PDFullscreen;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -277,16 +314,26 @@
 		66FAD32A0C949A9A000C76B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = PDFullscreen;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};

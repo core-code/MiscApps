@@ -11,9 +11,6 @@
 		B9072F701483E30700FB4B2A /* VoxelDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93CE5F60F61B12800E073A7 /* VoxelDocument.xib */; };
 		B90970B31B0A74700086CCA2 /* stagbeetle277x277x164.dat in Resources */ = {isa = PBXBuildFile; fileRef = B90970B11B0A74700086CCA2 /* stagbeetle277x277x164.dat */; };
 		B90970B41B0A74700086CCA2 /* XMasTree.dat in Resources */ = {isa = PBXBuildFile; fileRef = B90970B21B0A74700086CCA2 /* XMasTree.dat */; };
-		B93CE5D10F61B01200E073A7 /* CocoaOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = B93CE5CC0F61B01200E073A7 /* CocoaOpenGLView.m */; };
-		B93CE5D20F61B01200E073A7 /* TransferFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B93CE5CE0F61B01200E073A7 /* TransferFunctionView.m */; };
-		B93CE5D30F61B01200E073A7 /* VoxelDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = B93CE5D00F61B01200E073A7 /* VoxelDocument.m */; };
 		B93CE5DA0F61B01800E073A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B93CE5D50F61B01800E073A7 /* main.m */; };
 		B93CE6030F61B12800E073A7 /* 2d.frag in Resources */ = {isa = PBXBuildFile; fileRef = B93CE5EE0F61B12800E073A7 /* 2d.frag */; };
 		B93CE6040F61B12800E073A7 /* 2d.vert in Resources */ = {isa = PBXBuildFile; fileRef = B93CE5EF0F61B12800E073A7 /* 2d.vert */; };
@@ -25,6 +22,9 @@
 		B93CE60F0F61B12800E073A7 /* raypos.vert in Resources */ = {isa = PBXBuildFile; fileRef = B93CE5FD0F61B12800E073A7 /* raypos.vert */; };
 		B93CE6120F61B12800E073A7 /* VolumeCore.icns in Resources */ = {isa = PBXBuildFile; fileRef = B93CE6000F61B12800E073A7 /* VolumeCore.icns */; };
 		B93CE6130F61B12800E073A7 /* VolumeCoreDocument.icns in Resources */ = {isa = PBXBuildFile; fileRef = B93CE6010F61B12800E073A7 /* VolumeCoreDocument.icns */; };
+		B971FE311D31250C004D8851 /* CocoaOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FE2C1D31250C004D8851 /* CocoaOpenGLView.m */; };
+		B971FE321D31250C004D8851 /* TransferFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FE2E1D31250C004D8851 /* TransferFunctionView.m */; };
+		B971FE331D31250C004D8851 /* VoxelDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FE301D31250C004D8851 /* VoxelDocument.m */; };
 		B975C1FF0EAFD19B00932C34 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B975C1FE0EAFD19B00932C34 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,12 +48,6 @@
 		8D15AC370486D014006FF6A4 /* VolumeCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolumeCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90970B11B0A74700086CCA2 /* stagbeetle277x277x164.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = stagbeetle277x277x164.dat; sourceTree = "<group>"; };
 		B90970B21B0A74700086CCA2 /* XMasTree.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = XMasTree.dat; sourceTree = "<group>"; };
-		B93CE5CB0F61B01200E073A7 /* CocoaOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaOpenGLView.h; sourceTree = "<group>"; };
-		B93CE5CC0F61B01200E073A7 /* CocoaOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaOpenGLView.m; sourceTree = "<group>"; };
-		B93CE5CD0F61B01200E073A7 /* TransferFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferFunctionView.h; sourceTree = "<group>"; };
-		B93CE5CE0F61B01200E073A7 /* TransferFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferFunctionView.m; sourceTree = "<group>"; };
-		B93CE5CF0F61B01200E073A7 /* VoxelDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoxelDocument.h; sourceTree = "<group>"; };
-		B93CE5D00F61B01200E073A7 /* VoxelDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoxelDocument.m; sourceTree = "<group>"; };
 		B93CE5D50F61B01800E073A7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B93CE5D80F61B01800E073A7 /* VolumeCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeCore.h; sourceTree = "<group>"; };
 		B93CE5D90F61B01800E073A7 /* VolumeCore_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeCore_Prefix.pch; sourceTree = "<group>"; };
@@ -70,6 +64,12 @@
 		B93CE6000F61B12800E073A7 /* VolumeCore.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = VolumeCore.icns; sourceTree = "<group>"; };
 		B93CE6010F61B12800E073A7 /* VolumeCoreDocument.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = VolumeCoreDocument.icns; sourceTree = "<group>"; };
 		B93CE61F0F61B18D00E073A7 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		B971FE2B1D31250C004D8851 /* CocoaOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaOpenGLView.h; sourceTree = "<group>"; };
+		B971FE2C1D31250C004D8851 /* CocoaOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaOpenGLView.m; sourceTree = "<group>"; };
+		B971FE2D1D31250C004D8851 /* TransferFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferFunctionView.h; sourceTree = "<group>"; };
+		B971FE2E1D31250C004D8851 /* TransferFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferFunctionView.m; sourceTree = "<group>"; };
+		B971FE2F1D31250C004D8851 /* VoxelDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoxelDocument.h; sourceTree = "<group>"; };
+		B971FE301D31250C004D8851 /* VoxelDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoxelDocument.m; sourceTree = "<group>"; };
 		B975C1FE0EAFD19B00932C34 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -116,7 +116,7 @@
 		2A37F4AAFDCFA73011CA2CEA /* VolumeCore */ = {
 			isa = PBXGroup;
 			children = (
-				B93CE5CA0F61B01200E073A7 /* Classes */,
+				B971FE2A1D31250C004D8851 /* VolumeCore */,
 				B93CE5D40F61B01800E073A7 /* OtherSources */,
 				B93CE5ED0F61B12800E073A7 /* Resources */,
 				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
@@ -132,19 +132,6 @@
 				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B93CE5CA0F61B01200E073A7 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				B93CE5CB0F61B01200E073A7 /* CocoaOpenGLView.h */,
-				B93CE5CC0F61B01200E073A7 /* CocoaOpenGLView.m */,
-				B93CE5CF0F61B01200E073A7 /* VoxelDocument.h */,
-				B93CE5D00F61B01200E073A7 /* VoxelDocument.m */,
-				B93CE5CD0F61B01200E073A7 /* TransferFunctionView.h */,
-				B93CE5CE0F61B01200E073A7 /* TransferFunctionView.m */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		B93CE5D40F61B01800E073A7 /* OtherSources */ = {
@@ -179,6 +166,19 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B971FE2A1D31250C004D8851 /* VolumeCore */ = {
+			isa = PBXGroup;
+			children = (
+				B971FE2B1D31250C004D8851 /* CocoaOpenGLView.h */,
+				B971FE2C1D31250C004D8851 /* CocoaOpenGLView.m */,
+				B971FE2D1D31250C004D8851 /* TransferFunctionView.h */,
+				B971FE2E1D31250C004D8851 /* TransferFunctionView.m */,
+				B971FE2F1D31250C004D8851 /* VoxelDocument.h */,
+				B971FE301D31250C004D8851 /* VoxelDocument.m */,
+			);
+			path = VolumeCore;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,7 +208,7 @@
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0800;
 			};
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "VolumeCore" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -273,10 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B93CE5D10F61B01200E073A7 /* CocoaOpenGLView.m in Sources */,
-				B93CE5D20F61B01200E073A7 /* TransferFunctionView.m in Sources */,
-				B93CE5D30F61B01200E073A7 /* VoxelDocument.m in Sources */,
+				B971FE321D31250C004D8851 /* TransferFunctionView.m in Sources */,
 				B93CE5DA0F61B01800E073A7 /* main.m in Sources */,
+				B971FE311D31250C004D8851 /* CocoaOpenGLView.m in Sources */,
+				B971FE331D31250C004D8851 /* VoxelDocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,15 +313,31 @@
 		B93CE5E20F61B0ED00E073A7 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks/\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OtherSources/VolumeCore_Prefix.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = "";
@@ -337,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = "Release-Deployment";
 		};
@@ -344,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Debug;
 		};
@@ -351,20 +369,38 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Release;
 		};
 		C05733CC08A9546B00998B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks/\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OtherSources/VolumeCore_Prefix.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
@@ -380,14 +416,30 @@
 		C05733CD08A9546B00998B17 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks/\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = OtherSources/VolumeCore_Prefix.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_LDFLAGS = "";

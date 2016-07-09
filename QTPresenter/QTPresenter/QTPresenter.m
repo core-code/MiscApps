@@ -36,14 +36,21 @@
 	if (![returnDescriptor descriptorType])
 		NSLog(@"Error: AppleScriptError: %@", [errorDict objectForKey: @"NSAppleScriptErrorMessage"]);
 	
-	
-	[[[qt documents] objectAtIndex:0] present];
+
+    QuickTimePlayerXApplication *qt = [SBApplication applicationWithBundleIdentifier:@"com.apple.QuickTimePlayerX"];
+
+    [[[qt documents] objectAtIndex:0] present];
 	
 	[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(progressTimer:) userInfo:NULL repeats:YES];	
 }
 
 - (void)progressTimer:(NSTimer *)timer
 {
+    QuickTimePlayerXApplication *qt = [SBApplication applicationWithBundleIdentifier:@"com.apple.QuickTimePlayerX"];
+
+    if (![qt documents].count)
+        return;
+    
 	double ct = [[[qt documents] objectAtIndex:0] currentTime], d =  [[[qt documents] objectAtIndex:0] duration];
 	
 		
@@ -59,7 +66,7 @@
 															   name:NSWorkspaceDidTerminateApplicationNotification 
 															 object:nil];
 	
-	qt = [SBApplication applicationWithBundleIdentifier:@"com.apple.QuickTimePlayerX"];
+	QuickTimePlayerXApplication *qt = [SBApplication applicationWithBundleIdentifier:@"com.apple.QuickTimePlayerX"];
 	
 	[qt open:filename];
 	
@@ -72,12 +79,7 @@
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
 {
-	if (qt == nil)
-	{
-		qt = [SBApplication applicationWithBundleIdentifier:@"com.apple.QuickTimePlayerX"];
-		
-		[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(progressTimer:) userInfo:NULL repeats:YES];	
-	}
+    [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(progressTimer:) userInfo:NULL repeats:YES];
 }
 @end
 

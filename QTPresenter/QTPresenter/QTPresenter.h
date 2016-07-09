@@ -16,7 +16,6 @@
 @interface QTPresenter : NSObject // <NSApplicationDelegate>
 {
     NSWindow *window;
-	QuickTimePlayerXApplication *qt;
 	IBOutlet NSTextField *infoText;
 }
 

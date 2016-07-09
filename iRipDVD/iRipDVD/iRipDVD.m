@@ -120,10 +120,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	[[NSUserDefaults standardUserDefaults] setObject:[audio titleOfSelectedItem] forKey:@"audio"];
 	[[NSUserDefaults standardUserDefaults] setObject:[width titleOfSelectedItem] forKey:@"width"];
 	[[NSUserDefaults standardUserDefaults] setObject:[size titleOfSelectedItem] forKey:@"size"];
-	[[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%d", [animated state]] forKey:@"animated"];
-	[[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%d", [preview state]] forKey:@"preview"];
+	[[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%ld", (long)[animated state]] forKey:@"animated"];
+	[[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%ld", (long)[preview state]] forKey:@"preview"];
 	[[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%d", [quality intValue]] forKey:@"fast"];
-	[[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%d", [vob state]] forKey:@"vob"];
+	[[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%ld", (long)[vob state]] forKey:@"vob"];
 }
 
 - (void)removeTempFiles
@@ -524,7 +524,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	}
 	else if (state == 2)
 	{
-		NSMutableArray *args = [NSMutableArray arrayWithObjects:[[NSBundle mainBundle] pathForResource:@"mencoder" ofType:nil], @"-o", @"/dev/null", @"-ss", [NSString stringWithFormat:@"%d", length/10], @"-endpos", @"10", @"-ovc", @"lavc", @"-vop", @"cropdetect,scale", @"-zoom", @"-xy", [width titleOfSelectedItem], @"-oac", @"copy", nil];
+		NSMutableArray *args = [NSMutableArray arrayWithObjects:[[NSBundle mainBundle] pathForResource:@"mencoder" ofType:nil], @"-o", @"/dev/null", @"-ss", [NSString stringWithFormat:@"%ld", length/10], @"-endpos", @"10", @"-ovc", @"lavc", @"-vop", @"cropdetect,scale", @"-zoom", @"-xy", [width titleOfSelectedItem], @"-oac", @"copy", nil];
 
 		// NSLog(@"3: language dedect done, start crop dedect");
 		if ([vob state] != NSOnState)
@@ -570,7 +570,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				range.length = [taskOutput length];
 				while (done == FALSE)
 				{
-					range = [taskOutput rangeOfString:[NSString stringWithString:@"audio format: "] options:0 range:range];
+					range = [taskOutput rangeOfString:@"audio format: " options:0 range:range];
 					
 					if (range.location != NSNotFound)
 					{
@@ -590,13 +590,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 							range.location = i - 3;
 							range.length = 3;
 							languageNumber = [taskOutput substringWithRange:range];
-							NSLog(taskOutput);
-							NSRunAlertPanel(@"Warning", [NSString stringWithFormat:@"Could not find the selected language code. We assume %@.", languageNumber], @"Continue", nil, nil);
+							NSLog(@"%@", taskOutput);
+							NSRunAlertPanel(@"Warning", @"%@", [NSString stringWithFormat:@"Could not find the selected language code. We assume %@.", languageNumber], @"Continue", nil, nil);
 						}
 					}
 					else
 					{
-						NSLog(taskOutput);
+						NSLog(@"%@", taskOutput);
 						[self cleanup];
 						NSRunAlertPanel(@"Error", @"This DVD doesn't contain a non-DTS audio-track and thus vialotes the DVD-spec. Because there is no open-source DTS-decoder we can't encode this DVD.", @"Stop", nil, nil);
 						return;
@@ -648,9 +648,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		
 		if ([dict count] == 0)
 		{
-			NSLog(taskOutput);
+			NSLog(@"%@", taskOutput);
 			[self cleanup];
-			range = [taskOutput rangeOfString:[NSString stringWithString:@"Cannot open file/device."]];
+			range = [taskOutput rangeOfString:@"Cannot open file/device."];
 			if (range.location != NSNotFound)
 				NSRunAlertPanel(@"Error", @"This DVD seems to be damaged.", @"Stop", nil, nil);
 			else
@@ -707,7 +707,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			range = [taskOutput rangeOfString:[NSString stringWithFormat:@"Recommended video bitrate for %@", [size titleOfSelectedItem]]];
 			if (range.location == NSNotFound)
 			{
-				NSLog(taskOutput);
+				NSLog(@"%@", taskOutput);
 				NSRunAlertPanel(@"Warning", @"Could not find a bitrate recommendation. We are using our own calculated value, which may be inaccurate.", @"Continue", nil, nil);
 				bitrate = [NSString stringWithFormat:@"%d", calculatedBitrate];
 			}
@@ -728,7 +728,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		
 		[bitrate retain];
 
-		options = [NSString stringWithString:@"vcodec=mpeg4:vqscale=2:vpass=1"];
+		options = @"vcodec=mpeg4:vqscale=2:vpass=1";
 		if ([animated state] != NSOnState)
 		{
 			if ([quality intValue] == 2)
@@ -848,7 +848,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		}
 		else
 		{
-			NSLog(taskOutput);
+			NSLog(@"%@", taskOutput);
 			[self cleanup];
 			NSRunAlertPanel(@"Error", @"Could not determine the length of the first splitted video part.", @"Stop", nil, nil);
 			return;

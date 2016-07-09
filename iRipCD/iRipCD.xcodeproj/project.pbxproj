@@ -3,24 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		663261080CBD5D920052EF61 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		667228550CC54F860008B9CC /* TaskWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 667228530CC54F860008B9CC /* TaskWrapper.h */; };
 		667228560CC54F860008B9CC /* TaskWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 667228540CC54F860008B9CC /* TaskWrapper.m */; };
-		66A59EDF0CBD5FD2006B5678 /* iRipCD.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A59ED90CBD5FD2006B5678 /* iRipCD.h */; };
-		66A59EE00CBD5FD2006B5678 /* iRipCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A59EDA0CBD5FD2006B5678 /* iRipCD.m */; };
-		66A59EE10CBD5FD2006B5678 /* MyTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A59EDB0CBD5FD2006B5678 /* MyTextField.h */; };
-		66A59EE20CBD5FD2006B5678 /* MyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A59EDC0CBD5FD2006B5678 /* MyTextField.m */; };
-		66A59EE30CBD5FD2006B5678 /* PreferenceController.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A59EDD0CBD5FD2006B5678 /* PreferenceController.h */; };
-		66A59EE40CBD5FD2006B5678 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A59EDE0CBD5FD2006B5678 /* PreferenceController.m */; };
 		66A59EF90CBD5FDB006B5678 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 66A59EEC0CBD5FDB006B5678 /* MainMenu.nib */; };
 		66A59EFB0CBD5FDB006B5678 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 66A59EF00CBD5FDB006B5678 /* Preferences.nib */; };
-		66A59EFD0CBD5FDB006B5678 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66A59EF40CBD5FDB006B5678 /* Info.plist */; };
 		66A59EFE0CBD5FDB006B5678 /* iRipCD.icns in Resources */ = {isa = PBXBuildFile; fileRef = 66A59EF50CBD5FDB006B5678 /* iRipCD.icns */; };
 		66A59EFF0CBD5FDB006B5678 /* lame in Resources */ = {isa = PBXBuildFile; fileRef = 66A59EF60CBD5FDB006B5678 /* lame */; };
+		B971FDB01D3116E5004D8851 /* iRipCD.h in Headers */ = {isa = PBXBuildFile; fileRef = B971FDAA1D3116E5004D8851 /* iRipCD.h */; };
+		B971FDB11D3116E5004D8851 /* iRipCD.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDAB1D3116E5004D8851 /* iRipCD.m */; };
+		B971FDB21D3116E5004D8851 /* MyTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = B971FDAC1D3116E5004D8851 /* MyTextField.h */; };
+		B971FDB31D3116E5004D8851 /* MyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDAD1D3116E5004D8851 /* MyTextField.m */; };
+		B971FDB41D3116E5004D8851 /* PreferenceController.h in Headers */ = {isa = PBXBuildFile; fileRef = B971FDAE1D3116E5004D8851 /* PreferenceController.h */; };
+		B971FDB51D3116E5004D8851 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDAF1D3116E5004D8851 /* PreferenceController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,18 +29,18 @@
 		6632610E0CBD5D920052EF61 /* iRipCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRipCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		667228530CC54F860008B9CC /* TaskWrapper.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TaskWrapper.h; sourceTree = "<group>"; };
 		667228540CC54F860008B9CC /* TaskWrapper.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TaskWrapper.m; sourceTree = "<group>"; };
-		66A59ED90CBD5FD2006B5678 /* iRipCD.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = iRipCD.h; sourceTree = "<group>"; };
-		66A59EDA0CBD5FD2006B5678 /* iRipCD.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = iRipCD.m; sourceTree = "<group>"; };
-		66A59EDB0CBD5FD2006B5678 /* MyTextField.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MyTextField.h; sourceTree = "<group>"; };
-		66A59EDC0CBD5FD2006B5678 /* MyTextField.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = MyTextField.m; sourceTree = "<group>"; };
-		66A59EDD0CBD5FD2006B5678 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
-		66A59EDE0CBD5FD2006B5678 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
 		66A59EED0CBD5FDB006B5678 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		66A59EF10CBD5FDB006B5678 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Preferences.nib; sourceTree = "<group>"; };
 		66A59EF40CBD5FDB006B5678 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66A59EF50CBD5FDB006B5678 /* iRipCD.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iRipCD.icns; sourceTree = "<group>"; };
 		66A59EF60CBD5FDB006B5678 /* lame */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = lame; sourceTree = "<group>"; };
 		66A59EF70CBD5FDB006B5678 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		B971FDAA1D3116E5004D8851 /* iRipCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRipCD.h; sourceTree = "<group>"; };
+		B971FDAB1D3116E5004D8851 /* iRipCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRipCD.m; sourceTree = "<group>"; };
+		B971FDAC1D3116E5004D8851 /* MyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTextField.h; sourceTree = "<group>"; };
+		B971FDAD1D3116E5004D8851 /* MyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextField.m; sourceTree = "<group>"; };
+		B971FDAE1D3116E5004D8851 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
+		B971FDAF1D3116E5004D8851 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +83,7 @@
 		29B97314FDCFA39411CA2CEA /* DropLAME */ = {
 			isa = PBXGroup;
 			children = (
-				66A59ED80CBD5FD2006B5678 /* Classes */,
+				B971FDA91D3116E5004D8851 /* iRipCD */,
 				667228520CC54F860008B9CC /* Foreign Code */,
 				66A59EE90CBD5FDB006B5678 /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -111,19 +110,6 @@
 			path = "Foreign Code";
 			sourceTree = "<group>";
 		};
-		66A59ED80CBD5FD2006B5678 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				66A59ED90CBD5FD2006B5678 /* iRipCD.h */,
-				66A59EDA0CBD5FD2006B5678 /* iRipCD.m */,
-				66A59EDB0CBD5FD2006B5678 /* MyTextField.h */,
-				66A59EDC0CBD5FD2006B5678 /* MyTextField.m */,
-				66A59EDD0CBD5FD2006B5678 /* PreferenceController.h */,
-				66A59EDE0CBD5FD2006B5678 /* PreferenceController.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		66A59EE90CBD5FDB006B5678 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +123,19 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B971FDA91D3116E5004D8851 /* iRipCD */ = {
+			isa = PBXGroup;
+			children = (
+				B971FDAA1D3116E5004D8851 /* iRipCD.h */,
+				B971FDAB1D3116E5004D8851 /* iRipCD.m */,
+				B971FDAC1D3116E5004D8851 /* MyTextField.h */,
+				B971FDAD1D3116E5004D8851 /* MyTextField.m */,
+				B971FDAE1D3116E5004D8851 /* PreferenceController.h */,
+				B971FDAF1D3116E5004D8851 /* PreferenceController.m */,
+			);
+			path = iRipCD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -144,10 +143,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66A59EDF0CBD5FD2006B5678 /* iRipCD.h in Headers */,
-				66A59EE10CBD5FD2006B5678 /* MyTextField.h in Headers */,
-				66A59EE30CBD5FD2006B5678 /* PreferenceController.h in Headers */,
+				B971FDB01D3116E5004D8851 /* iRipCD.h in Headers */,
+				B971FDB21D3116E5004D8851 /* MyTextField.h in Headers */,
 				667228550CC54F860008B9CC /* TaskWrapper.h in Headers */,
+				B971FDB41D3116E5004D8851 /* PreferenceController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,9 +178,16 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+			};
 			buildConfigurationList = 663260E40CBD5D7F0052EF61 /* Build configuration list for PBXProject "iRipCD" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* DropLAME */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -198,7 +204,6 @@
 			files = (
 				66A59EF90CBD5FDB006B5678 /* MainMenu.nib in Resources */,
 				66A59EFB0CBD5FDB006B5678 /* Preferences.nib in Resources */,
-				66A59EFD0CBD5FDB006B5678 /* Info.plist in Resources */,
 				66A59EFE0CBD5FDB006B5678 /* iRipCD.icns in Resources */,
 				66A59EFF0CBD5FDB006B5678 /* lame in Resources */,
 			);
@@ -227,10 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66A59EE00CBD5FD2006B5678 /* iRipCD.m in Sources */,
-				66A59EE20CBD5FD2006B5678 /* MyTextField.m in Sources */,
-				66A59EE40CBD5FD2006B5678 /* PreferenceController.m in Sources */,
+				B971FDB51D3116E5004D8851 /* PreferenceController.m in Sources */,
+				B971FDB11D3116E5004D8851 /* iRipCD.m in Sources */,
 				667228560CC54F860008B9CC /* TaskWrapper.m in Sources */,
+				B971FDB31D3116E5004D8851 /* MyTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,13 +264,28 @@
 		663260E50CBD5D7F0052EF61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = iRipCD;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -274,16 +294,26 @@
 		663260E60CBD5D7F0052EF61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = iRipCD;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -292,35 +322,51 @@
 		6632610A0CBD5D920052EF61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Debug;
 		};
 		6632610B0CBD5D920052EF61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Release;
 		};
 		66AE9EE10CBD6BCD00BC9B49 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = "Release-Deployment";
 		};
 		66AE9EE20CBD6BCD00BC9B49 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = iRipCD;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};

@@ -3,24 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6672289D0CC54FE50008B9CC /* TaskWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6672289B0CC54FE50008B9CC /* TaskWrapper.h */; };
 		6672289E0CC54FE50008B9CC /* TaskWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6672289C0CC54FE50008B9CC /* TaskWrapper.m */; };
-		669CDA560CC2CAF90029011A /* ifo_time.c in Resources */ = {isa = PBXBuildFile; fileRef = 66AA92660CC2BEA600E2FC98 /* ifo_time.c */; };
-		66AA924A0CC2BE9A00E2FC98 /* iRipDVD.h in Headers */ = {isa = PBXBuildFile; fileRef = 66AA92460CC2BE9A00E2FC98 /* iRipDVD.h */; };
-		66AA924B0CC2BE9A00E2FC98 /* iRipDVD.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AA92470CC2BE9A00E2FC98 /* iRipDVD.m */; };
-		66AA924C0CC2BE9A00E2FC98 /* PreferenceController.h in Headers */ = {isa = PBXBuildFile; fileRef = 66AA92480CC2BE9A00E2FC98 /* PreferenceController.h */; };
-		66AA924D0CC2BE9A00E2FC98 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AA92490CC2BE9A00E2FC98 /* PreferenceController.m */; };
 		66AA926E0CC2BEA600E2FC98 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 66AA925D0CC2BEA600E2FC98 /* MainMenu.nib */; };
 		66AA92700CC2BEA600E2FC98 /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 66AA92610CC2BEA600E2FC98 /* Preferences.nib */; };
 		66AA92720CC2BEA600E2FC98 /* ifo_time in Resources */ = {isa = PBXBuildFile; fileRef = 66AA92650CC2BEA600E2FC98 /* ifo_time */; };
-		66AA92740CC2BEA600E2FC98 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66AA92670CC2BEA600E2FC98 /* Info.plist */; };
 		66AA92750CC2BEA600E2FC98 /* iRipDVD.icns in Resources */ = {isa = PBXBuildFile; fileRef = 66AA92680CC2BEA600E2FC98 /* iRipDVD.icns */; };
 		66AA92760CC2BEA600E2FC98 /* mencoder in Resources */ = {isa = PBXBuildFile; fileRef = 66AA92690CC2BEA600E2FC98 /* mencoder */; };
 		66AA92770CC2BEA600E2FC98 /* mplayer in Resources */ = {isa = PBXBuildFile; fileRef = 66AA926A0CC2BEA600E2FC98 /* mplayer */; };
+		B971FDBB1D3117A0004D8851 /* iRipDVD.h in Headers */ = {isa = PBXBuildFile; fileRef = B971FDB71D3117A0004D8851 /* iRipDVD.h */; };
+		B971FDBC1D3117A0004D8851 /* iRipDVD.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDB81D3117A0004D8851 /* iRipDVD.m */; };
+		B971FDBD1D3117A0004D8851 /* PreferenceController.h in Headers */ = {isa = PBXBuildFile; fileRef = B971FDB91D3117A0004D8851 /* PreferenceController.h */; };
+		B971FDBE1D3117A0004D8851 /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDBA1D3117A0004D8851 /* PreferenceController.m */; };
 		B984B30A05289CD000CD3AF7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,10 +29,6 @@
 		6602D8570CC2D68600397115 /* Read Me FIRST.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = "Read Me FIRST.txt"; sourceTree = "<group>"; };
 		6672289B0CC54FE50008B9CC /* TaskWrapper.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = TaskWrapper.h; sourceTree = "<group>"; };
 		6672289C0CC54FE50008B9CC /* TaskWrapper.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = TaskWrapper.m; sourceTree = "<group>"; };
-		66AA92460CC2BE9A00E2FC98 /* iRipDVD.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = iRipDVD.h; sourceTree = "<group>"; };
-		66AA92470CC2BE9A00E2FC98 /* iRipDVD.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = iRipDVD.m; sourceTree = "<group>"; };
-		66AA92480CC2BE9A00E2FC98 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
-		66AA92490CC2BE9A00E2FC98 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
 		66AA925E0CC2BEA600E2FC98 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		66AA92620CC2BEA600E2FC98 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/Preferences.nib; sourceTree = "<group>"; };
 		66AA92650CC2BEA600E2FC98 /* ifo_time */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ifo_time; sourceTree = "<group>"; };
@@ -44,6 +38,10 @@
 		66AA92690CC2BEA600E2FC98 /* mencoder */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = mencoder; sourceTree = "<group>"; };
 		66AA926A0CC2BEA600E2FC98 /* mplayer */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = mplayer; sourceTree = "<group>"; };
 		66AA926B0CC2BEA600E2FC98 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		B971FDB71D3117A0004D8851 /* iRipDVD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRipDVD.h; sourceTree = "<group>"; };
+		B971FDB81D3117A0004D8851 /* iRipDVD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRipDVD.m; sourceTree = "<group>"; };
+		B971FDB91D3117A0004D8851 /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
+		B971FDBA1D3117A0004D8851 /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
 		B984B30D05289CD000CD3AF7 /* iRipDVD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRipDVD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,7 +85,7 @@
 		29B97314FDCFA39411CA2CEA /* iRip */ = {
 			isa = PBXGroup;
 			children = (
-				66AA92450CC2BE9A00E2FC98 /* Classes */,
+				B971FDB61D3117A0004D8851 /* iRipDVD */,
 				6672289A0CC54FE50008B9CC /* Foreign Code */,
 				66AA92590CC2BEA600E2FC98 /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -114,17 +112,6 @@
 			path = "Foreign Code";
 			sourceTree = "<group>";
 		};
-		66AA92450CC2BE9A00E2FC98 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				66AA92460CC2BE9A00E2FC98 /* iRipDVD.h */,
-				66AA92470CC2BE9A00E2FC98 /* iRipDVD.m */,
-				66AA92480CC2BE9A00E2FC98 /* PreferenceController.h */,
-				66AA92490CC2BE9A00E2FC98 /* PreferenceController.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		66AA92590CC2BEA600E2FC98 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +129,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B971FDB61D3117A0004D8851 /* iRipDVD */ = {
+			isa = PBXGroup;
+			children = (
+				B971FDB71D3117A0004D8851 /* iRipDVD.h */,
+				B971FDB81D3117A0004D8851 /* iRipDVD.m */,
+				B971FDB91D3117A0004D8851 /* PreferenceController.h */,
+				B971FDBA1D3117A0004D8851 /* PreferenceController.m */,
+			);
+			path = iRipDVD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -149,9 +147,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66AA924A0CC2BE9A00E2FC98 /* iRipDVD.h in Headers */,
-				66AA924C0CC2BE9A00E2FC98 /* PreferenceController.h in Headers */,
 				6672289D0CC54FE50008B9CC /* TaskWrapper.h in Headers */,
+				B971FDBD1D3117A0004D8851 /* PreferenceController.h in Headers */,
+				B971FDBB1D3117A0004D8851 /* iRipDVD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,9 +181,16 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+			};
 			buildConfigurationList = 667AF5220CB121D5000A39E2 /* Build configuration list for PBXProject "iRipDVD" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* iRip */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -200,11 +205,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				669CDA560CC2CAF90029011A /* ifo_time.c in Resources */,
 				66AA926E0CC2BEA600E2FC98 /* MainMenu.nib in Resources */,
 				66AA92700CC2BEA600E2FC98 /* Preferences.nib in Resources */,
 				66AA92720CC2BEA600E2FC98 /* ifo_time in Resources */,
-				66AA92740CC2BEA600E2FC98 /* Info.plist in Resources */,
 				66AA92750CC2BEA600E2FC98 /* iRipDVD.icns in Resources */,
 				66AA92760CC2BEA600E2FC98 /* mencoder in Resources */,
 				66AA92770CC2BEA600E2FC98 /* mplayer in Resources */,
@@ -234,9 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66AA924B0CC2BE9A00E2FC98 /* iRipDVD.m in Sources */,
-				66AA924D0CC2BE9A00E2FC98 /* PreferenceController.m in Sources */,
+				B971FDBC1D3117A0004D8851 /* iRipDVD.m in Sources */,
 				6672289E0CC54FE50008B9CC /* TaskWrapper.m in Sources */,
+				B971FDBE1D3117A0004D8851 /* PreferenceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,27 +268,46 @@
 		667AF51F0CB121D5000A39E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_MODEL_CPU = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Debug;
 		};
 		667AF5200CB121D5000A39E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_MODEL_CPU = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Release;
 		};
 		667AF5230CB121D5000A39E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = ppc;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = iRipDVD;
-				SDKROOT = /Developer/SDKs/MacOSX10.2.8.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -294,13 +316,26 @@
 		667AF5240CB121D5000A39E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = ppc;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = iRipDVD;
-				SDKROOT = /Developer/SDKs/MacOSX10.2.8.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -309,21 +344,36 @@
 		66FAC4890CC2C1EF003B12E4 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_MODEL_CPU = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = "Release-Deployment";
 		};
 		66FAC48A0CC2C1EF003B12E4 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = ppc;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = iRipDVD;
-				SDKROOT = /Developer/SDKs/MacOSX10.2.8.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};

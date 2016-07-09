@@ -3,13 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		662BA13B0CC40E2700A0BC66 /* KeyPresser.m in Sources */ = {isa = PBXBuildFile; fileRef = 662BA13A0CC40E2700A0BC66 /* KeyPresser.m */; };
 		662BA1480CC40E3200A0BC66 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 662BA1420CC40E3200A0BC66 /* MainMenu.nib */; };
-		662BA1490CC40E3200A0BC66 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 662BA1440CC40E3200A0BC66 /* Info.plist */; };
 		662BA14A0CC40E3200A0BC66 /* KeyPresser.icns in Resources */ = {isa = PBXBuildFile; fileRef = 662BA1450CC40E3200A0BC66 /* KeyPresser.icns */; };
 		66B2F5550CCC0FB3002C586B /* PTKeyCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66B2F53C0CCC0FB3002C586B /* PTKeyCodes.plist */; };
 		66B2F5560CCC0FB3002C586B /* PTKeyComboPanel.nib in Resources */ = {isa = PBXBuildFile; fileRef = 66B2F53E0CCC0FB3002C586B /* PTKeyComboPanel.nib */; };
@@ -21,6 +19,7 @@
 		66B2F55C0CCC0FB3002C586B /* PTKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B2F5510CCC0FB3002C586B /* PTKeyCombo.m */; };
 		66B2F55D0CCC0FB3002C586B /* PTKeyComboPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B2F5530CCC0FB3002C586B /* PTKeyComboPanel.m */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B971FDC21D311888004D8851 /* KeyPresser.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDC11D311888004D8851 /* KeyPresser.m */; };
 		B9EAA4D9089950FF00DBB088 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EAA4D8089950FF00DBB088 /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,8 +27,6 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		662BA1390CC40E2700A0BC66 /* KeyPresser.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = KeyPresser.h; sourceTree = "<group>"; };
-		662BA13A0CC40E2700A0BC66 /* KeyPresser.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = KeyPresser.m; sourceTree = "<group>"; };
 		662BA1430CC40E3200A0BC66 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		662BA1440CC40E3200A0BC66 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		662BA1450CC40E3200A0BC66 /* KeyPresser.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = KeyPresser.icns; sourceTree = "<group>"; };
@@ -57,6 +54,8 @@
 		66B2F5530CCC0FB3002C586B /* PTKeyComboPanel.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PTKeyComboPanel.m; sourceTree = "<group>"; };
 		66B2F8D20CCC24C2002C586B /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* KeyPresser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyPresser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B971FDC01D311888004D8851 /* KeyPresser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyPresser.h; sourceTree = "<group>"; };
+		B971FDC11D311888004D8851 /* KeyPresser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyPresser.m; sourceTree = "<group>"; };
 		B9EAA4D8089950FF00DBB088 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -102,7 +101,7 @@
 		29B97314FDCFA39411CA2CEA /* test */ = {
 			isa = PBXGroup;
 			children = (
-				662BA1380CC40E2700A0BC66 /* Classes */,
+				B971FDBF1D311888004D8851 /* KeyPresser */,
 				66B2F5380CCC0FB3002C586B /* Foreign Code */,
 				662BA13F0CC40E3200A0BC66 /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -118,15 +117,6 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		662BA1380CC40E2700A0BC66 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				662BA1390CC40E2700A0BC66 /* KeyPresser.h */,
-				662BA13A0CC40E2700A0BC66 /* KeyPresser.m */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		662BA13F0CC40E3200A0BC66 /* Resources */ = {
@@ -187,6 +177,15 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		B971FDBF1D311888004D8851 /* KeyPresser */ = {
+			isa = PBXGroup;
+			children = (
+				B971FDC01D311888004D8851 /* KeyPresser.h */,
+				B971FDC11D311888004D8851 /* KeyPresser.m */,
+			);
+			path = KeyPresser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,9 +213,16 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+			};
 			buildConfigurationList = B9EAA4740899448800DBB088 /* Build configuration list for PBXProject "KeyPresser" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* test */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,7 +238,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				662BA1480CC40E3200A0BC66 /* MainMenu.nib in Resources */,
-				662BA1490CC40E3200A0BC66 /* Info.plist in Resources */,
 				662BA14A0CC40E3200A0BC66 /* KeyPresser.icns in Resources */,
 				66B2F5550CCC0FB3002C586B /* PTKeyCodes.plist in Resources */,
 				66B2F5560CCC0FB3002C586B /* PTKeyComboPanel.nib in Resources */,
@@ -263,12 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				662BA13B0CC40E2700A0BC66 /* KeyPresser.m in Sources */,
 				66B2F5580CCC0FB3002C586B /* PTHotKey.m in Sources */,
 				66B2F5590CCC0FB3002C586B /* PTHotKeyCenter.m in Sources */,
 				66B2F55A0CCC0FB3002C586B /* PTKeyBroadcaster.m in Sources */,
 				66B2F55B0CCC0FB3002C586B /* PTKeyCodeTranslator.m in Sources */,
 				66B2F55C0CCC0FB3002C586B /* PTKeyCombo.m in Sources */,
+				B971FDC21D311888004D8851 /* KeyPresser.m in Sources */,
 				66B2F55D0CCC0FB3002C586B /* PTKeyComboPanel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,24 +317,38 @@
 		66705A880CC41078004E7ED3 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = "Release-Deployment";
 		};
 		66705A890CC41078004E7ED3 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = __ALLOW_NON_HOTKEYS_IN_PANEL__;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = KeyPresser;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -338,25 +357,47 @@
 		B9EAA4710899448800DBB088 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Debug;
 		};
 		B9EAA4720899448800DBB088 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Release;
 		};
 		B9EAA4750899448800DBB088 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = __ALLOW_NON_HOTKEYS_IN_PANEL__;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = KeyPresser;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -365,17 +406,29 @@
 		B9EAA4760899448800DBB088 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = __ALLOW_NON_HOTKEYS_IN_PANEL__;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = KeyPresser;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};

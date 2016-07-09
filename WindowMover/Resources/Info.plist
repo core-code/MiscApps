@@ -4,35 +4,35 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIconFile</key>
+	<string>${PRODUCT_NAME}.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0a1</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0a1</string>
+	<key>LSBackgroundOnly</key>
+	<string>1</string>
+	<key>LSUIElement</key>
+	<string>0</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright 2009, CoreCode.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>CFBundleExecutable</key>
-	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleName</key>
-	<string>${PRODUCT_NAME}</string>
-	<key>CFBundleIconFile</key>
-	<string>${PRODUCT_NAME}.icns</string>
-	<key>CFBundleIdentifier</key>
-	<string>org.corecode.${PRODUCT_NAME}</string>
-	<key>CFBundleDisplayName</key>
-	<string>${PRODUCT_NAME}</string>
-	<key>CFBundlePackageType</key>
-	<string>APPL</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>LSUIElement</key>
-	<string>0</string>
-	<key>LSBackgroundOnly</key>
-	<string>1</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>Copyright 2009, CoreCode.</string>
-	<key>CFBundleVersion</key>
-	<string>1.0a1</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0a1</string>
 </dict>
 </plist>

@@ -115,7 +115,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		CGContextDrawImage([[NSGraphicsContext currentContext] graphicsPort], CGRectMake(i * 21 + PREWIDTH, 0, 20, 20), cgImage);
 		//	CGContextFlush([[NSGraphicsContext currentContext] graphicsPort]);
 		CGImageRelease(cgImage);
-		CFRelease(imageSourceRef);
+		//CFRelease(imageSourceRef);
 		//	[cocoaData release];
 	}
 	[image unlockFocus];

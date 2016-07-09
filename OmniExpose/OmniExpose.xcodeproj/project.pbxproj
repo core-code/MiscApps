@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66705CAB0CC4295C004E7ED3 /* OmniExpose.m in Sources */ = {isa = PBXBuildFile; fileRef = 66705CAA0CC4295C004E7ED3 /* OmniExpose.m */; };
 		66705D390CC42F7B004E7ED3 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66705D380CC42F7B004E7ED3 /* Carbon.framework */; };
 		667229270CC5504A0008B9CC /* PTKeyCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6672290E0CC5504A0008B9CC /* PTKeyCodes.plist */; };
 		667229280CC5504A0008B9CC /* PTKeyComboPanel.nib in Resources */ = {isa = PBXBuildFile; fileRef = 667229100CC5504A0008B9CC /* PTKeyComboPanel.nib */; };
@@ -21,6 +20,7 @@
 		66B8FE750CB1163F00CF92C7 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 66B8FE730CB1163F00CF92C7 /* MainMenu.nib */; };
 		66F4C1A30CC7FED2008372CC /* OmniExpose.icns in Resources */ = {isa = PBXBuildFile; fileRef = 66F4C1A20CC7FED2008372CC /* OmniExpose.icns */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B971FDE31D311C9B004D8851 /* OmniExpose.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDE21D311C9B004D8851 /* OmniExpose.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +28,6 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		663FFC220CB115DD00ADBB12 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
-		66705CA90CC4295C004E7ED3 /* OmniExpose.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = OmniExpose.h; sourceTree = "<group>"; };
-		66705CAA0CC4295C004E7ED3 /* OmniExpose.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = OmniExpose.m; sourceTree = "<group>"; };
 		66705D380CC42F7B004E7ED3 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		6672290F0CC5504A0008B9CC /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; name = English; path = English.lproj/PTKeyCodes.plist; sourceTree = "<group>"; };
 		667229110CC5504A0008B9CC /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/PTKeyComboPanel.nib; sourceTree = "<group>"; };
@@ -56,6 +54,8 @@
 		66B8FF160CB1180900CF92C7 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "Read Me.rtf"; path = "Resources/Read Me.rtf"; sourceTree = "<group>"; };
 		66F4C1A20CC7FED2008372CC /* OmniExpose.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = OmniExpose.icns; path = Resources/OmniExpose.icns; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* OmniExpose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OmniExpose.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B971FDE11D311C9B004D8851 /* OmniExpose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OmniExpose.h; sourceTree = "<group>"; };
+		B971FDE21D311C9B004D8851 /* OmniExpose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OmniExpose.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 		29B97314FDCFA39411CA2CEA /* Leaker */ = {
 			isa = PBXGroup;
 			children = (
-				66705CA80CC4295C004E7ED3 /* Classes */,
+				B971FDE01D311C9B004D8851 /* OmniExpose */,
 				6672290A0CC5504A0008B9CC /* Foreign Code */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -127,15 +127,6 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		66705CA80CC4295C004E7ED3 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				66705CA90CC4295C004E7ED3 /* OmniExpose.h */,
-				66705CAA0CC4295C004E7ED3 /* OmniExpose.m */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		6672290A0CC5504A0008B9CC /* Foreign Code */ = {
@@ -184,6 +175,15 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		B971FDE01D311C9B004D8851 /* OmniExpose */ = {
+			isa = PBXGroup;
+			children = (
+				B971FDE11D311C9B004D8851 /* OmniExpose.h */,
+				B971FDE21D311C9B004D8851 /* OmniExpose.m */,
+			);
+			path = OmniExpose;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,9 +211,16 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OmniExpose" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Leaker */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66705CAB0CC4295C004E7ED3 /* OmniExpose.m in Sources */,
 				6672292A0CC5504A0008B9CC /* PTHotKey.m in Sources */,
+				B971FDE31D311C9B004D8851 /* OmniExpose.m in Sources */,
 				6672292B0CC5504A0008B9CC /* PTHotKeyCenter.m in Sources */,
 				6672292C0CC5504A0008B9CC /* PTKeyBroadcaster.m in Sources */,
 				6672292D0CC5504A0008B9CC /* PTKeyCodeTranslator.m in Sources */,
@@ -308,23 +315,37 @@
 		6671ACAC0CBABC8700FF0854 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = "Release-Deployment";
 		};
 		6671ACAD0CBABC8700FF0854 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = OmniExpose;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -333,24 +354,46 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Debug;
 		};
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Release;
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = OmniExpose;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -359,16 +402,28 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PREBINDING = NO;
 				PRODUCT_NAME = OmniExpose;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = "-Wall";
 			};

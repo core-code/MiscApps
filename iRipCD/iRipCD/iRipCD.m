@@ -126,7 +126,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	else if ([fileList count] == 1)
 		[filesTextFieldOutlet setStringValue:[array objectAtIndex:0]];
 	else
-		[filesTextFieldOutlet setStringValue:[NSString stringWithFormat:@"%d files", [fileList count]]];
+		[filesTextFieldOutlet setStringValue:[NSString stringWithFormat:@"%lu files", (unsigned long)[fileList count]]];
 	
 	if ([fileList count] > 0)
 	{
@@ -287,7 +287,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	
 	if ([fileList count] > 0)
 	{
-		[filesTextFieldOutlet setStringValue:[NSString stringWithFormat:@"%d files remaining to encode...", [fileList count]]];
+		[filesTextFieldOutlet setStringValue:[NSString stringWithFormat:@"%lu files remaining to encode...", (unsigned long)[fileList count]]];
 		[self encodeAction:nil];
 	}
 	else

@@ -135,14 +135,14 @@ CGRect convertToCGRect(NSRect inRect);
         return;
 
     if (newPageNumber < 1 || newPageNumber > [self pageCount]) {
-        NSLog(@"Invalid newPage number `%lu': not in range [1, %lu].",
+        NSLog(@"Invalid newPage number `%d': not in range [1, %d].",
             newPageNumber, [self pageCount]);
         return;
     }
     
     newPage = CGPDFDocumentGetPage([self pdfDocument], newPageNumber);
     if (newPage == NULL) {
-        NSLog(@"Failed to create page %lu.", newPageNumber);
+        NSLog(@"Failed to create page %d.", newPageNumber);
         return;
     }
     
@@ -160,7 +160,7 @@ CGRect convertToCGRect(NSRect inRect);
 // call.
 - (int)pageCount
 {
-    return CGPDFDocumentGetNumberOfPages([self pdfDocument]);
+    return (int)CGPDFDocumentGetNumberOfPages([self pdfDocument]);
 }
 
 // These two are convenience methods for the Page Up and Page Down toolbar items.

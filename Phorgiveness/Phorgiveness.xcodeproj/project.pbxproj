@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66B6FEC80CB0080900874A0C /* DocumentController.h in Headers */ = {isa = PBXBuildFile; fileRef = 66B6FEC40CB0080900874A0C /* DocumentController.h */; };
-		66B6FEC90CB0080900874A0C /* DocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B6FEC50CB0080900874A0C /* DocumentController.m */; };
 		66B6FEDA0CB0083400874A0C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 66B6FECE0CB0083400874A0C /* Credits.rtf */; };
 		66B6FEDB0CB0083400874A0C /* DocumentController.nib in Resources */ = {isa = PBXBuildFile; fileRef = 66B6FED00CB0083400874A0C /* DocumentController.nib */; };
 		66B6FEDD0CB0083400874A0C /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 66B6FED40CB0083400874A0C /* MainMenu.nib */; };
 		66B6FEE00CB0083400874A0C /* Phorgiveness.icns in Resources */ = {isa = PBXBuildFile; fileRef = 66B6FED80CB0083400874A0C /* Phorgiveness.icns */; };
+		B971FDEE1D311D27004D8851 /* DocumentController.h in Headers */ = {isa = PBXBuildFile; fileRef = B971FDEC1D311D27004D8851 /* DocumentController.h */; };
+		B971FDEF1D311D27004D8851 /* DocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDED1D311D27004D8851 /* DocumentController.m */; };
 		B992219C06DFE0DD009D73C3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 		B992219D06DFE0DD009D73C3 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A6D9610233196B01A80002 /* Carbon.framework */; };
 /* End PBXBuildFile section */
@@ -22,13 +22,13 @@
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		664A56800CB0579600D5E7F5 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
-		66B6FEC40CB0080900874A0C /* DocumentController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = DocumentController.h; path = Classes/DocumentController.h; sourceTree = "<group>"; };
-		66B6FEC50CB0080900874A0C /* DocumentController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; name = DocumentController.m; path = Classes/DocumentController.m; sourceTree = "<group>"; };
 		66B6FECF0CB0083400874A0C /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		66B6FED10CB0083400874A0C /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/DocumentController.nib; sourceTree = "<group>"; };
 		66B6FED50CB0083400874A0C /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		66B6FED60CB0083400874A0C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66B6FED80CB0083400874A0C /* Phorgiveness.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Phorgiveness.icns; sourceTree = "<group>"; };
+		B971FDEC1D311D27004D8851 /* DocumentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentController.h; sourceTree = "<group>"; };
+		B971FDED1D311D27004D8851 /* DocumentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentController.m; sourceTree = "<group>"; };
 		B992219F06DFE0DD009D73C3 /* Phorgiveness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phorgiveness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A6D9610233196B01A80002 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -75,21 +75,12 @@
 		2A37F4AAFDCFA73011CA2CEA /* msge */ = {
 			isa = PBXGroup;
 			children = (
-				2A37F4ABFDCFA73011CA2CEA /* Classes */,
+				B971FDEB1D311D27004D8851 /* Phorgiveness */,
 				66B6FECD0CB0083400874A0C /* Resources */,
 				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
 				19C28FB0FE9D524F11CA2CBB /* Products */,
 			);
 			name = msge;
-			sourceTree = "<group>";
-		};
-		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				66B6FEC40CB0080900874A0C /* DocumentController.h */,
-				66B6FEC50CB0080900874A0C /* DocumentController.m */,
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
@@ -114,6 +105,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B971FDEB1D311D27004D8851 /* Phorgiveness */ = {
+			isa = PBXGroup;
+			children = (
+				B971FDEC1D311D27004D8851 /* DocumentController.h */,
+				B971FDED1D311D27004D8851 /* DocumentController.m */,
+			);
+			path = Phorgiveness;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -121,7 +121,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66B6FEC80CB0080900874A0C /* DocumentController.h in Headers */,
+				B971FDEE1D311D27004D8851 /* DocumentController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +153,7 @@
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0800;
 			};
 			buildConfigurationList = 6653C5FF0CB006F20036DD0F /* Build configuration list for PBXProject "Phorgiveness" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -209,7 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66B6FEC90CB0080900874A0C /* DocumentController.m in Sources */,
+				B971FDEF1D311D27004D8851 /* DocumentController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +247,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Debug;
 		};
@@ -254,14 +255,32 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Release;
 		};
 		6653C6000CB006F20036DD0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = "";
 				ONLY_ACTIVE_ARCH = YES;
@@ -276,8 +295,24 @@
 		6653C6010CB006F20036DD0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = "";
 				PREBINDING = NO;
@@ -292,15 +327,32 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = "Release-Deployment";
 		};
 		6671AC080CBABC1900FF0854 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Resources/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = "";
 				PREBINDING = NO;

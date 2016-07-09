@@ -18,9 +18,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
 
     var results = [String: [[String : String]]]()
 
-    func applicationDidFinishLaunching(aNotification: NSNotification)
+    func applicationDidFinishLaunching(_ aNotification: Notification)
     {
-        let filePath = NSString(string: "~/Library/Safari/Bookmarks.plist").stringByExpandingTildeInPath
+        let filePath = NSString(string: "~/Library/Safari/Bookmarks.plist").expandingTildeInPath
 
         if let d1 = NSDictionary(contentsOfFile: filePath) as? [String: AnyObject]
         {
@@ -35,11 +35,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
                             for bookmark in bookmarks
                             {
                                 let urlstr = bookmark["URLString"] as! String,
-                                urlstrfixed1 = urlstr.stringByReplacingOccurrencesOfString(".m.wikipedia.", withString: ".wikipedia."),
-                                urlstrfixed2 = urlstrfixed1.stringByReplacingOccurrencesOfString("m.heise.", withString: "www.heise."),
-                                urlstrfixed = urlstrfixed2.stringByReplacingOccurrencesOfString("m.faz.net", withString: "www.faz.net"),
+                                urlstrfixed1 = urlstr.replacingOccurrences(of: ".m.wikipedia.", with: ".wikipedia."),
+                                urlstrfixed2 = urlstrfixed1.replacingOccurrences(of: "m.heise.", with: "www.heise."),
+                                urlstrfixed = urlstrfixed2.replacingOccurrences(of: "m.faz.net", with: "www.faz.net"),
 
-                                url = NSURL(string: urlstrfixed),
+                                url = URL(string: urlstrfixed),
                                 titledict = bookmark["URIDictionary"] as! [String : AnyObject],
                                 title = titledict["title"] as! String
 
@@ -69,11 +69,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
         self.sourceTable.reloadData()
     }
 
-    func applicationWillTerminate(aNotification: NSNotification)
+    func applicationWillTerminate(_ aNotification: Notification)
     {
     }
 
-    func numberOfRowsInTableView(tableView: NSTableView!) -> Int
+    func numberOfRowsInTableView(_ tableView: NSTableView!) -> Int
     {
         if tableView == self.sourceTable
         {
@@ -84,18 +84,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
             let rowSource = self.sourceTable.selectedRow
             if (rowSource < 0) { return 0 }
 
-            let key = Array(self.results.keys).sort( { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
+            let key = Array(self.results.keys).sorted( isOrderedBefore: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
             let value = self.results[key]
 
             return value!.count;
         }
     }
 
-    func tableView(tableView: NSTableView!, objectValueForTableColumn tableColumn: NSTableColumn!, row: Int) -> AnyObject!
+    func tableView(_ tableView: NSTableView!, objectValueForTableColumn tableColumn: NSTableColumn!, row: Int) -> AnyObject!
     {
         if tableView == self.sourceTable
         {
-            let key = Array(self.results.keys).sort( { self.results[$0]!.count > self.results[$1]!.count })[row]
+            let key = Array(self.results.keys).sorted( isOrderedBefore: { self.results[$0]!.count > self.results[$1]!.count })[row]
             let value = self.results[key]
 
             return "\(key) [\(value!.count)]"
@@ -104,12 +104,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
         {
 
             let rowSource = self.sourceTable.selectedRow
-            let key = Array(self.results.keys).sort( { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
+            let key = Array(self.results.keys).sorted( isOrderedBefore: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
             let value = self.results[key]
             let website = value![row]
 
 
-            if tableView.tableColumns.indexOf(tableColumn) == 0
+            if tableView.tableColumns.index(of: tableColumn) == 0
             {
                 return website["title"]
             }
@@ -122,7 +122,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
     }
 
 
-    func tableViewSelectionDidChange(notification: NSNotification)
+    func tableViewSelectionDidChange(_ notification: Notification)
     {
         if let tableView = notification.object as? NSTableView
         {
@@ -135,20 +135,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
                 if (self.detailTable.selectedRow < 0) { return; }
 
                 let rowSource = self.sourceTable.selectedRow
-                let key = Array(self.results.keys).sort( { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
+                let key = Array(self.results.keys).sorted( isOrderedBefore: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
                 let value = self.results[key]
                 let website = value![self.detailTable.selectedRow]
 
                 let urlstr = website["url"]
-                let url = NSURL(string: urlstr!)
+                let url = URL(string: urlstr!)
 
-                NSWorkspace.sharedWorkspace().openURL(url!)
+                NSWorkspace.shared().open(url!)
             }
         }
     }
 
 
-    @IBAction func openAllSites(sender: AnyObject)
+    @IBAction func openAllSites(_ sender: AnyObject)
     {
        for key in self.results.keys
        {
@@ -157,49 +157,49 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
             {
 
                 let urlstr = website["url"]
-                let url = NSURL(string: urlstr!)
+                let url = URL(string: urlstr!)
 
-                NSWorkspace.sharedWorkspace().openURL(url!)
+                NSWorkspace.shared().open(url!)
             }
         }
     }
 
-    @IBAction func openHostSites(sender: AnyObject)
+    @IBAction func openHostSites(_ sender: AnyObject)
     {
 
         let rowSource = self.sourceTable.selectedRow
-        let key = Array(self.results.keys).sort( { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
+        let key = Array(self.results.keys).sorted( isOrderedBefore: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
         let value = self.results[key]
         for website in value!
         {
             
             let urlstr = website["url"]
-            let url = NSURL(string: urlstr!)
+            let url = URL(string: urlstr!)
             
-            NSWorkspace.sharedWorkspace().openURL(url!)
+            NSWorkspace.shared().open(url!)
         }
         
     }
     
-    @IBAction func exportCSV(sender: AnyObject)
+    @IBAction func exportCSV(_ sender: AnyObject)
     {
 
         let rowSource = self.sourceTable.selectedRow
-        let key = Array(self.results.keys).sort( { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
+        let key = Array(self.results.keys).sorted( isOrderedBefore: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
         let value = self.results[key]
         let export = NSMutableString(string: "URL,Title,Selection,Folder\n")
 
         for website in value!
         {
-            let url = NSURL(string: website["url"]!)
+            let url = URL(string: website["url"]!)
 
-            export.appendString("\"\(website["url"]!)\",\"\(website["title"]!)\",\"\",\"\(url!.host!)\"\n")
+            export.append("\"\(website["url"]!)\",\"\(website["title"]!)\",\"\",\"\(url!.host!)\"\n")
         }
 
-		let filePath = NSString(string: "~/Desktop/export.csv").stringByExpandingTildeInPath
+		let filePath = NSString(string: "~/Desktop/export.csv").expandingTildeInPath
 
         try!
-        export.writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding)
+        export.write(toFile: filePath, atomically: true, encoding: String.Encoding.utf8.rawValue)
     }
 }
 
