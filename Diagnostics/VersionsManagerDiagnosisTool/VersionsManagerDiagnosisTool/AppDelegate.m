@@ -274,6 +274,43 @@
 		}
 	}
 
+
+	asl_NSLog_debug(@"gonna defaults AGAIN");
+
+	{ // -In terminal, run this command: “sudo defaults delete com.apple.revisiond log.level”
+
+		char *tool = "/usr/bin/defaults";
+		char *args[] = {"delete", "com.apple.revisiond", "log.level", NULL};
+		FILE *pipe = NULL;
+
+		status = AuthorizationExecuteWithPrivileges(authorizationRef, tool, kAuthorizationFlagDefaults, args, &pipe);
+		if (status != errAuthorizationSuccess)
+		{
+			alert_apptitled(@"AuthorizationExecuteWithPrivileges failed", @"OK", nil, nil);
+			exit(1);
+		}
+		else
+		{
+			char myReadBuffer[128];
+			NSMutableString *result = makeMutableString();
+			for(;;)
+			{
+				long bytesRead = read(fileno(pipe), myReadBuffer, sizeof (myReadBuffer));
+				if (bytesRead < 1)
+					break;
+				else
+				{
+					NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
+					if (appendstring)
+						[result appendString:appendstring];
+				}
+			}
+			[tmpURL add:@"defaultsresult2"].contents = result.data;
+		}
+	}
+
+
+
 	BOOL done = false;
 	int times = 0;
 	while (!done) // wait for sysdiagnose to finish
