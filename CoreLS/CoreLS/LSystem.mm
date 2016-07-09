@@ -35,8 +35,6 @@ LSystem *gLSystem;
 {
 	if ((self = [super init]))
 	{
-		[[HUDHack class] poseAsClass:[NSColorPanel class]];
-
 		gLSystem = self;
 		length = 100.0;
 		angle = 45.0;
@@ -303,12 +301,5 @@ LSystem *gLSystem;
 	glFinish();
 	float duration = ((float)Timer(NO)) / (1000.0 * 1000.0);
 	[frameTimingField setStringValue:[NSString stringWithFormat:@"%.2f ms (%.1f fps)", duration, 1000.0/duration]];	
-}
-@end
-
-@implementation HUDHack
-- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)windowStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)deferCreation
-{
-	return [super initWithContentRect:contentRect styleMask:windowStyle | 8223 backing:bufferingType defer:deferCreation];	// this is just a hack to allow "stylish" hud-style color chooser
 }
 @end

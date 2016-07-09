@@ -149,7 +149,7 @@
 		  withIntermediateDirectories:YES attributes:nil error:NULL];
 	{ // -In terminal, run this command “sudo sysdiagnose -f <directory to store results>”
 		char *tool = "/usr/bin/sysdiagnose";
-		char *args[] = {"-b", "-f", [tmpURL add:@"sysdiagnose"].path.UTF8String, NULL};
+		char *args[] = {"-l", "-b", "-f", [tmpURL add:@"sysdiagnose"].path.UTF8String, NULL};
 		FILE *pipe = NULL;
 
 		status = AuthorizationExecuteWithPrivileges(authorizationRef, tool, kAuthorizationFlagDefaults, args, &pipe);
@@ -160,12 +160,6 @@
 		}
 		else
 		{
-			char myWriteBuffer[] = {13, EOF};
-
-			asl_NSLog_debug(@"gonna enter");
-
-			write(fileno(pipe), &myWriteBuffer, 2); // fake enter press
-
 			char myReadBuffer[128];
 			NSMutableString *result = makeMutableString();
 			for(;;)
@@ -193,9 +187,7 @@
 							write(fileno(pipe), &myWriteBuffer, 2); // fake enter press
 
 							asl_NSLog_debug(@"did enter");
-
 						}
-
 					}
 				}
 			}
@@ -403,7 +395,7 @@
 
 					if (!path)
 					{
-						[tmp appendString:makeString(@"Warning: file (%@) version (%@) is NIL: localizedName: %@ localzesNameOfSavingComputer: %@ modificationDate: %@ persistentIdentifier: %@ conflict: %i resolved: %i discardable: %i hasLocalContents: %i hasThumbnail: %i\n", file, ov.description, ov.localizedName, ov. localizedNameOfSavingComputer,  ov.modificationDate, ov.persistentIdentifier, ov.conflict, ov.resolved, ov.discardable, ov.hasLocalContents, ov.hasThumbnail)];
+						[tmp appendString:makeString(@"Warning: file (%@) version (%@) is NIL: localizedName: %@ localzesNameOfSavingComputer: %@ modificationDate: %@ persistentIdentifier: %@ conflict: %i resolved: %i discardable: %i hasLocalContents: %i hasThumbnail: %i\n", file, ov.description, ov.localizedName, ov.localizedNameOfSavingComputer,  ov.modificationDate, ov.persistentIdentifier, ov.conflict, ov.resolved, ov.discardable, ov.hasLocalContents, ov.hasThumbnail)];
 
 					}
 					else if (path &&

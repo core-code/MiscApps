@@ -175,7 +175,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	rename([[[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/temp/"] fileSystemRepresentation], [[[[files objectAtIndex:0] stringByDeletingPathExtension] stringByAppendingPathComponent:@"html"] fileSystemRepresentation]);
 
 
-	if (([FileUtilities makeRelativeAlias:[[[files objectAtIndex:0] stringByDeletingPathExtension] stringByAppendingPathComponent:@"TableOfContents.html"] toFile:[[[[files objectAtIndex:0] stringByDeletingPathExtension] stringByAppendingPathComponent:@"html"] stringByAppendingPathComponent:@"toc.html"]]) != noErr)
+	if (([FileUtilities makeRelativeAlias:[[[files objectAtIndex:0] stringByDeletingPathExtension] stringByAppendingPathComponent:@"TableOfContents.html"]
+                                   toFile:[[[[files objectAtIndex:0] stringByDeletingPathExtension] stringByAppendingPathComponent:@"html"] stringByAppendingPathComponent:@"toc.html"]]) != noErr)
 		NSLog(@"making alias failed");
 
 	[task autorelease];

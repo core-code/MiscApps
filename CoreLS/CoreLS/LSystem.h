@@ -6,9 +6,6 @@
 //  Copyright CoreCode 2009. All rights reserved.
 //
 
-@interface HUDHack : NSColorPanel {}
-@end
-
 @interface LSystem : SceneNode {
 	IBOutlet NSTextField *axiomField, *fField, *gField, *stacksField, *slicesField, *frameTimingField, *generationTimingField;
 	IBOutlet NSButton *rotationButton, *freeButton, *animateButton;

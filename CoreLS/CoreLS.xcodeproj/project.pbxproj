@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B971FE4C1D319D3A004D8851 /* Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = B971FE3B1D319D3A004D8851 /* Camera.mm */; };
+		B971FE4D1D319D3A004D8851 /* CocoaOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = B971FE3D1D319D3A004D8851 /* CocoaOpenGLView.mm */; };
+		B971FE4E1D319D3A004D8851 /* Light.mm in Sources */ = {isa = PBXBuildFile; fileRef = B971FE411D319D3A004D8851 /* Light.mm */; };
+		B971FE4F1D319D3A004D8851 /* Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = B971FE431D319D3A004D8851 /* Scene.mm */; };
+		B971FE501D319D3A004D8851 /* SceneNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = B971FE451D319D3A004D8851 /* SceneNode.mm */; };
+		B971FE511D319D3A004D8851 /* Utilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = B971FE471D319D3A004D8851 /* Utilities.mm */; };
+		B971FE521D319D3A004D8851 /* LSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = B971FE491D319D3A004D8851 /* LSystem.mm */; };
+		B971FE531D319D3A004D8851 /* LSystemSimulation.mm in Sources */ = {isa = PBXBuildFile; fileRef = B971FE4B1D319D3A004D8851 /* LSystemSimulation.mm */; };
 		B985CF460F4B0AE800CE9205 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		B985CF470F4B0AE800CE9205 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B999E3780EF45AC10023592E /* OpenGL.framework */; };
 		B99DD22C1482C0CF00A8162F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B99DD22B1482C0CF00A8162F /* MainMenu.xib */; };
-		B9C9EDAB0F560E4300FCBFA2 /* Camera.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D0C00F56078600438E31 /* Camera.mm */; };
-		B9C9EDAD0F560E4300FCBFA2 /* CocoaOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1960F56078600438E31 /* CocoaOpenGLView.mm */; };
-		B9C9EDB10F560E4300FCBFA2 /* Light.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D19A0F56078600438E31 /* Light.mm */; };
-		B9C9EDB30F560E4300FCBFA2 /* Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1A00F56078600438E31 /* Scene.mm */; };
-		B9C9EDB50F560E4300FCBFA2 /* SceneNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1A20F56078600438E31 /* SceneNode.mm */; };
-		B9C9EDB70F560E4300FCBFA2 /* Utilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1A40F56078600438E31 /* Utilities.mm */; };
-		B9C9EDB90F560E4300FCBFA2 /* LSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1A60F56078600438E31 /* LSystem.mm */; };
-		B9C9EDBB0F560E4300FCBFA2 /* LSystemSimulation.mm in Sources */ = {isa = PBXBuildFile; fileRef = B9C0D1A80F56078600438E31 /* LSystemSimulation.mm */; };
 		B9C9EE190F560F7C00FCBFA2 /* CoreLS.icns in Resources */ = {isa = PBXBuildFile; fileRef = B9C9EE150F560F7C00FCBFA2 /* CoreLS.icns */; };
 /* End PBXBuildFile section */
 
@@ -37,27 +37,27 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		B971FE3A1D319D3A004D8851 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		B971FE3B1D319D3A004D8851 /* Camera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Camera.mm; sourceTree = "<group>"; };
+		B971FE3C1D319D3A004D8851 /* CocoaOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaOpenGLView.h; sourceTree = "<group>"; };
+		B971FE3D1D319D3A004D8851 /* CocoaOpenGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CocoaOpenGLView.mm; sourceTree = "<group>"; };
+		B971FE3E1D319D3A004D8851 /* Core3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core3D.h; sourceTree = "<group>"; };
+		B971FE3F1D319D3A004D8851 /* Core3D_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core3D_Prefix.pch; sourceTree = "<group>"; };
+		B971FE401D319D3A004D8851 /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
+		B971FE411D319D3A004D8851 /* Light.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Light.mm; sourceTree = "<group>"; };
+		B971FE421D319D3A004D8851 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		B971FE431D319D3A004D8851 /* Scene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Scene.mm; sourceTree = "<group>"; };
+		B971FE441D319D3A004D8851 /* SceneNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneNode.h; sourceTree = "<group>"; };
+		B971FE451D319D3A004D8851 /* SceneNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneNode.mm; sourceTree = "<group>"; };
+		B971FE461D319D3A004D8851 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		B971FE471D319D3A004D8851 /* Utilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Utilities.mm; sourceTree = "<group>"; };
+		B971FE481D319D3A004D8851 /* LSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSystem.h; sourceTree = "<group>"; };
+		B971FE491D319D3A004D8851 /* LSystem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LSystem.mm; sourceTree = "<group>"; };
+		B971FE4A1D319D3A004D8851 /* LSystemSimulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSystemSimulation.h; sourceTree = "<group>"; };
+		B971FE4B1D319D3A004D8851 /* LSystemSimulation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LSystemSimulation.mm; sourceTree = "<group>"; };
 		B985CF4E0F4B0AE800CE9205 /* CoreLS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreLS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B999E3780EF45AC10023592E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		B99DD22B1482C0CF00A8162F /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		B9C0D0BF0F56078600438E31 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
-		B9C0D0C00F56078600438E31 /* Camera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Camera.mm; sourceTree = "<group>"; };
-		B9C0D1950F56078600438E31 /* CocoaOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaOpenGLView.h; sourceTree = "<group>"; };
-		B9C0D1960F56078600438E31 /* CocoaOpenGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CocoaOpenGLView.mm; sourceTree = "<group>"; };
-		B9C0D1970F56078600438E31 /* Core3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core3D.h; sourceTree = "<group>"; };
-		B9C0D1980F56078600438E31 /* Core3D_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core3D_Prefix.pch; sourceTree = "<group>"; };
-		B9C0D1990F56078600438E31 /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
-		B9C0D19A0F56078600438E31 /* Light.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Light.mm; sourceTree = "<group>"; };
-		B9C0D19F0F56078600438E31 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
-		B9C0D1A00F56078600438E31 /* Scene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Scene.mm; sourceTree = "<group>"; };
-		B9C0D1A10F56078600438E31 /* SceneNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneNode.h; sourceTree = "<group>"; };
-		B9C0D1A20F56078600438E31 /* SceneNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneNode.mm; sourceTree = "<group>"; };
-		B9C0D1A30F56078600438E31 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
-		B9C0D1A40F56078600438E31 /* Utilities.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Utilities.mm; sourceTree = "<group>"; };
-		B9C0D1A50F56078600438E31 /* LSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSystem.h; sourceTree = "<group>"; };
-		B9C0D1A60F56078600438E31 /* LSystem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LSystem.mm; sourceTree = "<group>"; };
-		B9C0D1A70F56078600438E31 /* LSystemSimulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSystemSimulation.h; sourceTree = "<group>"; };
-		B9C0D1A80F56078600438E31 /* LSystemSimulation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LSystemSimulation.mm; sourceTree = "<group>"; };
 		B9C9EE150F560F7C00FCBFA2 /* CoreLS.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CoreLS.icns; sourceTree = "<group>"; };
 		B9C9EE160F560F7C00FCBFA2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C9EE180F560F7C00FCBFA2 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		29B97314FDCFA39411CA2CEA /* fraktale */ = {
 			isa = PBXGroup;
 			children = (
-				B9C0D0BD0F56078600438E31 /* Classes */,
+				B971FE381D319D3A004D8851 /* CoreLS */,
 				B9C9EE140F560F7C00FCBFA2 /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -122,35 +122,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B9C0D0BD0F56078600438E31 /* Classes */ = {
+		B971FE381D319D3A004D8851 /* CoreLS */ = {
 			isa = PBXGroup;
 			children = (
-				B9C0D0BE0F56078600438E31 /* Engine */,
-				B9C0D1A50F56078600438E31 /* LSystem.h */,
-				B9C0D1A60F56078600438E31 /* LSystem.mm */,
-				B9C0D1A70F56078600438E31 /* LSystemSimulation.h */,
-				B9C0D1A80F56078600438E31 /* LSystemSimulation.mm */,
+				B971FE391D319D3A004D8851 /* Engine */,
+				B971FE481D319D3A004D8851 /* LSystem.h */,
+				B971FE491D319D3A004D8851 /* LSystem.mm */,
+				B971FE4A1D319D3A004D8851 /* LSystemSimulation.h */,
+				B971FE4B1D319D3A004D8851 /* LSystemSimulation.mm */,
 			);
-			path = Classes;
+			path = CoreLS;
 			sourceTree = "<group>";
 		};
-		B9C0D0BE0F56078600438E31 /* Engine */ = {
+		B971FE391D319D3A004D8851 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				B9C0D0BF0F56078600438E31 /* Camera.h */,
-				B9C0D0C00F56078600438E31 /* Camera.mm */,
-				B9C0D1950F56078600438E31 /* CocoaOpenGLView.h */,
-				B9C0D1960F56078600438E31 /* CocoaOpenGLView.mm */,
-				B9C0D1970F56078600438E31 /* Core3D.h */,
-				B9C0D1980F56078600438E31 /* Core3D_Prefix.pch */,
-				B9C0D1990F56078600438E31 /* Light.h */,
-				B9C0D19A0F56078600438E31 /* Light.mm */,
-				B9C0D19F0F56078600438E31 /* Scene.h */,
-				B9C0D1A00F56078600438E31 /* Scene.mm */,
-				B9C0D1A10F56078600438E31 /* SceneNode.h */,
-				B9C0D1A20F56078600438E31 /* SceneNode.mm */,
-				B9C0D1A30F56078600438E31 /* Utilities.h */,
-				B9C0D1A40F56078600438E31 /* Utilities.mm */,
+				B971FE3A1D319D3A004D8851 /* Camera.h */,
+				B971FE3B1D319D3A004D8851 /* Camera.mm */,
+				B971FE3C1D319D3A004D8851 /* CocoaOpenGLView.h */,
+				B971FE3D1D319D3A004D8851 /* CocoaOpenGLView.mm */,
+				B971FE3E1D319D3A004D8851 /* Core3D.h */,
+				B971FE3F1D319D3A004D8851 /* Core3D_Prefix.pch */,
+				B971FE401D319D3A004D8851 /* Light.h */,
+				B971FE411D319D3A004D8851 /* Light.mm */,
+				B971FE421D319D3A004D8851 /* Scene.h */,
+				B971FE431D319D3A004D8851 /* Scene.mm */,
+				B971FE441D319D3A004D8851 /* SceneNode.h */,
+				B971FE451D319D3A004D8851 /* SceneNode.mm */,
+				B971FE461D319D3A004D8851 /* Utilities.h */,
+				B971FE471D319D3A004D8851 /* Utilities.mm */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -195,7 +195,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0800;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CoreLS" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -246,14 +246,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9C9EDAB0F560E4300FCBFA2 /* Camera.mm in Sources */,
-				B9C9EDAD0F560E4300FCBFA2 /* CocoaOpenGLView.mm in Sources */,
-				B9C9EDB10F560E4300FCBFA2 /* Light.mm in Sources */,
-				B9C9EDB30F560E4300FCBFA2 /* Scene.mm in Sources */,
-				B9C9EDB50F560E4300FCBFA2 /* SceneNode.mm in Sources */,
-				B9C9EDB70F560E4300FCBFA2 /* Utilities.mm in Sources */,
-				B9C9EDB90F560E4300FCBFA2 /* LSystem.mm in Sources */,
-				B9C9EDBB0F560E4300FCBFA2 /* LSystemSimulation.mm in Sources */,
+				B971FE4E1D319D3A004D8851 /* Light.mm in Sources */,
+				B971FE501D319D3A004D8851 /* SceneNode.mm in Sources */,
+				B971FE531D319D3A004D8851 /* LSystemSimulation.mm in Sources */,
+				B971FE511D319D3A004D8851 /* Utilities.mm in Sources */,
+				B971FE4C1D319D3A004D8851 /* Camera.mm in Sources */,
+				B971FE521D319D3A004D8851 /* LSystem.mm in Sources */,
+				B971FE4F1D319D3A004D8851 /* Scene.mm in Sources */,
+				B971FE4D1D319D3A004D8851 /* CocoaOpenGLView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +264,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Debug;
 		};
@@ -271,21 +272,37 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Release;
 		};
 		B9C9EDEC0F560ED000FCBFA2 /* Release-Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEPLOYMENT_POSTPROCESSING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks/\"",
 				);
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OBJC_CALL_CXX_CDTORS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Classes/Engine/Core3D_Prefix.pch;
+				GCC_PREFIX_HEADER = CoreLS/Engine/Core3D_Prefix.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"Classes/Engine/**",
 					"\"Foreign Code\"/**",
@@ -303,19 +320,36 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = "Release-Deployment";
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks/\"",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OBJC_CALL_CXX_CDTORS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Classes/Engine/Core3D_Prefix.pch;
+				GCC_PREFIX_HEADER = CoreLS/Engine/Core3D_Prefix.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"Classes/Engine/**",
 					"\"Foreign Code\"/**",
@@ -333,14 +367,29 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks/\"",
 				);
 				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OBJC_CALL_CXX_CDTORS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Classes/Engine/Core3D_Prefix.pch;
+				GCC_PREFIX_HEADER = CoreLS/Engine/Core3D_Prefix.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"Classes/Engine/**",
 					"\"Foreign Code\"/**",

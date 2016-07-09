@@ -18,3 +18,4 @@ __DIFF.command
 CoreLib
 __PUSH.command
 __STATUS.command
+__CHECK.command
