@@ -1,0 +1,21 @@
+//
+// Prefix header for all source files of the 'FingerFrag' target in the 'FingerFrag' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+
+
+#define WIDTH 1024
+#define HEIGHT 768
+
+
+
+static __inline__ int RandomIntBetween(int a, int b)
+{
+    int range = b - a < 0 ? b - a - 1 : b - a + 1;
+    int value = (int)(range * ((float) random() / (float) RAND_MAX));
+    return value == range ? a : a + value;
+}

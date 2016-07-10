@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="4">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Create View Controller - Create-->
+        <scene sceneID="11">
+            <objects>
+                <viewController title="Create" id="2" customClass="CreateViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="16">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BT6-cC-ZVW">
+                                <rect key="frame" x="224" y="232" width="320" height="437"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" id="Jl6-Jc-xCb">
+                                <rect key="frame" x="224" y="276" width="320" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ipad_header.png" id="LC3-gj-jkt">
+                                <rect key="frame" x="224" y="232" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1.) Create a new OmniMap from:" lineBreakMode="tailTruncation" minimumFontSize="10" id="Xqp-so-dhC">
+                                <rect key="frame" x="244" y="245" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NyA-Z6-hfT">
+                                <rect key="frame" x="247" y="309" width="275" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Take a new photograph">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="2" eventType="touchUpInside" id="sSY-cR-3Oy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PgM-d7-D1a">
+                                <rect key="frame" x="247" y="359" width="275" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Choose existing picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="choosePicture:" destination="2" eventType="touchUpInside" id="j4m-aT-HZP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XdP-2N-E4V">
+                                <rect key="frame" x="247" y="409" width="275" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Download picture from URL">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadPicture:" destination="10" eventType="touchUpInside" id="MUI-TB-Tt5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VIF-Up-kQn">
+                                <rect key="frame" x="247" y="610" width="275" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.51372551918029785" green="0.68627452850341797" blue="0.70196080207824707" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="Save &amp; Edit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveAndEdit:" destination="2" eventType="touchUpInside" id="HWF-4o-D8g"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="OmniMap source picture preview:" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="q10-Wq-9hP">
+                                <rect key="frame" x="247" y="454" width="275" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="92v-6R-zYx">
+                                <rect key="frame" x="247" y="479" width="275" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="placeholder.png" id="Z0m-Ze-sQh">
+                                <rect key="frame" x="252" y="484" width="265" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.60000000000000009" contentMode="scaleAspectFit" image="atlas_right.png" id="1ZR-Qk-hcj">
+                                <rect key="frame" x="530" y="631" width="238" height="329"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleAspectFit" image="atlas_left.png" id="3vb-QC-QJs">
+                                <rect key="frame" x="0.0" y="631" width="238" height="329"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000014" contentMode="left" text="iOmniMap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ul0-03-MBK">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="224"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="110"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="3"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="1. Create" image="create.png" id="7"/>
+                    <connections>
+                        <outlet property="imageView" destination="Z0m-Ze-sQh" id="RgI-8V-kYl"/>
+                        <outlet property="leftImageView" destination="3vb-QC-QJs" id="Ti8-vd-fbf"/>
+                        <outlet property="rightImageView" destination="1ZR-Qk-hcj" id="tpg-L4-VTD"/>
+                        <outlet property="saveButton" destination="VIF-Up-kQn" id="lBl-YH-VOX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599" y="-812"/>
+        </scene>
+        <!--Edit List View Controller - Edit Maps-->
+        <scene sceneID="0lo-eQ-74m">
+            <objects>
+                <viewController id="ANI-CL-hWv" customClass="EditListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ASa-Gj-pxL">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="8R8-G5-qL8">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50980392156862742" green="0.68627450980392157" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="vhD-oU-HRA">
+                                <rect key="frame" x="0.0" y="43" width="768" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2.) Select an OmniMap to edit:" lineBreakMode="tailTruncation" minimumFontSize="10" id="5Fu-ck-7n5">
+                                <rect key="frame" x="20" y="20" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="wpg-bk-vHX">
+                                <rect key="frame" x="20" y="49" width="728" height="955"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MapCell" textLabel="qOv-wJ-YlB" detailTextLabel="q0s-8B-hzg" style="IBUITableViewCellStyleValue1" id="DZo-h4-aHc">
+                                        <rect key="frame" x="0.0" y="55" width="728" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DZo-h4-aHc" id="CFn-t1-JGG">
+                                            <rect key="frame" x="0.0" y="0.0" width="695" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qOv-wJ-YlB">
+                                                    <rect key="frame" x="15" y="11" width="34" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q0s-8B-hzg">
+                                                    <rect key="frame" x="649" y="11" width="44" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="Qmh-bo-UjZ" kind="push" identifier="editHome" id="DyU-s8-Ywk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ANI-CL-hWv" id="LBh-TG-psg"/>
+                                    <outlet property="delegate" destination="ANI-CL-hWv" id="rdi-za-kQL"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" id="6Kt-Ou-WBd">
+                                <rect key="frame" x="0.0" y="391" width="768" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k1B-kF-MhU">
+                                        <rect key="frame" x="244" y="20" width="280" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rlY-uK-DPe">
+                                        <rect key="frame" x="244" y="37" width="280" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">No OmniMaps have been added yet.
+Click on the 'Create' tab to add one.</string>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Maps" id="Kny-lS-Hxe"/>
+                    <connections>
+                        <outlet property="helpView" destination="6Kt-Ou-WBd" id="pUY-4A-z8O"/>
+                        <outlet property="table" destination="wpg-bk-vHX" id="8Z7-Ny-qar"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uvl-ac-0hm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255" y="324"/>
+        </scene>
+        <!--Edit Home View Controller - Edit ???-->
+        <scene sceneID="MA0-4b-X3M">
+            <objects>
+                <viewController id="Qmh-bo-UjZ" customClass="EditHomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3iK-J5-A2P">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iUu-0f-bu4">
+                                <rect key="frame" x="224" y="283" width="320" height="388"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="egt-LY-rVM" customClass="GradientButton">
+                                <rect key="frame" x="244" y="460" width="280" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Match first location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vaj-Wd-MzK" kind="push" identifier="pushMatch" id="R35-tF-aGA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="G4X-7z-tog" customClass="GradientButton">
+                                <rect key="frame" x="244" y="509" width="280" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Match second location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vaj-Wd-MzK" kind="push" id="Whm-X5-A9w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lpJ-qr-GRC" customClass="GradientButton">
+                                <rect key="frame" x="244" y="558" width="280" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Verify result">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="x5q-WT-1wm" kind="push" id="amS-q9-bdu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleAspectFit" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TVV-ai-kg5" customClass="GradientButton">
+                                <rect key="frame" x="244" y="612" width="280" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save &amp; Use">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveAction:" destination="Qmh-bo-UjZ" eventType="touchUpInside" id="eSE-K0-V9r"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To define this OmniMap you have to match two locations from your OmniMap to the same locations in the worldmap." lineBreakMode="tailTruncation" numberOfLines="4" minimumFontSize="10" id="0jk-Fo-L5P">
+                                <rect key="frame" x="244" y="301" width="280" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Best results are obtained when matching two locations on opposite corners of your OmniMap." lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="10" id="io0-3L-jsB">
+                                <rect key="frame" x="244" y="361" width="280" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="If the map is not north-south aligned you HAVE to match a third location with the upper right button." lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="10" id="aIh-6P-Ri1">
+                                <rect key="frame" x="244" y="405" width="280" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" text="iOmniMap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U9A-oY-jeM">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="224"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="110"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="3"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit ???" id="Wrw-gO-Bng"/>
+                    <connections>
+                        <outlet property="matchFirstButton" destination="egt-LY-rVM" id="pdl-cj-6uM"/>
+                        <outlet property="matchSecondButton" destination="G4X-7z-tog" id="kJW-ZQ-E40"/>
+                        <outlet property="saveButton" destination="TVV-ai-kg5" id="zBT-oW-ldv"/>
+                        <outlet property="verifyButton" destination="lpJ-qr-GRC" id="hQM-KP-SQe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05J-9c-OlE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="330"/>
+        </scene>
+        <!--Edit Match View Controller - Match-->
+        <scene sceneID="AAX-ec-vYL">
+            <objects>
+                <viewController id="vaj-Wd-MzK" customClass="EditMatchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="igY-vP-0Eo">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="kyu-bY-JWo">
+                                <rect key="frame" x="0.0" y="569" width="775" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="zI4-XX-R8d">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="455"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rFL-F5-cse">
+                                        <rect key="frame" x="234" y="411" width="300" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" text="Hit &quot;Save&quot; in the upper right corner when you're done matching" lineBreakMode="tailTruncation" minimumFontSize="10" id="qTT-Yw-E3q">
+                                        <rect key="frame" x="246" y="413" width="279" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WjX-eE-61U">
+                                        <rect key="frame" x="148" y="20" width="172" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" text="Click at the same location to match" lineBreakMode="tailTruncation" minimumFontSize="10" id="p19-xP-VNm">
+                                        <rect key="frame" x="155" y="22" width="201" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kRZ-Xp-RUg">
+                                        <rect key="frame" x="20" y="20" width="100" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" text="OmniMap" lineBreakMode="tailTruncation" minimumFontSize="10" id="OWi-3V-G8k">
+                                        <rect key="frame" x="32" y="22" width="75" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="023-7D-gB6">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <button opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eJm-Xr-tCe">
+                                <rect key="frame" x="20" y="20" width="100" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" text="Worldmap" lineBreakMode="tailTruncation" minimumFontSize="10" id="nIV-78-QgW">
+                                <rect key="frame" x="32" y="22" width="86" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="u7t-D7-F2C">
+                                <rect key="frame" x="148" y="20" width="172" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" text="Click at a distinctive location to start" lineBreakMode="tailTruncation" minimumFontSize="10" id="WNT-WW-O01">
+                                <rect key="frame" x="155" y="22" width="201" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Match" id="UPL-N2-O5t">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="1JJ-9c-S78"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="gmapView" destination="023-7D-gB6" id="BU0-wQ-EV1"/>
+                        <outlet property="helpGoogleButton" destination="u7t-D7-F2C" id="gHj-eh-J6l"/>
+                        <outlet property="helpGoogleLabel" destination="WNT-WW-O01" id="uWi-12-ywE"/>
+                        <outlet property="helpOmniButton" destination="WjX-eE-61U" id="0Ar-i2-ZVc"/>
+                        <outlet property="helpOmniLabel" destination="p19-xP-VNm" id="rxQ-Jk-aTj"/>
+                        <outlet property="helpSaveButton" destination="rFL-F5-cse" id="iw4-md-O1m"/>
+                        <outlet property="helpSaveLabel" destination="qTT-Yw-E3q" id="ddq-9N-yze"/>
+                        <outlet property="omapView" destination="zI4-XX-R8d" id="NvU-Us-3eh"/>
+                        <outlet property="oscrollView" destination="kyu-bY-JWo" id="3oG-pf-yOF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9La-kk-XeO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2295" y="-564"/>
+        </scene>
+        <!--Edit Verify View Controller - Verify-->
+        <scene sceneID="DlZ-9u-eOX">
+            <objects>
+                <viewController id="x5q-WT-1wm" customClass="EditVerifyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sP8-eG-sbR">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="8Dq-mH-Gpn">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <button opaque="NO" alpha="0.60000000000000009" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AXm-Fg-c05">
+                                <rect key="frame" x="20" y="10" width="280" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <slider opaque="NO" alpha="0.60000000000000009" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.80000000000000004" minValue="0.0" maxValue="1" id="6gf-SV-TOO">
+                                <rect key="frame" x="106" y="18" width="179" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="opacityChanged:" destination="x5q-WT-1wm" eventType="valueChanged" id="khG-aE-muZ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000000000000009" contentMode="left" text="Opacity:" lineBreakMode="tailTruncation" minimumFontSize="10" id="OMK-yi-SqN">
+                                <rect key="frame" x="36" y="18" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="2Rn-9y-2J6">
+                                <rect key="frame" x="468" y="14" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Map"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="modeChanged:" destination="x5q-WT-1wm" eventType="valueChanged" id="TJR-fS-FyK"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Verify" id="nuV-Uy-MMI">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="wdo-LR-4cV"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="8Dq-mH-Gpn" id="09s-Zj-X4B"/>
+                        <outlet property="opacitySlider" destination="6gf-SV-TOO" id="h3l-nL-7bx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Nd-oy-Tpe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2295" y="655"/>
+        </scene>
+        <!--Navigation Controller - 2. Edit-->
+        <scene sceneID="CAm-eG-ZJS">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="L4E-fy-OTR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="2. Edit" image="edit.png" id="GBa-6b-aeU"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" id="iPr-to-m65">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ANI-CL-hWv" kind="relationship" relationship="rootViewController" id="04Y-5U-BT4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92W-Bb-Twq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-605" y="330"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="15">
+            <objects>
+                <tabBarController id="4" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
+                        <segue destination="L4E-fy-OTR" kind="relationship" relationship="viewControllers" id="nuz-EF-NzY"/>
+                        <segue destination="bMm-Bc-rvG" kind="relationship" relationship="viewControllers" id="5bI-bT-9aY"/>
+                        <segue destination="l0f-Pg-LiS" kind="relationship" relationship="viewControllers" id="Lsw-N8-QkX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1678" y="-22"/>
+        </scene>
+        <!--Help View Controller - Help-->
+        <scene sceneID="Wed-Me-UDZ">
+            <objects>
+                <viewController title="Help" id="l0f-Pg-LiS" customClass="HelpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="esg-0s-8UM">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="iOmniMap allows you to navigate in any map that you can download or photograph." textAlignment="center" id="5e3-fP-ss0">
+                                <rect key="frame" x="0.0" y="38" width="768" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="Zws-GL-ULx">
+                                <rect key="frame" x="0.0" y="458" width="768" height="447"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Step 1 - Create a new OmniMap:
+Select the "Create" tab at the bottom left.
+To create a new OmniMap you have to import a picture of the map you want to navigate in, with 3 possible choices:
+• to create a new map by photographing it, touch the "Take a new photograph" button. Note that when photographing maps you should take care hold your iPhone perfectly parallel to the map and make sure north is exactly at the top of the picture. Distortions created by photographing from an angle severely impact the navigation accuracy.
+• to create a map from a picture you have photographed previously, touch the "Choose existing picture" button and select the picture of the map from your photo library.
+• to import a map from the internet, touch the "Download picture from URL" button and enter (or paste) the URL.
+You can see a small preview of the picture to be used in the "source picture preview" area. Once you are satisfied, touch the "Save &amp; Edit" button.
+Note that some "maps" are no "real" maps in a geographical sense at all and therefore can NOT be used with iOmniMap, e.g. the orientational maps often provided by skiing resorts.
+
+Step 2 - Define your OmniMap:
+To be able to use the picture you've imported as a navigate-able "OmniMap" you have to "define" it, so iOmniMap knows where the map is located geographically and how it is scaled (and possibly, oriented). To define a map, you have to "match" two locations displayed on the imported map to the two very same locations as displayed on a world-map. Note that to define a map you have to have an active internet connection, while navigating inside the map also works offline.
+After clicking the "Save &amp; Edit" button you are automatically taken to the screen where you can define the map. Start by touching the "Match first location" button.
+You are now taken to a "split screen", you see the world-map at the top, and your imported map at the bottom. To match the location you have to select the exact same location once as displayed at the top in the world-map (where you have to zoom in to see the same location that is displayed on your imported map), and once in your map at the bottom. E.g. click at one-and-the-same road-fork/building/sight/etc once in the world-map and once in your imported map, while taking care to hit the spot as exact as possible. Preferably pick a distinctive location (so it easy to recognize in both maps) from one of the corners of your map (to increase accuracy). Note that you can perform a long touch on the world-map to switch from "map" to "satellite" view and back. Once you have selected the same location from both maps as accurately as possible, touch the "Save" button in the top-right corner. Now match a second location by touching the "Match second location" button, preferably choosing a location far-away (opposite corner!) from the first location. Touch "Save" again to store the second match.
+If your map is perfectly north-south aligned, i.e. north is exactly at the top of the picture, then you are done already. If the map is not north-south aligned, you have to touch the "3rd" button in the top-right corner and match a third location between the two maps.
+Touch the "Verify result" button to see the result, i.e. the OmniMap as placed inside the world-map. Drag the "opacity" slider to change the translucency of the OmniMap to see whether the OmniMap is placed exactly at the right location, scale and orientation on the world-map. If you are satisfied with the results, go back and touch "Save &amp; Use", else redefine one or more of your matched locations with better accuracy until it is perfect. If your map is completely off-location, remember that you have to match the locations EXACTLY (which requires you to zoom a lot into the world-map) and not just touch roughly the same area.
+
+
+Step 3 - Navigate inside your OmniMaps:
+Once you have fully defined at least one OmniMap, you can use them to navigate inside them, i.e. to see your current GPS position and heading right within your custom map. Touching "Save &amp; Use" after defining a map takes you to the map screen, but you also always click the "Navigate" tab on the bottom to get there. This map always uses all defined OmniMaps as overlays to a standard map view, so if you are inside or near one of the areas of the OmniMaps you will see them and your location inside them (as denoted with the standard blue pin). Clicking on the bottom right corner allows you to adjust settings like the opacity of the OmniMap overlays, whether the map rotates with your heading and the mode of the standard map. Note that while the OmniMaps are always visible, displaying the portions of the world that are not covered by OmniMaps you've imported, requires an active internet connection.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" id="QBJ-j7-dFo">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50980392159999999" green="0.68627450980000004" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="fCE-1h-0eR">
+                                <rect key="frame" x="0.0" y="43" width="768" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="Pr5-Do-OnN">
+                                <rect key="frame" x="0.0" y="71" width="768" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="Inr-c5-Uqw">
+                                <rect key="frame" x="0.0" y="458" width="768" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="7Ug-QJ-sIi">
+                                <rect key="frame" x="0.0" y="905" width="768" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="iOmniMap Help" lineBreakMode="tailTruncation" minimumFontSize="10" id="WWm-hf-Xxd">
+                                <rect key="frame" x="20" y="20" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iCA-gV-ZoX">
+                                <rect key="frame" x="20" y="916" width="170" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Visit Homepage…">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openURL:" destination="l0f-Pg-LiS" eventType="touchUpInside" id="KqW-pY-oK1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P14-Pc-mkZ">
+                                <rect key="frame" x="578" y="916" width="170" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Contact Support…">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openURL:" destination="l0f-Pg-LiS" eventType="touchUpInside" id="X3x-B3-WZO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Explanation Video:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WzP-Js-EZc">
+                                <rect key="frame" x="295" y="80" width="178" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Product Manual:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9sb-Fk-LOu">
+                                <rect key="frame" x="311" y="429" width="146" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" id="4MR-Vh-vkQ">
+                                <rect key="frame" x="144" y="109" width="480" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196084980000002" green="0.90196084980000002" blue="0.90196084980000002" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Help" image="help.png" id="kDZ-bk-sS1"/>
+                    <connections>
+                        <outlet property="videoView" destination="4MR-Vh-vkQ" id="mXV-fI-P03"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehn-W6-e20" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-605" y="2591"/>
+        </scene>
+        <!--Navigate View Controller - Navigate-->
+        <scene sceneID="djZ-P4-2zK">
+            <objects>
+                <viewController title="Navigate" id="bMm-Bc-rvG" customClass="NavigateViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LVN-Be-qyP">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="MRo-rj-9ql">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nAr-dt-bCF">
+                                <rect key="frame" x="727" y="960" width="41" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="PageCurl.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ma7-9w-pdK" kind="modal" modalTransitionStyle="partialCurl" id="foM-5V-7gO"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" id="fgL-e9-JkO">
+                                <rect key="frame" x="224" y="413" width="320" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oNj-fU-gce">
+                                        <rect key="frame" x="20" y="20" width="280" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b4d-oK-QiT">
+                                        <rect key="frame" x="20" y="37" width="280" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">No OmniMaps have been added yet.
+Click on the 'Create' tab to add one.</string>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="3. Navigate" image="navigate.png" id="1KF-eq-htG"/>
+                    <connections>
+                        <outlet property="helpView" destination="fgL-e9-JkO" id="x03-I5-xjt"/>
+                        <outlet property="mapView" destination="MRo-rj-9ql" id="h0p-Us-J51"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRf-cm-DWu" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-605" y="1483"/>
+        </scene>
+        <!--Options View Controller-->
+        <scene sceneID="Y64-ab-9Mf">
+            <objects>
+                <viewController id="Ma7-9w-pdK" customClass="OptionsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6xd-Ha-3C6">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="028-dj-sgs">
+                                <rect key="frame" x="244" y="940" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapTypeChanged:" destination="Ma7-9w-pdK" eventType="valueChanged" id="dgT-WS-Jza"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="TuZ-FV-7fX">
+                                <rect key="frame" x="244" y="982" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <segments>
+                                    <segment title="No Tracking"/>
+                                    <segment title="Follow"/>
+                                    <segment title="Heading"/>
+                                </segments>
+                                <connections>
+                                    <action selector="trackingModeChanged:" destination="Ma7-9w-pdK" eventType="valueChanged" id="vKJ-A2-gdA"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="57K-8g-es0">
+                                <rect key="frame" x="244" y="869" width="280" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <slider opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.80000001192092896" minValue="0.0" maxValue="1" id="IZH-Tc-QUg">
+                                <rect key="frame" x="330" y="877" width="179" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="opacityChanged:" destination="x5q-WT-1wm" eventType="valueChanged" id="hYb-mD-ZFQ"/>
+                                    <action selector="opacityChanged:" destination="Ma7-9w-pdK" eventType="valueChanged" id="lKV-0t-K64"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" text="Opacity:" lineBreakMode="tailTruncation" minimumFontSize="10" id="97h-sD-DgD">
+                                <rect key="frame" x="260" y="876" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <connections>
+                        <outlet property="mapTypeSegmentedControl" destination="028-dj-sgs" id="t1M-wQ-b9l"/>
+                        <outlet property="opacitySlider" destination="IZH-Tc-QUg" id="uhZ-DQ-IFQ"/>
+                        <outlet property="trackingModeSegmentedControl" destination="TuZ-FV-7fX" id="QQn-DA-UY2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yT0-v5-Jbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LYZ-1Z-otF">
+                    <connections>
+                        <action selector="dismissOptions:" destination="Ma7-9w-pdK" id="HJm-Lm-1aB"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="255" y="1483"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="PageCurl.png" width="83" height="128"/>
+        <image name="atlas_left.png" width="190" height="329"/>
+        <image name="atlas_right.png" width="190" height="329"/>
+        <image name="create.png" width="28" height="28"/>
+        <image name="edit.png" width="26" height="26"/>
+        <image name="help.png" width="28" height="28"/>
+        <image name="ipad_header.png" width="320" height="45"/>
+        <image name="navigate.png" width="26" height="21"/>
+        <image name="placeholder.png" width="250" height="95"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="R35-tF-aGA"/>
+    </inferredMetricsTieBreakers>
+</document>

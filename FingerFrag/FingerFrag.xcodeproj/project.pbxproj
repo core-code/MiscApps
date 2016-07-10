@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B904D89C1252B225005F0DF9 /* FingerFragAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B904D8991252B225005F0DF9 /* FingerFragAppDelegate.m */; };
+		B904D89D1252B225005F0DF9 /* FingerFragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B904D89B1252B225005F0DF9 /* FingerFragViewController.m */; };
+		B904D8A11252B28D005F0DF9 /* FingerFragIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B904D8A01252B28D005F0DF9 /* FingerFragIcon.png */; };
+		B904D8A51252B2A2005F0DF9 /* FingerFragViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B904D8A41252B2A2005F0DF9 /* FingerFragViewController.xib */; };
+		B951DCB2125671C9000288DE /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B951DCB1125671C9000288DE /* menuButton.png */; };
+		B951DCDB12567772000288DE /* scoreBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = B951DCDA12567772000288DE /* scoreBackground.png */; };
+		B960F8D71163E65C00868971 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B960F8D61163E65C00868971 /* QuartzCore.framework */; };
+		B9837C5E116E4A860000A134 /* IntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9837C5D116E4A860000A134 /* IntroView.xib */; };
+		B9837C60116E4A8F0000A134 /* Intro.png in Resources */ = {isa = PBXBuildFile; fileRef = B9837C5F116E4A8F0000A134 /* Intro.png */; };
+		B9837C9A116E4FBC0000A134 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837C99116E4FBC0000A134 /* ImageViewController.m */; };
+		B98B37AD1162522600DBCF01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		B98B37B11162522600DBCF01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		B98B37B21162522600DBCF01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		B98B37B31162522600DBCF01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		B98B37BC1162522700DBCF01 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98B37BA1162522700DBCF01 /* MainWindow.xib */; };
+		B98B37D1116252D500DBCF01 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = B98B37D0116252D500DBCF01 /* GameView.m */; };
+		B99F645F125A54610025F2B6 /* HighScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B99F645D125A54610025F2B6 /* HighScoreViewController.m */; };
+		B9D77E921254B32B00C8BD68 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D77E901254B32B00C8BD68 /* empty.png */; };
+		B9D77E931254B32B00C8BD68 /* full.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D77E911254B32B00C8BD68 /* full.png */; };
+		B9F7BDE0125A5E90002811D6 /* HighScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9F7BDDF125A5E90002811D6 /* HighScoreViewController.xib */; };
+		B9F948301231C2F900AB957F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F9482D1231C2F900AB957F /* AudioToolbox.framework */; };
+		B9F948311231C2F900AB957F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F9482E1231C2F900AB957F /* MediaPlayer.framework */; };
+		B9F948321231C2F900AB957F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F9482F1231C2F900AB957F /* MessageUI.framework */; };
+		B9FD7A1D1164EF2F00504157 /* StringMainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FD7A1C1164EF2F00504157 /* StringMainMenu.png */; };
+		B9FD7B2C116537D900504157 /* bigButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FD7B2A116537D900504157 /* bigButton.png */; };
+		B9FD7B2D116537D900504157 /* bigButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = B9FD7B2B116537D900504157 /* bigButtonPressed.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		B904D8981252B225005F0DF9 /* FingerFragAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerFragAppDelegate.h; sourceTree = "<group>"; };
+		B904D8991252B225005F0DF9 /* FingerFragAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FingerFragAppDelegate.m; sourceTree = "<group>"; };
+		B904D89A1252B225005F0DF9 /* FingerFragViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerFragViewController.h; sourceTree = "<group>"; };
+		B904D89B1252B225005F0DF9 /* FingerFragViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FingerFragViewController.m; sourceTree = "<group>"; };
+		B904D8A01252B28D005F0DF9 /* FingerFragIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FingerFragIcon.png; path = Resources/FingerFragIcon.png; sourceTree = "<group>"; };
+		B904D8A31252B299005F0DF9 /* FingerFrag_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerFrag_Prefix.pch; sourceTree = "<group>"; };
+		B904D8A41252B2A2005F0DF9 /* FingerFragViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FingerFragViewController.xib; path = Resources/FingerFragViewController.xib; sourceTree = "<group>"; };
+		B951DCB1125671C9000288DE /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuButton.png; path = Resources/menuButton.png; sourceTree = "<group>"; };
+		B951DCDA12567772000288DE /* scoreBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scoreBackground.png; path = Resources/scoreBackground.png; sourceTree = "<group>"; };
+		B960F8D61163E65C00868971 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B9837C5D116E4A860000A134 /* IntroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = IntroView.xib; path = Resources/IntroView.xib; sourceTree = "<group>"; };
+		B9837C5F116E4A8F0000A134 /* Intro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Intro.png; path = Resources/Intro.png; sourceTree = "<group>"; };
+		B9837C98116E4FBC0000A134 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		B9837C99116E4FBC0000A134 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		B98B37B71162522600DBCF01 /* FingerFrag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingerFrag.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B98B37BA1162522700DBCF01 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/MainWindow.xib; sourceTree = "<group>"; };
+		B98B37CF116252D500DBCF01 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		B98B37D0116252D500DBCF01 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
+		B99F645C125A54610025F2B6 /* HighScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoreViewController.h; sourceTree = "<group>"; };
+		B99F645D125A54610025F2B6 /* HighScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScoreViewController.m; sourceTree = "<group>"; };
+		B9D77E901254B32B00C8BD68 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = empty.png; path = Resources/empty.png; sourceTree = "<group>"; };
+		B9D77E911254B32B00C8BD68 /* full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = full.png; path = Resources/full.png; sourceTree = "<group>"; };
+		B9F7BDDF125A5E90002811D6 /* HighScoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HighScoreViewController.xib; path = Resources/HighScoreViewController.xib; sourceTree = "<group>"; };
+		B9F9482D1231C2F900AB957F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B9F9482E1231C2F900AB957F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		B9F9482F1231C2F900AB957F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		B9FD7A1C1164EF2F00504157 /* StringMainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StringMainMenu.png; path = Resources/StringMainMenu.png; sourceTree = "<group>"; };
+		B9FD7B2A116537D900504157 /* bigButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bigButton.png; path = Resources/bigButton.png; sourceTree = "<group>"; };
+		B9FD7B2B116537D900504157 /* bigButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bigButtonPressed.png; path = Resources/bigButtonPressed.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B98B37B01162522600DBCF01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98B37B11162522600DBCF01 /* Foundation.framework in Frameworks */,
+				B98B37B21162522600DBCF01 /* UIKit.framework in Frameworks */,
+				B98B37B31162522600DBCF01 /* CoreGraphics.framework in Frameworks */,
+				B960F8D71163E65C00868971 /* QuartzCore.framework in Frameworks */,
+				B9F948301231C2F900AB957F /* AudioToolbox.framework in Frameworks */,
+				B9F948311231C2F900AB957F /* MediaPlayer.framework in Frameworks */,
+				B9F948321231C2F900AB957F /* MessageUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B904D8981252B225005F0DF9 /* FingerFragAppDelegate.h */,
+				B904D8991252B225005F0DF9 /* FingerFragAppDelegate.m */,
+				B904D89A1252B225005F0DF9 /* FingerFragViewController.h */,
+				B904D89B1252B225005F0DF9 /* FingerFragViewController.m */,
+				B98B37CF116252D500DBCF01 /* GameView.h */,
+				B98B37D0116252D500DBCF01 /* GameView.m */,
+				B9837C98116E4FBC0000A134 /* ImageViewController.h */,
+				B9837C99116E4FBC0000A134 /* ImageViewController.m */,
+				B99F645C125A54610025F2B6 /* HighScoreViewController.h */,
+				B99F645D125A54610025F2B6 /* HighScoreViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B98B37B71162522600DBCF01 /* FingerFrag.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				B98B37B91162522600DBCF01 /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B904D8A31252B299005F0DF9 /* FingerFrag_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			path = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9F9482D1231C2F900AB957F /* AudioToolbox.framework */,
+				B9F9482E1231C2F900AB957F /* MediaPlayer.framework */,
+				B9F9482F1231C2F900AB957F /* MessageUI.framework */,
+				B960F8D61163E65C00868971 /* QuartzCore.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B98B37B91162522600DBCF01 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B951DCDA12567772000288DE /* scoreBackground.png */,
+				B951DCB1125671C9000288DE /* menuButton.png */,
+				B9D77E901254B32B00C8BD68 /* empty.png */,
+				B9D77E911254B32B00C8BD68 /* full.png */,
+				B904D8A01252B28D005F0DF9 /* FingerFragIcon.png */,
+				B9837C5F116E4A8F0000A134 /* Intro.png */,
+				B9FD7B2A116537D900504157 /* bigButton.png */,
+				B9FD7B2B116537D900504157 /* bigButtonPressed.png */,
+				B9FD7A1C1164EF2F00504157 /* StringMainMenu.png */,
+				B9F7BDDF125A5E90002811D6 /* HighScoreViewController.xib */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				B98B37BA1162522700DBCF01 /* MainWindow.xib */,
+				B904D8A41252B2A2005F0DF9 /* FingerFragViewController.xib */,
+				B9837C5D116E4A860000A134 /* IntroView.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B98B37A81162522600DBCF01 /* FingerFrag */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B98B37B41162522600DBCF01 /* Build configuration list for PBXNativeTarget "FingerFrag" */;
+			buildPhases = (
+				B98B37A91162522600DBCF01 /* Resources */,
+				B98B37AC1162522600DBCF01 /* Sources */,
+				B98B37B01162522600DBCF01 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FingerFrag;
+			productName = FingerMaze;
+			productReference = B98B37B71162522600DBCF01 /* FingerFrag.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FingerFrag" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B98B37A81162522600DBCF01 /* FingerFrag */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B98B37A91162522600DBCF01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98B37BC1162522700DBCF01 /* MainWindow.xib in Resources */,
+				B9FD7A1D1164EF2F00504157 /* StringMainMenu.png in Resources */,
+				B9FD7B2C116537D900504157 /* bigButton.png in Resources */,
+				B9FD7B2D116537D900504157 /* bigButtonPressed.png in Resources */,
+				B9837C5E116E4A860000A134 /* IntroView.xib in Resources */,
+				B9837C60116E4A8F0000A134 /* Intro.png in Resources */,
+				B904D8A11252B28D005F0DF9 /* FingerFragIcon.png in Resources */,
+				B904D8A51252B2A2005F0DF9 /* FingerFragViewController.xib in Resources */,
+				B9D77E921254B32B00C8BD68 /* empty.png in Resources */,
+				B9D77E931254B32B00C8BD68 /* full.png in Resources */,
+				B951DCB2125671C9000288DE /* menuButton.png in Resources */,
+				B951DCDB12567772000288DE /* scoreBackground.png in Resources */,
+				B9F7BDE0125A5E90002811D6 /* HighScoreViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B98B37AC1162522600DBCF01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98B37AD1162522600DBCF01 /* main.m in Sources */,
+				B98B37D1116252D500DBCF01 /* GameView.m in Sources */,
+				B9837C9A116E4FBC0000A134 /* ImageViewController.m in Sources */,
+				B904D89C1252B225005F0DF9 /* FingerFragAppDelegate.m in Sources */,
+				B904D89D1252B225005F0DF9 /* FingerFragViewController.m in Sources */,
+				B99F645F125A54610025F2B6 /* HighScoreViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B98B37B51162522600DBCF01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Other Sources/FingerFrag_Prefix.pch";
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.blabla.testapp;
+				PRODUCT_NAME = FingerFrag;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		B98B37B61162522600DBCF01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Other Sources/FingerFrag_Prefix.pch";
+				INFOPLIST_FILE = Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.blabla.testapp;
+				PRODUCT_NAME = FingerFrag;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B98B37B41162522600DBCF01 /* Build configuration list for PBXNativeTarget "FingerFrag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B98B37B51162522600DBCF01 /* Debug */,
+				B98B37B61162522600DBCF01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FingerFrag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

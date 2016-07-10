@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B903DFCE1A18EDAB004F6D0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B903DFCD1A18EDAB004F6D0B /* AppDelegate.swift */; };
+		B903DFD01A18EDAB004F6D0B /* DropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B903DFCF1A18EDAB004F6D0B /* DropViewController.swift */; };
+		B903DFD21A18EDAB004F6D0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B903DFD11A18EDAB004F6D0B /* Images.xcassets */; };
+		B903DFD51A18EDAB004F6D0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B903DFD31A18EDAB004F6D0B /* Main.storyboard */; };
+		B903DFEB1A18F386004F6D0B /* DragDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B903DFEA1A18F385004F6D0B /* DragDestinationView.swift */; };
+		B903DFF01A1A6087004F6D0B /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B903DFEF1A1A6087004F6D0B /* ResultViewController.swift */; };
+		B90578B31A653ADF00A37205 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90578B21A653ADF00A37205 /* MapKit.framework */; };
+		B9284D441A6595B500614F3F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9284D431A6595B500614F3F /* WebKit.framework */; };
+		B9284D481A65960500614F3F /* Credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = B9284D451A65960500614F3F /* Credits.rtfd */; };
+		B9284D491A65960500614F3F /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9284D461A65960500614F3F /* FAQ.rtf */; };
+		B9284D4A1A65960500614F3F /* History.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9284D471A65960500614F3F /* History.rtf */; };
+		B99AA1B41A659ABE0055134E /* DocumentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99AA1B31A659ABE0055134E /* DocumentationViewController.swift */; };
+		B99AA1B61A659E7F0055134E /* Read Me.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B99AA1B51A659E7F0055134E /* Read Me.rtf */; };
+		B9BD19381CDF4D8200C92598 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BD19331CDF4D8200C92598 /* AppKit+CoreCode.m */; };
+		B9BD19391CDF4D8200C92598 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BD19351CDF4D8200C92598 /* CoreLib.m */; };
+		B9BD193A1CDF4D8200C92598 /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BD19371CDF4D8200C92598 /* Foundation+CoreCode.m */; };
+		B9D62F991A3DE8BE008D3643 /* IPGeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D62F981A3DE8BE008D3643 /* IPGeoLocation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B903DFC81A18EDAB004F6D0B /* MailSpy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailSpy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B903DFCC1A18EDAB004F6D0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B903DFCD1A18EDAB004F6D0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B903DFCF1A18EDAB004F6D0B /* DropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewController.swift; sourceTree = "<group>"; };
+		B903DFD11A18EDAB004F6D0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B903DFD41A18EDAB004F6D0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B903DFEA1A18F385004F6D0B /* DragDestinationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragDestinationView.swift; sourceTree = "<group>"; };
+		B903DFEC1A1902E9004F6D0B /* MailSpy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MailSpy.entitlements; sourceTree = "<group>"; };
+		B903DFEF1A1A6087004F6D0B /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B90578B21A653ADF00A37205 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B9284D431A6595B500614F3F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B9284D451A65960500614F3F /* Credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = Credits.rtfd; sourceTree = "<group>"; };
+		B9284D461A65960500614F3F /* FAQ.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = FAQ.rtf; sourceTree = "<group>"; };
+		B9284D471A65960500614F3F /* History.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = History.rtf; sourceTree = "<group>"; };
+		B98357D31A505EEE00586FF3 /* MailSpy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MailSpy-Bridging-Header.h"; sourceTree = "<group>"; };
+		B99AA1B31A659ABE0055134E /* DocumentationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentationViewController.swift; sourceTree = "<group>"; };
+		B99AA1B51A659E7F0055134E /* Read Me.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		B9BD19321CDF4D8200C92598 /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AppKit+CoreCode.h"; path = "Support/AppKit+CoreCode.h"; sourceTree = SOURCE_ROOT; };
+		B9BD19331CDF4D8200C92598 /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AppKit+CoreCode.m"; path = "Support/AppKit+CoreCode.m"; sourceTree = SOURCE_ROOT; };
+		B9BD19341CDF4D8200C92598 /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreLib.h; path = Support/CoreLib.h; sourceTree = SOURCE_ROOT; };
+		B9BD19351CDF4D8200C92598 /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreLib.m; path = Support/CoreLib.m; sourceTree = SOURCE_ROOT; };
+		B9BD19361CDF4D8200C92598 /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Foundation+CoreCode.h"; path = "Support/Foundation+CoreCode.h"; sourceTree = SOURCE_ROOT; };
+		B9BD19371CDF4D8200C92598 /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Foundation+CoreCode.m"; path = "Support/Foundation+CoreCode.m"; sourceTree = SOURCE_ROOT; };
+		B9D62F981A3DE8BE008D3643 /* IPGeoLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPGeoLocation.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B903DFC51A18EDAB004F6D0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9284D441A6595B500614F3F /* WebKit.framework in Frameworks */,
+				B90578B31A653ADF00A37205 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B903DFBF1A18EDAB004F6D0B = {
+			isa = PBXGroup;
+			children = (
+				B903DFCA1A18EDAB004F6D0B /* MailSpy */,
+				B903DFC91A18EDAB004F6D0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B903DFC91A18EDAB004F6D0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B903DFC81A18EDAB004F6D0B /* MailSpy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B903DFCA1A18EDAB004F6D0B /* MailSpy */ = {
+			isa = PBXGroup;
+			children = (
+				B903DFEC1A1902E9004F6D0B /* MailSpy.entitlements */,
+				B903DFCD1A18EDAB004F6D0B /* AppDelegate.swift */,
+				B903DFCF1A18EDAB004F6D0B /* DropViewController.swift */,
+				B903DFEF1A1A6087004F6D0B /* ResultViewController.swift */,
+				B903DFEA1A18F385004F6D0B /* DragDestinationView.swift */,
+				B9D62F981A3DE8BE008D3643 /* IPGeoLocation.swift */,
+				B99AA1B31A659ABE0055134E /* DocumentationViewController.swift */,
+				B903DFD11A18EDAB004F6D0B /* Images.xcassets */,
+				B903DFD31A18EDAB004F6D0B /* Main.storyboard */,
+				B903DFCB1A18EDAB004F6D0B /* Supporting Files */,
+				B98357D31A505EEE00586FF3 /* MailSpy-Bridging-Header.h */,
+			);
+			path = MailSpy;
+			sourceTree = "<group>";
+		};
+		B903DFCB1A18EDAB004F6D0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B99AA1B51A659E7F0055134E /* Read Me.rtf */,
+				B9284D451A65960500614F3F /* Credits.rtfd */,
+				B9284D461A65960500614F3F /* FAQ.rtf */,
+				B9284D471A65960500614F3F /* History.rtf */,
+				B9284D431A6595B500614F3F /* WebKit.framework */,
+				B90578B21A653ADF00A37205 /* MapKit.framework */,
+				B903DFCC1A18EDAB004F6D0B /* Info.plist */,
+				B9BD19321CDF4D8200C92598 /* AppKit+CoreCode.h */,
+				B9BD19331CDF4D8200C92598 /* AppKit+CoreCode.m */,
+				B9BD19341CDF4D8200C92598 /* CoreLib.h */,
+				B9BD19351CDF4D8200C92598 /* CoreLib.m */,
+				B9BD19361CDF4D8200C92598 /* Foundation+CoreCode.h */,
+				B9BD19371CDF4D8200C92598 /* Foundation+CoreCode.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B903DFC71A18EDAB004F6D0B /* MailSpy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B903DFE41A18EDAB004F6D0B /* Build configuration list for PBXNativeTarget "MailSpy" */;
+			buildPhases = (
+				B903DFC41A18EDAB004F6D0B /* Sources */,
+				B903DFC51A18EDAB004F6D0B /* Frameworks */,
+				B903DFC61A18EDAB004F6D0B /* Resources */,
+				B99AA1B21A6599B50055134E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MailSpy;
+			productName = MailSpy;
+			productReference = B903DFC81A18EDAB004F6D0B /* MailSpy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B903DFC01A18EDAB004F6D0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = corecode;
+				TargetAttributes = {
+					B903DFC71A18EDAB004F6D0B = {
+						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.Maps.Mac = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = B903DFC31A18EDAB004F6D0B /* Build configuration list for PBXProject "MailSpy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B903DFBF1A18EDAB004F6D0B;
+			productRefGroup = B903DFC91A18EDAB004F6D0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B903DFC71A18EDAB004F6D0B /* MailSpy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B903DFC61A18EDAB004F6D0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9284D481A65960500614F3F /* Credits.rtfd in Resources */,
+				B9284D491A65960500614F3F /* FAQ.rtf in Resources */,
+				B903DFD21A18EDAB004F6D0B /* Images.xcassets in Resources */,
+				B99AA1B61A659E7F0055134E /* Read Me.rtf in Resources */,
+				B903DFD51A18EDAB004F6D0B /* Main.storyboard in Resources */,
+				B9284D4A1A65960500614F3F /* History.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B99AA1B21A6599B50055134E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$PRODUCT_SETTINGS_PATH\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$PRODUCT_SETTINGS_PATH\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B903DFC41A18EDAB004F6D0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B903DFD01A18EDAB004F6D0B /* DropViewController.swift in Sources */,
+				B9BD19391CDF4D8200C92598 /* CoreLib.m in Sources */,
+				B9BD19381CDF4D8200C92598 /* AppKit+CoreCode.m in Sources */,
+				B903DFEB1A18F386004F6D0B /* DragDestinationView.swift in Sources */,
+				B9D62F991A3DE8BE008D3643 /* IPGeoLocation.swift in Sources */,
+				B903DFCE1A18EDAB004F6D0B /* AppDelegate.swift in Sources */,
+				B903DFF01A1A6087004F6D0B /* ResultViewController.swift in Sources */,
+				B9BD193A1CDF4D8200C92598 /* Foundation+CoreCode.m in Sources */,
+				B99AA1B41A659ABE0055134E /* DocumentationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B903DFD31A18EDAB004F6D0B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B903DFD41A18EDAB004F6D0B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B903DFE21A18EDAB004F6D0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B903DFE31A18EDAB004F6D0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B903DFE51A18EDAB004F6D0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MailSpy/MailSpy.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MailSpy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MailSpy/MailSpy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B903DFE61A18EDAB004F6D0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = MailSpy/MailSpy.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MailSpy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MailSpy/MailSpy-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B903DFC31A18EDAB004F6D0B /* Build configuration list for PBXProject "MailSpy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B903DFE21A18EDAB004F6D0B /* Debug */,
+				B903DFE31A18EDAB004F6D0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B903DFE41A18EDAB004F6D0B /* Build configuration list for PBXNativeTarget "MailSpy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B903DFE51A18EDAB004F6D0B /* Debug */,
+				B903DFE61A18EDAB004F6D0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B903DFC01A18EDAB004F6D0B /* Project object */;
+}

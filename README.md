@@ -32,12 +32,30 @@ An application for cutting/splitting any movie file types like MKV/MP4/etc.
 TunesController
 An application for remotely controlling iTunes from any Java capable device.
 	
+MailboxAlert
+An application that warns you when your e-mail mailbox is full, preventing you from receiving e-mails.
+
+MailSpy
+An application that shows the geographic origin of an e-mail on a map - if possible.
+
+MusicWatch
+An application that monitors your favorite music artists for new album releases.
+
+XMPV
+An iPhone app for viewing and editing your Xcode projects on-the-go.
+
 iRipCD
 An application for converting Audio-CDs to high-quality MP3 audio files.
 	
 KeyPresser
 An application that sends simulated repeated keypresses to an arbitrary application.
 	
+FingerFrag
+A minimal example of doing an iPad game.
+	
+FingerMaze
+An actually shipping iPad game where you have to search the way through a maze (like on a sheet of paper).
+
 TimerMenu
 An application that provides a switchable timer in the menubar, e.g. for counting work-time.
 	

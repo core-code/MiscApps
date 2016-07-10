@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
+        <plugIn identifier="com.apple.MapKitIBPlugin" version="6751"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="6751"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="MailSpy" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="MailSpy" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About MailSpy" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                                <segue destination="qQn-0J-WgB" kind="show" id="Jvg-VO-5LZ"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                                        <menuItem title="Services" id="NMo-om-nkz">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                                        <menuItem title="Hide MailSpy" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show All" id="Kd2-mp-pUS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Quit MailSpy" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Window" id="aUF-d1-5bR">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
+                                    <items>
+                                        <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
+                                            <connections>
+                                                <action selector="performMiniaturize:" target="Ady-hI-5gd" id="VwT-WD-YPe"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Close" keyEquivalent="w" id="xEH-zG-IN6">
+                                            <connections>
+                                                <action selector="performClose:" target="Ady-hI-5gd" id="VGX-jd-c5x"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Zoom" id="R4o-n2-Eq4">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="performZoom:" target="Ady-hI-5gd" id="DIl-cC-cCs"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
+                                        <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="arrangeInFront:" target="Ady-hI-5gd" id="DRN-fu-gQh"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Help" id="wpr-3q-Mcd">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
+                                    <items>
+                                        <menuItem title="MailSpy Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                            <connections>
+                                                <segue destination="qQn-0J-WgB" kind="show" id="eHa-ph-COI"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Contact Support…" tag="1" id="Vds-Kd-yGj">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="openURL:" target="Voe-Tx-rLC" id="mVK-GW-W0c"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Rate MailSpy" id="fqe-20-aKP">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Rate MailSpy" id="lsb-Hv-8B0">
+                                                <items>
+                                                    <menuItem title="On the MacAppStore" tag="5" id="09v-vy-dHk">
+                                                        <connections>
+                                                            <action selector="openURL:" target="Voe-Tx-rLC" id="FnD-bt-meN"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="On MacUpdate.com" tag="6" id="P7V-8f-0Nb">
+                                                        <connections>
+                                                            <action selector="openURL:" target="Voe-Tx-rLC" id="Qgw-zr-ydg"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MailSpy" customModuleProvider="target"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="MailSpy" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="243" height="271"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="243" height="271"/>
+                        <value key="maxSize" type="size" width="243" height="271"/>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--Drop View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="DropViewController" customModule="MailSpy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="234" height="271"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box autoresizesSubviews="NO" title="Drop email to be analyzed here" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="low-YU-iCD">
+                                <rect key="frame" x="17" y="51" width="200" height="200"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="198" height="184"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XK3-zr-ZHL">
+                                            <rect key="frame" x="42" y="37" width="114" height="114"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icon_drophere" id="iNH-X9-g5j"/>
+                                        </imageView>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mkS-j2-aKe" customClass="DragDestinationView" customModule="MailSpy" customModuleProvider="target">
+                                            <rect key="frame" x="3" y="4" width="192" height="180"/>
+                                        </customView>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vfZ-Mh-psN">
+                                <rect key="frame" x="18" y="18" width="198" height="14"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Note: only drop a single mail at once" id="2G8-wi-38P">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="low-YU-iCD" secondAttribute="bottom" constant="55" id="HZv-dG-auJ"/>
+                            <constraint firstItem="vfZ-Mh-psN" firstAttribute="top" secondItem="low-YU-iCD" secondAttribute="bottom" constant="23" id="VVT-dN-8Th"/>
+                            <constraint firstItem="low-YU-iCD" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="cqa-1k-0OD"/>
+                            <constraint firstItem="low-YU-iCD" firstAttribute="trailing" secondItem="vfZ-Mh-psN" secondAttribute="trailing" id="gc1-R7-Nod"/>
+                            <constraint firstItem="low-YU-iCD" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="jVX-bN-FCy"/>
+                            <constraint firstItem="low-YU-iCD" firstAttribute="leading" secondItem="vfZ-Mh-psN" secondAttribute="leading" id="vg2-sT-yo8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-48" y="655.5"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="jS4-A3-e9E">
+            <objects>
+                <windowController storyboardIdentifier="detailWindowController" id="drp-Jx-Npy" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="btY-k6-xgg">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <rect key="contentRect" x="425" y="461" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                    </window>
+                    <connections>
+                        <segue destination="4MQ-bH-do1" kind="relationship" relationship="window.shadowedContentViewController" id="3FF-x2-q4T"/>
+                    </connections>
+                </windowController>
+                <customObject id="jNR-mX-jtL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-141" y="1174"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="cwY-Os-cFD">
+            <objects>
+                <viewController id="4MQ-bH-do1" customClass="ResultViewController" customModule="MailSpy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="k0N-9L-O05">
+                        <rect key="frame" x="0.0" y="0.0" width="392" height="544"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9bf-Ua-XMg">
+                                <rect key="frame" x="18" y="471" width="357" height="26"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" id="EYf-9u-OjX">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" autoenablesItems="NO" id="R4i-r7-hYd"/>
+                                    <connections>
+                                        <action selector="didSelectSource:" target="4MQ-bH-do1" id="Mfq-fL-21N"/>
+                                    </connections>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ajT-VF-iY0">
+                                <rect key="frame" x="18" y="507" width="103" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="email IP history:" id="fVc-T1-A5h">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Dwt-bS-omc">
+                                <rect key="frame" x="17" y="100" width="358" height="358"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="356" height="342"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="Ced-fL-YeA">
+                                            <rect key="frame" x="170" y="202" width="16" height="16"/>
+                                        </progressIndicator>
+                                        <mapView fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VOn-WH-ll5">
+                                            <rect key="frame" x="18" y="92" width="320" height="240"/>
+                                        </mapView>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PTU-hh-W05">
+                                            <rect key="frame" x="18" y="13" width="320" height="23"/>
+                                            <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Uoi-qI-lq9">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="urlButtonClicked:" target="4MQ-bH-do1" id="rYM-vn-G0a"/>
+                                            </connections>
+                                        </button>
+                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="77X-O4-UAX">
+                                            <rect key="frame" x="16" y="42" width="324" height="42"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="f23-i4-wSM">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98O-Xg-010">
+                                <rect key="frame" x="18" y="79" width="55" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mailer:" id="hTm-XE-Gem">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3D-zR-9lg">
+                                <rect key="frame" x="18" y="20" width="356" height="41"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="WARNING: the mail has probably been sent using web-mail and the shown location may just show the provider" id="s1q-lu-kvy">
+                                    <font key="font" metaFont="systemBold" size="12"/>
+                                    <color key="textColor" red="0.34809027777777779" green="0.0" blue="0.01290232143221343" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="4MQ-bH-do1" name="hidden" keyPath="isWebmail" id="U8C-X8-b7M">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </textField>
+                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfd-Lg-3Dd">
+                                <rect key="frame" x="349" y="500" width="25" height="25"/>
+                                <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Jlb-bX-Ett">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="helpButtonClicked:" target="4MQ-bH-do1" id="83W-QM-bjt"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r0b-Gh-n8K">
+                                <rect key="frame" x="77" y="79" width="297" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="nNs-4m-jfN">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="4MQ-bH-do1" name="value" keyPath="mailer" id="EfV-M9-uc8"/>
+                                </connections>
+                            </textField>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eof-yR-a57">
+                                <rect key="frame" x="279" y="441" width="95" height="22"/>
+                                <buttonCell key="cell" type="check" title="show ip location" bezelStyle="regularSquare" imagePosition="left" controlSize="mini" state="on" inset="2" id="hSI-Ef-WBR">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="miniSystem"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="didSelectSource:" target="4MQ-bH-do1" id="m24-d0-AxM"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-8z-wCl">
+                                <rect key="frame" x="18" y="20" width="356" height="41"/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="INFO: due to inaccuracies in the e-mail history and ip-geolocation, the shown locations may be inaccurate" id="xhs-RE-tb5">
+                                    <font key="font" metaFont="systemBold" size="12"/>
+                                    <color key="textColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="4MQ-bH-do1" name="hidden" keyPath="isWebmail" id="tXp-wf-QMy"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="historyPopup" destination="9bf-Ua-XMg" id="2he-8Q-pa7"/>
+                        <outlet property="infoField" destination="77X-O4-UAX" id="ash-Bq-cNK"/>
+                        <outlet property="ipButton" destination="Eof-yR-a57" id="zfD-Bu-w9C"/>
+                        <outlet property="locationBox" destination="Dwt-bS-omc" id="QS7-9c-CR8"/>
+                        <outlet property="mapView" destination="VOn-WH-ll5" id="ScR-qV-8b6"/>
+                        <outlet property="progressIndicator" destination="Ced-fL-YeA" id="paU-ge-6uJ"/>
+                        <outlet property="providerButton" destination="PTU-hh-W05" id="pmb-Lk-LQc"/>
+                    </connections>
+                </viewController>
+                <customObject id="ZOh-31-Aw3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="SDP-TA-foK"/>
+            </objects>
+            <point key="canvasLocation" x="498" y="1199"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="fAo-mb-1jH">
+            <objects>
+                <windowController id="qQn-0J-WgB" sceneMemberID="viewController">
+                    <window key="window" title="Documentation" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="49O-xi-slp">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="461" width="550" height="650"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+                    </window>
+                    <connections>
+                        <segue destination="Xau-kw-CYI" kind="relationship" relationship="window.shadowedContentViewController" id="Kq9-RM-qg1"/>
+                    </connections>
+                </windowController>
+                <customObject id="Fkg-Gd-84g" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="264"/>
+        </scene>
+        <!--Documentation View Controller-->
+        <scene sceneID="GIM-03-aNT">
+            <objects>
+                <viewController id="Xau-kw-CYI" customClass="DocumentationViewController" customModule="MailSpy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="I2W-sZ-lrO">
+                        <rect key="frame" x="0.0" y="0.0" width="550" height="650"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view translatesAutoresizingMaskIntoConstraints="NO" id="ONe-iO-W3g" userLabel="AboutView">
+                                <rect key="frame" x="0.0" y="0.0" width="550" height="650"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="dXf-vP-ylV">
+                                        <rect key="frame" x="20" y="19" width="140" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="7Rp-N8-jYg"/>
+                                            <constraint firstAttribute="height" constant="28" id="OaS-bg-DOo"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="smallSquare" title="Contact support…" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sL8-aG-MQg">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="openURL:" target="Xau-kw-CYI" id="app-mO-exl"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="oID-9n-6y9">
+                                        <rect key="frame" x="390" y="19" width="140" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="Ulc-u6-3sf"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="smallSquare" title="Visit homepage…" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eqM-Si-j7b">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="openURL:" target="Xau-kw-CYI" id="I2z-Iw-wet"/>
+                                        </connections>
+                                    </button>
+                                    <tabView initialItem="iep-NA-AZA" translatesAutoresizingMaskIntoConstraints="NO" id="H4F-4q-kFx">
+                                        <rect key="frame" x="13" y="56" width="524" height="588"/>
+                                        <font key="font" metaFont="system"/>
+                                        <tabViewItems>
+                                            <tabViewItem label="About" identifier="1" id="iep-NA-AZA">
+                                                <view key="view" id="tFA-3I-PnS">
+                                                    <rect key="frame" x="10" y="33" width="504" height="542"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <imageView translatesAutoresizingMaskIntoConstraints="NO" id="dL7-jM-fcd">
+                                                            <rect key="frame" x="17" y="412" width="128" height="128"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="128" id="0yp-N7-TJ2"/>
+                                                                <constraint firstAttribute="width" constant="128" id="bFO-Zk-ShZ"/>
+                                                            </constraints>
+                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="xQZ-N4-cpb"/>
+                                                        </imageView>
+                                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DwU-Hl-PYa">
+                                                            <rect key="frame" x="-5" y="387" width="172" height="17"/>
+                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="4C7-vp-h3f">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="Xau-kw-CYI" name="value" keyPath="version" id="k6d-sB-sgP"/>
+                                                            </connections>
+                                                        </textField>
+                                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r4d-5q-Fcv">
+                                                            <rect key="frame" x="-5" y="357" width="172" height="17"/>
+                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="QuT-yM-toA">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="Xau-kw-CYI" name="value" keyPath="build" id="gbB-1i-RAN"/>
+                                                            </connections>
+                                                        </textField>
+                                                        <webView translatesAutoresizingMaskIntoConstraints="NO" id="r1h-en-kbd">
+                                                            <rect key="frame" x="17" y="17" width="470" height="176"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="176" id="KOE-WJ-iN6"/>
+                                                            </constraints>
+                                                            <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                                                                <nil key="identifier"/>
+                                                            </webPreferences>
+                                                            <connections>
+                                                                <outlet property="policyDelegate" destination="Xau-kw-CYI" id="NJe-re-o6D"/>
+                                                                <outlet property="resourceLoadDelegate" destination="Xau-kw-CYI" id="K9I-EB-4Pt"/>
+                                                            </connections>
+                                                        </webView>
+                                                        <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="eky-YB-NG6">
+                                                            <rect key="frame" x="17" y="199" width="470" height="5"/>
+                                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <font key="titleFont" metaFont="system"/>
+                                                        </box>
+                                                        <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEo-5P-1F2">
+                                                            <rect key="frame" x="163" y="210" width="324" height="320"/>
+                                                            <clipView key="contentView" id="Jrg-0z-h16">
+                                                                <rect key="frame" x="1" y="1" width="322" height="276"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <textView editable="NO" importsGraphics="NO" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="ggf-jx-FCl">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="322" height="318"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <size key="minSize" width="322" height="318"/>
+                                                                        <size key="maxSize" width="503" height="10000000"/>
+                                                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <size key="minSize" width="322" height="318"/>
+                                                                        <size key="maxSize" width="503" height="10000000"/>
+                                                                        <connections>
+                                                                            <binding destination="Xau-kw-CYI" name="valueURL" keyPath="aboutURL" id="mrx-Wg-nmz">
+                                                                                <dictionary key="options">
+                                                                                    <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                                </dictionary>
+                                                                            </binding>
+                                                                        </connections>
+                                                                    </textView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </clipView>
+                                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="pTa-tN-8Tg">
+                                                                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </scroller>
+                                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="r7t-Qc-QFD">
+                                                                <rect key="frame" x="-100" y="-100" width="15" height="460"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </scroller>
+                                                        </scrollView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="eky-YB-NG6" firstAttribute="leading" secondItem="r1h-en-kbd" secondAttribute="leading" id="5h3-a1-1l1"/>
+                                                        <constraint firstItem="dL7-jM-fcd" firstAttribute="leading" secondItem="tFA-3I-PnS" secondAttribute="leading" constant="17" id="8jc-2J-061"/>
+                                                        <constraint firstItem="DwU-Hl-PYa" firstAttribute="top" secondItem="dL7-jM-fcd" secondAttribute="bottom" constant="8" symbolic="YES" id="EBs-iu-jbo"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DEo-5P-1F2" secondAttribute="trailing" constant="17" id="KuH-uU-hZk"/>
+                                                        <constraint firstItem="DEo-5P-1F2" firstAttribute="top" secondItem="tFA-3I-PnS" secondAttribute="top" constant="12" id="LiM-i1-hby"/>
+                                                        <constraint firstItem="r1h-en-kbd" firstAttribute="top" secondItem="eky-YB-NG6" secondAttribute="bottom" constant="8" symbolic="YES" id="PgS-PU-VEt"/>
+                                                        <constraint firstItem="r4d-5q-Fcv" firstAttribute="top" secondItem="tFA-3I-PnS" secondAttribute="top" constant="168" id="Swq-Lr-LXg"/>
+                                                        <constraint firstItem="eky-YB-NG6" firstAttribute="top" secondItem="DEo-5P-1F2" secondAttribute="bottom" constant="8" symbolic="YES" id="a0i-EM-psz"/>
+                                                        <constraint firstItem="DEo-5P-1F2" firstAttribute="leading" secondItem="tFA-3I-PnS" secondAttribute="leading" constant="163" id="fGa-9b-x6f"/>
+                                                        <constraint firstItem="r4d-5q-Fcv" firstAttribute="leading" secondItem="tFA-3I-PnS" secondAttribute="leading" constant="-3" id="hyx-11-yaq"/>
+                                                        <constraint firstItem="dL7-jM-fcd" firstAttribute="centerX" secondItem="DwU-Hl-PYa" secondAttribute="centerX" id="lzR-td-GjT"/>
+                                                        <constraint firstItem="DwU-Hl-PYa" firstAttribute="trailing" secondItem="r4d-5q-Fcv" secondAttribute="trailing" id="mGh-c9-zYf"/>
+                                                        <constraint firstItem="DwU-Hl-PYa" firstAttribute="leading" secondItem="tFA-3I-PnS" secondAttribute="leading" constant="-3" id="mfm-6x-VM8"/>
+                                                        <constraint firstItem="eky-YB-NG6" firstAttribute="leading" secondItem="dL7-jM-fcd" secondAttribute="leading" id="nG7-Pl-aeC"/>
+                                                        <constraint firstAttribute="bottom" secondItem="r1h-en-kbd" secondAttribute="bottom" constant="17" id="rJe-HT-OHk"/>
+                                                        <constraint firstItem="eky-YB-NG6" firstAttribute="trailing" secondItem="DEo-5P-1F2" secondAttribute="trailing" id="rmg-gI-aYu"/>
+                                                        <constraint firstItem="r1h-en-kbd" firstAttribute="trailing" secondItem="eky-YB-NG6" secondAttribute="trailing" id="tcQ-JE-sYq"/>
+                                                        <constraint firstItem="dL7-jM-fcd" firstAttribute="top" secondItem="tFA-3I-PnS" secondAttribute="top" constant="2" id="xog-Uj-ib3"/>
+                                                    </constraints>
+                                                </view>
+                                            </tabViewItem>
+                                            <tabViewItem label="Read Me" identifier="2" id="DuI-g5-PLx">
+                                                <view key="view" id="GQ7-44-ctc">
+                                                    <rect key="frame" x="10" y="33" width="504" height="542"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAL-4d-qmi">
+                                                            <rect key="frame" x="17" y="17" width="470" height="512"/>
+                                                            <clipView key="contentView" id="MK6-DM-v5X">
+                                                                <rect key="frame" x="1" y="1" width="468" height="468"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <textView editable="NO" importsGraphics="NO" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="7pl-sT-nx5">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="468" height="510"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <size key="minSize" width="468" height="510"/>
+                                                                        <size key="maxSize" width="693" height="10000000"/>
+                                                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <size key="minSize" width="468" height="510"/>
+                                                                        <size key="maxSize" width="693" height="10000000"/>
+                                                                        <connections>
+                                                                            <binding destination="Xau-kw-CYI" name="valueURL" keyPath="readmeURL" id="4ur-H9-VqB">
+                                                                                <dictionary key="options">
+                                                                                    <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                                </dictionary>
+                                                                            </binding>
+                                                                        </connections>
+                                                                    </textView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </clipView>
+                                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="mYl-f3-Mrc">
+                                                                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </scroller>
+                                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Tn8-Al-c9t">
+                                                                <rect key="frame" x="-100" y="-100" width="15" height="309"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </scroller>
+                                                        </scrollView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="DAL-4d-qmi" secondAttribute="trailing" constant="17" id="8om-Dm-4cY"/>
+                                                        <constraint firstItem="DAL-4d-qmi" firstAttribute="leading" secondItem="GQ7-44-ctc" secondAttribute="leading" constant="17" id="Jqa-OD-7eI"/>
+                                                        <constraint firstAttribute="bottom" secondItem="DAL-4d-qmi" secondAttribute="bottom" constant="17" id="ZSs-Oa-Kow"/>
+                                                        <constraint firstItem="DAL-4d-qmi" firstAttribute="top" secondItem="GQ7-44-ctc" secondAttribute="top" constant="13" id="pe3-dJ-Rgy"/>
+                                                    </constraints>
+                                                </view>
+                                            </tabViewItem>
+                                            <tabViewItem label="Version History" identifier="Item 2" id="PBm-Tt-SMT">
+                                                <view key="view" id="JH8-Wg-48E">
+                                                    <rect key="frame" x="10" y="33" width="504" height="542"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbK-J7-ygN">
+                                                            <rect key="frame" x="17" y="17" width="470" height="512"/>
+                                                            <clipView key="contentView" id="8uD-bI-7pc">
+                                                                <rect key="frame" x="1" y="1" width="468" height="468"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <textView editable="NO" importsGraphics="NO" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="qon-Pb-OiD">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="468" height="510"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <size key="minSize" width="468" height="510"/>
+                                                                        <size key="maxSize" width="693" height="10000000"/>
+                                                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <size key="minSize" width="468" height="510"/>
+                                                                        <size key="maxSize" width="693" height="10000000"/>
+                                                                        <connections>
+                                                                            <binding destination="Xau-kw-CYI" name="valueURL" keyPath="versionhistoryURL" id="TBX-55-r7n">
+                                                                                <dictionary key="options">
+                                                                                    <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                                </dictionary>
+                                                                            </binding>
+                                                                        </connections>
+                                                                    </textView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </clipView>
+                                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="LvH-Td-6C5">
+                                                                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </scroller>
+                                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="rwU-iY-Bz0">
+                                                                <rect key="frame" x="-100" y="-100" width="15" height="309"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </scroller>
+                                                        </scrollView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="XbK-J7-ygN" secondAttribute="bottom" constant="17" id="4bB-Dn-LGD"/>
+                                                        <constraint firstItem="XbK-J7-ygN" firstAttribute="leading" secondItem="JH8-Wg-48E" secondAttribute="leading" constant="17" id="8jc-6k-uUG"/>
+                                                        <constraint firstItem="XbK-J7-ygN" firstAttribute="top" secondItem="JH8-Wg-48E" secondAttribute="top" constant="13" id="BNv-Dv-8WK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="XbK-J7-ygN" secondAttribute="trailing" constant="17" id="mQR-H4-N5H"/>
+                                                    </constraints>
+                                                </view>
+                                            </tabViewItem>
+                                            <tabViewItem label="FAQ" identifier="Item 3" id="MnA-ym-u4F">
+                                                <view key="view" id="uZT-v4-OZU">
+                                                    <rect key="frame" x="10" y="33" width="504" height="542"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbG-y4-3I6">
+                                                            <rect key="frame" x="17" y="17" width="470" height="512"/>
+                                                            <clipView key="contentView" id="jVb-5h-CkW">
+                                                                <rect key="frame" x="1" y="1" width="468" height="468"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <textView editable="NO" importsGraphics="NO" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="8xF-VZ-n1B">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="468" height="510"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <size key="minSize" width="468" height="510"/>
+                                                                        <size key="maxSize" width="693" height="10000000"/>
+                                                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <size key="minSize" width="468" height="510"/>
+                                                                        <size key="maxSize" width="693" height="10000000"/>
+                                                                        <connections>
+                                                                            <binding destination="Xau-kw-CYI" name="valueURL" keyPath="faqURL" id="vP0-oI-Sqi">
+                                                                                <dictionary key="options">
+                                                                                    <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                                                </dictionary>
+                                                                            </binding>
+                                                                        </connections>
+                                                                    </textView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </clipView>
+                                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="xU5-DQ-ttJ">
+                                                                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </scroller>
+                                                            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="sci-TO-0iI">
+                                                                <rect key="frame" x="-100" y="-100" width="15" height="309"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </scroller>
+                                                        </scrollView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="BbG-y4-3I6" secondAttribute="bottom" constant="17" id="EY2-Pk-SD3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BbG-y4-3I6" secondAttribute="trailing" constant="17" id="Gz0-aN-Axz"/>
+                                                        <constraint firstItem="BbG-y4-3I6" firstAttribute="top" secondItem="uZT-v4-OZU" secondAttribute="top" constant="13" id="IdY-55-Z1D"/>
+                                                        <constraint firstItem="BbG-y4-3I6" firstAttribute="leading" secondItem="uZT-v4-OZU" secondAttribute="leading" constant="17" id="zWN-Cs-6Q3"/>
+                                                    </constraints>
+                                                </view>
+                                            </tabViewItem>
+                                        </tabViewItems>
+                                    </tabView>
+                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1nZ-6O-gcJ">
+                                        <rect key="frame" x="205" y="19" width="140" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="cjT-2a-bkI"/>
+                                        </constraints>
+                                        <popUpButtonCell key="cell" type="smallSquare" title="Rate MailSpy" bezelStyle="smallSquare" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" pullsDown="YES" id="cir-xg-noR">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="menu"/>
+                                            <menu key="menu" title="OtherViews" id="Exi-9L-Ksd">
+                                                <items>
+                                                    <menuItem title="Rate MailSpy" hidden="YES" id="iod-5t-4wC"/>
+                                                    <menuItem title="On the MacAppStore" tag="5" id="DHJ-o6-cx7">
+                                                        <connections>
+                                                            <action selector="openURL:" target="Xau-kw-CYI" id="Z0w-MR-ePO"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="On MacUpdate.com" tag="6" id="Kde-x5-tNo">
+                                                        <connections>
+                                                            <action selector="openURL:" target="Xau-kw-CYI" id="cOS-Al-FXa"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </popUpButtonCell>
+                                    </popUpButton>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oID-9n-6y9" firstAttribute="top" secondItem="1nZ-6O-gcJ" secondAttribute="top" id="6Bg-bL-ljs"/>
+                                    <constraint firstAttribute="bottom" secondItem="dXf-vP-ylV" secondAttribute="bottom" constant="20" symbolic="YES" id="6sW-px-rSZ"/>
+                                    <constraint firstItem="H4F-4q-kFx" firstAttribute="top" secondItem="ONe-iO-W3g" secondAttribute="top" constant="12" symbolic="YES" id="EyM-Cl-TiV"/>
+                                    <constraint firstItem="1nZ-6O-gcJ" firstAttribute="centerX" secondItem="H4F-4q-kFx" secondAttribute="centerX" id="K2F-zV-Ot9"/>
+                                    <constraint firstAttribute="bottom" secondItem="H4F-4q-kFx" secondAttribute="bottom" constant="66" id="Kkq-Sh-RBB"/>
+                                    <constraint firstAttribute="bottom" secondItem="1nZ-6O-gcJ" secondAttribute="bottom" constant="20" symbolic="YES" id="SVg-NU-WX0"/>
+                                    <constraint firstAttribute="trailing" secondItem="H4F-4q-kFx" secondAttribute="trailing" constant="20" symbolic="YES" id="b79-1I-Ru5"/>
+                                    <constraint firstAttribute="bottom" secondItem="oID-9n-6y9" secondAttribute="bottom" constant="20" symbolic="YES" id="jZd-ZD-3rp"/>
+                                    <constraint firstItem="dXf-vP-ylV" firstAttribute="leading" secondItem="ONe-iO-W3g" secondAttribute="leading" constant="20" symbolic="YES" id="nxo-zI-GHj"/>
+                                    <constraint firstItem="1nZ-6O-gcJ" firstAttribute="top" secondItem="dXf-vP-ylV" secondAttribute="top" id="rC7-wp-9F6"/>
+                                    <constraint firstItem="H4F-4q-kFx" firstAttribute="leading" secondItem="ONe-iO-W3g" secondAttribute="leading" constant="20" symbolic="YES" id="tez-sy-dRW"/>
+                                    <constraint firstAttribute="trailing" secondItem="oID-9n-6y9" secondAttribute="trailing" constant="20" symbolic="YES" id="xlv-51-ggq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ONe-iO-W3g" firstAttribute="leading" secondItem="I2W-sZ-lrO" secondAttribute="leading" id="MCs-Ra-Te0"/>
+                            <constraint firstItem="ONe-iO-W3g" firstAttribute="bottom" secondItem="I2W-sZ-lrO" secondAttribute="bottom" id="apO-ZG-1df"/>
+                            <constraint firstItem="ONe-iO-W3g" firstAttribute="top" secondItem="I2W-sZ-lrO" secondAttribute="top" id="u62-3B-6WE"/>
+                            <constraint firstItem="ONe-iO-W3g" firstAttribute="trailing" secondItem="I2W-sZ-lrO" secondAttribute="trailing" id="yOF-yE-PHZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="r1h-en-kbd" id="0vT-DR-Yfn"/>
+                    </connections>
+                </viewController>
+                <customObject id="DzP-FM-gtP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="476"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppIcon" width="1024" height="1024"/>
+        <image name="icon_drophere" width="114" height="114"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="eHa-ph-COI"/>
+    </inferredMetricsTieBreakers>
+</document>

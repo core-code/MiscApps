@@ -1,0 +1,43 @@
+//
+// Prefix header for all source files of the 'FingerMaze' target in the 'FingerMaze' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+	#import "CoreLib.h"
+
+#endif
+
+#include <stdlib.h>
+
+
+
+#define BORDER 12
+#define PATH 6
+
+#define kMaxX 40
+#define kMaxY 28
+
+#define kTilesizeX 25
+#define kTilesizeY 24
+#define kDeadRegion 2
+
+#define MAZE_W (kTilesizeX * kMaxX + BORDER * 2)
+#define MAZE_H (kTilesizeY * kMaxY + BORDER * 2)
+
+static __inline__ int RandomIntBetween(int a, int b)
+{
+    int range = b - a < 0 ? b - a - 1 : b - a + 1;
+    int value = (int)(range * ((float) random() / (float) 0x7fffffff));
+    return value == range ? a : a + value;
+}
+
+//static __inline__ float RandomFloatBetween(float a, float b)
+//{
+//    return a + (b - a) * ( random() / RAND_MAX);
+//}
+static __inline__ float RandomFloatBetween(float a, float b)
+{
+	return a + (b - a) * ((float)random() / (float) 0x7fffffff);
+}

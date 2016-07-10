@@ -1,0 +1,18 @@
+//
+// Prefix header for all source files of the 'XMPV' target in the 'XMPV' project
+//
+
+
+
+#ifdef __OBJC__
+
+    @import Foundation;
+    @import UIKit;
+
+	#import "CoreLib.h"
+	CONST_KEY_DECLARATION(Projects)
+	#import "FXNotifications.h"
+#endif
+
+
+static const int bla;
