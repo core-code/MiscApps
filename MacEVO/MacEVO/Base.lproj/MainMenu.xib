@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -22,9 +22,6 @@
                         <items>
                             <menuItem title="About MacEVO" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="openDocumentationWindow:" target="Voe-Tx-rLC" id="jxF-wW-Rdn"/>
-                                </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                             <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
@@ -650,54 +647,6 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="arrangeInFront:" target="-1" id="DRN-fu-gQh"/>
-                                </connections>
-                            </menuItem>
-                        </items>
-                    </menu>
-                </menuItem>
-                <menuItem title="Help" id="wpr-3q-Mcd">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
-                        <items>
-                            <menuItem title="MacEVO Help" tag="1" keyEquivalent="?" id="FKE-Sm-Kum">
-                                <connections>
-                                    <action selector="openDocumentationWindow:" target="Voe-Tx-rLC" id="KiK-zJ-dVN"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Contact Support…" tag="1" id="YV3-kW-aQE">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="openURL:" target="Voe-Tx-rLC" id="i6Q-vC-1cW"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="CoreCode Products…" tag="1" id="dkS-0z-rZt">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="openPromotionWindow:" target="Voe-Tx-rLC" id="3np-5k-J5Y"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Rate MacEVO" id="p9Z-z6-sMv">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Rate MacEVO" id="lDE-6w-ERV">
-                                    <items>
-                                        <menuItem title="On the MacAppStore" tag="5" id="3cj-vR-Hrk">
-                                            <connections>
-                                                <action selector="openURL:" target="Voe-Tx-rLC" id="q5M-aL-l1Q"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="On MacUpdate.com" tag="6" id="EQM-7A-jq4">
-                                            <connections>
-                                                <action selector="openURL:" target="Voe-Tx-rLC" id="9aI-1P-WYu"/>
-                                            </connections>
-                                        </menuItem>
-                                    </items>
-                                </menu>
-                                <connections>
-                                    <binding destination="Voe-Tx-rLC" name="hidden" keyPath="isRateable" id="grY-Wd-jbk">
-                                        <dictionary key="options">
-                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                        </dictionary>
-                                    </binding>
                                 </connections>
                             </menuItem>
                         </items>

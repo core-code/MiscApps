@@ -7,14 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "JMReceiptValidation.h"
 
 @interface AppDelegate ()
 
 @property (strong, nonatomic) IBOutlet NSTableView *tableView;
 @property (strong, nonatomic) IBOutlet NSWindow *mainWindow;
-@property (strong, nonatomic) IBOutlet NSWindow *documentationWindow;
-@property (strong, nonatomic) IBOutlet NSWindow *promotionWindow;
 @property (strong, nonatomic) NSString *version;
 @property (strong, nonatomic) NSString *build;
 @property (strong, nonatomic) NSArray *allarticles;
@@ -22,10 +19,6 @@
 @property (strong, nonatomic) NSMutableDictionary *imagecache;
 
 @end
-
-
-NSString *kRVNBundleID = @"com.corecode.MacEVO";
-NSString *kRVNBundleVersion = @"1.0.0";
 
 
 @implementation AppDelegate
@@ -58,35 +51,7 @@ NSString *kRVNBundleVersion = @"1.0.0";
 	self.version = makeString(@"%@ %@", @"Version:".localized, cc.appVersionString);
 
 
-
 	[self openMainWindow:self];
-
-
-	[self checkMASReceipt];
-
-	[self checkBetaExpiryForDate:__DATE__ days:30];
-
-#ifndef SANDBOX
-	[self checkAndReportCrashesContaining:@[@"[Value", @"AppDele", @"[NSException", @"uncaught exception"].id
-									   to:@"crashreports@corecode.at"];
-#endif
-
-	[self welcomeOrExpireDemo:20
-				  welcomeText:@"You've used up all 20 operations allowed in this TRYOUT version of MacEVO. If you like MacEVO please consider buying the full version."
-				   expiryText:@"Welcome to the feature-limited TRYOUT version of MacEVO. This version can be used to perform 20 operations, you have %li operations left!"];
-
-	[self increaseUsages];
-
-	[self checkAppMovements];
-}
-
-- (void)increaseUsages
-{
-	LOGFUNC;
-
-	[self increaseUsages:20
-		   requestReview:40
-			feedbackText:@"You've used MacEVO to successfully perform 20 operations, it would be great if you could rate the app on the MacAppStore or on MacUpdate! This message will not appear again for this version."];
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
@@ -94,8 +59,6 @@ NSString *kRVNBundleVersion = @"1.0.0";
     LOGFUNC;
 
     [self openMainWindow:nil];
-
-	[self checkMASReceipt];
 
     return FALSE;
 }
@@ -109,28 +72,6 @@ NSString *kRVNBundleVersion = @"1.0.0";
 	[self openWindow:&_mainWindow nibName:@"MainWindow"];
 }
 
-- (IBAction)openPromotionWindow:(id)sender
-{
-	LOGFUNCPARAM(sender);
-
-	[self openWindow:&_promotionWindow nibName:@"PromotionWindow"];
-}
-
-- (IBAction)openDocumentationWindow:(id)sender
-{
-	LOGFUNCPARAM(sender);
-
-	[self openWindow:&_documentationWindow nibName:@"DocumentationWindow"];
-
-
-	// make sure we select the right tab in the documentation as given in the tag of the sender
-	if (sender && [sender respondsToSelector:@selector(tag)] && [sender tag] >= 0)
-	{
-		 NSTabView *documentationTabView = [_documentationWindow.contentView viewWithClass:NSTabView.class].id;
-		 [documentationTabView selectTabViewItemAtIndex:[sender tag]];
-	}
-}
-
 #pragma mark NSWindowDelegate
 
 - (void)windowWillClose:(NSNotification *)notification
@@ -139,12 +80,7 @@ NSString *kRVNBundleVersion = @"1.0.0";
 
 	if (notification.object == self.mainWindow)
 		self.mainWindow = nil;
-    else if (notification.object == self.documentationWindow)
-        self.documentationWindow = nil;
-    else if (notification.object == self.promotionWindow)
-        self.promotionWindow = nil;
 }
-
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
@@ -210,7 +146,6 @@ NSString *kRVNBundleVersion = @"1.0.0";
 
 - (IBAction)searchField:(NSSearchField *)sender
 {
-
     if (sender.stringValue.length)
     {
         NSMutableArray *tmp = makeMutableArray();
@@ -225,7 +160,7 @@ NSString *kRVNBundleVersion = @"1.0.0";
 
 
         self.articles = tmp;
-        }
+	}
     else
         self.articles = self.allarticles;
 
@@ -236,36 +171,10 @@ NSString *kRVNBundleVersion = @"1.0.0";
 
 
 
-
-
 int main(int argc, const char *argv[])
 {
 	@autoreleasepool
 	{
-#ifdef APPSTORE_VALIDATERECEIPT
-		return RVNValidateAndRunApplication(argc, argv);
-#else
 		return NSApplicationMain(argc, (const char **)argv);
-#endif
 	}
 }
-
-
-
-#if !defined(APPSTORE_VALIDATERECEIPT) && !defined(TRYOUT) && !defined(DEBUG)
-#warning Time-Limited Release-Beta build
-#elif !defined(APPSTORE_VALIDATERECEIPT) && !defined(TRYOUT) && defined(DEBUG)
-#warning Time-Limited Debug-Beta build
-#elif !defined(APPSTORE_VALIDATERECEIPT) && defined(TRYOUT) && !defined(DEBUG)
-#warning Tryout build
-#elif !defined(APPSTORE_VALIDATERECEIPT) && defined(TRYOUT) && defined(DEBUG)
-#error invalid_config
-#elif defined(APPSTORE_VALIDATERECEIPT) && !defined(TRYOUT) && !defined(DEBUG)
-#warning MacAppStore build
-#elif defined(APPSTORE_VALIDATERECEIPT) && !defined(TRYOUT) && defined(DEBUG)
-#error invalid_config
-#elif defined(APPSTORE_VALIDATERECEIPT) && defined(TRYOUT) && !defined(DEBUG)
-#error invalid_config
-#elif defined(APPSTORE_VALIDATERECEIPT) && defined(TRYOUT) && defined(DEBUG)
-#error invalid_config
-#endif

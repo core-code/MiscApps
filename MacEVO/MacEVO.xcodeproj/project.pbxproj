@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B90970B91B0B27090086CCA2 /* DocumentationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90970B51B0B27090086CCA2 /* DocumentationWindow.xib */; };
-		B90970BA1B0B27090086CCA2 /* PromotionWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90970B71B0B27090086CCA2 /* PromotionWindow.xib */; };
 		B90970C01B0B2D610086CCA2 /* credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = B90970BC1B0B2D610086CCA2 /* credits.rtfd */; };
 		B90970C11B0B2D610086CCA2 /* faq.html in Resources */ = {isa = PBXBuildFile; fileRef = B90970BD1B0B2D610086CCA2 /* faq.html */; };
 		B90970C21B0B2D610086CCA2 /* history.html in Resources */ = {isa = PBXBuildFile; fileRef = B90970BE1B0B2D610086CCA2 /* history.html */; };
@@ -19,7 +17,6 @@
 		B98183BF1CF4D302008E2B98 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B98183BE1CF4D302008E2B98 /* placeholder.png */; };
 		B98A54B01B0B53770009C028 /* JMEmailSender+CGIDelivery.m in Sources */ = {isa = PBXBuildFile; fileRef = B98A54AF1B0B53770009C028 /* JMEmailSender+CGIDelivery.m */; };
 		B98DBBF61B162E9900772BCA /* privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = B98DBBF51B162E9900772BCA /* privacy.html */; };
-		B990228C1CB6AADA0007CB04 /* JMReceiptValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = B990228B1CB6AADA0007CB04 /* JMReceiptValidation.m */; };
 		B9B6BD361AC9B0C100D13BBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B6BD351AC9B0C100D13BBC /* AppDelegate.m */; };
 		B9B6BD3A1AC9B0C100D13BBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B6BD391AC9B0C100D13BBC /* Images.xcassets */; };
 		B9B6BD3D1AC9B0C100D13BBC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B6BD3B1AC9B0C100D13BBC /* MainMenu.xib */; };
@@ -57,8 +54,6 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
-		B90970B61B0B27090086CCA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DocumentationWindow.xib; sourceTree = "<group>"; };
-		B90970B81B0B27090086CCA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PromotionWindow.xib; sourceTree = "<group>"; };
 		B90970BC1B0B2D610086CCA2 /* credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = credits.rtfd; sourceTree = "<group>"; };
 		B90970BD1B0B2D610086CCA2 /* faq.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = faq.html; sourceTree = "<group>"; };
 		B90970BE1B0B2D610086CCA2 /* history.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = history.html; sourceTree = "<group>"; };
@@ -71,8 +66,6 @@
 		B98183BE1CF4D302008E2B98 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		B98A54AF1B0B53770009C028 /* JMEmailSender+CGIDelivery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JMEmailSender+CGIDelivery.m"; path = "../Private/JMEmailSender+CGIDelivery.m"; sourceTree = "<group>"; };
 		B98DBBF51B162E9900772BCA /* privacy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = privacy.html; sourceTree = "<group>"; };
-		B990228A1CB6AADA0007CB04 /* JMReceiptValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMReceiptValidation.h; path = ../Private/JMReceiptValidation.h; sourceTree = "<group>"; };
-		B990228B1CB6AADA0007CB04 /* JMReceiptValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMReceiptValidation.m; path = ../Private/JMReceiptValidation.m; sourceTree = "<group>"; };
 		B9B6BD2F1AC9B0C100D13BBC /* MacEVO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacEVO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B6BD331AC9B0C100D13BBC /* MacEVO-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacEVO-Info.plist"; sourceTree = "<group>"; };
 		B9B6BD341AC9B0C100D13BBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -164,8 +157,6 @@
 				B9B6BD351AC9B0C100D13BBC /* AppDelegate.m */,
 				B91B81791AF9469B00406EEA /* MainWindow.xib */,
 				B9B6BD3B1AC9B0C100D13BBC /* MainMenu.xib */,
-				B90970B51B0B27090086CCA2 /* DocumentationWindow.xib */,
-				B90970B71B0B27090086CCA2 /* PromotionWindow.xib */,
 				B9B6BD321AC9B0C100D13BBC /* Supporting Files */,
 			);
 			path = MacEVO;
@@ -208,8 +199,6 @@
 		B9B6BD611AC9CEF300D13BBC /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				B990228A1CB6AADA0007CB04 /* JMReceiptValidation.h */,
-				B990228B1CB6AADA0007CB04 /* JMReceiptValidation.m */,
 				B91B817C1AF9488B00406EEA /* JMApplicationDelegate.h */,
 				B91B817D1AF9488B00406EEA /* JMApplicationDelegate.m */,
 				B9B6BD621AC9CEF300D13BBC /* JMAppMovedHandler.h */,
@@ -312,13 +301,11 @@
 				B90970C31B0B2D610086CCA2 /* readme.html in Resources */,
 				B90970C21B0B2D610086CCA2 /* history.html in Resources */,
 				B9B6BD3D1AC9B0C100D13BBC /* MainMenu.xib in Resources */,
-				B90970B91B0B27090086CCA2 /* DocumentationWindow.xib in Resources */,
 				B98DBBF61B162E9900772BCA /* privacy.html in Resources */,
 				B90970C11B0B2D610086CCA2 /* faq.html in Resources */,
 				B91B817B1AF9469B00406EEA /* MainWindow.xib in Resources */,
 				B90970C01B0B2D610086CCA2 /* credits.rtfd in Resources */,
 				B98183BF1CF4D302008E2B98 /* placeholder.png in Resources */,
-				B90970BA1B0B27090086CCA2 /* PromotionWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +348,6 @@
 				B9B6BD841AC9CEF300D13BBC /* JMEmailSender.m in Sources */,
 				B9B6BD7A1AC9CEF300D13BBC /* AppKit+CoreCode.m in Sources */,
 				B9B6BD831AC9CEF300D13BBC /* JMDocklessApplication.m in Sources */,
-				B990228C1CB6AADA0007CB04 /* JMReceiptValidation.m in Sources */,
 				B9B6BD811AC9CEF300D13BBC /* JMCorrectTimer.m in Sources */,
 				B9B6BD861AC9CEF300D13BBC /* JMHostInformation.m in Sources */,
 				B9B6BD871AC9CEF300D13BBC /* JMLoginItemManager.m in Sources */,
@@ -373,22 +359,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B90970B51B0B27090086CCA2 /* DocumentationWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B90970B61B0B27090086CCA2 /* Base */,
-			);
-			name = DocumentationWindow.xib;
-			sourceTree = "<group>";
-		};
-		B90970B71B0B27090086CCA2 /* PromotionWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B90970B81B0B27090086CCA2 /* Base */,
-			);
-			name = PromotionWindow.xib;
-			sourceTree = "<group>";
-		};
 		B91B81791AF9469B00406EEA /* MainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
