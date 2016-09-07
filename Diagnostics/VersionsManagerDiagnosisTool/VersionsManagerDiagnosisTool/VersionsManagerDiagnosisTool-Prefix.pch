@@ -6,6 +6,7 @@
 #define USE_IOKIT 1
 #define USE_DISKARBITRATION 1
 #define FORCE_LOG 1
+#define DONTLOGASLTOUSERDEFAULTS 1
 
 #ifdef __OBJC__
 	#import <Cocoa/Cocoa.h>

@@ -333,8 +333,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 	[self.box1 setHidden:YES];
 	[self.box2 setHidden:NO];
-
-
 }
 
 - (IBAction)reveal:(id)sender
@@ -372,7 +370,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - (NSString *)broken
 {
 	NSMutableString *tmp = makeMutableString();
-	NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtURL:[NSURL fileURLWithPath:@"~".stringByExpandingTildeInPath]
+	NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtURL:[NSURL fileURLWithPath:@"~/Library/Mobile Documents/".stringByExpandingTildeInPath]
 															 includingPropertiesForKeys:@[NSURLIsRegularFileKey, NSURLIsPackageKey]
 																				options:(NSDirectoryEnumerationOptions)0 errorHandler:nil];
 
@@ -390,7 +388,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 			}
-			else if (isRegularFile.boolValue || isPackage.boolValue)
+			else if ((isRegularFile.boolValue || isPackage.boolValue) &&
+                     ![fileManager isUbiquitousItemAtURL:file])
 			{
 				NSArray *otherVersions = [NSFileVersion otherVersionsOfItemAtURL:file];
 
@@ -407,12 +406,26 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 							 (![[NSFileManager defaultManager] fileExistsAtPath:path] ||
 							  ![[NSFileManager defaultManager] isReadableFileAtPath:path]))
 					{
-						[tmp appendString:makeString(@"Warning: file (%@) version (%@) NOT accessible (%@): localizedName: %@ localzesNameOfSavingComputer: %@ modificationDate: %@ persistentIdentifier: %@ conflict: %i resolved: %i discardable: %i hasLocalContents: %i hasThumbnail: %i\n", file, ov.description, path, ov.localizedName, ov. localizedNameOfSavingComputer,  ov.modificationDate, ov.persistentIdentifier, ov.conflict, ov.resolved, ov.discardable, ov.hasLocalContents, ov.hasThumbnail)];
+                        __block BOOL recoverable = FALSE;
+                        NSError *errCoord;
+                        NSFileCoordinator *fileCoordinator = [[NSFileCoordinator alloc] initWithFilePresenter:nil];
+                        [fileCoordinator coordinateReadingItemAtURL:path.fileURL
+                                                            options:NSFileCoordinatorReadingWithoutChanges
+                                                              error:&errCoord
+                                                         byAccessor:^(NSURL *newURL)
+                         {
+                             NSData *d = [NSData dataWithContentsOfURL:newURL];
+                             if (d)
+                                 recoverable = TRUE;
+                         }];
+
+						[tmp appendString:makeString(@"Warning: file (%@) version (%@) NOT accessible (%@): localizedName: %@ localzesNameOfSavingComputer: %@ modificationDate: %@ persistentIdentifier: %@ conflict: %i resolved: %i discardable: %i hasLocalContents: %i hasThumbnail: %i recoverable: %i errCoord: %@\n", file, ov.description, path, ov.localizedName, ov. localizedNameOfSavingComputer,  ov.modificationDate, ov.persistentIdentifier, ov.conflict, ov.resolved, ov.discardable, ov.hasLocalContents, ov.hasThumbnail, recoverable, errCoord)];
 					}
 				}
 			}
 		}
 	}
-	return tmp;
+
+    return tmp;
 }
 @end

@@ -88,7 +88,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
             let rowSource = self.sourceTable.selectedRow
             if (rowSource < 0) { return 0 }
 
-            let key = Array(self.results.keys).sorted( isOrderedBefore: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
+            let key = Array(self.results.keys).sorted( by: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
             let value = self.results[key]
 
             return value!.count;
@@ -99,27 +99,27 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
     {
         if tableView == self.sourceTable
         {
-            let key = Array(self.results.keys).sorted( isOrderedBefore: { self.results[$0]!.count > self.results[$1]!.count })[row]
+            let key = Array(self.results.keys).sorted( by: { self.results[$0]!.count > self.results[$1]!.count })[row]
             let value = self.results[key]
 
-            return "\(key) [\(value!.count)]"
+            return "\(key) [\(value!.count)]" as AnyObject!
         }
         else
         {
 
             let rowSource = self.sourceTable.selectedRow
-            let key = Array(self.results.keys).sorted( isOrderedBefore: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
+            let key = Array(self.results.keys).sorted( by: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
             let value = self.results[key]
             let website = value![row]
 
 
             if tableView.tableColumns.index(of: tableColumn) == 0
             {
-                return website["title"]
+                return website["title"] as AnyObject!
             }
             else
             {
-                return website["url"]
+                return website["url"] as AnyObject!
             }
         }
 
@@ -139,7 +139,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
                 if (self.detailTable.selectedRow < 0) { return; }
 
                 let rowSource = self.sourceTable.selectedRow
-                let key = Array(self.results.keys).sorted( isOrderedBefore: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
+                let key = Array(self.results.keys).sorted( by: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
                 let value = self.results[key]
                 let website = value![self.detailTable.selectedRow]
 
@@ -172,7 +172,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
     {
 
         let rowSource = self.sourceTable.selectedRow
-        let key = Array(self.results.keys).sorted( isOrderedBefore: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
+        let key = Array(self.results.keys).sorted( by: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
         let value = self.results[key]
         for website in value!
         {
@@ -189,7 +189,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
     {
 
         let rowSource = self.sourceTable.selectedRow
-        let key = Array(self.results.keys).sorted( isOrderedBefore: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
+        let key = Array(self.results.keys).sorted( by: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
         let value = self.results[key]
         let export = NSMutableString(string: "URL,Title,Selection,Folder\n")
 

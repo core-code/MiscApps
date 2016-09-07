@@ -103,6 +103,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	
 
 }
+
+- (IBAction)reveal:(id)sender
+{
+    NSURL *attachment = [[tmpURL URLByDeletingLastPathComponent] add:@"SRdiagnosis.tgz"];
+
+    [workspace activateFileViewerSelectingURLs:@[attachment]];
+}
+
 - (IBAction)send:(id)sender
 {
 	NSURL *attachment = [[tmpURL URLByDeletingLastPathComponent] add:@"SRdiagnosis.tgz"];
@@ -127,7 +135,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 	[fileManager removeItemAtURL:tmpURL error:NULL];
 }
-
 
 - (NSString *)loginItems
 {
