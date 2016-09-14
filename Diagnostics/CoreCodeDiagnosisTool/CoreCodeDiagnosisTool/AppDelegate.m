@@ -35,9 +35,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 {
 	tmpPath = [makeTempFolder() stringByAppendingString:@"/"];
 	tmpURL = tmpPath.fileURL;
+	asl_NSLog_debug(@"%@", tmpPath);
 
-	[fileManager copyItemAtPath:[@"~/Library/Logs/DiagnosticReports/" stringByExpandingTildeInPath]
-						 toPath:[tmpPath stringByAppendingString:@"DR"] error:NULL];
 
 	[fileManager copyItemAtPath:[@"/private/var/log/system.log" stringByExpandingTildeInPath]
 						 toPath:[tmpPath stringByAppendingString:@"system.log"] error:NULL];
@@ -49,7 +48,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 						 toPath:[tmpPath stringByAppendingString:@"system.log.1.gz"] error:NULL];
 
 	{
+		NSURL *path = @"~/Library/Logs/DiagnosticReports/".expanded.fileURL;
+		for (NSURL *p in path.dirContentsRecursive)
+			if ([p.contents.string contains:@"corecode"])
+				[fileManager copyItemAtURL:p toURL:[tmpURL add:p.lastPathComponent] error:NULL];
+	}
+	{
 		NSURL *path = @"~/Library/Preferences/".expanded.fileURL;
+		for (NSString *p in [path.path.dirContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'com.corecode'"])
+			[fileManager copyItemAtURL:[path add:p] toURL:[tmpURL add:p] error:NULL];
+	}
+	{
+		NSURL *path = @"~/Library/Containers/".expanded.fileURL;
 		for (NSString *p in [path.path.dirContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'com.corecode'"])
 			[fileManager copyItemAtURL:[path add:p] toURL:[tmpURL add:p] error:NULL];
 	}
