@@ -12,8 +12,6 @@
 		663B4C7D0CD5304400ACD6E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 663B4C7A0CD5304400ACD6E0 /* main.m */; };
 		663B4C7E0CD5304400ACD6E0 /* MusicWatch_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 663B4C7B0CD5304400ACD6E0 /* MusicWatch_DataModel.xcdatamodel */; };
 		66589F6B0C29D4A2004A6FE8 /* taglib.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6605C9B90C2867D70072E1E9 /* taglib.framework */; };
-		667A87400C2B20D4004B8389 /* musicbrainz3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 667A873F0C2B20D4004B8389 /* musicbrainz3.framework */; };
-		667A87480C2B20E6004B8389 /* musicbrainz3.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 667A873F0C2B20D4004B8389 /* musicbrainz3.framework */; };
 		66B624530CCD5800004CAC90 /* Musicbrainz.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66B624490CCD5800004CAC90 /* Musicbrainz.mm */; };
 		66B624550CCD5800004CAC90 /* MusicWatch_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B6244B0CCD5800004CAC90 /* MusicWatch_AppDelegate.m */; };
 		66B624570CCD5800004CAC90 /* DataImporters.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B6244D0CCD5800004CAC90 /* DataImporters.m */; };
@@ -22,6 +20,8 @@
 		B91A765D16F8B6EC00084853 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91A765C16F8B6EC00084853 /* ScriptingBridge.framework */; };
 		B94CDEAC1218811D009675B7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94CDEAA1218811D009675B7 /* MainMenu.xib */; };
 		B94F8A07121C720B003DDEDB /* NSString+DamerauLevenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F8A06121C720B003DDEDB /* NSString+DamerauLevenshtein.m */; };
+		B95FFE2E1D7DB11C00810625 /* musicbrainz5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B95FFE2D1D7DB11C00810625 /* musicbrainz5.framework */; };
+		B95FFE2F1D7DB5C600810625 /* musicbrainz5.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B95FFE2D1D7DB11C00810625 /* musicbrainz5.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B987ACEC121C2D5500833701 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = B987ACEB121C2D5500833701 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		B987AD1C121C2FAC00833701 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B987AD1B121C2FAC00833701 /* libicucore.dylib */; };
 		B98C4E201227017E00746694 /* MatchTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B98C4E1F1227017E00746694 /* MatchTableDataSource.m */; };
@@ -36,8 +36,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				667A87480C2B20E6004B8389 /* musicbrainz3.framework in CopyFiles */,
 				66589F6B0C29D4A2004A6FE8 /* taglib.framework in CopyFiles */,
+				B95FFE2F1D7DB5C600810625 /* musicbrainz5.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +53,6 @@
 		663B4C7A0CD5304400ACD6E0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		663B4C7B0CD5304400ACD6E0 /* MusicWatch_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = wrapper.xcdatamodel; path = MusicWatch_DataModel.xcdatamodel; sourceTree = "<group>"; };
 		663B4C7C0CD5304400ACD6E0 /* MusicWatch_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MusicWatch_Prefix.pch; sourceTree = "<group>"; };
-		667A873F0C2B20D4004B8389 /* musicbrainz3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = musicbrainz3.framework; path = Frameworks/musicbrainz3.framework; sourceTree = "<group>"; };
 		66B624480CCD5800004CAC90 /* Musicbrainz.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Musicbrainz.h; sourceTree = "<group>"; };
 		66B624490CCD5800004CAC90 /* Musicbrainz.mm */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.objcpp; path = Musicbrainz.mm; sourceTree = "<group>"; };
 		66B6244A0CCD5800004CAC90 /* MusicWatch_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MusicWatch_AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		B94CDEAB1218811D009675B7 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B94F8A05121C720B003DDEDB /* NSString+DamerauLevenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DamerauLevenshtein.h"; sourceTree = "<group>"; };
 		B94F8A06121C720B003DDEDB /* NSString+DamerauLevenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DamerauLevenshtein.m"; sourceTree = "<group>"; };
+		B95FFE2D1D7DB11C00810625 /* musicbrainz5.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = musicbrainz5.framework; path = Frameworks/musicbrainz5.framework; sourceTree = "<group>"; };
 		B987ACEA121C2D5500833701 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		B987ACEB121C2D5500833701 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		B987AD1B121C2FAC00833701 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = /usr/lib/libicucore.dylib; sourceTree = "<absolute>"; };
@@ -84,8 +84,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				B95FFE2E1D7DB11C00810625 /* musicbrainz5.framework in Frameworks */,
 				6605C9BB0C2867D70072E1E9 /* taglib.framework in Frameworks */,
-				667A87400C2B20D4004B8389 /* musicbrainz3.framework in Frameworks */,
 				B987AD1C121C2FAC00833701 /* libicucore.dylib in Frameworks */,
 				B91A765D16F8B6EC00084853 /* ScriptingBridge.framework in Frameworks */,
 			);
@@ -97,8 +97,8 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B95FFE2D1D7DB11C00810625 /* musicbrainz5.framework */,
 				B987AD1B121C2FAC00833701 /* libicucore.dylib */,
-				667A873F0C2B20D4004B8389 /* musicbrainz3.framework */,
 				6605C9B90C2867D70072E1E9 /* taglib.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
@@ -226,6 +226,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 26FC0A880875C7B200E6366F /* Build configuration list for PBXProject "MusicWatch" */;
 			compatibilityVersion = "Xcode 2.4";
@@ -308,6 +309,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 			};
 			name = Release;
 		};
@@ -327,7 +332,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/Frameworks/taglib.framework/Versions/A/Headers/**";
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = MusicWatch;
 				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -352,7 +357,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/Frameworks/taglib.framework/Versions/A/Headers/**";
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = MusicWatch;
 				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -364,6 +369,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 			};
 			name = Debug;
 		};
@@ -384,7 +393,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/Frameworks/taglib.framework/Versions/A/Headers/**";
 				INFOPLIST_FILE = Resources/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = MusicWatch;
 				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -396,6 +405,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 			};
 			name = "Release-Deployment";
 		};

@@ -26,29 +26,29 @@ NSString *cleanAlbumName(NSString *album);
 	
 	for (NSURL *url in URLs)
 	{
-		NSDirectoryEnumerator *dirEnum = [[NSFileManager defaultManager] enumeratorAtPath:[url path]];
+		NSDirectoryEnumerator *dirEnum = [[NSFileManager defaultManager] enumeratorAtPath:url.path];
 		
 		for (NSString *file in dirEnum)
 		{
-			if (([[file pathExtension] isEqualToString: @"mp3"]) ||
-				([[file pathExtension] isEqualToString: @"ogg"]) ||
-				([[file pathExtension] isEqualToString: @"flac"]) ||
-				([[file pathExtension] isEqualToString: @"mpc"]))
+			if (([file.pathExtension isEqualToString: @"mp3"]) ||
+				([file.pathExtension isEqualToString: @"ogg"]) ||
+				([file.pathExtension isEqualToString: @"flac"]) ||
+				([file.pathExtension isEqualToString: @"mpc"]))
 			{
 				TagLib_File *f;
 				TagLib_Tag *tag;
 				NSString *artist, *album;
 				unsigned int year;
 				
-				f = taglib_file_new([[[url path] stringByAppendingPathComponent:file] UTF8String]);
+				f = taglib_file_new([url.path stringByAppendingPathComponent:file].UTF8String);
 				
 				if (f == NULL)
 					continue;
 				
 				tag = taglib_file_tag(f);
 				
-				artist = [NSString stringWithUTF8String:taglib_tag_artist(tag)];
-				album = [NSString stringWithUTF8String:taglib_tag_album(tag)];
+				artist = @(taglib_tag_artist(tag));
+				album = @(taglib_tag_album(tag));
 				year = taglib_tag_year(tag);
 				
 				album = cleanAlbumName(album);
@@ -56,17 +56,17 @@ NSString *cleanAlbumName(NSString *album);
 				taglib_tag_free_strings();
 				taglib_file_free(f);
 				
-				NSMutableDictionary *artistDict = [dict objectForKey:artist];
+				NSMutableDictionary *artistDict = dict[artist];
 				
 				if ([artist isEqualToString:@""] || [album isEqualToString:@""])
 					continue;
 				
 				if (artistDict == nil)
-					[dict setObject:[NSMutableDictionary dictionaryWithObject:[NSNumber numberWithUnsignedInt:year] forKey:album] forKey:artist];
+					dict[artist] = [NSMutableDictionary dictionaryWithObject:@(year) forKey:album];
 				else
 				{			
-					if ([dict objectForKey:artistDict] == nil)
-						[artistDict setObject:[NSNumber numberWithUnsignedInt:year] forKey:album];
+					if (dict[artistDict] == nil)
+						artistDict[album] = @(year);
 				}	
 			}
 		}
@@ -80,7 +80,7 @@ NSString *cleanAlbumName(NSString *album);
 + (NSDictionary *)infoForFilesInPlaylist:(NSString *)playlistName
 {
 	iTunesApplication *iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
-	iTunesPlaylist *playlist = [[[[iTunes.sources objectAtIndex:0] userPlaylists] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"name == %@", playlistName]] objectAtIndex:0];
+	iTunesPlaylist *playlist = [[(iTunes.sources)[0] userPlaylists] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"name == %@", playlistName]][0];
 	NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:100];
 	
 	for (iTunesTrack *track in [playlist tracks])
@@ -96,17 +96,17 @@ NSString *cleanAlbumName(NSString *album);
 			album = cleanAlbumName(album);
 		
 		
-			NSMutableDictionary *artistDict = [dict objectForKey:artist];
+			NSMutableDictionary *artistDict = dict[artist];
 			
 			if ([artist isEqualToString:@""] || [album isEqualToString:@""])
 				continue;
 			
 			if (artistDict == nil)
-				[dict setObject:[NSMutableDictionary dictionaryWithObject:[NSNumber numberWithUnsignedInt:year] forKey:album] forKey:artist];
+				dict[artist] = [NSMutableDictionary dictionaryWithObject:@(year) forKey:album];
 			else
 			{			
-				if ([dict objectForKey:artistDict] == nil)
-					[artistDict setObject:[NSNumber numberWithUnsignedInt:year] forKey:album];
+				if (dict[artistDict] == nil)
+					artistDict[album] = @(year);
 			}	
 	}
 	return dict;
@@ -117,13 +117,13 @@ NSString *cleanAlbumName(NSString *album)
 {
 	NSString *ret = album;
 	
-	ret = [ret stringByReplacingOccurrencesOfRegex:@"\\(disk [0-9].*\\)" withString:@"" options:RKLCaseless range:NSMakeRange(0, [ret length]) error:NULL];
-	ret = [ret stringByReplacingOccurrencesOfRegex:@"\\(disc [0-9].*\\)" withString:@"" options:RKLCaseless range:NSMakeRange(0, [ret length]) error:NULL];
-	ret = [ret stringByReplacingOccurrencesOfRegex:@"\\(cd [0-9].*\\)" withString:@"" options:RKLCaseless range:NSMakeRange(0, [ret length]) error:NULL];																						
-	ret = [ret stringByReplacingOccurrencesOfRegex:@"\\(bonus.*\\)" withString:@"" options:RKLCaseless range:NSMakeRange(0, [ret length]) error:NULL];																																	   
+	ret = [ret stringByReplacingOccurrencesOfRegex:@"\\(disk [0-9].*\\)" withString:@"" options:RKLCaseless range:NSMakeRange(0, ret.length) error:NULL];
+	ret = [ret stringByReplacingOccurrencesOfRegex:@"\\(disc [0-9].*\\)" withString:@"" options:RKLCaseless range:NSMakeRange(0, ret.length) error:NULL];
+	ret = [ret stringByReplacingOccurrencesOfRegex:@"\\(cd [0-9].*\\)" withString:@"" options:RKLCaseless range:NSMakeRange(0, ret.length) error:NULL];																						
+	ret = [ret stringByReplacingOccurrencesOfRegex:@"\\(bonus.*\\)" withString:@"" options:RKLCaseless range:NSMakeRange(0, ret.length) error:NULL];																																	   
 											   
 	
-	NSArray *replacementList = [NSArray arrayWithObjects:@"bonus cd", @"bonus disc", @"bonus disk", @"cd 1", @"disk 1", @"disc 2", @"cd 2", @"disk 2", @"disc 2", @"cd 3", @"disk 3", @"disc 3", @"special edition", @"limited edition", @"digipak", @"(o.s.t)", @"(o.s.t.)", @"(live)", @"(ost)", @"()", @"()", @"()", nil];
+	NSArray *replacementList = @[@"bonus cd", @"bonus disc", @"bonus disk", @"cd 1", @"disk 1", @"disc 2", @"cd 2", @"disk 2", @"disc 2", @"cd 3", @"disk 3", @"disc 3", @"special edition", @"limited edition", @"digipak", @"(o.s.t)", @"(o.s.t.)", @"(live)", @"(ost)", @"()", @"()", @"()"];
 	
 	for (NSString *search in replacementList)
 	{

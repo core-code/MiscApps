@@ -41,25 +41,25 @@ NSImage *newIcon;
 {
 	[self updateDockIcon];
 	
-	[artistsTableView registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType, nil]];
+	[artistsTableView registerForDraggedTypes:@[NSFilenamesPboardType]];
 
-	[artistsTableView setDoubleAction:@selector(artistsTableDoubleClick:)];
-	[releasesTableView setDoubleAction:@selector(releasesTableDoubleClick:)];
+	artistsTableView.doubleAction = @selector(artistsTableDoubleClick:);
+	releasesTableView.doubleAction = @selector(releasesTableDoubleClick:);
 	
 	NSSortDescriptor * sd = [[NSSortDescriptor alloc] initWithKey:@"Name" ascending:YES];
-	[artistsTableView setSortDescriptors:[NSArray arrayWithObject:sd]];
+	artistsTableView.sortDescriptors = @[sd];
 	[sd release];
 	
 	sd = [[NSSortDescriptor alloc] initWithKey:@"Year" ascending:NO];
-	[releasesTableView setSortDescriptors:[NSArray arrayWithObject:sd]];
+	releasesTableView.sortDescriptors = @[sd];
 	[sd release];
 	
-	[artistsTableView scrollRowToVisible:[artistsTableView selectedRow]];
+	[artistsTableView scrollRowToVisible:artistsTableView.selectedRow];
 }
 
 - (void)artistsTableDoubleClick:(id)sender
 {
-	NSURL *url = [NSURL URLWithString:[[[artistArrayController selection] valueForKey:@"id"] stringByReplacingOccurrencesOfString:@"/artist/" withString:@"/show/artist/?mbid="]];
+	NSURL *url = [NSURL URLWithString:[[artistArrayController.selection valueForKey:@"id"] stringByReplacingOccurrencesOfString:@"/artist/" withString:@"/show/artist/?mbid="]];
 
 	if (![[NSWorkspace sharedWorkspace] openURL:url])
 		NSLog(@"Warning: [[NSWorkspace sharedWorkspace] openURL:url] failed");
@@ -67,7 +67,7 @@ NSImage *newIcon;
 
 - (void)releasesTableDoubleClick:(id)sender
 {
-	NSURL *url = [NSURL URLWithString:[[[releaseArrayController selection] valueForKey:@"id"] stringByReplacingOccurrencesOfString:@"/release/" withString:@"/show/release/?mbid="]];
+	NSURL *url = [NSURL URLWithString:[[releaseArrayController.selection valueForKey:@"id"] stringByReplacingOccurrencesOfString:@"/release/" withString:@"/show/release/?mbid="]];
 
 	if (![[NSWorkspace sharedWorkspace] openURL:url])
 		NSLog(@"Warning: [[NSWorkspace sharedWorkspace] openURL:url] failed");
@@ -76,7 +76,7 @@ NSImage *newIcon;
 - (IBAction)addAction:(id)sender
 {
 	iTunesApplication *iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
-	NSArray *playlists = [[[iTunes.sources objectAtIndex:0] userPlaylists] arrayByApplyingSelector:@selector(name)];
+	NSArray *playlists = [[(iTunes.sources)[0] userPlaylists] arrayByApplyingSelector:@selector(name)];
 	
 	for (NSString *playlist in playlists)
 		[playlistsPopup addItemWithTitle:playlist];
@@ -86,16 +86,16 @@ NSImage *newIcon;
 
 - (IBAction)removeAction:(id)sender
 {
-	if ([mainWindow firstResponder] == artistsTableView)
+	if (mainWindow.firstResponder == artistsTableView)
 	{
 		if (NSRunAlertPanel(@"MusicWatch", [NSString stringWithFormat:@"Do you really want to remove the artist \"%@\"?",
-											[[artistArrayController selection] valueForKey:@"name"]], @"Remove", @"Cancel", nil) == NSAlertDefaultReturn)
+											[artistArrayController.selection valueForKey:@"name"]], @"Remove", @"Cancel", nil) == NSAlertDefaultReturn)
 				[artistArrayController remove:self];
 	}
-	else if (([mainWindow firstResponder] == releasesTableView) && ([releaseArrayController canRemove]))
+	else if ((mainWindow.firstResponder == releasesTableView) && (releaseArrayController.canRemove))
 	{
 		if (NSRunAlertPanel(@"MusicWatch", [NSString stringWithFormat:@"Do you really want to remove the album \"%@\"?",
-											[[releaseArrayController selection] valueForKey:@"name"]], @"Remove", @"Cancel", nil) == NSAlertDefaultReturn)
+											[releaseArrayController.selection valueForKey:@"name"]], @"Remove", @"Cancel", nil) == NSAlertDefaultReturn)
 			[releaseArrayController remove:self];
 	}
 	[self updateDockIcon];	
@@ -103,32 +103,32 @@ NSImage *newIcon;
 
 - (IBAction)markAllAsSeenAction:(id)sender
 {	
-	for (NSManagedObject *album in [[[artistArrayController selection] valueForKey:@"releases"] objectEnumerator])
+	for (NSManagedObject *album in [[artistArrayController.selection valueForKey:@"releases"] objectEnumerator])
 	{
-		[album setValue:[NSNumber numberWithInt:0] forKey:@"unseen"];
+		[album setValue:@0 forKey:@"unseen"];
 	}	
 	[self updateDockIcon];	
 }
 
 - (IBAction)markAsOwnedAction:(id)sender
 {
-	[[releaseArrayController selection] setValue:[NSNumber numberWithInt:1] forKey:@"owned"];
+	[releaseArrayController.selection setValue:@1 forKey:@"owned"];
 }
 
 - (IBAction)markAsUnseenAction:(id)sender
 {
-	[[releaseArrayController selection] setValue:[NSNumber numberWithInt:1] forKey:@"unseen"];
+	[releaseArrayController.selection setValue:@1 forKey:@"unseen"];
 }
 
 - (IBAction)matchAlbumsAction:(id)sender
 {
-	[matchTextField setStringValue:[NSString stringWithFormat:@"Match \"%@\" with:", [[releaseArrayController selection] valueForKey:@"name"]]];
-	[[matchTableDataSource matchAlbumArray] removeAllObjects];
+	matchTextField.stringValue = [NSString stringWithFormat:@"Match \"%@\" with:", [releaseArrayController.selection valueForKey:@"name"]];
+	[matchTableDataSource.matchAlbumArray removeAllObjects];
 	
-	for (NSManagedObject *album in [[[artistArrayController selection] valueForKey:@"releases"] objectEnumerator])
+	for (NSManagedObject *album in [[artistArrayController.selection valueForKey:@"releases"] objectEnumerator])
 	{
-		if (! [[album valueForKey:@"name"] isEqualToString:[[releaseArrayController selection] valueForKey:@"name"]])
-			[[matchTableDataSource matchAlbumArray] addObject:album];
+		if (! [[album valueForKey:@"name"] isEqualToString:[releaseArrayController.selection valueForKey:@"name"]])
+			[matchTableDataSource.matchAlbumArray addObject:album];
 	}	
 	
 	[NSApp beginSheet:matchSheet modalForWindow:mainWindow modalDelegate:nil didEndSelector:nil contextInfo:nil];
@@ -141,7 +141,7 @@ NSImage *newIcon;
     [progressLookupIndicator startAnimation:self];
 	
 	
-	for (NSManagedObject *artist in [artistArrayController arrangedObjects])
+	for (NSManagedObject *artist in artistArrayController.arrangedObjects)
 		if ([artist valueForKey:@"id"] && ![[artist valueForKey:@"id"] isEqualToString:@""])
 			[self updateArtist:artist];
 	
@@ -152,9 +152,9 @@ NSImage *newIcon;
 
 - (IBAction)markEverythingSeenAction:(id)sender
 {
-	for (NSManagedObject *artist in [artistArrayController arrangedObjects])
+	for (NSManagedObject *artist in artistArrayController.arrangedObjects)
 		for (NSManagedObject *album in [[artist valueForKey:@"releases"] objectEnumerator])
-			[album setValue:[NSNumber numberWithInt:0] forKey:@"unseen"];
+			[album setValue:@0 forKey:@"unseen"];
 
 
 	[self updateDockIcon];	
@@ -172,7 +172,7 @@ NSImage *newIcon;
 	
 	if ([[sender title] isEqualToString:@"Add"])
 	{
-		if ([sourceMatrix selectedRow] == 0)
+		if (sourceMatrix.selectedRow == 0)
 		{
 			NSOpenPanel *panel = [NSOpenPanel openPanel];
 			
@@ -192,7 +192,7 @@ NSImage *newIcon;
 		}
 		else
 		{
-			[self addPlaylist:[playlistsPopup titleOfSelectedItem]];
+			[self addPlaylist:playlistsPopup.titleOfSelectedItem];
 		}
 	}
 }
@@ -200,19 +200,19 @@ NSImage *newIcon;
 - (void)openPanelDidEnd:(NSOpenPanel *)panel returnCode:(int)returnCode contextInfo:(void *)contextInfo
 {	
 	if (returnCode == NSOKButton)
-		[self performSelector:@selector(addFolders:) withObject:[panel URLs] afterDelay:0.1];
+		[self performSelector:@selector(addFolders:) withObject:panel.URLs afterDelay:0.1];
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification
 {
-	NSTableView *table = [aNotification object];
+	NSTableView *table = aNotification.object;
 	
-	if ([table selectedRow] != -1)
+	if (table.selectedRow != -1)
 	{
-		NSArray *selectedObjects = [releaseArrayController selectedObjects];
-		NSEntityDescription *entity = [selectedObjects objectAtIndex:0];
+		NSArray *selectedObjects = releaseArrayController.selectedObjects;
+		NSEntityDescription *entity = selectedObjects[0];
 		//NSLog([entity valueForKey:@"name"]);
-		[entity setValue:[NSNumber numberWithInt:0] forKey:@"unseen"];
+		[entity setValue:@0 forKey:@"unseen"];
 	}
 	
 	[self updateDockIcon];
@@ -288,7 +288,7 @@ NSImage *newIcon;
 		
 
 		// try to match to an existing artist
-		for (NSManagedObject *a in [artistArrayController arrangedObjects])
+		for (NSManagedObject *a in artistArrayController.arrangedObjects)
 		{
 			if ([[a valueForKey:@"name"] isEqualToString:artist_name])
 			{
@@ -318,7 +318,7 @@ NSImage *newIcon;
 		}
  				
 		// add new local albums	
-		NSMutableDictionary *albums_dict = [artists_dict objectForKey:artist_name];
+		NSMutableDictionary *albums_dict = artists_dict[artist_name];
 		for (NSString *album_name in albums_dict)
 		{
 			BOOL skip = NO;
@@ -336,9 +336,9 @@ NSImage *newIcon;
 									  inManagedObjectContext: managedObjectContext];
 						
 			[album setValue:album_name forKey:@"name"];
-			[album setValue:[albums_dict objectForKey:album_name] forKey:@"year"];
-			[album setValue:[NSNumber numberWithBool:YES] forKey:@"owned"];
-			[album setValue:[NSNumber numberWithInt:0] forKey:@"unseen"];
+			[album setValue:albums_dict[album_name] forKey:@"year"];
+			[album setValue:@YES forKey:@"owned"];
+			[album setValue:@0 forKey:@"unseen"];
 			[album setValue:artist forKey:@"artist"];
 			[album setValue:@"" forKey:@"id"];
 			
@@ -359,7 +359,7 @@ NSImage *newIcon;
 			
 			for (NSArray *mb_artist in mb_artists)
 			{
-				[artist setValue:[mb_artist objectAtIndex:1] forKey:@"id"];
+				[artist setValue:mb_artist[1] forKey:@"id"];
 				
 				[self updateArtist:artist];
 				
@@ -377,11 +377,12 @@ NSImage *newIcon;
 				
 				if (matches)
 				{
-					if ([[mb_artist objectAtIndex:2] intValue] < 100)
-						NSLog(@"Warning: matching %@ to %@ with score %i", artist_name, [mb_artist objectAtIndex:0], [[mb_artist objectAtIndex:2] intValue]);
+#error
+					if ([mb_artist[2] intValue] < 100)
+						NSLog(@"Warning: matching %@ to %@ with score %i", artist_name, mb_artist[0], [mb_artist[2] intValue]);
 					
 					
-					for (NSManagedObject *other_artist in [artistArrayController arrangedObjects]) // ok if the artist was misspelled and already exists in our library we gotta jump back
+					for (NSManagedObject *other_artist in artistArrayController.arrangedObjects) // ok if the artist was misspelled and already exists in our library we gotta jump back
 					{
 						if (other_artist != artist && [[other_artist valueForKey:@"id"] isEqualToString:[artist valueForKey:@"id"]])
 						{
@@ -422,12 +423,12 @@ NSImage *newIcon;
 			for (NSManagedObject *new_album in [artist valueForKey:@"releases"])
 				if ([[old_mb_album valueForKey:@"id"] isEqualToString:[new_album valueForKey:@"id"]])
 					if (![[old_mb_album valueForKey:@"unseen"] boolValue] && [[new_album valueForKey:@"unseen"] boolValue])
-						[new_album setValue:[NSNumber numberWithInt:0] forKey:@"unseen"];
+						[new_album setValue:@0 forKey:@"unseen"];
 		
 		// select and scroll to new object
 		[artistArrayController fetchWithRequest:nil merge:NO error:&error];
-		[artistArrayController setSelectedObjects:[NSArray arrayWithObject:artist]];
-		[artistsTableView scrollRowToVisible:[artistArrayController selectionIndex]];
+		[artistArrayController setSelectedObjects:@[artist]];
+		[artistsTableView scrollRowToVisible:artistArrayController.selectionIndex];
 	}
 	
 	[self updateDockIcon];
@@ -442,13 +443,13 @@ NSImage *newIcon;
 	for (NSString *mb_release_title in mb_releases)
 	{
 		NSEnumerator *local_release_enumerator = [local_releases objectEnumerator];
-		NSArray *mb_release = [mb_releases objectForKey:mb_release_title];
+		NSArray *mb_release = mb_releases[mb_release_title];
 		BOOL done = FALSE;
 		
 		// check if it is already matched to a local release
 		for (NSManagedObject *local_release in local_release_enumerator)
 		{
-			if ([[local_release valueForKey:@"id"] isEqualToString:[mb_release objectAtIndex:0]])
+			if ([[local_release valueForKey:@"id"] isEqualToString:mb_release[0]])
 			{
 				done = TRUE;
 				break;
@@ -457,7 +458,7 @@ NSImage *newIcon;
 		if (done) continue;
 		
 		// look for exact match and check fuzzy match candidates
-		NSMutableArray *matchCandidates = [NSMutableArray arrayWithCapacity:[local_releases count]];
+		NSMutableArray *matchCandidates = [NSMutableArray arrayWithCapacity:local_releases.count];
 
 		local_release_enumerator = [local_releases objectEnumerator];
 		for (NSManagedObject *local_release in local_release_enumerator)
@@ -472,9 +473,9 @@ NSImage *newIcon;
 				 ([[local_release_title stringByReplacingOccurrencesOfString:@" - " withString:@": "] caseInsensitiveCompare:mb_release_title] == NSOrderedSame))
 			{
 				//NSLog(@"%@ == %@" , title , [r valueForKey:@"name"]);			
-				if ([[mb_release objectAtIndex:1] intValue] != 1900)
-					[local_release setValue:[mb_release objectAtIndex:1] forKey:@"year"];
-				[local_release setValue:[mb_release objectAtIndex:0] forKey:@"id"];
+				if ([mb_release[1] intValue] != 1900)
+					[local_release setValue:mb_release[1] forKey:@"year"];
+				[local_release setValue:mb_release[0] forKey:@"id"];
 				done = TRUE;
 				break;
 			}
@@ -483,17 +484,17 @@ NSImage *newIcon;
 				float dist = MIN([local_release_title compareWithString:mb_release_title],
 								 [[local_release_title stringByReplacingOccurrencesOfString:@" - " withString:@": "] compareWithString:mb_release_title]); 
 				
-				[matchCandidates addObject:[NSDictionary dictionaryWithObjectsAndKeys:local_release, @"managedObject", [NSNumber numberWithFloat:dist], @"dist", nil]];
+				[matchCandidates addObject:@{@"managedObject": local_release, @"dist": @(dist)}];
 			}
 		}
 		
 		if (done) continue;
 
-		[matchCandidates sortUsingDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"dist" ascending:YES]]];
+		[matchCandidates sortUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"dist" ascending:YES]]];
 		for (NSDictionary *dict in matchCandidates)
 		{
-			float dist = [[dict objectForKey:@"dist"] floatValue];
-			NSManagedObject *match = [dict objectForKey:@"managedObject"];
+			float dist = [dict[@"dist"] floatValue];
+			NSManagedObject *match = dict[@"managedObject"];
 			
 			if (dist < 5 && ((float) MIN([mb_release_title length], [[match valueForKey:@"name"] length]) / dist >= 4))
 			{
@@ -501,8 +502,8 @@ NSImage *newIcon;
 				
 				if (NSRunAlertPanel(@"MusicWatch", [NSString stringWithFormat:@"Please help MusicWatch match albumnames. Are these two (different) names for the same album?\n%@\n%@", mb_release_title, [match valueForKey:@"name"]], @"Same album", @"Not the same album", nil) == NSAlertDefaultReturn) 
 				{
-					[match setValue:[mb_release objectAtIndex:1] forKey:@"year"];
-					[match setValue:[mb_release objectAtIndex:0] forKey:@"id"];
+					[match setValue:mb_release[1] forKey:@"year"];
+					[match setValue:mb_release[0] forKey:@"id"];
 					done = TRUE;
 				}	
 			}	
@@ -517,12 +518,12 @@ NSImage *newIcon;
 								  inManagedObjectContext: managedObjectContext];
 		
 		[album setValue:mb_release_title forKey:@"name"];
-		[album setValue:[mb_release objectAtIndex:1] forKey:@"year"];
+		[album setValue:mb_release[1] forKey:@"year"];
 		
-		[album setValue:[NSNumber numberWithBool:NO] forKey:@"owned"];
-		[album setValue:[NSNumber numberWithInt:1] forKey:@"unseen"];
+		[album setValue:@NO forKey:@"owned"];
+		[album setValue:@1 forKey:@"unseen"];
 		[album setValue:artist forKey:@"artist"];
-		[album setValue:[mb_release objectAtIndex:0] forKey:@"id"];
+		[album setValue:mb_release[0] forKey:@"id"];
 		
 		NSMutableSet *releases = [NSMutableSet setWithSet:[artist valueForKey:@"releases"]];
 		[releases addObject:album];
@@ -537,10 +538,10 @@ NSImage *newIcon;
 	
 	[artistArrayController fetchWithRequest:nil merge:NO error:&error];
 	
-	for (NSManagedObject *artist in [artistArrayController arrangedObjects])
+	for (NSManagedObject *artist in artistArrayController.arrangedObjects)
 		unseen += [[artist valueForKeyPath:@"releases.@sum.unseen"] intValue];
 
-	[[NSApp dockTile] setBadgeLabel:[NSString stringWithFormat:@"%i", unseen]];
+	NSApp.dockTile.badgeLabel = [NSString stringWithFormat:@"%i", unseen];
 }
 
 - (IBAction)matchSheetAction:(id)sender
@@ -550,8 +551,8 @@ NSImage *newIcon;
 	
 	if ([[sender title] isEqualToString:@"Match"])
 	{
-		NSManagedObject *o2 = [[matchTableDataSource matchAlbumArray] objectAtIndex:[matchTableView selectedRow]];
-		NSManagedObject *o1 = [releaseArrayController selection];
+		NSManagedObject *o2 = matchTableDataSource.matchAlbumArray[matchTableView.selectedRow];
+		NSManagedObject *o1 = releaseArrayController.selection;
 		
 		[o1 setValue:[o2 valueForKey:@"id"] forKey:@"id"];
 		
@@ -576,12 +577,12 @@ NSImage *newIcon;
 			  row:(int)row
 	dropOperation:(NSTableViewDropOperation)op
 {
-	NSArray *classArray = [NSArray arrayWithObject:[NSURL class]]; // types of objects you are looking for
-	NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:NSPasteboardURLReadingFileURLsOnlyKey];
+	NSArray *classArray = @[[NSURL class]]; // types of objects you are looking for
+	NSDictionary *options = @{NSPasteboardURLReadingFileURLsOnlyKey: @YES};
 	NSArray *arrayOfURLs = [[info draggingPasteboard] readObjectsForClasses:classArray options:options]; // read objects of those classes
 
 	// Can we get an URL?  If so, add a new row, configure it, then return.
-	if ([arrayOfURLs count])
+	if (arrayOfURLs.count)
 	{
 		[self addFolders:arrayOfURLs];
 		
@@ -611,7 +612,7 @@ NSImage *newIcon;
 - (NSString *)applicationSupportDirectory {
 	
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
-    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : NSTemporaryDirectory();
+    NSString *basePath = (paths.count > 0) ? paths[0] : NSTemporaryDirectory();
     return [basePath stringByAppendingPathComponent:@"MusicWatch"];
 }
 
@@ -694,7 +695,7 @@ NSImage *newIcon;
         return nil;
     }
     managedObjectContext = [[NSManagedObjectContext alloc] init];
-    [managedObjectContext setPersistentStoreCoordinator: coordinator];
+    managedObjectContext.persistentStoreCoordinator = coordinator;
 	
     return managedObjectContext;
 }
@@ -705,7 +706,7 @@ NSImage *newIcon;
  */
 
 - (NSUndoManager *)windowWillReturnUndoManager:(NSWindow *)window {
-    return [[self managedObjectContext] undoManager];
+    return [self managedObjectContext].undoManager;
 }
 
 
@@ -744,7 +745,7 @@ NSImage *newIcon;
         return NSTerminateCancel;
     }
 	
-    if (![managedObjectContext hasChanges]) return NSTerminateNow;
+    if (!managedObjectContext.hasChanges) return NSTerminateNow;
 	
     NSError *error = nil;
     if (![managedObjectContext save:&error]) {
@@ -766,8 +767,8 @@ NSImage *newIcon;
         NSString *quitButton = NSLocalizedString(@"Quit anyway", @"Quit anyway button title");
         NSString *cancelButton = NSLocalizedString(@"Cancel", @"Cancel button title");
         NSAlert *alert = [[NSAlert alloc] init];
-        [alert setMessageText:question];
-        [alert setInformativeText:info];
+        alert.messageText = question;
+        alert.informativeText = info;
         [alert addButtonWithTitle:quitButton];
         [alert addButtonWithTitle:cancelButton];
 		

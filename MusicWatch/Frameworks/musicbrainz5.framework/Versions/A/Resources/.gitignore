@@ -1,0 +1,7 @@
+CMakeFiles/
+Makefile
+cmake_install.cmake
+libmusicbrainz5.so*
+make-c-interface
+mb5_c.cc
+mb5_c.h
