@@ -24,12 +24,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (int)numberOfRowsInTableView:(NSTableView *)tableView
 {
-	return [matchAlbumArray count];
+	return matchAlbumArray.count;
 }
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(int)row
 {
-	return [[matchAlbumArray objectAtIndex:row] valueForKey:@"name"];
+	return [matchAlbumArray[row] valueForKey:@"name"];
 }
 
 @end

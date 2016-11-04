@@ -32,7 +32,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	asl_NSLog_debug(@"%@", tmpPath);
 
 	
-	[fileManager copyItemAtPath:[@"~/Library/Logs/DiagnosticReports/" stringByExpandingTildeInPath]
+    [fileManager copyItemAtPath:@"/Library/Logs/DiagnosticReports/"
+                         toPath:[tmpPath stringByAppendingString:@"DRG"] error:NULL];
+    
+    [fileManager copyItemAtPath:[@"~/Library/Logs/DiagnosticReports/" stringByExpandingTildeInPath]
 						 toPath:[tmpPath stringByAppendingString:@"DR"] error:NULL];
 
 

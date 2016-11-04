@@ -56,8 +56,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	[fileManager copyItemAtPath:[@"/private/var/log/system.log.1.gz" stringByExpandingTildeInPath]
 						 toPath:[tmpPath stringByAppendingString:@"system.log.1.gz"] error:NULL];
 
+    
+    for (NSString *partial in @[@"~/Library/Logs/DiagnosticReports/", @"/Library/Logs/DiagnosticReports/"])
 	{
-		NSURL *path = @"~/Library/Logs/DiagnosticReports/".expanded.fileURL;
+        NSURL *path = partial.expanded.fileURL;
 		for (NSString *p in [path.path.dirContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'SMARTReporter'"])
 			[fileManager copyItemAtURL:[path add:p] toURL:[tmpURL add:p] error:NULL];
 	}

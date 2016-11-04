@@ -24,7 +24,6 @@
 		B9517EB91A01553C0074B4DA /* JMVisibilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517EAF1A01553C0074B4DA /* JMVisibilityManager.m */; };
 		B9517EBB1A015C690074B4DA /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9517EBA1A015C690074B4DA /* DiskArbitration.framework */; };
 		B9517EBD1A015EE40074B4DA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9517EBC1A015EE40074B4DA /* IOKit.framework */; };
-		B971FD9E1D3024E7004D8851 /* __GEN.command in Resources */ = {isa = PBXBuildFile; fileRef = B971FD9A1D3024E7004D8851 /* __GEN.command */; };
 		B9DF05E3169DCCF000DB4B58 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DF05E2169DCCF000DB4B58 /* Cocoa.framework */; };
 		B9DF05ED169DCCF000DB4B58 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9DF05EB169DCCF000DB4B58 /* InfoPlist.strings */; };
 		B9DF05EF169DCCF000DB4B58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DF05EE169DCCF000DB4B58 /* main.m */; };
@@ -83,7 +82,6 @@
 		B9517EAF1A01553C0074B4DA /* JMVisibilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMVisibilityManager.m; sourceTree = "<group>"; };
 		B9517EBA1A015C690074B4DA /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = ../../../../../../System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<group>"; };
 		B9517EBC1A015EE40074B4DA /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = ../../../../../../System/Library/Frameworks/IOKit.framework; sourceTree = "<group>"; };
-		B971FD9A1D3024E7004D8851 /* __GEN.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = __GEN.command; sourceTree = "<group>"; };
 		B971FD9B1D3024E7004D8851 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
 		B971FD9C1D3024E7004D8851 /* Mail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mail.h; sourceTree = "<group>"; };
 		B971FD9D1D3024E7004D8851 /* Safari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Safari.h; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 		B971FD991D3024E7004D8851 /* SDEF */ = {
 			isa = PBXGroup;
 			children = (
-				B971FD9A1D3024E7004D8851 /* __GEN.command */,
 				B971FD9B1D3024E7004D8851 /* iTunes.h */,
 				B971FD9C1D3024E7004D8851 /* Mail.h */,
 				B971FD9D1D3024E7004D8851 /* Safari.h */,
@@ -297,7 +294,6 @@
 			files = (
 				B9DF05ED169DCCF000DB4B58 /* InfoPlist.strings in Resources */,
 				B9DF05F3169DCCF000DB4B58 /* Credits.rtf in Resources */,
-				B971FD9E1D3024E7004D8851 /* __GEN.command in Resources */,
 				B9DF05F9169DCCF000DB4B58 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

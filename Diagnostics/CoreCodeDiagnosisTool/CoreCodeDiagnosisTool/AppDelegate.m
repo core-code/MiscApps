@@ -47,10 +47,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	[fileManager copyItemAtPath:[@"/private/var/log/system.log.1.gz" stringByExpandingTildeInPath]
 						 toPath:[tmpPath stringByAppendingString:@"system.log.1.gz"] error:NULL];
 
-	{
-		NSURL *path = @"~/Library/Logs/DiagnosticReports/".expanded.fileURL;
+    for (NSString *partial in @[@"~/Library/Logs/DiagnosticReports/", @"/Library/Logs/DiagnosticReports/"])
+    {
+		NSURL *path = partial.expanded.fileURL;
 		for (NSURL *p in path.dirContentsRecursive)
-			if ([p.contents.string contains:@"corecode"])
+			if ([p.path contains:@"corecode"] || [p.contents.string contains:@"corecode"])
 				[fileManager copyItemAtURL:p toURL:[tmpURL add:p.lastPathComponent] error:NULL];
 	}
 	{

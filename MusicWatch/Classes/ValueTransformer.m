@@ -29,10 +29,10 @@ extern NSImage *newIcon;
 	if ([value respondsToSelector: @selector(valueForKeyPath:)]) intvalue = [value valueForKeyPath:@"@sum.unseen"];
 	else [NSException raise: NSInternalInconsistencyException format: @"Value (%@) does not respond to -valueForKeyPath.", [value class]];
 		
-	if ([intvalue intValue] == 0)
+	if (intvalue.intValue == 0)
 		return @"";
 	else
-		return [intvalue stringValue];
+		return intvalue.stringValue;
 }
 @end
 
@@ -55,7 +55,7 @@ extern NSImage *newIcon;
 		[NSException raise: NSInternalInconsistencyException format: @"Value (%@) does not respond to -filteredSetUsingPredicate.", [value class]];
 	
 	 
-	 return [NSString stringWithFormat:@"%li", (unsigned long)[set count]];
+	 return [NSString stringWithFormat:@"%li", (unsigned long)set.count];
 }
 @end
 
@@ -118,7 +118,7 @@ extern NSImage *newIcon;
 	if (!value || ![value respondsToSelector:@selector(length)])
         return [NSNumber numberWithBool:TRUE];
 	
-	if ([(NSString *)value length] < 1)
+	if (((NSString *)value).length < 1)
 		return [NSNumber numberWithBool:TRUE];
 	else
         return [NSNumber numberWithBool:FALSE];
