@@ -37,7 +37,7 @@
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>https://www.corecode.at/smartreporter/smartreporter.xml</string>
+	<string>https://www.corecode.io/smartreporter/smartreporter.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 	<key>SUScheduledCheckInterval</key>

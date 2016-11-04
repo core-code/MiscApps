@@ -321,12 +321,12 @@ void asl_NSLog_debug(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 #ifdef VENDOR_HOMEPAGE
 #define kVendorHomepage VENDOR_HOMEPAGE
 #else
-#define kVendorHomepage @"https://www.corecode.at/"
+#define kVendorHomepage @"https://www.corecode.io/"
 #endif
 #ifdef FEEDBACK_EMAIL
 #define kFeedbackEmail FEEDBACK_EMAIL
 #else
-#define kFeedbackEmail @"feedback@corecode.at"
+#define kFeedbackEmail @"feedback@corecode.io"
 #endif
 
 

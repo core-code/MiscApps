@@ -40,9 +40,9 @@ class IPGeoLocation
         url = ""
         query = ""
 
-        if let data = NSData(contentsOfURL: NSURL(string: "http://ip-api.com/json/" + ipstring)!)
+        if let data = NSData(contentsOf: NSURL(string: "http://ip-api.com/json/" + ipstring)! as URL)
         {
-            let json = (try! NSJSONSerialization.JSONObjectWithData(data, options: [])) as! NSDictionary
+            let json = (try! JSONSerialization.jsonObject(with: data as Data, options: [])) as! NSDictionary
             
             if json["status"] as! String == "success"
             {
@@ -65,9 +65,9 @@ class IPGeoLocation
         
         
         
-        if let data = NSData(contentsOfURL: NSURL(string: "http://www.telize.com/geoip/" + ipstring)!)
+        if let data = NSData(contentsOf: NSURL(string: "http://www.telize.com/geoip/" + ipstring)! as URL)
         {
-            let json = (try! NSJSONSerialization.JSONObjectWithData(data, options: [])) as! NSDictionary
+            let json = (try! JSONSerialization.jsonObject(with: data as Data, options: [])) as! NSDictionary
             
             if (json["longitude"] as! Double?) != nil
             {
@@ -88,9 +88,9 @@ class IPGeoLocation
         }
         
         
-        if let data = NSData(contentsOfURL: NSURL(string: "http://api.db-ip.com/addrinfo?addr=" + ipstring + "&api_key=bed383fd5e8efe3355ef79bb717dfcbd82850bb1")!)
+        if let data = NSData(contentsOf: NSURL(string: "http://api.db-ip.com/addrinfo?addr=" + ipstring + "&api_key=bed383fd5e8efe3355ef79bb717dfcbd82850bb1")! as URL)
         {
-            let json = (try! NSJSONSerialization.JSONObjectWithData(data, options: [])) as! NSDictionary
+            let json = (try! JSONSerialization.jsonObject(with: data as Data, options: [])) as! NSDictionary
             
             if let bla = json["city"] as! String?
             {

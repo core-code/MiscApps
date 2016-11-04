@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
-        <plugIn identifier="com.apple.MapKitIBPlugin" version="6751"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="6751"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <plugIn identifier="com.apple.MapKitIBPlugin" version="11542"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="11542"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -159,26 +160,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="234" height="271"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box autoresizesSubviews="NO" title="Drop email to be analyzed here" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="low-YU-iCD">
-                                <rect key="frame" x="17" y="51" width="200" height="200"/>
-                                <view key="contentView">
-                                    <rect key="frame" x="1" y="1" width="198" height="184"/>
+                            <box autoresizesSubviews="NO" borderType="line" title="Drop email to be analyzed here" translatesAutoresizingMaskIntoConstraints="NO" id="low-YU-iCD">
+                                <rect key="frame" x="17" y="51" width="198" height="200"/>
+                                <view key="contentView" id="t6r-Dk-PW0">
+                                    <rect key="frame" x="1" y="1" width="196" height="184"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XK3-zr-ZHL">
                                             <rect key="frame" x="42" y="37" width="114" height="114"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icon_drophere" id="iNH-X9-g5j"/>
                                         </imageView>
                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mkS-j2-aKe" customClass="DragDestinationView" customModule="MailSpy" customModuleProvider="target">
                                             <rect key="frame" x="3" y="4" width="192" height="180"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </customView>
                                     </subviews>
                                 </view>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vfZ-Mh-psN">
-                                <rect key="frame" x="18" y="18" width="198" height="14"/>
+                                <rect key="frame" x="18" y="18" width="196" height="14"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Note: only drop a single mail at once" id="2G8-wi-38P">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
@@ -227,17 +228,19 @@
                         <subviews>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9bf-Ua-XMg">
                                 <rect key="frame" x="18" y="471" width="357" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" id="EYf-9u-OjX">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" autoenablesItems="NO" id="R4i-r7-hYd"/>
-                                    <connections>
-                                        <action selector="didSelectSource:" target="4MQ-bH-do1" id="Mfq-fL-21N"/>
-                                    </connections>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="didSelectSource:" target="4MQ-bH-do1" id="Fel-FL-ufC"/>
+                                </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ajT-VF-iY0">
                                 <rect key="frame" x="18" y="507" width="103" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="email IP history:" id="fVc-T1-A5h">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -246,18 +249,22 @@
                             </textField>
                             <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Dwt-bS-omc">
                                 <rect key="frame" x="17" y="100" width="358" height="358"/>
-                                <view key="contentView">
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="oZh-Pd-8FB">
                                     <rect key="frame" x="1" y="1" width="356" height="342"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="Ced-fL-YeA">
+                                        <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="Ced-fL-YeA">
                                             <rect key="frame" x="170" y="202" width="16" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </progressIndicator>
                                         <mapView fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VOn-WH-ll5">
                                             <rect key="frame" x="18" y="92" width="320" height="240"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         </mapView>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PTU-hh-W05">
                                             <rect key="frame" x="18" y="13" width="320" height="23"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Uoi-qI-lq9">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -268,6 +275,7 @@
                                         </button>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="77X-O4-UAX">
                                             <rect key="frame" x="16" y="42" width="324" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="f23-i4-wSM">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -276,11 +284,10 @@
                                         </textField>
                                     </subviews>
                                 </view>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98O-Xg-010">
                                 <rect key="frame" x="18" y="79" width="55" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mailer:" id="hTm-XE-Gem">
                                     <font key="font" metaFont="systemBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -289,6 +296,7 @@
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3D-zR-9lg">
                                 <rect key="frame" x="18" y="20" width="356" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="WARNING: the mail has probably been sent using web-mail and the shown location may just show the provider" id="s1q-lu-kvy">
                                     <font key="font" metaFont="systemBold" size="12"/>
                                     <color key="textColor" red="0.34809027777777779" green="0.0" blue="0.01290232143221343" alpha="1" colorSpace="calibratedRGB"/>
@@ -304,6 +312,7 @@
                             </textField>
                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfd-Lg-3Dd">
                                 <rect key="frame" x="349" y="500" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Jlb-bX-Ett">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -314,6 +323,7 @@
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r0b-Gh-n8K">
                                 <rect key="frame" x="77" y="79" width="297" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="nNs-4m-jfN">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -325,6 +335,7 @@
                             </textField>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eof-yR-a57">
                                 <rect key="frame" x="279" y="441" width="95" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="show ip location" bezelStyle="regularSquare" imagePosition="left" controlSize="mini" state="on" inset="2" id="hSI-Ef-WBR">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="miniSystem"/>
@@ -335,6 +346,7 @@
                             </button>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Zc-8z-wCl">
                                 <rect key="frame" x="18" y="20" width="356" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="INFO: due to inaccuracies in the e-mail history and ip-geolocation, the shown locations may be inaccurate" id="xhs-RE-tb5">
                                     <font key="font" metaFont="systemBold" size="12"/>
                                     <color key="textColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
@@ -469,27 +481,22 @@
                                                                 <outlet property="resourceLoadDelegate" destination="Xau-kw-CYI" id="K9I-EB-4Pt"/>
                                                             </connections>
                                                         </webView>
-                                                        <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="eky-YB-NG6">
+                                                        <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="eky-YB-NG6">
                                                             <rect key="frame" x="17" y="199" width="470" height="5"/>
-                                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                            <font key="titleFont" metaFont="system"/>
                                                         </box>
                                                         <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEo-5P-1F2">
                                                             <rect key="frame" x="163" y="210" width="324" height="320"/>
                                                             <clipView key="contentView" id="Jrg-0z-h16">
-                                                                <rect key="frame" x="1" y="1" width="322" height="276"/>
+                                                                <rect key="frame" x="1" y="1" width="322" height="318"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
-                                                                    <textView editable="NO" importsGraphics="NO" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="ggf-jx-FCl">
+                                                                    <textView editable="NO" importsGraphics="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" id="ggf-jx-FCl">
                                                                         <rect key="frame" x="0.0" y="0.0" width="322" height="318"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <size key="minSize" width="322" height="318"/>
                                                                         <size key="maxSize" width="503" height="10000000"/>
                                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <size key="minSize" width="322" height="318"/>
-                                                                        <size key="maxSize" width="503" height="10000000"/>
                                                                         <connections>
                                                                             <binding destination="Xau-kw-CYI" name="valueURL" keyPath="aboutURL" id="mrx-Wg-nmz">
                                                                                 <dictionary key="options">
@@ -541,18 +548,16 @@
                                                         <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAL-4d-qmi">
                                                             <rect key="frame" x="17" y="17" width="470" height="512"/>
                                                             <clipView key="contentView" id="MK6-DM-v5X">
-                                                                <rect key="frame" x="1" y="1" width="468" height="468"/>
+                                                                <rect key="frame" x="1" y="1" width="468" height="510"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
-                                                                    <textView editable="NO" importsGraphics="NO" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="7pl-sT-nx5">
+                                                                    <textView editable="NO" importsGraphics="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" id="7pl-sT-nx5">
                                                                         <rect key="frame" x="0.0" y="0.0" width="468" height="510"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <size key="minSize" width="468" height="510"/>
                                                                         <size key="maxSize" width="693" height="10000000"/>
                                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <size key="minSize" width="468" height="510"/>
-                                                                        <size key="maxSize" width="693" height="10000000"/>
                                                                         <connections>
                                                                             <binding destination="Xau-kw-CYI" name="valueURL" keyPath="readmeURL" id="4ur-H9-VqB">
                                                                                 <dictionary key="options">
@@ -590,18 +595,16 @@
                                                         <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbK-J7-ygN">
                                                             <rect key="frame" x="17" y="17" width="470" height="512"/>
                                                             <clipView key="contentView" id="8uD-bI-7pc">
-                                                                <rect key="frame" x="1" y="1" width="468" height="468"/>
+                                                                <rect key="frame" x="1" y="1" width="468" height="510"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
-                                                                    <textView editable="NO" importsGraphics="NO" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="qon-Pb-OiD">
+                                                                    <textView editable="NO" importsGraphics="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" id="qon-Pb-OiD">
                                                                         <rect key="frame" x="0.0" y="0.0" width="468" height="510"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <size key="minSize" width="468" height="510"/>
                                                                         <size key="maxSize" width="693" height="10000000"/>
                                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <size key="minSize" width="468" height="510"/>
-                                                                        <size key="maxSize" width="693" height="10000000"/>
                                                                         <connections>
                                                                             <binding destination="Xau-kw-CYI" name="valueURL" keyPath="versionhistoryURL" id="TBX-55-r7n">
                                                                                 <dictionary key="options">
@@ -639,18 +642,16 @@
                                                         <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbG-y4-3I6">
                                                             <rect key="frame" x="17" y="17" width="470" height="512"/>
                                                             <clipView key="contentView" id="jVb-5h-CkW">
-                                                                <rect key="frame" x="1" y="1" width="468" height="468"/>
+                                                                <rect key="frame" x="1" y="1" width="468" height="510"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
-                                                                    <textView editable="NO" importsGraphics="NO" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="8xF-VZ-n1B">
+                                                                    <textView editable="NO" importsGraphics="NO" allowsUndo="YES" allowsNonContiguousLayout="YES" id="8xF-VZ-n1B">
                                                                         <rect key="frame" x="0.0" y="0.0" width="468" height="510"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <size key="minSize" width="468" height="510"/>
                                                                         <size key="maxSize" width="693" height="10000000"/>
                                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <size key="minSize" width="468" height="510"/>
-                                                                        <size key="maxSize" width="693" height="10000000"/>
                                                                         <connections>
                                                                             <binding destination="Xau-kw-CYI" name="valueURL" keyPath="faqURL" id="vP0-oI-Sqi">
                                                                                 <dictionary key="options">

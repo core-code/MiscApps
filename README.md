@@ -1,6 +1,6 @@
 MiscApps: A collection of mac applications and tools for developers
 
-https://www.corecode.at/miscstuff/	
+https://www.corecode.io/index_opensource.html
 	
 QTPresenter
 An application that tells "QuickTime Player" to present a movie on the second monitor while it displays playback progress on the first monitor.

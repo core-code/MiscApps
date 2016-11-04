@@ -29,8 +29,9 @@ class ResultViewController: NSViewController {
 
 
 
-	@IBAction func didSelectSource(sender: AnyObject)
+	@IBAction func didSelectSource(_ sender: AnyObject)
 	{
+		print("didSelectSource")
 		if let button = sender as? NSPopUpButton
 		{
 			if button.selectedItem != originMenuItem
@@ -38,33 +39,33 @@ class ResultViewController: NSViewController {
 				let alert = NSAlert()
 				alert.messageText = "Warning";
 				alert.informativeText = "You've not selected the origin of the mail but a server the e-mail went through on its way to the destination."
-				alert.addButtonWithTitle("Show origin location")
-				alert.addButtonWithTitle("Show intermediate-stop location")
+				alert.addButton(withTitle: "Show origin location")
+				alert.addButton(withTitle: "Show intermediate-stop location")
 				let response = alert.runModal()
 				if response == NSAlertFirstButtonReturn
 				{
-					button.selectItem(originMenuItem)
+					button.select(originMenuItem)
 				}
 			}
 		}
 		mapView.removeAnnotations(mapView.annotations)
-		mapView.hidden = true;
+		mapView.isHidden = true;
 		progressIndicator.startAnimation(self)
 
 
 		let res =  historyPopup.titleOfSelectedItem!
-		let str = res.componentsSeparatedByString(": \t")[1]
-		let ip = extractBestIP(str)
-		let priv =  ip !=  "<no-ip>" ? isPrivateIP(ip) : true;
-		let host = extractBestHostname(str)
+		let str = res.components(separatedBy: ": \t")[1]
+		let ip = extractBestIP(str: str)
+		let priv =  ip !=  "<no-ip>" ? isPrivateIP(str: ip) : true;
+		let host = extractBestHostname(str: str)
 
 
 
 		if (priv == false && host != "<no-address>")
 		{
-			ipButton.enabled = true
+			ipButton.isEnabled = true
 
-			if sender.isKindOfClass(NSPopUpButton) == true
+			if sender is NSPopUpButton
 			{
 				ipButton.state = NSOnState
 			}
@@ -74,14 +75,14 @@ class ResultViewController: NSViewController {
 		}
 		else if (priv == true && host != "<no-address>")
 		{
-			ipButton.enabled = false
+			ipButton.isEnabled = false
 			locationBox.title = host
 
 			ipButton.state = NSOffState
 		}
 		else if (priv == false && host == "<no-address>")
 		{
-			ipButton.enabled = false
+			ipButton.isEnabled = false
 
 			locationBox.title = ip
 			ipButton.state = NSOnState
@@ -93,7 +94,7 @@ class ResultViewController: NSViewController {
 
 		assert(!(priv != false && host == "<no-address>"))
 
-		dispatch_async(dispatch_get_global_queue(0, 0))
+		DispatchQueue.global().async
 		{
 			var location : IPGeoLocation?
 
@@ -103,7 +104,7 @@ class ResultViewController: NSViewController {
 			}
 			else
 			{
-				if let ipaddressofhost = NSHost(name: self.locationBox.title).address
+				if let ipaddressofhost = Host(name: self.locationBox.title).address
 				{
 					location = IPGeoLocation(ipaddressofhost)
 				}
@@ -117,24 +118,29 @@ class ResultViewController: NSViewController {
 			{
 				if location.latitude != nil
 				{
+					print("long \(location.latitude) lat \(location.longitude)")
+
 					let ctrpoint : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: location.latitude!, longitude: location.longitude!)
 
-					self.displayCoordinate(ctrpoint, location: location, title: self.locationBox.title)
+					self.displayCoordinate(coord: ctrpoint, location: location, title: self.locationBox.title)
 				}
 				else
 				{
-					//println(location.city + ", " + location.region + ", " + location.country)
+					print(location.city + ", " + location.region + ", " + location.country)
 					let geocoder:CLGeocoder = CLGeocoder()
-					geocoder.geocodeAddressString(location.city, completionHandler: { (placemarks: [CLPlacemark]?, error: NSError?) in
+					geocoder.geocodeAddressString(location.city, completionHandler:
+					{(placemarks: [CLPlacemark]?, error: Error?) -> Void in
 
 						if	let placemark = placemarks?[0] as CLPlacemark!,
-							let coordinates : CLLocationCoordinate2D = placemark.location!.coordinate
+							let loc = placemark.location
 						{
-							self.displayCoordinate(coordinates, location: location, title: self.locationBox.title)
+							let coordinates : CLLocationCoordinate2D = loc.coordinate
+
+							self.displayCoordinate(coord: coordinates, location: location, title: self.locationBox.title)
 						}
-						else if ((error) != nil)
+						else if let error = error
 						{
-							print("Error", error)
+							print("Error", error.localizedDescription)
 						}
 						else
 						{
@@ -143,20 +149,36 @@ class ResultViewController: NSViewController {
 					})
 				}
 			}
+			else
+			{
+				print("Error: couldn't  get coordinates of ip: \(self.locationBox.title)")
+
+				DispatchQueue.main.async
+				{
+					self.progressIndicator.stopAnimation(self)
+
+					let alert = NSAlert()
+					alert.messageText = "Converting IP to Location Failed";
+					alert.informativeText = "Error: couldn't  get coordinates of ip: \(self.locationBox.title)"
+					alert.addButton(withTitle: "OK")
+					alert.runModal()
+				}
+			}
+
 		}
 
 	}
 
 	func displayCoordinate(coord : CLLocationCoordinate2D, location : IPGeoLocation, title : String) -> Void
 	{
-		dispatch_async(dispatch_get_main_queue())
+		DispatchQueue.main.async
 		{
 			let anno : MKPointAnnotation = MKPointAnnotation()
 			anno.coordinate = coord;
 			anno.title = title
 
 			self.progressIndicator.stopAnimation(self)
-			self.mapView.hidden = false;
+			self.mapView.isHidden = false;
 			self.mapView.addAnnotation(anno)
 			self.mapView.centerCoordinate = coord
 			self.mapView.selectAnnotation(anno, animated: true)
@@ -191,21 +213,21 @@ class ResultViewController: NSViewController {
 		{
 			//println(emlString)
 
-			let subject = emlString.rangeOfString("\nSubject: ") != nil ? emlString.componentsSeparatedByString("\nSubject: ")[1].componentsSeparatedByString("\r")[0] as String : ""
-			let sender = emlString.rangeOfString("\nFrom: ") != nil ? emlString.componentsSeparatedByString("\nFrom: ")[1].componentsSeparatedByString("\r")[0] as String : ""
-			let receiver = emlString.rangeOfString("\nTo: ") != nil ? emlString.componentsSeparatedByString("\nTo: ")[1].componentsSeparatedByString("\r")[0] as String : ""
+			let subject = emlString.range(of:"\nSubject: ") != nil ? emlString.components(separatedBy: "\nSubject: ")[1].components(separatedBy: "\r")[0] as String : ""
+			let sender = emlString.range(of:"\nFrom: ") != nil ? emlString.components(separatedBy: "\nFrom: ")[1].components(separatedBy: "\r")[0] as String : ""
+			let receiver = emlString.range(of:"\nTo: ") != nil ? emlString.components(separatedBy: "\nTo: ")[1].components(separatedBy: "\r")[0] as String : ""
 
 
 			var result : [String] = ["Destination: " + receiver]
-			let comp = emlString.componentsSeparatedByString("\nReceived: ")
+			let comp = emlString.components(separatedBy: "\nReceived: ")
 			let comp2 = comp[1..<comp.count]
 
-			for (index, value) in comp2.enumerate()
+			for (index, value) in comp2.enumerated()
 			{
 				var newLine = " "
 				var first = true;
 
-				for line in value.componentsSeparatedByString("\n")
+				for line in value.components(separatedBy: "\n")
 				{
 					//                        println(line)
 
@@ -221,11 +243,11 @@ class ResultViewController: NSViewController {
 					first = false
 				}
 
-				newLine = newLine.componentsSeparatedByString(";")[0]
+				newLine = newLine.components(separatedBy: ";")[0]
 
-				let fromLoc = newLine.rangeOfString("\\sfrom ", options: NSStringCompareOptions.RegularExpressionSearch)
-				let byLoc = newLine.rangeOfString("\\sby ", options: NSStringCompareOptions.RegularExpressionSearch)
-				let forLoc = newLine.rangeOfString("\\sfor ", options: NSStringCompareOptions.RegularExpressionSearch)
+				let fromLoc = newLine.range(of:"\\sfrom ", options: .regularExpression)
+				let byLoc = newLine.range(of:"\\sby ", options: .regularExpression)
+				let forLoc = newLine.range(of:"\\sfor ", options: .regularExpression)
 
 				var fromString = "", byString = "", forString = ""
 
@@ -239,15 +261,15 @@ class ResultViewController: NSViewController {
 					if byLoc != nil {stopLoc = byLoc }
 
 					//assert(stopLoc != nil)
-					if (stopLoc != nil && stopLoc!.startIndex > fromLoc!.startIndex)
+					if (stopLoc != nil && stopLoc!.lowerBound > fromLoc!.lowerBound)
 					{
-						fromString = newLine.substringWithRange(fromLoc!.startIndex ..< stopLoc!.startIndex)
+						fromString = newLine.substring(with: fromLoc!.lowerBound ..< stopLoc!.lowerBound)
 					}
 					else
 					{
-						fromString = newLine.substringFromIndex(fromLoc!.startIndex)
+						fromString = newLine.substring(from: fromLoc!.lowerBound)
 					}
-					fromString = fromString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+					fromString = fromString.trimmingCharacters(in: .whitespacesAndNewlines)
 				}
 				if byLoc != nil
 				{
@@ -255,21 +277,21 @@ class ResultViewController: NSViewController {
 					if forLoc != nil {stopLoc = forLoc }
 
 					//assert(stopLoc != nil)
-					if (stopLoc != nil && stopLoc!.startIndex > byLoc!.startIndex)
+					if (stopLoc != nil && stopLoc!.lowerBound > byLoc!.lowerBound)
 					{
-						byString = newLine.substringWithRange(byLoc!.startIndex ..< stopLoc!.startIndex)
+						byString = newLine.substring(with: byLoc!.lowerBound ..< stopLoc!.lowerBound)
 					}
 					else
 					{
-						byString = newLine.substringFromIndex(byLoc!.startIndex)
+						byString = newLine.substring(from: byLoc!.lowerBound)
 					}
-					byString = byString.componentsSeparatedByString(" with ")[0]
-					byString = byString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+					byString = byString.components(separatedBy: " with ")[0]
+					byString = byString.trimmingCharacters(in: .whitespacesAndNewlines)
 				}
 				if forLoc != nil
 				{
-					forString = newLine.substringFromIndex(forLoc!.startIndex)
-					forString = forString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+					forString = newLine.substring(from: forLoc!.lowerBound)
+					forString = forString.trimmingCharacters(in: .whitespacesAndNewlines)
 				}
 
 
@@ -297,13 +319,13 @@ class ResultViewController: NSViewController {
 
 			originMenuItem = nil
 
-			for res in Array(result.reverse())
+			for res in Array(result.reversed())
 			{
-				self.historyPopup.addItemWithTitle(res)
+				self.historyPopup.addItem(withTitle: res)
 
 				let item = self.historyPopup!.lastItem!
 
-				item.enabled = false
+				item.isEnabled = false
 				item.state = NSOffState
 
 				if res.hasPrefix("Origin: ") || res.hasPrefix("Destination: ")
@@ -312,26 +334,26 @@ class ResultViewController: NSViewController {
 				}
 				else
 				{
-					let str = res.componentsSeparatedByString(": \t")[1]
+					let str = res.components(separatedBy: ": \t")[1]
 					//                    let str = res.hasPrefix("By: \t") == true ? res.substringFromIndex(6) : res.substringFromIndex(8) // TODO
 
-					let ip = extractBestIP(str)
-					let priv =  ip !=  "<no-ip>" ? isPrivateIP(ip) : true;
-					let host = extractBestHostname(str)
+					let ip = extractBestIP(str: str)
+					let priv =  ip !=  "<no-ip>" ? isPrivateIP(str: ip) : true;
+					let host = extractBestHostname(str: str)
 
 					if (host != "<no-address>")
 					{
-						item.enabled = true
+						item.isEnabled = true
 
 					}
 					else if (priv == false)
 					{
-						item.enabled = true
+						item.isEnabled = true
 					}
 
-					if (originMenuItem == nil && item.enabled == true)
+					if (originMenuItem == nil && item.isEnabled == true)
 					{
-						self.historyPopup!.selectItem(item)
+						self.historyPopup!.select(item)
 						originMenuItem = item
 					}
 				}
@@ -342,7 +364,7 @@ class ResultViewController: NSViewController {
 				let alert = NSAlert()
 				alert.messageText = "Import Failed";
 				alert.informativeText = "This e-mail does not contain a single valid sender address."
-				alert.addButtonWithTitle("D'Oh")
+				alert.addButton(withTitle: "D'Oh")
 				alert.runModal()
 			}
 
@@ -351,23 +373,23 @@ class ResultViewController: NSViewController {
 
 
 
-			let xmailer = emlString.rangeOfString("\nX-Mailer: ") != nil ? emlString.componentsSeparatedByString("\nX-Mailer: ")[1].componentsSeparatedByString("\r")[0] as String : ""
-			let agent = emlString.rangeOfString("\nUser-Agent: ") != nil ? emlString.componentsSeparatedByString("\nUser-Agent: ")[1].componentsSeparatedByString("\r")[0] as String : ""
-			mailer = "\(xmailer) \(agent)".stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+			let xmailer = emlString.range(of:"\nX-Mailer: ") != nil ? emlString.components(separatedBy: "\nX-Mailer: ")[1].components(separatedBy: "\r")[0] as String : ""
+			let agent = emlString.range(of:"\nUser-Agent: ") != nil ? emlString.components(separatedBy: "\nUser-Agent: ")[1].components(separatedBy: "\r")[0] as String : ""
+			mailer = "\(xmailer) \(agent)".trimmingCharacters(in: .whitespacesAndNewlines)
 			if mailer == ""
 			{
 				mailer = "[none | webmail]"
 			}
 
-			if emlString.rangeOfString("\nMIME-version: ") != nil
+			if emlString.range(of:"\nMIME-version: ") != nil
 			{
-				let mime = emlString.rangeOfString("\nMIME-version: ") != nil ? emlString.componentsSeparatedByString("\nMIME-version: ")[1].componentsSeparatedByString("\r")[0] as String : ""
+				let mime = emlString.range(of:"\nMIME-version: ") != nil ? emlString.components(separatedBy: "\nMIME-version: ")[1].components(separatedBy: "\r")[0] as String : ""
 
-				let mc = mime.componentsSeparatedByString(" (")
+				let mc = mime.components(separatedBy: " (")
 
 				if mc.count > 1
 				{
-					let info = mc[1].componentsSeparatedByString(")")[0]
+					let info = mc[1].components(separatedBy: ")")[0]
 					mailer = "\(mailer) \(info))"
 				}
 			}
@@ -377,14 +399,14 @@ class ResultViewController: NSViewController {
 			self.isWebmail = true;
 			for validXMailer in ["Airmail", "Apple Mail", "Evolution", "GyazMail", "iPad Mail", "iPhone Mail", "Lotus Notes", "Microsoft Outlook", "Microsoft Windows Mail", "Mozilla", "QUALCOMM", "sparrow", "Thunderbird"]
 			{
-				if xmailer.rangeOfString(validXMailer) != nil
+				if xmailer.range(of:validXMailer) != nil
 				{
 					self.isWebmail = false
 				}
 			}
 			for validAgent in ["KMail", "Microsoft-Entourage", "Microsoft-MacOutlook", "Microsoft-Outlook-Express-Macintosh-Edition", "Thunderbird", "Mutt", "Postbox"]
 			{
-				if agent.rangeOfString(validAgent) != nil
+				if agent.range(of:validAgent) != nil
 				{
 					self.isWebmail = false
 				}
@@ -413,42 +435,42 @@ class ResultViewController: NSViewController {
 
 		repeat
 		{
-			iploc = ipstr.rangeOfString("[\\s,\\[,\\(][0-9][0-9]?[0-9]?\\.[0-9][0-9]?[0-9]?\\.[0-9][0-9]?[0-9]?\\.[0-9][0-9]?[0-9]?[\\s,\\],\\)]?", options: NSStringCompareOptions.RegularExpressionSearch)
+			iploc = ipstr.range(of:"[\\s,\\[,\\(][0-9][0-9]?[0-9]?\\.[0-9][0-9]?[0-9]?\\.[0-9][0-9]?[0-9]?\\.[0-9][0-9]?[0-9]?[\\s,\\],\\)]?", options: .regularExpression)
 
 			if (iploc != nil)
 			{
-				var foundStr = ipstr.substringWithRange(iploc!)
-				ipstr = ipstr.substringFromIndex(iploc!.endIndex)
+				var foundStr = ipstr.substring(with: iploc!)
+				ipstr = ipstr.substring(from: iploc!.upperBound)
 
 				if foundStr[foundStr.startIndex] == Character.init("(")
 				{
-					if foundStr[foundStr.endIndex.predecessor()] != Character.init(")")
+					if foundStr[foundStr.index(before:foundStr.endIndex)] != Character.init(")")
 					{
 						continue
 					}
 					else
 					{
-						foundStr = foundStr.substringFromIndex(foundStr.startIndex.successor())
-						foundStr = foundStr.substringToIndex(foundStr.endIndex.predecessor())
+						foundStr = foundStr.substring(from: foundStr.index(after:foundStr.startIndex))
+						foundStr = foundStr.substring(to: foundStr.index(before:foundStr.endIndex))
 					}
 				}
 				else if foundStr[foundStr.startIndex] == Character.init("[")
 				{
-					if foundStr[foundStr.endIndex.predecessor()] != Character.init("]")
+					if foundStr[foundStr.index(before:foundStr.endIndex)] != Character.init("]")
 					{
 						continue
 					}
 					else
 					{
-						foundStr = foundStr.substringFromIndex(foundStr.startIndex.successor())
-						foundStr = foundStr.substringToIndex(foundStr.endIndex.predecessor())
+						foundStr = foundStr.substring(from: foundStr.index(after:foundStr.startIndex))
+						foundStr = foundStr.substring(to: foundStr.index(before:foundStr.endIndex))
 					}
 				}
 
-				let priv = isPrivateIP(foundStr)
+				let priv = isPrivateIP(str: foundStr)
 				if priv == false
 				{
-					return foundStr.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+					return foundStr.trimmingCharacters(in: .whitespacesAndNewlines)
 				}
 				else if bestip == nil
 				{
@@ -465,32 +487,36 @@ class ResultViewController: NSViewController {
 		}
 		else
 		{
-			return bestip!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+			return bestip!.trimmingCharacters(in: .whitespacesAndNewlines)
 		}
 	}
 
 	func isPrivateIP(str: String) -> Bool
 	{
-		let comp = str.componentsSeparatedByString(".")
+		let comp = str.components(separatedBy: ".")
 		assert(comp.count == 4)
+		let int0 = Int(comp[0].trimmingCharacters(in: .whitespacesAndNewlines))!
+		let int1 = Int(comp[1].trimmingCharacters(in: .whitespacesAndNewlines))!
+		let int2 = Int(comp[2].trimmingCharacters(in: .whitespacesAndNewlines))!
+		let int3 = Int(comp[3].trimmingCharacters(in: .whitespacesAndNewlines))!
 
-		if Int(comp[0]) == 10
+		if int0 == 10
 		{
 			return true
 		}
-		else if Int(comp[0]) == 172 && Int(comp[1]) >= 16 && Int(comp[1]) <= 31
+		else if int0 == 172 && int1 >= 16 && int1 <= 31
 		{
 			return true
 		}
-		else if Int(comp[0]) == 192 && Int(comp[1]) == 168
+		else if int0 == 192 && int1 == 168
 		{
 			return true
 		}
-		else if Int(comp[0]) == 169 && Int(comp[1]) == 254
+		else if int0 == 169 && int1 == 254
 		{
 			return true
 		}
-		else if Int(comp[0]) == 127 && Int(comp[1]) == 0 && Int(comp[2]) == 0 && Int(comp[3]) == 1
+		else if int0 == 127 && int1 == 0 && int2 == 0 && int3 == 1
 		{
 			return true
 		}
@@ -503,10 +529,10 @@ class ResultViewController: NSViewController {
 		let tlds = ["\\.abogado", "\\.ac", "\\.academy", "\\.accountants", "\\.active", "\\.actor", "\\.ad", "\\.adult", "\\.ae", "\\.aero", "\\.af", "\\.ag", "\\.agency", "\\.ai", "\\.airforce", "\\.al", "\\.allfinanz", "\\.alsace", "\\.am", "\\.an", "\\.android", "\\.ao", "\\.aq", "\\.aquarelle", "\\.ar", "\\.archi", "\\.army", "\\.arpa", "\\.as", "\\.asia", "\\.associates", "\\.at", "\\.attorney", "\\.au", "\\.auction", "\\.audio", "\\.autos", "\\.aw", "\\.ax", "\\.axa", "\\.az", "\\.ba", "\\.band", "\\.bar", "\\.bargains", "\\.bayern", "\\.bb", "\\.bd", "\\.be", "\\.beer", "\\.berlin", "\\.best", "\\.bf", "\\.bg", "\\.bh", "\\.bi", "\\.bid", "\\.bike", "\\.bio", "\\.biz", "\\.bj", "\\.black", "\\.blackfriday", "\\.bloomberg", "\\.blue", "\\.bm", "\\.bmw", "\\.bn", "\\.bnpparibas", "\\.bo", "\\.boo", "\\.boutique", "\\.br", "\\.brussels", "\\.bs", "\\.bt", "\\.budapest", "\\.build", "\\.builders", "\\.business", "\\.buzz", "\\.bv", "\\.bw", "\\.by", "\\.bz", "\\.bzh", "\\.ca", "\\.cab", "\\.cal", "\\.camera", "\\.camp", "\\.cancerresearch", "\\.capetown", "\\.capital", "\\.caravan", "\\.cards", "\\.care", "\\.career", "\\.careers", "\\.cartier", "\\.casa", "\\.cash", "\\.cat", "\\.catering", "\\.cc", "\\.cd", "\\.center", "\\.ceo", "\\.cern", "\\.cf", "\\.cg", "\\.ch", "\\.channel", "\\.cheap", "\\.christmas", "\\.chrome", "\\.church", "\\.ci", "\\.citic", "\\.city", "\\.ck", "\\.cl", "\\.claims", "\\.cleaning", "\\.click", "\\.clinic", "\\.clothing", "\\.club", "\\.cm", "\\.cn", "\\.co", "\\.coach", "\\.codes", "\\.coffee", "\\.college", "\\.cologne", "\\.com", "\\.community", "\\.company", "\\.computer", "\\.condos", "\\.construction", "\\.consulting", "\\.contractors", "\\.cooking", "\\.cool", "\\.coop", "\\.country", "\\.cr", "\\.credit", "\\.creditcard", "\\.cricket", "\\.crs", "\\.cruises", "\\.cu", "\\.cuisinella", "\\.cv", "\\.cw", "\\.cx", "\\.cy", "\\.cymru", "\\.cz", "\\.dad", "\\.dance", "\\.dating", "\\.day", "\\.de", "\\.deals", "\\.degree", "\\.delivery", "\\.democrat", "\\.dental", "\\.dentist", "\\.desi", "\\.dev", "\\.diamonds", "\\.diet", "\\.digital", "\\.direct", "\\.directory", "\\.discount", "\\.dj", "\\.dk", "\\.dm", "\\.dnp", "\\.do", "\\.docs", "\\.domains", "\\.doosan", "\\.durban", "\\.dvag", "\\.dz", "\\.eat", "\\.ec", "\\.edu", "\\.education", "\\.ee", "\\.eg", "\\.email", "\\.emerck", "\\.energy", "\\.engineer", "\\.engineering", "\\.enterprises", "\\.equipment", "\\.er", "\\.es", "\\.esq", "\\.estate", "\\.et", "\\.eu", "\\.eurovision", "\\.eus", "\\.events", "\\.everbank", "\\.exchange", "\\.expert", "\\.exposed", "\\.fail", "\\.farm", "\\.fashion", "\\.feedback", "\\.fi", "\\.finance", "\\.financial", "\\.firmdale", "\\.fish", "\\.fishing", "\\.fitness", "\\.fj", "\\.fk", "\\.flights", "\\.florist", "\\.flsmidth", "\\.fly", "\\.fm", "\\.fo", "\\.foo", "\\.forsale", "\\.foundation", "\\.fr", "\\.frl", "\\.frogans", "\\.fund", "\\.furniture", "\\.futbol", "\\.ga", "\\.gal", "\\.gallery", "\\.garden", "\\.gb", "\\.gbiz", "\\.gd", "\\.ge", "\\.gent", "\\.gf", "\\.gg", "\\.gh", "\\.gi", "\\.gift", "\\.gifts", "\\.gives", "\\.gl", "\\.glass", "\\.gle", "\\.global", "\\.globo", "\\.gm", "\\.gmail", "\\.gmo", "\\.gmx", "\\.gn", "\\.google", "\\.gop", "\\.gov", "\\.gp", "\\.gq", "\\.gr", "\\.graphics", "\\.gratis", "\\.green", "\\.gripe", "\\.gs", "\\.gt", "\\.gu", "\\.guide", "\\.guitars", "\\.guru", "\\.gw", "\\.gy", "\\.hamburg", "\\.haus", "\\.healthcare", "\\.help", "\\.here", "\\.hiphop", "\\.hiv", "\\.hk", "\\.hm", "\\.hn", "\\.holdings", "\\.holiday", "\\.homes", "\\.horse", "\\.host", "\\.hosting", "\\.house", "\\.how", "\\.hr", "\\.ht", "\\.hu", "\\.ibm", "\\.id", "\\.ie", "\\.il", "\\.im", "\\.immo", "\\.immobilien", "\\.in", "\\.industries", "\\.info", "\\.ing", "\\.ink", "\\.institute", "\\.insure", "\\.int", "\\.international", "\\.investments", "\\.io", "\\.iq", "\\.ir", "\\.irish", "\\.is", "\\.it", "\\.iwc", "\\.je", "\\.jetzt", "\\.jm", "\\.jo", "\\.jobs", "\\.joburg", "\\.jp", "\\.juegos", "\\.kaufen", "\\.ke", "\\.kg", "\\.kh", "\\.ki", "\\.kim", "\\.kitchen", "\\.kiwi", "\\.km", "\\.kn", "\\.koeln", "\\.kp", "\\.kr", "\\.krd", "\\.kred", "\\.kw", "\\.ky", "\\.kz", "\\.la", "\\.lacaixa", "\\.land", "\\.latrobe", "\\.lawyer", "\\.lb", "\\.lc", "\\.lds", "\\.lease", "\\.legal", "\\.lgbt", "\\.li", "\\.lidl", "\\.life", "\\.lighting", "\\.limited", "\\.limo", "\\.link", "\\.lk", "\\.loans", "\\.london", "\\.lotto", "\\.lr", "\\.ls", "\\.lt", "\\.ltda", "\\.lu", "\\.luxe", "\\.luxury", "\\.lv", "\\.ly", "\\.ma", "\\.madrid", "\\.maison", "\\.management", "\\.mango", "\\.market", "\\.marketing", "\\.mc", "\\.md", "\\.me", "\\.media", "\\.meet", "\\.melbourne", "\\.meme", "\\.memorial", "\\.menu", "\\.mg", "\\.mh", "\\.miami", "\\.mil", "\\.mini", "\\.mk", "\\.ml", "\\.mm", "\\.mn", "\\.mo", "\\.mobi", "\\.moda", "\\.moe", "\\.monash", "\\.money", "\\.mormon", "\\.mortgage", "\\.moscow", "\\.motorcycles", "\\.mov", "\\.mp", "\\.mq", "\\.mr", "\\.ms", "\\.mt", "\\.mu", "\\.museum", "\\.mv", "\\.mw", "\\.mx", "\\.my", "\\.mz", "\\.na", "\\.nagoya", "\\.name", "\\.navy", "\\.nc", "\\.ne", "\\.net", "\\.network", "\\.neustar", "\\.new", "\\.nexus", "\\.nf", "\\.ng", "\\.ngo", "\\.nhk", "\\.ni", "\\.ninja", "\\.nl", "\\.no", "\\.np", "\\.nr", "\\.nra", "\\.nrw", "\\.nu", "\\.nyc", "\\.nz", "\\.okinawa", "\\.om", "\\.ong", "\\.onl", "\\.ooo", "\\.org", "\\.organic", "\\.osaka", "\\.otsuka", "\\.ovh", "\\.pa", "\\.paris", "\\.partners", "\\.parts", "\\.party", "\\.pe", "\\.pf", "\\.pg", "\\.ph", "\\.pharmacy", "\\.photo", "\\.photography", "\\.photos", "\\.physio", "\\.pics", "\\.pictures", "\\.pink", "\\.pizza", "\\.pk", "\\.pl", "\\.place", "\\.plumbing", "\\.pm", "\\.pn", "\\.pohl", "\\.poker", "\\.porn", "\\.post", "\\.pr", "\\.praxi", "\\.press", "\\.pro", "\\.prod", "\\.productions", "\\.prof", "\\.properties", "\\.property", "\\.ps", "\\.pt", "\\.pub", "\\.pw", "\\.py", "\\.qa", "\\.qpon", "\\.quebec", "\\.re", "\\.realtor", "\\.recipes", "\\.red", "\\.rehab", "\\.reise", "\\.reisen", "\\.reit", "\\.ren", "\\.rentals", "\\.repair", "\\.report", "\\.republican", "\\.rest", "\\.restaurant", "\\.reviews", "\\.rich", "\\.rio", "\\.rip", "\\.ro", "\\.rocks", "\\.rodeo", "\\.rs", "\\.rsvp", "\\.ru", "\\.ruhr", "\\.rw", "\\.ryukyu", "\\.sa", "\\.saarland", "\\.samsung", "\\.sarl", "\\.sb", "\\.sc", "\\.sca", "\\.scb", "\\.schmidt", "\\.schule", "\\.schwarz", "\\.science", "\\.scot", "\\.sd", "\\.se", "\\.services", "\\.sew", "\\.sexy", "\\.sg", "\\.sh", "\\.shiksha", "\\.shoes", "\\.si", "\\.singles", "\\.sj", "\\.sk", "\\.sky", "\\.sl", "\\.sm", "\\.sn", "\\.so", "\\.social", "\\.software", "\\.sohu", "\\.solar", "\\.solutions", "\\.soy", "\\.space", "\\.spiegel", "\\.sr", "\\.st", "\\.su", "\\.supplies", "\\.supply", "\\.support", "\\.surf", "\\.surgery", "\\.suzuki", "\\.sv", "\\.sx", "\\.sy", "\\.sydney", "\\.systems", "\\.sz", "\\.taipei", "\\.tatar", "\\.tattoo", "\\.tax", "\\.tc", "\\.td", "\\.technology", "\\.tel", "\\.tf", "\\.tg", "\\.th", "\\.tienda", "\\.tips", "\\.tires", "\\.tirol", "\\.tj", "\\.tk", "\\.tl", "\\.tm", "\\.tn", "\\.to", "\\.today", "\\.tokyo", "\\.tools", "\\.top", "\\.town", "\\.toys", "\\.tp", "\\.tr", "\\.trade", "\\.training", "\\.travel", "\\.trust", "\\.tt", "\\.tui", "\\.tv", "\\.tw", "\\.tz", "\\.ua", "\\.ug", "\\.uk", "\\.university", "\\.uno", "\\.uol", "\\.us", "\\.uy", "\\.uz", "\\.va", "\\.vacations", "\\.vc", "\\.ve", "\\.vegas", "\\.ventures", "\\.versicherung", "\\.vet", "\\.vg", "\\.vi", "\\.viajes", "\\.villas", "\\.vision", "\\.vlaanderen", "\\.vn", "\\.vodka", "\\.vote", "\\.voting", "\\.voto", "\\.voyage", "\\.vu", "\\.wales", "\\.wang", "\\.watch", "\\.webcam", "\\.website", "\\.wed", "\\.wedding", "\\.wf", "\\.whoswho", "\\.wien", "\\.wiki", "\\.williamhill", "\\.wme", "\\.work", "\\.works", "\\.world", "\\.ws", "\\.wtc", "\\.wtf", "\\.xn--1qqw23a", "\\.xn--3bst00m", "\\.xn--3ds443g", "\\.xn--3e0b707e", "\\.xn--45brj9c", "\\.xn--45q11c", "\\.xn--4gbrim", "\\.xn--55qw42g", "\\.xn--55qx5d", "\\.xn--6frz82g", "\\.xn--6qq986b3xl", "\\.xn--80adxhks", "\\.xn--80ao21a", "\\.xn--80asehdb", "\\.xn--80aswg", "\\.xn--90a3ac", "\\.xn--c1avg", "\\.xn--cg4bki", "\\.xn--clchc0ea0b2g2a9gcd", "\\.xn--czr694b", "\\.xn--czrs0t", "\\.xn--czru2d", "\\.xn--d1acj3b", "\\.xn--d1alf", "\\.xn--fiq228c5hs", "\\.xn--fiq64b", "\\.xn--fiqs8s", "\\.xn--fiqz9s", "\\.xn--flw351e", "\\.xn--fpcrj9c3d", "\\.xn--fzc2c9e2c", "\\.xn--gecrj9c", "\\.xn--h2brj9c", "\\.xn--hxt814e", "\\.xn--i1b6b1a6a2e", "\\.xn--io0a7i", "\\.xn--j1amh", "\\.xn--j6w193g", "\\.xn--kprw13d", "\\.xn--kpry57d", "\\.xn--kput3i", "\\.xn--l1acc", "\\.xn--lgbbat1ad8j", "\\.xn--mgb9awbf", "\\.xn--mgba3a4f16a", "\\.xn--mgbaam7a8h", "\\.xn--mgbab2bd", "\\.xn--mgbayh7gpa", "\\.xn--mgbbh1a71e", "\\.xn--mgbc0a9azcg", "\\.xn--mgberp4a5d4ar", "\\.xn--mgbx4cd0ab", "\\.xn--ngbc5azd", "\\.xn--node", "\\.xn--nqv7f", "\\.xn--nqv7fs00ema", "\\.xn--o3cw4h", "\\.xn--ogbpf8fl", "\\.xn--p1acf", "\\.xn--p1ai", "\\.xn--pgbs0dh", "\\.xn--q9jyb4c", "\\.xn--qcka1pmc", "\\.xn--rhqv96g", "\\.xn--s9brj9c", "\\.xn--ses554g", "\\.xn--unup4y", "\\.xn--vermgensberater-ctb", "\\.xn--vermgensberatung-pwb", "\\.xn--vhquv", "\\.xn--wgbh1c", "\\.xn--wgbl6a", "\\.xn--xhq521b", "\\.xn--xkc2al3hye2a", "\\.xn--xkc2dl3a5ee0h", "\\.xn--yfro4i67o", "\\.xn--ygbi2ammx", "\\.xn--zfr164b", "\\.xxx", "\\.xyz", "\\.yachts", "\\.yandex", "\\.ye", "\\.yoga", "\\.yokohama", "\\.youtube", "\\.yt", "\\.za", "\\.zip", "\\.zm", "\\.zone", "\\.zw"]
 		for tld in tlds
 		{
-			if let loc = str.rangeOfString("[a-z,A-Z,\\.,0-9,-]*" + tld + "[\\),\\s,\\.]", options: NSStringCompareOptions.RegularExpressionSearch)
+			if let loc = str.range(of:"[a-z,A-Z,\\.,0-9,-]*" + tld + "[\\),\\s,\\.]", options: .regularExpression)
 			{
-				let host = str.substringWithRange(loc.startIndex ..< loc.endIndex.advancedBy(-1))
-				if NSHost(name: host).address != nil
+				let host = str.substring(with: loc.lowerBound ..< str.index(loc.upperBound, offsetBy:-1))
+				if Host(name: host).address != nil
 				{
 					return host
 				}
@@ -514,10 +540,10 @@ class ResultViewController: NSViewController {
 		}
 		for tld in tlds
 		{
-			if let loc = str.rangeOfString("[a-z,A-Z,\\.,0-9,-]*" + tld + "\\z", options: NSStringCompareOptions.RegularExpressionSearch)
+			if let loc = str.range(of:"[a-z,A-Z,\\.,0-9,-]*" + tld + "\\z", options: .regularExpression)
 			{
-				let host = str.substringWithRange(loc)
-				if NSHost(name: host).address != nil
+				let host = str.substring(with: loc)
+				if Host(name: host).address != nil
 				{
 					return host
 				}
@@ -527,7 +553,8 @@ class ResultViewController: NSViewController {
 		return "<no-address>"
 	}
 
-	@IBAction func urlButtonClicked(sender: AnyObject)
+
+	@IBAction func urlButtonClicked(_ sender: AnyObject)
 	{
 		let urlstr = objc_getAssociatedObject(self.providerButton, &kSomeKey) as! String?
 
@@ -535,16 +562,16 @@ class ResultViewController: NSViewController {
 		{
 			if let url = NSURL(string: urlstr!)
 			{
-				NSWorkspace.sharedWorkspace().openURL(url)
+				NSWorkspace.shared().open(url as URL)
 			}
 		}
 	}
 
-	@IBAction func helpButtonClicked(sender: AnyObject)
+	@IBAction func helpButtonClicked(_ sender: AnyObject)
 	{
-		let hm = NSHelpManager.sharedHelpManager()
-		hm.setContextHelp(NSAttributedString(string: "The email IP history contains all 'IP-addresses' the mail went through from the sender to you.\nThe topmost entry is closest to the sender, the bottommost entry is clostest to you.\nMailSpy automatically selects the closest displayable address to the sender.\nYou will be asked for confirmation if you want to display any other address, as it may not be near the sender."), forObject: sender)
-		hm.showContextHelpForObject(sender, locationHint: NSEvent.mouseLocation())
-		hm.removeContextHelpForObject(sender)
+		let hm = NSHelpManager.shared()
+		hm.setContextHelp(NSAttributedString(string: "The email IP history contains all 'IP-addresses' the mail went through from the sender to you.\nThe topmost entry is closest to the sender, the bottommost entry is clostest to you.\nMailSpy automatically selects the closest displayable address to the sender.\nYou will be asked for confirmation if you want to display any other address, as it may not be near the sender."), for: sender)
+		hm.showContextHelp(for: sender, locationHint: NSEvent.mouseLocation())
+		hm.removeContextHelp(for: sender)
 	}
 }

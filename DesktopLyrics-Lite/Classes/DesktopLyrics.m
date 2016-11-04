@@ -120,7 +120,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		[userDefaults setInteger:0 forKey:kFirstStartKey];
 	}
 
-	CheckAndReportCrashes(@"crashreports@corecode.at", [NSArray arrayWithObjects:@"[Desktop", @"[iTunes", @"[SU", @"LoginItem", @"[NSException", @"uncaught exception", nil]);
+	CheckAndReportCrashes(@"crashreports@corecode.io", [NSArray arrayWithObjects:@"[Desktop", @"[iTunes", @"[SU", @"LoginItem", @"[NSException", @"uncaught exception", nil]);
 
 
 	SGKeyCombo *keyCombo;

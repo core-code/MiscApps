@@ -24,7 +24,7 @@ class DropViewController: NSViewController
 		super.viewDidLoad()
 
 
-		NSNotificationCenter.defaultCenter().addObserverForName("dropReceived", object: nil, queue: NSOperationQueue.mainQueue() )
+		NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "dropReceived"), object: nil, queue: OperationQueue.main )
 		{ not in
 
 
@@ -32,18 +32,18 @@ class DropViewController: NSViewController
 
 			if (self.progresses == 0)
 			{
-				dispatch_async(dispatch_get_global_queue(0, 0))
+				DispatchQueue.global().async
 				{
 					self.view.window!.beginProgress("Importing")
 				}
 			}
 			self.progresses += 1
 
-			dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC))), dispatch_get_main_queue())
+			DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) 
 			{
 
 				let storyboard = NSStoryboard(name: "Main", bundle: nil)
-				let wc = storyboard.instantiateControllerWithIdentifier("detailWindowController") as! NSWindowController
+				let wc = storyboard.instantiateController(withIdentifier: "detailWindowController") as! NSWindowController
 				let resultViewController = wc.contentViewController as! ResultViewController
 				resultViewController.emlString = not.object as! String
 				self.controllers.append(wc)
@@ -52,13 +52,13 @@ class DropViewController: NSViewController
 
 
 
-				if NSHost(name: "www.google.com").address != nil
+				if Host(name: "www.google.com").address != nil
 				{
-					dispatch_async(dispatch_get_main_queue())
+					DispatchQueue.main.async
 					{
 
 						wc.showWindow(nil)
-						NSApp.activateIgnoringOtherApps(true)
+						NSApp.activate(ignoringOtherApps: true)
 						wc.window?.setFrameOrigin(CGPoint(x:Int(wc.window!.frame.origin.x) + index * 30, y:Int(wc.window!.frame.origin.y) + index * -30))
 						wc.window?.makeKeyAndOrderFront(nil)
 
@@ -72,13 +72,13 @@ class DropViewController: NSViewController
 				}
 				else
 				{
-					dispatch_async(dispatch_get_main_queue())
+					DispatchQueue.main.async
 					{
 						self.view.window!.endProgress()
 						let alert = NSAlert()
 						alert.messageText = "Network Offline";
 						alert.informativeText = "You need an active internet connection to analyze mails and display their origin location in the map."
-						alert.addButtonWithTitle("D'Oh")
+						alert.addButton(withTitle: "D'Oh")
 						alert.runModal()
 					}
 				}

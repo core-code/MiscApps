@@ -311,15 +311,16 @@ void alertfeedbackfatal(NSString *usermsg, NSString *details)
             
 		if (NSRunAlertPanel(@"Fatal Error", @"%@\n\n You can contact our support with detailed information so that we can fix this problem.\n\nInformation: %@", @"Send to support", @"Quit", nil, usermsg, visibleDetails) == NSOKButton)
 		{
-			NSString *mailtoLink = makeString(@"mailto:feedback@corecode.at?subject=%@ v%@ Problem Report&body=Hello\nA fatal error in %@ occured (%@).\n\nBye\n\nP.S. Details: %@\n\n\nP.P.S: Hardware: %@ Software: %@ %@",
-											  cc.appName,
-											  cc.appVersionString,
-											  cc.appName,
-											  usermsg,
-											  details,
-											  _machineType(),
-											  [[NSProcessInfo processInfo] operatingSystemVersionString],
-											  ([cc.appCrashLogs count] ? makeString(@" Problems: %li", [cc.appCrashLogs count]) : @""));
+			NSString *mailtoLink = makeString(@"mailto:%@?subject=%@ v%@ Problem Report&body=Hello\nA fatal error in %@ occured (%@).\n\nBye\n\nP.S. Details: %@\n\n\nP.P.S: Hardware: %@ Software: %@ %@",
+											kFeedbackEmail,
+											cc.appName,
+											cc.appVersionString,
+											cc.appName,
+											usermsg,
+											details,
+											_machineType(),
+											[[NSProcessInfo processInfo] operatingSystemVersionString],
+											([cc.appCrashLogs count] ? makeString(@" Problems: %li", [cc.appCrashLogs count]) : @""));
 			
 			[mailtoLink.escaped.URL open];
 		}

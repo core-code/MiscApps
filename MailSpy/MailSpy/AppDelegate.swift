@@ -22,25 +22,21 @@ class AppDelegate: NSObject, NSApplicationDelegate
 {
 
 
-	func applicationDidFinishLaunching(aNotification: NSNotification)
+	func applicationDidFinishLaunching(_ aNotification: Notification)
 	{
 		cc = CoreLib()
 
 
-		let libstr : NSString = "~/Library/"
 		let docstr : NSString = "~/Documents/"
-
-		assert(libstr.stringByExpandingTildeInPath.rangeOfString("/Library/Containers/") != nil)
-
-		let docDir : NSString = docstr.stringByExpandingTildeInPath
-		let files = (try! NSFileManager.defaultManager().subpathsOfDirectoryAtPath(docDir as String)) 
+		let docDir : NSString = docstr.expandingTildeInPath as NSString
+		let files = (try! FileManager.default.subpathsOfDirectory(atPath: docDir as String)) 
 		for file in files
 		{
-			let fullFile = docDir.stringByAppendingPathComponent(file)
+			let fullFile = docDir.appendingPathComponent(file)
 			if fullFile.hasSuffix(".eml")
 			{
 				do {
-					try NSFileManager.defaultManager().removeItemAtPath(fullFile)
+					try FileManager.default.removeItem(atPath: fullFile)
 				} catch _ {
 				}
 			}
@@ -64,16 +60,16 @@ class AppDelegate: NSObject, NSApplicationDelegate
 	}
 
     
-    func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool
 	{
         return true;
     }
 
-	@IBAction func openURL(sender: AnyObject)
+	@IBAction func openURL(_ sender: AnyObject)
 	{
-		let first = sender.valueForKey("tag")?.intValue as Int32!
+		let first = (sender.value(forKey:"tag") as AnyObject).intValue as Int32!
 
-		cc.openURL(first)
+		cc.openURL(first!)
 	}
 }
 

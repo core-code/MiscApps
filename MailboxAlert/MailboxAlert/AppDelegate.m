@@ -421,11 +421,11 @@ CONST_KEY(WelcomeShown)
 	NSString *urlString = @"";
 
 	if (tag == 1)
-		urlString = makeString(@"mailto:feedback@corecode.at?subject=%@ %@ Support Request (License code: %@)&body=Insert Support Request Here\n\n\n\nP.S: Hardware: %@ Software: %@ %@: %i%@", cc.appName, cc.appVersionString, cc.appChecksumSHA, [JMHostInformation machineType], [NSProcessInfo processInfo].operatingSystemVersionString, cc.appName, cc.appBuildNumber, ((cc.appCrashLogs).count ? makeString(@" Problems: %li", (cc.appCrashLogs).count) : @""));
+		urlString = makeString(@"mailto:feedback@corecode.io?subject=%@ %@ Support Request (License code: %@)&body=Insert Support Request Here\n\n\n\nP.S: Hardware: %@ Software: %@ %@: %i%@", cc.appName, cc.appVersionString, cc.appChecksumSHA, [JMHostInformation machineType], [NSProcessInfo processInfo].operatingSystemVersionString, cc.appName, cc.appBuildNumber, ((cc.appCrashLogs).count ? makeString(@" Problems: %li", (cc.appCrashLogs).count) : @""));
 	else if (tag == 2)
-		urlString = makeString(@"mailto:feedback@corecode.at?subject=%@ Beta Versions&body=Hello\nI would like to test upcoming beta versions of %@.\nBye\n", cc.appName, cc.appName);
+		urlString = makeString(@"mailto:feedback@corecode.io?subject=%@ Beta Versions&body=Hello\nI would like to test upcoming beta versions of %@.\nBye\n", cc.appName, cc.appName);
 	else if (tag == 3)
-		urlString = makeString(@"https://www.corecode.at/%@/", (cc.appName).lowercaseString);
+		urlString = makeString(@"https://www.corecode.io/%@/", (cc.appName).lowercaseString);
 	else if (tag == 4)
 		urlString = @"https://itunes.apple.com/us/app/mailboxalert/id595630519?mt=12";
 

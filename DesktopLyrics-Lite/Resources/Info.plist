@@ -39,7 +39,7 @@
 	<key>NSSupportsSuddenTermination</key>
 	<string>YES</string>
 	<key>SUFeedURL</key>
-	<string>https://www.corecode.at/desktoplyrics/desktoplyrics.xml</string>
+	<string>https://www.corecode.io/desktoplyrics/desktoplyrics.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 	<key>SUScheduledCheckInterval</key>

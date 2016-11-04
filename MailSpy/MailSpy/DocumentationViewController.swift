@@ -28,41 +28,42 @@ class DocumentationViewController : NSViewController
 	{
 		super.viewDidLoad()
 
+
 		self.build = "Build: \(cc.appBuild)"
-		self.version = "Version: \(cc.appVersionString)"
+		self.version = "Version: \(cc.appVersionString!)"
 
 
-		self.aboutURL = NSBundle.mainBundle().URLForResource("Credits.rtfd", withExtension: nil)
-		self.versionhistoryURL = NSBundle.mainBundle().URLForResource("History.rtf", withExtension: nil)
-		self.faqURL = NSBundle.mainBundle().URLForResource("FAQ.rtf", withExtension: nil)
-		self.readmeURL = NSBundle.mainBundle().URLForResource("Read Me.rtf", withExtension: nil)
+		self.aboutURL = Bundle.main.url(forResource: "Credits.rtfd", withExtension: nil) as NSURL?
+		self.versionhistoryURL = Bundle.main.url(forResource: "History.rtf", withExtension: nil) as NSURL?
+		self.faqURL = Bundle.main.url(forResource: "FAQ.rtf", withExtension: nil) as NSURL?
+		self.readmeURL = Bundle.main.url(forResource: "Read Me.rtf", withExtension: nil) as NSURL?
 
 
-		self.webView.mainFrame.loadRequest(NSURLRequest(URL: NSURL(string: "https://www.corecode.at/promotion/promotion.html")!))
+		self.webView.mainFrame.load(NSURLRequest(url: NSURL(string: "https://www.corecode.io/promotion/promotion.html")! as URL) as URLRequest)
 	}
 
-	@IBAction func openURL(sender: AnyObject)
+	@IBAction func openURL(_ sender: AnyObject)
 	{
-		let first = sender.valueForKey("tag")?.intValue as Int32!
+		let first = (sender.value(forKey:"tag") as AnyObject).intValue as Int32!
 
-		cc.openURL(first)
+		cc.openURL(first!)
 	}
 
-	func webView(sender: WebView!, resource identifier: AnyObject!, didFinishLoadingFromDataSource dataSource: WebDataSource!)
+	func webView(_ sender: WebView!, resource identifier: AnyObject!, didFinishLoadingFromDataSource dataSource: WebDataSource!)
 	{
 
-		self.webView.stringByEvaluatingJavaScriptFromString("document.documentElement.style.zoom = \"0.5875\"")
+		self.webView.stringByEvaluatingJavaScript(from: "document.documentElement.style.zoom = \"0.5875\"")
 	}
 
-	func webView(webView: WebView!, decidePolicyForNavigationAction actionInformation: [NSObject : AnyObject]!, request: NSURLRequest!, frame: WebFrame!, decisionListener listener: WebPolicyDecisionListener!)
+	func webView(_ webView: WebView!, decidePolicyForNavigationAction actionInformation: [NSObject : AnyObject]!, request: NSURLRequest!, frame: WebFrame!, decisionListener listener: WebPolicyDecisionListener!)
 	{
-		if request.URL!.absoluteString == "https://www.corecode.at/promotion/promotion.html"
+		if request.url!.absoluteString == "https://www.corecode.io/promotion/promotion.html"
 		{
 			listener.use()
 		}
 		else
 		{
-			NSWorkspace.sharedWorkspace().openURL(request.URL!)
+			NSWorkspace.shared().open(request.url!)
 
 			listener.ignore()
 		}

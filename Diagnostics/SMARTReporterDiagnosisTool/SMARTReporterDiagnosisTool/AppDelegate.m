@@ -35,6 +35,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 {
 	tmpPath = [makeTempFolder() stringByAppendingString:@"/"];
 	tmpURL = tmpPath.fileURL;
+	LOG(tmpPath);
 
 	[fileManager copyItemAtPath:[@"~/Library/Application Support/SMARTReporter/" stringByExpandingTildeInPath]
 						 toPath:[tmpPath stringByAppendingString:@"SMARTReporter"] error:NULL];
@@ -76,6 +77,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		[tmpURL add:makeString(@"smart%i", i)].contents = [@[@"smartctl".resourcePath, @"--tolerance=permissive", @"--smart=on", @"-a", makeString(@"disk%i", i)] runAsTask].data;
 
 	
+	[tmpURL add:@"diskspacecheck"].contents = [self localVolumes].data;
 
 #warning other loginitems?
 
@@ -117,7 +119,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	
 	if ([JMEmailSender sendMailWithScriptingBridge:@"hello corecode,\nhelpful files to diagnose SMARTReporter problems are attached.\nbye\n\n "
                                            subject:@"SMARTReporter Diagnose Files"
-                                                to:@"feedback@corecode.at"
+                                                to:@"feedback@corecode.io"
                                            timeout:60
                                         attachment:attachment.path] == kSMTPSuccess)
 	{
@@ -130,7 +132,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 							 error:NULL];
 
 
-		NSRunAlertPanel(@"Result", @"Sending failed. Send the file yourself to <feedback@corecode.at>, it is now on your desktop.", @"OK", nil, nil);
+		NSRunAlertPanel(@"Result", @"Sending failed. Send the file yourself to <feedback@corecode.io>, it is now on your desktop.", @"OK", nil, nil);
 	}
 
 	[fileManager removeItemAtURL:tmpURL error:NULL];
@@ -174,4 +176,41 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 	return tmp;
 }
+
+- (NSString *)localVolumes
+{
+	NSArray *paths = [workspace mountedLocalVolumePaths];
+	NSString *filteredPaths = @"";
+
+
+	for (NSString *path in paths)
+	{
+		if (![path isEqualToString:@"/"] && ![path hasPrefix:@"/Volumes/"])
+			continue;
+
+		if ([path isEqualToString:@"/Volumes/MobileBackups"])
+			continue;
+
+
+		NSString *description, *type;
+		BOOL removable = NO, writable, unmountable;
+
+		[workspace getFileSystemInfoForPath:path
+								isRemovable:&removable
+								 isWritable:&writable
+							  isUnmountable:&unmountable
+								description:&description
+									   type:&type];
+
+		filteredPaths = [filteredPaths stringByAppendingString:makeString(@"Disk-Space check: path %@	isRemovable: %i isWritable: %i isUnmountable: %i description: %@ type: %@\n", path, removable, writable, unmountable, description, type)];
+
+		if (removable || [@[@"nfs", @"afpfs", @"smbfs"] contains:type.lowercaseString])
+			continue;
+
+		filteredPaths = [filteredPaths stringByAppendingString:makeString(@"\n\n%@\n\n", path)];
+	}
+
+	return filteredPaths;
+}
+
 @end

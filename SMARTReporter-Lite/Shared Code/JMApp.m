@@ -48,16 +48,16 @@ SUUpdater *updater;
 	switch ([sender tag])
 	{
 		case -1:
-			path = [NSString stringWithFormat:@"mailto:feedback@corecode.at?subject=%@ Beta Signup&body=hello\ni would like to help development by testing beta releases. i am a knowledgable poweruser and will provide detailed bug- and regression reports.\nbye\n\nP.S: Hardware: %@ Software: %@", name, [HostInformation machineType], [[NSProcessInfo processInfo] operatingSystemVersionString]];
+			path = [NSString stringWithFormat:@"mailto:feedback@corecode.io?subject=%@ Beta Signup&body=hello\ni would like to help development by testing beta releases. i am a knowledgable poweruser and will provide detailed bug- and regression reports.\nbye\n\nP.S: Hardware: %@ Software: %@", name, [HostInformation machineType], [[NSProcessInfo processInfo] operatingSystemVersionString]];
 			break;
 		case 0:
-			path = [NSString stringWithFormat:@"%@%@%@%@_%@", @"https://www.paypal.com/xclick/business=donations%40corecode.at&item_name=", name, @"+Development&no_shipping=1&cn=Suggestions&tax=0&currency_code=EUR&lc=us&locale.x=", [(NSLocale *)[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode], [(NSLocale *)[NSLocale currentLocale] objectForKey:NSLocaleCountryCode]];
+			path = @"";
 			break;
 		case 1:
-			path = [NSString stringWithFormat:@"mailto:feedback@corecode.at?subject=%@ Feedback", name];
+			path = [NSString stringWithFormat:@"mailto:feedback@corecode.io?subject=%@ Feedback", name];
 			break;
 		case 2:
-			path = [NSString stringWithFormat:@"https://www.corecode.at/%@/", [name lowercaseString]];
+			path = [NSString stringWithFormat:@"https://www.corecode.io/%@/", [name lowercaseString]];
 			break;
 		case 3:
 			path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Read Me.rtf"];

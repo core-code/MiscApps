@@ -16,7 +16,6 @@ CONST_KEY(Runs)
 CONST_KEY(Project)
 CONST_KEY(NextNag)
 CONST_KEY(NagCount)
-CONST_KEY(UserPayed)
 CONST_KEY(XCodeVersions)
 CONST_KEY(XCode)
 
@@ -28,7 +27,7 @@ CONST_KEY(XCode)
 + (void)initialize
 {
 	[[NSUserDefaults standardUserDefaults] registerDefaults:@{kProjectKey : @"#include <stdio.h>\n\nint main() \n{\n       printf(\"hello world\");\n}",
-												  kRunsKey : @(1), kNextNagKey : @(40), kNagCountKey : @(1), kUserPayedKey : @(0)}];
+												  kRunsKey : @(1), kNextNagKey : @(40), kNagCountKey : @(1)}];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -71,27 +70,6 @@ CONST_KEY(XCode)
 		[self openURL:@{@"tag" : @(2)}];
 		kRunsKey.defaultInt = 2;
 	}
-
-	// nag donations
-	if (!kUserPayedKey.defaultInt)
-	{
-		if (kRunsKey.defaultInt >= kNextNagKey.defaultInt)
-		{
-			NSInteger res = alert(@"Info", makeString(@"InstaCode is supported by donations. You've used InstaCode to compile %li programs. Would you like to donate now?", kRunsKey.defaultInt), @"Donate now!", @"Remind me Later", @"I have donated");
-
-            if (res == NSAlertFirstButtonReturn) // donate now
-			{
-				[@"https://www.paypal.com/xclick/business=donations@corecode.at&item_name=InstaCode+Payment&no_shipping=1&cn=Suggestions&tax=0&currency_code=EUR&lc=us&locale.x=en_US".URL open];
-			}
-			else if (res == NSAlertSecondButtonReturn) // says he has donated
-			{
-				kUserPayedKey.defaultInt = 1;
-			}
-			
-			kNextNagKey.defaultInt = (2.0/((kNagCountKey.defaultInt+5)*0.15))*8.0; // math ftw
-			kNagCountKey.defaultInt = kNagCountKey.defaultInt+1;
-		}
-	}
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification
@@ -111,11 +89,11 @@ CONST_KEY(XCode)
 	int tag = [[sender valueForKey:@"tag"] intValue];
     
 	if (tag == 1)
-		[makeString(@"mailto:feedback@corecode.at?subject=%@ %@ Feedback", cc.appName, cc.appVersionString).escaped.URL open];
+		[makeString(@"mailto:feedback@corecode.io?subject=%@ %@ Feedback", cc.appName, cc.appVersionString).escaped.URL open];
 	else if (tag == 2)
 		[@"Read Me.rtf".resourceURL open];
 	else if (tag == 3)
-		[makeString(@"https://www.corecode.at/%@/", cc.appName.lowercaseString).escaped.URL open];
+		[makeString(@"https://www.corecode.io/%@/", cc.appName.lowercaseString).escaped.URL open];
 }
 
 - (IBAction)compileAndRun:(id)sender

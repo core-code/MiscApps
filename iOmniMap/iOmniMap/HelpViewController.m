@@ -31,7 +31,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)viewDidLoad
 {
-	NSURL *url = @"https://www.corecode.at/ios/iomnimap/explanation_video_ipad.mp4".URL;
+	NSURL *url = @"https://www.corecode.io/ios/iomnimap/explanation_video_ipad.mp4".URL;
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
     [_videoView loadRequest:request];
@@ -44,9 +44,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	NSString *urlString = @"";
 
 	if ([sender tag] == 1)
-		urlString = makeString(@"mailto:feedback@corecode.at?subject=%@ %@ Support Request&body=Insert Support Request Here", cc.appName, cc.appVersionString);
+		urlString = makeString(@"mailto:feedback@corecode.io?subject=%@ %@ Support Request&body=Insert Support Request Here", cc.appName, cc.appVersionString);
 	else if ([sender tag] == 3)
-		urlString = makeString(@"https://www.corecode.at/ios/%@/", [cc.appName lowercaseString]);
+		urlString = makeString(@"https://www.corecode.io/%@/", [cc.appName lowercaseString]);
 
 
     [urlString.escaped.URL open];
@@ -58,7 +58,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	
 	if ([sender tag] == 4)
 	{
-		vc.url = @"https://www.corecode.at/ios/iomnimap/explanation_video_iphone.mp4".URL;		
+		vc.url = @"https://www.corecode.io/ios/iomnimap/explanation_video_iphone.mp4".URL;		
 		vc.navigationTitle = @"Video";
 	}
 	else

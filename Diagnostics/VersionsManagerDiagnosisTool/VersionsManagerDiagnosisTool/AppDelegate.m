@@ -348,7 +348,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 	if ([JMEmailSender sendMailWithScriptingBridge:@"hello corecode,\nhelpful files to diagnose product problems are attached.\nbye\n\n "
 										   subject:@"CoreCode Diagnose Files"
-												to:@"feedback@corecode.at"
+												to:@"feedback@corecode.io"
 										   timeout:60
 										attachment:attachment.path] == kSMTPSuccess)
 	{
@@ -361,7 +361,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 							 error:NULL];
 
 
-		NSRunAlertPanel(@"Result", @"Sending failed. Send the file yourself to <feedback@corecode.at>, it is now on your desktop.", @"OK", nil, nil);
+		NSRunAlertPanel(@"Result", @"Sending failed. Send the file yourself to <feedback@corecode.io>, it is now on your desktop.", @"OK", nil, nil);
 	}
 
 	[fileManager removeItemAtURL:tmpURL error:NULL];

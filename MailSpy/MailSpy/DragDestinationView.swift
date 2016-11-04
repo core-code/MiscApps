@@ -23,38 +23,38 @@ class DragDestinationView: NSView
 	{
 		super.init(coder: coder)
 
-		self.registerForDraggedTypes([NSFilesPromisePboardType, NSFilenamesPboardType])
+		self.register(forDraggedTypes: [NSFilesPromisePboardType, NSFilenamesPboardType])
 	}
 
-    override func drawRect(dirtyRect: NSRect)
+    override func draw(_ dirtyRect: NSRect)
 	{
-        super.drawRect(dirtyRect)
+        super.draw(dirtyRect)
 
 
 		if (highlighted)
 		{
-			NSColor.selectedControlColor().set()
-			NSBezierPath.strokeRect(bounds)
-			NSBezierPath.strokeRect(NSInsetRect(bounds, 1, 1))
+			NSColor.selectedControlColor.set()
+			NSBezierPath.stroke(bounds)
+			NSBezierPath.stroke(NSInsetRect(bounds, 1, 1))
 		}
     }
 
-	override func draggingEntered(sender: NSDraggingInfo) -> NSDragOperation
+	override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation
 	{
 		let pb = sender.draggingPasteboard()
 		let items = pb.pasteboardItems!
 		let item = items[0] 
-		let str = item.stringForType("com.apple.pasteboard.promised-file-content-type")
+		let str = item.string(forType: "com.apple.pasteboard.promised-file-content-type")
 		var succ = str == "com.apple.mail.email";
 
-        let files = pb.propertyListForType(NSFilenamesPboardType) as? [NSString]
+        let files = pb.propertyList(forType: NSFilenamesPboardType) as? [NSString]
 
         
         if files != nil
         {
 			for file in files!
 			{
-				if file.pathExtension.lowercaseString == "eml"
+				if file.pathExtension.lowercased() == "eml"
 				{
 					succ = true
 				}
@@ -68,21 +68,28 @@ class DragDestinationView: NSView
 
 		}
 		
-		return succ ? NSDragOperation.Copy : NSDragOperation.None;
+		if succ
+		{
+			return NSDragOperation.copy
+		}
+		else
+		{
+			return [];
+		}
 	}
 
-	override func draggingExited(sender: NSDraggingInfo?)
+	override func draggingExited(_ sender: NSDraggingInfo?)
 	{
 		highlighted = false
 		needsDisplay = true
 	}
 
-	override func concludeDragOperation(sender: NSDraggingInfo?)
+	override func concludeDragOperation(_ sender: NSDraggingInfo?)
 	{
 		highlighted = false
 		needsDisplay = true
 
-        if (sender!.draggingPasteboard().propertyListForType(NSFilenamesPboardType) != nil)
+        if (sender!.draggingPasteboard().propertyList(forType: NSFilenamesPboardType) != nil)
         {
             return // eml already imported direct file drag
         }
@@ -97,14 +104,14 @@ class DragDestinationView: NSView
 				i += 1
 				usleep(100000)
 				let docstr = "~/Documents/" as NSString
-				let docDir =  docstr.stringByExpandingTildeInPath as NSString
-				let files = (try! NSFileManager.defaultManager().subpathsOfDirectoryAtPath(docDir as String )) 
+				let docDir =  docstr.expandingTildeInPath as NSString
+				let files = (try! FileManager.default.subpathsOfDirectory(atPath: docDir as String )) 
 				for file in files
 				{
-					let fullFile = docDir.stringByAppendingPathComponent(file)
+					let fullFile = docDir.appendingPathComponent(file)
 					if fullFile.hasSuffix(".eml")
 					{
-						promisedURL = NSURL.fileURLWithPath(fullFile)
+						promisedURL = NSURL.fileURL(withPath: fullFile) as NSURL?
 						Swift.print("Info: rebasing succeeded");
 						done = true
 						break;
@@ -120,7 +127,7 @@ class DragDestinationView: NSView
 
 		var i = 0
 		let promisedPath = promisedURL!.path!
-		while (NSFileManager.defaultManager().fileExistsAtPath(promisedPath) != true)
+		while (FileManager.default.fileExists(atPath: promisedPath) != true)
 		{
 			i += 1
 			usleep(100000)
@@ -132,14 +139,14 @@ class DragDestinationView: NSView
 			}
 		}
 
-		let data = NSData(contentsOfURL: promisedURL!)
-		let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
+		let data = NSData(contentsOf: promisedURL! as URL)
+		let string = NSString(data: data! as Data, encoding: String.Encoding.utf8.rawValue)
 
-		NSNotificationCenter.defaultCenter().postNotificationName("dropReceived", object: string)
+		NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dropReceived"), object: string)
 
 		do
 		{
-			try NSFileManager.defaultManager().removeItemAtURL(promisedURL!)
+			try FileManager.default.removeItem(at: promisedURL! as URL)
 		}
 		catch _
 		{
@@ -147,36 +154,36 @@ class DragDestinationView: NSView
 	}
 
 
-	override func prepareForDragOperation(sender: NSDraggingInfo) -> Bool
+	override func prepareForDragOperation(_ sender: NSDraggingInfo) -> Bool
 	{
-		return draggingEntered(sender) == NSDragOperation.Copy
+		return draggingEntered(sender) == NSDragOperation.copy
 	}
 
 
-	override func performDragOperation(sender: NSDraggingInfo) -> Bool
+	override func performDragOperation(_ sender: NSDraggingInfo) -> Bool
 	{
 		promisedURL = nil;
         
 		let docstr = "~/Documents/" as NSString
-		let urlBase = NSURL.fileURLWithPath(docstr.stringByExpandingTildeInPath)
+		let urlBase = NSURL.fileURL(withPath: docstr.expandingTildeInPath)
 		let pb = sender.draggingPasteboard()
 		let items = pb.pasteboardItems!
 		let item = items[0] 
 
 
-        if let files = pb.propertyListForType(NSFilenamesPboardType) as? [NSString]
+        if let files = pb.propertyList(forType: NSFilenamesPboardType) as? [NSString]
         {
             var foundEML = false
 
             for file in files
             {
-                if file.pathExtension.lowercaseString == "eml"
+                if file.pathExtension.lowercased() == "eml"
                 {
                     
                     let data = NSData(contentsOfFile: file as String)
-                    let string = NSString(data: data!, encoding: NSUTF8StringEncoding)
+                    let string = NSString(data: data! as Data, encoding: String.Encoding.utf8.rawValue)
 
-                    NSNotificationCenter.defaultCenter().postNotificationName("dropReceived", object: string)
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dropReceived"), object: string)
                     foundEML = true
                 }
             }
@@ -192,7 +199,7 @@ class DragDestinationView: NSView
         }
 
 
-        if	let pl = item.propertyListForType("com.apple.mail.PasteboardTypeAutomator") as? NSArray,
+        if	let pl = item.propertyList(forType: "com.apple.mail.PasteboardTypeAutomator") as? NSArray,
 			let dict = pl[0] as? NSDictionary,
 			let sub = dict["subject"] as? String
         {
@@ -203,7 +210,7 @@ class DragDestinationView: NSView
                 let alert = NSAlert()
                 alert.messageText = "Import Failed";
                 alert.informativeText = "This e-mail can not be analyzed because the subject is longer than 255 characters. Let us know if you need support for this."
-                alert.addButtonWithTitle("D'Oh")
+                alert.addButton(withTitle: "D'Oh")
                 alert.runModal()
                 
                 return true;
@@ -211,7 +218,7 @@ class DragDestinationView: NSView
         }
 
 
-		if	let files = sender.namesOfPromisedFilesDroppedAtDestination(urlBase),
+		if	let files = sender.namesOfPromisedFilesDropped(atDestination: urlBase),
 			let file = files[0] as NSString?
 		{
 
@@ -224,7 +231,7 @@ class DragDestinationView: NSView
 		  
 			// huh (lldb) po item.stringForType("com.apple.pasteboard.promised-file-url")
 
-			promisedURL = urlBase.URLByAppendingPathComponent(file as String)
+			promisedURL = urlBase.appendingPathComponent(file as String) as NSURL?
 			return true
 		}
 		else
