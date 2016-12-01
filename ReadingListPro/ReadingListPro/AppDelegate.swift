@@ -73,9 +73,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
         self.sourceTable.reloadData()
     }
 
-    func applicationWillTerminate(_ aNotification: Notification)
-    {
-    }
 
     func numberOfRowsInTableView(_ tableView: NSTableView!) -> Int
     {
@@ -95,14 +92,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
         }
     }
 
-    func tableView(_ tableView: NSTableView!, objectValueForTableColumn tableColumn: NSTableColumn!, row: Int) -> AnyObject!
+    func tableView(_ tableView: NSTableView!, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> Any!
     {
         if tableView == self.sourceTable
         {
             let key = Array(self.results.keys).sorted( by: { self.results[$0]!.count > self.results[$1]!.count })[row]
             let value = self.results[key]
 
-            return "\(key) [\(value!.count)]" as AnyObject!
+            return "\(key) [\(value!.count)]"
         }
         else
         {
@@ -110,16 +107,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
             let rowSource = self.sourceTable.selectedRow
             let key = Array(self.results.keys).sorted( by: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
             let value = self.results[key]
+            if (row >= value!.count)
+            {
+                return ""
+            }
+            
             let website = value![row]
 
 
-            if tableView.tableColumns.index(of: tableColumn) == 0
+            if tableView.tableColumns.index(of: tableColumn!) == 0
             {
-                return website["title"] as AnyObject!
+                return website["title"]
             }
             else
             {
-                return website["url"] as AnyObject!
+                return website["url"]
             }
         }
 
