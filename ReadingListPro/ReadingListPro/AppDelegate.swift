@@ -14,7 +14,7 @@ import Cocoa
 
 @NSApplicationMain
 
-class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
+class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource
 {
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var sourceTable: NSTableView!
@@ -74,7 +74,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
     }
 
 
-    func numberOfRowsInTableView(_ tableView: NSTableView!) -> Int
+    func numberOfRows(in tableView: NSTableView) -> Int
     {
         if tableView == self.sourceTable
         {
@@ -92,7 +92,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSOutlineViewDataSource
         }
     }
 
-    func tableView(_ tableView: NSTableView!, objectValueForTableColumn tableColumn: NSTableColumn?, row: Int) -> Any!
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any?
     {
         if tableView == self.sourceTable
         {
