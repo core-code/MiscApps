@@ -27,7 +27,7 @@
 	<key>LSBackgroundOnly</key>
 	<string>1</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright 2008, CoreCode.</string>
+	<string>Copyright (c) 2016 CoreCode Limited.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

@@ -256,7 +256,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = CoreCode;
+				ORGANIZATIONNAME = "CoreCode Limited";
 			};
 			buildConfigurationList = B9DF05D8169DCCF000DB4B58 /* Build configuration list for PBXProject "SMARTReporterDiagnosisTool" */;
 			compatibilityVersion = "Xcode 3.2";

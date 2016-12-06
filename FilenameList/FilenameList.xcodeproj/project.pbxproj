@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9A7368A1DF59A5600390E8B /* credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = B9A736881DF59A5600390E8B /* credits.rtfd */; };
+		B9A7368B1DF59A5600390E8B /* Read Me.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9A736891DF59A5600390E8B /* Read Me.rtf */; };
 		B9EED2EA195482C200EB9FC1 /* DragDestinationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EED2E9195482C200EB9FC1 /* DragDestinationView.m */; };
 		B9F8361D1950A1CC00400BFC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F8361C1950A1CC00400BFC /* Cocoa.framework */; };
-		B9F8362D1950A1CC00400BFC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9F8362B1950A1CC00400BFC /* Credits.rtf */; };
 		B9F836301950A1CC00400BFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F8362F1950A1CC00400BFC /* AppDelegate.m */; };
 		B9F836331950A1CC00400BFC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9F836311950A1CC00400BFC /* MainMenu.xib */; };
 		B9F836351950A1CC00400BFC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9F836341950A1CC00400BFC /* Images.xcassets */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B9A736881DF59A5600390E8B /* credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = credits.rtfd; sourceTree = "<group>"; };
+		B9A736891DF59A5600390E8B /* Read Me.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
 		B9EED2E8195482C200EB9FC1 /* DragDestinationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDestinationView.h; sourceTree = "<group>"; };
 		B9EED2E9195482C200EB9FC1 /* DragDestinationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDestinationView.m; sourceTree = "<group>"; };
 		B9F836191950A1CC00400BFC /* FilenameList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilenameList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,7 +33,6 @@
 		B9F836211950A1CC00400BFC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B9F836241950A1CC00400BFC /* FilenameList-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FilenameList-Info.plist"; sourceTree = "<group>"; };
 		B9F8362A1950A1CC00400BFC /* FilenameList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FilenameList-Prefix.pch"; sourceTree = "<group>"; };
-		B9F8362C1950A1CC00400BFC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		B9F8362E1950A1CC00400BFC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B9F8362F1950A1CC00400BFC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B9F836321950A1CC00400BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -117,7 +119,8 @@
 				B9F836501950A2CA00400BFC /* CoreLib */,
 				B9F836241950A1CC00400BFC /* FilenameList-Info.plist */,
 				B9F8362A1950A1CC00400BFC /* FilenameList-Prefix.pch */,
-				B9F8362B1950A1CC00400BFC /* Credits.rtf */,
+				B9A736881DF59A5600390E8B /* credits.rtfd */,
+				B9A736891DF59A5600390E8B /* Read Me.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -169,7 +172,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = corecode;
+				ORGANIZATIONNAME = "CoreCode Limited";
 			};
 			buildConfigurationList = B9F836141950A1CC00400BFC /* Build configuration list for PBXProject "FilenameList" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -194,8 +197,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9A7368A1DF59A5600390E8B /* credits.rtfd in Resources */,
 				B9F836351950A1CC00400BFC /* Images.xcassets in Resources */,
-				B9F8362D1950A1CC00400BFC /* Credits.rtf in Resources */,
+				B9A7368B1DF59A5600390E8B /* Read Me.rtf in Resources */,
 				B9F836331950A1CC00400BFC /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,14 +224,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B9F8362B1950A1CC00400BFC /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B9F8362C1950A1CC00400BFC /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
 		B9F836311950A1CC00400BFC /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

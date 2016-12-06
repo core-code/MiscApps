@@ -174,7 +174,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = corecode;
+				ORGANIZATIONNAME = "CoreCode Limited";
 			};
 			buildConfigurationList = B90EFDC6188D5F2A00210A03 /* Build configuration list for PBXProject "Translator" */;
 			compatibilityVersion = "Xcode 3.2";

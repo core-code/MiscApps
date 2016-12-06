@@ -139,7 +139,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = CoreCode;
+				ORGANIZATIONNAME = "CoreCode Limited";
 			};
 			buildConfigurationList = B99EF9F51506DFB80006412C /* Build configuration list for PBXProject "MountMenu" */;
 			compatibilityVersion = "Xcode 3.2";

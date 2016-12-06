@@ -150,7 +150,7 @@
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = corecode;
+				ORGANIZATIONNAME = "CoreCode Limited";
 				TargetAttributes = {
 					B903DFC71A18EDAB004F6D0B = {
 						CreatedOnToolsVersion = 6.1;

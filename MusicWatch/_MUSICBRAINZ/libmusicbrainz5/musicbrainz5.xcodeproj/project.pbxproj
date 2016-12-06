@@ -573,7 +573,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = CoreCode;
+				ORGANIZATIONNAME = "CoreCode Limited";
 				TargetAttributes = {
 					B95FFD1C1D7DA16000810625 = {
 						CreatedOnToolsVersion = 7.3.1;

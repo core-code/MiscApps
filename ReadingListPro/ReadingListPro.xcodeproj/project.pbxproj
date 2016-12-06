@@ -86,7 +86,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = CoreCode;
+				ORGANIZATIONNAME = "CoreCode Limited";
 				TargetAttributes = {
 					B933A9551CEC669100CF74B1 = {
 						CreatedOnToolsVersion = 7.3.1;

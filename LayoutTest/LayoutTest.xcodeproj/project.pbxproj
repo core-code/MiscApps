@@ -130,7 +130,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = CoreCode;
+				ORGANIZATIONNAME = "CoreCode Limited";
 			};
 			buildConfigurationList = B9A399FF15533A5D002E67D0 /* Build configuration list for PBXProject "LayoutTest" */;
 			compatibilityVersion = "Xcode 3.2";

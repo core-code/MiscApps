@@ -167,7 +167,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = corecode;
+				ORGANIZATIONNAME = "CoreCode Limited";
 			};
 			buildConfigurationList = B9E60AFC1885EE0400FD5922 /* Build configuration list for PBXProject "MovieCutter" */;
 			compatibilityVersion = "Xcode 3.2";

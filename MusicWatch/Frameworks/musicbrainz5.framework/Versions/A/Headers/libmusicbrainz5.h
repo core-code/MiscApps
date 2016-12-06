@@ -2,8 +2,8 @@
 //  libmusicbrainz5.h
 //  libmusicbrainz5
 //
-//  Created by Julian Mayer on 05/09/2016.
-//  Copyright © 2016 CoreCode. All rights reserved.
+//  Created by CoreCode on 05/09/2016.
+//  Copyright © 2016 CoreCode Limited. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

@@ -417,7 +417,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = CoreCode;
+				ORGANIZATIONNAME = "CoreCode Limited";
 			};
 			buildConfigurationList = B938448E1699F79C001773E8 /* Build configuration list for PBXProject "MailboxAlert" */;
 			compatibilityVersion = "Xcode 3.2";

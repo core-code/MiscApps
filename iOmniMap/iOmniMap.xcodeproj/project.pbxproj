@@ -377,7 +377,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = CoreCode;
+				ORGANIZATIONNAME = "CoreCode Limited";
 			};
 			buildConfigurationList = B9F3CE0814A1F5590009F8EA /* Build configuration list for PBXProject "iOmniMap" */;
 			compatibilityVersion = "Xcode 3.2";
