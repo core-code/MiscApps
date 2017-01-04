@@ -84,7 +84,7 @@ extern NSArray *levelsCounts;
 	{
 		maze = [[Maze alloc] initWithMaze:[[NSUserDefaults standardUserDefaults] objectForKey:@"FrozenLevel"] Number:[[NSUserDefaults standardUserDefaults] integerForKey:@"FrozenNum"]];
 		[maze setPath:[[NSUserDefaults standardUserDefaults] objectForKey:@"FrozenPath"]];
-		[maze setSeconds:[[NSUserDefaults standardUserDefaults] integerForKey:@"FrozenSeconds"]];
+		[maze setSeconds: (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"FrozenSeconds"]];
 		[[NSUserDefaults standardUserDefaults] setBool:FALSE forKey:@"Frozen"];
 		[[NSUserDefaults standardUserDefaults] synchronize];
 
@@ -385,7 +385,7 @@ extern NSArray *levelsCounts;
 		else if (indexPath.row == 4)
 		{
 			NSDictionary *ls = [[NSUserDefaults standardUserDefaults] objectForKey:[levelsNames objectAtIndex:[pickerView selectedRowInComponent:0]]];
-			NSDictionary *l = [ls objectForKey:[NSString stringWithFormat:@"%li", [pickerView selectedRowInComponent:1]+1]];
+			NSDictionary *l = [ls objectForKey:[NSString stringWithFormat:@"%i", (int)[pickerView selectedRowInComponent:1]+1]];
 			NSString *selected;
 			
 			if (l)

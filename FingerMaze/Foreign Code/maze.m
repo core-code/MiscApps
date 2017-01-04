@@ -57,7 +57,7 @@ NSMutableArray * maze_main()
     struct hedge_loc *htmp;
 
 
-    srandom(time(0));
+    srandom((unsigned int)time(0));
     x=kMaxX;
     y=kMaxY;
 

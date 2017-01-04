@@ -32,7 +32,7 @@ int ___maze(char maz[], int y, int x, char vc, char hc, char fc)
 {
    int             i, yy, xx;
    int             max = (y * x);
-   int             rnd = time(0L);
+   int             rnd = (int)time(0L);
 
    /* For now, return error on even parameters */
    /* Alternative is to decrement evens by one */

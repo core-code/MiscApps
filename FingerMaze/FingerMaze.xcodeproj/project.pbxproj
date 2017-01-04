@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		B91374DB128495320057FD7F /* ente.png in Resources */ = {isa = PBXBuildFile; fileRef = B91374DA128495320057FD7F /* ente.png */; };
 		B91375EB1284A6B10057FD7F /* JoystickView.m in Sources */ = {isa = PBXBuildFile; fileRef = B91375EA1284A6B10057FD7F /* JoystickView.m */; };
+		B913E31B1E1CFBBB00196733 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3101E1CFBBB00196733 /* AppKit+CoreCode.m */; };
+		B913E31C1E1CFBBB00196733 /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3121E1CFBBB00196733 /* AppKit+Properties.m */; };
+		B913E31D1E1CFBBB00196733 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3141E1CFBBB00196733 /* CoreLib.m */; };
+		B913E31E1E1CFBBB00196733 /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3171E1CFBBB00196733 /* Foundation+CoreCode.m */; };
+		B913E31F1E1CFBBB00196733 /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E31A1E1CFBBB00196733 /* Foundation+Properties.m */; };
+		B913E32B1E1CFBC800196733 /* JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3221E1CFBC800196733 /* JMActionSheet.m */; };
+		B913E32C1E1CFBC800196733 /* JMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3241E1CFBC800196733 /* JMAlertView.m */; };
+		B913E32D1E1CFBC800196733 /* JMChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3261E1CFBC800196733 /* JMChoiceController.m */; };
+		B913E32E1E1CFBC800196733 /* JMSlideshowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3281E1CFBC800196733 /* JMSlideshowController.m */; };
+		B913E3321E1CFD7C00196733 /* JMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3311E1CFD7C00196733 /* JMWebViewController.m */; };
+		B922C7F71E1D02330087872C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B922C7F61E1D02330087872C /* Images.xcassets */; };
 		B92EB43B15865FFC00711F00 /* Braid1.txt in Resources */ = {isa = PBXBuildFile; fileRef = B92EB39B15865FFC00711F00 /* Braid1.txt */; };
 		B92EB43C15865FFC00711F00 /* Braid2.txt in Resources */ = {isa = PBXBuildFile; fileRef = B92EB39C15865FFC00711F00 /* Braid2.txt */; };
 		B92EB43D15865FFC00711F00 /* Braid3.txt in Resources */ = {isa = PBXBuildFile; fileRef = B92EB39D15865FFC00711F00 /* Braid3.txt */; };
@@ -195,7 +206,7 @@
 		B92EB50A15866AF300711F00 /* star_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = B92EB50915866AF300711F00 /* star_sprite.png */; };
 		B941AC2A158125EB005B526B /* Credits.webarchive in Resources */ = {isa = PBXBuildFile; fileRef = B941AC28158125EB005B526B /* Credits.webarchive */; };
 		B941AC2D1581262F005B526B /* Help.webarchive in Resources */ = {isa = PBXBuildFile; fileRef = B941AC2C1581262F005B526B /* Help.webarchive */; };
-		B94A5DB9187B371300D88154 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B94A5DB8187B371300D88154 /* CoreLib.m */; };
+		B95212641E1CFF44004CA57B /* FingerMaze.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B95212631E1CFF44004CA57B /* FingerMaze.xcconfig */; };
 		B95F667912367BE90011D574 /* red_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = B95F667812367BE90011D574 /* red_sprite.png */; };
 		B95F66D8123684BD0011D574 /* gold.png in Resources */ = {isa = PBXBuildFile; fileRef = B95F66D6123684BD0011D574 /* gold.png */; };
 		B95F66D9123684BD0011D574 /* silver.png in Resources */ = {isa = PBXBuildFile; fileRef = B95F66D7123684BD0011D574 /* silver.png */; };
@@ -203,7 +214,6 @@
 		B960F8D71163E65C00868971 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B960F8D61163E65C00868971 /* QuartzCore.framework */; };
 		B960F9041163EA3700868971 /* LevelFinished.png in Resources */ = {isa = PBXBuildFile; fileRef = B960F9031163EA3700868971 /* LevelFinished.png */; };
 		B9837C5E116E4A860000A134 /* IntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9837C5D116E4A860000A134 /* IntroView.xib */; };
-		B9837C9A116E4FBC0000A134 /* JMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837C99116E4FBC0000A134 /* JMWebViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B984E5751162861E00DA0860 /* Maze.m in Sources */ = {isa = PBXBuildFile; fileRef = B984E5741162861E00DA0860 /* Maze.m */; };
 		B98B37AD1162522600DBCF01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		B98B37AE1162522600DBCF01 /* FingerMazeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* FingerMazeAppDelegate.m */; };
@@ -216,12 +226,7 @@
 		B99404951168E42A00F4CBDE /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = B99404941168E42A00F4CBDE /* Preferences.m */; };
 		B9A29CE11280C5A600019B70 /* PathLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A29CE01280C5A600019B70 /* PathLayer.m */; };
 		B9A3C6351282218C00463E9E /* buttons.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A3C6341282218C00463E9E /* buttons.png */; };
-		B9A837911233C146000CD219 /* FingerMazeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A837901233C146000CD219 /* FingerMazeIcon.png */; };
 		B9A981F51285B8D000F174F0 /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A981F41285B8D000F174F0 /* door.png */; };
-		B9BF217A1D119305003CFC2B /* JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BF21711D119305003CFC2B /* JMActionSheet.m */; };
-		B9BF217B1D119305003CFC2B /* JMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BF21731D119305003CFC2B /* JMAlertView.m */; };
-		B9BF21831D11932B003CFC2B /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BF21801D11932B003CFC2B /* AppKit+CoreCode.m */; };
-		B9BF21841D11932B003CFC2B /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BF21821D11932B003CFC2B /* Foundation+CoreCode.m */; };
 		B9BF21871D119365003CFC2B /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BF21861D119365003CFC2B /* GradientButton.m */; };
 		B9C860E111B19390003A4BC2 /* maze.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C860DF11B19390003A4BC2 /* maze.m */; };
 		B9C860E211B19390003A4BC2 /* MazeGen.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C860E011B19390003A4BC2 /* MazeGen.m */; };
@@ -235,7 +240,6 @@
 		B9F846D415893BE2002017D4 /* Free1.txt in Resources */ = {isa = PBXBuildFile; fileRef = B9F846D115893BE2002017D4 /* Free1.txt */; };
 		B9F846D515893BE2002017D4 /* Free2.txt in Resources */ = {isa = PBXBuildFile; fileRef = B9F846D215893BE2002017D4 /* Free2.txt */; };
 		B9F846D615893BE2002017D4 /* Free3.txt in Resources */ = {isa = PBXBuildFile; fileRef = B9F846D315893BE2002017D4 /* Free3.txt */; };
-		B9F846D8158945D0002017D4 /* FingerMazeIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F846D7158945D0002017D4 /* FingerMazeIcon@2x.png */; };
 		B9F948301231C2F900AB957F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F9482D1231C2F900AB957F /* AudioToolbox.framework */; };
 		B9F948311231C2F900AB957F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F9482E1231C2F900AB957F /* MediaPlayer.framework */; };
 		B9F948321231C2F900AB957F /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F9482F1231C2F900AB957F /* MessageUI.framework */; };
@@ -254,6 +258,29 @@
 		B91374DA128495320057FD7F /* ente.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ente.png; path = Resources/ente.png; sourceTree = "<group>"; };
 		B91375E91284A6B10057FD7F /* JoystickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoystickView.h; sourceTree = "<group>"; };
 		B91375EA1284A6B10057FD7F /* JoystickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoystickView.m; sourceTree = "<group>"; };
+		B913E30F1E1CFBBB00196733 /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
+		B913E3101E1CFBBB00196733 /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
+		B913E3111E1CFBBB00196733 /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
+		B913E3121E1CFBBB00196733 /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
+		B913E3131E1CFBBB00196733 /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
+		B913E3141E1CFBBB00196733 /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
+		B913E3151E1CFBBB00196733 /* CoreLib_Availability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib_Availability.h; sourceTree = "<group>"; };
+		B913E3161E1CFBBB00196733 /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
+		B913E3171E1CFBBB00196733 /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
+		B913E3181E1CFBBB00196733 /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
+		B913E3191E1CFBBB00196733 /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
+		B913E31A1E1CFBBB00196733 /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
+		B913E3211E1CFBC800196733 /* JMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMActionSheet.h; sourceTree = "<group>"; };
+		B913E3221E1CFBC800196733 /* JMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMActionSheet.m; sourceTree = "<group>"; };
+		B913E3231E1CFBC800196733 /* JMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAlertView.h; sourceTree = "<group>"; };
+		B913E3241E1CFBC800196733 /* JMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAlertView.m; sourceTree = "<group>"; };
+		B913E3251E1CFBC800196733 /* JMChoiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMChoiceController.h; sourceTree = "<group>"; };
+		B913E3261E1CFBC800196733 /* JMChoiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMChoiceController.m; sourceTree = "<group>"; };
+		B913E3271E1CFBC800196733 /* JMSlideshowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSlideshowController.h; sourceTree = "<group>"; };
+		B913E3281E1CFBC800196733 /* JMSlideshowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSlideshowController.m; sourceTree = "<group>"; };
+		B913E3301E1CFD7C00196733 /* JMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMWebViewController.h; path = FingerMaze/JMWebViewController.h; sourceTree = SOURCE_ROOT; };
+		B913E3311E1CFD7C00196733 /* JMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMWebViewController.m; path = FingerMaze/JMWebViewController.m; sourceTree = SOURCE_ROOT; };
+		B922C7F61E1D02330087872C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FingerMaze/Images.xcassets; sourceTree = "<group>"; };
 		B92EB39B15865FFC00711F00 /* Braid1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Braid1.txt; sourceTree = "<group>"; };
 		B92EB39C15865FFC00711F00 /* Braid2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Braid2.txt; sourceTree = "<group>"; };
 		B92EB39D15865FFC00711F00 /* Braid3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Braid3.txt; sourceTree = "<group>"; };
@@ -438,10 +465,9 @@
 		B92EB4F0158662A200711F00 /* 5638628181_36c9018e73_o.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5638628181_36c9018e73_o.jpg; sourceTree = "<group>"; };
 		B92EB4F1158662A200711F00 /* 5800948143_8844409e58_o.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5800948143_8844409e58_o.jpg; sourceTree = "<group>"; };
 		B92EB50915866AF300711F00 /* star_sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star_sprite.png; path = Resources/star_sprite.png; sourceTree = "<group>"; };
-		B941ABD0158112AD005B526B /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
 		B941AC28158125EB005B526B /* Credits.webarchive */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Credits.webarchive; path = Resources/Credits.webarchive; sourceTree = "<group>"; };
 		B941AC2C1581262F005B526B /* Help.webarchive */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = Help.webarchive; path = Resources/Help.webarchive; sourceTree = "<group>"; };
-		B94A5DB8187B371300D88154 /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
+		B95212631E1CFF44004CA57B /* FingerMaze.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = FingerMaze.xcconfig; sourceTree = SOURCE_ROOT; };
 		B95F667812367BE90011D574 /* red_sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red_sprite.png; path = Resources/red_sprite.png; sourceTree = "<group>"; };
 		B95F66D6123684BD0011D574 /* gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gold.png; path = Resources/gold.png; sourceTree = "<group>"; };
 		B95F66D7123684BD0011D574 /* silver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = silver.png; path = Resources/silver.png; sourceTree = "<group>"; };
@@ -450,8 +476,6 @@
 		B960F8D61163E65C00868971 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B960F9031163EA3700868971 /* LevelFinished.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LevelFinished.png; path = Resources/LevelFinished.png; sourceTree = "<group>"; };
 		B9837C5D116E4A860000A134 /* IntroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = IntroView.xib; path = Resources/IntroView.xib; sourceTree = "<group>"; };
-		B9837C98116E4FBC0000A134 /* JMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMWebViewController.h; sourceTree = "<group>"; };
-		B9837C99116E4FBC0000A134 /* JMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMWebViewController.m; sourceTree = "<group>"; };
 		B984E5731162861E00DA0860 /* Maze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maze.h; sourceTree = "<group>"; };
 		B984E5741162861E00DA0860 /* Maze.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Maze.m; sourceTree = "<group>"; };
 		B98B37B71162522600DBCF01 /* FingerMaze HD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FingerMaze HD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -464,16 +488,7 @@
 		B9A29CDF1280C5A600019B70 /* PathLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathLayer.h; sourceTree = "<group>"; };
 		B9A29CE01280C5A600019B70 /* PathLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathLayer.m; sourceTree = "<group>"; };
 		B9A3C6341282218C00463E9E /* buttons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttons.png; path = Resources/buttons.png; sourceTree = "<group>"; };
-		B9A837901233C146000CD219 /* FingerMazeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FingerMazeIcon.png; path = Resources/FingerMazeIcon.png; sourceTree = "<group>"; };
 		B9A981F41285B8D000F174F0 /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = door.png; path = Resources/door.png; sourceTree = "<group>"; };
-		B9BF21701D119305003CFC2B /* JMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMActionSheet.h; sourceTree = "<group>"; };
-		B9BF21711D119305003CFC2B /* JMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMActionSheet.m; sourceTree = "<group>"; };
-		B9BF21721D119305003CFC2B /* JMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAlertView.h; sourceTree = "<group>"; };
-		B9BF21731D119305003CFC2B /* JMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAlertView.m; sourceTree = "<group>"; };
-		B9BF217F1D11932B003CFC2B /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
-		B9BF21801D11932B003CFC2B /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
-		B9BF21811D11932B003CFC2B /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
-		B9BF21821D11932B003CFC2B /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
 		B9BF21851D119365003CFC2B /* GradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GradientButton.h; path = "Foreign Code/GradientButton.h"; sourceTree = SOURCE_ROOT; };
 		B9BF21861D119365003CFC2B /* GradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GradientButton.m; path = "Foreign Code/GradientButton.m"; sourceTree = SOURCE_ROOT; };
 		B9C860DF11B19390003A4BC2 /* maze.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = maze.m; sourceTree = "<group>"; };
@@ -491,7 +506,6 @@
 		B9F846D115893BE2002017D4 /* Free1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Free1.txt; sourceTree = "<group>"; };
 		B9F846D215893BE2002017D4 /* Free2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Free2.txt; sourceTree = "<group>"; };
 		B9F846D315893BE2002017D4 /* Free3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Free3.txt; sourceTree = "<group>"; };
-		B9F846D7158945D0002017D4 /* FingerMazeIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FingerMazeIcon@2x.png"; path = "Resources/FingerMazeIcon@2x.png"; sourceTree = "<group>"; };
 		B9F9482D1231C2F900AB957F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B9F9482E1231C2F900AB957F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		B9F9482F1231C2F900AB957F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -534,8 +548,6 @@
 				B95F68181236DDA50011D574 /* MazeViewLayer.m */,
 				B9A29CDF1280C5A600019B70 /* PathLayer.h */,
 				B9A29CE01280C5A600019B70 /* PathLayer.m */,
-				B9837C98116E4FBC0000A134 /* JMWebViewController.h */,
-				B9837C99116E4FBC0000A134 /* JMWebViewController.m */,
 				B9F846CE15890F87002017D4 /* PurchaseController.h */,
 				B9F846CF15890F87002017D4 /* PurchaseController.m */,
 				B91375E91284A6B10057FD7F /* JoystickView.h */,
@@ -556,7 +568,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				B941ABCF158112AD005B526B /* CoreLib */,
+				B913E30E1E1CFBBB00196733 /* CoreLib */,
 				B993223611ADD30300D5380F /* Foreign Code */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -570,6 +582,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B95212631E1CFF44004CA57B /* FingerMaze.xcconfig */,
 				32CA4F630368D1EE00C91783 /* FingerMaze_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -591,26 +604,47 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B941ABCF158112AD005B526B /* CoreLib */ = {
+		B913E30E1E1CFBBB00196733 /* CoreLib */ = {
 			isa = PBXGroup;
 			children = (
-				B9BF21851D119365003CFC2B /* GradientButton.h */,
-				B9BF21861D119365003CFC2B /* GradientButton.m */,
-				B9BF217F1D11932B003CFC2B /* AppKit+CoreCode.h */,
-				B9BF21801D11932B003CFC2B /* AppKit+CoreCode.m */,
-				B9BF21811D11932B003CFC2B /* Foundation+CoreCode.h */,
-				B9BF21821D11932B003CFC2B /* Foundation+CoreCode.m */,
-				B941ABD0158112AD005B526B /* CoreLib.h */,
-				B94A5DB8187B371300D88154 /* CoreLib.m */,
-				B9BF216F1D119305003CFC2B /* iOS */,
+				B913E30F1E1CFBBB00196733 /* AppKit+CoreCode.h */,
+				B913E3101E1CFBBB00196733 /* AppKit+CoreCode.m */,
+				B913E3111E1CFBBB00196733 /* AppKit+Properties.h */,
+				B913E3121E1CFBBB00196733 /* AppKit+Properties.m */,
+				B913E3131E1CFBBB00196733 /* CoreLib.h */,
+				B913E3141E1CFBBB00196733 /* CoreLib.m */,
+				B913E3151E1CFBBB00196733 /* CoreLib_Availability.h */,
+				B913E3161E1CFBBB00196733 /* Foundation+CoreCode.h */,
+				B913E3171E1CFBBB00196733 /* Foundation+CoreCode.m */,
+				B913E3181E1CFBBB00196733 /* Foundation+Indexing.h */,
+				B913E3191E1CFBBB00196733 /* Foundation+Properties.h */,
+				B913E31A1E1CFBBB00196733 /* Foundation+Properties.m */,
+				B913E3201E1CFBC800196733 /* iOS */,
 			);
 			name = CoreLib;
-			path = ../CoreLib/CoreLib;
+			path = ../../CoreLib/CoreLib;
+			sourceTree = "<group>";
+		};
+		B913E3201E1CFBC800196733 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B913E3211E1CFBC800196733 /* JMActionSheet.h */,
+				B913E3221E1CFBC800196733 /* JMActionSheet.m */,
+				B913E3231E1CFBC800196733 /* JMAlertView.h */,
+				B913E3241E1CFBC800196733 /* JMAlertView.m */,
+				B913E3251E1CFBC800196733 /* JMChoiceController.h */,
+				B913E3261E1CFBC800196733 /* JMChoiceController.m */,
+				B913E3271E1CFBC800196733 /* JMSlideshowController.h */,
+				B913E3281E1CFBC800196733 /* JMSlideshowController.m */,
+			);
+			name = iOS;
+			path = ../iOS;
 			sourceTree = "<group>";
 		};
 		B98B37B91162522600DBCF01 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B922C7F61E1D02330087872C /* Images.xcassets */,
 				B9F846CA15890729002017D4 /* PurchaseView.xib */,
 				B9F846C615890183002017D4 /* back.png */,
 				B98B37BA1162522700DBCF01 /* MainWindow.xib */,
@@ -628,8 +662,6 @@
 				B9C928301581656200AB5C6C /* StringGame.png */,
 				B95F667812367BE90011D574 /* red_sprite.png */,
 				B9A981F41285B8D000F174F0 /* door.png */,
-				B9A837901233C146000CD219 /* FingerMazeIcon.png */,
-				B9F846D7158945D0002017D4 /* FingerMazeIcon@2x.png */,
 				B9FD7A1C1164EF2F00504157 /* StringMainMenu.png */,
 				B960F9031163EA3700868971 /* LevelFinished.png */,
 				B9AF119611627058006F1636 /* maze */,
@@ -641,6 +673,10 @@
 		B993223611ADD30300D5380F /* Foreign Code */ = {
 			isa = PBXGroup;
 			children = (
+				B913E3301E1CFD7C00196733 /* JMWebViewController.h */,
+				B913E3311E1CFD7C00196733 /* JMWebViewController.m */,
+				B9BF21851D119365003CFC2B /* GradientButton.h */,
+				B9BF21861D119365003CFC2B /* GradientButton.m */,
 				B993223711ADD30300D5380F /* maz.c */,
 				B9C860DF11B19390003A4BC2 /* maze.m */,
 				B9C860E011B19390003A4BC2 /* MazeGen.m */,
@@ -819,18 +855,6 @@
 			path = Resources/maze;
 			sourceTree = "<group>";
 		};
-		B9BF216F1D119305003CFC2B /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				B9BF21701D119305003CFC2B /* JMActionSheet.h */,
-				B9BF21711D119305003CFC2B /* JMActionSheet.m */,
-				B9BF21721D119305003CFC2B /* JMAlertView.h */,
-				B9BF21731D119305003CFC2B /* JMAlertView.m */,
-			);
-			name = iOS;
-			path = ../iOS;
-			sourceTree = "<group>";
-		};
 		B9DEC8611280B63D00EBC25C /* textures */ = {
 			isa = PBXGroup;
 			children = (
@@ -888,7 +912,12 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
+				TargetAttributes = {
+					B98B37A81162522600DBCF01 = {
+						DevelopmentTeam = 9D78DG5ACV;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FingerMaze" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -919,7 +948,6 @@
 				B9D5854111640FFF00577C1D /* FingerMazeViewController.xib in Resources */,
 				B9FD7A1D1164EF2F00504157 /* StringMainMenu.png in Resources */,
 				B9837C5E116E4A860000A134 /* IntroView.xib in Resources */,
-				B9A837911233C146000CD219 /* FingerMazeIcon.png in Resources */,
 				B95F667912367BE90011D574 /* red_sprite.png in Resources */,
 				B95F66D8123684BD0011D574 /* gold.png in Resources */,
 				B95F66D9123684BD0011D574 /* silver.png in Resources */,
@@ -1038,6 +1066,7 @@
 				B92EB4A515865FFC00711F00 /* p_recdivision7.txt in Resources */,
 				B92EB4A615865FFC00711F00 /* p_recdivision8.txt in Resources */,
 				B92EB4A715865FFC00711F00 /* p_recdivision9.txt in Resources */,
+				B95212641E1CFF44004CA57B /* FingerMaze.xcconfig in Resources */,
 				B92EB4A815865FFC00711F00 /* p_recdivision10.txt in Resources */,
 				B92EB4A915865FFC00711F00 /* p_sidewinder1.txt in Resources */,
 				B92EB4AA15865FFC00711F00 /* p_sidewinder2.txt in Resources */,
@@ -1075,6 +1104,7 @@
 				B92EB4CA15865FFD00711F00 /* Segment4.txt in Resources */,
 				B92EB4CB15865FFD00711F00 /* Segment5.txt in Resources */,
 				B92EB4CC15865FFD00711F00 /* Segment6.txt in Resources */,
+				B922C7F71E1D02330087872C /* Images.xcassets in Resources */,
 				B92EB4CD15865FFD00711F00 /* Segment7.txt in Resources */,
 				B92EB4CE15865FFD00711F00 /* Segment8.txt in Resources */,
 				B92EB4CF15865FFD00711F00 /* Segment9.txt in Resources */,
@@ -1118,7 +1148,6 @@
 				B9F846D415893BE2002017D4 /* Free1.txt in Resources */,
 				B9F846D515893BE2002017D4 /* Free2.txt in Resources */,
 				B9F846D615893BE2002017D4 /* Free3.txt in Resources */,
-				B9F846D8158945D0002017D4 /* FingerMazeIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1131,24 +1160,28 @@
 			files = (
 				B98B37AD1162522600DBCF01 /* main.m in Sources */,
 				B98B37AE1162522600DBCF01 /* FingerMazeAppDelegate.m in Sources */,
+				B913E31C1E1CFBBB00196733 /* AppKit+Properties.m in Sources */,
 				B98B37D1116252D500DBCF01 /* MazeView.m in Sources */,
+				B913E3321E1CFD7C00196733 /* JMWebViewController.m in Sources */,
 				B984E5751162861E00DA0860 /* Maze.m in Sources */,
+				B913E31B1E1CFBBB00196733 /* AppKit+CoreCode.m in Sources */,
 				B9D585491164117C00577C1D /* FingerMazeViewController.m in Sources */,
 				B99404951168E42A00F4CBDE /* Preferences.m in Sources */,
-				B9837C9A116E4FBC0000A134 /* JMWebViewController.m in Sources */,
+				B913E31F1E1CFBBB00196733 /* Foundation+Properties.m in Sources */,
 				B993223B11ADD30300D5380F /* maz.c in Sources */,
+				B913E32D1E1CFBC800196733 /* JMChoiceController.m in Sources */,
 				B9C860E111B19390003A4BC2 /* maze.m in Sources */,
+				B913E32B1E1CFBC800196733 /* JMActionSheet.m in Sources */,
+				B913E31E1E1CFBBB00196733 /* Foundation+CoreCode.m in Sources */,
+				B913E32C1E1CFBC800196733 /* JMAlertView.m in Sources */,
 				B9C860E211B19390003A4BC2 /* MazeGen.m in Sources */,
 				B95F68191236DDA50011D574 /* MazeViewLayer.m in Sources */,
 				B9A29CE11280C5A600019B70 /* PathLayer.m in Sources */,
-				B9BF21831D11932B003CFC2B /* AppKit+CoreCode.m in Sources */,
 				B9BF21871D119365003CFC2B /* GradientButton.m in Sources */,
-				B9BF21841D11932B003CFC2B /* Foundation+CoreCode.m in Sources */,
-				B9BF217A1D119305003CFC2B /* JMActionSheet.m in Sources */,
-				B94A5DB9187B371300D88154 /* CoreLib.m in Sources */,
-				B9BF217B1D119305003CFC2B /* JMAlertView.m in Sources */,
 				B91375EB1284A6B10057FD7F /* JoystickView.m in Sources */,
+				B913E31D1E1CFBBB00196733 /* CoreLib.m in Sources */,
 				B9F846D015890F87002017D4 /* PurchaseController.m in Sources */,
+				B913E32E1E1CFBC800196733 /* JMSlideshowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1157,8 +1190,11 @@
 /* Begin XCBuildConfiguration section */
 		B98B37B51162522600DBCF01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B95212631E1CFF44004CA57B /* FingerMaze.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1168,7 +1204,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/FingerMaze_Prefix.pch";
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.corecode.FingerMaze;
 				PRODUCT_NAME = "FingerMaze HD";
 				SDKROOT = iphoneos;
@@ -1178,8 +1214,11 @@
 		};
 		B98B37B61162522600DBCF01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B95212631E1CFF44004CA57B /* FingerMaze.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1187,7 +1226,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/FingerMaze_Prefix.pch";
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.corecode.FingerMaze;
 				PRODUCT_NAME = "FingerMaze HD";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -1203,7 +1242,9 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1261,7 +1302,9 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";

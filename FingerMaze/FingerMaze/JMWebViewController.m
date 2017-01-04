@@ -18,14 +18,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @synthesize webView;
 
 
-- (void)dealloc
-{
-	[webView release];
-	[(id)finishBlock release];
-	
-	[super dealloc];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
 {
     return (interfaceOrientation == UIInterfaceOrientationLandscapeRight) ||
