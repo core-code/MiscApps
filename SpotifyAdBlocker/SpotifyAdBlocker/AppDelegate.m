@@ -34,7 +34,9 @@
     SpotifyClientTrack *currentTrack = spotify.currentTrack;
 
     
-    if ([currentTrack.name isEqualToString:@"Spotify"] && currentTrack.artist.length == 0)
+    if (((currentTrack.duration > 29 && currentTrack.duration < 31) ||
+         (currentTrack.duration > 14 && currentTrack.duration < 16)) &&
+        currentTrack.artist.length == 0)
         spotify.soundVolume = 0;
     else
         spotify.soundVolume = 100;
