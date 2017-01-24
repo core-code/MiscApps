@@ -29,7 +29,7 @@
 	<key>CHOOSER_MSG</key>
 	<string>Please choose the FooBar v6.0.x version to be updated to v6.6.6!</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright (c) 2016 CoreCode Limited.</string>
+	<string>Copyright © 2017 CoreCode Limited.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
