@@ -352,7 +352,7 @@ CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 		return;
 	}
 
-	int prev = [path count];
+	NSUInteger prev = [path count];
 	if (done)
 		return;
 
@@ -541,12 +541,12 @@ CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 					}
 				}
 			}
-			for (int i = [a count]-2; i >= 0; i--)
+			for (int i = (int)[a count]-2; i >= 0; i--)
 				[maze addTileToPathX:[[[a objectAtIndex:i] valueForKey:@"x"] intValue] Y:[[[a objectAtIndex:i] valueForKey:@"y"] intValue]];
 		}
 	}
 	
-	int post = [path count];
+	NSUInteger post = [path count];
 	
 	if (prev != post)
 		[pathLayer setNeedsDisplay];
@@ -574,7 +574,10 @@ CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 		NSString *medalStr;
 		int secs = [maze seconds];
 		int points = [prefs pointsForFinishInSeconds:secs];
-		int medal = [prefs finishLevel:[maze num] inSet:[maze levelset] afterSecs:secs withSolution:[[maze path] count]];
+		int medal = [prefs finishLevel:[maze num]
+                                 inSet:[maze levelset]
+                             afterSecs:secs
+                          withSolution:(int)[[maze path] count]];
 		//int score = [prefs score];
 		
 		if (medal == 2)

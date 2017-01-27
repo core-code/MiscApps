@@ -53,7 +53,7 @@ NSArray *levelsCounts;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	srandom(time(NULL));
+	srandom((unsigned int)time(NULL));
 
 	prefs = [[Preferences alloc] init];
 	

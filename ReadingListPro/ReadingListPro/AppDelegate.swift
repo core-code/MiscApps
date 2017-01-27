@@ -25,7 +25,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource
     func applicationDidFinishLaunching(_ aNotification: Notification)
     {
         let filePath = NSString(string: "~/Library/Safari/Bookmarks.plist").expandingTildeInPath
-
+        var count = 0;
+        
         if let d1 = NSDictionary(contentsOfFile: filePath) as? [String: AnyObject]
         {
             if let a1 = d1["Children"] as? [[String: AnyObject]]
@@ -61,6 +62,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource
                                     results[url!.host!] = [newitem]
                                 }
 
+                                count += 1;
                             }
                         }
                     }
@@ -71,6 +73,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource
         print(results)
 
         self.sourceTable.reloadData()
+        
+        self.window.title = "ReadingListPro: " + String(count);
     }
 
 

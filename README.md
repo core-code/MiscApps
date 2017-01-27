@@ -100,3 +100,6 @@ Source code for verifying whether a large number of dynamic strings in numerous 
 
 WindowTiler
 When launched, tiles all windows of the frontmost app to cover the screen equally. Must use external mechanism to launch with hotkey.
+
+SpotifyAdBlocker
+Mutes Spotify while its playing its 15 or 30 second advertisements present in the free version.

@@ -231,7 +231,7 @@ void DrawRandomTexture(CGContextRef ctx)
 {
 	
 	NSArray *images = [NSArray arrayWithObjects:@"3662885547_28d97fd3e7_o.jpg", @"3682831943_d5a673164e_o.jpg", @"3682834083_4f447d0e1a_o.jpg", @"4099286175_620a6626ff_o.jpg", @"4116781768_a23d7d7a4b_o.jpg", @"4136560028_c94c19bcbe_o.jpg", @"4182516039_cc692c3bd2_o.jpg", @"4183270344_2b954bcc54_o.jpg", @"4237813767_fa11c7ec4f_o.jpg", @"4278406515_daf2d8b856_o.jpg", @"4285313100_1e36207d7e_o.jpg", @"4426535173_08f7ec560e_o.jpg", @"4441454031_7772f8351e_o.jpg", @"4498648030_b252e20795_o.jpg", @"4553543798_f21fb77613_o.jpg", @"4568890603_a0720aef99_o.jpg", @"4619713941_4348bb11f3_o.jpg", @"4643168211_2cf9b07d23_o.jpg", @"4913562237_e589a308f1_o.jpg", @"5377113752_62621b9539_o.jpg", @"5638628181_36c9018e73_o.jpg", @"5800948143_8844409e58_o.jpg", @"5457829872_2e67163a21_b.jpg", nil];
-	UIImage *image = [UIImage imageNamed:[images objectAtIndex:RandomIntBetween(0, [images count]-1)]];
+	UIImage *image = [UIImage imageNamed:[images objectAtIndex:RandomIntBetween(0, (int)[images count]-1)]];
 	CGRect image_rect = CGRectMake(0, 0, 500, 500);
 	
 	CGContextSetAlpha(ctx, 0.5); 

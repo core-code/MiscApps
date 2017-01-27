@@ -202,7 +202,7 @@ extern NSArray *levelsCounts;
 	{
 		int erase = -1;
 		
-		for (int i = [path count]-1; i >= 0; i--)
+		for (int i = (int)[path count]-1; i >= 0; i--)
 			if (([[[path objectAtIndex:i] valueForKey:@"x"] intValue] == x) && ([[[path objectAtIndex:i] valueForKey:@"y"] intValue] == y))
 				erase = i;
 		
