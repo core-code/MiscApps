@@ -29,7 +29,7 @@
 	<key>LSUIElement</key>
 	<string>1</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright (c) 2016 CoreCode Limited.</string>
+	<string>Copyright © 2017 CoreCode Limited.</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>
