@@ -33,10 +33,29 @@
     
     SpotifyClientTrack *currentTrack = spotify.currentTrack;
 
+//    NSLog(@"artist %@", currentTrack.artist);
+//    NSLog(@"name %@", currentTrack.name);
+//    NSLog(@"dn %@", @(currentTrack.discNumber).description);
+//    NSLog(@"pc %@", @(currentTrack.playedCount).description);
+//    NSLog(@"tn %@", @(currentTrack.trackNumber).description);
+//    NSLog(@"st %@", @(currentTrack.starred).description);
+//    NSLog(@"po %@", @(currentTrack.popularity).description);
+//    NSLog(@"au %@", (currentTrack.artworkUrl));
+//    NSLog(@"aw %@", (currentTrack.artwork));
+//    NSLog(@"aa %@", (currentTrack.albumArtist));
+//    NSLog(@"su %@", (currentTrack.spotifyUrl));
+//
+//    NSLog(@"%li %i %i %i", (long)currentTrack.duration, (currentTrack.duration > 29500 && currentTrack.duration < 31000), (currentTrack.duration > 14500 && currentTrack.duration < 15500), currentTrack.artist.length == 0);
+    BOOL isAdForSure = [currentTrack.name isEqualToString:@"Spotify"] || [currentTrack.spotifyUrl hasPrefix:@"spotify:ad:"];
+    BOOL isAdByLength = ((currentTrack.duration > 29500 && currentTrack.duration < 31000) ||
+                         (currentTrack.duration > 14500 && currentTrack.duration < 15500)) &&
+                        currentTrack.artist.length == 0 &&
+                        currentTrack.albumArtist.length == 0 &&
+                        currentTrack.discNumber == 0 &&
+                        currentTrack.trackNumber == 0;
     
-    if (((currentTrack.duration > 29 && currentTrack.duration < 31) ||
-         (currentTrack.duration > 14 && currentTrack.duration < 16)) &&
-        currentTrack.artist.length == 0)
+    
+    if (isAdForSure || isAdByLength)
         spotify.soundVolume = 0;
     else
         spotify.soundVolume = 100;
