@@ -28,7 +28,7 @@ class DropViewController: NSViewController
 		{ not in
 
 
-			print("dropReceived", terminator: "")
+			//print("dropReceived", terminator: "")
 
 			if (self.progresses == 0)
 			{

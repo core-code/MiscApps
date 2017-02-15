@@ -31,7 +31,7 @@ class ResultViewController: NSViewController {
 
 	@IBAction func didSelectSource(_ sender: AnyObject)
 	{
-		print("didSelectSource")
+		//print("didSelectSource")
 		if let button = sender as? NSPopUpButton
 		{
 			if button.selectedItem != originMenuItem
@@ -110,7 +110,7 @@ class ResultViewController: NSViewController {
 				}
 				else
 				{
-					print("Error no host")
+					print("Error: no host")
 				}
 			}
 
@@ -118,7 +118,7 @@ class ResultViewController: NSViewController {
 			{
 				if location.latitude != nil
 				{
-					print("long \(location.latitude) lat \(location.longitude)")
+					//print("long \(location.latitude) lat \(location.longitude)")
 
 					let ctrpoint : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: location.latitude!, longitude: location.longitude!)
 
@@ -126,7 +126,7 @@ class ResultViewController: NSViewController {
 				}
 				else
 				{
-					print(location.city + ", " + location.region + ", " + location.country)
+					//print(location.city + ", " + location.region + ", " + location.country)
 					let geocoder:CLGeocoder = CLGeocoder()
 					geocoder.geocodeAddressString(location.city, completionHandler:
 					{(placemarks: [CLPlacemark]?, error: Error?) -> Void in
@@ -157,11 +157,15 @@ class ResultViewController: NSViewController {
 				{
 					self.progressIndicator.stopAnimation(self)
 
-					let alert = NSAlert()
-					alert.messageText = "Converting IP to Location Failed";
-					alert.informativeText = "Error: couldn't  get coordinates of ip: \(self.locationBox.title)"
-					alert.addButton(withTitle: "OK")
-					alert.runModal()
+//					let alert = NSAlert()
+//					alert.messageText = "Converting IP to Location Failed";
+//					alert.informativeText = "Error: couldn't  get coordinates of ip: \(self.locationBox.title)"
+//					alert.addButton(withTitle: "OK")
+//					alert.runModal()
+//                    
+                    //TODO: Clean up this code after testing
+                    
+                    
 				}
 			}
 
@@ -211,11 +215,14 @@ class ResultViewController: NSViewController {
 	var emlString: String = "" {
 		didSet
 		{
-			//println(emlString)
+            emlString = emlString.replacingOccurrences(of: "\r\n", with: "\n")
+            emlString = emlString.replacingOccurrences(of: "\r", with: "\n")
 
-			let subject = emlString.range(of:"\nSubject: ") != nil ? emlString.components(separatedBy: "\nSubject: ")[1].components(separatedBy: "\r")[0] as String : ""
-			let sender = emlString.range(of:"\nFrom: ") != nil ? emlString.components(separatedBy: "\nFrom: ")[1].components(separatedBy: "\r")[0] as String : ""
-			let receiver = emlString.range(of:"\nTo: ") != nil ? emlString.components(separatedBy: "\nTo: ")[1].components(separatedBy: "\r")[0] as String : ""
+            //println(emlString)
+
+			let subject = emlString.range(of:"\nSubject: ") != nil ? emlString.components(separatedBy: "\nSubject: ")[1].components(separatedBy: "\n")[0] as String : ""
+			let sender = emlString.range(of:"\nFrom: ") != nil ? emlString.components(separatedBy: "\nFrom: ")[1].components(separatedBy: "\n")[0] as String : ""
+			let receiver = emlString.range(of:"\nTo: ") != nil ? emlString.components(separatedBy: "\nTo: ")[1].components(separatedBy: "\n")[0] as String : ""
 
 
 			var result : [String] = ["Destination: " + receiver]
@@ -361,11 +368,16 @@ class ResultViewController: NSViewController {
 
 			if (originMenuItem == nil)
 			{
-				let alert = NSAlert()
-				alert.messageText = "Import Failed";
-				alert.informativeText = "This e-mail does not contain a single valid sender address."
-				alert.addButton(withTitle: "D'Oh")
-				alert.runModal()
+//				let alert = NSAlert()
+//				alert.messageText = "Import Failed";
+//				alert.informativeText = "This e-mail does not contain a single valid sender address."
+//				alert.addButton(withTitle: "D'Oh")
+//				alert.runModal()
+                
+                //TODO: Clean up this code after testing
+                
+                
+                print("Error: email does not contain a valid sender address")
 			}
 
 
@@ -373,8 +385,8 @@ class ResultViewController: NSViewController {
 
 
 
-			let xmailer = emlString.range(of:"\nX-Mailer: ") != nil ? emlString.components(separatedBy: "\nX-Mailer: ")[1].components(separatedBy: "\r")[0] as String : ""
-			let agent = emlString.range(of:"\nUser-Agent: ") != nil ? emlString.components(separatedBy: "\nUser-Agent: ")[1].components(separatedBy: "\r")[0] as String : ""
+			let xmailer = emlString.range(of:"\nX-Mailer: ") != nil ? emlString.components(separatedBy: "\nX-Mailer: ")[1].components(separatedBy: "\n")[0] as String : ""
+			let agent = emlString.range(of:"\nUser-Agent: ") != nil ? emlString.components(separatedBy: "\nUser-Agent: ")[1].components(separatedBy: "\n")[0] as String : ""
 			mailer = "\(xmailer) \(agent)".trimmingCharacters(in: .whitespacesAndNewlines)
 			if mailer == ""
 			{
@@ -383,7 +395,7 @@ class ResultViewController: NSViewController {
 
 			if emlString.range(of:"\nMIME-version: ") != nil
 			{
-				let mime = emlString.range(of:"\nMIME-version: ") != nil ? emlString.components(separatedBy: "\nMIME-version: ")[1].components(separatedBy: "\r")[0] as String : ""
+				let mime = emlString.range(of:"\nMIME-version: ") != nil ? emlString.components(separatedBy: "\nMIME-version: ")[1].components(separatedBy: "\n")[0] as String : ""
 
 				let mc = mime.components(separatedBy: " (")
 
@@ -393,7 +405,6 @@ class ResultViewController: NSViewController {
 					mailer = "\(mailer) \(info))"
 				}
 			}
-			NSLog(mailer)
 
 
 			self.isWebmail = true;
@@ -495,10 +506,13 @@ class ResultViewController: NSViewController {
 	{
 		let comp = str.components(separatedBy: ".")
 		assert(comp.count == 4)
-		let int0 = Int(comp[0].trimmingCharacters(in: .whitespacesAndNewlines))!
-		let int1 = Int(comp[1].trimmingCharacters(in: .whitespacesAndNewlines))!
-		let int2 = Int(comp[2].trimmingCharacters(in: .whitespacesAndNewlines))!
-		let int3 = Int(comp[3].trimmingCharacters(in: .whitespacesAndNewlines))!
+        
+        let cs = NSCharacterSet.decimalDigits.inverted
+        
+		let int0 = Int(comp[0].trimmingCharacters(in: cs))!
+		let int1 = Int(comp[1].trimmingCharacters(in: cs))!
+		let int2 = Int(comp[2].trimmingCharacters(in: cs))!
+		let int3 = Int(comp[3].trimmingCharacters(in: cs))!
 
 		if int0 == 10
 		{

@@ -44,19 +44,37 @@ class AppDelegate: NSObject, NSApplicationDelegate
 
 //        var bla = IPGeoLocation("208.80.152.201")
 //        var bla = IPGeoLocation("127.0.0.1")
-//        let mailDir = "~/Library/Mail/V2/".stringByExpandingTildeInPath as String
-//        let mails = NSFileManager.defaultManager().subpathsOfDirectoryAtPath(mailDir , error: nil)! as [String]
-//        for file in mails
+        
+
+        
+//        let mailDir = NSString(string: "~/Documents/EMLX/").expandingTildeInPath
+//        let mailDirURL = URL(fileURLWithPath: mailDir)
+//        do
 //        {
-//            let fullFile = mailDir.stringByAppendingPathComponent(file)
-//            if fullFile.hasSuffix(".eml") || fullFile.hasSuffix(".emlx")
+//
+//            let mails = try FileManager.default.subpathsOfDirectory(atPath: mailDir) as [String]
+//            
+//            
+//            for file in mails
 //            {
-//                //println(fullFile)
-//                
-//                let data = NSData(contentsOfFile: fullFile)
-//                let emlString = NSString(data: data!, encoding: NSASCIIStringEncoding)!
+//                if file.hasSuffix(".eml") || file.hasSuffix(".emlx")
+//                {
+//                    let fullFile = mailDirURL.appendingPathComponent(file)
+//
+//                    print(fullFile)
+//                    
+//                    let data = NSData(contentsOf: fullFile)
+//                    let string = NSString(data: data! as Data, encoding: String.Encoding.utf8.rawValue)
+//                    
+//                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dropReceived"), object: string)
+//                    
+//                }
 //            }
 //        }
+//        catch {
+//            print("error getting xml string: \(error)")
+//        }
+        
 	}
 
     

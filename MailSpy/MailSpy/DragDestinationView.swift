@@ -54,9 +54,10 @@ class DragDestinationView: NSView
         {
 			for file in files!
 			{
-				if file.pathExtension.lowercased() == "eml"
+				if file.pathExtension.lowercased() == "eml" || file.pathExtension.lowercased() == "emlx"
 				{
 					succ = true
+                    break;
 				}
 			}
         }
@@ -109,7 +110,7 @@ class DragDestinationView: NSView
 				for file in files
 				{
 					let fullFile = docDir.appendingPathComponent(file)
-					if fullFile.hasSuffix(".eml")
+					if fullFile.hasSuffix(".eml") || fullFile.hasSuffix(".emlx")
 					{
 						promisedURL = NSURL.fileURL(withPath: fullFile) as NSURL?
 						Swift.print("Info: rebasing succeeded");
@@ -177,14 +178,26 @@ class DragDestinationView: NSView
 
             for file in files
             {
-                if file.pathExtension.lowercased() == "eml"
+                if file.pathExtension.lowercased() == "eml" || file.pathExtension.lowercased() == "emlx"
                 {
-                    
+             
                     let data = NSData(contentsOfFile: file as String)
-                    let string = NSString(data: data! as Data, encoding: String.Encoding.utf8.rawValue)
+                    var string: NSString? = nil
+                    var lossyConversion: ObjCBool = false
 
-                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dropReceived"), object: string)
-                    foundEML = true
+                    let _ = NSString.stringEncoding(for: data as! Data, encodingOptions: nil, convertedString: &string, usedLossyConversion: &lossyConversion)
+                    
+                    
+                    
+                    if (string != nil && (string?.length)! > 0)
+                    {
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dropReceived"), object: string)
+                        foundEML = true
+                    }
+                    else
+                    {
+                        Swift.print("Error: could not decode \(file)")
+                    }
                 }
             }
             
@@ -205,7 +218,7 @@ class DragDestinationView: NSView
         {
             if sub.utf16.count > 255
             {
-                Swift.print("Error ignoring promise too long filename");
+                Swift.print("Error: ignoring promise too long filename");
                 
                 let alert = NSAlert()
                 alert.messageText = "Import Failed";
@@ -225,7 +238,7 @@ class DragDestinationView: NSView
 			Swift.print(file);
 			if (!file.hasSuffix(".eml"))
 			{
-				Swift.print("Error ignoring promise");
+				Swift.print("Error: suffix file \(file)");
 				return true;
 			}
 		  
@@ -236,7 +249,7 @@ class DragDestinationView: NSView
 		}
 		else
 		{
-			Swift.print("Error");
+			Swift.print("Error: namesOfPromisedFilesDropped");
 			return false;
 		}
 	}
