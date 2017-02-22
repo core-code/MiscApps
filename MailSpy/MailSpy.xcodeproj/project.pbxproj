@@ -18,6 +18,7 @@
 		B9284D481A65960500614F3F /* Credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = B9284D451A65960500614F3F /* Credits.rtfd */; };
 		B9284D491A65960500614F3F /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9284D461A65960500614F3F /* FAQ.rtf */; };
 		B9284D4A1A65960500614F3F /* History.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9284D471A65960500614F3F /* History.rtf */; };
+		B92E88121E5DB82F00A5BBCF /* MailSpy.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B92E88111E5DB82F00A5BBCF /* MailSpy.xcconfig */; };
 		B99AA1B41A659ABE0055134E /* DocumentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99AA1B31A659ABE0055134E /* DocumentationViewController.swift */; };
 		B99AA1B61A659E7F0055134E /* Read Me.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B99AA1B51A659E7F0055134E /* Read Me.rtf */; };
 		B9BD19381CDF4D8200C92598 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BD19331CDF4D8200C92598 /* AppKit+CoreCode.m */; };
@@ -41,6 +42,7 @@
 		B9284D451A65960500614F3F /* Credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = Credits.rtfd; sourceTree = "<group>"; };
 		B9284D461A65960500614F3F /* FAQ.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = FAQ.rtf; sourceTree = "<group>"; };
 		B9284D471A65960500614F3F /* History.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = History.rtf; sourceTree = "<group>"; };
+		B92E88111E5DB82F00A5BBCF /* MailSpy.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = MailSpy.xcconfig; sourceTree = SOURCE_ROOT; };
 		B98357D31A505EEE00586FF3 /* MailSpy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MailSpy-Bridging-Header.h"; sourceTree = "<group>"; };
 		B99AA1B31A659ABE0055134E /* DocumentationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentationViewController.swift; sourceTree = "<group>"; };
 		B99AA1B51A659E7F0055134E /* Read Me.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		B903DFCB1A18EDAB004F6D0B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B92E88111E5DB82F00A5BBCF /* MailSpy.xcconfig */,
 				B99AA1B51A659E7F0055134E /* Read Me.rtf */,
 				B9284D451A65960500614F3F /* Credits.rtfd */,
 				B9284D461A65960500614F3F /* FAQ.rtf */,
@@ -196,6 +199,7 @@
 				B99AA1B61A659E7F0055134E /* Read Me.rtf in Resources */,
 				B903DFD51A18EDAB004F6D0B /* Main.storyboard in Resources */,
 				B9284D4A1A65960500614F3F /* History.rtf in Resources */,
+				B92E88121E5DB82F00A5BBCF /* MailSpy.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +254,7 @@
 /* Begin XCBuildConfiguration section */
 		B903DFE21A18EDAB004F6D0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B92E88111E5DB82F00A5BBCF /* MailSpy.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -297,6 +302,7 @@
 		};
 		B903DFE31A18EDAB004F6D0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B92E88111E5DB82F00A5BBCF /* MailSpy.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -344,7 +350,6 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 9D78DG5ACV;
 				INFOPLIST_FILE = MailSpy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -365,7 +370,6 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 9D78DG5ACV;
 				INFOPLIST_FILE = MailSpy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
