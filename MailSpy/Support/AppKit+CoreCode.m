@@ -94,11 +94,9 @@ static CONST_KEY(CoreCodeAssociatedValue)
 		[self setAssociatedValue:progressIndicator forKey:kCCProgressIndicatorKey];
 
 		[NSApp activateIgnoringOtherApps:YES];
-		[NSApp beginSheet:progressPanel
-		   modalForWindow:self
-			modalDelegate:nil
-		   didEndSelector:nil
-			  contextInfo:NULL];
+
+        [self beginSheet:progressPanel completionHandler:^(NSModalResponse resp){}];
+
 
 		[progressIndicator startAnimation:self];
 	});

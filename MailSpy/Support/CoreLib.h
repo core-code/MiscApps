@@ -205,8 +205,6 @@ extern NSProcessInfo *processInfo;
 
 
 // alert convenience
-NSInteger input(NSString *prompt, NSArray *buttons, NSString **result); // alert with text field prompting users
-void alertfeedbackfatal(NSString *usermsg, NSString *details) __attribute__((noreturn));
 NSInteger alert(NSString *title, NSString *msgFormat, NSString *defaultButton, NSString *alternateButton, NSString *otherButton);
 NSInteger alert_apptitled(NSString *msgFormat, NSString *defaultButton, NSString *alternateButton, NSString *otherButton);
 void alert_dontwarnagain_version(NSString *identifier, NSString *title, NSString *msgFormat, NSString *defaultButton, NSString *dontwarnButton)  __attribute__((nonnull (4, 5)));
@@ -234,6 +232,7 @@ void dispatch_async_main(dispatch_block_t block);
 void dispatch_async_back(dispatch_block_t block);
 void dispatch_sync_main(dispatch_block_t block);
 void dispatch_sync_back(dispatch_block_t block);
+BOOL dispatch_sync_back_timeout(dispatch_block_t block, float timeoutSeconds); // returns 0 on succ
 
 
 

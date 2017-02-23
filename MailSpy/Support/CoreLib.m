@@ -239,8 +239,7 @@ NSProcessInfo *processInfo;
 
 @end
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wformat-nonliteral"
+
 
 // obj creation convenience
 NSPredicate *makePredicate(NSString *format, ...)
@@ -299,117 +298,6 @@ NSValue *makeRectValue(CGFloat x, CGFloat y, CGFloat width, CGFloat height)
 
 #if defined(TARGET_OS_MAC) && TARGET_OS_MAC && !TARGET_OS_IPHONE
 
-void alertfeedbackfatal(NSString *usermsg, NSString *details)
-{
-    dispatch_block_t block = ^__attribute__((noreturn))
-	{
-        static const int maxLen = 400;
-
-        NSString *visibleDetails = details;
-        if (visibleDetails.length > maxLen)
-            visibleDetails = makeString(@"%@  …\n(Remaining message omitted)", [visibleDetails clamp:maxLen]);
-            
-		if (NSRunAlertPanel(@"Fatal Error", @"%@\n\n You can contact our support with detailed information so that we can fix this problem.\n\nInformation: %@", @"Send to support", @"Quit", nil, usermsg, visibleDetails) == NSOKButton)
-		{
-			NSString *mailtoLink = makeString(@"mailto:%@?subject=%@ v%@ Problem Report&body=Hello\nA fatal error in %@ occured (%@).\n\nBye\n\nP.S. Details: %@\n\n\nP.P.S: Hardware: %@ Software: %@ %@",
-											kFeedbackEmail,
-											cc.appName,
-											cc.appVersionString,
-											cc.appName,
-											usermsg,
-											details,
-											_machineType(),
-											[[NSProcessInfo processInfo] operatingSystemVersionString],
-											([cc.appCrashLogs count] ? makeString(@" Problems: %li", [cc.appCrashLogs count]) : @""));
-			
-			[mailtoLink.escaped.URL open];
-		}
-		exit(1);
-    };
-    
-    if ([NSThread currentThread] == [NSThread mainThread])
-        block();
-    else
-        dispatch_sync_main(block);
-
-	exit(1);
-}
-
-NSInteger input(NSString *prompt, NSArray *buttons, NSString **result)
-{
-	NSAlert *alert = [NSAlert alertWithMessageText:prompt
-                                     defaultButton:[buttons safeObjectAtIndex:0]
-                                   alternateButton:[buttons safeObjectAtIndex:1]
-                                       otherButton:[buttons safeObjectAtIndex:2]
-                         informativeTextWithFormat:@""];
-    
-	NSTextField *input = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 310, 24)];
-#if ! __has_feature(objc_arc)
-	[input autorelease];
-#endif
-	[alert setAccessoryView:input];
-	NSInteger button = [alert runModal];
-
-	[input validateEditing];
-	*result = [input stringValue];
-
-	return button;
-}
-
-
-NSInteger alert(NSString *title, NSString *msgFormat, NSString *defaultButton, NSString *alternateButton, NSString *otherButton)
-{
-#ifdef DEBUG
-	assert([NSThread currentThread] == [NSThread mainThread]);
-#endif
-	[NSApp activateIgnoringOtherApps:YES];
-	return NSRunAlertPanel(title, msgFormat, defaultButton, alternateButton, otherButton);
-}
-NSInteger alert_apptitled(NSString *msgFormat, NSString *defaultButton, NSString *alternateButton, NSString *otherButton)
-{
-#ifdef DEBUG
-	assert([NSThread currentThread] == [NSThread mainThread]);
-#endif
-	[NSApp activateIgnoringOtherApps:YES];
-	return NSRunAlertPanel(cc.appName, msgFormat, defaultButton, alternateButton, otherButton);
-}
-void alert_dontwarnagain_version(NSString *identifier, NSString *title, NSString *msgFormat, NSString *defaultButton, NSString *dontwarnButton)
-{
-    dispatch_block_t block = ^
-	{
-		NSString *name = makeString(@"_%@_%@_asked", identifier, [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]);
-		if (!name.defaultInt)
-		{
-			[NSApp activateIgnoringOtherApps:YES];
-			if (NSRunAlertPanel(title, msgFormat, defaultButton, dontwarnButton, nil) != NSAlertDefaultReturn)
-				name.defaultInt = 1;
-		}
-	};
-
-    if ([NSThread currentThread] == [NSThread mainThread])
-        block();
-    else
-        dispatch_async_main(block);
-}
-void alert_dontwarnagain_ever(NSString *identifier, NSString *title, NSString *msgFormat, NSString *defaultButton, NSString *dontwarnButton)
-{
-    dispatch_block_t block = ^
-	{
-		NSString *name = makeString(@"_%@_asked", identifier);
-		if (!name.defaultInt)
-		{
-			[NSApp activateIgnoringOtherApps:YES];
-			if (NSRunAlertPanel(title, msgFormat, defaultButton, dontwarnButton, nil) != NSAlertDefaultReturn)
-				name.defaultInt = 1;
-		}
-	};
-
-	if ([NSThread currentThread] == [NSThread mainThread])
-		block();
-	else
-		dispatch_async_main(block);
-}
-#pragma clang diagnostic pop
 
 
 NSColor *makeColor(float r, float g, float b, float a)
@@ -472,6 +360,13 @@ void asl_NSLog_debug(NSString *format, ...)
 #endif
 
 // gcd convenience
+BOOL dispatch_sync_back_timeout(dispatch_block_t block, float timeoutSeconds) // returns 0 on succ
+{
+    dispatch_block_t newblock = dispatch_block_create(DISPATCH_BLOCK_INHERIT_QOS_CLASS, block);
+    dispatch_async(dispatch_get_global_queue(0, 0), newblock);
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(timeoutSeconds * NSEC_PER_SEC));
+    return dispatch_block_wait(newblock, popTime) != 0;
+}
 void dispatch_after_main(float seconds, dispatch_block_t block)
 {
 	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(seconds * NSEC_PER_SEC));
