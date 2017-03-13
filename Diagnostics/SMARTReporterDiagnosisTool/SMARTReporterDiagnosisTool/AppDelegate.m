@@ -89,7 +89,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     asl_NSLog_debug(@"%@", [disks description]);
 	disks = [JMHostInformation mountedHarddisks:NO];
 	asl_NSLog_debug(@"%@", [disks description]);
-
+#error this code doesn't work anymore cause asl_ is broken since 10.12
 
 
 	NSTask *task = [NSTask new];
