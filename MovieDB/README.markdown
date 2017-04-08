@@ -19,7 +19,7 @@ advanced users.
 MovieDB is completely unsupported and is not currently under any active
 development.
 MovieDB's source code has [moved to
-GitHub](https://github.com/core-code/MovieDB) hoping that others will
+GitHub](https://github.com/core-code/MiscApps/tree/master/MovieDB) hoping that others will
 help finish the app.  
 
 **DISCLAIMER:**
@@ -35,10 +35,6 @@ without permission.
 **Requirements:**
 
 • Mac OS X 10.6 or later  
-
-**Website:**
-
-[www.corecode.io/moviedb](https://www.corecode.io/moviedb/)  
 
 
 **License & Cost:**
