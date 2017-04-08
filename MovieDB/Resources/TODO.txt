@@ -1,0 +1,12 @@
+TODO 1.0:
+• blocked by imdb when multiple requests.
+• iCloud
+• preferences: autofetch imdb
+• mass fetch imdb for all movies that have no imdb match
+• null option in type
+• search (add: Filetype, Language, ?Number?)
+• lending
+• add optional columns: filetype, imdb-title, writers
+• imdb localisations!
+• too long writers/directors, make ... and link to fullcredits#directors/writers
+• export multimedia images

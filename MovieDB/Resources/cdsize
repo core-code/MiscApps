@@ -1,0 +1,5 @@
+#!/bin/sh
+./cdinfo --no-device-info --no-disc-mode --no-ioctl --no-cddb -C "$@" 2>/dev/null |
+	grep raw |
+	grep -o \([0-9]* |
+	cut -c 2-9

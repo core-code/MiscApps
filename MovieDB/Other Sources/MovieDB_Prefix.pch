@@ -1,0 +1,33 @@
+//
+// Prefix header for all source files of the 'MovieDB' target in the 'MovieDB' project
+//
+
+#include <math.h>
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+    #import <Cocoa/Cocoa.h>
+#endif
+
+#define USE_DISKARBITRATION 1
+#import "CoreLib.h"
+
+#include <asl.h>
+
+#include <sys/types.h>
+#include <sys/sysctl.h>
+
+#include <dispatch/dispatch.h>
+#include <unistd.h>
+#include <IOKit/IOKitLib.h>
+#include <IOKit/network/IOEthernetInterface.h>
+#include <IOKit/network/IONetworkInterface.h>
+#include <IOKit/network/IOEthernetController.h>
+#include <IOKit/ps/IOPSKeys.h>
+#include <IOKit/ps/IOPowerSources.h>
+
+
+
+#define kAgreedToIMDBConditionsKey		@"agreedToIMDBConditions"
+#define kUpdatecheckMenuindexKey		@"updatecheckMenuindex"

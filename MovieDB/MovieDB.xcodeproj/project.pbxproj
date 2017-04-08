@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		663B4CB20CD5306100ACD6E0 /* MovieDocument.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 663B4CB10CD5306100ACD6E0 /* MovieDocument.xcdatamodel */; };
+		663B4E6F0CD5341700ACD6E0 /* ValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 663B4E6E0CD5341700ACD6E0 /* ValueTransformer.m */; };
+		6691FAD50B8B54180036FE5D /* MovieDB_Document.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6691FAD30B8B54180036FE5D /* MovieDB_Document.icns */; };
+		6691FAD60B8B54180036FE5D /* MovieDB.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6691FAD40B8B54180036FE5D /* MovieDB.icns */; };
+		775DFF38067A968500C5B868 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		B90D0907103EC643000B1C02 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90D0906103EC643000B1C02 /* IOKit.framework */; };
+		B94086071534BEB90069BD0F /* Credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = B94086061534BEB80069BD0F /* Credits.rtfd */; };
+		B9506B8C097EEE5A0058AF44 /* cdsize in Resources */ = {isa = PBXBuildFile; fileRef = B9506B8B097EEE5A0058AF44 /* cdsize */; };
+		B976A0A910F51CEA00120707 /* History.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B976A0A710F51CEA00120707 /* History.rtf */; };
+		B976A0AA10F51CEA00120707 /* Read Me.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B976A0A810F51CEA00120707 /* Read Me.rtf */; };
+		B98E448710F26EED009B137B /* IMDBSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98E448610F26EED009B137B /* IMDBSheetController.m */; };
+		B9A2EEF1109275E300A9E131 /* InfoHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A2EEF0109275E300A9E131 /* InfoHelper.m */; };
+		B9A4D68E10923AB800E0AA11 /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A4D68910923AB800E0AA11 /* minus.png */; };
+		B9A4D68F10923AB800E0AA11 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A4D68A10923AB800E0AA11 /* plus.png */; };
+		B9A4D69010923AB800E0AA11 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A4D68B10923AB800E0AA11 /* refresh.png */; };
+		B9A4D69110923AB800E0AA11 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A4D68C10923AB800E0AA11 /* reload.png */; };
+		B9A4D69210923AB800E0AA11 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = B9A4D68D10923AB800E0AA11 /* search.png */; };
+		B9A8B4D90979BE87005E3C04 /* cdinfo in Resources */ = {isa = PBXBuildFile; fileRef = B9A8B4D80979BE87005E3C04 /* cdinfo */; };
+		B9DE09970957A00D0027E5D7 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DE09890957A00D0027E5D7 /* Movie.m */; };
+		B9DE09980957A00D0027E5D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DE098B0957A00D0027E5D7 /* AppDelegate.m */; };
+		B9DE09990957A00D0027E5D7 /* MovieDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DE098D0957A00D0027E5D7 /* MovieDocument.m */; };
+		B9DE09AA0957A01E0027E5D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DE09A80957A01E0027E5D7 /* main.m */; };
+		B9DE09C60957A02C0027E5D7 /* language_list.txt in Resources */ = {isa = PBXBuildFile; fileRef = B9DE09B90957A02C0027E5D7 /* language_list.txt */; };
+		B9DE09C70957A02C0027E5D7 /* midentify in Resources */ = {isa = PBXBuildFile; fileRef = B9DE09BA0957A02C0027E5D7 /* midentify */; };
+		B9DE09C80957A02C0027E5D7 /* mplayer in Resources */ = {isa = PBXBuildFile; fileRef = B9DE09BB0957A02C0027E5D7 /* mplayer */; };
+		B9F219FB1B4A90AA008E12BC /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219D31B4A90AA008E12BC /* AppKit+CoreCode.m */; };
+		B9F219FC1B4A90AA008E12BC /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219D51B4A90AA008E12BC /* AppKit+Properties.m */; };
+		B9F219FD1B4A90AA008E12BC /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219D71B4A90AA008E12BC /* CoreLib.m */; };
+		B9F219FE1B4A90AA008E12BC /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219DA1B4A90AA008E12BC /* Foundation+CoreCode.m */; };
+		B9F219FF1B4A90AA008E12BC /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219DD1B4A90AA008E12BC /* Foundation+Properties.m */; };
+		B9F21A001B4A90AA008E12BC /* JMApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219E01B4A90AA008E12BC /* JMApplicationDelegate.m */; };
+		B9F21A011B4A90AA008E12BC /* JMAppMovedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219E21B4A90AA008E12BC /* JMAppMovedHandler.m */; };
+		B9F21A021B4A90AA008E12BC /* JMClickableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219E41B4A90AA008E12BC /* JMClickableImageView.m */; };
+		B9F21A031B4A90AA008E12BC /* JMCorrectTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219E61B4A90AA008E12BC /* JMCorrectTimer.m */; };
+		B9F21A041B4A90AA008E12BC /* JMCrashReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219E81B4A90AA008E12BC /* JMCrashReporter.m */; };
+		B9F21A051B4A90AA008E12BC /* JMDocklessApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219EA1B4A90AA008E12BC /* JMDocklessApplication.m */; };
+		B9F21A061B4A90AA008E12BC /* JMEmailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219EC1B4A90AA008E12BC /* JMEmailSender.m */; };
+		B9F21A071B4A90AA008E12BC /* JMFontPopUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219EE1B4A90AA008E12BC /* JMFontPopUpButton.m */; };
+		B9F21A081B4A90AA008E12BC /* JMHostInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219F01B4A90AA008E12BC /* JMHostInformation.m */; };
+		B9F21A091B4A90AA008E12BC /* JMLoginItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219F21B4A90AA008E12BC /* JMLoginItemManager.m */; };
+		B9F21A0A1B4A90AA008E12BC /* JMRTFView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219F41B4A90AA008E12BC /* JMRTFView.m */; };
+		B9F21A0B1B4A90AA008E12BC /* JMValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219F61B4A90AA008E12BC /* JMValueTransformer.m */; };
+		B9F21A0C1B4A90AA008E12BC /* JMVisibilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219F81B4A90AA008E12BC /* JMVisibilityManager.m */; };
+		B9F21A0D1B4A90AA008E12BC /* JMWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219FA1B4A90AA008E12BC /* JMWebView.m */; };
+		B9F21A0F1B4A9373008E12BC /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F21A0E1B4A9373008E12BC /* Sparkle.framework */; };
+		B9F21A111B4A9548008E12BC /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F21A101B4A9548008E12BC /* DiskArbitration.framework */; };
+		B9F21A121B4A9651008E12BC /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9F21A0E1B4A9373008E12BC /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9F21A141B4C6757008E12BC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F21A131B4C6757008E12BC /* WebKit.framework */; };
+		B9F21A161B4C675F008E12BC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F21A151B4C675F008E12BC /* SystemConfiguration.framework */; };
+		B9F21A181B4C6766008E12BC /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F21A171B4C6766008E12BC /* JavaScriptCore.framework */; };
+		B9F5CF391B5AFD46005E1141 /* ExportPlugin.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9F5CF371B5AFD1D005E1141 /* ExportPlugin.js */; };
+		B9F5CF3B1B5BFB39005E1141 /* ExportHTMLPlugin.js in Resources */ = {isa = PBXBuildFile; fileRef = B9F5CF3A1B5BFB39005E1141 /* ExportHTMLPlugin.js */; };
+		B9FF73271090DA3500F14317 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9FF73251090DA3500F14317 /* MainMenu.xib */; };
+		B9FF73351090DA4F00F14317 /* MovieDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9FF73331090DA4F00F14317 /* MovieDocument.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B9769F6410F50ED800120707 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B9F21A121B4A9651008E12BC /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9F5CF381B5AFD3E005E1141 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B9F5CF391B5AFD46005E1141 /* ExportPlugin.js in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		663B4CB10CD5306100ACD6E0 /* MovieDocument.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = wrapper.xcdatamodel; path = MovieDocument.xcdatamodel; sourceTree = "<group>"; };
+		663B4E6D0CD5341700ACD6E0 /* ValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ValueTransformer.h; sourceTree = "<group>"; };
+		663B4E6E0CD5341700ACD6E0 /* ValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ValueTransformer.m; sourceTree = "<group>"; };
+		6691FAD30B8B54180036FE5D /* MovieDB_Document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MovieDB_Document.icns; sourceTree = "<group>"; };
+		6691FAD40B8B54180036FE5D /* MovieDB.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MovieDB.icns; sourceTree = "<group>"; };
+		6691FAD70B8B543A0036FE5D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7788DA0506752A1600599AAD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		8D15AC370486D014006FF6A4 /* MovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B90D0906103EC643000B1C02 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		B94086061534BEB80069BD0F /* Credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = Credits.rtfd; sourceTree = "<group>"; };
+		B9506B8B097EEE5A0058AF44 /* cdsize */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.script.sh; path = cdsize; sourceTree = "<group>"; };
+		B976A0A710F51CEA00120707 /* History.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = History.rtf; sourceTree = "<group>"; };
+		B976A0A810F51CEA00120707 /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		B98E448610F26EED009B137B /* IMDBSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMDBSheetController.m; sourceTree = "<group>"; };
+		B9A2EE0010926CDD00A9E131 /* IMDBSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMDBSheetController.h; sourceTree = "<group>"; };
+		B9A2EEEF109275E300A9E131 /* InfoHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoHelper.h; sourceTree = "<group>"; };
+		B9A2EEF0109275E300A9E131 /* InfoHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoHelper.m; sourceTree = "<group>"; };
+		B9A4D68910923AB800E0AA11 /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
+		B9A4D68A10923AB800E0AA11 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		B9A4D68B10923AB800E0AA11 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		B9A4D68C10923AB800E0AA11 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
+		B9A4D68D10923AB800E0AA11 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		B9A8B4D80979BE87005E3C04 /* cdinfo */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = cdinfo; sourceTree = "<group>"; };
+		B9DE09880957A00D0027E5D7 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		B9DE09890957A00D0027E5D7 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		B9DE098A0957A00D0027E5D7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B9DE098B0957A00D0027E5D7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B9DE098C0957A00D0027E5D7 /* MovieDocument.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MovieDocument.h; sourceTree = "<group>"; };
+		B9DE098D0957A00D0027E5D7 /* MovieDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDocument.m; sourceTree = "<group>"; };
+		B9DE09A80957A01E0027E5D7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B9DE09A90957A01E0027E5D7 /* MovieDB_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = MovieDB_Prefix.pch; sourceTree = "<group>"; };
+		B9DE09B90957A02C0027E5D7 /* language_list.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = language_list.txt; sourceTree = "<group>"; };
+		B9DE09BA0957A02C0027E5D7 /* midentify */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.script.sh; path = midentify; sourceTree = "<group>"; };
+		B9DE09BB0957A02C0027E5D7 /* mplayer */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = mplayer; sourceTree = "<group>"; };
+		B9F219D21B4A90AA008E12BC /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
+		B9F219D31B4A90AA008E12BC /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
+		B9F219D41B4A90AA008E12BC /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
+		B9F219D51B4A90AA008E12BC /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
+		B9F219D61B4A90AA008E12BC /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
+		B9F219D71B4A90AA008E12BC /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
+		B9F219D81B4A90AA008E12BC /* CoreLib_Availability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib_Availability.h; sourceTree = "<group>"; };
+		B9F219D91B4A90AA008E12BC /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
+		B9F219DA1B4A90AA008E12BC /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
+		B9F219DB1B4A90AA008E12BC /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
+		B9F219DC1B4A90AA008E12BC /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
+		B9F219DD1B4A90AA008E12BC /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
+		B9F219DF1B4A90AA008E12BC /* JMApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMApplicationDelegate.h; sourceTree = "<group>"; };
+		B9F219E01B4A90AA008E12BC /* JMApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMApplicationDelegate.m; sourceTree = "<group>"; };
+		B9F219E11B4A90AA008E12BC /* JMAppMovedHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAppMovedHandler.h; sourceTree = "<group>"; };
+		B9F219E21B4A90AA008E12BC /* JMAppMovedHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAppMovedHandler.m; sourceTree = "<group>"; };
+		B9F219E31B4A90AA008E12BC /* JMClickableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMClickableImageView.h; sourceTree = "<group>"; };
+		B9F219E41B4A90AA008E12BC /* JMClickableImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMClickableImageView.m; sourceTree = "<group>"; };
+		B9F219E51B4A90AA008E12BC /* JMCorrectTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCorrectTimer.h; sourceTree = "<group>"; };
+		B9F219E61B4A90AA008E12BC /* JMCorrectTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCorrectTimer.m; sourceTree = "<group>"; };
+		B9F219E71B4A90AA008E12BC /* JMCrashReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCrashReporter.h; sourceTree = "<group>"; };
+		B9F219E81B4A90AA008E12BC /* JMCrashReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCrashReporter.m; sourceTree = "<group>"; };
+		B9F219E91B4A90AA008E12BC /* JMDocklessApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDocklessApplication.h; sourceTree = "<group>"; };
+		B9F219EA1B4A90AA008E12BC /* JMDocklessApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDocklessApplication.m; sourceTree = "<group>"; };
+		B9F219EB1B4A90AA008E12BC /* JMEmailSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMEmailSender.h; sourceTree = "<group>"; };
+		B9F219EC1B4A90AA008E12BC /* JMEmailSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMEmailSender.m; sourceTree = "<group>"; };
+		B9F219ED1B4A90AA008E12BC /* JMFontPopUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMFontPopUpButton.h; sourceTree = "<group>"; };
+		B9F219EE1B4A90AA008E12BC /* JMFontPopUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMFontPopUpButton.m; sourceTree = "<group>"; };
+		B9F219EF1B4A90AA008E12BC /* JMHostInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMHostInformation.h; sourceTree = "<group>"; };
+		B9F219F01B4A90AA008E12BC /* JMHostInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMHostInformation.m; sourceTree = "<group>"; };
+		B9F219F11B4A90AA008E12BC /* JMLoginItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLoginItemManager.h; sourceTree = "<group>"; };
+		B9F219F21B4A90AA008E12BC /* JMLoginItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLoginItemManager.m; sourceTree = "<group>"; };
+		B9F219F31B4A90AA008E12BC /* JMRTFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMRTFView.h; sourceTree = "<group>"; };
+		B9F219F41B4A90AA008E12BC /* JMRTFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMRTFView.m; sourceTree = "<group>"; };
+		B9F219F51B4A90AA008E12BC /* JMValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMValueTransformer.h; sourceTree = "<group>"; };
+		B9F219F61B4A90AA008E12BC /* JMValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMValueTransformer.m; sourceTree = "<group>"; };
+		B9F219F71B4A90AA008E12BC /* JMVisibilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMVisibilityManager.h; sourceTree = "<group>"; };
+		B9F219F81B4A90AA008E12BC /* JMVisibilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMVisibilityManager.m; sourceTree = "<group>"; };
+		B9F219F91B4A90AA008E12BC /* JMWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMWebView.h; sourceTree = "<group>"; };
+		B9F219FA1B4A90AA008E12BC /* JMWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMWebView.m; sourceTree = "<group>"; };
+		B9F21A0E1B4A9373008E12BC /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
+		B9F21A101B4A9548008E12BC /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = ../../../../../../System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<group>"; };
+		B9F21A131B4C6757008E12BC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = ../../../../../../System/Library/Frameworks/WebKit.framework; sourceTree = "<group>"; };
+		B9F21A151B4C675F008E12BC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = ../../../../../../System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<group>"; };
+		B9F21A171B4C6766008E12BC /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = ../../../../../../System/Library/Frameworks/JavaScriptCore.framework; sourceTree = "<group>"; };
+		B9F5CF371B5AFD1D005E1141 /* ExportPlugin.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = ExportPlugin.js; sourceTree = "<group>"; };
+		B9F5CF3A1B5BFB39005E1141 /* ExportHTMLPlugin.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ExportHTMLPlugin.js; sourceTree = "<group>"; };
+		B9FF73261090DA3500F14317 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B9FF73341090DA4F00F14317 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = Resources/English.lproj/MovieDocument.xib; sourceTree = "<group>"; };
+		B9FF930C10F14C0A00DD448A /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D15AC330486D014006FF6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9F21A141B4C6757008E12BC /* WebKit.framework in Frameworks */,
+				775DFF38067A968500C5B868 /* Cocoa.framework in Frameworks */,
+				B9F21A181B4C6766008E12BC /* JavaScriptCore.framework in Frameworks */,
+				B90D0907103EC643000B1C02 /* IOKit.framework in Frameworks */,
+				B9F21A0F1B4A9373008E12BC /* Sparkle.framework in Frameworks */,
+				B9F21A111B4A9548008E12BC /* DiskArbitration.framework in Frameworks */,
+				B9F21A161B4C675F008E12BC /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9F21A171B4C6766008E12BC /* JavaScriptCore.framework */,
+				B9F21A151B4C675F008E12BC /* SystemConfiguration.framework */,
+				B9F21A131B4C6757008E12BC /* WebKit.framework */,
+				B9F21A101B4A9548008E12BC /* DiskArbitration.framework */,
+				B90D0906103EC643000B1C02 /* IOKit.framework */,
+				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
+				7788DA0506752A1600599AAD /* CoreData.framework */,
+				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB0FE9D524F11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D15AC370486D014006FF6A4 /* MovieDB.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A37F4AAFDCFA73011CA2CEA /* MovieDB */ = {
+			isa = PBXGroup;
+			children = (
+				B9DE09870957A00D0027E5D7 /* Classes */,
+				B90D08F3103EC5F4000B1C02 /* Shared Code */,
+				B9DE09A70957A01E0027E5D7 /* Other Sources */,
+				B9DE09AB0957A02C0027E5D7 /* Resources */,
+				2A37F4C3FDCFA73011CA2CEA /* Frameworks */,
+				19C28FB0FE9D524F11CA2CBB /* Products */,
+			);
+			name = MovieDB;
+			sourceTree = "<group>";
+		};
+		2A37F4C3FDCFA73011CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9F21A0E1B4A9373008E12BC /* Sparkle.framework */,
+				1058C7A6FEA54F5311CA2CBB /* Linked Frameworks */,
+				1058C7A8FEA54F5311CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B90D08F3103EC5F4000B1C02 /* Shared Code */ = {
+			isa = PBXGroup;
+			children = (
+				B9F219D11B4A90AA008E12BC /* CoreLib */,
+				B9F219DE1B4A90AA008E12BC /* Mac */,
+			);
+			path = "Shared Code";
+			sourceTree = "<group>";
+		};
+		B9DE09870957A00D0027E5D7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				663B4E6D0CD5341700ACD6E0 /* ValueTransformer.h */,
+				663B4E6E0CD5341700ACD6E0 /* ValueTransformer.m */,
+				B9DE09880957A00D0027E5D7 /* Movie.h */,
+				B9DE09890957A00D0027E5D7 /* Movie.m */,
+				B9DE098A0957A00D0027E5D7 /* AppDelegate.h */,
+				B9DE098B0957A00D0027E5D7 /* AppDelegate.m */,
+				B9DE098C0957A00D0027E5D7 /* MovieDocument.h */,
+				B9DE098D0957A00D0027E5D7 /* MovieDocument.m */,
+				B9A2EE0010926CDD00A9E131 /* IMDBSheetController.h */,
+				B98E448610F26EED009B137B /* IMDBSheetController.m */,
+				B9A2EEEF109275E300A9E131 /* InfoHelper.h */,
+				B9A2EEF0109275E300A9E131 /* InfoHelper.m */,
+			);
+			name = Classes;
+			path = MovieDB;
+			sourceTree = "<group>";
+		};
+		B9DE09A70957A01E0027E5D7 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				663B4CB10CD5306100ACD6E0 /* MovieDocument.xcdatamodel */,
+				B9DE09A80957A01E0027E5D7 /* main.m */,
+				B9DE09A90957A01E0027E5D7 /* MovieDB_Prefix.pch */,
+			);
+			path = "Other Sources";
+			sourceTree = "<group>";
+		};
+		B9DE09AB0957A02C0027E5D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B9F5CF3A1B5BFB39005E1141 /* ExportHTMLPlugin.js */,
+				B9F5CF371B5AFD1D005E1141 /* ExportPlugin.js */,
+				B94086061534BEB80069BD0F /* Credits.rtfd */,
+				B976A0A710F51CEA00120707 /* History.rtf */,
+				6691FAD70B8B543A0036FE5D /* Info.plist */,
+				B976A0A810F51CEA00120707 /* Read Me.rtf */,
+				B9A4D68910923AB800E0AA11 /* minus.png */,
+				B9FF930C10F14C0A00DD448A /* TODO.txt */,
+				B9A4D68A10923AB800E0AA11 /* plus.png */,
+				B9A4D68B10923AB800E0AA11 /* refresh.png */,
+				B9A4D68C10923AB800E0AA11 /* reload.png */,
+				B9A4D68D10923AB800E0AA11 /* search.png */,
+				6691FAD30B8B54180036FE5D /* MovieDB_Document.icns */,
+				6691FAD40B8B54180036FE5D /* MovieDB.icns */,
+				B9DE09B90957A02C0027E5D7 /* language_list.txt */,
+				B9FF73251090DA3500F14317 /* MainMenu.xib */,
+				B9FF73331090DA4F00F14317 /* MovieDocument.xib */,
+				B9DE09BA0957A02C0027E5D7 /* midentify */,
+				B9506B8B097EEE5A0058AF44 /* cdsize */,
+				B9A8B4D80979BE87005E3C04 /* cdinfo */,
+				B9DE09BB0957A02C0027E5D7 /* mplayer */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B9F219D11B4A90AA008E12BC /* CoreLib */ = {
+			isa = PBXGroup;
+			children = (
+				B9F219D21B4A90AA008E12BC /* AppKit+CoreCode.h */,
+				B9F219D31B4A90AA008E12BC /* AppKit+CoreCode.m */,
+				B9F219D41B4A90AA008E12BC /* AppKit+Properties.h */,
+				B9F219D51B4A90AA008E12BC /* AppKit+Properties.m */,
+				B9F219D61B4A90AA008E12BC /* CoreLib.h */,
+				B9F219D71B4A90AA008E12BC /* CoreLib.m */,
+				B9F219D81B4A90AA008E12BC /* CoreLib_Availability.h */,
+				B9F219D91B4A90AA008E12BC /* Foundation+CoreCode.h */,
+				B9F219DA1B4A90AA008E12BC /* Foundation+CoreCode.m */,
+				B9F219DB1B4A90AA008E12BC /* Foundation+Indexing.h */,
+				B9F219DC1B4A90AA008E12BC /* Foundation+Properties.h */,
+				B9F219DD1B4A90AA008E12BC /* Foundation+Properties.m */,
+			);
+			name = CoreLib;
+			path = ../../CoreLib/CoreLib;
+			sourceTree = "<group>";
+		};
+		B9F219DE1B4A90AA008E12BC /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				B9F219DF1B4A90AA008E12BC /* JMApplicationDelegate.h */,
+				B9F219E01B4A90AA008E12BC /* JMApplicationDelegate.m */,
+				B9F219E11B4A90AA008E12BC /* JMAppMovedHandler.h */,
+				B9F219E21B4A90AA008E12BC /* JMAppMovedHandler.m */,
+				B9F219E31B4A90AA008E12BC /* JMClickableImageView.h */,
+				B9F219E41B4A90AA008E12BC /* JMClickableImageView.m */,
+				B9F219E51B4A90AA008E12BC /* JMCorrectTimer.h */,
+				B9F219E61B4A90AA008E12BC /* JMCorrectTimer.m */,
+				B9F219E71B4A90AA008E12BC /* JMCrashReporter.h */,
+				B9F219E81B4A90AA008E12BC /* JMCrashReporter.m */,
+				B9F219E91B4A90AA008E12BC /* JMDocklessApplication.h */,
+				B9F219EA1B4A90AA008E12BC /* JMDocklessApplication.m */,
+				B9F219EB1B4A90AA008E12BC /* JMEmailSender.h */,
+				B9F219EC1B4A90AA008E12BC /* JMEmailSender.m */,
+				B9F219ED1B4A90AA008E12BC /* JMFontPopUpButton.h */,
+				B9F219EE1B4A90AA008E12BC /* JMFontPopUpButton.m */,
+				B9F219EF1B4A90AA008E12BC /* JMHostInformation.h */,
+				B9F219F01B4A90AA008E12BC /* JMHostInformation.m */,
+				B9F219F11B4A90AA008E12BC /* JMLoginItemManager.h */,
+				B9F219F21B4A90AA008E12BC /* JMLoginItemManager.m */,
+				B9F219F31B4A90AA008E12BC /* JMRTFView.h */,
+				B9F219F41B4A90AA008E12BC /* JMRTFView.m */,
+				B9F219F51B4A90AA008E12BC /* JMValueTransformer.h */,
+				B9F219F61B4A90AA008E12BC /* JMValueTransformer.m */,
+				B9F219F71B4A90AA008E12BC /* JMVisibilityManager.h */,
+				B9F219F81B4A90AA008E12BC /* JMVisibilityManager.m */,
+				B9F219F91B4A90AA008E12BC /* JMWebView.h */,
+				B9F219FA1B4A90AA008E12BC /* JMWebView.m */,
+			);
+			name = Mac;
+			path = ../../CoreLib/Mac;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D15AC270486D014006FF6A4 /* MovieDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9EBEEFC091A7AE10088293E /* Build configuration list for PBXNativeTarget "MovieDB" */;
+			buildPhases = (
+				8D15AC2B0486D014006FF6A4 /* Resources */,
+				8D15AC300486D014006FF6A4 /* Sources */,
+				8D15AC330486D014006FF6A4 /* Frameworks */,
+				B9769F6410F50ED800120707 /* CopyFiles */,
+				B9F5CF381B5AFD3E005E1141 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MovieDB;
+			productInstallPath = "$(HOME)/Applications";
+			productName = MovieDB;
+			productReference = 8D15AC370486D014006FF6A4 /* MovieDB.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = B9EBEF00091A7AE10088293E /* Build configuration list for PBXProject "MovieDB" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* MovieDB */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D15AC270486D014006FF6A4 /* MovieDB */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D15AC2B0486D014006FF6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9F5CF3B1B5BFB39005E1141 /* ExportHTMLPlugin.js in Resources */,
+				B9DE09C60957A02C0027E5D7 /* language_list.txt in Resources */,
+				B9DE09C70957A02C0027E5D7 /* midentify in Resources */,
+				B9DE09C80957A02C0027E5D7 /* mplayer in Resources */,
+				B9A8B4D90979BE87005E3C04 /* cdinfo in Resources */,
+				B9506B8C097EEE5A0058AF44 /* cdsize in Resources */,
+				6691FAD50B8B54180036FE5D /* MovieDB_Document.icns in Resources */,
+				6691FAD60B8B54180036FE5D /* MovieDB.icns in Resources */,
+				B9FF73271090DA3500F14317 /* MainMenu.xib in Resources */,
+				B9FF73351090DA4F00F14317 /* MovieDocument.xib in Resources */,
+				B9A4D68E10923AB800E0AA11 /* minus.png in Resources */,
+				B9A4D68F10923AB800E0AA11 /* plus.png in Resources */,
+				B9A4D69010923AB800E0AA11 /* refresh.png in Resources */,
+				B9A4D69110923AB800E0AA11 /* reload.png in Resources */,
+				B9A4D69210923AB800E0AA11 /* search.png in Resources */,
+				B976A0A910F51CEA00120707 /* History.rtf in Resources */,
+				B976A0AA10F51CEA00120707 /* Read Me.rtf in Resources */,
+				B94086071534BEB90069BD0F /* Credits.rtfd in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D15AC300486D014006FF6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9DE09970957A00D0027E5D7 /* Movie.m in Sources */,
+				B9F21A091B4A90AA008E12BC /* JMLoginItemManager.m in Sources */,
+				B9DE09980957A00D0027E5D7 /* AppDelegate.m in Sources */,
+				B9DE09990957A00D0027E5D7 /* MovieDocument.m in Sources */,
+				B9F21A061B4A90AA008E12BC /* JMEmailSender.m in Sources */,
+				B9F21A021B4A90AA008E12BC /* JMClickableImageView.m in Sources */,
+				B9F21A0B1B4A90AA008E12BC /* JMValueTransformer.m in Sources */,
+				B9DE09AA0957A01E0027E5D7 /* main.m in Sources */,
+				B9F21A051B4A90AA008E12BC /* JMDocklessApplication.m in Sources */,
+				B9F219FD1B4A90AA008E12BC /* CoreLib.m in Sources */,
+				B9F219FF1B4A90AA008E12BC /* Foundation+Properties.m in Sources */,
+				663B4CB20CD5306100ACD6E0 /* MovieDocument.xcdatamodel in Sources */,
+				663B4E6F0CD5341700ACD6E0 /* ValueTransformer.m in Sources */,
+				B9F219FC1B4A90AA008E12BC /* AppKit+Properties.m in Sources */,
+				B9F219FB1B4A90AA008E12BC /* AppKit+CoreCode.m in Sources */,
+				B9F21A001B4A90AA008E12BC /* JMApplicationDelegate.m in Sources */,
+				B9A2EEF1109275E300A9E131 /* InfoHelper.m in Sources */,
+				B9F21A0A1B4A90AA008E12BC /* JMRTFView.m in Sources */,
+				B9F21A0C1B4A90AA008E12BC /* JMVisibilityManager.m in Sources */,
+				B98E448710F26EED009B137B /* IMDBSheetController.m in Sources */,
+				B9F21A0D1B4A90AA008E12BC /* JMWebView.m in Sources */,
+				B9F21A071B4A90AA008E12BC /* JMFontPopUpButton.m in Sources */,
+				B9F21A011B4A90AA008E12BC /* JMAppMovedHandler.m in Sources */,
+				B9F21A041B4A90AA008E12BC /* JMCrashReporter.m in Sources */,
+				B9F219FE1B4A90AA008E12BC /* Foundation+CoreCode.m in Sources */,
+				B9F21A081B4A90AA008E12BC /* JMHostInformation.m in Sources */,
+				B9F21A031B4A90AA008E12BC /* JMCorrectTimer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B9FF73251090DA3500F14317 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9FF73261090DA3500F14317 /* English */,
+			);
+			name = MainMenu.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		B9FF73331090DA4F00F14317 /* MovieDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9FF73341090DA4F00F14317 /* English */,
+			);
+			name = MovieDocument.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B9EBEEFD091A7AE10088293E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
+			};
+			name = Debug;
+		};
+		B9EBEEFE091A7AE10088293E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
+			};
+			name = Release;
+		};
+		B9EBEF01091A7AE10088293E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Other Sources/MovieDB_Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = MovieDB;
+				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_STYLE = debugging;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wshift-overflow",
+					"-Wliteral-conversion",
+					"-Wbool-conversions",
+					"-Wdisabled-optimization",
+					"-Wendif-labels",
+					"-Winline",
+					"-Winvalid-pch",
+					"-Wliteral-conversion",
+					"-Wmissing-field-initializers",
+					"-Wmissing-format-attribute",
+					"-Wmissing-noreturn",
+					"-Wreturn-type",
+					"-Wmultichar",
+					"-Wshadow",
+					"-Wredundant-decls",
+					"-Wundef",
+					"-Wstrict-selector-match",
+					"-Wundeclared-selector",
+					"-Wshift-overflow",
+					"-Wsign-compare",
+					"-Wwrite-strings",
+					"-Wuninitialized",
+					"-Wpointer-arith",
+					"-Wunused-function",
+					"-Wunused-variable",
+					"-Wno-unused-parameter",
+					"-Wfloat-equal",
+				);
+			};
+			name = Debug;
+		};
+		B9EBEF02091A7AE10088293E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_DYNAMIC_NO_PIC = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Other Sources/MovieDB_Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "NDEBUG=1";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = MovieDB;
+				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = NO;
+				STRIP_STYLE = debugging;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wshift-overflow",
+					"-Wliteral-conversion",
+					"-Wbool-conversions",
+					"-Wdisabled-optimization",
+					"-Wendif-labels",
+					"-Winline",
+					"-Winvalid-pch",
+					"-Wliteral-conversion",
+					"-Wmissing-field-initializers",
+					"-Wmissing-format-attribute",
+					"-Wmissing-noreturn",
+					"-Wreturn-type",
+					"-Wmultichar",
+					"-Wshadow",
+					"-Wredundant-decls",
+					"-Wundef",
+					"-Wstrict-selector-match",
+					"-Wundeclared-selector",
+					"-Wshift-overflow",
+					"-Wsign-compare",
+					"-Wwrite-strings",
+					"-Wuninitialized",
+					"-Wpointer-arith",
+					"-Wunused-function",
+					"-Wunused-variable",
+					"-Wno-unused-parameter",
+					"-Wfloat-equal",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9EBEEFC091A7AE10088293E /* Build configuration list for PBXNativeTarget "MovieDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9EBEEFD091A7AE10088293E /* Debug */,
+				B9EBEEFE091A7AE10088293E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B9EBEF00091A7AE10088293E /* Build configuration list for PBXProject "MovieDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9EBEF01091A7AE10088293E /* Debug */,
+				B9EBEF02091A7AE10088293E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
+}

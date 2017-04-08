@@ -1,0 +1,1870 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MovieDocument">
+            <connections>
+                <outlet property="castTextView" destination="690" id="1172"/>
+                <outlet property="dataBox" destination="245" id="2747"/>
+                <outlet property="fetchButton" destination="438" id="2685"/>
+                <outlet property="imdbBox" destination="247" id="2686"/>
+                <outlet property="imdbTitleTextView" destination="727" id="2687"/>
+                <outlet property="infoTextField" destination="162" id="2748"/>
+                <outlet property="languageListPopUpButton" destination="452" id="585"/>
+                <outlet property="mainMovieList" destination="222" id="2746"/>
+                <outlet property="movieArrayController" destination="92" id="291"/>
+                <outlet property="movieFilesArrayController" destination="486" id="487"/>
+                <outlet property="movieTableView" destination="173" id="2688"/>
+                <outlet property="ourIMDBSheetController" destination="2693" id="2713"/>
+                <outlet property="progressIndicator" destination="2602" id="2606"/>
+                <outlet property="progressSheetWindow" destination="2600" id="2605"/>
+                <outlet property="seperator" destination="261" id="2749"/>
+                <outlet property="sourcesTableView" destination="414" id="2689"/>
+                <outlet property="titleTextField" destination="443" id="2728"/>
+                <outlet property="window" destination="5" id="18"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Window">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="262" y="257" width="898" height="655"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <value key="minSize" type="size" width="780" height="600"/>
+            <view key="contentView" id="6">
+                <rect key="frame" x="0.0" y="0.0" width="898" height="655"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" id="162">
+                        <rect key="frame" x="18" y="440" width="863" height="17"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                        <textFieldCell key="cell" alignment="left" id="2521">
+                            <font key="font" metaFont="label"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <binding destination="92" name="displayPatternValue1" keyPath="arrangedObjects.@count" id="2729">
+                                <dictionary key="options">
+                                    <string key="NSDisplayPattern">%{value1}@ Movies (%{value2}@)</string>
+                                </dictionary>
+                            </binding>
+                            <binding destination="92" name="displayPatternValue2" keyPath="arrangedObjects.@sum.totalSize" previousBinding="2729" id="2730">
+                                <dictionary key="options">
+                                    <string key="NSDisplayPattern">%{value1}@ Movies (%{value2}@)</string>
+                                    <string key="NSValueTransformerName">SizeValueTransformer</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </textField>
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="0.0" verticalLineScroll="19" verticalPageScroll="0.0" usesPredominantAxisScrolling="NO" id="222">
+                        <rect key="frame" x="20" y="468" width="858" height="167"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <clipView key="contentView" id="pE3-AU-Rg2">
+                            <rect key="frame" x="1" y="23" width="856" height="143"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" autosaveName="movieTable" headerView="2579" id="173">
+                                    <rect key="frame" x="0.0" y="0.0" width="856" height="19"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <size key="intercellSpacing" width="3" height="2"/>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <tableColumns>
+                                        <tableColumn editable="NO" width="16" minWidth="16" maxWidth="16" id="1154">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <imageCell key="dataCell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="40A9BD79-258B-412A-BCEC-C25A9137D2C2" id="1155"/>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="92" name="value" keyPath="arrangedObjects.imdb_poster" id="2627">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">ImageDataValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
+                                        </tableColumn>
+                                        <tableColumn editable="NO" width="153" minWidth="150" maxWidth="1000" id="221">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Title">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="2570">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="92" name="value" keyPath="arrangedObjects.title" id="220"/>
+                                            </connections>
+                                        </tableColumn>
+                                        <tableColumn editable="NO" width="73" minWidth="70" maxWidth="1000" id="653">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Rating">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="2573">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="92" name="value" keyPath="arrangedObjects.rating" id="655">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">RatingValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
+                                        </tableColumn>
+                                        <tableColumn editable="NO" width="46" minWidth="45" maxWidth="1000" id="206">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Year">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="123" id="2568">
+                                                <numberFormatter key="formatter" formatterBehavior="10_0" positiveFormat="0" negativeFormat="-0" hasThousandSeparators="NO" thousandSeparator="." id="204">
+                                                    <attributedString key="attributedStringForZero">
+                                                        <fragment content="0"/>
+                                                    </attributedString>
+                                                    <decimal key="minimum" value="NaN"/>
+                                                    <decimal key="maximum" value="NaN"/>
+                                                </numberFormatter>
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="92" name="value" keyPath="arrangedObjects.imdb_year" id="205"/>
+                                            </connections>
+                                        </tableColumn>
+                                        <tableColumn editable="NO" width="102" minWidth="100" maxWidth="1000" id="196">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Director">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="2567">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="92" name="value" keyPath="arrangedObjects.imdb_director" id="195"/>
+                                            </connections>
+                                        </tableColumn>
+                                        <tableColumn editable="NO" width="72" minWidth="70" maxWidth="1000" id="210">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Language">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="2569">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="92" name="value" keyPath="arrangedObjects.language" id="586">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">LanguageValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
+                                        </tableColumn>
+                                        <tableColumn editable="NO" width="44" minWidth="44" maxWidth="44" id="1122">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="IMDb">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="123,5" id="2574">
+                                                <numberFormatter key="formatter" formatterBehavior="10_0" positiveFormat="0.0" negativeFormat="-0.0" hasThousandSeparators="NO" thousandSeparator="." id="1123">
+                                                    <attributedString key="attributedStringForZero">
+                                                        <fragment content="0,0"/>
+                                                    </attributedString>
+                                                    <decimal key="minimum" value="NaN"/>
+                                                    <decimal key="maximum" value="NaN"/>
+                                                </numberFormatter>
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="92" name="value" keyPath="arrangedObjects.imdb_rating" id="1125">
+                                                    <dictionary key="options">
+                                                        <bool key="NSConditionallySetsEditable" value="YES"/>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
+                                        </tableColumn>
+                                        <tableColumn editable="NO" width="54" minWidth="53" maxWidth="1000" id="366">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Length">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="2571">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="92" name="value" keyPath="arrangedObjects.totalLength" id="601">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">TimeValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
+                                        </tableColumn>
+                                        <tableColumn editable="NO" width="57" minWidth="55" maxWidth="1000" id="367">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Size">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="2572">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="92" name="value" keyPath="arrangedObjects.totalSize" id="1837">
+                                                    <dictionary key="options">
+                                                        <bool key="NSConditionallySetsEditable" value="YES"/>
+                                                        <string key="NSValueTransformerName">SizeValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
+                                        </tableColumn>
+                                        <tableColumn editable="NO" width="69" minWidth="68" maxWidth="1000" id="194">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Dimension">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="2566">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="92" name="displayPatternValue2" keyPath="arrangedObjects.file_video_height" previousBinding="2185" id="2186">
+                                                    <dictionary key="options">
+                                                        <string key="NSDisplayPattern">%{value1}@x%{value2}@</string>
+                                                        <string key="NSMultipleValuesPlaceholder"></string>
+                                                        <string key="NSNoSelectionPlaceholder"></string>
+                                                        <string key="NSNotApplicablePlaceholder"></string>
+                                                        <string key="NSNullPlaceholder"></string>
+                                                        <bool key="NSRaisesForNotApplicableKeys" value="YES"/>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="92" name="displayPatternValue1" keyPath="arrangedObjects.file_video_width" id="2185">
+                                                    <dictionary key="options">
+                                                        <string key="NSDisplayPattern">%{value1}@x%{value2}@</string>
+                                                        <string key="NSMultipleValuesPlaceholder"></string>
+                                                        <string key="NSNoSelectionPlaceholder"></string>
+                                                        <string key="NSNotApplicablePlaceholder"></string>
+                                                        <string key="NSNullPlaceholder"></string>
+                                                        <bool key="NSRaisesForNotApplicableKeys" value="YES"/>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
+                                        </tableColumn>
+                                        <tableColumn editable="NO" width="137" minWidth="135" maxWidth="1000" id="177">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Codecs">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="2565">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <connections>
+                                                <binding destination="92" name="displayPatternValue3" keyPath="arrangedObjects.file_audio_codec" previousBinding="2742" id="2744">
+                                                    <dictionary key="options">
+                                                        <string key="NSDisplayPattern">%{value1}@ (%{value2}@|%{value3}@)</string>
+                                                        <string key="NSValueTransformerName">AudioCodecValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="92" name="displayPatternValue1" keyPath="arrangedObjects.file_container" id="2739">
+                                                    <dictionary key="options">
+                                                        <string key="NSDisplayPattern">%{value1}@ (%{value2}@|%{value3}@)</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="92" name="displayPatternValue2" keyPath="arrangedObjects.file_video_codec" previousBinding="2739" id="2742">
+                                                    <dictionary key="options">
+                                                        <string key="NSDisplayPattern">%{value1}@ (%{value2}@|%{value3}@)</string>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
+                                        </tableColumn>
+                                    </tableColumns>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-2" id="2691"/>
+                                        <outlet property="delegate" destination="-2" id="2690"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="2578">
+                            <rect key="frame" x="1" y="151" width="836" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="2577">
+                            <rect key="frame" x="837" y="17" width="15" height="134"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <tableHeaderView key="headerView" id="2579">
+                            <rect key="frame" x="0.0" y="0.0" width="856" height="23"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </tableHeaderView>
+                    </scrollView>
+                    <box title="Data/Sources" id="245">
+                        <rect key="frame" x="14" y="16" width="253" height="407"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                        <view key="contentView" id="HhP-xP-Tdi">
+                            <rect key="frame" x="2" y="2" width="249" height="390"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textField verticalHuggingPriority="750" id="98">
+                                    <rect key="frame" x="2" y="15" width="102" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Codecs:" id="2523">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="99">
+                                    <rect key="frame" x="108" y="13" width="124" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <textFieldCell key="cell" borderStyle="bezel" alignment="left" drawsBackground="YES" id="2524">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <binding destination="92" name="displayPatternValue3" keyPath="selection.file_audio_codec" previousBinding="1208" id="2745">
+                                            <dictionary key="options">
+                                                <string key="NSDisplayPattern">%{value1}@ (%{value2}@|%{value3}@)</string>
+                                                <string key="NSValueTransformerName">AudioCodecValueTransformer</string>
+                                            </dictionary>
+                                        </binding>
+                                        <binding destination="92" name="displayPatternValue1" keyPath="selection.file_container" id="1207">
+                                            <dictionary key="options">
+                                                <string key="NSDisplayPattern">%{value1}@ (%{value2}@|%{value3}@)</string>
+                                            </dictionary>
+                                        </binding>
+                                        <binding destination="92" name="displayPatternValue2" keyPath="selection.file_video_codec" previousBinding="1207" id="1208">
+                                            <dictionary key="options">
+                                                <string key="NSDisplayPattern">%{value1}@ (%{value2}@|%{value3}@)</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="101">
+                                    <rect key="frame" x="2" y="301" width="68" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Sources:" id="2525">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="105">
+                                    <rect key="frame" x="2" y="79" width="102" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Total Length:" id="2526">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="109">
+                                    <rect key="frame" x="2" y="111" width="102" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Total Size:" id="2527">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="116">
+                                    <rect key="frame" x="2" y="47" width="102" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Dimensions:" id="2528">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="292">
+                                    <rect key="frame" x="108" y="45" width="124" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <textFieldCell key="cell" borderStyle="bezel" alignment="left" drawsBackground="YES" id="2529">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <binding destination="92" name="displayPatternValue2" keyPath="selection.file_video_height" previousBinding="2723" id="2724">
+                                            <dictionary key="options">
+                                                <string key="NSDisplayPattern">%{value1}@ x %{value2}@</string>
+                                            </dictionary>
+                                        </binding>
+                                        <binding destination="92" name="displayPatternValue1" keyPath="selection.file_video_width" id="2723">
+                                            <dictionary key="options">
+                                                <string key="NSDisplayPattern">%{value1}@ x %{value2}@</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="337">
+                                    <rect key="frame" x="108" y="109" width="124" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <textFieldCell key="cell" borderStyle="bezel" alignment="left" drawsBackground="YES" id="2530">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <binding destination="486" name="value" keyPath="arrangedObjects.@sum.size" id="563">
+                                            <dictionary key="options">
+                                                <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
+                                                <string key="NSValueTransformerName">SizeValueTransformer</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </textField>
+                                <button id="404">
+                                    <rect key="frame" x="188" y="230" width="23" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAddTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2531">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="addFileAction:" target="-2" id="2726"/>
+                                        <binding destination="92" name="enabled" keyPath="canRemove" id="464"/>
+                                    </connections>
+                                </button>
+                                <button id="405">
+                                    <rect key="frame" x="210" y="230" width="22" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSRemoveTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2532">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="remove:" target="486" id="504"/>
+                                        <binding destination="92" name="enabled" keyPath="canRemove" id="466"/>
+                                    </connections>
+                                </button>
+                                <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="413">
+                                    <rect key="frame" x="75" y="258" width="157" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <clipView key="contentView" id="rLy-Z8-205">
+                                        <rect key="frame" x="1" y="1" width="155" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" id="414">
+                                                <rect key="frame" x="0.0" y="0.0" width="223" height="19"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <size key="intercellSpacing" width="3" height="2"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                <tableColumns>
+                                                    <tableColumn editable="NO" width="16" minWidth="16" maxWidth="1000" id="415">
+                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </tableHeaderCell>
+                                                        <imageCell key="dataCell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="40A9BD79-258B-412A-BCEC-C25A9137D2C2" id="706"/>
+                                                        <connections>
+                                                            <binding destination="486" name="value" keyPath="arrangedObjects.icon" id="2629">
+                                                                <dictionary key="options">
+                                                                    <string key="NSValueTransformerName">ImageDataValueTransformer</string>
+                                                                </dictionary>
+                                                            </binding>
+                                                        </connections>
+                                                    </tableColumn>
+                                                    <tableColumn editable="NO" width="201" minWidth="200" maxWidth="1000" id="705">
+                                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                        </tableHeaderCell>
+                                                        <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="2575">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="486" name="value" keyPath="arrangedObjects.name" id="709"/>
+                                                        </connections>
+                                                    </tableColumn>
+                                                </tableColumns>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="-2" id="2692"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="2581">
+                                        <rect key="frame" x="-100" y="-100" width="223" height="15"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="2580">
+                                        <rect key="frame" x="-30" y="1" width="15" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <connections>
+                                        <binding destination="486" name="toolTip" keyPath="selection.path" id="2634"/>
+                                    </connections>
+                                </scrollView>
+                                <textField verticalHuggingPriority="750" id="440">
+                                    <rect key="frame" x="2" y="174" width="102" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Language:" id="2533">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="441">
+                                    <rect key="frame" x="2" y="202" width="102" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Rating:" id="2534">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="442">
+                                    <rect key="frame" x="2" y="363" width="68" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Title:" id="2535">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="443">
+                                    <rect key="frame" x="75" y="326" width="157" height="54"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <textFieldCell key="cell" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" drawsBackground="YES" id="2536">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <binding destination="92" name="value" keyPath="selection.title" id="2684">
+                                            <dictionary key="options">
+                                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                <string key="NSNoSelectionPlaceholder" base64-UTF8="YES">
+IA
+</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </textField>
+                                <popUpButton verticalHuggingPriority="750" id="444">
+                                    <rect key="frame" x="105" y="196" width="130" height="26"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <popUpButtonCell key="cell" type="push" title=" " bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="450" id="2537">
+                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="menu"/>
+                                        <menu key="menu" title="OtherViews" id="445">
+                                            <items>
+                                                <menuItem title=" " state="on" id="450"/>
+                                                <menuItem title="★" id="447"/>
+                                                <menuItem title="★★" id="448"/>
+                                                <menuItem title="★★★" id="449"/>
+                                                <menuItem title="★★★★" id="451"/>
+                                                <menuItem title="★★★★★" id="446"/>
+                                            </items>
+                                        </menu>
+                                    </popUpButtonCell>
+                                    <connections>
+                                        <binding destination="92" name="selectedIndex" keyPath="selection.rating" id="458"/>
+                                    </connections>
+                                </popUpButton>
+                                <popUpButton verticalHuggingPriority="750" id="452">
+                                    <rect key="frame" x="105" y="168" width="130" height="26"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <popUpButtonCell key="cell" type="push" title=" " bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="454" id="2538">
+                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="menu"/>
+                                        <menu key="menu" title="OtherViews" id="453">
+                                            <items>
+                                                <menuItem title=" " state="on" id="454"/>
+                                            </items>
+                                        </menu>
+                                    </popUpButtonCell>
+                                    <connections>
+                                        <binding destination="92" name="selectedIndex" keyPath="selection.language" id="460"/>
+                                    </connections>
+                                </popUpButton>
+                                <textField verticalHuggingPriority="750" id="536">
+                                    <rect key="frame" x="108" y="77" width="124" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <textFieldCell key="cell" borderStyle="bezel" alignment="left" drawsBackground="YES" id="2539">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <binding destination="486" name="value" keyPath="arrangedObjects.@sum.length" id="578">
+                                            <dictionary key="options">
+                                                <bool key="NSRaisesForNotApplicableKeys" value="NO"/>
+                                                <string key="NSValueTransformerName">TimeValueTransformer</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="610">
+                                    <rect key="frame" x="39" y="228" width="144" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="right" id="2540">
+                                        <font key="font" metaFont="miniSystem"/>
+                                        <string key="title">Drag movie files/volumes here 
+or use the buttons: </string>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="680">
+                                    <rect key="frame" x="2" y="146" width="102" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Type:" id="2541">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <popUpButton verticalHuggingPriority="750" id="681">
+                                    <rect key="frame" x="105" y="140" width="130" height="26"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <popUpButtonCell key="cell" type="push" title="File" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="687" id="2542">
+                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="menu"/>
+                                        <menu key="menu" title="OtherViews" id="682">
+                                            <items>
+                                                <menuItem title="File" state="on" id="687"/>
+                                                <menuItem title="VCD" id="686"/>
+                                                <menuItem title="SVCD" id="684"/>
+                                                <menuItem title="DVD" id="685"/>
+                                            </items>
+                                        </menu>
+                                    </popUpButtonCell>
+                                    <connections>
+                                        <binding destination="486" name="enabled" keyPath="canRemove" id="716">
+                                            <dictionary key="options">
+                                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                            </dictionary>
+                                        </binding>
+                                        <binding destination="92" name="enabled2" keyPath="canRemove" previousBinding="716" id="1034">
+                                            <dictionary key="options">
+                                                <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                                <integer key="NSNullPlaceholder" value="-1"/>
+                                            </dictionary>
+                                        </binding>
+                                        <binding destination="92" name="selectedIndex" keyPath="selection.file_type" id="712"/>
+                                    </connections>
+                                </popUpButton>
+                            </subviews>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <box hidden="YES" title="IMDb/Info" id="247">
+                        <rect key="frame" x="273" y="16" width="605" height="407"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                        <view key="contentView" id="hWS-cG-mHr">
+                            <rect key="frame" x="2" y="2" width="601" height="390"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="726">
+                                    <rect key="frame" x="84" y="356" width="501" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <clipView key="contentView" id="LB7-YI-HXj">
+                                        <rect key="frame" x="1" y="1" width="499" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <textView editable="NO" importsGraphics="NO" richText="NO" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" smartInsertDelete="YES" id="727">
+                                                <rect key="frame" x="0.0" y="0.0" width="499" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <size key="minSize" width="499" height="16"/>
+                                                <size key="maxSize" width="1000" height="10000000"/>
+                                                <attributedString key="textStorage">
+                                                    <fragment>
+                                                        <string key="content" base64-UTF8="YES">
+CQ
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <font key="NSFont" size="12" name="Helvetica-Oblique"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <size key="minSize" width="499" height="16"/>
+                                                <size key="maxSize" width="1000" height="10000000"/>
+                                                <connections>
+                                                    <binding destination="92" name="attributedString" keyPath="selection.self" id="2612">
+                                                        <dictionary key="options">
+                                                            <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                                            <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                            <string key="NSValueTransformerName">TitleLinkValueTransformer</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                    <outlet property="delegate" destination="-2" id="731"/>
+                                                </connections>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="2587">
+                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2586">
+                                        <rect key="frame" x="-100" y="-100" width="15" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                </scrollView>
+                                <textField verticalHuggingPriority="750" id="124">
+                                    <rect key="frame" x="135" y="301" width="75" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Director(s):" id="2543">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="127">
+                                    <rect key="frame" x="0.0" y="273" width="79" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Genres:" id="2544">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="130">
+                                    <rect key="frame" x="0.0" y="301" width="79" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Rating:" id="2545">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="134">
+                                    <rect key="frame" x="0.0" y="357" width="79" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Title:" id="2546">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="137">
+                                    <rect key="frame" x="0.0" y="329" width="79" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Year:" id="2547">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="429">
+                                    <rect key="frame" x="202" y="158" width="36" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Cast:" id="2548">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <imageView id="431">
+                                    <rect key="frame" x="81" y="8" width="120" height="170"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="2549"/>
+                                    <connections>
+                                        <binding destination="92" name="value" keyPath="selection.imdb_poster" id="2632">
+                                            <dictionary key="options">
+                                                <string key="NSValueTransformerName">ImageDataValueTransformer</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </imageView>
+                                <textField verticalHuggingPriority="750" id="432">
+                                    <rect key="frame" x="12" y="158" width="66" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Poster:" id="2550">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField verticalHuggingPriority="750" id="434">
+                                    <rect key="frame" x="0.0" y="246" width="79" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Plot:" id="2551">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="436">
+                                    <rect key="frame" x="84" y="183" width="501" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <clipView key="contentView" id="oHa-Lh-ZT9">
+                                        <rect key="frame" x="1" y="1" width="499" height="78"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <textView editable="NO" selectable="NO" importsGraphics="NO" richText="NO" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" smartInsertDelete="YES" id="437">
+                                                <rect key="frame" x="0.0" y="0.0" width="499" height="78"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <size key="minSize" width="499" height="78"/>
+                                                <size key="maxSize" width="1000" height="10000000"/>
+                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <size key="minSize" width="499" height="78"/>
+                                                <size key="maxSize" width="1000" height="10000000"/>
+                                                <connections>
+                                                    <binding destination="92" name="value" keyPath="selection.imdb_plot" id="677">
+                                                        <dictionary key="options">
+                                                            <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                                            <bool key="NSAlwaysPresentsApplicationModalAlerts" value="NO"/>
+                                                            <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                            <bool key="NSConditionallySetsHidden" value="NO"/>
+                                                            <bool key="NSContinuouslyUpdatesValue" value="NO"/>
+                                                            <string key="NSMultipleValuesPlaceholder"></string>
+                                                            <string key="NSNoSelectionPlaceholder"></string>
+                                                            <string key="NSNotApplicablePlaceholder"></string>
+                                                            <string key="NSNullPlaceholder"></string>
+                                                            <bool key="NSRaisesForNotApplicableKeys" value="YES"/>
+                                                            <bool key="NSValidatesImmediately" value="NO"/>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="2583">
+                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="2582">
+                                        <rect key="frame" x="-30" y="1" width="15" height="162"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                </scrollView>
+                                <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="689">
+                                    <rect key="frame" x="243" y="11" width="342" height="164"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <clipView key="contentView" id="Xmq-mj-VQT">
+                                        <rect key="frame" x="1" y="1" width="340" height="162"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <textView editable="NO" importsGraphics="NO" richText="NO" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" smartInsertDelete="YES" id="690">
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="162"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <size key="minSize" width="340" height="162"/>
+                                                <size key="maxSize" width="682" height="10000000"/>
+                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <size key="minSize" width="340" height="162"/>
+                                                <size key="maxSize" width="682" height="10000000"/>
+                                                <connections>
+                                                    <binding destination="92" name="attributedString" keyPath="selection.imdb_cast" id="1171">
+                                                        <dictionary key="options">
+                                                            <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                                            <bool key="NSAlwaysPresentsApplicationModalAlerts" value="NO"/>
+                                                            <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                            <bool key="NSConditionallySetsHidden" value="NO"/>
+                                                            <bool key="NSContinuouslyUpdatesValue" value="NO"/>
+                                                            <string key="NSMultipleValuesPlaceholder"></string>
+                                                            <string key="NSNoSelectionPlaceholder"></string>
+                                                            <string key="NSNotApplicablePlaceholder"></string>
+                                                            <string key="NSNullPlaceholder"></string>
+                                                            <bool key="NSRaisesForNotApplicableKeys" value="YES"/>
+                                                            <bool key="NSValidatesImmediately" value="NO"/>
+                                                            <string key="NSValueTransformerName">CastLinkValueTransformer</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="2585">
+                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2584">
+                                        <rect key="frame" x="-30" y="1" width="15" height="162"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                </scrollView>
+                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="1163">
+                                    <rect key="frame" x="216" y="300" width="369" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <clipView key="contentView" id="lRw-Wk-gfb">
+                                        <rect key="frame" x="1" y="1" width="367" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <textView editable="NO" importsGraphics="NO" richText="NO" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" smartInsertDelete="YES" id="1164">
+                                                <rect key="frame" x="0.0" y="0.0" width="367" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <size key="minSize" width="367" height="16"/>
+                                                <size key="maxSize" width="736" height="10000000"/>
+                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <size key="minSize" width="367" height="16"/>
+                                                <size key="maxSize" width="736" height="10000000"/>
+                                                <connections>
+                                                    <binding destination="92" name="attributedString" keyPath="selection.imdb_director" id="1184">
+                                                        <dictionary key="options">
+                                                            <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                                            <bool key="NSAlwaysPresentsApplicationModalAlerts" value="NO"/>
+                                                            <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                            <bool key="NSConditionallySetsHidden" value="NO"/>
+                                                            <bool key="NSContinuouslyUpdatesValue" value="NO"/>
+                                                            <string key="NSMultipleValuesPlaceholder"></string>
+                                                            <string key="NSNoSelectionPlaceholder"></string>
+                                                            <string key="NSNotApplicablePlaceholder"></string>
+                                                            <string key="NSNullPlaceholder"></string>
+                                                            <bool key="NSRaisesForNotApplicableKeys" value="YES"/>
+                                                            <bool key="NSValidatesImmediately" value="NO"/>
+                                                            <string key="NSValueTransformerName">PeopleLinkValueTransformer</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="2589">
+                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2588">
+                                        <rect key="frame" x="-100" y="-100" width="15" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                </scrollView>
+                                <textField verticalHuggingPriority="750" id="1176">
+                                    <rect key="frame" x="135" y="330" width="75" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <textFieldCell key="cell" alignment="right" title="Writer(s):" id="2553">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="1177">
+                                    <rect key="frame" x="216" y="328" width="369" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <clipView key="contentView" id="8Oo-Nh-i6Q">
+                                        <rect key="frame" x="1" y="1" width="367" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <textView editable="NO" importsGraphics="NO" richText="NO" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" smartInsertDelete="YES" id="1178">
+                                                <rect key="frame" x="0.0" y="0.0" width="367" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <size key="minSize" width="367" height="16"/>
+                                                <size key="maxSize" width="736" height="10000000"/>
+                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <size key="minSize" width="367" height="16"/>
+                                                <size key="maxSize" width="736" height="10000000"/>
+                                                <connections>
+                                                    <binding destination="92" name="attributedString" keyPath="selection.imdb_writer" id="1212">
+                                                        <dictionary key="options">
+                                                            <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                                            <bool key="NSAlwaysPresentsApplicationModalAlerts" value="NO"/>
+                                                            <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                            <bool key="NSConditionallySetsHidden" value="NO"/>
+                                                            <bool key="NSContinuouslyUpdatesValue" value="NO"/>
+                                                            <string key="NSMultipleValuesPlaceholder"></string>
+                                                            <string key="NSNoSelectionPlaceholder"></string>
+                                                            <string key="NSNotApplicablePlaceholder"></string>
+                                                            <string key="NSNullPlaceholder"></string>
+                                                            <bool key="NSRaisesForNotApplicableKeys" value="YES"/>
+                                                            <bool key="NSValidatesImmediately" value="NO"/>
+                                                            <string key="NSValueTransformerName">PeopleLinkValueTransformer</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="2591">
+                                        <rect key="frame" x="-100" y="-100" width="247" height="15"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="2590">
+                                        <rect key="frame" x="-100" y="-100" width="15" height="17"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                </scrollView>
+                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="1297">
+                                    <rect key="frame" x="84" y="328" width="45" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <clipView key="contentView" id="Xov-V9-iBf">
+                                        <rect key="frame" x="1" y="1" width="43" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <textView editable="NO" importsGraphics="NO" richText="NO" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" smartInsertDelete="YES" id="1300">
+                                                <rect key="frame" x="0.0" y="0.0" width="43" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <size key="minSize" width="43" height="16"/>
+                                                <size key="maxSize" width="368" height="10000000"/>
+                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <size key="minSize" width="43" height="16"/>
+                                                <size key="maxSize" width="368" height="10000000"/>
+                                                <connections>
+                                                    <binding destination="92" name="attributedString" keyPath="selection.imdb_year" id="1302">
+                                                        <dictionary key="options">
+                                                            <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                                            <bool key="NSAlwaysPresentsApplicationModalAlerts" value="NO"/>
+                                                            <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                            <bool key="NSConditionallySetsHidden" value="NO"/>
+                                                            <bool key="NSContinuouslyUpdatesValue" value="NO"/>
+                                                            <string key="NSMultipleValuesPlaceholder"></string>
+                                                            <string key="NSNoSelectionPlaceholder"></string>
+                                                            <string key="NSNotApplicablePlaceholder"></string>
+                                                            <string key="NSNullPlaceholder"></string>
+                                                            <bool key="NSRaisesForNotApplicableKeys" value="YES"/>
+                                                            <bool key="NSValidatesImmediately" value="NO"/>
+                                                            <string key="NSValueTransformerName">YearLinkValueTransformer</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="2593">
+                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2592">
+                                        <rect key="frame" x="-100" y="-100" width="15" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                </scrollView>
+                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="1385">
+                                    <rect key="frame" x="85" y="300" width="44" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                    <clipView key="contentView" id="tn2-p0-lZN">
+                                        <rect key="frame" x="1" y="1" width="42" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <textView editable="NO" importsGraphics="NO" richText="NO" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" smartInsertDelete="YES" id="1388">
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <size key="minSize" width="42" height="16"/>
+                                                <size key="maxSize" width="368" height="10000000"/>
+                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <size key="minSize" width="42" height="16"/>
+                                                <size key="maxSize" width="368" height="10000000"/>
+                                                <connections>
+                                                    <binding destination="92" name="attributedString" keyPath="selection.imdb_rating" id="1390">
+                                                        <dictionary key="options">
+                                                            <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                                            <bool key="NSAlwaysPresentsApplicationModalAlerts" value="NO"/>
+                                                            <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                            <bool key="NSConditionallySetsHidden" value="NO"/>
+                                                            <bool key="NSContinuouslyUpdatesValue" value="NO"/>
+                                                            <string key="NSMultipleValuesPlaceholder"></string>
+                                                            <string key="NSNoSelectionPlaceholder"></string>
+                                                            <string key="NSNotApplicablePlaceholder"></string>
+                                                            <string key="NSNullPlaceholder"></string>
+                                                            <bool key="NSRaisesForNotApplicableKeys" value="YES"/>
+                                                            <bool key="NSValidatesImmediately" value="NO"/>
+                                                            <string key="NSValueTransformerName">RatingLinkValueTransformer</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="2595">
+                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2594">
+                                        <rect key="frame" x="-100" y="-100" width="15" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                </scrollView>
+                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="1477">
+                                    <rect key="frame" x="84" y="272" width="500" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <clipView key="contentView" id="zew-oB-zPF">
+                                        <rect key="frame" x="1" y="1" width="498" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <textView editable="NO" importsGraphics="NO" richText="NO" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" smartInsertDelete="YES" id="1480">
+                                                <rect key="frame" x="0.0" y="0.0" width="498" height="16"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <size key="minSize" width="498" height="16"/>
+                                                <size key="maxSize" width="998" height="10000000"/>
+                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <size key="minSize" width="498" height="16"/>
+                                                <size key="maxSize" width="998" height="10000000"/>
+                                                <connections>
+                                                    <binding destination="92" name="attributedString" keyPath="selection.imdb_genre" id="1573">
+                                                        <dictionary key="options">
+                                                            <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                                            <bool key="NSAlwaysPresentsApplicationModalAlerts" value="NO"/>
+                                                            <bool key="NSConditionallySetsEditable" value="NO"/>
+                                                            <bool key="NSConditionallySetsHidden" value="NO"/>
+                                                            <bool key="NSContinuouslyUpdatesValue" value="NO"/>
+                                                            <string key="NSMultipleValuesPlaceholder"></string>
+                                                            <string key="NSNoSelectionPlaceholder"></string>
+                                                            <string key="NSNotApplicablePlaceholder"></string>
+                                                            <string key="NSNullPlaceholder"></string>
+                                                            <bool key="NSRaisesForNotApplicableKeys" value="YES"/>
+                                                            <bool key="NSValidatesImmediately" value="NO"/>
+                                                            <string key="NSValueTransformerName">GenreLinkValueTransformer</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="2597">
+                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2596">
+                                        <rect key="frame" x="-100" y="-100" width="15" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                </scrollView>
+                            </subviews>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="261">
+                        <rect key="frame" x="38" y="429" width="837" height="5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" metaFont="system"/>
+                    </box>
+                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" id="1133">
+                        <rect key="frame" x="17" y="425" width="13" height="13"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="above" alignment="left" state="on" borderStyle="border" inset="2" id="2557">
+                            <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="flipAction:" target="-2" id="2613"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="438">
+                        <rect key="frame" x="359" y="200" width="501" height="82"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                        <buttonCell key="cell" type="smallSquare" title="Fetch Data from IMDb…" bezelStyle="smallSquare" imagePosition="left" alignment="center" state="on" borderStyle="border" inset="2" id="2552">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system" size="22"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="lookupAction:" target="2693" id="2703"/>
+                            <binding destination="92" name="enabled" keyPath="canRemove" id="721"/>
+                            <binding destination="92" name="enabled2" keyPath="selection.title" previousBinding="721" id="723">
+                                <dictionary key="options">
+                                    <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                    <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                    <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                    <integer key="NSNullPlaceholder" value="-1"/>
+                                    <string key="NSValueTransformerName">NSIsNotNil</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" id="2737">
+                        <rect key="frame" x="273" y="1" width="383" height="11"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                        <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="The data displayed here is under copyright © 1990 - 2010 MDb.com, Inc. DO NOT USE WITHOUT PERMISSION!" id="2738">
+                            <font key="font" metaFont="system" size="7"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="E7615344-784A-4F7B-8D48-546DFCACFE43" explicitIdentifier="reload" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="2637">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="8EE18E55-1122-4FBA-9343-BC3613F92964" label="Add Movie" paletteLabel="Add Movie" tag="-1" image="plus" id="2645">
+                        <connections>
+                            <action selector="addMovieAction:" target="-2" id="2727"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="9BDB5F19-BC8C-4B6D-941B-23114EBAEE1F" label="Remove Movie" paletteLabel="Remove Movie" tag="-1" image="minus" id="2646">
+                        <connections>
+                            <action selector="remove:" target="92" id="2650"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="7F2620C6-A013-4CB7-91DE-FC8F74F9533C" label="Fetch IMDb" paletteLabel="Fetch IMDb" tag="-1" image="search" id="2649">
+                        <connections>
+                            <action selector="lookupAction:" target="2693" id="2702"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="2C9BC461-EB64-4CA0-BD40-0C4711313795" label="Refresh IMDb" paletteLabel="Refresh IMDb" tag="-1" image="reload" id="2647">
+                        <connections>
+                            <action selector="refreshAction:" target="-2" id="2682"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="5922E5D8-A809-4DB9-A135-A3709181A1D5" label="Refresh All IMDb" paletteLabel="Refresh All IMDb" tag="-1" image="refresh" id="2648">
+                        <connections>
+                            <action selector="refreshAllAction:" target="-2" id="2683"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSeparatorItem" id="2640"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="2641"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="2642"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="2643"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarCustomizeToolbarItem" id="2644"/>
+                    <toolbarItem implicitItemIdentifier="7841ECF2-17DE-4752-A62E-F09AC9E3A249" label="Search" paletteLabel="Search" id="2680">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="334" height="22"/>
+                        <size key="maxSize" width="334" height="22"/>
+                        <searchField key="view" verticalHuggingPriority="750" id="2665">
+                            <rect key="frame" x="0.0" y="14" width="334" height="22"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <searchFieldCell key="cell" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="All" bezelStyle="round" id="2666">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </searchFieldCell>
+                            <connections>
+                                <binding destination="92" name="predicate" keyPath="filterPredicate" id="2667">
+                                    <dictionary key="options">
+                                        <string key="NSDisplayName">All</string>
+                                        <string key="NSPredicateFormat">(title contains[c] $value) or (imdb_director contains[c] $value) or (imdb_genre contains[c] $value) or (imdb_cast contains[c] $value) or (imdb_plot contains[c] $value) or (imdb_title contains[c] $value) or (imdb_year.description contains[c] $value) or (file_container contains[c] $value) or (file_video_codec contains[c] $value) or (file_audio_codec contains[c] $value)</string>
+                                    </dictionary>
+                                </binding>
+                                <binding destination="92" name="predicate2" keyPath="filterPredicate" previousBinding="2667" id="2668">
+                                    <dictionary key="options">
+                                        <string key="NSDisplayName">Title</string>
+                                        <string key="NSPredicateFormat">title contains[c] $value</string>
+                                    </dictionary>
+                                </binding>
+                                <binding destination="92" name="predicate3" keyPath="filterPredicate" previousBinding="2668" id="2669">
+                                    <dictionary key="options">
+                                        <string key="NSDisplayName">Director</string>
+                                        <string key="NSPredicateFormat">imdb_director contains[c] $value</string>
+                                    </dictionary>
+                                </binding>
+                                <binding destination="92" name="predicate4" keyPath="filterPredicate" previousBinding="2669" id="2670">
+                                    <dictionary key="options">
+                                        <string key="NSDisplayName">Genre</string>
+                                        <string key="NSPredicateFormat">imdb_genre contains[c] $value</string>
+                                    </dictionary>
+                                </binding>
+                                <binding destination="92" name="predicate5" keyPath="filterPredicate" previousBinding="2670" id="2671">
+                                    <dictionary key="options">
+                                        <string key="NSDisplayName">Cast</string>
+                                        <string key="NSPredicateFormat">imdb_cast contains[c] $value</string>
+                                    </dictionary>
+                                </binding>
+                                <binding destination="92" name="predicate6" keyPath="filterPredicate" previousBinding="2671" id="2672">
+                                    <dictionary key="options">
+                                        <string key="NSDisplayName">Plot</string>
+                                        <string key="NSPredicateFormat">imdb_plot contains[c] $value</string>
+                                    </dictionary>
+                                </binding>
+                                <binding destination="92" name="predicate7" keyPath="filterPredicate" previousBinding="2672" id="2673">
+                                    <dictionary key="options">
+                                        <string key="NSDisplayName">IMDB-Title</string>
+                                        <string key="NSPredicateFormat">imdb_title contains[c] $value</string>
+                                    </dictionary>
+                                </binding>
+                                <binding destination="92" name="predicate8" keyPath="filterPredicate" previousBinding="2673" id="2674">
+                                    <dictionary key="options">
+                                        <string key="NSDisplayName">Year</string>
+                                        <string key="NSPredicateFormat">imdb_year.description contains[c] $value</string>
+                                    </dictionary>
+                                </binding>
+                                <binding destination="92" name="predicate9" keyPath="filterPredicate" previousBinding="2674" id="2675">
+                                    <dictionary key="options">
+                                        <string key="NSDisplayName">Container</string>
+                                        <string key="NSPredicateFormat">file_container contains[c] $value</string>
+                                    </dictionary>
+                                </binding>
+                                <binding destination="92" name="predicate10" keyPath="filterPredicate" previousBinding="2675" id="2676">
+                                    <dictionary key="options">
+                                        <string key="NSDisplayName">Video Codec</string>
+                                        <string key="NSPredicateFormat">file_video_codec contains[c] $value</string>
+                                    </dictionary>
+                                </binding>
+                                <binding destination="92" name="predicate11" keyPath="filterPredicate" previousBinding="2676" id="2677">
+                                    <dictionary key="options">
+                                        <string key="NSDisplayName">Audio Codec</string>
+                                        <string key="NSPredicateFormat">file_audio_codec contains[c] $value</string>
+                                    </dictionary>
+                                </binding>
+                            </connections>
+                        </searchField>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="2645"/>
+                    <toolbarItem reference="2646"/>
+                    <toolbarItem reference="2640"/>
+                    <toolbarItem reference="2649"/>
+                    <toolbarItem reference="2647"/>
+                    <toolbarItem reference="2643"/>
+                    <toolbarItem reference="2680"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <connections>
+                <outlet property="delegate" destination="-2" id="17"/>
+                <outlet property="initialFirstResponder" destination="173" id="2616"/>
+            </connections>
+        </window>
+        <objectController mode="entity" entityName="Movie" automaticallyPreparesContent="YES" id="21" userLabel="Movie Controller">
+            <declaredKeys>
+                <string>file_audio_codec</string>
+                <string>file_container</string>
+                <string>file_count</string>
+                <string>file_length</string>
+                <string>file_size</string>
+                <string>file_video_codec</string>
+                <string>file_video_height</string>
+                <string>file_video_width</string>
+                <string>imdb_director</string>
+                <string>imdb_genre</string>
+                <string>imdb_rating</string>
+                <string>imdb_title</string>
+                <string>imdb_year</string>
+                <string>legal</string>
+                <string>location</string>
+                <string>rating</string>
+                <string>record_added</string>
+                <string>record_modified</string>
+                <string>title</string>
+                <string>language</string>
+                <string>files.file_size</string>
+                <string>files.container</string>
+                <string>files.size</string>
+                <string>au</string>
+                <string>imdb_plot</string>
+                <string>imdb_poster</string>
+                <string>@count</string>
+            </declaredKeys>
+            <connections>
+                <binding destination="-2" name="managedObjectContext" keyPath="managedObjectContext" id="22"/>
+            </connections>
+        </objectController>
+        <arrayController mode="entity" entityName="Movie" automaticallyPreparesContent="YES" id="92" userLabel="Movie Array Controller">
+            <declaredKeys>
+                <string>file_audio_codec</string>
+                <string>file_container</string>
+                <string>file_count</string>
+                <string>file_length</string>
+                <string>file_size</string>
+                <string>file_video_codec</string>
+                <string>file_video_height</string>
+                <string>file_video_width</string>
+                <string>imdb_director</string>
+                <string>imdb_genre</string>
+                <string>imdb_rating</string>
+                <string>imdb_title</string>
+                <string>imdb_year</string>
+                <string>legal</string>
+                <string>location</string>
+                <string>rating</string>
+                <string>record_added</string>
+                <string>record_modified</string>
+                <string>title</string>
+                <string>language</string>
+                <string>total_file_size</string>
+                <string>total_file_length</string>
+                <string>files.file_audio_codec</string>
+                <string>files.file_size</string>
+                <string>files.@sum.file_size</string>
+                <string>files.@sum.file_length</string>
+                <string>files.video_height</string>
+                <string>files.video_width</string>
+                <string>files.video_codec</string>
+                <string>files.audio_codec</string>
+                <string>files.container</string>
+                <string>name</string>
+                <string>files</string>
+                <string>d</string>
+                <string>totalSize</string>
+                <string>totalLength</string>
+                <string>files.@sum.size</string>
+                <string>files_container</string>
+                <string>files_video_height</string>
+                <string>files_video_width</string>
+                <string>files_video_codec</string>
+                <string>files_audio_codec</string>
+                <string>video_width</string>
+                <string>imdb_plot</string>
+                <string>imdb_cast</string>
+                <string>file_type</string>
+                <string>imdb_poster</string>
+                <string>@sum.</string>
+                <string>@sum.size</string>
+                <string>@sum.total_size</string>
+                <string>@sum.totalSize</string>
+                <string>@count</string>
+                <string>imdb_writer</string>
+                <string>imdb_id</string>
+                <string>self</string>
+            </declaredKeys>
+            <connections>
+                <binding destination="-2" name="managedObjectContext" keyPath="managedObjectContext" id="93"/>
+            </connections>
+        </arrayController>
+        <window title="IMDBSheet" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="379">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="1199" y="120" width="392" height="413"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <value key="minSize" type="size" width="350" height="413"/>
+            <value key="maxSize" type="size" width="500" height="414"/>
+            <view key="contentView" id="380">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="413"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" id="389">
+                        <rect key="frame" x="18" y="88" width="196" height="266"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <size key="cellSize" width="196" height="18"/>
+                        <size key="intercellSpacing" width="4" height="230"/>
+                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="2564">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="radio" title="Query using Title:" imagePosition="left" alignment="left" state="on" inset="2" id="391">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <buttonCell type="radio" title="Define using IMDB# or URL:" imagePosition="left" alignment="left" tag="1" inset="2" id="390">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                    </matrix>
+                    <textField verticalHuggingPriority="750" id="381">
+                        <rect key="frame" x="159" y="313" width="213" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2558">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" id="392">
+                        <rect key="frame" x="296" y="12" width="82" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                        <buttonCell key="cell" type="push" title="Select" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="2559">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="selectAction:" target="2693" id="2699"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="393">
+                        <rect key="frame" x="49" y="306" width="107" height="28"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                        <buttonCell key="cell" type="push" title="Search again" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" inset="2" id="2560">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="searchAgainAction:" target="2693" id="2698"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" id="394">
+                        <rect key="frame" x="17" y="365" width="284" height="28"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="You can refine the title to use for the IMDB-search, or directly enter an IMDB-number or URL to use:" id="2561">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="396">
+                        <rect key="frame" x="30" y="313" width="16" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                    </progressIndicator>
+                    <textField verticalHuggingPriority="750" id="398">
+                        <rect key="frame" x="30" y="60" width="342" height="22"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2562">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="382">
+                        <rect key="frame" x="30" y="122" width="342" height="183"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                        <clipView key="contentView" id="bkN-ZA-bqf">
+                            <rect key="frame" x="1" y="1" width="340" height="181"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" id="383">
+                                    <rect key="frame" x="0.0" y="0.0" width="340" height="19"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <size key="intercellSpacing" width="3" height="2"/>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <tableColumns>
+                                        <tableColumn editable="NO" width="337" minWidth="40" maxWidth="1000" id="384">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="0.33333299" alpha="1" colorSpace="calibratedWhite"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="2576">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </tableColumn>
+                                    </tableColumns>
+                                    <connections>
+                                        <outlet property="dataSource" destination="2693" id="2694"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="2599">
+                            <rect key="frame" x="-100" y="-100" width="325" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="2598">
+                            <rect key="frame" x="-30" y="1" width="15" height="181"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <button verticalHuggingPriority="750" id="732">
+                        <rect key="frame" x="214" y="12" width="82" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="2563">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="selectAction:" target="2693" id="2718"/>
+                        </connections>
+                    </button>
+                    <button id="2635">
+                        <rect key="frame" x="302" y="365" width="70" height="28"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" title="Open IMDb" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2636">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="openAction:" target="2693" id="2717"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" id="2714">
+                        <rect key="frame" x="19" y="12" width="193" height="36"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                        <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="IMDb is a trademark of &quot;IMDb.com, Inc.&quot;. All contents and data fetched from IMDb.com is under copyright © IMDb.com, Inc." id="2715">
+                            <font key="font" metaFont="system" size="8"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+        </window>
+        <arrayController mode="entity" entityName="File" automaticallyPreparesContent="YES" id="486" userLabel="MovieFiles Array Controller">
+            <declaredKeys>
+                <string>video_codec</string>
+                <string>container</string>
+                <string>path</string>
+                <string>size</string>
+                <string>type</string>
+                <string>video_width</string>
+                <string>icon</string>
+                <string>video_height</string>
+                <string>name</string>
+                <string>audio_codec</string>
+                <string>length</string>
+                <string>movie</string>
+                <string>@sum.size</string>
+                <string>@avg.container</string>
+                <string>@max.container</string>
+                <string>@sum.container</string>
+                <string>@count.container</string>
+                <string>@sum.length</string>
+            </declaredKeys>
+            <connections>
+                <binding destination="-2" name="managedObjectContext" keyPath="managedObjectContext" id="493"/>
+                <binding destination="92" name="contentSet" keyPath="selection.files" id="497">
+                    <dictionary key="options">
+                        <bool key="NSDeletesObjectsOnRemove" value="YES"/>
+                    </dictionary>
+                </binding>
+            </connections>
+        </arrayController>
+        <window title="ProgressSheet" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="2600">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="235" y="478" width="299" height="81"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <view key="contentView" id="2601">
+                <rect key="frame" x="0.0" y="0.0" width="299" height="81"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <progressIndicator verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="bar" id="2602">
+                        <rect key="frame" x="18" y="16" width="263" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </progressIndicator>
+                    <textField verticalHuggingPriority="750" id="2603">
+                        <rect key="frame" x="17" y="44" width="265" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Please wait while the operation proceeds:" id="2604">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+        </window>
+        <customObject id="2693" customClass="IMDBSheetController">
+            <connections>
+                <outlet property="defineButtonCell" destination="390" id="2705"/>
+                <outlet property="imdbButtonCell" destination="391" id="2706"/>
+                <outlet property="imdbDefineTextField" destination="398" id="2710"/>
+                <outlet property="imdbSheetWindow" destination="379" id="2708"/>
+                <outlet property="imdbTableView" destination="383" id="2709"/>
+                <outlet property="imdbTitleTextField" destination="381" id="2711"/>
+                <outlet property="movieArrayController" destination="92" id="2704"/>
+                <outlet property="owner" destination="-2" id="2695"/>
+                <outlet property="progressIndicator" destination="396" id="2725"/>
+            </connections>
+        </customObject>
+        <view id="262">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="1"/>
+            <autoresizingMask key="autoresizingMask"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="40A9BD79-258B-412A-BCEC-C25A9137D2C2" width="17" height="17">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
+GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
+c1dOU0NvbG9ygAKADRIgwAAAgAOAC1h7MTcsIDE3fdIVChYYWk5TLm9iamVjdHOhF4AEgArSFQoaHaIb
+HIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPESB8TU0AKgAABA6AACBQOCQW
+DQeEQmBAYAgIBAl/v5/PGFRWLReFCkQhQqCkLgEeq5kOs3xiTQoFwMIAMBgUGgYDgYJA4JBQRnwwEQ7h
+B6t0NKJsA5iMVhL4+PZ6vRpQQEgkFBkEAoEiAHA4HiIMBcMB8KBYLhwJ2EMBmyBsPB8PhUNWMJBUKhQG
+vZ8PgBCR9sYAP1zt4AN4MlkAGEyGM3OZxt9JwQbDccJA7nk+m0WisUAIFgwGAAGAoFACnAkASwBAB2Ol
+1AAIBIJAB8Pp9gB0OFoAAMPRVgB5N9ygB1B01gA0ndAJplMVgGeCVoNGJSKZTpYhD8eAd5dUAAGBgimg
+AD90ANVmM0APV2u0ABwXjAAPl0rUABV/Xh6OLTvAKGYAHxKq5hq1Tk8IqBnyAkCBkS5ME6XAwjALgKny
+fJ8ABAgCgAAoDQoeJ4nkABymgpZ6HO3Z7gG14aBq04AHobT1nSdAAHcf4mgATRgnSchGEIPYeoGcCBg6
+PxAkMXo9DuOYSn7JAAJgBAAH+iIAGsaqlmOZJngAGsTAAfRxF0AAYBYczcHI04CH6dwAHgfAaAAXp1BQ
+fgzjGLogSafpioGBgzDUNxdEcRZEhydZ1tOcJvmyAB7HkeYAAoBhuAAdZ2JSeZ7H0AAgBwAkJHsbDvmg
+14YBUeoAHedbMmif4ogALowi+NJ5HcdRMIGAIoCmK5XE6ThNCgfx+n4AByG0ZkJAC057nia4AIeHzQgA
+dIABcFUNmyZdDmaa4GgAJoeHY8Zz28b4GDQAAyjkPZMGuaRmDSggeCAIhMlMUhRjMCQIgfKBrUOf54lm
+AAFgeGTNAtgYCruAALATHpwG8CLYHdCgSgaXllnic7YAiNgADoRpSmAXRZlUIyCBOFQWD8VJUFUQIXha
+FIAGubFlG+aJUgAF4dDKAB7nsdYAA+C0Vnicq+HqAYlWWA98n8a5CgBh9HnQAotgASZdHAcRKEaQk6IG
+C4Mg4MLnFSTwgh8HUoGoagAQ1DYPBAEgAH8e9iA6DB4AAcBnr4AIGhfJp9TOBR5GPCR1mq750ZgVpzg0
+fpLEiRAiIIBYGgcIpPE+UhcisKYmgCudLH4fx/gAcJuGtoAIKWBACVGfZ61GAJ8nfJp6oofR4nsAB9nh
+vJgmWcQADWUR0EFSJ0VmganAUGg7D2QRiBcygDm+cJwHcbxunEfIriSE4Mh6GYDIEfXRnvS1YQ2eB2Q3
+Fp3Hyb5vG8dpnmocZrkwXBtjGeo+R9jhIIQ4AQEwKgWAyE4eA8Xfj5HuPUcAFgJAPB0JYQ4aQ+DxHYOY
+eA2RrDiHSOIdA7RyjgHIOsbQ5BywoHcPQfo5neKQIGOQgaiyBOmJOQM0bCYdgfWAaQgbPyBD3IGP2HJB
+yAgAAA8BAAADAAAAAQARAAABAQADAAAAAQARAAABAgADAAAABAAABMgBAwADAAAAAQAFAAABBgADAAAA
+AQACAAABEQAEAAAAAQAAAAgBEgADAAAAAQABAAABFQADAAAAAQAEAAABFgADAAAAAQARAAABFwAEAAAA
+AQAABAUBHAADAAAAAQABAAABPQADAAAAAQACAAABUgADAAAAAQABAAABUwADAAAABAAABNCHcwAHAAAb
+pAAABNgAAAAAAAgACAAIAAgAAQABAAEAAQAAG6RhcHBsAgAAAG1udHJSR0IgWFlaIAfZAAkADgAJADEA
+LGFjc3BBUFBMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAAANMtYXBwbAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEXJYWVoAAAFQAAAAFGdYWVoAAAFkAAAA
+FGJYWVoAAAF4AAAAFHd0cHQAAAGMAAAAFGNoYWQAAAGgAAAALHJUUkMAAAHMAAAIDGdUUkMAAAnYAAAI
+DGJUUkMAABHkAAAIDGFhcmcAABnwAAAAIGFhZ2cAABoQAAAAIGFhYmcAABowAAAAIHZjZ3QAABpQAAAA
+MG5kaW4AABqAAAAAOGRlc2MAABq4AAAAZGRzY20AABscAAAAOm1tb2QAABtYAAAAKGNwcnQAABuAAAAA
+JFhZWiAAAAAAAAB7vQAAQXsAAAJLWFlaIAAAAAAAAFYqAACp0AAAFF9YWVogAAAAAAAAJO8AABS1AAC8
+glhZWiAAAAAAAADz2AABAAAAARYIc2YzMgAAAAAAAQu3AAAFlv//81cAAAcpAAD91///+7f///2mAAAD
+2gAAwPZjdXJ2AAAAAAAABAAAAAAFAAoADwAUABkAHgAjACgALQAyADcAOwBAAEUASgBPAFQAWQBeAGMA
+aABtAHIAdwB8AIEAhgCLAJAAlQCaAJ8ApACpAK4AsgC3ALwAwQDGAMsA0ADVANoA4ADlAOoA8AD1APsB
+AQEHAQwBEgEYAR4BJQErATEBOAE+AUUBSwFSAVkBYAFmAW0BdQF8AYMBigGSAZkBoQGoAbABuAHAAcgB
+0AHYAeAB6QHxAfoCAgILAhQCHAIlAi4CNwJAAkoCUwJcAmYCcAJ5AoMCjQKXAqECqwK1Ar8CygLUAt8C
+6gL0Av8DCgMVAyADKwM3A0IDTQNZA2UDcAN8A4gDlAOgA6wDuQPFA9ID3gPrA/gEBAQRBB4ELAQ5BEYE
+VARhBG8EfASKBJgEpgS0BMIE0QTfBO4E/AULBRoFKAU3BUcFVgVlBXQFhAWTBaMFswXDBdMF4wXzBgMG
+FAYkBjUGRQZWBmcGeAaJBpoGqwa9Bs4G4AbyBwMHFQcnBzkHTAdeB3AHgweWB6gHuwfOB+EH9AgICBsI
+LwhCCFYIagh+CJIIpgi6CM4I4wj3CQwJIQk2CUsJYAl1CYoJoAm1CcsJ4An2CgwKIgo5Ck8KZQp8CpIK
+qQrACtcK7gsFCx0LNAtLC2MLewuTC6sLwwvbC/MMDAwkDD0MVgxuDIcMoQy6DNMM7Q0GDSANOg1UDW4N
+iA2iDbwN1w3xDgwOJw5CDl0OeA6TDq8Oyg7mDwIPHg86D1YPcg+OD6sPyA/kEAEQHhA7EFgQdhCTELEQ
+zhDsEQoRKBFGEWQRgxGhEcAR3xH+Eh0SPBJbEnoSmhK5EtkS+RMZEzkTWRN6E5oTuxPbE/wUHRQ+FF8U
+gRSiFMQU5RUHFSkVSxVtFZAVshXVFfcWGhY9FmAWgxanFsoW7hcSFzUXWRd9F6IXxhfqGA8YNBhZGH0Y
+oxjIGO0ZExk4GV4ZhBmqGdAZ9hodGkMaahqQGrca3hsGGy0bVBt8G6MbyxvzHBscQxxsHJQcvRzmHQ4d
+Nx1gHYodsx3dHgYeMB5aHoQerh7YHwMfLR9YH4Mfrh/ZIAQgMCBbIIcgsyDeIQohNyFjIY8hvCHpIhUi
+QiJwIp0iyiL4IyUjUyOBI68j3SQMJDokaSSXJMYk9SUkJVQlgyWzJeImEiZCJnImoybTJwMnNCdlJ5Yn
+xyf4KCooWyiNKL4o8CkiKVUphym5KewqHypSKoUquCrrKx4rUiuGK7or7iwiLFYsiiy/LPQtKS1eLZMt
+yC39LjMuaS6eLtQvCy9BL3cvri/kMBswUjCJMMEw+DEwMWcxnzHXMg8ySDKAMrgy8TMqM2MznDPVNA80
+SDSCNLw09jUwNWo1pTXfNho2VTaQNss3BjdCN343uTf1ODE4bTiqOOY5IzlgOZ052joXOlQ6kjrPOw07
+SzuJO8c8BjxEPIM8wj0BPUA9fz2/Pf4+Pj5+Pr4+/j8/P38/wEAAQEFAgkDEQQVBR0GIQcpCDEJOQpFC
+00MWQ1hDm0PeRCFEZUSoROxFMEV0RbhF/EZARoVGykcOR1NHmUfeSCNIaUivSPVJO0mBScdKDkpVSptK
+4ksqS3FLuEwATEhMkEzYTSBNaE2xTfpOQk6MTtVPHk9nT7FP+1BFUI9Q2VEkUW5RuVIEUk9SmlLlUzFT
+fFPIVBRUYFStVPlVRlWSVd9WLFZ6VsdXFFdiV7BX/lhMWJpY6Vk4WYZZ1VokWnRaw1sTW2NbslwDXFNc
+o1z0XURdlV3mXjdeiV7aXyxffl/QYCJgdGDHYRlhbGG/YhJiZWK5YwxjYGO0ZAhkXGSxZQVlWmWvZgRm
+WWavZwRnWmewaAZoXGiyaQlpX2m2ag1qZGq8axNra2vDbBtsc2zLbSNtfG3Vbi5uh27gbzpvk2/tcEdw
+oXD7cVZxsHILcmZywXMcc3hz03QvdIt053VDdaB1/HZZdrZ3E3dwd854K3iJeOd5RXmjegJ6YHq/ex57
+fXvcfDx8m3z7fVt9u34bfnx+3H89f55//4BggMKBI4GFgeeCSYKrgw6DcIPThDaEmYT8hWCFw4YnhouG
+74dUh7iIHYiBiOaJTImxihaKfIrii0iLrowUjHuM4o1Ija+OF45+juWPTY+1kB2QhZDukVaRv5IokpGS
++pNkk82UN5ShlQuVdZXglkqWtZcgl4uX95himM6ZOpmmmhKafprrm1ebxJwxnJ+dDJ15neeeVZ7DnzGf
+oKAPoH2g7KFbocuiOqKqoxqjiqP6pGqk26VMpbymLqafpxCngqf0qGWo2KlKqbyqL6qiqxWriKv7rG+s
+461WrcuuP66zryivnbARsIew/LFxseeyXbLTs0mzv7Q2tK21JLWbthK2ibcBt3m38bhpuOG5WrnSuku6
+xLs+u7e8MLyqvSS9nr4ZvpO/Dr+JwATAf8D6wXbB8cJtwunDZsPixF/E3MVZxdbGU8bRx07HzMhKyMnJ
+R8nGykXKxMtDy8LMQszBzUHNwc5CzsLPQ8/D0ETQxtFH0cjSStLM007T0NRT1NbVWNXb1l7W4tdl1+nY
+bdjx2XXZ+tp/2wPbiNwO3JPdGd2e3iTeqt8x37fgPuDF4Uzh0+Ja4uLjauPy5HrlAuWL5hPmnOcl56/o
+OOjC6Uzp1upg6urrdev/7IrtFu2h7izuuO9E79DwXPDp8XXyAvKP8xzzqvQ39MX1U/Xh9m/2/veM+Bv4
+qvk5+cn6Wfro+3j8CPyZ/Sn9uv5L/tz/bmN1cnYAAAAAAAAEAAAAAAUACgAPABQAGQAeACMAKAAtADIA
+NwA7AEAARQBKAE8AVABZAF4AYwBoAG0AcgB3AHwAgQCGAIsAkACVAJoAnwCkAKkArgCyALcAvADBAMYA
+ywDQANUA2gDgAOUA6gDwAPUA+wEBAQcBDAESARgBHgElASsBMQE4AT4BRQFLAVIBWQFgAWYBbQF1AXwB
+gwGKAZIBmQGhAagBsAG4AcAByAHQAdgB4AHpAfEB+gICAgsCFAIcAiUCLgI3AkACSgJTAlwCZgJwAnkC
+gwKNApcCoQKrArUCvwLKAtQC3wLqAvQC/wMKAxUDIAMrAzcDQgNNA1kDZQNwA3wDiAOUA6ADrAO5A8UD
+0gPeA+sD+AQEBBEEHgQsBDkERgRUBGEEbwR8BIoEmASmBLQEwgTRBN8E7gT8BQsFGgUoBTcFRwVWBWUF
+dAWEBZMFowWzBcMF0wXjBfMGAwYUBiQGNQZFBlYGZwZ4BokGmgarBr0GzgbgBvIHAwcVBycHOQdMB14H
+cAeDB5YHqAe7B84H4Qf0CAgIGwgvCEIIVghqCH4IkgimCLoIzgjjCPcJDAkhCTYJSwlgCXUJigmgCbUJ
+ywngCfYKDAoiCjkKTwplCnwKkgqpCsAK1wruCwULHQs0C0sLYwt7C5MLqwvDC9sL8wwMDCQMPQxWDG4M
+hwyhDLoM0wztDQYNIA06DVQNbg2IDaINvA3XDfEODA4nDkIOXQ54DpMOrw7KDuYPAg8eDzoPVg9yD44P
+qw/ID+QQARAeEDsQWBB2EJMQsRDOEOwRChEoEUYRZBGDEaERwBHfEf4SHRI8ElsSehKaErkS2RL5ExkT
+ORNZE3oTmhO7E9sT/BQdFD4UXxSBFKIUxBTlFQcVKRVLFW0VkBWyFdUV9xYaFj0WYBaDFqcWyhbuFxIX
+NRdZF30XohfGF+oYDxg0GFkYfRijGMgY7RkTGTgZXhmEGaoZ0Bn2Gh0aQxpqGpAatxreGwYbLRtUG3wb
+oxvLG/McGxxDHGwclBy9HOYdDh03HWAdih2zHd0eBh4wHloehB6uHtgfAx8tH1gfgx+uH9kgBCAwIFsg
+hyCzIN4hCiE3IWMhjyG8IekiFSJCInAinSLKIvgjJSNTI4EjryPdJAwkOiRpJJckxiT1JSQlVCWDJbMl
+4iYSJkImciajJtMnAyc0J2UnlifHJ/goKihbKI0ovijwKSIpVSmHKbkp7CofKlIqhSq4KusrHitSK4Yr
+uivuLCIsViyKLL8s9C0pLV4tky3ILf0uMy5pLp4u1C8LL0Evdy+uL+QwGzBSMIkwwTD4MTAxZzGfMdcy
+DzJIMoAyuDLxMyozYzOcM9U0DzRINII0vDT2NTA1ajWlNd82GjZVNpA2yzcGN0I3fje5N/U4MThtOKo4
+5jkjOWA5nTnaOhc6VDqSOs87DTtLO4k7xzwGPEQ8gzzCPQE9QD1/Pb89/j4+Pn4+vj7+Pz8/fz/AQABA
+QUCCQMRBBUFHQYhBykIMQk5CkULTQxZDWEObQ95EIURlRKhE7EUwRXRFuEX8RkBGhUbKRw5HU0eZR95I
+I0hpSK9I9Uk7SYFJx0oOSlVKm0riSypLcUu4TABMSEyQTNhNIE1oTbFN+k5CToxO1U8eT2dPsU/7UEVQ
+j1DZUSRRblG5UgRST1KaUuVTMVN8U8hUFFRgVK1U+VVGVZJV31YsVnpWx1cUV2JXsFf+WExYmljpWThZ
+hlnVWiRadFrDWxNbY1uyXANcU1yjXPRdRF2VXeZeN16JXtpfLF9+X9BgImB0YMdhGWFsYb9iEmJlYrlj
+DGNgY7RkCGRcZLFlBWVaZa9mBGZZZq9nBGdaZ7BoBmhcaLJpCWlfabZqDWpkarxrE2tra8NsG2xzbMtt
+I218bdVuLm6HbuBvOm+Tb+1wR3ChcPtxVnGwcgtyZnLBcxxzeHPTdC90i3TndUN1oHX8dll2tncTd3B3
+zngreIl453lFeaN6Anpger97Hnt9e9x8PHybfPt9W327fht+fH7cfz1/nn//gGCAwoEjgYWB54JJgquD
+DoNwg9OENoSZhPyFYIXDhieGi4bvh1SHuIgdiIGI5olMibGKFop8iuKLSIuujBSMe4zijUiNr44Xjn6O
+5Y9Nj7WQHZCFkO6RVpG/kiiSkZL6k2STzZQ3lKGVC5V1leCWSpa1lyCXi5f3mGKYzpk6maaaEpp+muub
+V5vEnDGcn50MnXmd555VnsOfMZ+goA+gfaDsoVuhy6I6oqqjGqOKo/qkaqTbpUylvKYupp+nEKeCp/So
+ZajYqUqpvKovqqKrFauIq/usb6zjrVaty64/rrOvKK+dsBGwh7D8sXGx57JdstOzSbO/tDa0rbUktZu2
+EraJtwG3ebfxuGm44blaudK6S7rEuz67t7wwvKq9JL2evhm+k78Ov4nABMB/wPrBdsHxwm3C6cNmw+LE
+X8TcxVnF1sZTxtHHTsfMyErIyclHycbKRcrEy0PLwsxCzMHNQc3BzkLOws9Dz8PQRNDG0UfRyNJK0szT
+TtPQ1FPU1tVY1dvWXtbi12XX6dht2PHZddn62n/bA9uI3A7ck90Z3Z7eJN6q3zHft+A+4MXhTOHT4lri
+4uNq4/LkeuUC5YvmE+ac5yXnr+g46MLpTOnW6mDq6ut16//siu0W7aHuLO6470Tv0PBc8OnxdfIC8o/z
+HPOq9Df0xfVT9eH2b/b+94z4G/iq+Tn5yfpZ+uj7ePwI/Jn9Kf26/kv+3P9uY3VydgAAAAAAAAQAAAAA
+BQAKAA8AFAAZAB4AIwAoAC0AMgA3ADsAQABFAEoATwBUAFkAXgBjAGgAbQByAHcAfACBAIYAiwCQAJUA
+mgCfAKQAqQCuALIAtwC8AMEAxgDLANAA1QDaAOAA5QDqAPAA9QD7AQEBBwEMARIBGAEeASUBKwExATgB
+PgFFAUsBUgFZAWABZgFtAXUBfAGDAYoBkgGZAaEBqAGwAbgBwAHIAdAB2AHgAekB8QH6AgICCwIUAhwC
+JQIuAjcCQAJKAlMCXAJmAnACeQKDAo0ClwKhAqsCtQK/AsoC1ALfAuoC9AL/AwoDFQMgAysDNwNCA00D
+WQNlA3ADfAOIA5QDoAOsA7kDxQPSA94D6wP4BAQEEQQeBCwEOQRGBFQEYQRvBHwEigSYBKYEtATCBNEE
+3wTuBPwFCwUaBSgFNwVHBVYFZQV0BYQFkwWjBbMFwwXTBeMF8wYDBhQGJAY1BkUGVgZnBngGiQaaBqsG
+vQbOBuAG8gcDBxUHJwc5B0wHXgdwB4MHlgeoB7sHzgfhB/QICAgbCC8IQghWCGoIfgiSCKYIugjOCOMI
+9wkMCSEJNglLCWAJdQmKCaAJtQnLCeAJ9goMCiIKOQpPCmUKfAqSCqkKwArXCu4LBQsdCzQLSwtjC3sL
+kwurC8ML2wvzDAwMJAw9DFYMbgyHDKEMugzTDO0NBg0gDToNVA1uDYgNog28DdcN8Q4MDicOQg5dDngO
+kw6vDsoO5g8CDx4POg9WD3IPjg+rD8gP5BABEB4QOxBYEHYQkxCxEM4Q7BEKESgRRhFkEYMRoRHAEd8R
+/hIdEjwSWxJ6EpoSuRLZEvkTGRM5E1kTehOaE7sT2xP8FB0UPhRfFIEUohTEFOUVBxUpFUsVbRWQFbIV
+1RX3FhoWPRZgFoMWpxbKFu4XEhc1F1kXfReiF8YX6hgPGDQYWRh9GKMYyBjtGRMZOBleGYQZqhnQGfYa
+HRpDGmoakBq3Gt4bBhstG1QbfBujG8sb8xwbHEMcbByUHL0c5h0OHTcdYB2KHbMd3R4GHjAeWh6EHq4e
+2B8DHy0fWB+DH64f2SAEIDAgWyCHILMg3iEKITchYyGPIbwh6SIVIkIicCKdIsoi+CMlI1MjgSOvI90k
+DCQ6JGkklyTGJPUlJCVUJYMlsyXiJhImQiZyJqMm0ycDJzQnZSeWJ8cn+CgqKFsojSi+KPApIilVKYcp
+uSnsKh8qUiqFKrgq6yseK1Irhiu6K+4sIixWLIosvyz0LSktXi2TLcgt/S4zLmkuni7ULwsvQS93L64v
+5DAbMFIwiTDBMPgxMDFnMZ8x1zIPMkgygDK4MvEzKjNjM5wz1TQPNEg0gjS8NPY1MDVqNaU13zYaNlU2
+kDbLNwY3Qjd+N7k39TgxOG04qjjmOSM5YDmdOdo6FzpUOpI6zzsNO0s7iTvHPAY8RDyDPMI9AT1APX89
+vz3+Pj4+fj6+Pv4/Pz9/P8BAAEBBQIJAxEEFQUdBiEHKQgxCTkKRQtNDFkNYQ5tD3kQhRGVEqETsRTBF
+dEW4RfxGQEaFRspHDkdTR5lH3kgjSGlIr0j1STtJgUnHSg5KVUqbSuJLKktxS7hMAExITJBM2E0gTWhN
+sU36TkJOjE7VTx5PZ0+xT/tQRVCPUNlRJFFuUblSBFJPUppS5VMxU3xTyFQUVGBUrVT5VUZVklXfVixW
+elbHVxRXYlewV/5YTFiaWOlZOFmGWdVaJFp0WsNbE1tjW7JcA1xTXKNc9F1EXZVd5l43Xole2l8sX35f
+0GAiYHRgx2EZYWxhv2ISYmViuWMMY2BjtGQIZFxksWUFZVplr2YEZllmr2cEZ1pnsGgGaFxosmkJaV9p
+tmoNamRqvGsTa2trw2wbbHNsy20jbXxt1W4ubodu4G86b5Nv7XBHcKFw+3FWcbByC3JmcsFzHHN4c9N0
+L3SLdOd1Q3Wgdfx2WXa2dxN3cHfOeCt4iXjneUV5o3oCemB6v3see3173Hw8fJt8+31bfbt+G358ftx/
+PX+ef/+AYIDCgSOBhYHngkmCq4MOg3CD04Q2hJmE/IVghcOGJ4aLhu+HVIe4iB2IgYjmiUyJsYoWinyK
+4otIi66MFIx7jOKNSI2vjheOfo7lj02PtZAdkIWQ7pFWkb+SKJKRkvqTZJPNlDeUoZULlXWV4JZKlrWX
+IJeLl/eYYpjOmTqZppoSmn6a65tXm8ScMZyfnQydeZ3nnlWew58xn6CgD6B9oOyhW6HLojqiqqMao4qj
++qRqpNulTKW8pi6mn6cQp4Kn9KhlqNipSqm8qi+qoqsVq4ir+6xvrOOtVq3Lrj+us68or52wEbCHsPyx
+cbHnsl2y07NJs7+0NrSttSS1m7YStom3Abd5t/G4abjhuVq50rpLusS7Pru3vDC8qr0kvZ6+Gb6Tvw6/
+icAEwH/A+sF2wfHCbcLpw2bD4sRfxNzFWcXWxlPG0cdOx8zISsjJyUfJxspFysTLQ8vCzELMwc1BzcHO
+Qs7Cz0PPw9BE0MbRR9HI0krSzNNO09DUU9TW1VjV29Ze1uLXZdfp2G3Y8dl12fraf9sD24jcDtyT3Rnd
+nt4k3qrfMd+34D7gxeFM4dPiWuLi42rj8uR65QLli+YT5pznJeev6DjowulM6dbqYOrq63Xr/+yK7Rbt
+oe4s7rjvRO/Q8Fzw6fF18gLyj/Mc86r0N/TF9VP14fZv9v73jPgb+Kr5OfnJ+ln66Pt4/Aj8mf0p/br+
+S/7c/25wYXJhAAAAAAADAAAAAmZmAADypwAADVkAABPQAAALA3BhcmEAAAAAAAMAAAACZmYAAPKnAAAN
+WQAAE9AAAAsDcGFyYQAAAAAAAwAAAAJmZgAA8qcAAA1ZAAAT0AAACwN2Y2d0AAAAAAAAAAEAAQAAAAAA
+AAABAAAAAQAAAAAAAAABAAAAAQAAAAAAAAABAABuZGluAAAAAAAAADAAAKPAAABXwAAASsAAAJ5AAAAl
+QAAAEwAAAFBAAABUQAACMzMAAjMzAAIzM2Rlc2MAAAAAAAAACkNpbmVtYSBIRAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAABtbHVjAAAAAAAAAAIAAAAMZW5VUwAAABIAAAAoZGVERQAAABIAAAAoAEMAaQBuAGUAbQBhACAA
+SABEAABtbW9kAAAAAAAABhAAAJIjAgm8pMG9/4AAAAAAAAAAAAAAAAAAAAAAdGV4dAAAAABDb3B5cmln
+aHQgQXBwbGUsIEluYy4sIDIwMDkA0iUmJyhaJGNsYXNzbmFtZVgkY2xhc3Nlc18QEE5TQml0bWFwSW1h
+Z2VSZXCjJykqWk5TSW1hZ2VSZXBYTlNPYmplY3TSJSYsLVdOU0FycmF5oiwq0iUmLzBeTlNNdXRhYmxl
+QXJyYXmjLywq0zIzCjQ1NldOU1doaXRlXE5TQ29sb3JTcGFjZUQwIDAAEAOADNIlJjg5V05TQ29sb3Ki
+OCrSJSY7PFdOU0ltYWdlojsqXxAPTlNLZXllZEFyY2hpdmVy0T9AVHJvb3SAAQAIABEAGgAjAC0AMgA3
+AEYATABXAF4AZQByAHkAgQCDAIUAigCMAI4AlwCcAKcAqQCrAK0AsgC1ALcAuQC7AL0AwgDZANsA3SFd
+IWIhbSF2IYkhjSGYIaEhpiGuIbEhtiHFIckh0CHYIeUh6iHsIe4h8yH7If4iAyILIg4iICIjIigAAAAA
+AAACAQAAAAAAAABBAAAAAAAAAAAAAAAAAAAiKg
+</mutableData>
+        </image>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
+        <image name="minus" width="32" height="32"/>
+        <image name="plus" width="32" height="32"/>
+        <image name="refresh" width="32" height="32"/>
+        <image name="reload" width="32" height="32"/>
+        <image name="search" width="32" height="32"/>
+    </resources>
+</document>
