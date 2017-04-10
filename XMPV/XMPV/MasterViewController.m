@@ -15,7 +15,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "SSZipArchive.h"
-#import "JMAlertView.h"
+#import "JMAlertController.h"
 #import "JMActionSheet.h"
 #import "MBProgressHUD.h"
 extern NSString *_origdir, *_projectdir;
@@ -35,7 +35,7 @@ extern NSString *_origdir, *_projectdir;
 	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 	{
 	    self.clearsSelectionOnViewWillAppear = NO;
-	    self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
+	    self.preferredContentSize = CGSizeMake(320.0, 600.0);
 	}
     [super awakeFromNib];
 }
@@ -124,39 +124,44 @@ extern NSString *_origdir, *_projectdir;
 
 - (void)addProject:(id)sender
 {
-	JMActionSheet *sheet = [[JMActionSheet alloc] initWithTitle:@"You can add projects by transferring the zipped project folder with iTunes or by downloading projects from github." delegate:nil cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"I'll transfer ZIPs", @"Dowload from github", nil];
+	JMActionSheet *sheet = [JMActionSheet actionSheetWithTitle:@"You can add projects by transferring the zipped project folder with iTunes or by downloading projects from github." viewController:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@[@"I'll transfer ZIPs", @"Dowload from github"]];
 	
 	sheet.alternativeBlock = ^(int res)
 	{
 		if (res == 1)
 		{
-			JMAlertView *alert = [[JMAlertView alloc]
-											   initWithTitle:@""
-											   message:@"Please enter the user-name to import a github project:"
-											   delegate:nil
-											   cancelButtonTitle:@"Cancel"
-											   otherButtonTitles:@"Continue", nil];
-            alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-            __weak JMAlertView *weakAlert = alert;
+			JMAlertController *alert = [JMAlertController alertControllerWithTitle:@""
+                                                     viewController:self
+                                                            message:@"Please enter the user-name to import a github project:"
+                                                        cancelBlock:nil
+                                                  cancelButtonTitle:@"Cancel"
+                                                         otherBlock:nil
+                                                  otherButtonTitles:@[@"Continue"]];
+            [alert addTextFieldWithConfigurationHandler:nil];
+
+            __weak JMAlertController *weakAlert = alert;
 
 
             alert.otherBlock = ^(int choice)
 			{
-                NSString *user = [weakAlert textFieldAtIndex:0].text;
+                NSString *user = [weakAlert textFields][0].text;
 
-				JMAlertView *alert2 = [[JMAlertView alloc]
-											   initWithTitle:@""
-											   message:@"Please enter the project-name to import a github project:"
-											   delegate:nil
-											   cancelButtonTitle:@"Cancel"
-											   otherButtonTitles:@"Import", nil];
-				alert2.alertViewStyle = UIAlertViewStylePlainTextInput;
-                __weak JMAlertView *weakAlert2 = alert2;
+				JMAlertController *alert2 = [JMAlertController alertControllerWithTitle:@""
+                                                          viewController:self
+                                                                 message:@"Please enter the project-name to import a github project:"
+                                                             cancelBlock:nil
+                                                       cancelButtonTitle:@"Cancel"
+                                                              otherBlock:nil
+                                                       otherButtonTitles:@[@"Import"]];
+
+                [alert2 addTextFieldWithConfigurationHandler:nil];
+
+                __weak JMAlertController *weakAlert2 = alert2;
 
 				
                 alert2.otherBlock = ^(int choice)
 				 {
-                     NSString *project = [weakAlert2 textFieldAtIndex:0].text;
+                     NSString *project = [weakAlert2 textFields][0].text;
 
                      MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
                      hud.mode = MBProgressHUDModeIndeterminate;
@@ -188,9 +193,9 @@ extern NSString *_origdir, *_projectdir;
                      [hud hide:YES];
                                         });
 				 };
-				[alert2 show];
+				[alert2 showInView:self.view];
 			};
-			[alert show];
+            [alert showInView:self.view];
 		}
 		else
 			[self checkNewZIPs];

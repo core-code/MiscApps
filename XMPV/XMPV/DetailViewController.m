@@ -12,7 +12,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 @import MessageUI;
 #import "DetailViewController.h"
-#import "JMAlertView.h"
+#import "JMAlertController.h"
 #import "JMActionSheet.h"
 #import "RegexHighlightView.h"
 #import <Chromatism/Chromatism.h>
@@ -154,9 +154,11 @@ FILE* open_memstream(char** bufp, size_t* sizep);
 	__weak DetailViewController *weakSelf = self;
 	NSDictionary *dict = _xcodeObjects[self.itemHash];
 	NSString *type = [dict[@"isa"] isEqualToString:@"PBXFileReference"] ? @"file" : @"folder";
-	JMAlertView *alert = [[JMAlertView alloc] initWithTitle:@""
+	JMAlertController *alert = [JMAlertController alertControllerWithTitle:@""
+                                                             viewController:self
 													message:makeString(@"Are you sure you want to revert all changes in this %@?", type)
-												   delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+                                                cancelBlock:nil
+                                                          cancelButtonTitle:@"Cancel" otherBlock:nil otherButtonTitles:@[@"OK"]];
 	
 	alert.otherBlock = ^(int choice)
 	{
@@ -169,7 +171,7 @@ FILE* open_memstream(char** bufp, size_t* sizep);
 		[weakSelf configureView];
 	};
 	
-	[alert show];
+	[alert showFromBarButtonItem:sender animated:YES];
 }
 
 - (void)share:(UIBarButtonItem *)sender
@@ -177,13 +179,14 @@ FILE* open_memstream(char** bufp, size_t* sizep);
 	__weak DetailViewController *weakSelf = self;
 	NSDictionary *dict = _xcodeObjects[self.itemHash];
 	NSString *type = [dict[@"isa"] isEqualToString:@"PBXFileReference"] ? @"file" : @"folder";
-	JMActionSheet *sheet = [[JMActionSheet alloc] initWithTitle:makeString(@"Do you want to send/share this %@?", type)
-													   delegate:nil cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil
-											  otherButtonTitles:
-							makeString(@"Send %@", type),
+	JMActionSheet *sheet = [JMActionSheet actionSheetWithTitle:makeString(@"Do you want to send/share this %@?", type)
+                                                 viewController:self
+													   cancelButtonTitle:@"Cancel"
+                                        destructiveButtonTitle:nil
+											  otherButtonTitles:@[makeString(@"Send %@", type),
 							makeString(@"Send %@ Diff", type),
 							makeString(@"Print %@", type),
-							makeString(@"Print %@ Diff", type), nil];
+							makeString(@"Print %@ Diff", type)]];
 	
 	sheet.alternativeBlock = ^(int res)
 	{
@@ -447,7 +450,7 @@ FILE* open_memstream(char** bufp, size_t* sizep);
 	{
 		if (!completed && error)
 		{
-			asl_NSLog_debug(@"Printing could not complete because of error: %@", error);
+			cc_log_debug(@"Printing could not complete because of error: %@", error);
 		}
 	}];
 }

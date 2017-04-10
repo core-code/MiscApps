@@ -215,7 +215,7 @@ static void sort(struct line *, int);
 static void print_header(const char *, const char *);
 static int ignoreline(char *);
 static int istextfile(FILE *);
-static int fetch(long *, int, int, FILE *, int, int);
+static long fetch(long *f, long a, long b, FILE *lb, int ch, int oldfile);
 static int newcand(int, int, int);
 static int search(int *, int, int);
 static int skipline(FILE *);
@@ -1204,7 +1204,7 @@ PROCEED:
 		if (a <= b && c <= d && format == D_NORMAL)
 			fprintf(buffer, "---\n");
 	}
-	i = fetch(ixnew, c, d, f2, format == D_NORMAL ? '>' : '\0', 0);
+	i = (int)fetch(ixnew, c, d, f2, format == D_NORMAL ? '>' : '\0', 0);
 	if (i != 0 && format == D_EDIT) {
 		/*
 		 * A non-zero return value for D_EDIT indicates that the
@@ -1227,11 +1227,11 @@ PROCEED:
 	}
 }
 
-static int
-fetch(long *f, int a, int b, FILE *lb, int ch, int oldfile)
+static long
+fetch(long *f, long a, long b, FILE *lb, int ch, int oldfile)
 {
-	int	i, j, c, lastc, col, nc;
-	int	newcol;
+	long	i, j, c, lastc, col, nc;
+	long	newcol;
 
 	/*
 	 * When doing #ifdef's, copy down to current line
@@ -1297,7 +1297,7 @@ fetch(long *f, int a, int b, FILE *lb, int ch, int oldfile)
 					fprintf(buffer, ".");
 					return (i - a + 1);
 				}
-				fprintf(buffer, "%c", c);
+				fprintf(buffer, "%ld", c);
 				col++;
 			}
 		}

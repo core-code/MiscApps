@@ -149,7 +149,7 @@ static NSMutableDictionary* highlightThemes;
     }
     
     //Set line height, font, color and break mode
-    CGFloat minimumLineHeight = [self.text sizeWithFont:self.font].height,maximumLineHeight = minimumLineHeight;
+    CGFloat minimumLineHeight = [self.text sizeWithAttributes:@{NSFontAttributeName: self.font}].height,maximumLineHeight = minimumLineHeight;
     CTFontRef font = CTFontCreateWithName((__bridge CFStringRef)self.font.fontName,self.font.pointSize,NULL);
     CTLineBreakMode lineBreakMode = kCTLineBreakByWordWrapping;
     

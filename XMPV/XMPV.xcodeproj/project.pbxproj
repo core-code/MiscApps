@@ -35,12 +35,12 @@
 		B933AC2618BBE5FE006E42B9 /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC1F18BBE5FE006E42B9 /* Foundation+CoreCode.m */; };
 		B933AC2718BBE5FE006E42B9 /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC2218BBE5FE006E42B9 /* Foundation+Properties.m */; };
 		B933AC3318BBE604006E42B9 /* JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC2A18BBE604006E42B9 /* JMActionSheet.m */; };
-		B933AC3418BBE604006E42B9 /* JMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC2C18BBE604006E42B9 /* JMAlertView.m */; };
 		B933AC3518BBE604006E42B9 /* JMChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC2E18BBE604006E42B9 /* JMChoiceController.m */; };
 		B933AC3718BBE604006E42B9 /* JMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC3218BBE604006E42B9 /* JMWebViewController.m */; };
 		B95B1CA11918E4B000A9657D /* FXNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = B95B1C8D1918E4B000A9657D /* FXNotifications.m */; };
 		B9683AC316655AD300B0EBAE /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = B9683AC116655AD300B0EBAE /* help.png */; };
 		B9683AC416655AD300B0EBAE /* help@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9683AC216655AD300B0EBAE /* help@2x.png */; };
+		B997DE5B1E9BC427004381F4 /* JMAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B997DE5A1E9BC427004381F4 /* JMAlertController.m */; };
 		B9AC3FB316596A40000C89A2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AC3FB216596A40000C89A2 /* MessageUI.framework */; };
 		B9E1E0091D32CF79004C9F15 /* diff.c in Sources */ = {isa = PBXBuildFile; fileRef = B9E1E0031D32CF79004C9F15 /* diff.c */; };
 		B9E1E00A1D32CF79004C9F15 /* diffdir.c in Sources */ = {isa = PBXBuildFile; fileRef = B9E1E0051D32CF79004C9F15 /* diffdir.c */; };
@@ -122,8 +122,6 @@
 		B933AC2218BBE5FE006E42B9 /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
 		B933AC2918BBE604006E42B9 /* JMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMActionSheet.h; sourceTree = "<group>"; };
 		B933AC2A18BBE604006E42B9 /* JMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMActionSheet.m; sourceTree = "<group>"; };
-		B933AC2B18BBE604006E42B9 /* JMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAlertView.h; sourceTree = "<group>"; };
-		B933AC2C18BBE604006E42B9 /* JMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAlertView.m; sourceTree = "<group>"; };
 		B933AC2D18BBE604006E42B9 /* JMChoiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMChoiceController.h; sourceTree = "<group>"; };
 		B933AC2E18BBE604006E42B9 /* JMChoiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMChoiceController.m; sourceTree = "<group>"; };
 		B933AC3118BBE604006E42B9 /* JMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMWebViewController.h; sourceTree = "<group>"; };
@@ -133,6 +131,8 @@
 		B9683AC116655AD300B0EBAE /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		B9683AC216655AD300B0EBAE /* help@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help@2x.png"; sourceTree = "<group>"; };
 		B968A47418BBB91D00309F2F /* Chromatism.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Chromatism.xcodeproj; path = Chromatism/Chromatism/Chromatism.xcodeproj; sourceTree = "<group>"; };
+		B997DE591E9BC427004381F4 /* JMAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAlertController.h; sourceTree = "<group>"; };
+		B997DE5A1E9BC427004381F4 /* JMAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAlertController.m; sourceTree = "<group>"; };
 		B9AC3FB216596A40000C89A2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		B9E1E0031D32CF79004C9F15 /* diff.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = diff.c; sourceTree = "<group>"; };
 		B9E1E0041D32CF79004C9F15 /* diff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = diff.h; sourceTree = "<group>"; };
@@ -283,8 +283,8 @@
 			children = (
 				B933AC2918BBE604006E42B9 /* JMActionSheet.h */,
 				B933AC2A18BBE604006E42B9 /* JMActionSheet.m */,
-				B933AC2B18BBE604006E42B9 /* JMAlertView.h */,
-				B933AC2C18BBE604006E42B9 /* JMAlertView.m */,
+				B997DE591E9BC427004381F4 /* JMAlertController.h */,
+				B997DE5A1E9BC427004381F4 /* JMAlertController.m */,
 				B933AC2D18BBE604006E42B9 /* JMChoiceController.h */,
 				B933AC2E18BBE604006E42B9 /* JMChoiceController.m */,
 				B933AC3118BBE604006E42B9 /* JMWebViewController.h */,
@@ -431,7 +431,6 @@
 				B90386D1164AEF75006502A2 /* DetailViewController.m in Sources */,
 				B933AC3518BBE604006E42B9 /* JMChoiceController.m in Sources */,
 				B95B1CA11918E4B000A9657D /* FXNotifications.m in Sources */,
-				B933AC3418BBE604006E42B9 /* JMAlertView.m in Sources */,
 				B900DAD4164BB31700F85DE1 /* SSZipArchive.m in Sources */,
 				B900DAEF164BB63000F85DE1 /* ioapi.c in Sources */,
 				B900DAF0164BB63000F85DE1 /* mztools.c in Sources */,
@@ -442,6 +441,7 @@
 				B933AC2518BBE5FE006E42B9 /* CoreLib.m in Sources */,
 				B900DAF2164BB63000F85DE1 /* zip.c in Sources */,
 				B933AC2618BBE5FE006E42B9 /* Foundation+CoreCode.m in Sources */,
+				B997DE5B1E9BC427004381F4 /* JMAlertController.m in Sources */,
 				B932005D186730F9003F27B4 /* MBProgressHUD.m in Sources */,
 				B9E1E00B1D32CF79004C9F15 /* diffreg.c in Sources */,
 				B933AB1318BBBA29006E42B9 /* RegexHighlightView.m in Sources */,

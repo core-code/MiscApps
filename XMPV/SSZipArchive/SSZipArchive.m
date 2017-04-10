@@ -165,7 +165,7 @@
 			[fileManager createDirectoryAtPath:[fullPath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:directoryAttr error:&err];
 		}
         if (nil != err) {
-            asl_NSLog_debug(@"[SSZipArchive] Error: %@", err.localizedDescription);
+            cc_log_debug(@"[SSZipArchive] Error: %@", err.localizedDescription);
         }
 
         if(!fileIsSymbolicLink)
@@ -201,7 +201,7 @@
                     if (attr) {
                         if ([fileManager setAttributes:attr ofItemAtPath:fullPath error:nil] == NO) {
                             // Can't set attributes 
-                            asl_NSLog_debug(@"[SSZipArchive] Failed to set attributes");
+                            cc_log_debug(@"[SSZipArchive] Failed to set attributes");
                         }
                     }
                 }
@@ -231,7 +231,7 @@
             
             if(symlinkError != nil)
             {
-                asl_NSLog_debug(@"Failed to create symbolic link at \"%@\" to \"%@\". Error: %@", symlinkURL.absoluteString, destinationURL.absoluteString, symlinkError.localizedDescription);
+                cc_log_debug(@"Failed to create symbolic link at \"%@\" to \"%@\". Error: %@", symlinkURL.absoluteString, destinationURL.absoluteString, symlinkError.localizedDescription);
             }
         }
 		
@@ -256,10 +256,10 @@
     NSError * err = nil;
     for (NSDictionary * d in directoriesModificationDates) {
         if (![[NSFileManager defaultManager] setAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[d objectForKey:@"modDate"], NSFileModificationDate, nil] ofItemAtPath:[d objectForKey:@"path"] error:&err]) {
-            asl_NSLog_debug(@"[SSZipArchive] Set attributes failed for directory: %@.", [d objectForKey:@"path"]);
+            cc_log_debug(@"[SSZipArchive] Set attributes failed for directory: %@.", [d objectForKey:@"path"]);
         }
         if (err) {
-            asl_NSLog_debug(@"[SSZipArchive] Error setting directory file modification date attribute: %@",err.localizedDescription);
+            cc_log_debug(@"[SSZipArchive] Error setting directory file modification date attribute: %@",err.localizedDescription);
         }
     }
 	
