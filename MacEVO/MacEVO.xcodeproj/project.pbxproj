@@ -243,7 +243,6 @@
 				B9B6BD2B1AC9B0C100D13BBC /* Sources */,
 				B9B6BD2C1AC9B0C100D13BBC /* Frameworks */,
 				B9B6BD2D1AC9B0C100D13BBC /* Resources */,
-				B98DBBF71B16329000772BCA /* ShellScript */,
 			);
 			buildRules = (
 				B99FD3731AE84B0B0026CB42 /* PBXBuildRule */,
@@ -310,22 +309,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B98DBBF71B16329000772BCA /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" MacEVO/MacEVO-Info.plist)\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" MacEVO/MacEVO-Info.plist";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9B6BD2B1AC9B0C100D13BBC /* Sources */ = {

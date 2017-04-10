@@ -379,7 +379,6 @@
 				B93844901699F79C001773E8 /* Sources */,
 				B93844911699F79C001773E8 /* Frameworks */,
 				B93844921699F79C001773E8 /* Resources */,
-				B982DBA616AD48AB00C2CC98 /* ShellScript */,
 				B99AAB97169B7C3700290EC5 /* Copy Files */,
 			);
 			buildRules = (
@@ -471,22 +470,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B982DBA616AD48AB00C2CC98 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" MailboxAlert/MailboxAlert-Info.plist)\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" MailboxAlert/MailboxAlert-Info.plist";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B93844901699F79C001773E8 /* Sources */ = {
