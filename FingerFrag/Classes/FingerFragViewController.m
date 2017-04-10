@@ -70,15 +70,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		introController.delegate = self;
 		introController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
 		introController.modalPresentationStyle = UIModalPresentationFormSheet;
-		[self presentModalViewController:introController animated:YES];
-	}
+        [self presentViewController:introController animated:YES completion:^{}];
+    }
 }
 
 - (void)imageViewDone:(id)sender
 {
-	[self dismissModalViewControllerAnimated:NO];
+	[self dismissViewControllerAnimated:NO  completion:^{}];
 
-	[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"IntroShown"];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"IntroShown"];
 	[[NSUserDefaults standardUserDefaults] synchronize];
 
 	[self goPlay];

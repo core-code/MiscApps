@@ -69,7 +69,7 @@ CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 	hsController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
 	hsController.modalPresentationStyle = UIModalPresentationFormSheet;
 	hsController.text = [NSString stringWithFormat:@"Congratulations u managed %i enemies in the %i seconds!", frags, ffViewController.time.text.intValue];
-	[ffViewController presentModalViewController:hsController animated:YES];
+    [ffViewController presentViewController:hsController animated:YES completion:^{}];
 }													
 
 - (IBAction)mainmenuAction:(id)sender
@@ -192,8 +192,8 @@ CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 			hsController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
 			hsController.modalPresentationStyle = UIModalPresentationFormSheet;
 			hsController.text = [NSString stringWithFormat:@"Congratulations u took %.2f sec for all %i enemies!", [[NSDate date] timeIntervalSinceDate:startDate], ffViewController.count.text.intValue];
-			[ffViewController presentModalViewController:hsController animated:YES];
-		}
+            [ffViewController presentViewController:hsController animated:YES completion:^{}];
+        }
 		else
 			[self performSelector:@selector(popupEnemy) withObject:nil afterDelay:ffViewController.delay.text.floatValue];
 	}

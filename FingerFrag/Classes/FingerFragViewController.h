@@ -30,6 +30,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @property (strong) IBOutlet UITextField *delay;
 @property (strong) IBOutlet UITextField *enemyx;
 @property (strong) IBOutlet UITextField *enemyy;
-@property (nonatomic) int gameMode;
+@property (nonatomic) NSInteger gameMode;
 
 @end

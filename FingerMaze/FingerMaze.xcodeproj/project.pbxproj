@@ -9,16 +9,6 @@
 /* Begin PBXBuildFile section */
 		B91374DB128495320057FD7F /* ente.png in Resources */ = {isa = PBXBuildFile; fileRef = B91374DA128495320057FD7F /* ente.png */; };
 		B91375EB1284A6B10057FD7F /* JoystickView.m in Sources */ = {isa = PBXBuildFile; fileRef = B91375EA1284A6B10057FD7F /* JoystickView.m */; };
-		B913E31B1E1CFBBB00196733 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3101E1CFBBB00196733 /* AppKit+CoreCode.m */; };
-		B913E31C1E1CFBBB00196733 /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3121E1CFBBB00196733 /* AppKit+Properties.m */; };
-		B913E31D1E1CFBBB00196733 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3141E1CFBBB00196733 /* CoreLib.m */; };
-		B913E31E1E1CFBBB00196733 /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3171E1CFBBB00196733 /* Foundation+CoreCode.m */; };
-		B913E31F1E1CFBBB00196733 /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E31A1E1CFBBB00196733 /* Foundation+Properties.m */; };
-		B913E32B1E1CFBC800196733 /* JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3221E1CFBC800196733 /* JMActionSheet.m */; };
-		B913E32C1E1CFBC800196733 /* JMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3241E1CFBC800196733 /* JMAlertView.m */; };
-		B913E32D1E1CFBC800196733 /* JMChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3261E1CFBC800196733 /* JMChoiceController.m */; };
-		B913E32E1E1CFBC800196733 /* JMSlideshowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3281E1CFBC800196733 /* JMSlideshowController.m */; };
-		B913E3321E1CFD7C00196733 /* JMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B913E3311E1CFD7C00196733 /* JMWebViewController.m */; };
 		B922C7F71E1D02330087872C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B922C7F61E1D02330087872C /* Images.xcassets */; };
 		B92EB43B15865FFC00711F00 /* Braid1.txt in Resources */ = {isa = PBXBuildFile; fileRef = B92EB39B15865FFC00711F00 /* Braid1.txt */; };
 		B92EB43C15865FFC00711F00 /* Braid2.txt in Resources */ = {isa = PBXBuildFile; fileRef = B92EB39C15865FFC00711F00 /* Braid2.txt */; };
@@ -214,6 +204,16 @@
 		B960F8D71163E65C00868971 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B960F8D61163E65C00868971 /* QuartzCore.framework */; };
 		B960F9041163EA3700868971 /* LevelFinished.png in Resources */ = {isa = PBXBuildFile; fileRef = B960F9031163EA3700868971 /* LevelFinished.png */; };
 		B9837C5E116E4A860000A134 /* IntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9837C5D116E4A860000A134 /* IntroView.xib */; };
+		B9837F291E9C0C7E002E4E9B /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F131E9C0C7E002E4E9B /* AppKit+CoreCode.m */; };
+		B9837F2A1E9C0C7E002E4E9B /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F151E9C0C7E002E4E9B /* AppKit+Properties.m */; };
+		B9837F2B1E9C0C7E002E4E9B /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F171E9C0C7E002E4E9B /* CoreLib.m */; };
+		B9837F2C1E9C0C7E002E4E9B /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F1A1E9C0C7E002E4E9B /* Foundation+CoreCode.m */; };
+		B9837F2D1E9C0C7E002E4E9B /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F1D1E9C0C7E002E4E9B /* Foundation+Properties.m */; };
+		B9837F2E1E9C0C7E002E4E9B /* JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F201E9C0C7E002E4E9B /* JMActionSheet.m */; };
+		B9837F2F1E9C0C7E002E4E9B /* JMAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F221E9C0C7E002E4E9B /* JMAlertController.m */; };
+		B9837F301E9C0C7E002E4E9B /* JMChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F241E9C0C7E002E4E9B /* JMChoiceController.m */; };
+		B9837F311E9C0C7E002E4E9B /* JMSlideshowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F261E9C0C7E002E4E9B /* JMSlideshowController.m */; };
+		B9837F321E9C0C7E002E4E9B /* JMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F281E9C0C7E002E4E9B /* JMWebViewController.m */; };
 		B984E5751162861E00DA0860 /* Maze.m in Sources */ = {isa = PBXBuildFile; fileRef = B984E5741162861E00DA0860 /* Maze.m */; };
 		B98B37AD1162522600DBCF01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		B98B37AE1162522600DBCF01 /* FingerMazeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* FingerMazeAppDelegate.m */; };
@@ -258,28 +258,6 @@
 		B91374DA128495320057FD7F /* ente.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ente.png; path = Resources/ente.png; sourceTree = "<group>"; };
 		B91375E91284A6B10057FD7F /* JoystickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoystickView.h; sourceTree = "<group>"; };
 		B91375EA1284A6B10057FD7F /* JoystickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoystickView.m; sourceTree = "<group>"; };
-		B913E30F1E1CFBBB00196733 /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
-		B913E3101E1CFBBB00196733 /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
-		B913E3111E1CFBBB00196733 /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
-		B913E3121E1CFBBB00196733 /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
-		B913E3131E1CFBBB00196733 /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
-		B913E3141E1CFBBB00196733 /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
-		B913E3151E1CFBBB00196733 /* CoreLib_Availability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib_Availability.h; sourceTree = "<group>"; };
-		B913E3161E1CFBBB00196733 /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
-		B913E3171E1CFBBB00196733 /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
-		B913E3181E1CFBBB00196733 /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
-		B913E3191E1CFBBB00196733 /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
-		B913E31A1E1CFBBB00196733 /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
-		B913E3211E1CFBC800196733 /* JMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMActionSheet.h; sourceTree = "<group>"; };
-		B913E3221E1CFBC800196733 /* JMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMActionSheet.m; sourceTree = "<group>"; };
-		B913E3231E1CFBC800196733 /* JMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAlertView.h; sourceTree = "<group>"; };
-		B913E3241E1CFBC800196733 /* JMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAlertView.m; sourceTree = "<group>"; };
-		B913E3251E1CFBC800196733 /* JMChoiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMChoiceController.h; sourceTree = "<group>"; };
-		B913E3261E1CFBC800196733 /* JMChoiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMChoiceController.m; sourceTree = "<group>"; };
-		B913E3271E1CFBC800196733 /* JMSlideshowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSlideshowController.h; sourceTree = "<group>"; };
-		B913E3281E1CFBC800196733 /* JMSlideshowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSlideshowController.m; sourceTree = "<group>"; };
-		B913E3301E1CFD7C00196733 /* JMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMWebViewController.h; path = FingerMaze/JMWebViewController.h; sourceTree = SOURCE_ROOT; };
-		B913E3311E1CFD7C00196733 /* JMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMWebViewController.m; path = FingerMaze/JMWebViewController.m; sourceTree = SOURCE_ROOT; };
 		B922C7F61E1D02330087872C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FingerMaze/Images.xcassets; sourceTree = "<group>"; };
 		B92EB39B15865FFC00711F00 /* Braid1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Braid1.txt; sourceTree = "<group>"; };
 		B92EB39C15865FFC00711F00 /* Braid2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Braid2.txt; sourceTree = "<group>"; };
@@ -476,6 +454,28 @@
 		B960F8D61163E65C00868971 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B960F9031163EA3700868971 /* LevelFinished.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LevelFinished.png; path = Resources/LevelFinished.png; sourceTree = "<group>"; };
 		B9837C5D116E4A860000A134 /* IntroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = IntroView.xib; path = Resources/IntroView.xib; sourceTree = "<group>"; };
+		B9837F121E9C0C7E002E4E9B /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
+		B9837F131E9C0C7E002E4E9B /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
+		B9837F141E9C0C7E002E4E9B /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
+		B9837F151E9C0C7E002E4E9B /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
+		B9837F161E9C0C7E002E4E9B /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
+		B9837F171E9C0C7E002E4E9B /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
+		B9837F181E9C0C7E002E4E9B /* CoreLib_Availability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib_Availability.h; sourceTree = "<group>"; };
+		B9837F191E9C0C7E002E4E9B /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
+		B9837F1A1E9C0C7E002E4E9B /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
+		B9837F1B1E9C0C7E002E4E9B /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
+		B9837F1C1E9C0C7E002E4E9B /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
+		B9837F1D1E9C0C7E002E4E9B /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
+		B9837F1F1E9C0C7E002E4E9B /* JMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMActionSheet.h; sourceTree = "<group>"; };
+		B9837F201E9C0C7E002E4E9B /* JMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMActionSheet.m; sourceTree = "<group>"; };
+		B9837F211E9C0C7E002E4E9B /* JMAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAlertController.h; sourceTree = "<group>"; };
+		B9837F221E9C0C7E002E4E9B /* JMAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAlertController.m; sourceTree = "<group>"; };
+		B9837F231E9C0C7E002E4E9B /* JMChoiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMChoiceController.h; sourceTree = "<group>"; };
+		B9837F241E9C0C7E002E4E9B /* JMChoiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMChoiceController.m; sourceTree = "<group>"; };
+		B9837F251E9C0C7E002E4E9B /* JMSlideshowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSlideshowController.h; sourceTree = "<group>"; };
+		B9837F261E9C0C7E002E4E9B /* JMSlideshowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSlideshowController.m; sourceTree = "<group>"; };
+		B9837F271E9C0C7E002E4E9B /* JMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMWebViewController.h; sourceTree = "<group>"; };
+		B9837F281E9C0C7E002E4E9B /* JMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMWebViewController.m; sourceTree = "<group>"; };
 		B984E5731162861E00DA0860 /* Maze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maze.h; sourceTree = "<group>"; };
 		B984E5741162861E00DA0860 /* Maze.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Maze.m; sourceTree = "<group>"; };
 		B98B37B71162522600DBCF01 /* FingerMaze HD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FingerMaze HD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -568,7 +568,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				B913E30E1E1CFBBB00196733 /* CoreLib */,
 				B993223611ADD30300D5380F /* Foreign Code */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -604,41 +603,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B913E30E1E1CFBBB00196733 /* CoreLib */ = {
+		B9837F111E9C0C7E002E4E9B /* CoreLib */ = {
 			isa = PBXGroup;
 			children = (
-				B913E30F1E1CFBBB00196733 /* AppKit+CoreCode.h */,
-				B913E3101E1CFBBB00196733 /* AppKit+CoreCode.m */,
-				B913E3111E1CFBBB00196733 /* AppKit+Properties.h */,
-				B913E3121E1CFBBB00196733 /* AppKit+Properties.m */,
-				B913E3131E1CFBBB00196733 /* CoreLib.h */,
-				B913E3141E1CFBBB00196733 /* CoreLib.m */,
-				B913E3151E1CFBBB00196733 /* CoreLib_Availability.h */,
-				B913E3161E1CFBBB00196733 /* Foundation+CoreCode.h */,
-				B913E3171E1CFBBB00196733 /* Foundation+CoreCode.m */,
-				B913E3181E1CFBBB00196733 /* Foundation+Indexing.h */,
-				B913E3191E1CFBBB00196733 /* Foundation+Properties.h */,
-				B913E31A1E1CFBBB00196733 /* Foundation+Properties.m */,
-				B913E3201E1CFBC800196733 /* iOS */,
+				B9837F121E9C0C7E002E4E9B /* AppKit+CoreCode.h */,
+				B9837F131E9C0C7E002E4E9B /* AppKit+CoreCode.m */,
+				B9837F141E9C0C7E002E4E9B /* AppKit+Properties.h */,
+				B9837F151E9C0C7E002E4E9B /* AppKit+Properties.m */,
+				B9837F161E9C0C7E002E4E9B /* CoreLib.h */,
+				B9837F171E9C0C7E002E4E9B /* CoreLib.m */,
+				B9837F181E9C0C7E002E4E9B /* CoreLib_Availability.h */,
+				B9837F191E9C0C7E002E4E9B /* Foundation+CoreCode.h */,
+				B9837F1A1E9C0C7E002E4E9B /* Foundation+CoreCode.m */,
+				B9837F1B1E9C0C7E002E4E9B /* Foundation+Indexing.h */,
+				B9837F1C1E9C0C7E002E4E9B /* Foundation+Properties.h */,
+				B9837F1D1E9C0C7E002E4E9B /* Foundation+Properties.m */,
 			);
 			name = CoreLib;
 			path = ../../CoreLib/CoreLib;
 			sourceTree = "<group>";
 		};
-		B913E3201E1CFBC800196733 /* iOS */ = {
+		B9837F1E1E9C0C7E002E4E9B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B913E3211E1CFBC800196733 /* JMActionSheet.h */,
-				B913E3221E1CFBC800196733 /* JMActionSheet.m */,
-				B913E3231E1CFBC800196733 /* JMAlertView.h */,
-				B913E3241E1CFBC800196733 /* JMAlertView.m */,
-				B913E3251E1CFBC800196733 /* JMChoiceController.h */,
-				B913E3261E1CFBC800196733 /* JMChoiceController.m */,
-				B913E3271E1CFBC800196733 /* JMSlideshowController.h */,
-				B913E3281E1CFBC800196733 /* JMSlideshowController.m */,
+				B9837F1F1E9C0C7E002E4E9B /* JMActionSheet.h */,
+				B9837F201E9C0C7E002E4E9B /* JMActionSheet.m */,
+				B9837F211E9C0C7E002E4E9B /* JMAlertController.h */,
+				B9837F221E9C0C7E002E4E9B /* JMAlertController.m */,
+				B9837F231E9C0C7E002E4E9B /* JMChoiceController.h */,
+				B9837F241E9C0C7E002E4E9B /* JMChoiceController.m */,
+				B9837F251E9C0C7E002E4E9B /* JMSlideshowController.h */,
+				B9837F261E9C0C7E002E4E9B /* JMSlideshowController.m */,
+				B9837F271E9C0C7E002E4E9B /* JMWebViewController.h */,
+				B9837F281E9C0C7E002E4E9B /* JMWebViewController.m */,
 			);
 			name = iOS;
-			path = ../iOS;
+			path = ../../CoreLib/iOS;
 			sourceTree = "<group>";
 		};
 		B98B37B91162522600DBCF01 /* Resources */ = {
@@ -673,8 +673,8 @@
 		B993223611ADD30300D5380F /* Foreign Code */ = {
 			isa = PBXGroup;
 			children = (
-				B913E3301E1CFD7C00196733 /* JMWebViewController.h */,
-				B913E3311E1CFD7C00196733 /* JMWebViewController.m */,
+				B9837F111E9C0C7E002E4E9B /* CoreLib */,
+				B9837F1E1E9C0C7E002E4E9B /* iOS */,
 				B9BF21851D119365003CFC2B /* GradientButton.h */,
 				B9BF21861D119365003CFC2B /* GradientButton.m */,
 				B993223711ADD30300D5380F /* maz.c */,
@@ -915,6 +915,7 @@
 				LastUpgradeCheck = 0820;
 				TargetAttributes = {
 					B98B37A81162522600DBCF01 = {
+						DevelopmentTeam = 9D78DG5ACV;
 					};
 				};
 			};
@@ -1157,30 +1158,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9837F2E1E9C0C7E002E4E9B /* JMActionSheet.m in Sources */,
 				B98B37AD1162522600DBCF01 /* main.m in Sources */,
 				B98B37AE1162522600DBCF01 /* FingerMazeAppDelegate.m in Sources */,
-				B913E31C1E1CFBBB00196733 /* AppKit+Properties.m in Sources */,
+				B9837F2D1E9C0C7E002E4E9B /* Foundation+Properties.m in Sources */,
+				B9837F321E9C0C7E002E4E9B /* JMWebViewController.m in Sources */,
 				B98B37D1116252D500DBCF01 /* MazeView.m in Sources */,
-				B913E3321E1CFD7C00196733 /* JMWebViewController.m in Sources */,
+				B9837F301E9C0C7E002E4E9B /* JMChoiceController.m in Sources */,
 				B984E5751162861E00DA0860 /* Maze.m in Sources */,
-				B913E31B1E1CFBBB00196733 /* AppKit+CoreCode.m in Sources */,
 				B9D585491164117C00577C1D /* FingerMazeViewController.m in Sources */,
 				B99404951168E42A00F4CBDE /* Preferences.m in Sources */,
-				B913E31F1E1CFBBB00196733 /* Foundation+Properties.m in Sources */,
+				B9837F2F1E9C0C7E002E4E9B /* JMAlertController.m in Sources */,
 				B993223B11ADD30300D5380F /* maz.c in Sources */,
-				B913E32D1E1CFBC800196733 /* JMChoiceController.m in Sources */,
+				B9837F291E9C0C7E002E4E9B /* AppKit+CoreCode.m in Sources */,
+				B9837F2B1E9C0C7E002E4E9B /* CoreLib.m in Sources */,
 				B9C860E111B19390003A4BC2 /* maze.m in Sources */,
-				B913E32B1E1CFBC800196733 /* JMActionSheet.m in Sources */,
-				B913E31E1E1CFBBB00196733 /* Foundation+CoreCode.m in Sources */,
-				B913E32C1E1CFBC800196733 /* JMAlertView.m in Sources */,
+				B9837F2C1E9C0C7E002E4E9B /* Foundation+CoreCode.m in Sources */,
 				B9C860E211B19390003A4BC2 /* MazeGen.m in Sources */,
 				B95F68191236DDA50011D574 /* MazeViewLayer.m in Sources */,
 				B9A29CE11280C5A600019B70 /* PathLayer.m in Sources */,
 				B9BF21871D119365003CFC2B /* GradientButton.m in Sources */,
 				B91375EB1284A6B10057FD7F /* JoystickView.m in Sources */,
-				B913E31D1E1CFBBB00196733 /* CoreLib.m in Sources */,
+				B9837F311E9C0C7E002E4E9B /* JMSlideshowController.m in Sources */,
 				B9F846D015890F87002017D4 /* PurchaseController.m in Sources */,
-				B913E32E1E1CFBC800196733 /* JMSlideshowController.m in Sources */,
+				B9837F2A1E9C0C7E002E4E9B /* AppKit+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

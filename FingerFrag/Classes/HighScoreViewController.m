@@ -17,14 +17,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (IBAction)mainmenuAction:(id)sender
 {
-	[_delegate dismissModalViewControllerAnimated:NO];
+	[_delegate dismissViewControllerAnimated:NO completion:^{}];
 	
 	[_delegate mainmenuAction:self];
 }
 
 - (IBAction)playagainAction:(id)sender
 {
-	[_delegate dismissModalViewControllerAnimated:NO];
+    [_delegate dismissViewControllerAnimated:NO completion:^{}];
 	
 	[_delegate goPlay];
 }

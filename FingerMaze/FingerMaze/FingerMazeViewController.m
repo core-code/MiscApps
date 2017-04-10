@@ -14,7 +14,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #import "JMWebViewController.h"
 #import "Maze.h"
 #import "Preferences.h"
-#import "JMAlertView.h"
+#import "JMAlertController.h"
 
 
 extern Maze *maze;
@@ -250,7 +250,7 @@ extern NSArray *levelsCounts;
 		vc.modalPresentationStyle = UIModalPresentationFormSheet; 
 		
 		vc.finishBlock = ^{
-			[self dismissModalViewControllerAnimated:NO];
+			[self dismissViewControllerAnimated:NO  completion:^{}];
 			
 			[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"IntroShown"];
 			[[NSUserDefaults standardUserDefaults] synchronize];
@@ -259,7 +259,7 @@ extern NSArray *levelsCounts;
 		};
 	
 		
-		[self presentModalViewController:vc animated:YES];
+		[self presentViewController:vc animated:YES  completion:^{}];
 		
 		
 		[vc.webView loadRequest:[NSURLRequest requestWithURL:[[NSBundle mainBundle] URLForResource:@"Help" withExtension:@"webarchive"]]];
@@ -448,20 +448,22 @@ extern NSArray *levelsCounts;
 	
     if (indexPath.row == 2)
     {
-		[self presentModalViewController:pc animated:YES];
+        [self presentViewController:pc animated:YES completion:^{}];
 		
 		[tableView deselectRowAtIndexPath:indexPath animated:NO];
     }
     else if (indexPath.row == 3)
     {
-		JMAlertView *a = [[JMAlertView alloc]
-						  initWithTitle:@"Warning"
-						  message:@"Do you really want to reset all your achievements (scores/medals)?"
-						  delegate:nil
-						  cancelButtonTitle:@"Cancel"
-						  otherButtonTitles:@"Reset", nil];
-        [a setOtherBlock:^(int choice){  [self resetAction:nil]; }];
-        [a show];
+		JMAlertController *a = [JMAlertController alertControllerWithTitle:@"Warning"
+                                                            viewController:self
+                                                                   message:@"Do you really want to reset all your achievements (scores/medals)?"
+                                                               cancelBlock:nil
+                                                         cancelButtonTitle:@"Cancel"
+                                                                otherBlock:^(int input) { [self resetAction:nil]; }
+                                                         otherButtonTitles:@[@"Reset"]];
+
+
+        [a showInView:self.view];
 		
     
 		[tableView deselectRowAtIndexPath:indexPath animated:NO];
@@ -475,12 +477,12 @@ extern NSArray *levelsCounts;
 		vc.modalPresentationStyle = UIModalPresentationFormSheet; 
 		
 		vc.finishBlock = ^{
-			[self dismissModalViewControllerAnimated:NO];
+			[self dismissViewControllerAnimated:NO completion:^{}];
 
 		};
 		
 		
-		[self presentModalViewController:vc animated:YES];
+		[self presentViewController:vc animated:YES completion:^{}];
 		
 		
 		[vc.webView loadRequest:[NSURLRequest requestWithURL:[[NSBundle mainBundle] URLForResource:@"Credits" withExtension:@"webarchive"]]];

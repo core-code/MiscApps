@@ -111,7 +111,7 @@
 
 - (IBAction)done:(id)sender
 {
-	[self dismissModalViewControllerAnimated:NO];
+	[self dismissViewControllerAnimated:NO  completion:^{}];
 	
 }
 
@@ -276,7 +276,7 @@
 	
 
 
-    asl_NSLog_debug(@"Invalid product ids: %@" , response.invalidProductIdentifiers);
+    cc_log_debug(@"Invalid product ids: %@" , response.invalidProductIdentifiers);
 
 
     // finally release the reqest we alloc/init’ed in requestProUpgradeProductData
