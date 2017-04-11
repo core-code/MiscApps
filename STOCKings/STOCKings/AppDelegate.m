@@ -96,7 +96,7 @@
 
 - (void)reload
 {
-	asl_NSLog_debug(@"reload");
+	cc_log_debug(@"reload");
 	for (NSMutableArray *array in @[self.dax, self.daxDates, self.values, self.dates, self.percents])
 		[array removeAllObjects];
 
@@ -130,7 +130,7 @@
 	NSString *lastDay = [lastDate descriptionWithCalendarFormat:@"%a" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"] locale:nil];
 
 	if (!lastDate || [now timeIntervalSinceDate:lastDate] > 3600)
-		asl_NSLog_debug(@"Info: %@ %@  %@", day, lastDay, _daxDates);
+		cc_log_debug(@"Info: %@ %@  %@", day, lastDay, _daxDates);
 
 	if (lastDate && ![day isEqualToString:lastDay])
 	{
@@ -196,7 +196,7 @@
 		}
 		else
 		{
-			asl_NSLog_debug(@"could not find splitter %@", splitter);
+			cc_log_debug(@"could not find splitter %@", splitter);
 		}
 	}
 
