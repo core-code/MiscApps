@@ -11,6 +11,7 @@
 		B904D89D1252B225005F0DF9 /* FingerFragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B904D89B1252B225005F0DF9 /* FingerFragViewController.m */; };
 		B904D8A11252B28D005F0DF9 /* FingerFragIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B904D8A01252B28D005F0DF9 /* FingerFragIcon.png */; };
 		B904D8A51252B2A2005F0DF9 /* FingerFragViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B904D8A41252B2A2005F0DF9 /* FingerFragViewController.xib */; };
+		B94AE8D01E9D2D0300032CE0 /* FingerFrag.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B94AE8CF1E9D2D0300032CE0 /* FingerFrag.xcconfig */; };
 		B951DCB2125671C9000288DE /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B951DCB1125671C9000288DE /* menuButton.png */; };
 		B951DCDB12567772000288DE /* scoreBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = B951DCDA12567772000288DE /* scoreBackground.png */; };
 		B960F8D71163E65C00868971 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B960F8D61163E65C00868971 /* QuartzCore.framework */; };
@@ -48,6 +49,7 @@
 		B904D8A01252B28D005F0DF9 /* FingerFragIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FingerFragIcon.png; path = Resources/FingerFragIcon.png; sourceTree = "<group>"; };
 		B904D8A31252B299005F0DF9 /* FingerFrag_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerFrag_Prefix.pch; sourceTree = "<group>"; };
 		B904D8A41252B2A2005F0DF9 /* FingerFragViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FingerFragViewController.xib; path = Resources/FingerFragViewController.xib; sourceTree = "<group>"; };
+		B94AE8CF1E9D2D0300032CE0 /* FingerFrag.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = FingerFrag.xcconfig; sourceTree = SOURCE_ROOT; };
 		B951DCB1125671C9000288DE /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuButton.png; path = Resources/menuButton.png; sourceTree = "<group>"; };
 		B951DCDA12567772000288DE /* scoreBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scoreBackground.png; path = Resources/scoreBackground.png; sourceTree = "<group>"; };
 		B960F8D61163E65C00868971 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -132,6 +134,7 @@
 			children = (
 				B904D8A31252B299005F0DF9 /* FingerFrag_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				B94AE8CF1E9D2D0300032CE0 /* FingerFrag.xcconfig */,
 			);
 			path = "Other Sources";
 			sourceTree = "<group>";
@@ -198,6 +201,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0830;
+				TargetAttributes = {
+					B98B37A81162522600DBCF01 = {
+						DevelopmentTeam = 9D78DG5ACV;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FingerFrag" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -226,6 +234,7 @@
 				B98B37BC1162522700DBCF01 /* MainWindow.xib in Resources */,
 				B9FD7A1D1164EF2F00504157 /* StringMainMenu.png in Resources */,
 				B9FD7B2C116537D900504157 /* bigButton.png in Resources */,
+				B94AE8D01E9D2D0300032CE0 /* FingerFrag.xcconfig in Resources */,
 				B9FD7B2D116537D900504157 /* bigButtonPressed.png in Resources */,
 				B9837C5E116E4A860000A134 /* IntroView.xib in Resources */,
 				B9837C60116E4A8F0000A134 /* Intro.png in Resources */,
@@ -260,6 +269,7 @@
 /* Begin XCBuildConfiguration section */
 		B98B37B51162522600DBCF01 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B94AE8CF1E9D2D0300032CE0 /* FingerFrag.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -280,6 +290,7 @@
 		};
 		B98B37B61162522600DBCF01 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B94AE8CF1E9D2D0300032CE0 /* FingerFrag.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;

@@ -15,6 +15,8 @@
 		B938450F169AF44C001773E8 /* imap.py in Resources */ = {isa = PBXBuildFile; fileRef = B938450E169AF44C001773E8 /* imap.py */; };
 		B94F94EB16AFE371008E9F71 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B94F94D816AFE371008E9F71 /* LICENSE */; };
 		B94F94EE16AFE371008E9F71 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F94DC16AFE371008E9F71 /* SSKeychain.m */; };
+		B96F909D1E9D34F500E69008 /* MailboxAlert.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B96F909C1E9D34F500E69008 /* MailboxAlert.xcconfig */; };
+		B96F909E1E9D34F500E69008 /* MailboxAlert.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B96F909C1E9D34F500E69008 /* MailboxAlert.xcconfig */; };
 		B971FDD41D311AE1004D8851 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDC91D311AE1004D8851 /* AppKit+CoreCode.m */; };
 		B971FDD51D311AE1004D8851 /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDCB1D311AE1004D8851 /* AppKit+Properties.m */; };
 		B971FDD61D311AE1004D8851 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDCD1D311AE1004D8851 /* CoreLib.m */; };
@@ -112,6 +114,7 @@
 		B94F94D816AFE371008E9F71 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B94F94DB16AFE371008E9F71 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
 		B94F94DC16AFE371008E9F71 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		B96F909C1E9D34F500E69008 /* MailboxAlert.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = MailboxAlert.xcconfig; sourceTree = SOURCE_ROOT; };
 		B971FDC81D311AE1004D8851 /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
 		B971FDC91D311AE1004D8851 /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
 		B971FDCA1D311AE1004D8851 /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
@@ -261,6 +264,7 @@
 		B938449F1699F79C001773E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B96F909C1E9D34F500E69008 /* MailboxAlert.xcconfig */,
 				B9C278DF16A761A000D355A1 /* ValueTransformer.h */,
 				B9C278E016A761A000D355A1 /* ValueTransformer.m */,
 				B93844A01699F79C001773E8 /* MailboxAlert-Info.plist */,
@@ -417,6 +421,16 @@
 			attributes = {
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "CoreCode Limited";
+				TargetAttributes = {
+					B93844931699F79C001773E8 = {
+						DevelopmentTeam = 9D78DG5ACV;
+						ProvisioningStyle = Automatic;
+					};
+					B99AAB5E169B784700290EC5 = {
+						DevelopmentTeam = 9D78DG5ACV;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = B938448E1699F79C001773E8 /* Build configuration list for PBXProject "MailboxAlert" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -455,6 +469,7 @@
 				B982DB9A16AD436900C2CC98 /* menuicon_error.png in Resources */,
 				B982DB9B16AD436900C2CC98 /* menuicon_ok.png in Resources */,
 				B982DB9F16AD43D400C2CC98 /* menuicon_error@2x.png in Resources */,
+				B96F909D1E9D34F500E69008 /* MailboxAlert.xcconfig in Resources */,
 				B982DBA016AD43D400C2CC98 /* menuicon_ok@2x.png in Resources */,
 				B982DC1516AEAE9600C2CC98 /* History.rtf in Resources */,
 				B94F94EB16AFE371008E9F71 /* LICENSE in Resources */,
@@ -465,6 +480,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96F909E1E9D34F500E69008 /* MailboxAlert.xcconfig in Resources */,
 				B90970A21B0A66230086CCA2 /* LaunchMainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,7 +587,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -585,6 +601,7 @@
 					"-Wno-readonly-setter-attrs",
 					"-Wno-unused-macros",
 					"-Wno-format-nonliteral",
+					"-Wno-double-promotion",
 				);
 			};
 			name = Debug;
@@ -616,7 +633,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				WARNING_CFLAGS = (
@@ -629,12 +646,14 @@
 					"-Wno-readonly-setter-attrs",
 					"-Wno-unused-macros",
 					"-Wno-format-nonliteral",
+					"-Wno-double-promotion",
 				);
 			};
 			name = Release;
 		};
 		B93844B31699F79C001773E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B96F909C1E9D34F500E69008 /* MailboxAlert.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MailboxAlert/MailboxAlert.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -644,12 +663,14 @@
 				INFOPLIST_FILE = "MailboxAlert/MailboxAlert-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		B93844B41699F79C001773E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B96F909C1E9D34F500E69008 /* MailboxAlert.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MailboxAlert/MailboxAlert.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -659,12 +680,14 @@
 				INFOPLIST_FILE = "MailboxAlert/MailboxAlert-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 		B99AAB83169B784700290EC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B96F909C1E9D34F500E69008 /* MailboxAlert.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ../CoreLib/LaunchHelper/LaunchHelper.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -672,6 +695,7 @@
 				INFOPLIST_FILE = "../CoreLib/LaunchHelper/LaunchHelper-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = MailboxAlertLaunchHelper;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -679,6 +703,7 @@
 		};
 		B99AAB84169B784700290EC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B96F909C1E9D34F500E69008 /* MailboxAlert.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ../CoreLib/LaunchHelper/LaunchHelper.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -686,6 +711,7 @@
 				INFOPLIST_FILE = "../CoreLib/LaunchHelper/LaunchHelper-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = MailboxAlertLaunchHelper;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};

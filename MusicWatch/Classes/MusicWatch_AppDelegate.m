@@ -377,7 +377,9 @@ NSImage *newIcon;
 				
 				if (matches)
 				{
-#error
+#warning error THIS IS BROKEN
+#warning error THIS IS BROKEN
+#warning error THIS IS BROKEN
 					if ([mb_artist[2] intValue] < 100)
 						NSLog(@"Warning: matching %@ to %@ with score %i", artist_name, mb_artist[0], [mb_artist[2] intValue]);
 					

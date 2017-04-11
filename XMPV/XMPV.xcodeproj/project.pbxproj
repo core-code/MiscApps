@@ -40,6 +40,7 @@
 		B95B1CA11918E4B000A9657D /* FXNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = B95B1C8D1918E4B000A9657D /* FXNotifications.m */; };
 		B9683AC316655AD300B0EBAE /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = B9683AC116655AD300B0EBAE /* help.png */; };
 		B9683AC416655AD300B0EBAE /* help@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9683AC216655AD300B0EBAE /* help@2x.png */; };
+		B97E79C51E9D362C006C337A /* XMPV.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B97E79C41E9D362C006C337A /* XMPV.xcconfig */; };
 		B997DE5B1E9BC427004381F4 /* JMAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B997DE5A1E9BC427004381F4 /* JMAlertController.m */; };
 		B9AC3FB316596A40000C89A2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AC3FB216596A40000C89A2 /* MessageUI.framework */; };
 		B9E1E0091D32CF79004C9F15 /* diff.c in Sources */ = {isa = PBXBuildFile; fileRef = B9E1E0031D32CF79004C9F15 /* diff.c */; };
@@ -131,6 +132,7 @@
 		B9683AC116655AD300B0EBAE /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		B9683AC216655AD300B0EBAE /* help@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help@2x.png"; sourceTree = "<group>"; };
 		B968A47418BBB91D00309F2F /* Chromatism.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Chromatism.xcodeproj; path = Chromatism/Chromatism/Chromatism.xcodeproj; sourceTree = "<group>"; };
+		B97E79C41E9D362C006C337A /* XMPV.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = XMPV.xcconfig; sourceTree = SOURCE_ROOT; };
 		B997DE591E9BC427004381F4 /* JMAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAlertController.h; sourceTree = "<group>"; };
 		B997DE5A1E9BC427004381F4 /* JMAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAlertController.m; sourceTree = "<group>"; };
 		B9AC3FB216596A40000C89A2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -228,6 +230,7 @@
 		B90386B5164AEF75006502A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B97E79C41E9D362C006C337A /* XMPV.xcconfig */,
 				B90386B6164AEF75006502A2 /* XMPV-Info.plist */,
 				B90386BC164AEF75006502A2 /* XMPV-Prefix.pch */,
 				B90386C6164AEF75006502A2 /* MainStoryboard_iPhone.storyboard */,
@@ -355,6 +358,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = CoreCode;
+				TargetAttributes = {
+					B90386A9164AEF75006502A2 = {
+						DevelopmentTeam = 9D78DG5ACV;
+					};
+				};
 			};
 			buildConfigurationList = B90386A4164AEF75006502A2 /* Build configuration list for PBXProject "XMPV" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -402,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97E79C51E9D362C006C337A /* XMPV.xcconfig in Resources */,
 				B90386C1164AEF75006502A2 /* Default.png in Resources */,
 				B90386C3164AEF75006502A2 /* Default@2x.png in Resources */,
 				B90386C5164AEF75006502A2 /* Default-568h@2x.png in Resources */,
@@ -553,6 +562,7 @@
 		};
 		B90386D5164AEF75006502A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B97E79C41E9D362C006C337A /* XMPV.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -568,6 +578,7 @@
 		};
 		B90386D6164AEF75006502A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B97E79C41E9D362C006C337A /* XMPV.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

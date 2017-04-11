@@ -11,7 +11,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 //
 
 #import "CreateViewController.h"
-#import "JMAlertView.h"
+#import "JMAlertController.h"
 #import "PurchaseController.h"
 #import "MBProgressHUD.h"
 
@@ -21,6 +21,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @property (strong, nonatomic) UIImage *image;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property (weak, nonatomic) IBOutlet UIButton *downloadButton;
 @property (weak, nonatomic) IBOutlet UIImageView *rightImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *leftImageView;
 
@@ -118,7 +119,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 {
 	MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 	hud.mode = MBProgressHUDModeIndeterminate;
-	hud.labelText = @"Downloading…";
+	hud.label.text = @"Downloading…";
 	hud.userInteractionEnabled = YES;
 
 
@@ -141,7 +142,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			[self refresh];
         }
 
-		[hud hide:YES];
+		[hud hideAnimated:YES];
 	});
 }
 
@@ -151,12 +152,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 {
 	if ([PurchaseController usedMaps] >= [PurchaseController allowedMaps])
 	{
-		JMAlertView *a = [[JMAlertView alloc]
-						  initWithTitle:@"Warning"
-						  message:@"You have used all of your allowed maps. Do you want to purchase the ability to create more maps?"
-						  delegate:nil
-						  cancelButtonTitle:@"Cancel"
-						  otherButtonTitles:@"Purchase…", nil];
+		JMAlertController *a = [JMAlertController alertControllerWithTitle:@"Warning"
+                                                            viewController:self
+                                                                   message:@"You have used all of your allowed maps. Do you want to purchase the ability to create more maps?"
+                                                               cancelBlock:^{}
+                                                         cancelButtonTitle:@"Cancel"
+                                                                otherBlock:^(int p){}
+                                                         otherButtonTitles:@[@"Purchase…"]];
         [a setOtherBlock:^(int index)
 		{
 			PurchaseController *pc = [[PurchaseController alloc] initWithNibName:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? @"PurchaseView_iPad" : @"PurchaseView_iPhone")
@@ -166,27 +168,28 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				pc.modalPresentationStyle = UIModalPresentationFormSheet;
 			[self presentViewController:pc animated:YES completion:NULL];
 		}];
-        [a show];		
+        [a showInView:self.saveButton];
 	}
 	else
 	{
-		JMAlertView *alert = [[JMAlertView alloc]
-									   initWithTitle:@"iOmniMap"
-									   message:@"Please name this OmniMap:\n\n\n\n"
-									   delegate:nil
+        JMAlertController *alert = [JMAlertController alertControllerWithTitle:@"iOmniMap"
+                                              viewController:self
+                                                     message:@"Please name this OmniMap:\n\n\n\n"
+                                                 cancelBlock:^{}
 									   cancelButtonTitle:@"Cancel"
-									   otherButtonTitles:@"Save", nil];
+                                                  otherBlock:^(int p){}
+                                           otherButtonTitles:@[@"Save"]];
 		
-		alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-		__weak JMAlertView *weakAlert = alert;
+        [alert addTextFieldWithConfigurationHandler:nil];
+		__weak JMAlertController *weakAlert = alert;
 
 		[alert setOtherBlock:^(int choice)
 		{
-			NSString *n = [weakAlert textFieldAtIndex:0].text;
+            NSString *n = [weakAlert textFields][0].text;
 
 			MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 			hud.mode = MBProgressHUDModeIndeterminate;
-			hud.labelText = @"Saving…";
+			hud.label.text = @"Saving…";
 			hud.userInteractionEnabled = YES;
 
 
@@ -226,10 +229,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 					[notificationCenter postNotificationName:@"pushMap" object:name];
 				});
 
-				[hud hide:YES];
+				[hud hideAnimated:YES];
 			});
 		}];
-		[alert show];
+        [alert showInView:self.saveButton];
 	}
 }
 
@@ -249,24 +252,25 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (IBAction)downloadPicture:(id)sender
 {
-    JMAlertView *alert = [[JMAlertView alloc]
-                                   initWithTitle:@"iOmniMap"
-                                   message:@"Please enter the URL of the picture to use:\n\n\n"
-                                   delegate:nil
-                                   cancelButtonTitle:@"Cancel"
-                                   otherButtonTitles:@"Download", nil];
+    JMAlertController *alert = [JMAlertController alertControllerWithTitle:@"iOmniMap"
+                                                      viewController:self
+                                                             message:@"Please enter the URL of the picture to use:\n\n\n"
+                                                         cancelBlock:^{}
+                                                   cancelButtonTitle:@"Cancel"
+                                                          otherBlock:^(int p){}
+                                                   otherButtonTitles:@[@"Download"]];
     
     
-	alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-	__weak JMAlertView *weakAlert = alert;
+    [alert addTextFieldWithConfigurationHandler:nil];
+	__weak JMAlertController *weakAlert = alert;
 
 	alert.otherBlock = ^(int choice)
 	{
-		NSString *url = [weakAlert textFieldAtIndex:0].text;
+        NSString *url = [weakAlert textFields][0].text;
 
 		[self startDownloadOfURL:url];
 	};
-    [alert show];
+    [alert showInView:self.downloadButton];
 }
 
 #pragma mark UIImagePickerController delegate methods

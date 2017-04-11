@@ -29,7 +29,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 	tmpPath = [makeTempFolder() stringByAppendingString:@"/"];
 	tmpURL = tmpPath.fileURL;
-	asl_NSLog_debug(@"%@", tmpPath);
+	cc_log_debug(@"%@", tmpPath);
 
 	
     [fileManager copyItemAtPath:@"/Library/Logs/DiagnosticReports/"
@@ -100,7 +100,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 	{
 		char *tool = "/usr/bin/tar";
-		char *args[] = {"cvf", [tmpURL add:@"system.log.tgz"].path.UTF8String, "/private/var/log/system.log", NULL};
+		char *args[] = {"cvf", (char *)[tmpURL add:@"system.log.tgz"].path.UTF8String, "/private/var/log/system.log", NULL};
 		FILE *pipe = NULL;
 
 		status = AuthorizationExecuteWithPrivileges(authorizationRef, tool, kAuthorizationFlagDefaults, args, &pipe);
@@ -119,18 +119,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				if (bytesRead < 1)
 					break;
 				else
-					{
-    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
-    if (appendstring)
-        [result appendString:appendstring];
-}
-			}
-			[tmpURL add:@"tarlogresult"].contents = result.data;
+                {
+                    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
+                    if (appendstring)
+                        [result appendString:appendstring];
+                }
+            }
+            [tmpURL add:@"tarlogresult"].contents = result.data;
 		}
 	}
 	{
 		char *tool = "/usr/bin/tar";
-		char *args[] = {"cvf", [tmpURL add:@"com.apple.xpc.launchd.tgz"].path.UTF8String, "/var/db/com.apple.xpc.launchd", NULL};
+		char *args[] = {"cvf", (char *)[tmpURL add:@"com.apple.xpc.launchd.tgz"].path.UTF8String, "/var/db/com.apple.xpc.launchd", NULL};
 		FILE *pipe = NULL;
 
 		status = AuthorizationExecuteWithPrivileges(authorizationRef, tool, kAuthorizationFlagDefaults, args, &pipe);
@@ -149,16 +149,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				if (bytesRead < 1)
 					break;
 				else
-					{
-    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
-    if (appendstring)
-        [result appendString:appendstring];
-}
-			}
-			[tmpURL add:@"tarlaunchdresult"].contents = result.data;
-		}
-	}
-	{
+                {
+                    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
+                    if (appendstring)
+                        [result appendString:appendstring];
+                }
+            }
+            [tmpURL add:@"tarlaunchdresult"].contents = result.data;
+        }
+    }
+    {
 		char *tool = "/bin/launchctl";
 		char *args[] = {"print", "system/", NULL};
 		FILE *pipe = NULL;
@@ -179,13 +179,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				if (bytesRead < 1)
 					break;
 				else
-					{
-    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
-    if (appendstring)
-        [result appendString:appendstring];
-}
-			}
-			[tmpURL add:@"launchctlprintsystem"].contents = result.data;
+                {
+                    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
+                    if (appendstring)
+                        [result appendString:appendstring];
+                }
+            }
+            [tmpURL add:@"launchctlprintsystem"].contents = result.data;
 		}
 	}
 	{
@@ -208,15 +208,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				long bytesRead = read(fileno(pipe), myReadBuffer, sizeof (myReadBuffer));
 				if (bytesRead < 1)
 					break;
-				else
-					{
-    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
-    if (appendstring)
-        [result appendString:appendstring];
-}
-			}
-			[tmpURL add:@"launchctlprintdisabledsystem"].contents = result.data;
-		}
+                else
+                {
+                    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
+                    if (appendstring)
+                        [result appendString:appendstring];
+                }
+            }
+            [tmpURL add:@"launchctlprintdisabledsystem"].contents = result.data;
+        }
 	}
 	{
 		char *tool = "/bin/launchctl";
@@ -239,51 +239,51 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				if (bytesRead < 1)
 					break;
 				else
-					{
-    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
-    if (appendstring)
-        [result appendString:appendstring];
-}
-			}
-			[tmpURL add:@"launchctlprintcache"].contents = result.data;
-		}
-	}
+                {
+                    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
+                    if (appendstring)
+                        [result appendString:appendstring];
+                }
+            }
+            [tmpURL add:@"launchctlprintcache"].contents = result.data;
+        }
+    }
 	{
 		char *tool = "/bin/launchctl";
-		char *args[] = {"print", "system/com.corecode.UninstallPKGDeleteHelper", NULL};
-		FILE *pipe = NULL;
+        char *args[] = {"print", "system/com.corecode.UninstallPKGDeleteHelper", NULL};
+        FILE *pipe = NULL;
 
-		status = AuthorizationExecuteWithPrivileges(authorizationRef, tool, kAuthorizationFlagDefaults, args, &pipe);
-		if (status != errAuthorizationSuccess)
-		{
-			alert_apptitled(@"AuthorizationExecuteWithPrivileges failed", @"OK", nil, nil);
-			exit(1);
-		}
-		else
-		{
-			char myReadBuffer[128];
-			NSMutableString *result = makeMutableString();
-			for(;;)
-			{
-				long bytesRead = read(fileno(pipe), myReadBuffer, sizeof (myReadBuffer));
-				if (bytesRead < 1)
-					break;
-				else
-					{
-    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
-    if (appendstring)
-        [result appendString:appendstring];
-}
-			}
-			[tmpURL add:@"launchctlprintsystemuninstallpkg"].contents = result.data;
-		}
+        status = AuthorizationExecuteWithPrivileges(authorizationRef, tool, kAuthorizationFlagDefaults, args, &pipe);
+        if (status != errAuthorizationSuccess)
+        {
+            alert_apptitled(@"AuthorizationExecuteWithPrivileges failed", @"OK", nil, nil);
+            exit(1);
+        }
+        else
+        {
+            char myReadBuffer[128];
+            NSMutableString *result = makeMutableString();
+            for(;;)
+            {
+                long bytesRead = read(fileno(pipe), myReadBuffer, sizeof (myReadBuffer));
+                if (bytesRead < 1)
+                    break;
+                else
+                {
+                    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
+                    if (appendstring)
+                        [result appendString:appendstring];
+                }
+            }
+            [tmpURL add:@"launchctlprintsystemuninstallpkg"].contents = result.data;
+        }
 	}
 	{
 		NSString *idStr = 	[@[@"/usr/bin/id", @"-u"] runAsTask];
 		NSNumber *idNum = 	@(idStr.integerValue);
 
 		char *tool = "/bin/launchctl";
-		char *args[] = {"print", makeString(@"user/%li", (long)idNum.integerValue).UTF8String, NULL};
+		char *args[] = {"print", (char *)makeString(@"user/%li", (long)idNum.integerValue).UTF8String, NULL};
 		FILE *pipe = NULL;
 
 		status = AuthorizationExecuteWithPrivileges(authorizationRef, tool, kAuthorizationFlagDefaults, args, &pipe);
@@ -316,7 +316,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		NSNumber *idNum = 	@(idStr.integerValue);
 
 		char *tool = "/bin/launchctl";
-		char *args[] = {"print", makeString(@"gui/%li", (long)idNum.integerValue).UTF8String, NULL};
+		char *args[] = {"print", (char *)makeString(@"gui/%li", (long)idNum.integerValue).UTF8String, NULL};
 		FILE *pipe = NULL;
 
 		status = AuthorizationExecuteWithPrivileges(authorizationRef, tool, kAuthorizationFlagDefaults, args, &pipe);
@@ -335,14 +335,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				if (bytesRead < 1)
 					break;
 				else
-					{
-    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
-    if (appendstring)
-        [result appendString:appendstring];
-}
-			}
-			[tmpURL add:makeString(@"launchctlprintgui%li", (long)idNum.integerValue)].contents = result.data;
-		}
+                {
+                    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
+                    if (appendstring)
+                        [result appendString:appendstring];
+                }
+            }
+            [tmpURL add:makeString(@"launchctlprintgui%li", (long)idNum.integerValue)].contents = result.data;
+        }
 	}
 	// The only way to guarantee that a credential acquired when you
 	// request a right is not shared with other authorization instances is
@@ -427,12 +427,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			CFRelease((__bridge CFTypeRef)(array));
 		}
 		else
-			asl_NSLog(ASL_LEVEL_WARNING, @"Warning: _IsLoginItem : LSSharedFileListCopySnapshot delivered NULL list!");
+			cc_log_error(@"Warning: _IsLoginItem : LSSharedFileListCopySnapshot delivered NULL list!");
 
 		CFRelease(list);
 	}
 	else
-		asl_NSLog(ASL_LEVEL_WARNING, @"Warning: _IsLoginItem : LSSharedFileListCreate delivered NULL list!");
+		cc_log_error(@"Warning: _IsLoginItem : LSSharedFileListCreate delivered NULL list!");
 
 	return tmp;
 }

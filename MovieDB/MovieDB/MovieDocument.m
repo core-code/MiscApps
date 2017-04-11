@@ -65,7 +65,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		if ([movie valueForKey:@"imdb_id"])
 			[InfoHelper retrieveInfo:[movie valueForKey:@"imdb_id"] forMovie:movie];
 		else
-			asl_NSLog(ASL_LEVEL_ERR, @"Warning: couldn't refresh info for the following movie: %@", [movie valueForKey:@"imdb_title"]);
+			cc_log_error(@"Warning: couldn't refresh info for the following movie: %@", [movie valueForKey:@"imdb_title"]);
 
 	});
 
@@ -135,7 +135,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     JSContext *context = [[JSContext alloc] init];
 
-    context[@"consoleLog"] = ^(NSString *message) { asl_NSLog(ASL_LEVEL_INFO, @"Javascript log: %@", message); };
+    context[@"consoleLog"] = ^(NSString *message) { cc_log_error(@"Javascript log: %@", message); };
     context[@"getAllMovies"] = ^() { return [movieArrayController.arrangedObjects valueForKeyPath:@"dictionaryRepresentation"]; };
     context[@"exportFile"] = ^(NSString *contents) {
         NSSavePanel *panel = NSSavePanel.savePanel;
@@ -287,7 +287,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"ExportHTMLPlugin" withExtension:@"js"];
 
     JSContext *context = [[JSContext alloc] init];
-    context[@"consoleLog"] = ^(NSString *message) { asl_NSLog(ASL_LEVEL_INFO, @"Javascript log: %@", message); };
+    context[@"consoleLog"] = ^(NSString *message) { cc_log_error(@"Javascript log: %@", message); };
     context[@"getAllMovies"] = ^()
     {
         return [movieArrayController.arrangedObjects valueForKeyPath:@"dictionaryRepresentation"];

@@ -100,7 +100,7 @@ extern NSString *_origdir, *_projectdir;
 {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
-    hud.labelText = @"Extracting new projects…";
+    hud.label.text = @"Extracting new projects…";
     hud.userInteractionEnabled = YES;
     
     
@@ -117,7 +117,7 @@ extern NSString *_origdir, *_projectdir;
         }
     }
     
-    [hud hide:YES];
+    [hud hideAnimated:YES];
     });
 
 }
@@ -160,16 +160,16 @@ extern NSString *_origdir, *_projectdir;
 
 				
                 alert2.otherBlock = ^(int choice)
-				 {
+                {
                      NSString *project = [weakAlert2 textFields][0].text;
 
                      MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
                      hud.mode = MBProgressHUDModeIndeterminate;
-                     hud.labelText = @"Downloading…";
+                     hud.label.text = @"Downloading…";
                      hud.userInteractionEnabled = YES;
 
-                    dispatch_after_main(0.1, ^(void)
-                                        {
+                     dispatch_after_main(0.1, ^(void)
+                     {
 
 						 NSString *filename = makeString(@"%@/%@-%@.zip", cc.docDir, user, project).uniqueFile;
 						 NSData *data = makeString(@"https://github.com/%@/%@/archive/master.zip", user, project).download;
@@ -190,9 +190,9 @@ extern NSString *_origdir, *_projectdir;
 							});
 						 }
               
-                     [hud hide:YES];
-                                        });
-				 };
+                         [hud hideAnimated:YES];
+                     });
+                };
 				[alert2 showInView:self.view];
 			};
             [alert showInView:self.view];

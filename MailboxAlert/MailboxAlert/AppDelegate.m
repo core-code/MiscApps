@@ -169,7 +169,7 @@ CONST_KEY(WelcomeShown)
 {
 	if (!_window)
     {
-        [NSBundle loadNibNamed:@"MainWindow" owner:self];
+        [[NSBundle mainBundle] loadNibNamed:@"MainWindow" owner:self topLevelObjects:nil];
         [self toolbarClicked:@(0)];
         _toolbar.selectedItemIdentifier = (_toolbar.items[0]).itemIdentifier;
     }
@@ -430,7 +430,7 @@ CONST_KEY(WelcomeShown)
 		urlString = @"https://itunes.apple.com/us/app/mailboxalert/id595630519?mt=12";
 
     if (![[NSWorkspace sharedWorkspace] openURL:urlString.escaped.URL])
-        asl_NSLog(ASL_LEVEL_WARNING, @"Warning: [[NSWorkspace sharedWorkspace] openURL:url] failed");
+        cc_log_error(@"Warning: [[NSWorkspace sharedWorkspace] openURL:url] failed");
 }
 
 + (NSDictionary *)checkMailbox:(NSDictionary *)account

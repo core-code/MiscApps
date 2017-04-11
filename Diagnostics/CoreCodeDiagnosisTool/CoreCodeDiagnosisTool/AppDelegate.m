@@ -35,7 +35,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 {
 	tmpPath = [makeTempFolder() stringByAppendingString:@"/"];
 	tmpURL = tmpPath.fileURL;
-	asl_NSLog_debug(@"%@", tmpPath);
+	cc_log_debug(@"%@", tmpPath);
 
 
 	[fileManager copyItemAtPath:[@"/private/var/log/system.log" stringByExpandingTildeInPath]
@@ -156,12 +156,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			CFRelease((__bridge CFTypeRef)(array));
 		}
 		else
-			asl_NSLog(ASL_LEVEL_WARNING, @"Warning: _IsLoginItem : LSSharedFileListCopySnapshot delivered NULL list!");
+			cc_log_error(@"Warning: _IsLoginItem : LSSharedFileListCopySnapshot delivered NULL list!");
 
 		CFRelease(list);
 	}
 	else
-		asl_NSLog(ASL_LEVEL_WARNING, @"Warning: _IsLoginItem : LSSharedFileListCreate delivered NULL list!");
+		cc_log_error(@"Warning: _IsLoginItem : LSSharedFileListCreate delivered NULL list!");
 
 	return tmp;
 }

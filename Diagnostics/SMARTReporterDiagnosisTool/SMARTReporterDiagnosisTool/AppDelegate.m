@@ -81,15 +81,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	
 	[tmpURL add:@"diskspacecheck"].contents = [self localVolumes].data;
 
-#warning other loginitems?
+ // TODO: find out other loginitems?
 
-	int fd = open([tmpURL add:@"listdisk.log"].path.fileSystemRepresentation, O_WRONLY | O_CREAT, 0644);
-	asl_add_log_file(NULL, fd);
-	NSArray *disks = [JMHostInformation mountedHarddisks:YES];
-    asl_NSLog_debug(@"%@", [disks description]);
+    cc_log_enablecapturetofile([NSURL fileURLWithPath:[tmpURL add:@"listdisk.log"].path], 10000);
+
+    NSArray *disks = [JMHostInformation mountedHarddisks:YES];
+    cc_log_debug(@"%@", [disks description]);
 	disks = [JMHostInformation mountedHarddisks:NO];
-	asl_NSLog_debug(@"%@", [disks description]);
-#error this code doesn't work anymore cause asl_ is broken since 10.12
+	cc_log_debug(@"%@", [disks description]);
+
 
 
 	NSTask *task = [NSTask new];
@@ -169,12 +169,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			CFRelease((__bridge CFTypeRef)(array));
 		}
 		else
-			asl_NSLog(ASL_LEVEL_WARNING, @"Warning: _IsLoginItem : LSSharedFileListCopySnapshot delivered NULL list!");
+			cc_log_error(@"Warning: _IsLoginItem : LSSharedFileListCopySnapshot delivered NULL list!");
 
 		CFRelease(list);
 	}
 	else
-		asl_NSLog(ASL_LEVEL_WARNING, @"Warning: _IsLoginItem : LSSharedFileListCreate delivered NULL list!");
+		cc_log_error(@"Warning: _IsLoginItem : LSSharedFileListCreate delivered NULL list!");
 
 	return tmp;
 }

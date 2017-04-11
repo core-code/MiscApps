@@ -35,7 +35,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 {
 	tmpPath = [makeTempFolder() stringByAppendingString:@"/"];
 	tmpURL = tmpPath.fileURL;
-	asl_NSLog_debug(@"%@", tmpPath);
+	cc_log_debug(@"%@", tmpPath);
 
 //	[tmpURL add:@"system_profiler"].contents = [@[@"/usr/sbin/system_profiler", @"-xml", @"-detailLevel", @"full"] runAsTask].data;
 
@@ -70,7 +70,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		exit(1);
 	}
 
-	asl_NSLog_debug(@"gonna defaults");
+	cc_log_debug(@"gonna defaults");
 
 	{ // -In terminal, run this command: “sudo defaults write com.apple.revisiond log.level -int 7 && sudo killall revisiond”
 
@@ -103,7 +103,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			[tmpURL add:@"defaultsresult"].contents = result.data;
 		}
 	}
-	asl_NSLog_debug(@"gonna revisiond");
+	cc_log_debug(@"gonna revisiond");
 
 
 	{ // -In terminal, run this command: “sudo defaults write com.apple.revisiond log.level -int 7 && sudo killall revisiond”
@@ -111,7 +111,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 		char *tool = "/bin/kill";
-		char *args[] = {pid.UTF8String, NULL};
+		char *args[] = {(char *)pid.UTF8String, NULL};
 		FILE *pipe = NULL;
 
 		status = AuthorizationExecuteWithPrivileges(authorizationRef, tool, kAuthorizationFlagDefaults, args, &pipe);
@@ -141,19 +141,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	}
 
 
-	asl_NSLog_debug(@"gonna check broken versions");
+	cc_log_debug(@"gonna check broken versions");
 
 
 	[tmpURL add:@"broken_fileversions"].contents = [self broken].data;
 
 
-	asl_NSLog_debug(@"gonna sysdiagnose");
+	cc_log_debug(@"gonna sysdiagnose");
 
 	[fileManager createDirectoryAtURL:[tmpURL add:@"sysdiagnose"]
 		  withIntermediateDirectories:YES attributes:nil error:NULL];
 	{ // -In terminal, run this command “sudo sysdiagnose -f <directory to store results>”
 		char *tool = "/usr/bin/sysdiagnose";
-		char *args[] = {"-l", "-b", "-f", [tmpURL add:@"sysdiagnose"].path.UTF8String, NULL};
+		char *args[] = {"-l", "-b", "-f", (char *)[tmpURL add:@"sysdiagnose"].path.UTF8String, NULL};
 		FILE *pipe = NULL;
 
 		status = AuthorizationExecuteWithPrivileges(authorizationRef, tool, kAuthorizationFlagDefaults, args, &pipe);
@@ -168,7 +168,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			NSMutableString *result = makeMutableString();
 			for(;;)
 			{
-				asl_NSLog_debug(@"gonna read");
+				cc_log_debug(@"gonna read");
 
 				long bytesRead = read(fileno(pipe), myReadBuffer, sizeof (myReadBuffer));
 				if (bytesRead < 1)
@@ -176,7 +176,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				else
 				{
 					NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSASCIIStringEncoding];
-					asl_NSLog_debug(@"got %@", appendstring);
+					cc_log_debug(@"got %@", appendstring);
 
 					if (appendstring)
 					{
@@ -186,11 +186,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 						{
 							char myWriteBuffer[] = {13, EOF};
 
-							asl_NSLog_debug(@"gonna enter");
+							cc_log_debug(@"gonna enter");
 
 							write(fileno(pipe), &myWriteBuffer, 2); // fake enter press
 
-							asl_NSLog_debug(@"did enter");
+							cc_log_debug(@"did enter");
 						}
 					}
 				}
@@ -201,12 +201,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	}
 
 
-	asl_NSLog_debug(@"gonna xar");
+	cc_log_debug(@"gonna xar");
 
 	{ // xar
 
 		char *tool = "/usr/bin/xar";
-		char *args[] = {"-c", "-f", [tmpURL add:@"DocumentRevisions.xar"].path.UTF8String, "/.DocumentRevisions-V100/db-V1", "/.DocumentRevisions-V100/LibraryStatus", "/.DocumentRevisions-V100/metadata", NULL};
+		char *args[] = {"-c", "-f", (char *)[tmpURL add:@"DocumentRevisions.xar"].path.UTF8String, "/.DocumentRevisions-V100/db-V1", "/.DocumentRevisions-V100/LibraryStatus", "/.DocumentRevisions-V100/metadata", NULL};
 		FILE *pipe = NULL;
 
 		status = AuthorizationExecuteWithPrivileges(authorizationRef, tool, kAuthorizationFlagDefaults, args, &pipe);
@@ -272,7 +272,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	}
 
 
-	asl_NSLog_debug(@"gonna defaults AGAIN");
+	cc_log_debug(@"gonna defaults AGAIN");
 
 	{ // -In terminal, run this command: “sudo defaults delete com.apple.revisiond log.level”
 

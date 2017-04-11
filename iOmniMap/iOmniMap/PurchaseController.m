@@ -138,7 +138,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				return;
 			}
 		}
-		asl_NSLog_debug(@"FATAL error");
+		cc_log(@"FATAL error");
 	}
 }
 
@@ -291,7 +291,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 	for (NSString *invalidProductId in response.invalidProductIdentifiers)
 	{
-		asl_NSLog_debug(@"Invalid product id: %@" , invalidProductId);
+		cc_log(@"Invalid product id: %@" , invalidProductId);
 	}
 }
 @end

@@ -196,7 +196,6 @@
 		B92EB50A15866AF300711F00 /* star_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = B92EB50915866AF300711F00 /* star_sprite.png */; };
 		B941AC2A158125EB005B526B /* Credits.webarchive in Resources */ = {isa = PBXBuildFile; fileRef = B941AC28158125EB005B526B /* Credits.webarchive */; };
 		B941AC2D1581262F005B526B /* Help.webarchive in Resources */ = {isa = PBXBuildFile; fileRef = B941AC2C1581262F005B526B /* Help.webarchive */; };
-		B95212641E1CFF44004CA57B /* FingerMaze.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B95212631E1CFF44004CA57B /* FingerMaze.xcconfig */; };
 		B95F667912367BE90011D574 /* red_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = B95F667812367BE90011D574 /* red_sprite.png */; };
 		B95F66D8123684BD0011D574 /* gold.png in Resources */ = {isa = PBXBuildFile; fileRef = B95F66D6123684BD0011D574 /* gold.png */; };
 		B95F66D9123684BD0011D574 /* silver.png in Resources */ = {isa = PBXBuildFile; fileRef = B95F66D7123684BD0011D574 /* silver.png */; };
@@ -912,7 +911,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				TargetAttributes = {
 					B98B37A81162522600DBCF01 = {
 						DevelopmentTeam = 9D78DG5ACV;
@@ -1066,7 +1065,6 @@
 				B92EB4A515865FFC00711F00 /* p_recdivision7.txt in Resources */,
 				B92EB4A615865FFC00711F00 /* p_recdivision8.txt in Resources */,
 				B92EB4A715865FFC00711F00 /* p_recdivision9.txt in Resources */,
-				B95212641E1CFF44004CA57B /* FingerMaze.xcconfig in Resources */,
 				B92EB4A815865FFC00711F00 /* p_recdivision10.txt in Resources */,
 				B92EB4A915865FFC00711F00 /* p_sidewinder1.txt in Resources */,
 				B92EB4AA15865FFC00711F00 /* p_sidewinder2.txt in Resources */,
