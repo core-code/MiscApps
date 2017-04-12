@@ -263,7 +263,7 @@ static kern_return_t GetMACAddress(io_iterator_t intfIterator, UInt8 *MACAddress
 	return [NSString stringWithString:name];
 }
 
-+ (NSString *)bsdPathForVolume:(NSString *)volume	// TODO: merge with above
++ (NSString *)bsdPathForVolume:(NSString *)volume
 {
 	OSErr			result = noErr;
 	ItemCount			volumeIndex;

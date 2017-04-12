@@ -27,9 +27,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 @end
 
-#pragma warning check pdf compatibility
-#pragma warning crashes
-#pragma warning no rotate for input image
+// TODO: check pdf compatibility
+// TODO: crashes
+// TODO: no rotate for input image
 
 @implementation CreateViewController
 

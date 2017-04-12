@@ -31,7 +31,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)viewDidLoad
 {
-#warning replace link with built in resource or on-demand appstore resource
+	// TODO: replace link with built in resource or on-demand appstore resource
 	NSURL *url = @"https://www.corecode.io/ios/iomnimap/explanation_video_ipad.mp4".URL;
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
@@ -59,7 +59,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	
 	if ([sender tag] == 4)
 	{
-#warning replace link with built in resource or on-demand appstore resource
+		// TODO: replace link with built in resource or on-demand appstore resource
 		vc.url = @"https://www.corecode.io/ios/iomnimap/explanation_video_iphone.mp4".URL;		
 		vc.navigationTitle = @"Video";
 	}

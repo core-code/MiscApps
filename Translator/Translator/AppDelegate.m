@@ -12,7 +12,8 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
-#warning todo doesn't seem to translate "show toolbar"
+
+// TODO: doesn't seem to translate "show toolbar"
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	cc = [CoreLib new];

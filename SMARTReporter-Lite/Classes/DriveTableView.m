@@ -12,7 +12,7 @@
 #import "DriveTableView.h"
 
 
-@implementation DriveTableView // TODO: aborted test bugs?
+@implementation DriveTableView
 
 - (void)updateTestResult:(NSTimer *)theTimer
 {

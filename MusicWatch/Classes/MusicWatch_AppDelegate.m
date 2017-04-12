@@ -377,6 +377,7 @@ NSImage *newIcon;
 				
 				if (matches)
 				{
+				// TODO: fix this not working at all anymore
 #warning error THIS IS BROKEN
 #warning error THIS IS BROKEN
 #warning error THIS IS BROKEN
