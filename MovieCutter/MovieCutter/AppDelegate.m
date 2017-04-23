@@ -126,7 +126,7 @@ int durationSecs;
 							   @"-t",
 							   duration,
 							   panel.URL.path].runAsTask;
-				 LOG(res);
+				 cc_log(@"%@", res);
 
 
 				 dispatch_async_main(^
