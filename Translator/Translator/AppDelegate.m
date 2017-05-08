@@ -9,6 +9,7 @@
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+#import "CoreLib.h"
 #import "AppDelegate.h"
 
 @implementation AppDelegate
@@ -48,9 +49,10 @@
 				if (translat)
 					[file appendString:[line replaced:cont with:[translat replaced:@"APPLICATIONNAME" with:appname]]];
 				else
-					[file appendString:line];
-
-
+                {                    
+                    [file appendString:line];
+                    cc_log(@"TRANSLATION: %@ does not contain translation for STRING: %@", translationName, cont);
+                }
 			}
 			else
 				[file appendString:line];
@@ -59,7 +61,6 @@
 
 		}
 
-		LOG(file);
 
 		assert([fileManager createDirectoryAtURL:[[url URLByDeletingLastPathComponent] URLByAppendingPathComponent:translationName] withIntermediateDirectories:YES attributes:nil error:nil]);
 		
