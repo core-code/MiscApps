@@ -10,7 +10,7 @@
 		B90EFDCF188D5F2A00210A03 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90EFDCE188D5F2A00210A03 /* Cocoa.framework */; };
 		B90EFDE2188D5F2A00210A03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B90EFDE1188D5F2A00210A03 /* AppDelegate.m */; };
 		B90EFDE7188D5F2A00210A03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90EFDE6188D5F2A00210A03 /* Images.xcassets */; };
-		B90EFE73188D5FE800210A03 /* MainMenuTranslations.plist in Resources */ = {isa = PBXBuildFile; fileRef = B90EFE72188D5FE800210A03 /* MainMenuTranslations.plist */; };
+		B91990901EC1D33800FE678F /* MainMenuTranslations.plist in Resources */ = {isa = PBXBuildFile; fileRef = B919908F1EC1D33800FE678F /* MainMenuTranslations.plist */; };
 		B960E10219D2E19100FAAAE4 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B960E0C819D2E19100FAAAE4 /* AppKit+CoreCode.m */; };
 		B960E10319D2E19100FAAAE4 /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B960E0CA19D2E19100FAAAE4 /* AppKit+Properties.m */; };
 		B960E10419D2E19100FAAAE4 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B960E0CC19D2E19100FAAAE4 /* CoreLib.m */; };
@@ -30,7 +30,7 @@
 		B90EFDE0188D5F2A00210A03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B90EFDE1188D5F2A00210A03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B90EFDE6188D5F2A00210A03 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B90EFE72188D5FE800210A03 /* MainMenuTranslations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainMenuTranslations.plist; sourceTree = "<group>"; };
+		B919908F1EC1D33800FE678F /* MainMenuTranslations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MainMenuTranslations.plist; path = DataImport/MainMenuTranslations.plist; sourceTree = SOURCE_ROOT; };
 		B94017C5188DAA450069568F /* Read Me.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
 		B960E0C719D2E19100FAAAE4 /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
 		B960E0C819D2E19100FAAAE4 /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		B90EFDD5188D5F2A00210A03 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B90EFE72188D5FE800210A03 /* MainMenuTranslations.plist */,
+				B919908F1EC1D33800FE678F /* MainMenuTranslations.plist */,
 				B90EFDD6188D5F2A00210A03 /* Translator-Info.plist */,
 				B90EFDDC188D5F2A00210A03 /* Translator-Prefix.pch */,
 			);
@@ -200,8 +200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B90EFDE7188D5F2A00210A03 /* Images.xcassets in Resources */,
-				B90EFE73188D5FE800210A03 /* MainMenuTranslations.plist in Resources */,
 				B9677072188D8807001B9A59 /* MainMenu.xib in Resources */,
+				B91990901EC1D33800FE678F /* MainMenuTranslations.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,34 @@
+ar.lproj
+ca.lproj
+cs.lproj
+da.lproj
+de.lproj German.lproj
+el.lproj
+es-419.lproj es_419.lproj
+es-MX.lproj es_MX.lproj
+es.lproj Spanish.lproj
+fi.lproj
+fr.lproj French.lproj
+he.lproj
+hr.lproj
+hu.lproj
+id.lproj
+it.lproj Italian.lproj
+ja.lproj Japanese.lproj
+ko.lproj
+ms.lproj
+nb.lproj no.lproj
+nl.lproj Dutch.lproj
+pl.lproj
+pt-BR.lproj
+pt-PT.lproj pt_PT.lproj pt.lproj
+ro.lproj
+ru.lproj
+sk.lproj
+sv.lproj
+th.lproj
+tr.lproj
+uk.lproj
+vi.lproj
+zh-Hans.lproj zh_CN.lproj
+zh-Hant.lproj zh_HK.lproj zh_TW.lproj

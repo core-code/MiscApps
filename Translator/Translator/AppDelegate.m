@@ -9,18 +9,17 @@
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import "CoreLib.h"
 #import "AppDelegate.h"
 
 @implementation AppDelegate
 
-// TODO: doesn't seem to translate "show toolbar"
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	cc = [CoreLib new];
 
 	NSOpenPanel *panel = [NSOpenPanel openPanel];
 
+    panel.title = @"Please choose MainMenu.strings";
 	[panel runModal];
 
 	NSURL *url = [panel URL];
@@ -29,14 +28,15 @@
 	NSData *contents = path.contents;
 	NSString *n = contents.string;
 	NSString *sep = @".title\" = \"";
-	NSDictionary *trans = [NSDictionary dictionaryWithContentsOfURL:@"MainMenuTranslations.plist".resourceURL];
+	NSDictionary *allTranslations = [NSDictionary dictionaryWithContentsOfURL:@"MainMenuTranslations.plist".resourceURL];
 	NSString *appname;
 	alert_input(@"enter app name", @[@"ok"], &appname);
 
-	for (NSString *translationName in trans)
+	for (NSString *languageName in allTranslations)
 	{
 		NSMutableString *file = [NSMutableString new];
-		NSDictionary *translation = trans[translationName];
+
+		NSDictionary *translationsInLanguage = allTranslations[languageName];
 
 		for (NSString *line in n.lines)
 		{
@@ -45,14 +45,41 @@
 				NSArray <NSString *>* comp = [line split:sep];
 				NSString *cont = [comp[1] substringToIndex:comp[1].length - 2];
 
-				NSString *translat = translation[[cont replaced:appname with:@"APPLICATIONNAME"]];
-				if (translat)
-					[file appendString:[line replaced:cont with:[translat replaced:@"APPLICATIONNAME" with:appname]]];
-				else
-                {                    
-                    [file appendString:line];
-                    cc_log(@"TRANSLATION: %@ does not contain translation for STRING: %@", translationName, cont);
+
+				NSDictionary <NSString *, NSNumber *> *translationsForString  = translationsInLanguage[[cont replaced:appname with:@"<APPNAME>"]];
+
+				if (translationsForString && ![cont isEqualToString:appname])
+                {
+                    NSString *bestTranslation;
+                    int bestTranslationScore = 0;
+
+                    for (NSString *translation in translationsForString)
+                    {
+                        int score = [translationsForString[translation] intValue];
+                        if (score > bestTranslationScore)
+                        {
+                            bestTranslationScore = score;
+                            bestTranslation = translation;
+                        }
+                    }
+                    assert(bestTranslation);
+                    if (bestTranslationScore < 20)
+                        cc_log(@"Warning: [%@] translating string with low score: %@ =[%i]> %@", languageName, line, bestTranslationScore, bestTranslation);
+                    for (NSString *translation in translationsForString)
+                        if ([translationsForString[translation] intValue] == bestTranslationScore && ![translation isEqualToString:bestTranslation])
+                            cc_log(@"Warning: [%@] translating string although alternative translation with same score exists %@ =[%i]> %@ ? %@", languageName, line, bestTranslationScore, bestTranslation, translation);
+
+
+                    [file appendString:[line replaced:cont with:[bestTranslation replaced:@"<APPNAME>" with:appname]]];
+
                 }
+				else
+                {
+                    [file appendString:line];
+                    cc_log(@"Info: [%@] got no translation for line %@", languageName, line);
+                }
+
+
 			}
 			else
 				[file appendString:line];
@@ -62,11 +89,14 @@
 		}
 
 
-		assert([fileManager createDirectoryAtURL:[[url URLByDeletingLastPathComponent] URLByAppendingPathComponent:translationName] withIntermediateDirectories:YES attributes:nil error:nil]);
+		assert([fileManager createDirectoryAtURL:[[url URLByDeletingLastPathComponent] URLByAppendingPathComponent:languageName] withIntermediateDirectories:YES attributes:nil error:nil]);
 		
-		assert([file writeToURL:[[[url URLByDeletingLastPathComponent] URLByAppendingPathComponent:translationName] URLByAppendingPathComponent:@"MainMenu.strings"] atomically:NO encoding:NSUTF8StringEncoding error:nil]);
-
+		assert([file writeToURL:[[[url URLByDeletingLastPathComponent] URLByAppendingPathComponent:languageName] URLByAppendingPathComponent:@"MainMenu.strings"] atomically:NO encoding:NSUTF8StringEncoding error:nil]);
 	}
+
+
+    alert_apptitled(makeString(@"Success: all translation files have been written to: %@", url.URLByDeletingLastPathComponent.path), @"OK", nil, nil);
+    [NSApp terminate:@"bla"];
 }
 @end
 
