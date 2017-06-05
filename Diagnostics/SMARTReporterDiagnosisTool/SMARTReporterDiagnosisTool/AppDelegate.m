@@ -83,12 +83,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
  // TODO: find out other loginitems?
 
+
     cc_log_enablecapturetofile([NSURL fileURLWithPath:[tmpURL add:@"listdisk.log"].path], 10000);
 
     NSArray *disks = [JMHostInformation mountedHarddisks:YES];
-    cc_log_debug(@"%@", [disks description]);
+    cc_log(@"%@", [disks description]);
 	disks = [JMHostInformation mountedHarddisks:NO];
-	cc_log_debug(@"%@", [disks description]);
+	cc_log(@"%@", [disks description]);
 
 
 
