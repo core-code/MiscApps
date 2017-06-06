@@ -106,3 +106,6 @@ When launched, tiles all windows of the frontmost app to cover the screen equall
 
 SpotifyAdBlocker
 Mutes Spotify while its playing its 15 or 30 second advertisements present in the free version.
+
+VisionOCR
+Uses Apple's Vision framework to recognise text regions in an image - High Sierra only.
