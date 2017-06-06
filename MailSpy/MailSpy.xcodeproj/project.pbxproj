@@ -157,7 +157,7 @@
 					B903DFC71A18EDAB004F6D0B = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = 9D78DG5ACV;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						SystemCapabilities = {
 							com.apple.Maps.Mac = {
 								enabled = 1;

@@ -185,7 +185,7 @@ class DragDestinationView: NSView
                     var string: NSString? = nil
                     var lossyConversion: ObjCBool = false
 
-                    let _ = NSString.stringEncoding(for: data as! Data, encodingOptions: nil, convertedString: &string, usedLossyConversion: &lossyConversion)
+                    let _ = NSString.stringEncoding(for: data! as Data, encodingOptions: nil, convertedString: &string, usedLossyConversion: &lossyConversion)
                     
                     
                     
@@ -231,10 +231,10 @@ class DragDestinationView: NSView
         }
 
 
-		if	let files = sender.namesOfPromisedFilesDropped(atDestination: urlBase),
-			let file = files[0] as NSString?
-		{
-
+		if  let files = sender.namesOfPromisedFilesDropped(atDestination: urlBase)
+        {
+            let file = files[0] as NSString
+            
 			Swift.print(file);
 			if (!file.hasSuffix(".eml"))
 			{
