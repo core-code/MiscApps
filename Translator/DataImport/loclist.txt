@@ -20,8 +20,8 @@ ms.lproj
 nb.lproj no.lproj
 nl.lproj Dutch.lproj
 pl.lproj
-pt-BR.lproj
-pt-PT.lproj pt_PT.lproj pt.lproj
+pt-BR.lproj pt.lproj
+pt-PT.lproj pt_PT.lproj
 ro.lproj
 ru.lproj
 sk.lproj

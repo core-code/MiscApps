@@ -1,0 +1,103 @@
+\tDefault
+\tLeft to Right
+\tRight to Left
+About APPNAME
+Align Left
+Align Right
+APPNAME Help
+Baseline
+Bigger
+Bold
+Bring All to Front
+Capitalize
+Center
+Check Document Now
+Check Grammar With Spelling
+Check Spelling While Typing
+Clear Menu
+Close
+Copy
+Copy Ruler
+Copy Style
+Correct Spelling Automatically
+Customize Toolbar…
+Cut
+Data Detectors
+Delete
+Edit
+Enter Full Screen
+File
+Find
+Find and Replace…
+Find Next
+Find Previous
+Find…
+Font
+Format
+Help
+Hide APPNAME
+Hide Others
+Italic
+Jump to Selection
+Justify
+Kern
+Ligatures
+Loosen
+Lower
+Make Lower Case
+Make Upper Case
+Minimize
+New
+Open Recent
+Open…
+Page Setup…
+Paragraph
+Paste
+Paste and Match Style
+Paste Ruler
+Paste Style
+Preferences…
+Print…
+Quit APPNAME
+Raise
+Redo
+Revert to Saved
+Save As…
+Save…
+Select All
+Selection
+Services
+Show All
+Show Colors
+Show Fonts
+Show Ruler
+Show Sidebar
+Show Spelling and Grammar
+Show Substitutions
+Show Toolbar
+Smaller
+Smart Copy/Paste
+Smart Dashes
+Smart Links
+Smart Quotes
+Speech
+Spelling
+Spelling and Grammar
+Start Speaking
+Stop Speaking
+Subscript
+Substitutions
+Superscript
+Text
+Text Replacement
+Tighten
+Transformations
+Underline
+Undo
+Use All
+Use Default
+Use None
+Use Selection for Find
+Window
+Writing Direction
+Zoom
