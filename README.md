@@ -2,6 +2,9 @@ MiscApps: A collection of mac applications and tools for developers
 
 https://www.corecode.io/index_opensource.html
 	
+SandboxChecker
+Displays icon badges for all apps in your Application folder: GREEN: sandboxed YELLOW: not-sandboxed-but-signed RED: unsigned
+
 QTPresenter
 An application that tells "QuickTime Player" to present a movie on the second monitor while it displays playback progress on the first monitor.
 	
