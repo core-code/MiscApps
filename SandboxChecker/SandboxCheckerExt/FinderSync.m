@@ -22,7 +22,8 @@
 {
     self = [super init];
 
-    cc = [CoreLib new];
+    if (!cc)
+        cc = [CoreLib new];
 
     cc_log_debug(@"%s launched from %@ ; compiled at %s", __PRETTY_FUNCTION__, [[NSBundle mainBundle] bundlePath], __TIME__);
 
