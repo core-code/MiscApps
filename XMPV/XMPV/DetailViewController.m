@@ -18,7 +18,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #import <Chromatism/Chromatism.h>
 
 void pseudomain(int argc, char **argv, FILE *buffer);
-FILE* open_memstream(char** bufp, size_t* sizep);
+FILE* open_memstream_(char** bufp, size_t* sizep);
 
 
 @interface DetailViewController ()
@@ -322,7 +322,7 @@ FILE* open_memstream(char** bufp, size_t* sizep);
 	char *printfBuffer;
     size_t length;
 	
-	FILE *bufferBackedFile = open_memstream(&printfBuffer, &length);
+	FILE *bufferBackedFile = open_memstream_(&printfBuffer, &length);
 
 	
 	pseudomain(5, (char **)&params, bufferBackedFile);

@@ -90,7 +90,7 @@ NSString *cleanAlbumName(NSString *album);
 						
 			artist = track.artist;
 			album = track.album;
-			year = track.year;
+			year = (unsigned int)track.year;
 			
 			
 			album = cleanAlbumName(album);

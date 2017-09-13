@@ -17,7 +17,7 @@
 #ifndef HAVE_OPEN_MEMSTREAM
 
 /*
- * Implementation of the POSIX open_memstream() function, which Linux has
+ * Implementation of the POSIX open_memstream_() function, which Linux has
  * but BSD lacks.
  *
  * Summary:
@@ -223,7 +223,7 @@ static int close_memstream(void* cookie)
 /*
  * Prepare a memstream.
  */
-FILE* open_memstream(char** bufp, size_t* sizep)
+FILE* open_memstream_(char** bufp, size_t* sizep)
 {
     FILE* fp;
     MemStream* stream;

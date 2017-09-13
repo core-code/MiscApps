@@ -88,13 +88,13 @@ NSImage *newIcon;
 {
 	if (mainWindow.firstResponder == artistsTableView)
 	{
-		if (NSRunAlertPanel(@"MusicWatch", [NSString stringWithFormat:@"Do you really want to remove the artist \"%@\"?",
+        if (NSRunAlertPanel(@"MusicWatch", @"%@", [NSString stringWithFormat:@"Do you really want to remove the artist \"%@\"?",
 											[artistArrayController.selection valueForKey:@"name"]], @"Remove", @"Cancel", nil) == NSAlertDefaultReturn)
 				[artistArrayController remove:self];
 	}
 	else if ((mainWindow.firstResponder == releasesTableView) && (releaseArrayController.canRemove))
 	{
-		if (NSRunAlertPanel(@"MusicWatch", [NSString stringWithFormat:@"Do you really want to remove the album \"%@\"?",
+        if (NSRunAlertPanel(@"MusicWatch", @"%@", [NSString stringWithFormat:@"Do you really want to remove the album \"%@\"?",
 											[releaseArrayController.selection valueForKey:@"name"]], @"Remove", @"Cancel", nil) == NSAlertDefaultReturn)
 			[releaseArrayController remove:self];
 	}
@@ -281,20 +281,21 @@ NSImage *newIcon;
 	for (NSString *artist_name in artists_dict)
 	{
 		[artistArrayController fetchWithRequest:nil merge:NO error:&error];
-		BOOL			jump = NO;
+		BOOL			restart = YES;
 		NSManagedObject *artist = nil;
 		NSMutableSet	*albums = nil;
 		NSMutableSet	*preexisting_mb_albums = nil;
 		
 
 		// try to match to an existing artist
+        while (restart)
+        {
+        restart = NO;
 		for (NSManagedObject *a in artistArrayController.arrangedObjects)
 		{
 			if ([[a valueForKey:@"name"] isEqualToString:artist_name])
 			{
 				artist = a;
-
-				start:
 				
 				albums = [artist valueForKey:@"releases"];
 				
@@ -393,7 +394,7 @@ NSImage *newIcon;
 							[artistArrayController removeObject:artist];
 							artist = other_artist;
 
-							jump = YES;
+							restart = YES;
 						}
 					}		
 					
@@ -415,12 +416,7 @@ NSImage *newIcon;
 			}
 			
 		}
-		
-		if (jump)
-		{
-			jump = NO;
-			goto start;
-		}
+        }
 
 		for (NSManagedObject *old_mb_album in preexisting_mb_albums)	// mark those albums that we already have seen but removed for matching as seen again
 			for (NSManagedObject *new_album in [artist valueForKey:@"releases"])
@@ -503,7 +499,7 @@ NSImage *newIcon;
 			{
 				NSLog(@" Warning: proposing match with distance %f %@ != %@", dist, mb_release_title , [match valueForKey:@"name"]); // TODO: remove logs
 				
-				if (NSRunAlertPanel(@"MusicWatch", [NSString stringWithFormat:@"Please help MusicWatch match albumnames. Are these two (different) names for the same album?\n%@\n%@", mb_release_title, [match valueForKey:@"name"]], @"Same album", @"Not the same album", nil) == NSAlertDefaultReturn) 
+                if (NSRunAlertPanel(@"MusicWatch", @"%@", [NSString stringWithFormat:@"Please help MusicWatch match albumnames. Are these two (different) names for the same album?\n%@\n%@", mb_release_title, [match valueForKey:@"name"]], @"Same album", @"Not the same album", nil) == NSAlertDefaultReturn) 
 				{
 					[match setValue:mb_release[1] forKey:@"year"];
 					[match setValue:mb_release[0] forKey:@"id"];
@@ -672,7 +668,8 @@ NSImage *newIcon;
 														options:nil 
 														  error:&error]){
         [[NSApplication sharedApplication] presentError:error];
-        [persistentStoreCoordinator release], persistentStoreCoordinator = nil;
+        [persistentStoreCoordinator release];
+        persistentStoreCoordinator = nil;
         return nil;
     }    
 	
