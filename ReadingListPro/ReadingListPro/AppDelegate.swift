@@ -22,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource
 
     var results = [String: [[String : String]]]()
 
+
     func applicationDidFinishLaunching(_ aNotification: Notification)
     {
         let filePath = NSString(string: "~/Library/Safari/Bookmarks.plist").expandingTildeInPath
@@ -50,7 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource
 
                                 print(url!.host!)
 
-                                let newitem = ["url" : urlstrfixed, "title" : title]
+                                let newitem = ["url" : urlstrfixed, "title" : title.replacingOccurrences(of:"\n", with:" - ")]
 
                                 if var bookmarkOnThisHost = results[url!.host!]
                                 {
@@ -96,6 +97,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource
         }
     }
 
+
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any?
     {
         if tableView == self.sourceTable
@@ -128,7 +130,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource
                 return website["url"]
             }
         }
-
     }
 
 
@@ -152,7 +153,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource
                 let urlstr = website["url"]
                 let url = URL(string: urlstr!)
 
-                NSWorkspace.shared.open(url!)
+                NSWorkspace.shared().open(url!)
             }
         }
     }
@@ -163,53 +164,62 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource
        for key in self.results.keys
        {
             let value = self.results[key]
+
             for website in value!
             {
 
                 let urlstr = website["url"]
                 let url = URL(string: urlstr!)
 
-                NSWorkspace.shared.open(url!)
+                NSWorkspace.shared().open(url!)
             }
         }
     }
 
+
     @IBAction func openHostSites(_ sender: AnyObject)
     {
-
         let rowSource = self.sourceTable.selectedRow
-        let key = Array(self.results.keys).sorted( by: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
-        let value = self.results[key]
-        for website in value!
+
+        if (rowSource != -1)
         {
-            
-            let urlstr = website["url"]
-            let url = URL(string: urlstr!)
-            
-            NSWorkspace.shared.open(url!)
+            let key = Array(self.results.keys).sorted( by: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
+            let value = self.results[key]
+
+            for website in value!
+            {
+                
+                let urlstr = website["url"]
+                let url = URL(string: urlstr!)
+                
+                NSWorkspace.shared().open(url!)
+            }
         }
-        
     }
     
-    @IBAction func exportCSV(_ sender: AnyObject)
+    @IBAction func exportCSV(_ sender: NSMenuItem)
     {
-
         let rowSource = self.sourceTable.selectedRow
-        let key = Array(self.results.keys).sorted( by: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
-        let value = self.results[key]
-        let export = NSMutableString(string: "URL,Title,Selection,Folder\n")
 
-        for website in value!
+        if (rowSource != -1)
         {
-            let url = URL(string: website["url"]!)
+            let key = Array(self.results.keys).sorted( by: { self.results[$0]!.count > self.results[$1]!.count })[rowSource]
+            let value = self.results[key]
+            let export = NSMutableString(string: "URL,Title,Selection,Folder\n")
 
-            export.append("\"\(website["url"]!)\",\"\(website["title"]!)\",\"\",\"\(url!.host!)\"\n")
+            for website in value!
+            {
+                let url = URL(string: website["url"]!)
+                let folder = sender.tag > 0 ? url!.host! : "Unread"
+
+                export.append("\"\(website["url"]!)\",\"\(website["title"]!)\",\"\",\"\(folder)\"\n")
+            }
+
+            let filePath = NSString(string: "~/Desktop/export.csv").expandingTildeInPath
+
+            try!
+            export.write(toFile: filePath, atomically: true, encoding: String.Encoding.utf8.rawValue)
         }
-
-        let filePath = NSString(string: "~/Desktop/export.csv").expandingTildeInPath
-
-        try!
-        export.write(toFile: filePath, atomically: true, encoding: String.Encoding.utf8.rawValue)
     }
 }
 
