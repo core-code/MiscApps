@@ -33,10 +33,8 @@
 		B9DE09C70957A02C0027E5D7 /* midentify in Resources */ = {isa = PBXBuildFile; fileRef = B9DE09BA0957A02C0027E5D7 /* midentify */; };
 		B9DE09C80957A02C0027E5D7 /* mplayer in Resources */ = {isa = PBXBuildFile; fileRef = B9DE09BB0957A02C0027E5D7 /* mplayer */; };
 		B9F219FB1B4A90AA008E12BC /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219D31B4A90AA008E12BC /* AppKit+CoreCode.m */; };
-		B9F219FC1B4A90AA008E12BC /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219D51B4A90AA008E12BC /* AppKit+Properties.m */; };
 		B9F219FD1B4A90AA008E12BC /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219D71B4A90AA008E12BC /* CoreLib.m */; };
 		B9F219FE1B4A90AA008E12BC /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219DA1B4A90AA008E12BC /* Foundation+CoreCode.m */; };
-		B9F219FF1B4A90AA008E12BC /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219DD1B4A90AA008E12BC /* Foundation+Properties.m */; };
 		B9F21A001B4A90AA008E12BC /* JMApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219E01B4A90AA008E12BC /* JMApplicationDelegate.m */; };
 		B9F21A011B4A90AA008E12BC /* JMAppMovedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219E21B4A90AA008E12BC /* JMAppMovedHandler.m */; };
 		B9F21A021B4A90AA008E12BC /* JMClickableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F219E41B4A90AA008E12BC /* JMClickableImageView.m */; };
@@ -126,16 +124,10 @@
 		B9DE09BB0957A02C0027E5D7 /* mplayer */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = mplayer; sourceTree = "<group>"; };
 		B9F219D21B4A90AA008E12BC /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
 		B9F219D31B4A90AA008E12BC /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
-		B9F219D41B4A90AA008E12BC /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
-		B9F219D51B4A90AA008E12BC /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
 		B9F219D61B4A90AA008E12BC /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
 		B9F219D71B4A90AA008E12BC /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
-		B9F219D81B4A90AA008E12BC /* CoreLib_Availability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib_Availability.h; sourceTree = "<group>"; };
 		B9F219D91B4A90AA008E12BC /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
 		B9F219DA1B4A90AA008E12BC /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
-		B9F219DB1B4A90AA008E12BC /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
-		B9F219DC1B4A90AA008E12BC /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
-		B9F219DD1B4A90AA008E12BC /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
 		B9F219DF1B4A90AA008E12BC /* JMApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMApplicationDelegate.h; sourceTree = "<group>"; };
 		B9F219E01B4A90AA008E12BC /* JMApplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMApplicationDelegate.m; sourceTree = "<group>"; };
 		B9F219E11B4A90AA008E12BC /* JMAppMovedHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAppMovedHandler.h; sourceTree = "<group>"; };
@@ -320,16 +312,10 @@
 			children = (
 				B9F219D21B4A90AA008E12BC /* AppKit+CoreCode.h */,
 				B9F219D31B4A90AA008E12BC /* AppKit+CoreCode.m */,
-				B9F219D41B4A90AA008E12BC /* AppKit+Properties.h */,
-				B9F219D51B4A90AA008E12BC /* AppKit+Properties.m */,
 				B9F219D61B4A90AA008E12BC /* CoreLib.h */,
 				B9F219D71B4A90AA008E12BC /* CoreLib.m */,
-				B9F219D81B4A90AA008E12BC /* CoreLib_Availability.h */,
 				B9F219D91B4A90AA008E12BC /* Foundation+CoreCode.h */,
 				B9F219DA1B4A90AA008E12BC /* Foundation+CoreCode.m */,
-				B9F219DB1B4A90AA008E12BC /* Foundation+Indexing.h */,
-				B9F219DC1B4A90AA008E12BC /* Foundation+Properties.h */,
-				B9F219DD1B4A90AA008E12BC /* Foundation+Properties.m */,
 			);
 			name = CoreLib;
 			path = ../../CoreLib/CoreLib;
@@ -400,7 +386,7 @@
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 			};
 			buildConfigurationList = B9EBEF00091A7AE10088293E /* Build configuration list for PBXProject "MovieDB" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -464,10 +450,8 @@
 				B9DE09AA0957A01E0027E5D7 /* main.m in Sources */,
 				B9F21A051B4A90AA008E12BC /* JMDocklessApplication.m in Sources */,
 				B9F219FD1B4A90AA008E12BC /* CoreLib.m in Sources */,
-				B9F219FF1B4A90AA008E12BC /* Foundation+Properties.m in Sources */,
 				663B4CB20CD5306100ACD6E0 /* MovieDocument.xcdatamodel in Sources */,
 				663B4E6F0CD5341700ACD6E0 /* ValueTransformer.m in Sources */,
-				B9F219FC1B4A90AA008E12BC /* AppKit+Properties.m in Sources */,
 				B9F219FB1B4A90AA008E12BC /* AppKit+CoreCode.m in Sources */,
 				B9F21A001B4A90AA008E12BC /* JMApplicationDelegate.m in Sources */,
 				B9A2EEF1109275E300A9E131 /* InfoHelper.m in Sources */,
@@ -521,6 +505,7 @@
 					"SKIP_RATINGWINDOW=1",
 					"DEBUG=1",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Debug;
@@ -538,6 +523,7 @@
 					"SKIP_RATINGWINDOW=1",
 					"NDEBUG=1",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.corecode.${PRODUCT_NAME}";
 			};
 			name = Release;
@@ -546,12 +532,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -616,12 +608,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

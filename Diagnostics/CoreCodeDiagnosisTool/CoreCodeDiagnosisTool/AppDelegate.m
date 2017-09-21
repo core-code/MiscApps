@@ -111,7 +111,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 										   timeout:60
 										attachment:attachment.path] == kSMTPSuccess)
 	{
-		NSRunAlertPanel(@"Result", @"Sending succeeded. You can look into your Mail.app outbox", @"OK", nil, nil);
+		alert(@"Result", @"Sending succeeded. You can look into your Mail.app outbox", @"OK", nil, nil);
 	}
 	else
 	{
@@ -120,7 +120,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 							 error:NULL];
 
 
-		NSRunAlertPanel(@"Result", @"Sending failed. Send the file yourself to <feedback@corecode.io>, it is now on your desktop.", @"OK", nil, nil);
+		alert(@"Result", @"Sending failed. Send the file yourself to <feedback@corecode.io>, it is now on your desktop.", @"OK", nil, nil);
 	}
 
 	[fileManager removeItemAtURL:tmpURL error:NULL];

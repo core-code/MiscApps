@@ -11,10 +11,8 @@
 		B9B7F6601E769BCA0017ADA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B7F65F1E769BCA0017ADA8 /* Assets.xcassets */; };
 		B9B7F6631E769BCA0017ADA8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B7F6611E769BCA0017ADA8 /* MainMenu.xib */; };
 		B9B7F6771E769FDE0017ADA8 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B7F66C1E769FDE0017ADA8 /* AppKit+CoreCode.m */; };
-		B9B7F6781E769FDE0017ADA8 /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B7F66E1E769FDE0017ADA8 /* AppKit+Properties.m */; };
 		B9B7F6791E769FDE0017ADA8 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B7F6701E769FDE0017ADA8 /* CoreLib.m */; };
 		B9B7F67A1E769FDE0017ADA8 /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B7F6731E769FDE0017ADA8 /* Foundation+CoreCode.m */; };
-		B9B7F67B1E769FDE0017ADA8 /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B7F6761E769FDE0017ADA8 /* Foundation+Properties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,16 +24,10 @@
 		B9B7F6641E769BCA0017ADA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9B7F66B1E769FDE0017ADA8 /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
 		B9B7F66C1E769FDE0017ADA8 /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
-		B9B7F66D1E769FDE0017ADA8 /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
-		B9B7F66E1E769FDE0017ADA8 /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
 		B9B7F66F1E769FDE0017ADA8 /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
 		B9B7F6701E769FDE0017ADA8 /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
-		B9B7F6711E769FDE0017ADA8 /* CoreLib_Availability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib_Availability.h; sourceTree = "<group>"; };
 		B9B7F6721E769FDE0017ADA8 /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
 		B9B7F6731E769FDE0017ADA8 /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
-		B9B7F6741E769FDE0017ADA8 /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
-		B9B7F6751E769FDE0017ADA8 /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
-		B9B7F6761E769FDE0017ADA8 /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,16 +75,10 @@
 			children = (
 				B9B7F66B1E769FDE0017ADA8 /* AppKit+CoreCode.h */,
 				B9B7F66C1E769FDE0017ADA8 /* AppKit+CoreCode.m */,
-				B9B7F66D1E769FDE0017ADA8 /* AppKit+Properties.h */,
-				B9B7F66E1E769FDE0017ADA8 /* AppKit+Properties.m */,
 				B9B7F66F1E769FDE0017ADA8 /* CoreLib.h */,
 				B9B7F6701E769FDE0017ADA8 /* CoreLib.m */,
-				B9B7F6711E769FDE0017ADA8 /* CoreLib_Availability.h */,
 				B9B7F6721E769FDE0017ADA8 /* Foundation+CoreCode.h */,
 				B9B7F6731E769FDE0017ADA8 /* Foundation+CoreCode.m */,
-				B9B7F6741E769FDE0017ADA8 /* Foundation+Indexing.h */,
-				B9B7F6751E769FDE0017ADA8 /* Foundation+Properties.h */,
-				B9B7F6761E769FDE0017ADA8 /* Foundation+Properties.m */,
 			);
 			name = CoreLib;
 			path = ../../CoreLib/CoreLib;
@@ -124,7 +110,7 @@
 		B9B7F64E1E769BCA0017ADA8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "CoreCode Limited";
 				TargetAttributes = {
 					B9B7F6551E769BCA0017ADA8 = {
@@ -168,12 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9B7F67B1E769FDE0017ADA8 /* Foundation+Properties.m in Sources */,
 				B9B7F6771E769FDE0017ADA8 /* AppKit+CoreCode.m in Sources */,
 				B9B7F6791E769FDE0017ADA8 /* CoreLib.m in Sources */,
 				B9B7F65B1E769BCA0017ADA8 /* AppDelegate.m in Sources */,
 				B9B7F67A1E769FDE0017ADA8 /* Foundation+CoreCode.m in Sources */,
-				B9B7F6781E769FDE0017ADA8 /* AppKit+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +184,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -208,7 +194,12 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -247,7 +238,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -255,7 +248,12 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -285,6 +283,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SMARTReporterFactoryReset/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.corecode.SMARTReporterFactoryReset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -297,6 +296,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SMARTReporterFactoryReset/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.corecode.SMARTReporterFactoryReset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

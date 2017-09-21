@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		B91098641AEEA30300157817 /* smartctl in Resources */ = {isa = PBXBuildFile; fileRef = B91098631AEEA30300157817 /* smartctl */; };
 		B9517E961A0154FF0074B4DA /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517E8B1A0154FF0074B4DA /* AppKit+CoreCode.m */; };
-		B9517E971A0154FF0074B4DA /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517E8D1A0154FF0074B4DA /* AppKit+Properties.m */; };
 		B9517E981A0154FF0074B4DA /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517E8F1A0154FF0074B4DA /* CoreLib.m */; };
 		B9517E991A0154FF0074B4DA /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517E921A0154FF0074B4DA /* Foundation+CoreCode.m */; };
-		B9517E9A1A0154FF0074B4DA /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517E951A0154FF0074B4DA /* Foundation+Properties.m */; };
 		B9517EB01A01553C0074B4DA /* JMAppMovedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517E9D1A01553C0074B4DA /* JMAppMovedHandler.m */; };
 		B9517EB11A01553C0074B4DA /* JMClickableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517E9F1A01553C0074B4DA /* JMClickableImageView.m */; };
 		B9517EB21A01553C0074B4DA /* JMCorrectTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517EA11A01553C0074B4DA /* JMCorrectTimer.m */; };
@@ -38,16 +36,10 @@
 		B91098631AEEA30300157817 /* smartctl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = smartctl; sourceTree = SOURCE_ROOT; };
 		B9517E8A1A0154FF0074B4DA /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
 		B9517E8B1A0154FF0074B4DA /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
-		B9517E8C1A0154FF0074B4DA /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
-		B9517E8D1A0154FF0074B4DA /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
 		B9517E8E1A0154FF0074B4DA /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
 		B9517E8F1A0154FF0074B4DA /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
-		B9517E901A0154FF0074B4DA /* CoreLib_Availability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib_Availability.h; sourceTree = "<group>"; };
 		B9517E911A0154FF0074B4DA /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
 		B9517E921A0154FF0074B4DA /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
-		B9517E931A0154FF0074B4DA /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
-		B9517E941A0154FF0074B4DA /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
-		B9517E951A0154FF0074B4DA /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
 		B9517E9C1A01553C0074B4DA /* JMAppMovedHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAppMovedHandler.h; sourceTree = "<group>"; };
 		B9517E9D1A01553C0074B4DA /* JMAppMovedHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAppMovedHandler.m; sourceTree = "<group>"; };
 		B9517E9E1A01553C0074B4DA /* JMClickableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMClickableImageView.h; sourceTree = "<group>"; };
@@ -109,16 +101,10 @@
 			children = (
 				B9517E8A1A0154FF0074B4DA /* AppKit+CoreCode.h */,
 				B9517E8B1A0154FF0074B4DA /* AppKit+CoreCode.m */,
-				B9517E8C1A0154FF0074B4DA /* AppKit+Properties.h */,
-				B9517E8D1A0154FF0074B4DA /* AppKit+Properties.m */,
 				B9517E8E1A0154FF0074B4DA /* CoreLib.h */,
 				B9517E8F1A0154FF0074B4DA /* CoreLib.m */,
-				B9517E901A0154FF0074B4DA /* CoreLib_Availability.h */,
 				B9517E911A0154FF0074B4DA /* Foundation+CoreCode.h */,
 				B9517E921A0154FF0074B4DA /* Foundation+CoreCode.m */,
-				B9517E931A0154FF0074B4DA /* Foundation+Indexing.h */,
-				B9517E941A0154FF0074B4DA /* Foundation+Properties.h */,
-				B9517E951A0154FF0074B4DA /* Foundation+Properties.m */,
 			);
 			name = CoreLib;
 			path = ../../../CoreLib/CoreLib;
@@ -255,7 +241,7 @@
 		B9DF05D5169DCCF000DB4B58 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "CoreCode Limited";
 			};
 			buildConfigurationList = B9DF05D8169DCCF000DB4B58 /* Build configuration list for PBXProject "SMARTReporterDiagnosisTool" */;
@@ -301,7 +287,6 @@
 				B9517E991A0154FF0074B4DA /* Foundation+CoreCode.m in Sources */,
 				B9DF05F6169DCCF000DB4B58 /* AppDelegate.m in Sources */,
 				B9517EB31A01553C0074B4DA /* JMDocklessApplication.m in Sources */,
-				B9517E971A0154FF0074B4DA /* AppKit+Properties.m in Sources */,
 				B9517E981A0154FF0074B4DA /* CoreLib.m in Sources */,
 				B9517EB61A01553C0074B4DA /* JMHostInformation.m in Sources */,
 				B9517EB71A01553C0074B4DA /* JMLoginItemManager.m in Sources */,
@@ -309,7 +294,6 @@
 				B9517E961A0154FF0074B4DA /* AppKit+CoreCode.m in Sources */,
 				B9517EB51A01553C0074B4DA /* JMFontPopUpButton.m in Sources */,
 				B9517EB21A01553C0074B4DA /* JMCorrectTimer.m in Sources */,
-				B9517E9A1A0154FF0074B4DA /* Foundation+Properties.m in Sources */,
 				B9517EB91A01553C0074B4DA /* JMVisibilityManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,11 +335,19 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -392,11 +384,19 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -425,6 +425,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMARTReporterDiagnosisTool/SMARTReporterDiagnosisTool-Prefix.pch";
 				INFOPLIST_FILE = "SMARTReporterDiagnosisTool/SMARTReporterDiagnosisTool-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -438,6 +439,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMARTReporterDiagnosisTool/SMARTReporterDiagnosisTool-Prefix.pch";
 				INFOPLIST_FILE = "SMARTReporterDiagnosisTool/SMARTReporterDiagnosisTool-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

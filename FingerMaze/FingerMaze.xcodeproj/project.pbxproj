@@ -204,10 +204,8 @@
 		B960F9041163EA3700868971 /* LevelFinished.png in Resources */ = {isa = PBXBuildFile; fileRef = B960F9031163EA3700868971 /* LevelFinished.png */; };
 		B9837C5E116E4A860000A134 /* IntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9837C5D116E4A860000A134 /* IntroView.xib */; };
 		B9837F291E9C0C7E002E4E9B /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F131E9C0C7E002E4E9B /* AppKit+CoreCode.m */; };
-		B9837F2A1E9C0C7E002E4E9B /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F151E9C0C7E002E4E9B /* AppKit+Properties.m */; };
 		B9837F2B1E9C0C7E002E4E9B /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F171E9C0C7E002E4E9B /* CoreLib.m */; };
 		B9837F2C1E9C0C7E002E4E9B /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F1A1E9C0C7E002E4E9B /* Foundation+CoreCode.m */; };
-		B9837F2D1E9C0C7E002E4E9B /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F1D1E9C0C7E002E4E9B /* Foundation+Properties.m */; };
 		B9837F2E1E9C0C7E002E4E9B /* JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F201E9C0C7E002E4E9B /* JMActionSheet.m */; };
 		B9837F2F1E9C0C7E002E4E9B /* JMAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F221E9C0C7E002E4E9B /* JMAlertController.m */; };
 		B9837F301E9C0C7E002E4E9B /* JMChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9837F241E9C0C7E002E4E9B /* JMChoiceController.m */; };
@@ -455,16 +453,10 @@
 		B9837C5D116E4A860000A134 /* IntroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = IntroView.xib; path = Resources/IntroView.xib; sourceTree = "<group>"; };
 		B9837F121E9C0C7E002E4E9B /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
 		B9837F131E9C0C7E002E4E9B /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
-		B9837F141E9C0C7E002E4E9B /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
-		B9837F151E9C0C7E002E4E9B /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
 		B9837F161E9C0C7E002E4E9B /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
 		B9837F171E9C0C7E002E4E9B /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
-		B9837F181E9C0C7E002E4E9B /* CoreLib_Availability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib_Availability.h; sourceTree = "<group>"; };
 		B9837F191E9C0C7E002E4E9B /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
 		B9837F1A1E9C0C7E002E4E9B /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
-		B9837F1B1E9C0C7E002E4E9B /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
-		B9837F1C1E9C0C7E002E4E9B /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
-		B9837F1D1E9C0C7E002E4E9B /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
 		B9837F1F1E9C0C7E002E4E9B /* JMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMActionSheet.h; sourceTree = "<group>"; };
 		B9837F201E9C0C7E002E4E9B /* JMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMActionSheet.m; sourceTree = "<group>"; };
 		B9837F211E9C0C7E002E4E9B /* JMAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAlertController.h; sourceTree = "<group>"; };
@@ -607,16 +599,10 @@
 			children = (
 				B9837F121E9C0C7E002E4E9B /* AppKit+CoreCode.h */,
 				B9837F131E9C0C7E002E4E9B /* AppKit+CoreCode.m */,
-				B9837F141E9C0C7E002E4E9B /* AppKit+Properties.h */,
-				B9837F151E9C0C7E002E4E9B /* AppKit+Properties.m */,
 				B9837F161E9C0C7E002E4E9B /* CoreLib.h */,
 				B9837F171E9C0C7E002E4E9B /* CoreLib.m */,
-				B9837F181E9C0C7E002E4E9B /* CoreLib_Availability.h */,
 				B9837F191E9C0C7E002E4E9B /* Foundation+CoreCode.h */,
 				B9837F1A1E9C0C7E002E4E9B /* Foundation+CoreCode.m */,
-				B9837F1B1E9C0C7E002E4E9B /* Foundation+Indexing.h */,
-				B9837F1C1E9C0C7E002E4E9B /* Foundation+Properties.h */,
-				B9837F1D1E9C0C7E002E4E9B /* Foundation+Properties.m */,
 			);
 			name = CoreLib;
 			path = ../../CoreLib/CoreLib;
@@ -911,7 +897,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				TargetAttributes = {
 					B98B37A81162522600DBCF01 = {
 						DevelopmentTeam = 9D78DG5ACV;
@@ -1159,7 +1145,6 @@
 				B9837F2E1E9C0C7E002E4E9B /* JMActionSheet.m in Sources */,
 				B98B37AD1162522600DBCF01 /* main.m in Sources */,
 				B98B37AE1162522600DBCF01 /* FingerMazeAppDelegate.m in Sources */,
-				B9837F2D1E9C0C7E002E4E9B /* Foundation+Properties.m in Sources */,
 				B9837F321E9C0C7E002E4E9B /* JMWebViewController.m in Sources */,
 				B98B37D1116252D500DBCF01 /* MazeView.m in Sources */,
 				B9837F301E9C0C7E002E4E9B /* JMChoiceController.m in Sources */,
@@ -1179,7 +1164,6 @@
 				B91375EB1284A6B10057FD7F /* JoystickView.m in Sources */,
 				B9837F311E9C0C7E002E4E9B /* JMSlideshowController.m in Sources */,
 				B9F846D015890F87002017D4 /* PurchaseController.m in Sources */,
-				B9837F2A1E9C0C7E002E4E9B /* AppKit+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1236,12 +1220,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1296,12 +1286,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

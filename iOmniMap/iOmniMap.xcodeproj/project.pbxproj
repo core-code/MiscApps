@@ -21,10 +21,8 @@
 		B96AC53F14AA85C600F7A580 /* OmniOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B96AC53E14AA85C600F7A580 /* OmniOverlayView.m */; };
 		B96AC54214AA86C800F7A580 /* OmniOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = B96AC54114AA86C800F7A580 /* OmniOverlay.m */; };
 		B96F908E1E9D2DAC00E69008 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F90781E9D2DAC00E69008 /* AppKit+CoreCode.m */; };
-		B96F908F1E9D2DAC00E69008 /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F907A1E9D2DAC00E69008 /* AppKit+Properties.m */; };
 		B96F90901E9D2DAC00E69008 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F907C1E9D2DAC00E69008 /* CoreLib.m */; };
 		B96F90911E9D2DAC00E69008 /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F907F1E9D2DAC00E69008 /* Foundation+CoreCode.m */; };
-		B96F90921E9D2DAC00E69008 /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F90821E9D2DAC00E69008 /* Foundation+Properties.m */; };
 		B96F90931E9D2DAC00E69008 /* JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F90851E9D2DAC00E69008 /* JMActionSheet.m */; };
 		B96F90941E9D2DAC00E69008 /* JMAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F90871E9D2DAC00E69008 /* JMAlertController.m */; };
 		B96F90951E9D2DAC00E69008 /* JMChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F90891E9D2DAC00E69008 /* JMChoiceController.m */; };
@@ -100,16 +98,10 @@
 		B96AC54114AA86C800F7A580 /* OmniOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OmniOverlay.m; sourceTree = "<group>"; };
 		B96F90771E9D2DAC00E69008 /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
 		B96F90781E9D2DAC00E69008 /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
-		B96F90791E9D2DAC00E69008 /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
-		B96F907A1E9D2DAC00E69008 /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
 		B96F907B1E9D2DAC00E69008 /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
 		B96F907C1E9D2DAC00E69008 /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
-		B96F907D1E9D2DAC00E69008 /* CoreLib_Availability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib_Availability.h; sourceTree = "<group>"; };
 		B96F907E1E9D2DAC00E69008 /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
 		B96F907F1E9D2DAC00E69008 /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
-		B96F90801E9D2DAC00E69008 /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
-		B96F90811E9D2DAC00E69008 /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
-		B96F90821E9D2DAC00E69008 /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
 		B96F90841E9D2DAC00E69008 /* JMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMActionSheet.h; sourceTree = "<group>"; };
 		B96F90851E9D2DAC00E69008 /* JMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMActionSheet.m; sourceTree = "<group>"; };
 		B96F90861E9D2DAC00E69008 /* JMAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAlertController.h; sourceTree = "<group>"; };
@@ -197,16 +189,10 @@
 			children = (
 				B96F90771E9D2DAC00E69008 /* AppKit+CoreCode.h */,
 				B96F90781E9D2DAC00E69008 /* AppKit+CoreCode.m */,
-				B96F90791E9D2DAC00E69008 /* AppKit+Properties.h */,
-				B96F907A1E9D2DAC00E69008 /* AppKit+Properties.m */,
 				B96F907B1E9D2DAC00E69008 /* CoreLib.h */,
 				B96F907C1E9D2DAC00E69008 /* CoreLib.m */,
-				B96F907D1E9D2DAC00E69008 /* CoreLib_Availability.h */,
 				B96F907E1E9D2DAC00E69008 /* Foundation+CoreCode.h */,
 				B96F907F1E9D2DAC00E69008 /* Foundation+CoreCode.m */,
-				B96F90801E9D2DAC00E69008 /* Foundation+Indexing.h */,
-				B96F90811E9D2DAC00E69008 /* Foundation+Properties.h */,
-				B96F90821E9D2DAC00E69008 /* Foundation+Properties.m */,
 			);
 			name = CoreLib;
 			path = ../../CoreLib/CoreLib;
@@ -378,7 +364,7 @@
 		B9F3CE0514A1F5590009F8EA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "CoreCode Limited";
 				TargetAttributes = {
 					B9F3CE0D14A1F5590009F8EA = {
@@ -454,7 +440,6 @@
 				B96F90931E9D2DAC00E69008 /* JMActionSheet.m in Sources */,
 				B9F3CE1F14A1F5590009F8EA /* main.m in Sources */,
 				B95B997214A1FE4100DB7D1C /* AppDelegate.m in Sources */,
-				B96F90921E9D2DAC00E69008 /* Foundation+Properties.m in Sources */,
 				B96F90971E9D2DAC00E69008 /* JMWebViewController.m in Sources */,
 				B95B997314A1FE4100DB7D1C /* CreateViewController.m in Sources */,
 				B96F90951E9D2DAC00E69008 /* JMChoiceController.m in Sources */,
@@ -474,7 +459,6 @@
 				B9F1E41816DE5FA2007D967B /* OptionsViewController.m in Sources */,
 				B96F90961E9D2DAC00E69008 /* JMSlideshowController.m in Sources */,
 				B9F0478116E63D07006FCCDB /* PurchaseController.m in Sources */,
-				B96F908F1E9D2DAC00E69008 /* AppKit+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,12 +489,18 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -547,12 +537,18 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

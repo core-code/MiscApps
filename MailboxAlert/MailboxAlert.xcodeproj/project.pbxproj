@@ -15,13 +15,9 @@
 		B938450F169AF44C001773E8 /* imap.py in Resources */ = {isa = PBXBuildFile; fileRef = B938450E169AF44C001773E8 /* imap.py */; };
 		B94F94EB16AFE371008E9F71 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B94F94D816AFE371008E9F71 /* LICENSE */; };
 		B94F94EE16AFE371008E9F71 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = B94F94DC16AFE371008E9F71 /* SSKeychain.m */; };
-		B96F909D1E9D34F500E69008 /* MailboxAlert.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B96F909C1E9D34F500E69008 /* MailboxAlert.xcconfig */; };
-		B96F909E1E9D34F500E69008 /* MailboxAlert.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B96F909C1E9D34F500E69008 /* MailboxAlert.xcconfig */; };
 		B971FDD41D311AE1004D8851 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDC91D311AE1004D8851 /* AppKit+CoreCode.m */; };
-		B971FDD51D311AE1004D8851 /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDCB1D311AE1004D8851 /* AppKit+Properties.m */; };
 		B971FDD61D311AE1004D8851 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDCD1D311AE1004D8851 /* CoreLib.m */; };
 		B971FDD71D311AE1004D8851 /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDD01D311AE1004D8851 /* Foundation+CoreCode.m */; };
-		B971FDD81D311AE1004D8851 /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B971FDD31D311AE1004D8851 /* Foundation+Properties.m */; };
 		B982DB9A16AD436900C2CC98 /* menuicon_error.png in Resources */ = {isa = PBXBuildFile; fileRef = B982DB9816AD436800C2CC98 /* menuicon_error.png */; };
 		B982DB9B16AD436900C2CC98 /* menuicon_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = B982DB9916AD436900C2CC98 /* menuicon_ok.png */; };
 		B982DB9F16AD43D400C2CC98 /* menuicon_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B982DB9D16AD43D300C2CC98 /* menuicon_error@2x.png */; };
@@ -117,16 +113,10 @@
 		B96F909C1E9D34F500E69008 /* MailboxAlert.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = MailboxAlert.xcconfig; sourceTree = SOURCE_ROOT; };
 		B971FDC81D311AE1004D8851 /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
 		B971FDC91D311AE1004D8851 /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
-		B971FDCA1D311AE1004D8851 /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
-		B971FDCB1D311AE1004D8851 /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
 		B971FDCC1D311AE1004D8851 /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
 		B971FDCD1D311AE1004D8851 /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
-		B971FDCE1D311AE1004D8851 /* CoreLib_Availability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib_Availability.h; sourceTree = "<group>"; };
 		B971FDCF1D311AE1004D8851 /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
 		B971FDD01D311AE1004D8851 /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
-		B971FDD11D311AE1004D8851 /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
-		B971FDD21D311AE1004D8851 /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
-		B971FDD31D311AE1004D8851 /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
 		B982DB9816AD436800C2CC98 /* menuicon_error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuicon_error.png; sourceTree = "<group>"; };
 		B982DB9916AD436900C2CC98 /* menuicon_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuicon_ok.png; sourceTree = "<group>"; };
 		B982DB9D16AD43D300C2CC98 /* menuicon_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuicon_error@2x.png"; sourceTree = "<group>"; };
@@ -307,16 +297,10 @@
 			children = (
 				B971FDC81D311AE1004D8851 /* AppKit+CoreCode.h */,
 				B971FDC91D311AE1004D8851 /* AppKit+CoreCode.m */,
-				B971FDCA1D311AE1004D8851 /* AppKit+Properties.h */,
-				B971FDCB1D311AE1004D8851 /* AppKit+Properties.m */,
 				B971FDCC1D311AE1004D8851 /* CoreLib.h */,
 				B971FDCD1D311AE1004D8851 /* CoreLib.m */,
-				B971FDCE1D311AE1004D8851 /* CoreLib_Availability.h */,
 				B971FDCF1D311AE1004D8851 /* Foundation+CoreCode.h */,
 				B971FDD01D311AE1004D8851 /* Foundation+CoreCode.m */,
-				B971FDD11D311AE1004D8851 /* Foundation+Indexing.h */,
-				B971FDD21D311AE1004D8851 /* Foundation+Properties.h */,
-				B971FDD31D311AE1004D8851 /* Foundation+Properties.m */,
 			);
 			name = CoreLib;
 			path = ../../CoreLib/CoreLib;
@@ -419,7 +403,7 @@
 		B938448B1699F79C001773E8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "CoreCode Limited";
 				TargetAttributes = {
 					B93844931699F79C001773E8 = {
@@ -469,7 +453,6 @@
 				B982DB9A16AD436900C2CC98 /* menuicon_error.png in Resources */,
 				B982DB9B16AD436900C2CC98 /* menuicon_ok.png in Resources */,
 				B982DB9F16AD43D400C2CC98 /* menuicon_error@2x.png in Resources */,
-				B96F909D1E9D34F500E69008 /* MailboxAlert.xcconfig in Resources */,
 				B982DBA016AD43D400C2CC98 /* menuicon_ok@2x.png in Resources */,
 				B982DC1516AEAE9600C2CC98 /* History.rtf in Resources */,
 				B94F94EB16AFE371008E9F71 /* LICENSE in Resources */,
@@ -480,7 +463,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B96F909E1E9D34F500E69008 /* MailboxAlert.xcconfig in Resources */,
 				B90970A21B0A66230086CCA2 /* LaunchMainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,8 +481,6 @@
 				B99AAA8B169B554600290EC5 /* PRHOnOffButtonCell.m in Sources */,
 				B9C2AFAB1911578B0053456F /* JMHostInformation.m in Sources */,
 				B9C2AFA51911578B0053456F /* JMAppMovedHandler.m in Sources */,
-				B971FDD81D311AE1004D8851 /* Foundation+Properties.m in Sources */,
-				B971FDD51D311AE1004D8851 /* AppKit+Properties.m in Sources */,
 				B9C2AFAA1911578B0053456F /* JMFontPopUpButton.m in Sources */,
 				B99AAA9A169B5C1800290EC5 /* Account.m in Sources */,
 				B9C2AFAD1911578B0053456F /* JMVisibilityManager.m in Sources */,
@@ -560,11 +540,19 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -613,11 +601,19 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -662,6 +658,7 @@
 				GCC_PREFIX_HEADER = "MailboxAlert/MailboxAlert-Prefix.pch";
 				INFOPLIST_FILE = "MailboxAlert/MailboxAlert-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
@@ -679,6 +676,7 @@
 				GCC_PREFIX_HEADER = "MailboxAlert/MailboxAlert-Prefix.pch";
 				INFOPLIST_FILE = "MailboxAlert/MailboxAlert-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;

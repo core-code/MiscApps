@@ -24,10 +24,8 @@
 		B9B58F08167E5E900064E545 /* SMLGoToLine.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B58F07167E5E900064E545 /* SMLGoToLine.xib */; };
 		B9B58F14167F52900064E545 /* Snippets in Resources */ = {isa = PBXBuildFile; fileRef = B9B58F13167F52900064E545 /* Snippets */; };
 		B9C2AF7C191153430053456F /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C2AF72191153430053456F /* AppKit+CoreCode.m */; };
-		B9C2AF7D191153430053456F /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C2AF74191153430053456F /* AppKit+Properties.m */; };
 		B9C2AF7E191153430053456F /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C2AF76191153430053456F /* CoreLib.m */; };
 		B9C2AF7F191153430053456F /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C2AF78191153430053456F /* Foundation+CoreCode.m */; };
-		B9C2AF80191153430053456F /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C2AF7B191153430053456F /* Foundation+Properties.m */; };
 		B9CC7FF7167E53E400838B0A /* FRAFontTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CC7FF6167E53E400838B0A /* FRAFontTransformer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B9CC8005167E53F000838B0A /* NSScanner+Fragaria.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CC7FF9167E53F000838B0A /* NSScanner+Fragaria.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B9CC8006167E53F000838B0A /* MGSSyntaxController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CC7FFA167E53F000838B0A /* MGSSyntaxController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -77,15 +75,10 @@
 		B9B58F13167F52900064E545 /* Snippets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Snippets; sourceTree = "<group>"; };
 		B9C2AF71191153430053456F /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
 		B9C2AF72191153430053456F /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
-		B9C2AF73191153430053456F /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
-		B9C2AF74191153430053456F /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
 		B9C2AF75191153430053456F /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
 		B9C2AF76191153430053456F /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
 		B9C2AF77191153430053456F /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
 		B9C2AF78191153430053456F /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
-		B9C2AF79191153430053456F /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
-		B9C2AF7A191153430053456F /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
-		B9C2AF7B191153430053456F /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
 		B9CC7FF5167E53E400838B0A /* FRAFontTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FRAFontTransformer.h; path = Fragaria/FRAFontTransformer.h; sourceTree = "<group>"; };
 		B9CC7FF6167E53E400838B0A /* FRAFontTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FRAFontTransformer.m; path = Fragaria/FRAFontTransformer.m; sourceTree = "<group>"; };
 		B9CC7FF9167E53F000838B0A /* NSScanner+Fragaria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSScanner+Fragaria.m"; path = "Fragaria/NSScanner+Fragaria.m"; sourceTree = "<group>"; };
@@ -259,15 +252,10 @@
 			children = (
 				B9C2AF71191153430053456F /* AppKit+CoreCode.h */,
 				B9C2AF72191153430053456F /* AppKit+CoreCode.m */,
-				B9C2AF73191153430053456F /* AppKit+Properties.h */,
-				B9C2AF74191153430053456F /* AppKit+Properties.m */,
 				B9C2AF75191153430053456F /* CoreLib.h */,
 				B9C2AF76191153430053456F /* CoreLib.m */,
 				B9C2AF77191153430053456F /* Foundation+CoreCode.h */,
 				B9C2AF78191153430053456F /* Foundation+CoreCode.m */,
-				B9C2AF79191153430053456F /* Foundation+Indexing.h */,
-				B9C2AF7A191153430053456F /* Foundation+Properties.h */,
-				B9C2AF7B191153430053456F /* Foundation+Properties.m */,
 			);
 			name = CoreLib;
 			path = ../../CoreLib/CoreLib;
@@ -365,7 +353,7 @@
 		B9DA3C2615C855CF004C207F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "CoreCode Limited";
 			};
 			buildConfigurationList = B9DA3C2915C855CF004C207F /* Build configuration list for PBXProject "InstaCode" */;
@@ -440,7 +428,6 @@
 				B9CC8008167E53F000838B0A /* MGSFragaria.m in Sources */,
 				B9CC8009167E53F000838B0A /* MGSExtraInterfaceController.m in Sources */,
 				B9C2AF7E191153430053456F /* CoreLib.m in Sources */,
-				B9C2AF80191153430053456F /* Foundation+Properties.m in Sources */,
 				B9CC800A167E53F000838B0A /* MGSTextMenuController.m in Sources */,
 				B9CC800B167E53F000838B0A /* MGSFragariaPreferences.m in Sources */,
 				B9CC800C167E53F000838B0A /* MGSFragariaFontsAndColoursPrefsViewController.m in Sources */,
@@ -449,7 +436,6 @@
 				B9CC803F167E540600838B0A /* ICUMatcher.m in Sources */,
 				B9CC8040167E540600838B0A /* ICUPattern.m in Sources */,
 				B9CC8041167E540600838B0A /* NSStringICUAdditions.m in Sources */,
-				B9C2AF7D191153430053456F /* AppKit+Properties.m in Sources */,
 				B9CC8042167E540600838B0A /* SMLGutterTextView.m in Sources */,
 				B9CC8043167E540600838B0A /* SMLLineNumbers.m in Sources */,
 				B9CC8044167E540600838B0A /* SMLTextView.m in Sources */,
@@ -500,11 +486,19 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
@@ -546,11 +540,19 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -585,11 +587,19 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;

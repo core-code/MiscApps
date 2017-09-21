@@ -30,10 +30,8 @@
 		B933AB1318BBBA29006E42B9 /* RegexHighlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AB1218BBBA29006E42B9 /* RegexHighlightView.m */; };
 		B933AB1718BBD205006E42B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B933AB1618BBD205006E42B9 /* Images.xcassets */; };
 		B933AC2318BBE5FE006E42B9 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC1918BBE5FE006E42B9 /* AppKit+CoreCode.m */; };
-		B933AC2418BBE5FE006E42B9 /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC1B18BBE5FE006E42B9 /* AppKit+Properties.m */; };
 		B933AC2518BBE5FE006E42B9 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC1D18BBE5FE006E42B9 /* CoreLib.m */; };
 		B933AC2618BBE5FE006E42B9 /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC1F18BBE5FE006E42B9 /* Foundation+CoreCode.m */; };
-		B933AC2718BBE5FE006E42B9 /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC2218BBE5FE006E42B9 /* Foundation+Properties.m */; };
 		B933AC3318BBE604006E42B9 /* JMActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC2A18BBE604006E42B9 /* JMActionSheet.m */; };
 		B933AC3518BBE604006E42B9 /* JMChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC2E18BBE604006E42B9 /* JMChoiceController.m */; };
 		B933AC3718BBE604006E42B9 /* JMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC3218BBE604006E42B9 /* JMWebViewController.m */; };
@@ -112,15 +110,10 @@
 		B933AB1618BBD205006E42B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B933AC1818BBE5FE006E42B9 /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
 		B933AC1918BBE5FE006E42B9 /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
-		B933AC1A18BBE5FE006E42B9 /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
-		B933AC1B18BBE5FE006E42B9 /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
 		B933AC1C18BBE5FE006E42B9 /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
 		B933AC1D18BBE5FE006E42B9 /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
 		B933AC1E18BBE5FE006E42B9 /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
 		B933AC1F18BBE5FE006E42B9 /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
-		B933AC2018BBE5FE006E42B9 /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
-		B933AC2118BBE5FE006E42B9 /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
-		B933AC2218BBE5FE006E42B9 /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
 		B933AC2918BBE604006E42B9 /* JMActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMActionSheet.h; sourceTree = "<group>"; };
 		B933AC2A18BBE604006E42B9 /* JMActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMActionSheet.m; sourceTree = "<group>"; };
 		B933AC2D18BBE604006E42B9 /* JMChoiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMChoiceController.h; sourceTree = "<group>"; };
@@ -267,15 +260,10 @@
 				B933AC2818BBE604006E42B9 /* iOS */,
 				B933AC1818BBE5FE006E42B9 /* AppKit+CoreCode.h */,
 				B933AC1918BBE5FE006E42B9 /* AppKit+CoreCode.m */,
-				B933AC1A18BBE5FE006E42B9 /* AppKit+Properties.h */,
-				B933AC1B18BBE5FE006E42B9 /* AppKit+Properties.m */,
 				B933AC1C18BBE5FE006E42B9 /* CoreLib.h */,
 				B933AC1D18BBE5FE006E42B9 /* CoreLib.m */,
 				B933AC1E18BBE5FE006E42B9 /* Foundation+CoreCode.h */,
 				B933AC1F18BBE5FE006E42B9 /* Foundation+CoreCode.m */,
-				B933AC2018BBE5FE006E42B9 /* Foundation+Indexing.h */,
-				B933AC2118BBE5FE006E42B9 /* Foundation+Properties.h */,
-				B933AC2218BBE5FE006E42B9 /* Foundation+Properties.m */,
 			);
 			name = CoreLib;
 			path = ../../CoreLib/CoreLib;
@@ -435,7 +423,6 @@
 				B933AC3318BBE604006E42B9 /* JMActionSheet.m in Sources */,
 				B90386BF164AEF75006502A2 /* AppDelegate.m in Sources */,
 				B90386CE164AEF75006502A2 /* MasterViewController.m in Sources */,
-				B933AC2718BBE5FE006E42B9 /* Foundation+Properties.m in Sources */,
 				B933AC3718BBE604006E42B9 /* JMWebViewController.m in Sources */,
 				B90386D1164AEF75006502A2 /* DetailViewController.m in Sources */,
 				B933AC3518BBE604006E42B9 /* JMChoiceController.m in Sources */,
@@ -454,7 +441,6 @@
 				B932005D186730F9003F27B4 /* MBProgressHUD.m in Sources */,
 				B9E1E00B1D32CF79004C9F15 /* diffreg.c in Sources */,
 				B933AB1318BBBA29006E42B9 /* RegexHighlightView.m in Sources */,
-				B933AC2418BBE5FE006E42B9 /* AppKit+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

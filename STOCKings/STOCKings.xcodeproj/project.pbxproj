@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B99536B21C69E48F00B644A6 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B99536AA1C69E48F00B644A6 /* AppKit+CoreCode.m */; };
-		B99536B31C69E48F00B644A6 /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B99536AC1C69E48F00B644A6 /* AppKit+Properties.m */; };
 		B99536B41C69E48F00B644A6 /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B99536AE1C69E48F00B644A6 /* Foundation+CoreCode.m */; };
-		B99536B51C69E48F00B644A6 /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B99536B11C69E48F00B644A6 /* Foundation+Properties.m */; };
 		B9C80BE5187FF5A400613CA4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C80BE4187FF5A400613CA4 /* Cocoa.framework */; };
 		B9C80BF5187FF5A400613CA4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9C80BF3187FF5A400613CA4 /* Credits.rtf */; };
 		B9C80BF8187FF5A400613CA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C80BF7187FF5A400613CA4 /* AppDelegate.m */; };
@@ -23,13 +21,8 @@
 /* Begin PBXFileReference section */
 		B99536A91C69E48F00B644A6 /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
 		B99536AA1C69E48F00B644A6 /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
-		B99536AB1C69E48F00B644A6 /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
-		B99536AC1C69E48F00B644A6 /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
 		B99536AD1C69E48F00B644A6 /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
 		B99536AE1C69E48F00B644A6 /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
-		B99536AF1C69E48F00B644A6 /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
-		B99536B01C69E48F00B644A6 /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
-		B99536B11C69E48F00B644A6 /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
 		B9C80BE1187FF5A400613CA4 /* STOCKings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STOCKings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C80BE4187FF5A400613CA4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B9C80BE7187FF5A400613CA4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -127,13 +120,8 @@
 				B9C80C44188003AA00613CA4 /* CoreLib.m */,
 				B99536A91C69E48F00B644A6 /* AppKit+CoreCode.h */,
 				B99536AA1C69E48F00B644A6 /* AppKit+CoreCode.m */,
-				B99536AB1C69E48F00B644A6 /* AppKit+Properties.h */,
-				B99536AC1C69E48F00B644A6 /* AppKit+Properties.m */,
 				B99536AD1C69E48F00B644A6 /* Foundation+CoreCode.h */,
 				B99536AE1C69E48F00B644A6 /* Foundation+CoreCode.m */,
-				B99536AF1C69E48F00B644A6 /* Foundation+Indexing.h */,
-				B99536B01C69E48F00B644A6 /* Foundation+Properties.h */,
-				B99536B11C69E48F00B644A6 /* Foundation+Properties.m */,
 			);
 			name = CoreLib;
 			path = ../../CoreLib/CoreLib;
@@ -165,7 +153,7 @@
 		B9C80BD9187FF5A400613CA4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "CoreCode Limited";
 			};
 			buildConfigurationList = B9C80BDC187FF5A400613CA4 /* Build configuration list for PBXProject "STOCKings" */;
@@ -204,12 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B99536B51C69E48F00B644A6 /* Foundation+Properties.m in Sources */,
 				B9C80BF8187FF5A400613CA4 /* AppDelegate.m in Sources */,
 				B99536B21C69E48F00B644A6 /* AppKit+CoreCode.m in Sources */,
 				B9C80C84188003AA00613CA4 /* CoreLib.m in Sources */,
 				B99536B41C69E48F00B644A6 /* Foundation+CoreCode.m in Sources */,
-				B99536B31C69E48F00B644A6 /* AppKit+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,13 +228,21 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -284,13 +278,21 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
@@ -321,6 +323,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "STOCKings/STOCKings-Prefix.pch";
 				INFOPLIST_FILE = "STOCKings/STOCKings-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -336,6 +339,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "STOCKings/STOCKings-Prefix.pch";
 				INFOPLIST_FILE = "STOCKings/STOCKings-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
