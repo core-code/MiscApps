@@ -21,10 +21,8 @@
 		B9BA4A861EEEFC1C0070D409 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BA4A851EEEFC1C0070D409 /* Security.framework */; };
 		B9D9ACCA1B502485007BCCAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9D9ACC91B502485007BCCAB /* Images.xcassets */; };
 		B9D9ACD81B5027C8007BCCAB /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D9ACCD1B5027C8007BCCAB /* AppKit+CoreCode.m */; };
-		B9D9ACD91B5027C8007BCCAB /* AppKit+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D9ACCF1B5027C8007BCCAB /* AppKit+Properties.m */; };
 		B9D9ACDA1B5027C8007BCCAB /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D9ACD11B5027C8007BCCAB /* CoreLib.m */; };
 		B9D9ACDB1B5027C8007BCCAB /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D9ACD41B5027C8007BCCAB /* Foundation+CoreCode.m */; };
-		B9D9ACDC1B5027C8007BCCAB /* Foundation+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D9ACD71B5027C8007BCCAB /* Foundation+Properties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,16 +68,10 @@
 		B9D9ACC91B502485007BCCAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B9D9ACCC1B5027C8007BCCAB /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
 		B9D9ACCD1B5027C8007BCCAB /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
-		B9D9ACCE1B5027C8007BCCAB /* AppKit+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+Properties.h"; sourceTree = "<group>"; };
-		B9D9ACCF1B5027C8007BCCAB /* AppKit+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+Properties.m"; sourceTree = "<group>"; };
 		B9D9ACD01B5027C8007BCCAB /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
 		B9D9ACD11B5027C8007BCCAB /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
-		B9D9ACD21B5027C8007BCCAB /* CoreLib_Availability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib_Availability.h; sourceTree = "<group>"; };
 		B9D9ACD31B5027C8007BCCAB /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
 		B9D9ACD41B5027C8007BCCAB /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
-		B9D9ACD51B5027C8007BCCAB /* Foundation+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Indexing.h"; sourceTree = "<group>"; };
-		B9D9ACD61B5027C8007BCCAB /* Foundation+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+Properties.h"; sourceTree = "<group>"; };
-		B9D9ACD71B5027C8007BCCAB /* Foundation+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Properties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,16 +151,10 @@
 			children = (
 				B9D9ACCC1B5027C8007BCCAB /* AppKit+CoreCode.h */,
 				B9D9ACCD1B5027C8007BCCAB /* AppKit+CoreCode.m */,
-				B9D9ACCE1B5027C8007BCCAB /* AppKit+Properties.h */,
-				B9D9ACCF1B5027C8007BCCAB /* AppKit+Properties.m */,
 				B9D9ACD01B5027C8007BCCAB /* CoreLib.h */,
 				B9D9ACD11B5027C8007BCCAB /* CoreLib.m */,
-				B9D9ACD21B5027C8007BCCAB /* CoreLib_Availability.h */,
 				B9D9ACD31B5027C8007BCCAB /* Foundation+CoreCode.h */,
 				B9D9ACD41B5027C8007BCCAB /* Foundation+CoreCode.m */,
-				B9D9ACD51B5027C8007BCCAB /* Foundation+Indexing.h */,
-				B9D9ACD61B5027C8007BCCAB /* Foundation+Properties.h */,
-				B9D9ACD71B5027C8007BCCAB /* Foundation+Properties.m */,
 			);
 			name = CoreLib;
 			path = ../CoreLib/CoreLib;
@@ -219,7 +205,7 @@
 		B90970031B0A50D80086CCA2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "CoreCode Limited";
 				TargetAttributes = {
 					B909700A1B0A50D80086CCA2 = {
@@ -289,10 +275,8 @@
 			files = (
 				B9D9ACDB1B5027C8007BCCAB /* Foundation+CoreCode.m in Sources */,
 				B9D9ACDA1B5027C8007BCCAB /* CoreLib.m in Sources */,
-				B9D9ACD91B5027C8007BCCAB /* AppKit+Properties.m in Sources */,
 				B9D9ACD81B5027C8007BCCAB /* AppKit+CoreCode.m in Sources */,
 				B90970391B0A50E50086CCA2 /* FinderSync.m in Sources */,
-				B9D9ACDC1B5027C8007BCCAB /* Foundation+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,14 +308,20 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -339,6 +329,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -368,14 +359,20 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

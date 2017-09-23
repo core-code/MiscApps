@@ -32,7 +32,8 @@ int durationSecs;
 					  @"-i",
 					  movie.path,
 					].runAsTask;
-	
+
+
 	NSString *duration = [[[res split:@"Duration: "][1] split:@","][0] split:@"."][0];
 
 	durationSecs = [[duration split:@":"][0] intValue] * 3600 +
@@ -43,7 +44,6 @@ int durationSecs;
 	NSString *desc = makeString(@"Duration: %@  (%i seconds)\nFilesize: %lluMB", duration, durationSecs, (size / (1024 * 1024)));
 
 	@"fileDescription".defaultString = desc;
-
 }
 
 - (IBAction)cutMovie:(id)sender
@@ -99,11 +99,7 @@ int durationSecs;
 							   backing:NSBackingStoreBuffered
 							   defer:YES];
 
-			 [NSApp beginSheet:progressPanel
-				modalForWindow:self.window
-				 modalDelegate:nil
-				didEndSelector:nil
-				   contextInfo:NULL];
+             [self.window beginSheet:progressPanel completionHandler:^(NSModalResponse returnCode) {}];
 
 			 NSProgressIndicator *ind = [[NSProgressIndicator alloc] initWithFrame:NSMakeRect(10, 10, 100, 20)];
 			 [ind setIndeterminate:YES];
