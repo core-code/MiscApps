@@ -27,7 +27,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - (void)perform
 {
 
-	tmpPath = [makeTempFolder() stringByAppendingString:@"/"];
+	tmpPath = [makeTempDirectory() stringByAppendingString:@"/"];
 	tmpURL = tmpPath.fileURL;
 	cc_log_debug(@"%@", tmpPath);
 
@@ -42,7 +42,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 	{
 		NSURL *path = @"~/Library/Preferences/".expanded.fileURL;
-		for (NSString *p in [path.path.dirContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'com.corecode'"])
+		for (NSString *p in [path.path.directoryContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'com.corecode'"])
 			[fileManager copyItemAtURL:[path add:p] toURL:[tmpURL add:p] error:NULL];
 	}
 

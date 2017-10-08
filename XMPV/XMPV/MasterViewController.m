@@ -76,7 +76,7 @@ extern NSString *_origdir, *_projectdir;
 		return;
 	}
     
-	NSArray *pbprojFilePaths = [dstPath2.dirContentsRecursive filteredUsingPredicateString:@"self ENDSWITH[cd] 'project.pbxproj' and NOT self CONTAINS '__MACOSX'"];
+	NSArray *pbprojFilePaths = [dstPath2.directoryContentsRecursive filteredUsingPredicateString:@"self ENDSWITH[cd] 'project.pbxproj' and NOT self CONTAINS '__MACOSX'"];
 	if ([pbprojFilePaths count])
 	{
 		NSString *pbproj = NON_NIL_STR([[pbprojFilePaths sortedArrayByKey:@"length"] safeObjectAtIndex:0]);
@@ -106,7 +106,7 @@ extern NSString *_origdir, *_projectdir;
     
     dispatch_after_main(0.1, ^
     {
-    for (NSString *file in [cc.docDir.dirContents filteredUsingPredicateString:@"self ENDSWITH[cd] '.zip'"])
+    for (NSString *file in [cc.docDir.directoryContents filteredUsingPredicateString:@"self ENDSWITH[cd] '.zip'"])
     {
         if (![self->_projects containsDictionaryWithKey:@"zipName" equalTo:file])
         {

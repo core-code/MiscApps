@@ -33,7 +33,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)perform
 {
-	tmpPath = [makeTempFolder() stringByAppendingString:@"/"];
+	tmpPath = [makeTempDirectory() stringByAppendingString:@"/"];
 	tmpURL = tmpPath.fileURL;
 	cc_log_debug(@"%@", tmpPath);
 
@@ -50,18 +50,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     for (NSString *partial in @[@"~/Library/Logs/DiagnosticReports/", @"/Library/Logs/DiagnosticReports/"])
     {
 		NSURL *path = partial.expanded.fileURL;
-		for (NSURL *p in path.dirContentsRecursive)
+		for (NSURL *p in path.directoryContentsRecursive)
 			if ([p.path contains:@"corecode"] || [p.contents.string contains:@"corecode"])
 				[fileManager copyItemAtURL:p toURL:[tmpURL add:p.lastPathComponent] error:NULL];
 	}
 	{
 		NSURL *path = @"~/Library/Preferences/".expanded.fileURL;
-		for (NSString *p in [path.path.dirContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'com.corecode'"])
+		for (NSString *p in [path.path.directoryContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'com.corecode'"])
 			[fileManager copyItemAtURL:[path add:p] toURL:[tmpURL add:p] error:NULL];
 	}
 	{
 		NSURL *path = @"~/Library/Containers/".expanded.fileURL;
-		for (NSString *p in [path.path.dirContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'com.corecode'"])
+		for (NSString *p in [path.path.directoryContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'com.corecode'"])
 			[fileManager copyItemAtURL:[path add:p] toURL:[tmpURL add:p] error:NULL];
 	}
 
@@ -79,7 +79,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     NSMutableString *im = [NSMutableString new];
     for (NSString *path in @[@"/Library/InputManagers", @"~/Library/InputManagers".stringByExpandingTildeInPath])
-        for (NSString *content in path.dirContents)
+        for (NSString *content in path.directoryContents)
              [im appendString:content];
     [tmpURL add:@"inputmanagers"].contents = im.data;
 

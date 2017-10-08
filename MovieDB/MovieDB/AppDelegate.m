@@ -92,7 +92,7 @@ NSDocumentController *sharedDocumentController;
 
 
 
-	for (NSString *bundlePath in NSBundle.mainBundle.builtInPlugInsPath.dirContents)
+	for (NSString *bundlePath in NSBundle.mainBundle.builtInPlugInsPath.directoryContents)
 	{
 		NSMenuItem *mi = [[NSMenuItem alloc] init];
 		NSString *title = bundlePath.lastPathComponent.stringByDeletingPathExtension;

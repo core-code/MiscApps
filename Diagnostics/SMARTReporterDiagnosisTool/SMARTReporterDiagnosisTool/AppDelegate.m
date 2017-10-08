@@ -33,7 +33,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)perform
 {
-	tmpPath = [makeTempFolder() stringByAppendingString:@"/"];
+	tmpPath = [makeTempDirectory() stringByAppendingString:@"/"];
 	tmpURL = tmpPath.fileURL;
 	LOG(tmpPath);
 
@@ -60,7 +60,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     for (NSString *partial in @[@"~/Library/Logs/DiagnosticReports/", @"/Library/Logs/DiagnosticReports/"])
 	{
         NSURL *path = partial.expanded.fileURL;
-		for (NSString *p in [path.path.dirContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'SMARTReporter'"])
+		for (NSString *p in [path.path.directoryContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'SMARTReporter'"])
 			[fileManager copyItemAtURL:[path add:p] toURL:[tmpURL add:p] error:NULL];
 	}
 

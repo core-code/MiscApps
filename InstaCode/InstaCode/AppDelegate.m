@@ -34,8 +34,8 @@ CONST_KEY(XCode)
 {
 	cc = [CoreLib new];
 	
-	self.presetsNames = [@[@"Preset:"] arrayByAddingObjectsFromArray:[@[cc.resDir, @"Presets"].path.dirContents mapped:^(id input){return [input replaced:@".txt" with:@""];}]];
-	self.snippetNames = [@[@"Snippets:"] arrayByAddingObjectsFromArray:[@[cc.resDir, @"Snippets"].path.dirContents mapped:^(id input){return [input replaced:@".txt" with:@""];}]];
+	self.presetsNames = [@[@"Preset:"] arrayByAddingObjectsFromArray:[@[cc.resDir, @"Presets"].path.directoryContents mapped:^(id input){return [input replaced:@".txt" with:@""];}]];
+	self.snippetNames = [@[@"Snippets:"] arrayByAddingObjectsFromArray:[@[cc.resDir, @"Snippets"].path.directoryContents mapped:^(id input){return [input replaced:@".txt" with:@""];}]];
 
 	[_compilationTextView setFont:[NSFont fontWithName:@"Menlo" size:12]];
 
@@ -52,7 +52,7 @@ CONST_KEY(XCode)
 	
 	
 	// check xcode versions
-	NSArray *xcodeVersions = [[@"/Applications".dirContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'Xcode'"] filtered:^BOOL(NSString *s){return makeString(@"/Applications/%@/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/ToolchainInfo.plist", s).fileExists;}];
+	NSArray *xcodeVersions = [[@"/Applications".directoryContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'Xcode'"] filtered:^BOOL(NSString *s){return makeString(@"/Applications/%@/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/ToolchainInfo.plist", s).fileExists;}];
 	if (xcodeVersions.empty)
 	{
 		NSRunAlertPanel(@"Error", @"You need to install Xcode to use InstaCode.\n\nIt is a free download on the Mac App Store.\n\nIf you already have it installed, make sure it is in your /Applications folder and its name still begins with 'Xcode'.", @"OK", nil, nil);

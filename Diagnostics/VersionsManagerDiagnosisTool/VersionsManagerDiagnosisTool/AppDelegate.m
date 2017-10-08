@@ -33,7 +33,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)perform
 {
-	tmpPath = [makeTempFolder() stringByAppendingString:@"/"];
+	tmpPath = [makeTempDirectory() stringByAppendingString:@"/"];
 	tmpURL = tmpPath.fileURL;
 	cc_log_debug(@"%@", tmpPath);
 
@@ -312,7 +312,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	int times = 0;
 	while (!done) // wait for sysdiagnose to finish
 	{
-		NSArray <NSURL *> *dc = [tmpURL add:@"sysdiagnose"].dirContents;
+		NSArray <NSURL *> *dc = [tmpURL add:@"sysdiagnose"].directoryContents;
 		NSArray <NSURL *> *dcf = [dc filtered:^BOOL(NSURL *input) { return [input.path hasSuffix:@"tar.gz"]; }];
 		done = (dcf.count > 0);
 		times++;
