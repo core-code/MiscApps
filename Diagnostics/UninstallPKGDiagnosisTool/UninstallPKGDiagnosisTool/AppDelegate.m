@@ -52,7 +52,28 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	[fileManager copyItemAtPath:@"/Library/PrivilegedHelperTools/com.corecode.UninstallPKGDeleteHelper"
 						 toPath:[tmpPath stringByAppendingString:@"PrivilegedHelperToolscom.corecode.UninstallPKGDeleteHelper"] error:NULL];
 
+    [fileManager createDirectoryAtPath:[tmpURL add:@"RD"].path withIntermediateDirectories:YES attributes:NULL error:NULL];
+    [fileManager createDirectoryAtPath:[tmpURL add:@"URD"].path withIntermediateDirectories:YES attributes:NULL error:NULL];
+    [fileManager createDirectoryAtPath:[tmpURL add:@"SRD"].path withIntermediateDirectories:YES attributes:NULL error:NULL];
 
+    [tmpURL add:@"ReceiptsDir"].contents = [@[@"/bin/ls", @"-la", @"/private/var/db/receipts/"] runAsTask].data;
+    {
+        NSURL *path = @"/private/var/db/receipts/".fileURL;
+        for (NSString *p in [path.path.directoryContents filteredUsingPredicateString:@"self ENDSWITH[cd] 'plist'"])
+            [fileManager copyItemAtURL:[path add:p] toURL:[[tmpURL add:@"RD"] add:p] error:NULL];
+    }
+    [tmpURL add:@"UserReceiptsDir"].contents = [@[@"/bin/ls", @"-la", @"~/Library/Receipts/"] runAsTask].data;
+    {
+        NSURL *path = @"~/Library/Receipts/".expanded.fileURL;
+        for (NSString *p in [path.path.directoryContents filteredUsingPredicateString:@"self ENDSWITH[cd] 'plist'"])
+            [fileManager copyItemAtURL:[path add:p] toURL:[[tmpURL add:@"URD"] add:p] error:NULL];
+    }
+    [tmpURL add:@"SystemReceiptsDir"].contents = [@[@"/bin/ls", @"-la", @"/System/Library/Receipts/"] runAsTask].data;
+    {
+        NSURL *path = @"/System/Library/Receipts/".fileURL;
+        for (NSString *p in [path.path.directoryContents filteredUsingPredicateString:@"self ENDSWITH[cd] 'plist'"])
+            [fileManager copyItemAtURL:[path add:p] toURL:[[tmpURL add:@"SRD"] add:p] error:NULL];
+    }
 
 	[tmpURL add:@"LaunchDaemonsDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/LaunchDaemons/"] runAsTask].data;
 	[tmpURL add:@"PrivilegedHelperToolsDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/PrivilegedHelperTools/"] runAsTask].data;
@@ -302,11 +323,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				if (bytesRead < 1)
 					break;
 				else
-					{
-    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
-    if (appendstring)
-        [result appendString:appendstring];
-}
+                {
+                    NSString *appendstring = [[NSString alloc] initWithBytes:myReadBuffer length:bytesRead encoding:NSUTF8StringEncoding];
+                    if (appendstring)
+                        [result appendString:appendstring];
+                }
 			}
 			[tmpURL add:makeString(@"launchctlprintuser%li", (long)idNum.integerValue)].contents = result.data;
 		}
@@ -344,11 +365,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             [tmpURL add:makeString(@"launchctlprintgui%li", (long)idNum.integerValue)].contents = result.data;
         }
 	}
-	// The only way to guarantee that a credential acquired when you
-	// request a right is not shared with other authorization instances is
-	// to destroy the credential.  To do so, call the AuthorizationFree
-	// function with the flag kAuthorizationFlagDestroyRights.
-	// http://developer.apple.com/documentation/Security/Conceptual/authorization_concepts/02authconcepts/chapter_2_section_7.html
+
 	status = AuthorizationFree(authorizationRef, kAuthorizationFlagDestroyRights);
 
 
