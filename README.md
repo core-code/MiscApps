@@ -25,6 +25,9 @@ An application for switching between running applications - like the "Dock", but
 	
 CHMExtractor
 An application for converting/extracting Compiled HTML Help (.chm) files so you can view them in any browser.
+
+FinderGit
+A 'Finder extension' to view the Git source control status of your files and directories via 'badges' right in the Finder.
 	
 PDFullscreen
 An application for fullscreen PDF viewing - helpful for eBook reading.
