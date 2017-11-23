@@ -57,12 +57,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 						 toPath:[tmpPath stringByAppendingString:@"system.log.1.gz"] error:NULL];
 
     
-    for (NSString *partial in @[@"~/Library/Logs/DiagnosticReports/", @"/Library/Logs/DiagnosticReports/"])
-	{
-        NSURL *path = partial.expanded.fileURL;
-		for (NSString *p in [path.path.directoryContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'SMARTReporter'"])
-			[fileManager copyItemAtURL:[path add:p] toURL:[tmpURL add:p] error:NULL];
-	}
+    [fileManager copyItemAtPath:@"/Library/Logs/DiagnosticReports/"
+                         toPath:[tmpPath stringByAppendingString:@"DRG"] error:NULL];
+    
+    [fileManager copyItemAtPath:[@"~/Library/Logs/DiagnosticReports/" stringByExpandingTildeInPath]
+						 toPath:[tmpPath stringByAppendingString:@"DR"] error:NULL];
 
 	[tmpURL add:@"systeminfo"].contents = makeString(@"%@ \n %@ \n %@", [JMHostInformation machineType], [[NSProcessInfo processInfo] operatingSystemVersionString], [[[NSWorkspace sharedWorkspace] launchedApplications] description]).data;
 
