@@ -35,6 +35,9 @@ An application for fullscreen PDF viewing - helpful for eBook reading.
 **MovieCutter**
 An application for cutting/splitting any movie file types like MKV/MP4/etc.
 
+**MovieInfo**
+An application for getting textual info on the audio/video/subtitle tracks in a movie file like MKV/MP4/etc.
+
 **MovieDB**
 An application for easily managing your digital movie collection easily by using drag & drop.
 	
