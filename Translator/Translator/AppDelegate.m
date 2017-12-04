@@ -25,6 +25,12 @@
 	NSURL *url = [panel URL];
 
 	NSString *path = url.path;
+    
+    if (![path hasSuffix:@".string"])
+    {
+        alert_apptitled(@"Not a strings file", @"D'oh", nil, nil);
+        exit(1);
+    }
 	NSData *contents = path.contents;
 	NSString *n = contents.string;
 	NSString *sep = @".title\" = \"";
