@@ -38,7 +38,9 @@
 	self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
 	[self.statusItem setMenu:self.menu];
 
-
+    self.statusItem.button.wantsLayer = YES;
+    
+    
 	self.dax = makeMutableArray();
 	self.daxDates = makeMutableArray();
 
@@ -143,13 +145,35 @@
 
 
 	NSArray <NSString *> *comp = title.words;
-	if ([comp.firstObject isEqualToString:@"DAX"] && comp.count == 3)
-	{
-		[self.dax addObject:@(comp[1].floatValue)];
+	if ([comp.firstObject isEqualToString:@"DAX"] && comp.count == 4)
+    {
+        float dfp = [[comp[1] replaced:@"." with:@""] replaced:@"," with:@"."].floatValue;
+		[self.dax addObject:@(dfp)];
 		[self.daxDates addObject:now];
 
 		if (title.length)
-			[self.statusItem setTitle:title];
+        {
+            [self.statusItem setTitle:title];
+            
+            NSString *cleanPercentageStr =[[[[comp[2] replaced:@"(" with:@""] replaced:@")" with:@""] replaced:@"%" with:@""] replaced:@"," with:@"."];
+            float cleanPercentage = cleanPercentageStr.floatValue;
+            if (cleanPercentage < -3)
+                self.statusItem.button.layer.backgroundColor =  makeColor(1.0, 0.0, 0.0, 1.0).CGColor;
+            else if (cleanPercentage < -2)
+                self.statusItem.button.layer.backgroundColor =  makeColor(1.0, 0.3, 0.3, 1.0).CGColor;
+            else if (cleanPercentage < -1)
+                self.statusItem.button.layer.backgroundColor =  makeColor(1.0, 0.5, 0.5, 1.0).CGColor;
+            else if (cleanPercentage < 0)
+                self.statusItem.button.layer.backgroundColor =  makeColor(1.0, 0.9, 0.9, 1.0).CGColor;
+            else if (cleanPercentage < 1)
+                self.statusItem.button.layer.backgroundColor =  makeColor(0.9, 1.0, 0.9, 1.0).CGColor;
+            else if (cleanPercentage < 2)
+                self.statusItem.button.layer.backgroundColor =  makeColor(0.5, 1.0, 0.5, 1.0).CGColor;
+            else if (cleanPercentage < 3)
+                self.statusItem.button.layer.backgroundColor =  makeColor(0.3, 1.0, 0.3, 1.0).CGColor;
+            else
+                self.statusItem.button.layer.backgroundColor =  makeColor(0.0, 1.0, 0.0, 1.0).CGColor;
+        }
 	}
 
 	NSString *str = [(DOMHTMLElement *)[[[self.webView mainFrame] DOMDocument] documentElement] outerHTML];
@@ -163,12 +187,13 @@
 
 		if (comp1.count > 1)
 		{
+            cc_log_debug(@"found splitter %@", splitter);
 
-
-			@try {
+			@try
+            {
 				NSString *field = [comp1[1] split:@"</tr>"][0];
-				NSString *percent = [[field split:@"\"changeper\">"][1] split:@"</div>"][0];
-				NSString *valstr = [[[[field split:@"field=\"bid\">"][1] split:@"<"][0] replaced:@"." with:@""] replaced:@"," with:@"."];
+                NSString *percent = [[[[field split:@"%</span>"][0] split:@">"].lastObject.trimmedOfWhitespace replaced:@"&nbsp;" with:@""] replaced:@"," with:@"."];
+				NSString *valstr = [[field split:@"data-jsvalue=\""][1] split:@"\""][0];
 
 				assert(percent);
 				NSMutableArray <NSNumber *> *valarray = self.values[name];
@@ -183,16 +208,14 @@
 				while (datearray.count > 50) [datearray removeFirstObject];
 				while (percarray.count > 50) [percarray removeFirstObject];
 			}
-			@catch (NSException *exception) {
-
+			@catch (NSException *exception)
+            {
+                cc_log_debug(@"got exception %@", exception.description);
+			}
+			@finally
+            {
 
 			}
-			@finally {
-
-
-
-			}
-
 		}
 		else
 		{
