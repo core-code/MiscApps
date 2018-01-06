@@ -65,6 +65,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 	[tmpURL add:@"systeminfo"].contents = makeString(@"%@ \n %@ \n %@", [JMHostInformation machineType], [[NSProcessInfo processInfo] operatingSystemVersionString], [[[NSWorkspace sharedWorkspace] launchedApplications] description]).data;
 
+    [tmpURL add:@"sample_SR"].contents = [@[@"/usr/bin/sample", @"SMARTReporter"] runAsTask].data;
+    [tmpURL add:@"sample_sc"].contents = [@[@"/usr/bin/sample", @"smartctl"] runAsTask].data;
+
 	[tmpURL add:@"lsof"].contents = [@[@"/usr/sbin/lsof", @"-c", @"SMART"] runAsTask].data;
 	[tmpURL add:@"ps"].contents = [@[@"/bin/ps", @"ax"] runAsTask].data;
 	[tmpURL add:@"loginItems"].contents = [self loginItems].data;
