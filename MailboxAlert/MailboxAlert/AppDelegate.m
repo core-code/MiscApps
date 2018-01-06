@@ -91,8 +91,8 @@ CONST_KEY(WelcomeShown)
 
 	self.visibilityManager = [VisibilityManager new];
 	self.visibilityManager.statusItemMenu = self.statusItemMenu;
+    self.visibilityManager.templateSetting = kTemplateAlways;
 	NSImage *image = [NSImage imageNamed:@"menuicon_ok"];
-	[image setTemplate:YES];
 	self.visibilityManager.menubarIcon = image;
 	self.loginItemManager = [LoginItemManager new];
 
@@ -123,7 +123,6 @@ CONST_KEY(WelcomeShown)
 		(self.summaryLabel).stringValue = makeString(@"%li accounts, %li problems", self.accountArray.count, problems);
 
 		NSImage *image = [NSImage imageNamed:(problems && kNotificationMenubarKey.defaultInt) ? @"menuicon_error" : @"menuicon_ok"];
-		[image setTemplate:YES];
 		self.visibilityManager.menubarIcon = image;
 
 		self.visibilityManager.menuTooltip = makeString(@"MailboxAlert: %li accounts, %li problems (last check: %@)", self.accountArray.count, problems, [NSDateFormatter localizedStringFromDate:[NSDate date] dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterMediumStyle]);
@@ -198,11 +197,7 @@ CONST_KEY(WelcomeShown)
 
 - (void)startAccountEditing
 {
-	[NSApp beginSheet:self.setupPanel1
-	   modalForWindow:self.window
-		modalDelegate:nil
-	   didEndSelector:nil
-		  contextInfo:NULL];
+    [self.window beginSheet:self.setupPanel1 completionHandler:^(NSModalResponse r) {}];
 
 	self.passwordField.stringValue = NON_NIL_STR(self.currentAccount[@"password"]);
 	self.usernameField.stringValue = NON_NIL_STR(self.currentAccount[@"username"]);
@@ -328,10 +323,10 @@ CONST_KEY(WelcomeShown)
 				if ([mb[@"status"] hasPrefix:@"ERR"])
 				{
 					if ([mb[@"status"] hasPrefix:@"ERRSERVER"])
-						NSRunAlertPanel(cc.appName, @"The server you've entered doesn't seem to be a valid IMAP server or maybe it is offline at the moment.", @"OK", nil, nil);
+						alert_apptitled(@"The server you've entered doesn't seem to be a valid IMAP server or maybe it is offline at the moment.", @"OK", nil, nil);
 
 					if ([mb[@"status"] hasPrefix:@"ERRCREDENTIALS"])
-						NSRunAlertPanel(cc.appName, @"The username and password combination was not accepted by the server.", @"OK", nil, nil);
+						alert_apptitled(@"The username and password combination was not accepted by the server.", @"OK", nil, nil);
 				}
 				else
 				{
@@ -361,18 +356,14 @@ CONST_KEY(WelcomeShown)
 
 					[self updateThresholdField:nil];
 					
-					[NSApp beginSheet:self.setupPanel2
-					   modalForWindow:self.window
-						modalDelegate:nil
-					   didEndSelector:nil
-						  contextInfo:NULL];
+                    [self.window beginSheet:self.setupPanel2 completionHandler:^(NSModalResponse r) {}];
 				}
 			});
 		});
 	}
 	else
 	{
-		NSRunAlertPanel(cc.appName, @"You must enter a server and username and password to continue.", @"OK", nil, nil);
+		alert_apptitled(@"You must enter a server and username and password to continue.", @"OK", nil, nil);
 	}
 }
 
@@ -440,7 +431,10 @@ CONST_KEY(WelcomeShown)
 	//	Quota 1480.996094 10333.430664
 
 	NSMutableDictionary *out = [NSMutableDictionary new];
-	NSString *res = [@[@"/usr/bin/python", @"imap.py".resourcePath, account[@"server"], account[@"username"], account[@"password"]] runAsTask];
+    NSString *server = account[@"server"];
+    NSString *username = account[@"username"];
+    NSString *passwd =  account[@"password"];
+	NSString *res = [@[@"/usr/bin/python", @"imap.py".resourcePath, server, username, passwd] runAsTask];
 
 //	LOG(res);
 	

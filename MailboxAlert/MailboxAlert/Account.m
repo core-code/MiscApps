@@ -214,7 +214,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	if ((![[SSKeychain passwordForService:makeString(@"mailbox://%@", self.server) account:self.username] isEqualToString:_password]) &&	// not already stored
 		(![SSKeychain setPassword:_password forService:makeString(@"mailbox://%@", self.server) account:self.username error:&error]))		// couldn't store it
 	{
-		NSRunAlertPanel(@"MailboxAlert Problem", @"MailboxAlert could not store your mailbox password securely in the system keychain. Please make sure you've allowed MailboxAlert to access the keychain and try again.", @"OK", nil, nil);
+		alert(@"MailboxAlert Problem", @"MailboxAlert could not store your mailbox password securely in the system keychain. Please make sure you've allowed MailboxAlert to access the keychain and try again.", @"OK", nil, nil);
 		exit(1);
 	}
 	
