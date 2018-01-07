@@ -3,7 +3,7 @@
 //  libmusicbrainz5
 //
 //  Created by CoreCode on 05/09/2016.
-//  Copyright © 2017 CoreCode Limited. All rights reserved.
+//  Copyright © 2018 CoreCode Limited. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

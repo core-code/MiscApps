@@ -3,7 +3,7 @@
 //  VCS
 //
 //  Created by CoreCode on 18.05.15.
-//  Copyright © 2017 CoreCode Limited. All rights reserved.
+//  Copyright © 2018 CoreCode Limited. All rights reserved.
 //
 
 #import "AppDelegate.h"
