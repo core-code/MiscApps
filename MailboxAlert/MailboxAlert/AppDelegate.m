@@ -277,10 +277,10 @@ CONST_KEY(WelcomeShown)
 
 - (IBAction)cancelAccount:(id)sender
 {
-	[NSApp endSheet:self.setupPanel1];
+	[self.window endSheet:self.setupPanel1];
 	[self.setupPanel1 orderOut:self];
 
-	[NSApp endSheet:self.setupPanel2];
+	[self.window endSheet:self.setupPanel2];
 	[self.setupPanel2 orderOut:self];
 }
 
@@ -330,7 +330,7 @@ CONST_KEY(WelcomeShown)
 				}
 				else
 				{
-					[NSApp endSheet:self.setupPanel1];
+					[self.window endSheet:self.setupPanel1];
 					[self.setupPanel1 orderOut:self];
 
 					[self.currentAccount addEntriesFromDictionary:mb];
@@ -377,7 +377,7 @@ CONST_KEY(WelcomeShown)
 
 - (IBAction)finishAccount:(id)sender
 {
-	[NSApp endSheet:self.setupPanel2];
+	[self.window endSheet:self.setupPanel2];
 	[self.setupPanel2 orderOut:self];
 
 

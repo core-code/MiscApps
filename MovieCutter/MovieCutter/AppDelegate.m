@@ -127,7 +127,7 @@ int durationSecs;
 
 				 dispatch_async_main(^
 				 {
-					[NSApp endSheet:progressPanel];
+					[self.window endSheet:progressPanel];					
 					[progressPanel orderOut:self];
 
 

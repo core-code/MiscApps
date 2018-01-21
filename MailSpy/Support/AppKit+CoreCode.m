@@ -111,7 +111,7 @@ static CONST_KEY(CoreCodeAssociatedValue)
 
 		[progressIndicator stopAnimation:self];
 		[NSApp activateIgnoringOtherApps:YES];
-		[NSApp endSheet:progressPanel];
+		[self endSheet:progressPanel];
 		[progressPanel orderOut:self];
 
 		[self setAssociatedValue:nil forKey:kCCProgressDetailInfoKey];
