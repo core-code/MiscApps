@@ -34,7 +34,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     
     
-    [FIFinderSyncController defaultController].directoryURLs = @[@"/Users/julian/Documents/CoreCode/".fileURL].set;
+    [FIFinderSyncController defaultController].directoryURLs = @[@"~/Documents/".expanded.fileURL].set;
 
 
     [[FIFinderSyncController defaultController] setBadgeImage:[NSImage imageNamed:@"green"] label:@"green" forBadgeIdentifier:@"green"];
