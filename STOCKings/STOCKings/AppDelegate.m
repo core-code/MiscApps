@@ -17,6 +17,7 @@
 @property (strong) IBOutlet WebView *webView;
 @property (strong) NSMenu *menu;
 @property (strong) NSStatusItem *statusItem;
+@property (strong) NSDate *lastNotDate;
 @property (strong) NSMutableArray <NSNumber *> *dax;
 @property (strong) NSMutableArray <NSDate *> *daxDates;
 @property (strong) NSDictionary <NSString *, NSMutableArray <NSNumber *> *> *values;
@@ -40,6 +41,7 @@
 
     self.statusItem.button.wantsLayer = YES;
     
+    self.lastNotDate = NSDate.date;
     
 	self.dax = makeMutableArray();
 	self.daxDates = makeMutableArray();
@@ -247,57 +249,37 @@
 	{
 		NSDate *date = self.daxDates[i];
 
-		if ([now timeIntervalSinceDate:date] < 10 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 10))
-		{
-			NSUserNotification *notification = [[NSUserNotification alloc] init];
+		if ([now timeIntervalSinceDate:_lastNotDate] > 5 && [now timeIntervalSinceDate:date] < 10 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 15))
+            [self sendNotification:makeString(@"DAX Rising %.1f fast", self.dax.lastObject.floatValue)];
 
-			notification.title = makeString(@"DAX Rising %.1f fast", self.dax.lastObject.floatValue);
+		if ([now timeIntervalSinceDate:_lastNotDate] > 5 && [now timeIntervalSinceDate:date] < 50 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 30))
+            [self sendNotification:makeString(@"DAX Rising %.1f", self.dax.lastObject.floatValue)];
 
-			[[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
-		}
-		if ([now timeIntervalSinceDate:date] < 50 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 20))
-		{
-			NSUserNotification *notification = [[NSUserNotification alloc] init];
-
-			notification.title = makeString(@"DAX Rising %.1f", self.dax.lastObject.floatValue);
-
-			[[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
-		}
-		if ([now timeIntervalSinceDate:date] < 250 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 30))
-		{
-			NSUserNotification *notification = [[NSUserNotification alloc] init];
-
-			notification.title = makeString(@"DAX Rising %.1f slowly", self.dax.lastObject.floatValue);
-
-			[[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
-		}
+		if ([now timeIntervalSinceDate:_lastNotDate] > 5 && [now timeIntervalSinceDate:date] < 250 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 45))
+            [self sendNotification:makeString(@"DAX Rising %.1f slowly", self.dax.lastObject.floatValue)];
 
 
-		if ([now timeIntervalSinceDate:date] < 10 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -10))
-		{
-			NSUserNotification *notification = [[NSUserNotification alloc] init];
 
-			notification.title = makeString(@"DAX Falling %.1f fast", self.dax.lastObject.floatValue);
+		if ([now timeIntervalSinceDate:_lastNotDate] > 5 && [now timeIntervalSinceDate:date] < 10 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -15))
+            [self sendNotification:makeString(@"DAX Falling %.1f fast", self.dax.lastObject.floatValue)];
 
-			[[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
-		}
-		if ([now timeIntervalSinceDate:date] < 50 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -20))
-		{
-			NSUserNotification *notification = [[NSUserNotification alloc] init];
+		if ([now timeIntervalSinceDate:_lastNotDate] > 5 && [now timeIntervalSinceDate:date] < 50 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -30))
+            [self sendNotification:makeString(@"DAX Falling %.1f", self.dax.lastObject.floatValue)];
 
-			notification.title = makeString(@"DAX Falling %.1f", self.dax.lastObject.floatValue);
-
-			[[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
-		}
-		if ([now timeIntervalSinceDate:date] < 250 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -30))
-		{
-			NSUserNotification *notification = [[NSUserNotification alloc] init];
-
-			notification.title = makeString(@"DAX Falling %.1f slowly", self.dax.lastObject.floatValue);
-
-			[[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
-		}
+		if ([now timeIntervalSinceDate:_lastNotDate] > 5 && [now timeIntervalSinceDate:date] < 250 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -45))
+            [self sendNotification:makeString(@"DAX Falling %.1f slowly", self.dax.lastObject.floatValue)];
 	}
+}
+
+- (void)sendNotification:(NSString *)title
+{
+    NSUserNotification *notification = [[NSUserNotification alloc] init];
+    
+    notification.title = title;
+    
+    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    
+    self.lastNotDate = NSDate.date;
 }
 @end
 
