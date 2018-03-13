@@ -17,7 +17,7 @@
 @property (strong) IBOutlet WebView *webView;
 @property (strong) NSMenu *menu;
 @property (strong) NSStatusItem *statusItem;
-@property (strong) NSDate *lastNotDate;
+@property (strong) NSDate *lastNotificationDate;
 @property (strong) NSMutableArray <NSNumber *> *dax;
 @property (strong) NSMutableArray <NSDate *> *daxDates;
 @property (strong) NSDictionary <NSString *, NSMutableArray <NSNumber *> *> *values;
@@ -27,6 +27,8 @@
 @end
 
 #define kDAXURL @"http://www.finanzen.net/index/DAX-Realtime"
+#define kPriceList     @{ @"TecDAX" : makeMutableArray(), @"MDAX" : makeMutableArray(), @"ESTX50" : makeMutableArray(), @"DOW.J" : makeMutableArray(), @"NAS100" : makeMutableArray(), @"S&amp;P 500" : makeMutableArray(), @"NIKKEI" : makeMutableArray(), @"ATX" : makeMutableArray(), @"Goldpreis" : makeMutableArray(), @"Ölpreis" : makeMutableArray(), @"Dollarkurs" : makeMutableArray()}
+
 
 @implementation AppDelegate
 
@@ -37,55 +39,20 @@
 
 	self.menu = [[NSMenu alloc] init];
 	self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-	[self.statusItem setMenu:self.menu];
-
+	self.statusItem.menu = self.menu;
     self.statusItem.button.wantsLayer = YES;
     
-    self.lastNotDate = NSDate.date;
+    self.lastNotificationDate = NSDate.date;
     
 	self.dax = makeMutableArray();
 	self.daxDates = makeMutableArray();
 
-	self.values =
-	@{ @"TecDAX" : makeMutableArray(),
-		 @"MDAX" : makeMutableArray(),
-		 @"ESTX50" : makeMutableArray(),
-		 @"DOW.J" : makeMutableArray(),
-		 @"NAS100" : makeMutableArray(),
-		 @"S&amp;P 500" : makeMutableArray(),
-		 @"NIKKEI" : makeMutableArray(),
-		 @"ATX" : makeMutableArray(),
-		 @"Goldpreis" : makeMutableArray(),
-		 @"Ölpreis" : makeMutableArray(),
-		 @"Dollarkurs" : makeMutableArray()};
+	self.values = kPriceList;
+	self.dates = kPriceList;
+    self.percents = kPriceList;
 
-	self.dates =
-	@{ @"TecDAX" : makeMutableArray(),
-	   @"MDAX" : makeMutableArray(),
-	   @"ESTX50" : makeMutableArray(),
-	   @"DOW.J" : makeMutableArray(),
-	   @"NAS100" : makeMutableArray(),
-	   @"S&amp;P 500" : makeMutableArray(),
-	   @"NIKKEI" : makeMutableArray(),
-	   @"ATX" : makeMutableArray(),
-	   @"Goldpreis" : makeMutableArray(),
-	   @"Ölpreis" : makeMutableArray(),
-	   @"Dollarkurs" : makeMutableArray()};
-
-	self.percents =
-	@{ @"TecDAX" : makeMutableArray(),
-	   @"MDAX" : makeMutableArray(),
-	   @"ESTX50" : makeMutableArray(),
-	   @"DOW.J" : makeMutableArray(),
-	   @"NAS100" : makeMutableArray(),
-	   @"S&amp;P 500" : makeMutableArray(),
-	   @"NIKKEI" : makeMutableArray(),
-	   @"ATX" : makeMutableArray(),
-	   @"Goldpreis" : makeMutableArray(),
-	   @"Ölpreis" : makeMutableArray(),
-	   @"Dollarkurs" : makeMutableArray()};
-
-	[self reload];
+    
+    [self reload:nil];
 }
 
 - (void)clicked:(id)sender
@@ -98,7 +65,7 @@
 	[NSApp terminate:self];
 }
 
-- (void)reload
+- (void)reload:(id)sender
 {
 	cc_log_debug(@"reload");
 	for (NSMutableArray *array in @[self.dax, self.daxDates, self.values, self.dates, self.percents])
@@ -116,34 +83,37 @@
 
 - (void)load
 {
-	[[self.webView mainFrame] loadRequest:kDAXURL.URL.request];
+    cc_log_debug(@"load");
+	[self.webView.mainFrame loadRequest:kDAXURL.URL.request];
+    [self performSelector:@selector(load) withObject:nil afterDelay:5*60]; // backup load if didReceiveTitle is never valled
 }
 
 - (void)webView:(WebView *)sender didReceiveTitle:(NSString *)title forFrame:(WebFrame *)frame
 {
+    cc_log_debug(@"webView:didReceiveTitle:forFrame: %@", title);
 	[AppDelegate cancelPreviousPerformRequestsWithTarget:self];
 	NSDate *now = [NSDate date];
-	NSInteger hour = [now descriptionWithCalendarFormat:@"%H" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"] locale:nil].integerValue;
-	NSString *day = [now descriptionWithCalendarFormat:@"%a" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"] locale:nil];
+    NSInteger hour = [now stringUsingFormat:@"HH" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"]].integerValue;
+    NSString *day = [now stringUsingFormat:@"E" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"]];
 
-	int interval = 10*60;
+	int interval = 10*60; // load if site got stuck and won't reload title any more - every minute by default
 	if (hour >= 8 && hour <= 22 && ![@[@"Sat", @"Sun"] contains:day])
-		interval = 1*60.0;
+		interval = 1*60.0; // stuck load only every 10 min on weekends
 
 	NSDate *lastDate = self.daxDates.lastObject;
-	NSString *lastDay = [lastDate descriptionWithCalendarFormat:@"%a" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"] locale:nil];
+    NSString *lastDay = [lastDate stringUsingFormat:@"E" timeZone:[NSTimeZone timeZoneWithAbbreviation:@"CEST"]];
 
-	if (!lastDate || [now timeIntervalSinceDate:lastDate] > 3600)
-		cc_log_debug(@"Info: %@ %@  %@", day, lastDay, _daxDates);
 
-	if (lastDate && ![day isEqualToString:lastDay])
+	if (lastDate && ![day isEqualToString:lastDay]) // full reload every day
 	{
-		LOGSUCC;
-		[self reload];
+        cc_log_debug(@"Info: new day, full reload");
+        [self reload:nil];
 		return;
 	}
 	else
-		[self performSelector:@selector(load) withObject:nil afterDelay:interval];
+    {
+        [self performSelector:@selector(load) withObject:nil afterDelay:interval];
+    }
 
 
 	NSArray <NSString *> *comp = title.words;
@@ -189,7 +159,7 @@
 
 		if (comp1.count > 1)
 		{
-            cc_log_debug(@"found splitter %@", splitter);
+            //cc_log_debug(@"found splitter %@", splitter);
 
 			@try
             {
@@ -221,7 +191,7 @@
 		}
 		else
 		{
-			cc_log_debug(@"could not find splitter %@", splitter);
+			//cc_log_debug(@"could not find splitter %@", splitter);
 		}
 	}
 
@@ -230,12 +200,17 @@
 	[self.menu removeAllItems];
 	for (NSString *name in names)
 	{
-		NSMutableArray <NSNumber *>*valarray = self.values[name];
+		NSMutableArray <NSNumber *> *valarray = self.values[name];
 		NSMutableArray <NSString *> *percarray = self.percents[name];
 
 		[self.menu addItemWithTitle:makeString(@"%@ %@ (%@)", [name replaced:@"&amp;" with:@"&"], valarray.lastObject, percarray.lastObject) action:@selector(clicked:) keyEquivalent:@""];
 	}
 	[self.menu addItem:[NSMenuItem separatorItem]];
+    [self.menu addItemWithTitle:makeString(@"Current load: %@", [now stringUsingDateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle]) action:nil keyEquivalent:@""];
+    [self.menu addItemWithTitle:makeString(@"Next load: %@", [[NSDate dateWithTimeIntervalSinceNow:interval] stringUsingDateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle]) action:nil keyEquivalent:@""];
+
+    [self.menu addItem:[NSMenuItem separatorItem]];
+    [self.menu addItemWithTitle:@"Reload" action:@selector(reload:) keyEquivalent:@""];
 	[self.menu addItemWithTitle:@"Quit" action:@selector(quit:) keyEquivalent:@""];
 
 
@@ -249,24 +224,24 @@
 	{
 		NSDate *date = self.daxDates[i];
 
-		if ([now timeIntervalSinceDate:_lastNotDate] > 5 && [now timeIntervalSinceDate:date] < 10 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 15))
+		if ([now timeIntervalSinceDate:self.lastNotificationDate] > 5 && [now timeIntervalSinceDate:date] < 10 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 15))
             [self sendNotification:makeString(@"DAX Rising %.1f fast", self.dax.lastObject.floatValue)];
 
-		if ([now timeIntervalSinceDate:_lastNotDate] > 5 && [now timeIntervalSinceDate:date] < 50 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 30))
+		if ([now timeIntervalSinceDate:self.lastNotificationDate] > 5 && [now timeIntervalSinceDate:date] < 50 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 30))
             [self sendNotification:makeString(@"DAX Rising %.1f", self.dax.lastObject.floatValue)];
 
-		if ([now timeIntervalSinceDate:_lastNotDate] > 5 && [now timeIntervalSinceDate:date] < 250 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 45))
+		if ([now timeIntervalSinceDate:self.lastNotificationDate] > 5 && [now timeIntervalSinceDate:date] < 250 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 45))
             [self sendNotification:makeString(@"DAX Rising %.1f slowly", self.dax.lastObject.floatValue)];
 
 
 
-		if ([now timeIntervalSinceDate:_lastNotDate] > 5 && [now timeIntervalSinceDate:date] < 10 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -15))
+		if ([now timeIntervalSinceDate:self.lastNotificationDate] > 5 && [now timeIntervalSinceDate:date] < 10 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -15))
             [self sendNotification:makeString(@"DAX Falling %.1f fast", self.dax.lastObject.floatValue)];
 
-		if ([now timeIntervalSinceDate:_lastNotDate] > 5 && [now timeIntervalSinceDate:date] < 50 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -30))
+		if ([now timeIntervalSinceDate:self.lastNotificationDate] > 5 && [now timeIntervalSinceDate:date] < 50 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -30))
             [self sendNotification:makeString(@"DAX Falling %.1f", self.dax.lastObject.floatValue)];
 
-		if ([now timeIntervalSinceDate:_lastNotDate] > 5 && [now timeIntervalSinceDate:date] < 250 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -45))
+		if ([now timeIntervalSinceDate:self.lastNotificationDate] > 5 && [now timeIntervalSinceDate:date] < 250 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -45))
             [self sendNotification:makeString(@"DAX Falling %.1f slowly", self.dax.lastObject.floatValue)];
 	}
 }
@@ -279,12 +254,12 @@
     
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     
-    self.lastNotDate = NSDate.date;
+    self.lastNotificationDate = NSDate.date;
 }
 @end
 
 
-int main(int argc, const char * argv[])
+int main(int argc, const char *argv[])
 {
 	return NSApplicationMain(argc, argv);
 }
