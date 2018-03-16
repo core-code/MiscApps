@@ -12,6 +12,7 @@
 #import <Foundation/Foundation.h>
 #import "CoreLib.h"
 
+#undef NSLog
 
 int main(int argc, const char * argv[])
 {
@@ -28,7 +29,7 @@ int main(int argc, const char * argv[])
             double free2 = BYTES_TO_MB_NEW([values[@"NSURLVolumeAvailableCapacityForOpportunisticUsageKey"] doubleValue]);
 
             
-            cc_log(@"volumeAvailableCapacityForImportantUsage %.2f volumeAvailableCapacityForOpportunisticUsage %.2f", free1, free2);
+            NSLog(@"volumeAvailableCapacityForImportantUsage %.2f volumeAvailableCapacityForOpportunisticUsage %.2f", free1, free2);
             sleep(1);
         }
     }
