@@ -1,0 +1,186 @@
+//
+// Prefix header for all source files of the 'TableEdit-Lite' target in the 'TableEdit-Lite' project
+//
+
+#ifdef __OBJC__
+
+    #import <Cocoa/Cocoa.h>
+
+    #define USE_SNAPPY 1
+    #define USE_SECURITY 1
+	#define USE_CRASHHELPER 1
+    #define USE_IOKIT 1
+    #import "CoreLib.h"
+
+
+
+	typedef struct _coordinates
+	{
+		NSUInteger column;
+		NSUInteger row;
+	} coordinates;
+
+	CC_ENUM(uint8_t, importChoice)
+	{
+		importReplaceEverything = 0,
+		importAppend,
+		importReplaceAtSelection,
+		importNewDocument,
+	};
+	CC_ENUM(uint8_t, formatKind)
+	{
+		formatString = 0,
+        formatTime,
+		formatDate,
+		formatNumber,
+	};
+
+	CC_ENUM(uint8_t, formatNumberKind)
+	{
+		formatNumberDigits = 0,
+		formatNumberScientific,
+		formatNumberCurrency,
+		formatNumberPercent,
+		formatNumberCustom,
+	};
+
+	CC_ENUM(uint8_t, formatTimeKind)
+	{
+		formatTimeSeconds = 0,
+		formatTimeMinutes,
+		formatTimeHours,
+	};
+
+    CC_ENUM(uint8_t, chartPlotKind)
+    {
+        chartPlotBar = 10,
+        chartPlotPie = 11,
+        chartPlotLine = 12,
+		chartPlotScatter = 13
+    };
+
+
+	CC_ENUM(uint8_t, borderPlacement)
+	{
+		borderNone = 0,
+		borderAll,
+		borderOuter,
+		borderInner,
+		borderHorizontal,
+		borderVertical,
+		borderLeft,
+		borderTop,
+		borderRight,
+		borderBottom,
+	};
+	CC_ENUM(uint8_t, numberInputFormat)
+	{
+		inputFormatSystem = 0,
+		inputFormatDECCOMMA_GROUPPOINT,
+		inputFormatDECPOINT_GROUPCOMMA,
+		inputFormatDECCOMMA_GROUPSPACE,
+		inputFormatDECPOINT_GROUPSPACE
+	};
+
+	#import "../Frameworks/Sparkle.framework/Headers/SUUpdater.h"
+	#import <WebKit/WebKit.h>
+
+
+    CONST_KEY_DECLARATION(ShowWelcomeWindow)
+	CONST_KEY_DECLARATION(RowColorsEnabled)
+	CONST_KEY_DECLARATION(OddRowColor)
+	CONST_KEY_DECLARATION(EvenRowColor)
+	CONST_KEY_DECLARATION(ClosePopovers)
+	CONST_KEY_DECLARATION(CloseColorPanel)
+	CONST_KEY_DECLARATION(AutocreateBorder)
+	CONST_KEY_DECLARATION(PaddingRows)
+	CONST_KEY_DECLARATION(PaddingColumns)
+	CONST_KEY_DECLARATION(ImportAction)
+	CONST_KEY_DECLARATION(ImportDelimiter)
+	CONST_KEY_DECLARATION(ImportEncoding)
+	CONST_KEY_DECLARATION(GenerateAbsoluteReferences)
+	CONST_KEY_DECLARATION(ShowReferenceNotification)
+    CONST_KEY_ENUM_DECLARATION(NumberFormat, numberInputFormat)
+
+// cell data format attribute keys
+	CONST_KEY_ENUM(FormatType, formatKind)
+	CONST_KEY_ENUM(FormatNumberType, formatNumberKind)
+	CONST_KEY(FormatNumberDecimals)
+	CONST_KEY(FormatNumberGrouping)
+	CONST_KEY(FormatNumberCurrencyCurrency)
+	CONST_KEY(FormatNumberCustomPositiveFormat)
+	CONST_KEY(FormatNumberCustomNegativeFormat)
+	CONST_KEY(FormatDateDate)
+	CONST_KEY(FormatDateTime)
+	CONST_KEY_ENUM(FormatTimeType, formatTimeKind)
+	CONST_KEY(FormatTimeFormat)
+// cell background style attribute keys
+    CONST_KEY(BackgroundColor)
+    CONST_KEY(BackgroundBorderColor)
+    CONST_KEY(BackgroundBorderWidth)
+    CONST_KEY(BackgroundBorderExistsLeft)
+    CONST_KEY(BackgroundBorderExistsRight)
+    CONST_KEY(BackgroundBorderExistsBottom)
+    CONST_KEY(BackgroundBorderExistsTop)
+    CONST_KEY(BackgroundBorderMerged)
+// cell font style attribute keys
+    CONST_KEY(FontColor)
+    CONST_KEY(FontFont)
+    CONST_KEY(FontAlignment)
+
+// print settings
+    CONST_KEY(PrintSettingsLeftMargin)
+    CONST_KEY(PrintSettingsRightMargin)
+    CONST_KEY(PrintSettingsBottomMargin)
+    CONST_KEY(PrintSettingsTopMargin)
+    CONST_KEY(PrintSettingsHorizontallyCentered)
+    CONST_KEY(PrintSettingsVerticallyCentered)
+    CONST_KEY(PrintSettingsHorizontalPagination)
+    CONST_KEY(PrintSettingsVerticalPagination)
+
+
+
+	#import <LibXL/LibXL.h>
+	#pragma clang diagnostic push
+	#pragma clang diagnostic ignored "-Wdocumentation-unknown-command"
+	#pragma clang diagnostic ignored "-Wundef"
+	#pragma clang diagnostic ignored "-Wpadded"
+	#pragma clang diagnostic pop
+
+
+
+	extern NSCharacterSet *cellAddressForbiddenCharacterset;
+	extern NSDate *excelBaseDate;
+	extern NSCalendar *timezonelessCalendar;
+
+#ifndef LIBXLNAME
+#warning no license for LIBXL provided, XLS import and export wont work
+#define LIBXLNAME "STUB"
+#endif
+#ifndef LIBXLKEY
+#warning no license for LIBXL provided, XLS import and export wont work
+#define LIBXLKEY "STUB"
+#endif
+
+
+#if defined(DEBUG) && !defined(XCTEST)
+#define VALIDATE [self validate]
+#else
+#define VALIDATE ;
+#endif
+
+//#ifdef RELEASE
+//	#undef assert
+//	#define	assert(e) (__builtin_expect(!(e), 0) ? alert_feedback_fatal(@"Fatal Error occured, pls send to us", makeString(@"%@ %@ %i %@", @(__func__), @(__FILE__), __LINE__, @(#e))) : (void)0)
+//#endif
+
+#ifdef RELEASE  // we need debug info on actions for now
+	#undef LOGFUNCA
+    #define LOGFUNCA log_to_prefs(makeString(@"%@ %@ (%p)", self.undoManager.isUndoing ? @"UNDOACTION" : (self.undoManager.isRedoing ? @"REDOACTION" : @"ACTION"), @(__PRETTY_FUNCTION__), (__bridge void *)self))
+    #undef LOGFUNCPARAMA
+    #define LOGFUNCPARAMA(x) log_to_prefs(makeString(@"%@ %@ (%p) [%@]", self.undoManager.isUndoing ? @"UNDOACTION" : (self.undoManager.isRedoing ? @"REDOACTION" : @"ACTION"), @(__PRETTY_FUNCTION__), (__bridge void *)self, [(x) description]))
+#endif
+
+#endif
+
+

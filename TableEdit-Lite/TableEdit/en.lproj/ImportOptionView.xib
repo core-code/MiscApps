@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="487" height="247"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box autoresizesSubviews="NO" title="CSV Import Options" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="AVM-k8-i7X">
+                    <rect key="frame" x="17" y="165" width="453" height="62"/>
+                    <view key="contentView" id="afl-vX-jcf">
+                        <rect key="frame" x="1" y="1" width="451" height="46"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rcV-cT-IBc">
+                                <rect key="frame" x="218" y="17" width="84" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Encoding:" id="YaC-av-CWo">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="71c-1j-iG9">
+                                <rect key="frame" x="16" y="18" width="71" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Delimiter:" id="I5G-hw-eEI">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="bhR-Ar-JLG">
+                                <rect key="frame" x="91" y="12" width="124" height="26"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="6th-Nu-K2Z">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" title="OtherViews" id="Gjt-4r-knp">
+                                        <items>
+                                            <menuItem title="Automatic" id="PW3-N8-MQc"/>
+                                            <menuItem title="Comma (,)" id="yWB-r6-WDs"/>
+                                            <menuItem title="Semicolon (;)" id="f1M-qQ-hly"/>
+                                            <menuItem title="Tab (⇥)" id="5yo-WY-56x"/>
+                                            <menuItem title="Colon (:)" id="YZ7-bF-amJ"/>
+                                            <menuItem title="Space ( )" id="4pk-3C-Kar"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <binding destination="ed4-k0-2gP" name="selectedIndex" keyPath="values.ImportDelimiter" id="bsz-Co-Hv6"/>
+                                </connections>
+                            </popUpButton>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="BYA-Wr-40c">
+                                <rect key="frame" x="306" y="11" width="130" height="26"/>
+                                <popUpButtonCell key="cell" type="push" title="Automatic" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="mMi-i1-rzH" id="CHo-nF-qhn">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" title="OtherViews" id="3ai-IW-14T">
+                                        <items>
+                                            <menuItem title="Automatic" state="on" id="mMi-i1-rzH"/>
+                                            <menuItem title="UTF8" id="EIe-nP-1q6"/>
+                                            <menuItem title="Unicode" id="8E1-ez-z3d"/>
+                                            <menuItem title="MacOS Roman" id="9cA-bG-vHp"/>
+                                            <menuItem title="ASCII" id="OA9-5z-dcZ"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <binding destination="ed4-k0-2gP" name="selectedIndex" keyPath="values.ImportEncoding" id="Jd9-eV-7jJ"/>
+                                </connections>
+                            </popUpButton>
+                        </subviews>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="447" id="CH6-lL-aDV"/>
+                        <constraint firstAttribute="height" constant="58" id="DNa-Tg-n2G"/>
+                    </constraints>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <box autoresizesSubviews="NO" title="Padding Cells" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="jZa-W2-hXW">
+                    <rect key="frame" x="17" y="77" width="453" height="84"/>
+                    <view key="contentView" id="mKZ-Nf-dgn">
+                        <rect key="frame" x="1" y="1" width="451" height="68"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IPj-3c-x0Y">
+                                <rect key="frame" x="16" y="40" width="71" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Rows:" id="iQs-4N-v1h">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="15" translatesAutoresizingMaskIntoConstraints="NO" id="BNF-gD-B6r">
+                                <rect key="frame" x="91" y="34" width="124" height="26"/>
+                                <popUpButtonCell key="cell" type="push" title="2" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="viy-1W-OnG" id="Ad6-Rq-fmi">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" title="OtherViews" id="jVr-Nn-jYO">
+                                        <items>
+                                            <menuItem title="0" id="QwW-gn-Ix9"/>
+                                            <menuItem title="1" id="A4o-Y8-2Ko"/>
+                                            <menuItem title="2" state="on" id="viy-1W-OnG"/>
+                                            <menuItem title="3" id="7Nh-3g-Ic3"/>
+                                            <menuItem title="4" id="aD8-Jx-Ehr"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <binding destination="ed4-k0-2gP" name="selectedIndex" keyPath="values.PaddingRows" id="oYr-Vl-CfX"/>
+                                </connections>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HBM-uB-4bn">
+                                <rect key="frame" x="237" y="40" width="71" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Columns:" id="Ze4-Ng-ela">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="14" translatesAutoresizingMaskIntoConstraints="NO" id="Nym-cf-GcL">
+                                <rect key="frame" x="312" y="34" width="124" height="26"/>
+                                <popUpButtonCell key="cell" type="push" title="2" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="4vc-q3-rgV" id="QEZ-s5-5zq">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" title="OtherViews" id="l1l-DA-Ger">
+                                        <items>
+                                            <menuItem title="0" id="VbI-tP-Wdg"/>
+                                            <menuItem title="1" id="b0v-0q-dcr"/>
+                                            <menuItem title="2" state="on" id="4vc-q3-rgV"/>
+                                            <menuItem title="3" id="cuF-TE-W5k"/>
+                                            <menuItem title="4" id="IVM-aj-WLh"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <binding destination="ed4-k0-2gP" name="selectedIndex" keyPath="values.PaddingColumns" id="Leb-Cq-2bD"/>
+                                </connections>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xW-1s-Wi8">
+                                <rect key="frame" x="18" y="9" width="436" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Info: 'Padding' cells are additional empty cells created around imported data" id="QG4-IL-X2u">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="447" id="hsi-U9-KEu"/>
+                        <constraint firstAttribute="height" constant="80" id="ogp-7Q-zla"/>
+                    </constraints>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+                <box autoresizesSubviews="NO" title="Import Action" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="cuh-Hk-E8b">
+                    <rect key="frame" x="17" y="11" width="453" height="62"/>
+                    <view key="contentView" id="v2s-pt-c76">
+                        <rect key="frame" x="1" y="1" width="451" height="46"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pwB-QM-7g3">
+                                <rect key="frame" x="16" y="18" width="71" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Action:" id="mNj-0e-A1x">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="o4v-Wz-nXW">
+                                <rect key="frame" x="91" y="12" width="345" height="26"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="CXH-ew-lrY">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" title="OtherViews" id="Q2W-o5-5rr">
+                                        <items>
+                                            <menuItem title="Replace current spreadsheet" id="ZhY-Jo-qJF"/>
+                                            <menuItem title="Append rows to current spreadsheet" id="Gos-dW-l09"/>
+                                            <menuItem title="Replace data at selected cell" id="BYF-DD-3nW"/>
+                                            <menuItem title="Create new spreadsheet" id="KQw-Jv-ceP"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <binding destination="ed4-k0-2gP" name="selectedIndex" keyPath="values.ImportAction" id="vVc-Yi-OHq"/>
+                                </connections>
+                            </popUpButton>
+                        </subviews>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="447" id="JrX-uV-vOu"/>
+                        <constraint firstAttribute="height" constant="58" id="wLE-o6-I3F"/>
+                    </constraints>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cuh-Hk-E8b" secondAttribute="bottom" constant="15" id="Gk4-uH-gqr"/>
+                <constraint firstAttribute="trailing" secondItem="AVM-k8-i7X" secondAttribute="trailing" constant="20" id="Lr4-cf-dsk"/>
+                <constraint firstAttribute="trailing" secondItem="cuh-Hk-E8b" secondAttribute="trailing" constant="20" id="SBh-5H-b0o"/>
+                <constraint firstItem="AVM-k8-i7X" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="Udg-hg-vXg"/>
+                <constraint firstItem="jZa-W2-hXW" firstAttribute="top" secondItem="AVM-k8-i7X" secondAttribute="bottom" constant="8" id="Uyp-2L-e6b"/>
+                <constraint firstAttribute="trailing" secondItem="jZa-W2-hXW" secondAttribute="trailing" constant="20" id="drM-Ev-Jai"/>
+                <constraint firstItem="jZa-W2-hXW" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="fPy-ce-XTc"/>
+                <constraint firstItem="AVM-k8-i7X" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="pdq-uS-nXi"/>
+                <constraint firstItem="cuh-Hk-E8b" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="uCh-n6-STx"/>
+            </constraints>
+            <point key="canvasLocation" x="662.5" y="449.5"/>
+        </customView>
+        <userDefaultsController representsSharedInstance="YES" id="ed4-k0-2gP"/>
+    </objects>
+</document>
