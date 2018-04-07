@@ -31,8 +31,8 @@ CONST_KEY(WelcomeShown)
 
 @interface AppDelegate ()
 
-@property (unsafe_unretained, nonatomic) IBOutlet NSPanel *setupPanel1;
-@property (unsafe_unretained, nonatomic) IBOutlet NSPanel *setupPanel2;
+@property (strong, nonatomic) IBOutlet NSPanel *setupPanel1;
+@property (strong, nonatomic) IBOutlet NSPanel *setupPanel2;
 @property (weak, nonatomic) IBOutlet NSTableView *tableView;
 @property (weak, nonatomic) IBOutlet NSMatrix *quotaMatrix;
 @property (weak, nonatomic) IBOutlet NSProgressIndicator *progressIndicator;
@@ -45,10 +45,10 @@ CONST_KEY(WelcomeShown)
 @property (weak, nonatomic) IBOutlet NSTextField *thresholdLabel;
 @property (weak, nonatomic) IBOutlet NSTextField *serverquotaLabel;
 @property (weak, nonatomic) IBOutlet NSTextField *intervalField;
-@property (weak, nonatomic) IBOutlet NSToolbar *toolbar;
-@property (weak, nonatomic) IBOutlet NSTabView *mainTabView;
-@property (weak, nonatomic) IBOutlet NSView *settingsView;
-@property (weak, nonatomic) IBOutlet NSView *aboutView;
+@property (strong, nonatomic) IBOutlet NSToolbar *toolbar;
+@property (strong, nonatomic) IBOutlet NSTabView *mainTabView;
+@property (strong, nonatomic) IBOutlet NSView *settingsView;
+@property (strong, nonatomic) IBOutlet NSView *aboutView;
 @property (weak, nonatomic) IBOutlet NSMenu *statusItemMenu;
 @property (weak, nonatomic) IBOutlet NSTabView *documentationTabView;
 @property (weak, nonatomic) IBOutlet NSArrayController *arrayController;
@@ -177,6 +177,14 @@ CONST_KEY(WelcomeShown)
 	[_window makeKeyAndOrderFront:self];
 }
 
+- (void)windowWillClose:(NSNotification *)notification
+{
+    LOGFUNC;
+    
+    if (notification.object == self.window)
+        self.window = nil;
+}
+
 - (IBAction)showHelp:(id)sender
 {
 	[self openMainWindow:self];
@@ -185,6 +193,12 @@ CONST_KEY(WelcomeShown)
 	_toolbar.selectedItemIdentifier = (_toolbar.items[1]).itemIdentifier;
 
 	[_documentationTabView selectTabViewItemAtIndex:1];
+}
+
+- (IBAction)refreshAccounts:(id)sender
+{
+    for (Account *a in self.accountArray)
+        [a scheduleTests];
 }
 
 - (IBAction)toolbarClicked:(id)sender

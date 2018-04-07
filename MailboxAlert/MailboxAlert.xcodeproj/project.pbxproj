@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2B91952077C8FB0090F26D /* JMWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B91942077C8FB0090F26D /* JMWebView.m */; };
+		3F2B91972077C9100090F26D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2B91962077C9100090F26D /* WebKit.framework */; };
 		B90970A01B0A641A0086CCA2 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B909709F1B0A641A0086CCA2 /* ScriptingBridge.framework */; };
 		B90970A21B0A66230086CCA2 /* LaunchMainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90970A11B0A66230086CCA2 /* LaunchMainMenu.xib */; };
 		B93844991699F79C001773E8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93844981699F79C001773E8 /* Cocoa.framework */; };
@@ -24,8 +26,8 @@
 		B982DBA016AD43D400C2CC98 /* menuicon_ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B982DB9E16AD43D300C2CC98 /* menuicon_ok@2x.png */; };
 		B982DC1516AEAE9600C2CC98 /* History.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B982DC1416AEAE9600C2CC98 /* History.rtf */; };
 		B99AAA85169B54EC00290EC5 /* MailboxAlert.icns in Resources */ = {isa = PBXBuildFile; fileRef = B99AAA80169B547400290EC5 /* MailboxAlert.icns */; };
-		B99AAA8A169B554600290EC5 /* PRHOnOffButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B99AAA87169B553500290EC5 /* PRHOnOffButton.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		B99AAA8B169B554600290EC5 /* PRHOnOffButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B99AAA89169B553500290EC5 /* PRHOnOffButtonCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B99AAA8A169B554600290EC5 /* PRHOnOffButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B99AAA87169B553500290EC5 /* PRHOnOffButton.m */; };
+		B99AAA8B169B554600290EC5 /* PRHOnOffButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B99AAA89169B553500290EC5 /* PRHOnOffButtonCell.m */; };
 		B99AAA8D169B557500290EC5 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99AAA8C169B557500290EC5 /* Carbon.framework */; };
 		B99AAA91169B5AC900290EC5 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = B99AAA8E169B5AC900290EC5 /* error.png */; };
 		B99AAA92169B5AC900290EC5 /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = B99AAA8F169B5AC900290EC5 /* ok.png */; };
@@ -93,6 +95,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F2B91932077C8FB0090F26D /* JMWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMWebView.h; path = ../Mac/JMWebView.h; sourceTree = "<group>"; };
+		3F2B91942077C8FB0090F26D /* JMWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMWebView.m; path = ../Mac/JMWebView.m; sourceTree = "<group>"; };
+		3F2B91962077C9100090F26D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 		B909709F1B0A641A0086CCA2 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		B90970A11B0A66230086CCA2 /* LaunchMainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchMainMenu.xib; sourceTree = "<group>"; };
 		B93844941699F79C001773E8 /* MailboxAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailboxAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2B91972077C9100090F26D /* WebKit.framework in Frameworks */,
 				B93844991699F79C001773E8 /* Cocoa.framework in Frameworks */,
 				B99AAA8D169B557500290EC5 /* Carbon.framework in Frameworks */,
 				B99AAB54169B71C400290EC5 /* Security.framework in Frameworks */,
@@ -215,6 +221,7 @@
 		B93844971699F79C001773E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F2B91962077C9100090F26D /* WebKit.framework */,
 				B909709F1B0A641A0086CCA2 /* ScriptingBridge.framework */,
 				B99AAB93169B7B3C00290EC5 /* ServiceManagement.framework */,
 				B99AAB55169B71CA00290EC5 /* IOKit.framework */,
@@ -295,6 +302,8 @@
 		B971FDC71D311AE1004D8851 /* CoreLib */ = {
 			isa = PBXGroup;
 			children = (
+				3F2B91932077C8FB0090F26D /* JMWebView.h */,
+				3F2B91942077C8FB0090F26D /* JMWebView.m */,
 				B971FDC81D311AE1004D8851 /* AppKit+CoreCode.h */,
 				B971FDC91D311AE1004D8851 /* AppKit+CoreCode.m */,
 				B971FDCC1D311AE1004D8851 /* CoreLib.h */,
@@ -403,7 +412,7 @@
 		B938448B1699F79C001773E8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "CoreCode Limited";
 				TargetAttributes = {
 					B93844931699F79C001773E8 = {
@@ -477,6 +486,7 @@
 				B9C2AFA71911578B0053456F /* JMCorrectTimer.m in Sources */,
 				B93844AC1699F79C001773E8 /* AppDelegate.m in Sources */,
 				B99AAA8A169B554600290EC5 /* PRHOnOffButton.m in Sources */,
+				3F2B91952077C8FB0090F26D /* JMWebView.m in Sources */,
 				B9C2AFA81911578B0053456F /* JMDocklessApplication.m in Sources */,
 				B99AAA8B169B554600290EC5 /* PRHOnOffButtonCell.m in Sources */,
 				B9C2AFAB1911578B0053456F /* JMHostInformation.m in Sources */,
@@ -544,11 +554,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -605,11 +617,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -692,6 +706,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "../CoreLib/LaunchHelper/LaunchHelper-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PROJECT_NAME:rfc1034identifier}LaunchHelper";
 				PRODUCT_NAME = MailboxAlertLaunchHelper;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -708,6 +723,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "../CoreLib/LaunchHelper/LaunchHelper-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PROJECT_NAME:rfc1034identifier}LaunchHelper";
 				PRODUCT_NAME = MailboxAlertLaunchHelper;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;

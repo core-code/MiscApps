@@ -33,6 +33,10 @@
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
-	<string>NSApplication</string>
+	<string>JMDocklessApplication</string>
+	<key>MacupdateProductPage</key>
+	<string>https://www.macupdate.com/app/mac/46877/mailboxalert</string>
+	<key>StoreProductPage</key>
+	<string>https://itunes.apple.com/us/app/mailboxalert/id595630519?mt=12</string>
 </dict>
 </plist>
