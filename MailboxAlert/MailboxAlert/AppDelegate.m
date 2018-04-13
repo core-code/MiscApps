@@ -45,10 +45,11 @@ CONST_KEY(WelcomeShown)
 @property (weak, nonatomic) IBOutlet NSTextField *thresholdLabel;
 @property (weak, nonatomic) IBOutlet NSTextField *serverquotaLabel;
 @property (weak, nonatomic) IBOutlet NSTextField *intervalField;
-@property (strong, nonatomic) IBOutlet NSToolbar *toolbar;
+@property (weak, nonatomic) IBOutlet NSToolbar *toolbar;
 @property (strong, nonatomic) IBOutlet NSTabView *mainTabView;
 @property (strong, nonatomic) IBOutlet NSView *settingsView;
 @property (strong, nonatomic) IBOutlet NSView *aboutView;
+@property (strong, nonatomic) IBOutlet NSWindow *window;
 @property (weak, nonatomic) IBOutlet NSMenu *statusItemMenu;
 @property (weak, nonatomic) IBOutlet NSTabView *documentationTabView;
 @property (weak, nonatomic) IBOutlet NSArrayController *arrayController;
@@ -168,7 +169,8 @@ CONST_KEY(WelcomeShown)
 {
 	if (!_window)
     {
-        [[NSBundle mainBundle] loadNibNamed:@"MainWindow" owner:self topLevelObjects:nil];
+        NSArray *tlo;
+        [[NSBundle mainBundle] loadNibNamed:@"MainWindow" owner:self topLevelObjects:&tlo];
         [self toolbarClicked:@(0)];
         _toolbar.selectedItemIdentifier = (_toolbar.items[0]).itemIdentifier;
     }

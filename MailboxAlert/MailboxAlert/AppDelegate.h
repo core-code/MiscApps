@@ -17,8 +17,6 @@ CONST_KEY_DECLARATION(NotificationMenubar)
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign, nonatomic) IBOutlet NSWindow *window;
-
 + (NSDictionary *)checkMailbox:(NSDictionary *)account;
 
 @end
