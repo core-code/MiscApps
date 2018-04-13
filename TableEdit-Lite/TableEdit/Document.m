@@ -778,6 +778,118 @@ NSCalendar *timezonelessCalendar;
 	[self.undoManager endUndoGrouping];
 }
 
+- (IBAction)insertFormula:(NSMenuItem *)sender
+{
+    long operation = sender.tag / 10;
+    NSArray *operationNames = @[@"", @"SUM", @"PRODUCT", @"MINIMUM", @"MAXIMUM", @""];
+    if (_tableView.selectedCells.count == 0)
+    {
+        alert(@"Error", makeString(@"You need to select some cells containing numeric values to be able to calculate their %@", operationNames[operation]), @"OK", nil, nil);
+        return;
+    }
+
+    long destcolumn = 0, destrow = 0;
+    int direction = sender.tag % 10;
+    if (direction == 0)
+    {
+        destcolumn = _tableView.selectedCells.lastObject.columnIndex;
+        destrow = _tableView.selectedCells.lastObject.rowIndex + 1;
+    }
+    else if (direction == 1)
+    {
+        destcolumn = _tableView.selectedCells.firstObject.columnIndex;
+        destrow = _tableView.selectedCells.firstObject.rowIndex - 1;
+    }
+    else if (direction == 2)
+    {
+        destcolumn = _tableView.selectedCells.lastObject.columnIndex + 1;
+        destrow = _tableView.selectedCells.lastObject.rowIndex;
+    }
+    else if (direction == 3)
+    {
+        destcolumn = _tableView.selectedCells.firstObject.columnIndex - 1;
+        destrow = _tableView.selectedCells.firstObject.rowIndex;
+    }
+    else
+        assert(0);
+    
+    BOOL outOfRange = NO;
+    if (destrow < 0) outOfRange = YES;
+    if (destcolumn < 1)  outOfRange = YES;
+    if (destrow >= (NSInteger)_data_.rowCount)outOfRange = YES;
+    if (destcolumn-1 >= (NSInteger)_data_.columnCount) outOfRange = YES;
+    if (outOfRange)
+    {
+        alert(@"Error", @"Can not insert the formula result at the selected place as that would be outside the table.", @"OK", nil, nil);
+        return;
+    }
+    
+
+    double result = 0.0;
+    
+    if (operation == 1)
+    {
+        double sum = 0;
+        for (Cell *cell in _tableView.selectedCells)
+        {
+            NSString *cellValue = [self tableView:nil objectValueForTableColumn:cell.column row:cell.rowIndex];
+            NSNumber *cellNumber = cellValue.numberValue;
+            
+            sum += cellNumber.doubleValue;
+        }
+        result = sum;
+    }
+    else if (operation == 2)
+    {
+        double product = 1;
+        for (Cell *cell in _tableView.selectedCells)
+        {
+            NSString *cellValue = [self tableView:nil objectValueForTableColumn:cell.column row:cell.rowIndex];
+            NSNumber *cellNumber = cellValue.numberValue;
+            
+            product *= cellNumber.doubleValue;
+        }
+        result = product;
+    }
+    else if (operation == 3)
+    {
+        double min = FLT_MAX;
+        for (Cell *cell in _tableView.selectedCells)
+        {
+            NSString *cellValue = [self tableView:nil objectValueForTableColumn:cell.column row:cell.rowIndex];
+            NSNumber *cellNumber = cellValue.numberValue;
+            
+            min = MIN(min, cellNumber.doubleValue);
+        }
+        result = min;
+    }
+    else if (operation == 4)
+    {
+        double max = FLT_MIN;
+        for (Cell *cell in _tableView.selectedCells)
+        {
+            NSString *cellValue = [self tableView:nil objectValueForTableColumn:cell.column row:cell.rowIndex];
+            NSNumber *cellNumber = cellValue.numberValue;
+            
+            max = MIN(max, cellNumber.doubleValue);
+        }
+        result = max;
+    }
+    else
+        assert(0);
+
+    
+    [self tableView:nil
+     setObjectValue:@(result).stringValue
+     forTableColumn:_tableView.tableColumns[destcolumn]
+                row:destrow];
+    
+
+    // update table display
+    [self.tableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:destrow]
+                              columnIndexes:[NSIndexSet indexSetWithIndex:destcolumn]];
+}
+    
 - (IBAction)insertIntoCell:(NSMenuItem *)sender
 {
 	LOGFUNCPARAMA(sender);

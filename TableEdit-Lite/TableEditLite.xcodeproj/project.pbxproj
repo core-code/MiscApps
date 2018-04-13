@@ -8,54 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B90B0D391DA7F907000CA590 /* JMURLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B90B0D381DA7F907000CA590 /* JMURLButton.m */; };
-		B90B0D3A1DA7F907000CA590 /* JMURLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B90B0D381DA7F907000CA590 /* JMURLButton.m */; };
 		B91360EF194EF6FD002EDC02 /* LibXL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91360EE194EF6FD002EDC02 /* LibXL.framework */; };
 		B91360F0194EF706002EDC02 /* LibXL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B91360EE194EF6FD002EDC02 /* LibXL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B917BC0C1F24B47B00DC22F7 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B927CFFE1CC583E0005797CD /* IOKit.framework */; };
 		B91891AB1A76D49400C0A4A9 /* MovableBorderlessWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B91891AA1A76D49400C0A4A9 /* MovableBorderlessWindow.m */; };
 		B9192FAA193E1DA8006C72DD /* ExportOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9192FA8193E1DA8006C72DD /* ExportOptionView.xib */; };
 		B9192FAD193E3BFC006C72DD /* ImportOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9192FAB193E3BFC006C72DD /* ImportOptionView.xib */; };
-		B927D0021CC58788005797CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B93661951940888D00E8D4CC /* AppDelegate.m */; };
-		B927D0061CC58788005797CD /* JMBlockFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B97A5E971CC1540700201C2C /* JMBlockFormatter.m */; };
-		B927D0071CC58788005797CD /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B19256177DED9F00FFE14D /* Document.m */; };
-		B927D0081CC58788005797CD /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AB8C18BBE1A4006E42B9 /* Foundation+CoreCode.m */; };
-		B927D0091CC58788005797CD /* DraggableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F8ECFB18B3D84A006CA81E /* DraggableButton.m */; };
-		B927D00A1CC58788005797CD /* JMWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F9D8FE1BC679EA00545878 /* JMWebView.m */; };
-		B927D00B1CC58788005797CD /* FormatterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B976E75D1BD95A4B009A8433 /* FormatterHelper.m */; };
-		B927D00E1CC58788005797CD /* GridTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C8D1E4177E3ED5007B980C /* GridTableView.m */; };
-		B927D00F1CC58788005797CD /* JMApplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F9D9041BC68EF800545878 /* JMApplicationDelegate.m */; };
-		B927D0101CC58788005797CD /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = B968B1831B9DF4400027881B /* Cell.m */; };
-		B927D0111CC58788005797CD /* JMHostInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A779D51B8474400029C5DF /* JMHostInformation.m */; };
-		B927D0131CC58788005797CD /* DraggableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B96946C31A72710B004C6748 /* DraggableImage.m */; };
-		B927D0161CC58788005797CD /* MovableBorderlessWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B91891AA1A76D49400C0A4A9 /* MovableBorderlessWindow.m */; };
-		B927D0171CC58788005797CD /* JMValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B981B2051948D7790052D15A /* JMValueTransformer.m */; };
-		B927D0181CC58788005797CD /* JMAppMovedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F85F201BCBAE94004B7AF9 /* JMAppMovedHandler.m */; };
-		B927D0191CC58788005797CD /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AB8A18BBE1A4006E42B9 /* CoreLib.m */; };
-		B927D01A1CC58788005797CD /* DocumentData.m in Sources */ = {isa = PBXBuildFile; fileRef = B968B1801B9DDE0B0027881B /* DocumentData.m */; };
-		B927D01B1CC58788005797CD /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AB8618BBE1A4006E42B9 /* AppKit+CoreCode.m */; };
-		B927D01C1CC58788005797CD /* AddressHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B968A45A18B7A4B900309F2F /* AddressHelper.m */; };
-		B927D01D1CC58788005797CD /* GridTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C622971A6EA3EF00CFC14F /* GridTableHeaderView.m */; };
-		B927D0231CC58788005797CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94061281A7E73F100308CBC /* QuartzCore.framework */; };
-		B927D0261CC58788005797CD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B927CFFE1CC583E0005797CD /* IOKit.framework */; };
-		B927D0271CC58788005797CD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B952522F195AF2B200AEBF47 /* WebKit.framework */; };
-		B927D0281CC58788005797CD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B19243177DED9F00FFE14D /* Cocoa.framework */; };
-		B927D02A1CC58788005797CD /* LibXL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91360EE194EF6FD002EDC02 /* LibXL.framework */; };
-		B927D02B1CC58788005797CD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B927CFFC1CC583CB005797CD /* Security.framework */; };
-		B927D02C1CC58788005797CD /* snappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9366189193F8C9E00E8D4CC /* snappy.framework */; };
-		B927D0311CC58788005797CD /* history.html in Resources */ = {isa = PBXBuildFile; fileRef = B968B1771B9DD1C10027881B /* history.html */; };
-		B927D0321CC58788005797CD /* faq.html in Resources */ = {isa = PBXBuildFile; fileRef = B968B1751B9DD0CF0027881B /* faq.html */; };
-		B927D0331CC58788005797CD /* PromotionWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B952522D195AEE9000AEBF47 /* PromotionWindow.xib */; };
-		B927D0351CC58788005797CD /* WelcomeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9ECC5C01959D9EC00682C68 /* WelcomeWindow.xib */; };
-		B927D0381CC58788005797CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9BBC2AA18B62772007FBC4C /* Images.xcassets */; };
-		B927D03B1CC58788005797CD /* ExportOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9192FA8193E1DA8006C72DD /* ExportOptionView.xib */; };
-		B927D03C1CC58788005797CD /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B19258177DED9F00FFE14D /* Document.xib */; };
-		B927D03F1CC58788005797CD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B1925B177DED9F00FFE14D /* MainMenu.xib */; };
-		B927D0401CC58788005797CD /* privacy.html in Resources */ = {isa = PBXBuildFile; fileRef = B968B1781B9DD1C10027881B /* privacy.html */; };
-		B927D0411CC58788005797CD /* DocumentationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B981B2001948B3A30052D15A /* DocumentationWindow.xib */; };
-		B927D0431CC58788005797CD /* ImportOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9192FAB193E3BFC006C72DD /* ImportOptionView.xib */; };
-		B927D0441CC58788005797CD /* readme.html in Resources */ = {isa = PBXBuildFile; fileRef = B968B1791B9DD1C10027881B /* readme.html */; };
-		B927D0471CC58788005797CD /* snappy.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9366189193F8C9E00E8D4CC /* snappy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		B927D0481CC58788005797CD /* LibXL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B91360EE194EF6FD002EDC02 /* LibXL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B933AB9018BBE1A4006E42B9 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AB8618BBE1A4006E42B9 /* AppKit+CoreCode.m */; };
 		B933AB9218BBE1A4006E42B9 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AB8A18BBE1A4006E42B9 /* CoreLib.m */; };
 		B933AB9318BBE1A4006E42B9 /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AB8C18BBE1A4006E42B9 /* Foundation+CoreCode.m */; };
@@ -74,27 +32,18 @@
 		B968B1841B9DF4400027881B /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = B968B1831B9DF4400027881B /* Cell.m */; };
 		B96946C41A72710B004C6748 /* DraggableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B96946C31A72710B004C6748 /* DraggableImage.m */; };
 		B973D91020767C4000FE566F /* TableEditLite.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B973D90F20767C4000FE566F /* TableEditLite.xcconfig */; };
-		B973D91120767C4000FE566F /* TableEditLite.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B973D90F20767C4000FE566F /* TableEditLite.xcconfig */; };
 		B976E75E1BD95A4B009A8433 /* FormatterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B976E75D1BD95A4B009A8433 /* FormatterHelper.m */; };
 		B97A5E981CC1540700201C2C /* JMBlockFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B97A5E971CC1540700201C2C /* JMBlockFormatter.m */; };
 		B9815CB920753FF7001A6E3F /* FormulaResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B9815CB720753FF7001A6E3F /* FormulaResult.m */; };
-		B9815CBA20753FF7001A6E3F /* FormulaResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B9815CB720753FF7001A6E3F /* FormulaResult.m */; };
 		B981B2011948B3A30052D15A /* DocumentationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B981B2001948B3A30052D15A /* DocumentationWindow.xib */; };
 		B981B2061948D7790052D15A /* JMValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B981B2051948D7790052D15A /* JMValueTransformer.m */; };
 		B9823FAB1DE619CA0004ABCD /* CrashHelper.app in Resources */ = {isa = PBXBuildFile; fileRef = B9823FAA1DE619CA0004ABCD /* CrashHelper.app */; };
-		B9823FAC1DE619CA0004ABCD /* CrashHelper.app in Resources */ = {isa = PBXBuildFile; fileRef = B9823FAA1DE619CA0004ABCD /* CrashHelper.app */; };
 		B9857E1F1EC4F27800978B94 /* credits.html in Resources */ = {isa = PBXBuildFile; fileRef = B9857E1E1EC4F27800978B94 /* credits.html */; };
-		B9857E201EC4F27800978B94 /* credits.html in Resources */ = {isa = PBXBuildFile; fileRef = B9857E1E1EC4F27800978B94 /* credits.html */; };
 		B9896CE61EA7C20A004075C9 /* icon-appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = B9896CDF1EA7C20A004075C9 /* icon-appstore.png */; };
-		B9896CE71EA7C20A004075C9 /* icon-appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = B9896CDF1EA7C20A004075C9 /* icon-appstore.png */; };
 		B9896CE81EA7C20A004075C9 /* icon-macupdate.png in Resources */ = {isa = PBXBuildFile; fileRef = B9896CE01EA7C20A004075C9 /* icon-macupdate.png */; };
-		B9896CE91EA7C20A004075C9 /* icon-macupdate.png in Resources */ = {isa = PBXBuildFile; fileRef = B9896CE01EA7C20A004075C9 /* icon-macupdate.png */; };
 		B9896CEA1EA7C20A004075C9 /* JMEditableBorderlessWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B9896CE21EA7C20A004075C9 /* JMEditableBorderlessWindow.m */; };
-		B9896CEB1EA7C20A004075C9 /* JMEditableBorderlessWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B9896CE21EA7C20A004075C9 /* JMEditableBorderlessWindow.m */; };
 		B9896CEC1EA7C20A004075C9 /* JMRatingWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9896CE31EA7C20A004075C9 /* JMRatingWindow.xib */; };
-		B9896CED1EA7C20A004075C9 /* JMRatingWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9896CE31EA7C20A004075C9 /* JMRatingWindow.xib */; };
 		B9896CEE1EA7C20A004075C9 /* JMRatingWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9896CE51EA7C20A004075C9 /* JMRatingWindowController.m */; };
-		B9896CEF1EA7C20A004075C9 /* JMRatingWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9896CE51EA7C20A004075C9 /* JMRatingWindowController.m */; };
 		B9A76D2019589924002733B9 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A76D1F19589924002733B9 /* Sparkle.framework */; };
 		B9A76D211958995F002733B9 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9A76D1F19589924002733B9 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B9A779D61B8474400029C5DF /* JMHostInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A779D51B8474400029C5DF /* JMHostInformation.m */; };
@@ -108,14 +57,11 @@
 		B9B1925A177DED9F00FFE14D /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B19258177DED9F00FFE14D /* Document.xib */; };
 		B9B1925D177DED9F00FFE14D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B1925B177DED9F00FFE14D /* MainMenu.xib */; };
 		B9B3BC3D1DA93F74005BA18B /* PrintOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B3BC3C1DA93F74005BA18B /* PrintOptionView.xib */; };
-		B9B3BC3E1DA93F74005BA18B /* PrintOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B3BC3C1DA93F74005BA18B /* PrintOptionView.xib */; };
 		B9B3BC411DA940A5005BA18B /* PrintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B3BC401DA940A5005BA18B /* PrintViewController.m */; };
-		B9B3BC421DA940A5005BA18B /* PrintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B3BC401DA940A5005BA18B /* PrintViewController.m */; };
 		B9BBC2AB18B62772007FBC4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9BBC2AA18B62772007FBC4C /* Images.xcassets */; };
 		B9C622981A6EA3EF00CFC14F /* GridTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C622971A6EA3EF00CFC14F /* GridTableHeaderView.m */; };
 		B9C8D1E5177E3F9D007B980C /* GridTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C8D1E4177E3ED5007B980C /* GridTableView.m */; };
 		B9D16AC81DFC74A200AFA58B /* InsertNumbersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D16AC71DFC74A200AFA58B /* InsertNumbersView.xib */; };
-		B9D16AC91DFC74A200AFA58B /* InsertNumbersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D16AC71DFC74A200AFA58B /* InsertNumbersView.xib */; };
 		B9ECC5C11959D9EC00682C68 /* WelcomeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9ECC5C01959D9EC00682C68 /* WelcomeWindow.xib */; };
 		B9F85F211BCBAE94004B7AF9 /* JMAppMovedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F85F201BCBAE94004B7AF9 /* JMAppMovedHandler.m */; };
 		B9F8ECFC18B3D84A006CA81E /* DraggableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F8ECFB18B3D84A006CA81E /* DraggableButton.m */; };
@@ -124,35 +70,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B927D0451CC58788005797CD /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B927D0471CC58788005797CD /* snappy.framework in CopyFiles */,
-				B927D0481CC58788005797CD /* LibXL.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B927D04B1CC58788005797CD /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 6;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B927D04D1CC58788005797CD /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = Contents/Mono;
-			dstSubfolderSpec = 1;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B936618B193F901300E8D4CC /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,7 +125,6 @@
 		B9192FAC193E3BFC006C72DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ImportOptionView.xib; sourceTree = "<group>"; };
 		B927CFFC1CC583CB005797CD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B927CFFE1CC583E0005797CD /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		B927D0551CC58788005797CD /* TableEdit-Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TableEdit-Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B933AB8518BBE1A4006E42B9 /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
 		B933AB8618BBE1A4006E42B9 /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
 		B933AB8918BBE1A4006E42B9 /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
@@ -261,7 +177,7 @@
 		B9AA2EBB1F25FC7300E38F4A /* org.sparkle-project.InstallerConnection.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerConnection.xpc"; path = "../XPCServices/org.sparkle-project.InstallerConnection.xpc"; sourceTree = "<group>"; };
 		B9AA2EBC1F25FC7300E38F4A /* org.sparkle-project.InstallerLauncher.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerLauncher.xpc"; path = "../XPCServices/org.sparkle-project.InstallerLauncher.xpc"; sourceTree = "<group>"; };
 		B9AA2EBD1F25FC7300E38F4A /* org.sparkle-project.InstallerStatus.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerStatus.xpc"; path = "../XPCServices/org.sparkle-project.InstallerStatus.xpc"; sourceTree = "<group>"; };
-		B9B19240177DED9F00FFE14D /* TableEdit-Lite-HP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TableEdit-Lite-HP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B19240177DED9F00FFE14D /* TableEdit-Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TableEdit-Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B19243177DED9F00FFE14D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B9B19246177DED9F00FFE14D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		B9B19248177DED9F00FFE14D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -292,20 +208,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B927D0221CC58788005797CD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B927D0231CC58788005797CD /* QuartzCore.framework in Frameworks */,
-				B927D0261CC58788005797CD /* IOKit.framework in Frameworks */,
-				B927D0271CC58788005797CD /* WebKit.framework in Frameworks */,
-				B927D0281CC58788005797CD /* Cocoa.framework in Frameworks */,
-				B927D02A1CC58788005797CD /* LibXL.framework in Frameworks */,
-				B927D02B1CC58788005797CD /* Security.framework in Frameworks */,
-				B927D02C1CC58788005797CD /* snappy.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B9B1923D177DED9F00FFE14D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,8 +334,7 @@
 		B9B19241177DED9F00FFE14D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9B19240177DED9F00FFE14D /* TableEdit-Lite-HP.app */,
-				B927D0551CC58788005797CD /* TableEdit-Lite.app */,
+				B9B19240177DED9F00FFE14D /* TableEdit-Lite.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -512,30 +413,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B927D0001CC58788005797CD /* TableEdit-Lite-MAS */ = {
+		B9B1923F177DED9F00FFE14D /* TableEdit-Lite */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B927D04F1CC58788005797CD /* Build configuration list for PBXNativeTarget "TableEdit-Lite-MAS" */;
-			buildPhases = (
-				B927D0011CC58788005797CD /* Sources */,
-				B927D0221CC58788005797CD /* Frameworks */,
-				B927D02D1CC58788005797CD /* Resources */,
-				B927D0451CC58788005797CD /* CopyFiles */,
-				B927D04A1CC58788005797CD /* ShellScript */,
-				B927D04B1CC58788005797CD /* CopyFiles */,
-				B927D04D1CC58788005797CD /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "TableEdit-Lite-MAS";
-			productName = TableEdit;
-			productReference = B927D0551CC58788005797CD /* TableEdit-Lite.app */;
-			productType = "com.apple.product-type.application";
-		};
-		B9B1923F177DED9F00FFE14D /* TableEdit-Lite-HP */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B9B19260177DED9F00FFE14D /* Build configuration list for PBXNativeTarget "TableEdit-Lite-HP" */;
+			buildConfigurationList = B9B19260177DED9F00FFE14D /* Build configuration list for PBXNativeTarget "TableEdit-Lite" */;
 			buildPhases = (
 				B9B1923C177DED9F00FFE14D /* Sources */,
 				B9B1923D177DED9F00FFE14D /* Frameworks */,
@@ -550,9 +430,9 @@
 			);
 			dependencies = (
 			);
-			name = "TableEdit-Lite-HP";
+			name = "TableEdit-Lite";
 			productName = TableEdit;
-			productReference = B9B19240177DED9F00FFE14D /* TableEdit-Lite-HP.app */;
+			productReference = B9B19240177DED9F00FFE14D /* TableEdit-Lite.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -564,9 +444,6 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "CoreCode Limited";
 				TargetAttributes = {
-					B927D0001CC58788005797CD = {
-						DevelopmentTeam = 9D78DG5ACV;
-					};
 					B9B1923F177DED9F00FFE14D = {
 						DevelopmentTeam = 9D78DG5ACV;
 						ProvisioningStyle = Automatic;
@@ -593,40 +470,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9B1923F177DED9F00FFE14D /* TableEdit-Lite-HP */,
-				B927D0001CC58788005797CD /* TableEdit-Lite-MAS */,
+				B9B1923F177DED9F00FFE14D /* TableEdit-Lite */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B927D02D1CC58788005797CD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B927D0311CC58788005797CD /* history.html in Resources */,
-				B9896CED1EA7C20A004075C9 /* JMRatingWindow.xib in Resources */,
-				B9896CE71EA7C20A004075C9 /* icon-appstore.png in Resources */,
-				B927D0321CC58788005797CD /* faq.html in Resources */,
-				B927D0331CC58788005797CD /* PromotionWindow.xib in Resources */,
-				B973D91120767C4000FE566F /* TableEditLite.xcconfig in Resources */,
-				B927D0351CC58788005797CD /* WelcomeWindow.xib in Resources */,
-				B927D0381CC58788005797CD /* Images.xcassets in Resources */,
-				B927D03B1CC58788005797CD /* ExportOptionView.xib in Resources */,
-				B927D03C1CC58788005797CD /* Document.xib in Resources */,
-				B9D16AC91DFC74A200AFA58B /* InsertNumbersView.xib in Resources */,
-				B927D03F1CC58788005797CD /* MainMenu.xib in Resources */,
-				B9B3BC3E1DA93F74005BA18B /* PrintOptionView.xib in Resources */,
-				B927D0401CC58788005797CD /* privacy.html in Resources */,
-				B927D0411CC58788005797CD /* DocumentationWindow.xib in Resources */,
-				B9896CE91EA7C20A004075C9 /* icon-macupdate.png in Resources */,
-				B927D0431CC58788005797CD /* ImportOptionView.xib in Resources */,
-				B927D0441CC58788005797CD /* readme.html in Resources */,
-				B9857E201EC4F27800978B94 /* credits.html in Resources */,
-				B9823FAC1DE619CA0004ABCD /* CrashHelper.app in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B9B1923E177DED9F00FFE14D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -658,19 +507,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B927D04A1CC58788005797CD /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$PRODUCT_SETTINGS_PATH\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$PRODUCT_SETTINGS_PATH\"";
-		};
 		B981B1FB19487A690052D15A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -687,38 +523,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B927D0011CC58788005797CD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B927D0021CC58788005797CD /* AppDelegate.m in Sources */,
-				B927D0061CC58788005797CD /* JMBlockFormatter.m in Sources */,
-				B927D0071CC58788005797CD /* Document.m in Sources */,
-				B927D0081CC58788005797CD /* Foundation+CoreCode.m in Sources */,
-				B927D0091CC58788005797CD /* DraggableButton.m in Sources */,
-				B927D00A1CC58788005797CD /* JMWebView.m in Sources */,
-				B927D00B1CC58788005797CD /* FormatterHelper.m in Sources */,
-				B9B3BC421DA940A5005BA18B /* PrintViewController.m in Sources */,
-				B927D00E1CC58788005797CD /* GridTableView.m in Sources */,
-				B9896CEB1EA7C20A004075C9 /* JMEditableBorderlessWindow.m in Sources */,
-				B927D00F1CC58788005797CD /* JMApplicationDelegate.m in Sources */,
-				B927D0101CC58788005797CD /* Cell.m in Sources */,
-				B927D0111CC58788005797CD /* JMHostInformation.m in Sources */,
-				B90B0D3A1DA7F907000CA590 /* JMURLButton.m in Sources */,
-				B9815CBA20753FF7001A6E3F /* FormulaResult.m in Sources */,
-				B927D0131CC58788005797CD /* DraggableImage.m in Sources */,
-				B927D0161CC58788005797CD /* MovableBorderlessWindow.m in Sources */,
-				B927D0171CC58788005797CD /* JMValueTransformer.m in Sources */,
-				B9896CEF1EA7C20A004075C9 /* JMRatingWindowController.m in Sources */,
-				B927D0181CC58788005797CD /* JMAppMovedHandler.m in Sources */,
-				B927D0191CC58788005797CD /* CoreLib.m in Sources */,
-				B927D01A1CC58788005797CD /* DocumentData.m in Sources */,
-				B927D01B1CC58788005797CD /* AppKit+CoreCode.m in Sources */,
-				B927D01C1CC58788005797CD /* AddressHelper.m in Sources */,
-				B927D01D1CC58788005797CD /* GridTableHeaderView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B9B1923C177DED9F00FFE14D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -789,466 +593,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B927CFED1CC57CCD005797CD /* Release-Paddle */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B973D90F20767C4000FE566F /* TableEditLite.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"SANDBOX=1",
-					"NDEBUG=1",
-					"RELEASE=1",
-					"PADDLE=1",
-					"USE_SPARKLE=1",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
-				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "-fobjc-arc-exceptions";
-				SDKROOT = macosx;
-				STRIP_INSTALLED_PRODUCT = NO;
-				WARNING_CFLAGS = (
-					"-Weverything",
-					"-Wshadow",
-					"-Wimplicit-retain-self",
-					"-Wassign-enum",
-					"-Wno-objc-missing-property-synthesis",
-					"-Wno-objc-interface-ivars",
-					"-Wno-readonly-setter-attrs",
-					"-Wno-arc-repeated-use-of-weak",
-					"-Wno-direct-ivar-access",
-					"-Wno-pedantic",
-					"-Wno-format-nonliteral",
-					"-Wno-c++98-compat-pedantic",
-					"-Wno-c++98-compat",
-					"-Wno-unknown-warning-option",
-					"-Wno-documentation-unknown-command",
-					"-Wno-date-time",
-					"-Wno-reserved-id-macro",
-					"-Wno-documentation",
-					"-Wno-nonnull",
-					"-Wno-nullable-to-nonnull-conversion",
-					"-Wno-auto-import",
-					"-Wno-double-promotion",
-				);
-			};
-			name = "Release-Paddle";
-		};
-		B927CFEE1CC57CCD005797CD /* Release-Paddle */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TableEdit/TableEdit.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TableEdit/TableEdit-Prefix.pch";
-				INFOPLIST_FILE = "TableEdit/TableEdit-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "TableEdit-Lite-HP";
-				PROVISIONING_PROFILE = "";
-				WRAPPER_EXTENSION = app;
-			};
-			name = "Release-Paddle";
-		};
-		B927CFF51CC57CE5005797CD /* Release-MacAppStore */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B973D90F20767C4000FE566F /* TableEditLite.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"SANDBOX=1",
-					"APPSTORE_VALIDATERECEIPT=1",
-					"NDEBUG=1",
-					"RELEASE=1",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
-				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "-fobjc-arc-exceptions";
-				SDKROOT = macosx;
-				STRIP_INSTALLED_PRODUCT = NO;
-				WARNING_CFLAGS = (
-					"-Weverything",
-					"-Wshadow",
-					"-Wimplicit-retain-self",
-					"-Wassign-enum",
-					"-Wno-objc-missing-property-synthesis",
-					"-Wno-objc-interface-ivars",
-					"-Wno-readonly-setter-attrs",
-					"-Wno-arc-repeated-use-of-weak",
-					"-Wno-direct-ivar-access",
-					"-Wno-pedantic",
-					"-Wno-format-nonliteral",
-					"-Wno-c++98-compat-pedantic",
-					"-Wno-c++98-compat",
-					"-Wno-unknown-warning-option",
-					"-Wno-documentation-unknown-command",
-					"-Wno-date-time",
-					"-Wno-reserved-id-macro",
-					"-Wno-documentation",
-					"-Wno-nonnull",
-					"-Wno-nullable-to-nonnull-conversion",
-					"-Wno-auto-import",
-					"-Wno-double-promotion",
-				);
-			};
-			name = "Release-MacAppStore";
-		};
-		B927CFF61CC57CE5005797CD /* Release-MacAppStore */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TableEdit/TableEdit.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TableEdit/TableEdit-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"FAILCOMPILATION=1",
-				);
-				INFOPLIST_FILE = "TableEdit/TableEdit-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "TableEdit-Lite-HP";
-				PROVISIONING_PROFILE = "";
-				WRAPPER_EXTENSION = app;
-			};
-			name = "Release-MacAppStore";
-		};
-		B927D0501CC58788005797CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B973D90F20767C4000FE566F /* TableEditLite.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TableEdit/TableEdit.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TableEdit/TableEdit-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"APPSTORE=1",
-				);
-				HEADER_SEARCH_PATHS = "Mono/include/mono-2.0/";
-				INFOPLIST_FILE = "$(SRCROOT)/TableEdit/TableEdit-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Mono",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "TableEdit-Lite";
-				PROVISIONING_PROFILE = "";
-				SYMROOT = MAS;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		B927D0511CC58788005797CD /* Test */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TableEdit/TableEdit.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TableEdit/TableEdit-Prefix.pch";
-				HEADER_SEARCH_PATHS = "Mono/include/mono-2.0/";
-				INFOPLIST_FILE = "$(SRCROOT)/TableEdit/TableEdit-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Mono",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "TableEdit-Lite";
-				PROVISIONING_PROFILE = "";
-				SYMROOT = MAS;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Test;
-		};
-		B927D0521CC58788005797CD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TableEdit/TableEdit.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TableEdit/TableEdit-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"FAILCOMPILATION=1",
-				);
-				HEADER_SEARCH_PATHS = "Mono/include/mono-2.0/";
-				INFOPLIST_FILE = "$(SRCROOT)/TableEdit/TableEdit-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Mono",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "TableEdit-Lite";
-				PROVISIONING_PROFILE = "";
-				SYMROOT = MAS;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		B927D0531CC58788005797CD /* Release-Paddle */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TableEdit/TableEdit.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TableEdit/TableEdit-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"FAILCOMPILATION=1",
-				);
-				HEADER_SEARCH_PATHS = "Mono/include/mono-2.0/";
-				INFOPLIST_FILE = "$(SRCROOT)/TableEdit/TableEdit-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Mono",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "TableEdit-Lite";
-				PROVISIONING_PROFILE = "";
-				SYMROOT = MAS;
-				WRAPPER_EXTENSION = app;
-			};
-			name = "Release-Paddle";
-		};
-		B927D0541CC58788005797CD /* Release-MacAppStore */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TableEdit/TableEdit.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TableEdit/TableEdit-Prefix.pch";
-				HEADER_SEARCH_PATHS = "Mono/include/mono-2.0/";
-				INFOPLIST_FILE = "$(SRCROOT)/TableEdit/TableEdit-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Mono",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "TableEdit-Lite";
-				PROVISIONING_PROFILE = "";
-				SYMROOT = MAS;
-				WRAPPER_EXTENSION = app;
-			};
-			name = "Release-MacAppStore";
-		};
-		B92C91881953620C007D881B /* Test */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B973D90F20767C4000FE566F /* TableEditLite.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"SANDBOX=1",
-					"XCTEST=1",
-					"DEBUG=1",
-					"FORCE_NOLOG=1",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = YES;
-				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "-fobjc-arc-exceptions";
-				SDKROOT = macosx;
-				STRIP_INSTALLED_PRODUCT = NO;
-				WARNING_CFLAGS = (
-					"-Weverything",
-					"-Wshadow",
-					"-Wimplicit-retain-self",
-					"-Wassign-enum",
-					"-Wno-objc-missing-property-synthesis",
-					"-Wno-objc-interface-ivars",
-					"-Wno-readonly-setter-attrs",
-					"-Wno-arc-repeated-use-of-weak",
-					"-Wno-direct-ivar-access",
-					"-Wno-pedantic",
-					"-Wno-format-nonliteral",
-					"-Wno-c++98-compat-pedantic",
-					"-Wno-c++98-compat",
-					"-Wno-unknown-warning-option",
-					"-Wno-documentation-unknown-command",
-					"-Wno-date-time",
-					"-Wno-reserved-id-macro",
-					"-Wno-documentation",
-					"-Wno-nonnull",
-					"-Wno-nullable-to-nonnull-conversion",
-					"-Wno-auto-import",
-					"-Wno-double-promotion",
-				);
-			};
-			name = Test;
-		};
-		B92C91891953620C007D881B /* Test */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = TableEdit/TableEdit.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Frameworks",
-					"$(LOCAL_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TableEdit/TableEdit-Prefix.pch";
-				INFOPLIST_FILE = "TableEdit/TableEdit-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "TableEdit-Lite-HP";
-				PROVISIONING_PROFILE = "";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Test;
-		};
 		B9B1925E177DED9F00FFE14D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B973D90F20767C4000FE566F /* TableEditLite.xcconfig */;
@@ -1367,7 +711,6 @@
 					"USE_SPARKLE=1",
 					"NDEBUG=1",
 					"RELEASE=1",
-					"APPSTORE_VALIDATERECEIPT=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1431,7 +774,7 @@
 				INFOPLIST_FILE = "TableEdit/TableEdit-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "TableEdit-Lite-HP";
+				PRODUCT_NAME = "TableEdit-Lite";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1439,6 +782,7 @@
 		};
 		B9B19262177DED9F00FFE14D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B973D90F20767C4000FE566F /* TableEditLite.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TableEdit/TableEdit.entitlements;
@@ -1454,7 +798,7 @@
 				INFOPLIST_FILE = "TableEdit/TableEdit-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "TableEdit-Lite-HP";
+				PRODUCT_NAME = "TableEdit-Lite";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1463,38 +807,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B927D04F1CC58788005797CD /* Build configuration list for PBXNativeTarget "TableEdit-Lite-MAS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B927D0501CC58788005797CD /* Debug */,
-				B927D0511CC58788005797CD /* Test */,
-				B927D0521CC58788005797CD /* Release */,
-				B927D0531CC58788005797CD /* Release-Paddle */,
-				B927D0541CC58788005797CD /* Release-MacAppStore */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B9B1923B177DED9F00FFE14D /* Build configuration list for PBXProject "TableEditLite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9B1925E177DED9F00FFE14D /* Debug */,
-				B92C91881953620C007D881B /* Test */,
 				B9B1925F177DED9F00FFE14D /* Release */,
-				B927CFED1CC57CCD005797CD /* Release-Paddle */,
-				B927CFF51CC57CE5005797CD /* Release-MacAppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9B19260177DED9F00FFE14D /* Build configuration list for PBXNativeTarget "TableEdit-Lite-HP" */ = {
+		B9B19260177DED9F00FFE14D /* Build configuration list for PBXNativeTarget "TableEdit-Lite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9B19261177DED9F00FFE14D /* Debug */,
-				B92C91891953620C007D881B /* Test */,
 				B9B19262177DED9F00FFE14D /* Release */,
-				B927CFEE1CC57CCD005797CD /* Release-Paddle */,
-				B927CFF61CC57CE5005797CD /* Release-MacAppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
