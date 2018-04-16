@@ -1,6 +1,6 @@
 IMPORTANT NOTE:
 For legal reasons this download doesn't contain a pre-built executable binary of iRipDVD.
-If you just want a working DVD-ripper please look elsewhere (http://handbrake.m0k.org/).
+If you just want a working DVD-ripper please look elsewhere (http://handbrake.fr/).
 The source code is provided for academic/historical interest, but again the most important part the mplayer/mencoder engine is missing for legal reasons.
 In case you want to compile iRipDVD and are legally entitled to do so (i.e. living outside the USA/EU) you may have luck obtaining a working mplayer/mencoder engine at this link:
 http://prdownloads.sourceforge.net/mplayerosx/lastbinary.sit?download

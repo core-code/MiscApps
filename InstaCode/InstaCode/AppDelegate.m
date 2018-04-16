@@ -56,7 +56,7 @@ CONST_KEY(XCode)
 	if (xcodeVersions.empty)
 	{
 		NSRunAlertPanel(@"Error", @"You need to install Xcode to use InstaCode.\n\nIt is a free download on the Mac App Store.\n\nIf you already have it installed, make sure it is in your /Applications folder and its name still begins with 'Xcode'.", @"OK", nil, nil);
-		[@"https://itunes.apple.com/en/app/xcode/id497799835?mt=12".URL open];
+		[@"https://appstore.com/mac/xcode".URL open];
 		exit(1);
 	}
 	if (!kXCodeKey.defaultString.length)
