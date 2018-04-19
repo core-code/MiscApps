@@ -129,7 +129,7 @@ NSCalendar *timezonelessCalendar;
     _tableView.headerView = gthv;
 
 	[self tableViewSelectionDidChange:nil];
-
+#warning, selection dragging is broken in TableEdit-Lite
 	if (!_data_.columnCount)
 	{
 		self.newRows = 16;
