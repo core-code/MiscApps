@@ -787,7 +787,7 @@ NSCalendar *timezonelessCalendar;
         alert(@"Error", makeString(@"You need to select some cells containing numeric values to be able to calculate their %@", operationNames[operation]), @"OK", nil, nil);
         return;
     }
-
+#warning this is broken depending on the wa cells are selected
     long destcolumn = 0, destrow = 0;
     int direction = sender.tag % 10;
     if (direction == 0)

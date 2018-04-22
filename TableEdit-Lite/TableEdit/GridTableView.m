@@ -779,9 +779,9 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 - (void)keyDown:(NSEvent *)event
 {
-    LOGFUNCPARAMA(makeString(@"%@ %lu", [event characters], (unsigned long)event.modifierFlags));
-
 	unichar character = event.charactersIgnoringModifiers.firstCharacter;
+    LOGFUNCPARAMA(makeString(@"%@ [0x%04x] %lu ", [event characters], character, (unsigned long)event.modifierFlags));
+
     BOOL commandDown = (event.modifierFlags & NSCommandKeyMask) > 0;
 	BOOL shiftDown = (event.modifierFlags & NSShiftKeyMask) > 0;
 	BOOL controlDown = (event.modifierFlags & NSControlKeyMask) > 0;
@@ -789,8 +789,9 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 	BOOL nothingDown = !commandDown && !shiftDown && !controlDown && !altDown;
 	BOOL nothingOrOnlyShiftDown = !commandDown && !controlDown && !altDown;
 
-
-	if (character == NSF1FunctionKey)
+    if ((character >= NSInsertFunctionKey && character <= NSModeSwitchFunctionKey) && (character != NSDeleteFunctionKey))
+        [super keyDown:event];
+    else if (character == NSF1FunctionKey)
 		[_document performSelector:@selector(validate)];
     else if (character == NSF3FunctionKey)
     {
@@ -882,7 +883,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 	}
     else if (nothingOrOnlyShiftDown && self.selectedCellArray.count == 1)
     {
-        if (character == NSDeleteCharacter || character == NSBackspaceCharacter)
+        if (character == NSDeleteCharacter || character == NSBackspaceCharacter || character == NSDeleteFunctionKey)
         {
             [self.dataSource tableView:self
 						setObjectValue:@""
@@ -926,7 +927,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
     }
 	else if (nothingDown && self.selectedCellArray.count >= 1)
     {
-		if (character == NSDeleteCharacter || character == NSBackspaceCharacter)
+		if (character == NSDeleteCharacter || character == NSBackspaceCharacter || character == NSDeleteFunctionKey)
 		{
 			for (Cell *c in self.selectedCellArray)
 			{
