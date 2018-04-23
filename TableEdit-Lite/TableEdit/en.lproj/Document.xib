@@ -10,7 +10,6 @@
             <connections>
                 <outlet property="addColumnButton" destination="swj-0c-veh" id="3J7-TM-Kn2"/>
                 <outlet property="addRowButton" destination="FEZ-wV-RLw" id="KlS-Y5-0cs"/>
-                <outlet property="chartContainerView" destination="bnj-qa-BMF" id="xOH-88-ceM"/>
                 <outlet property="plusColumnConstraint" destination="z1D-Ik-5n0" id="Ot4-Uc-hFE"/>
                 <outlet property="plusRowConstraint" destination="g6r-ok-scR" id="haA-kn-HMc"/>
                 <outlet property="popover" destination="gcU-Ou-zxg" id="Q05-jl-Er1"/>
@@ -78,9 +77,6 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="bnj-qa-BMF" customClass="TransparentView">
-                        <rect key="frame" x="0.0" y="0.0" width="900" height="405"/>
-                    </customView>
                     <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="FEZ-wV-RLw" userLabel="plusRowButton" customClass="DraggableButton">
                         <rect key="frame" x="2" y="11" width="45" height="18"/>
                         <constraints>
@@ -124,15 +120,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="swj-0c-veh" firstAttribute="top" secondItem="6" secondAttribute="top" constant="5" id="0n7-Bw-2zM"/>
-                    <constraint firstItem="bnj-qa-BMF" firstAttribute="top" secondItem="swj-0c-veh" secondAttribute="bottom" constant="2" id="7vt-5g-RkA"/>
                     <constraint firstItem="LCg-2v-6t9" firstAttribute="top" secondItem="6" secondAttribute="top" id="Ofe-i2-Gud"/>
                     <constraint firstItem="LCg-2v-6t9" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="PBz-i1-s0W"/>
-                    <constraint firstAttribute="bottom" secondItem="bnj-qa-BMF" secondAttribute="bottom" id="SWy-dM-riw"/>
                     <constraint firstAttribute="bottom" secondItem="LCg-2v-6t9" secondAttribute="bottom" id="SiE-wR-fUR"/>
                     <constraint firstAttribute="trailing" secondItem="LCg-2v-6t9" secondAttribute="trailing" id="Wdv-P3-bCG"/>
-                    <constraint firstItem="bnj-qa-BMF" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="cLz-zj-Xh0"/>
                     <constraint firstItem="FEZ-wV-RLw" firstAttribute="top" secondItem="6" secondAttribute="top" constant="398" id="g6r-ok-scR"/>
-                    <constraint firstAttribute="trailing" secondItem="bnj-qa-BMF" secondAttribute="trailing" id="kG0-5q-MOR"/>
                     <constraint firstItem="FEZ-wV-RLw" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="4" id="lwh-ZD-Wxe"/>
                     <constraint firstItem="swj-0c-veh" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="333" id="z1D-Ik-5n0"/>
                 </constraints>

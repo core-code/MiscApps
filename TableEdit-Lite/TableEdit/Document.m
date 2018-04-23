@@ -129,8 +129,8 @@ NSCalendar *timezonelessCalendar;
     _tableView.headerView = gthv;
 
 	[self tableViewSelectionDidChange:nil];
-#warning, selection dragging is broken in TableEdit-Lite
-	if (!_data_.columnCount)
+
+    if (!_data_.columnCount)
 	{
 		self.newRows = 16;
 		self.newColumns = 9;
@@ -787,27 +787,31 @@ NSCalendar *timezonelessCalendar;
         alert(@"Error", makeString(@"You need to select some cells containing numeric values to be able to calculate their %@", operationNames[operation]), @"OK", nil, nil);
         return;
     }
-#warning this is broken depending on the wa cells are selected
+
     long destcolumn = 0, destrow = 0;
     int direction = sender.tag % 10;
     if (direction == 0)
     {
         destcolumn = _tableView.selectedCells.lastObject.columnIndex;
-        destrow = _tableView.selectedCells.lastObject.rowIndex + 1;
+        CCIntRange1D r = [_tableView.selectedCells calculateExtentsOfValues:^int(Cell *c) { return (int)c.rowIndex; }];
+        destrow = r.max + 1;
     }
     else if (direction == 1)
     {
         destcolumn = _tableView.selectedCells.firstObject.columnIndex;
-        destrow = _tableView.selectedCells.firstObject.rowIndex - 1;
+        CCIntRange1D r = [_tableView.selectedCells calculateExtentsOfValues:^int(Cell *c) { return (int)c.rowIndex; }];
+        destrow = r.min - 1;
     }
     else if (direction == 2)
     {
-        destcolumn = _tableView.selectedCells.lastObject.columnIndex + 1;
+        CCIntRange1D r = [_tableView.selectedCells calculateExtentsOfValues:^int(Cell *c) { return (int)c.columnIndex; }];
+        destcolumn = r.max + 1;
         destrow = _tableView.selectedCells.lastObject.rowIndex;
     }
     else if (direction == 3)
     {
-        destcolumn = _tableView.selectedCells.firstObject.columnIndex - 1;
+        CCIntRange1D r = [_tableView.selectedCells calculateExtentsOfValues:^int(Cell *c) { return (int)c.columnIndex; }];
+        destcolumn = r.min + 1;
         destrow = _tableView.selectedCells.firstObject.rowIndex;
     }
     else
@@ -1857,7 +1861,7 @@ NSCalendar *timezonelessCalendar;
 {
 	LOGFUNCA;
 
-	return NSDragOperationAll;
+	return YES;
 }
 
 - (void)draggingExited:(id <NSDraggingInfo>)sender

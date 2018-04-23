@@ -581,26 +581,25 @@ CA
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="SUM" id="yZm-Oy-3wL">
                                     <items>
-                                        <menuItem title="Insert SUM below" tag="10" id="Tk5-sa-7XT">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert SUM below" tag="10" keyEquivalent="1" id="Tk5-sa-7XT">
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="COF-hv-AA6"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Insert SUM above" tag="11" id="YDW-8y-0lb">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert SUM above" tag="11" keyEquivalent="1" id="YDW-8y-0lb">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="rtG-Gq-Gwg"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Insert SUM right" tag="12" id="3Bw-uR-xqR">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert SUM right" tag="12" keyEquivalent="1" id="3Bw-uR-xqR">
+                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="VyW-AT-dzr"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Insert SUM left" tag="13" id="udL-FC-Wdf">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert SUM left" tag="13" keyEquivalent="1" id="udL-FC-Wdf">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="5i7-s8-KrX"/>
                                             </connections>
@@ -612,26 +611,25 @@ CA
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="PRODUCT" id="ELN-36-tO9">
                                     <items>
-                                        <menuItem title="Insert PRODUCT below" tag="20" id="Wgd-kJ-lUU">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert PRODUCT below" tag="20" keyEquivalent="2" id="Wgd-kJ-lUU">
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="Gjg-tl-QN8"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Insert PRODUCT above" tag="21" id="xZy-YM-RCW">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert PRODUCT above" tag="21" keyEquivalent="2" id="xZy-YM-RCW">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="37O-pV-Vv9"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Insert PRODUCT right" tag="22" id="emU-7m-rBG">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert PRODUCT right" tag="22" keyEquivalent="2" id="emU-7m-rBG">
+                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="irQ-WS-GkF"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Insert PRODUCT left" tag="23" id="2xO-V5-QdW">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert PRODUCT left" tag="23" keyEquivalent="2" id="2xO-V5-QdW">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES" option="YES" command="YES"/>
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="uiO-5K-XeP"/>
                                             </connections>
@@ -643,26 +641,25 @@ CA
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="MIN" id="NuL-ZW-uWz">
                                     <items>
-                                        <menuItem title="Insert MIN below" tag="30" id="tsB-H9-bLb">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert MIN below" tag="30" keyEquivalent="3" id="tsB-H9-bLb">
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="Kh0-dT-bXi"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Insert MIN above" tag="31" id="4lE-Qj-UCV">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert MIN above" tag="31" keyEquivalent="3" id="4lE-Qj-UCV">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="P3e-nT-P2I"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Insert MIN right" tag="32" id="eRt-f5-F10">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert MIN right" tag="32" keyEquivalent="3" id="eRt-f5-F10">
+                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="TP0-aG-xue"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Insert MIN left" tag="33" id="bxf-up-ghT">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert MIN left" tag="33" keyEquivalent="4" id="bxf-up-ghT">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="YCj-Cf-YrW"/>
                                             </connections>
@@ -674,26 +671,25 @@ CA
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="MAX" id="8yv-bc-2UA">
                                     <items>
-                                        <menuItem title="Insert MAX below" tag="40" id="WUq-pq-pwj">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert MAX below" tag="40" keyEquivalent="4" id="WUq-pq-pwj">
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="Q7o-aD-6vB"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Insert MAX above" tag="41" id="fyZ-tJ-87a">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert MAX above" tag="41" keyEquivalent="4" id="fyZ-tJ-87a">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="lJF-nR-les"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Insert MAX right" tag="42" id="Jm9-Wm-v25">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert MAX right" tag="42" keyEquivalent="4" id="Jm9-Wm-v25">
+                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="p80-NF-XNd"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Insert MAX left" tag="43" id="NNR-BJ-Pr1">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        <menuItem title="Insert MAX left" tag="43" keyEquivalent="4" id="NNR-BJ-Pr1">
+                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
                                                 <action selector="insertFormula:" target="-1" id="IhA-MI-3sM"/>
                                             </connections>

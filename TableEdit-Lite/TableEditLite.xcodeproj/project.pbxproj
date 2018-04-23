@@ -708,7 +708,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"SANDBOX=1",
-					"USE_SPARKLE=1",
+					"USE_SPARKLE=2",
 					"NDEBUG=1",
 					"RELEASE=1",
 				);
@@ -768,7 +768,7 @@
 				GCC_PREFIX_HEADER = "TableEdit/TableEdit-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					"USE_SPARKLE=1",
+					"USE_SPARKLE=2",
 					"PADDKE=1",
 				);
 				INFOPLIST_FILE = "TableEdit/TableEdit-Info.plist";
