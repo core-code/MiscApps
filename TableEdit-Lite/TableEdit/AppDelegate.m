@@ -232,7 +232,7 @@ CONST_KEY(UsagesThisVersion)
 @end
 
 #if !defined(APPSTORE_VALIDATERECEIPT) && !defined(TRYOUT) && !defined(PADDLE) && !defined(DEBUG)
-#warning Time-Limited Release-Beta build
+#warning Release build
 #elif !defined(APPSTORE_VALIDATERECEIPT) && !defined(TRYOUT) && defined(DEBUG)
 #warning Time-Limited Debug-Beta build
 #elif !defined(APPSTORE_VALIDATERECEIPT) && defined(TRYOUT) && !defined(DEBUG)
