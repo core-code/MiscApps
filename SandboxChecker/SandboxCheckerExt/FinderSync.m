@@ -123,6 +123,7 @@
 
         if (!cachedValue)   // don't know yet, update
         {
+#warning check if this isn't wrong cuz of apps that have never been launched 
             hashName.defaultInt = 1; // not even signed
 
             NSString *signing = [self signingOfApp:url];
