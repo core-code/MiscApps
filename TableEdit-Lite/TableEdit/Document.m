@@ -14,7 +14,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #import "DocumentData.h"
 #import "AddressHelper.h"
 #import "AppDelegate.h"
-#import "FormatterHelper.h"
 #import "FormulaResult.h"
 #import "JMBlockFormatter.h"
 #import "DraggableButton.h"
@@ -1468,70 +1467,7 @@ NSCalendar *timezonelessCalendar;
 		NSString *d = [_data_ valueForRow:rowIndex column:columnIndex-1 throw:NO];
 
 
-		NSDictionary *attributes = _data_.attributes[rowIndex][columnIndex-1];
-		NSNumber *formatObject = attributes[kFormatTypeKey];
-		if (formatObject && ![d isEqualTo:@""])
-		{
-			formatKind format = (formatKind) formatObject.intValue;
 
-			if (format == formatString)
-				return d.stringValue;
-			else if (format == formatTime)
-			{
-				NSNumber *number = d.numberValue;
-
-				if (number)
-				{
-					NSString *timeString = [FormatterHelper formattedStringFromTime:number
-																			   type:(formatTimeKind)[attributes[kFormatTimeTypeKey] intValue]
-																			 format:[attributes[kFormatTimeFormatKey] intValue]];
-
-					return timeString;
-				}
-				else
-				{
-					cc_log_debug(@"Info: failed to create formatted time from: %@ at c%li r%li", d, (long)columnIndex, (long)rowIndex);
-					return d;
-				}
-			}
-			else if (format == formatDate)
-			{
-				NSDate *date = d.dateValue;
-
-				if (date)
-				{
-					NSDateFormatterStyle datef = attributes[kFormatDateDateKey] ? [attributes[kFormatDateDateKey] intValue] : 2;
-					NSDateFormatterStyle timef = attributes[kFormatDateTimeKey] ? [attributes[kFormatDateTimeKey] intValue ] : 0;
-					NSString *dateString = [FormatterHelper formattedStringFromDate:date
-																		  dateStyle:datef
-																		  timeStyle:timef];
-
-					return dateString;
-				}
-				else
-				{
-                    cc_log_debug(@"Info: failed to create formatted date from: %@ at c%li r%li", d, (long)columnIndex, (long)rowIndex);
-
-					return d;
-				}
-			}
-			else if (format == formatNumber)
-			{
-				NSNumber *number = d.numberValue;
-
-				if (number)
-				{
-					return [FormatterHelper formattedStringFromNumber:number attributes:attributes];
-				}
-				else
-				{
-                    cc_log_debug(@"Info: failed to create formatted number from: %@ at c%li r%li", d, (long)columnIndex, (long)rowIndex);
-
-					return d;
-				}
-			}
-		}
-		else
 		{
             if ([d isKindOfClass:NSNumber.class])
 			{	// we convert numbers to strings  because returning numbers displays thousend separators and returning d.stringValue uses non-localized . comma separator

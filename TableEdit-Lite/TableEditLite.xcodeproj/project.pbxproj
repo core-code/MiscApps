@@ -32,7 +32,6 @@
 		B968B1841B9DF4400027881B /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = B968B1831B9DF4400027881B /* Cell.m */; };
 		B96946C41A72710B004C6748 /* DraggableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B96946C31A72710B004C6748 /* DraggableImage.m */; };
 		B973D91020767C4000FE566F /* TableEditLite.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B973D90F20767C4000FE566F /* TableEditLite.xcconfig */; };
-		B976E75E1BD95A4B009A8433 /* FormatterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B976E75D1BD95A4B009A8433 /* FormatterHelper.m */; };
 		B97A5E981CC1540700201C2C /* JMBlockFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B97A5E971CC1540700201C2C /* JMBlockFormatter.m */; };
 		B9815CB920753FF7001A6E3F /* FormulaResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B9815CB720753FF7001A6E3F /* FormulaResult.m */; };
 		B981B2011948B3A30052D15A /* DocumentationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B981B2001948B3A30052D15A /* DocumentationWindow.xib */; };
@@ -150,8 +149,6 @@
 		B96946C21A72710B004C6748 /* DraggableImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableImage.h; sourceTree = "<group>"; };
 		B96946C31A72710B004C6748 /* DraggableImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableImage.m; sourceTree = "<group>"; };
 		B973D90F20767C4000FE566F /* TableEditLite.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = TableEditLite.xcconfig; sourceTree = SOURCE_ROOT; };
-		B976E75C1BD95A4B009A8433 /* FormatterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatterHelper.h; sourceTree = "<group>"; };
-		B976E75D1BD95A4B009A8433 /* FormatterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormatterHelper.m; sourceTree = "<group>"; };
 		B97A5E961CC1540700201C2C /* JMBlockFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMBlockFormatter.h; path = ../Mac/JMBlockFormatter.h; sourceTree = "<group>"; };
 		B97A5E971CC1540700201C2C /* JMBlockFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMBlockFormatter.m; path = ../Mac/JMBlockFormatter.m; sourceTree = "<group>"; };
 		B9815CB720753FF7001A6E3F /* FormulaResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormulaResult.m; sourceTree = "<group>"; };
@@ -271,8 +268,6 @@
 			children = (
 				B968A45918B7A4B900309F2F /* AddressHelper.h */,
 				B968A45A18B7A4B900309F2F /* AddressHelper.m */,
-				B976E75C1BD95A4B009A8433 /* FormatterHelper.h */,
-				B976E75D1BD95A4B009A8433 /* FormatterHelper.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -535,7 +530,6 @@
 				B933AB9318BBE1A4006E42B9 /* Foundation+CoreCode.m in Sources */,
 				B9F8ECFC18B3D84A006CA81E /* DraggableButton.m in Sources */,
 				B9F9D8FF1BC679EA00545878 /* JMWebView.m in Sources */,
-				B976E75E1BD95A4B009A8433 /* FormatterHelper.m in Sources */,
 				B9C8D1E5177E3F9D007B980C /* GridTableView.m in Sources */,
 				B9F9D9051BC68EF800545878 /* JMApplicationDelegate.m in Sources */,
 				B968B1841B9DF4400027881B /* Cell.m in Sources */,

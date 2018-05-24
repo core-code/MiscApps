@@ -105,8 +105,6 @@ CONST_KEY(UsagesThisVersion)
     
 	[self checkMASReceipt];
 
-	[self checkBetaExpiryForDate:__DATE__ days:20];
-
 
     [JMAppMovedHandler startMoveObservation];
 

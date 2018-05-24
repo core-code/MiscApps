@@ -12,7 +12,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #import "DocumentData.h"
 #import "AddressHelper.h"
-#import "FormatterHelper.h"
 #import "FormulaResult.h"
 
 @interface DocumentData ()
@@ -194,7 +193,54 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
             }
         }
     }
-
+    
+    // check compatibility with lite
+    NSMutableArray *usedProFeatures = makeMutableArray();
+    if (_enableRowColors)
+        [usedProFeatures addNewObject:@"Row Colors"];
+    for (NSMutableArray <NSMutableDictionary *> *row in _attributes_) // previously we did not make sure each attribute was an unique object which of course led to bugs
+    {
+        for (NSUInteger column = 0; column < row.count; column++)
+        {
+            NSMutableDictionary *currentAttributes = row[column];
+            // TODO differenciate:
+            //cell content styling including fonts, font styles and sizes, font colors and text alignment
+            //cell background styling including fill-colors and borders
+            //cell formatting as currencies, date and time formats and different numbers formats like scientific or percentages
+            if (currentAttributes.allKeys.count)
+                [usedProFeatures addNewObject:@"Cell Attributes"];
+        }
+    }
+    for (NSMutableArray <NSString *> *row in _data_) // previously we did not make sure each attribute was an unique object which of course led to bugs
+    {
+        for (NSUInteger column = 0; column < row.count; column++)
+        {
+            NSString *currentData = row[column];
+            
+            if ([currentData hasPrefix:@"="])
+                [usedProFeatures addNewObject:@"Formulae / Functions"];
+        }
+    }
+    if (_graphs_.count)
+        [usedProFeatures addNewObject:@"Graphs / Charts"];
+    if (usedProFeatures.count)
+    {
+        // TODO check forfloating header rows, adjustable row height, table scaling & magnification
+        dispatch_after_main(1.0, ^
+        {
+            NSString *features = [usedProFeatures joined:@"\n"];
+            
+            NSInteger choice = alert(@"Compatibility Warning", makeString(@"This spreadsheet contains features not compatible with TableEdit-Lite:\n\n%@\n\nYou should consider either switching to the newest, paid version of TableEdit\nor use the latest old free version of TableEdit (v1.3), which supports all those features.", features),
+                  @"Download free TableEdit 1.3", @"Buy newest TableEdit", @"Cancel");
+            
+            if (choice == NSAlertFirstButtonReturn)
+                [@"https://www.corecode.io/downloads/tableedit_1.3.0.zip".URL open];
+            else if (choice == NSAlertSecondButtonReturn)
+                [@"https://itunes.apple.com/us/app/tableedit/id902476958?mt=12&at=1000lwks".URL open];
+        });
+    }
+        
+        
 	cc_log(@"READ took %.2fs for %i bytes", [[NSDate date] timeIntervalSinceDate:pre], (int)data.length);
 
 
