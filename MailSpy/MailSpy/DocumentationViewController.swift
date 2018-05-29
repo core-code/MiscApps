@@ -39,7 +39,7 @@ class DocumentationViewController : NSViewController
 		self.readmeURL = Bundle.main.url(forResource: "Read Me.rtf", withExtension: nil) as NSURL?
 
 
-		self.webView.mainFrame.load(NSURLRequest(url: NSURL(string: "https://www.corecode.io/promotion/promotion.html")! as URL) as URLRequest)
+		self.webView.mainFrame.load(NSURLRequest(url: NSURL(string: "https://www.corecode.io/promotion/promotion.html?app=com.corecode.MailSpy")! as URL) as URLRequest)
 	}
 
 	@IBAction func openURL(_ sender: AnyObject)
@@ -57,7 +57,7 @@ class DocumentationViewController : NSViewController
 
 	func webView(_ webView: WebView!, decidePolicyForNavigationAction actionInformation: [NSObject : AnyObject]!, request: NSURLRequest!, frame: WebFrame!, decisionListener listener: WebPolicyDecisionListener!)
 	{
-		if request.url!.absoluteString == "https://www.corecode.io/promotion/promotion.html"
+		if request.url!.absoluteString.hasPrefix("https://www.corecode.io/promotion/promotion.html")
 		{
 			listener.use()
 		}

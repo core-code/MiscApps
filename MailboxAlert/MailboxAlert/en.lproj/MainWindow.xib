@@ -647,7 +647,7 @@
                                             <nil key="identifier"/>
                                         </webPreferences>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="remoteHTMLURL" value="https://www.corecode.io/promotion/promotion.html"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="remoteHTMLURL" value="https://www.corecode.io/promotion/promotion.html?app=$(CFBundleIdentifier)"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="zoomFactor">
                                                 <real key="value" value="0.59399999999999997"/>
                                             </userDefinedRuntimeAttribute>
