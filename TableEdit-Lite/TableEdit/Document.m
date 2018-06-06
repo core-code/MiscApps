@@ -19,6 +19,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #import "DraggableButton.h"
 #import "PrintViewController.h"
 #import "GridTableHeaderView.h"
+#import "fields.h"
+
 
 NSCharacterSet *cellAddressForbiddenCharacterset;
 NSDate *excelBaseDate;
@@ -196,14 +198,14 @@ NSCalendar *timezonelessCalendar;
 
 #pragma mark excel
 
-- (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError * __autoreleasing *)outError
+- (BOOL)readFromURL:(NSURL *)url ofType:(NSString *)typeName error:(NSError * __autoreleasing *)outError
 {
 	LOGFUNCPARAMA(self.fileURL.path);
 	@try
 	{
 		if ([typeName isEqualToString:@"com.corecode.tableedit.spreadsheet"] || [typeName isEqualToString:@"TableEditDocument"])
         {
-            BOOL result = [_data_ read:data];
+            BOOL result = [_data_ read:url.contents];
 
             if (self.tableView)
             {
@@ -223,25 +225,18 @@ NSCalendar *timezonelessCalendar;
 		{
 			if ([typeName hasPrefix:@"XLS"] || [typeName hasPrefix:@"XLT"])
 			{
-				if (![self importExcel:nil
-								  data:data.bytes
-								length:data.length
-								action:importReplaceEverything
-								   xml:!([typeName isEqualToString:@"XLS File"] || [typeName isEqualToString:@"XLT File"])])
+                if (![self importExcel:url
+                                action:importReplaceEverything
+                                   xml:!([typeName isEqualToString:@"XLS File"] || [typeName isEqualToString:@"XLT File"])])
 					return NO;
 			}
 			else
 			{
-				NSString *delimiter;
-				NSString *string = data.string;
-
-				if ([typeName containsAny:@[@"TSV", @"TXT", @"TAB"]])
-					delimiter = @"	";
-				else
-					delimiter = (([string countOccurencesOfString:@","] > [string countOccurencesOfString:@";"]) ? @"," : @";");
-
-				if (![self importCSVString:string delimiter:delimiter action:importReplaceEverything])
-					return NO;
+                if (![self importCSV:url
+                           delimiter:(NSString *)[NSNull null]
+                            encoding:0
+                              action:importReplaceEverything])
+                    return NO;
 			}
 
 			self.fileURL = nil; // disassociate document from file; makes document "untitled"
@@ -255,7 +250,7 @@ NSCalendar *timezonelessCalendar;
 	}
 }
 
-- (BOOL)importExcel:(NSURL *)file data:(const char *)source length:(NSUInteger)length action:(importChoice)action xml:(BOOL)xml
+- (BOOL)importExcel:(NSURL *)file action:(importChoice)action xml:(BOOL)xml
 {
 	LOGFUNCPARAM(file.path);
 	BookHandle book = xml ? xlCreateXMLBook() : xlCreateBook();
@@ -263,11 +258,8 @@ NSCalendar *timezonelessCalendar;
     xlBookSetKey(book, LIBXLNAME, LIBXLKEY);
 	xlBookSetLocale(book,"UTF-8");
 
-	BOOL result;
-	if (file)
-		result = xlBookLoad(book, file.path.UTF8String) > 0;
-	else
-		result = xlBookLoadRaw(book, source, (unsigned int)length) > 0;
+    assert(file);
+	BOOL result = xlBookLoad(book, file.path.UTF8String) > 0;
 
 
 	if (!result)
@@ -573,65 +565,128 @@ NSCalendar *timezonelessCalendar;
 	return YES;
 }
 
-- (void)importCSV:(NSURL *)source delimiter:(NSString *)delimiter encoding:(NSStringEncoding)encoding action:(importChoice)action
+- (BOOL)importCSV:(NSURL *)source delimiter:(NSString *)delimiter encoding:(NSStringEncoding)encoding action:(importChoice)action
 {
-	LOGFUNC;
-	NSDate *pre = [NSDate date];
-	NSString *string;
-	NSError *err;
-
-	if (encoding)
-		string = [[NSString alloc] initWithContentsOfURL:source encoding:encoding error:&err];
-	else
-		string = [[NSString alloc] initWithContentsOfURL:source usedEncoding:NULL error:&err];
-
-	if (!string)
-	{
-		if (encoding)
-			cc_log(@"Warning: failed to import %@ using specified encoding, trying others", source);
-		else
-			cc_log(@"Warning: failed to import %@ using guessed encoding, trying another way", source);
-
-		string = source.contents.string;
-
-		if (!string)
-		{
-			cc_log_error(@"ERROR: still failed to import %@ as text, try fixing the text encoding using a good text editor before attempting import again", source);
-
-			return;
-		}
-	}
-
-	if ([[NSNull null] isEqual:delimiter])
-	{
-		if ([source.pathExtension.uppercaseString containsAny:@[@"TSV", @"TXT", @"TAB"]])
-			delimiter = @"	";
-		else
-			delimiter = (([string countOccurencesOfString:@","] > [string countOccurencesOfString:@";"]) ? @"," : @";");
-	}
-
-	[self importCSVString:string delimiter:delimiter action:action];
-
-	VALIDATE;
-	cc_log(@"IMPORT took %.2fs for %i bytes", [[NSDate date] timeIntervalSinceDate:pre], (int)string.length);
-}
-
-- (BOOL)importCSVString:string delimiter:(NSString *)delimiter action:(importChoice)action
-{
-	LOGFUNC;
-	NSArray <NSArray <NSString *> *> *data = [string parsedDSVWithDelimiter:delimiter];
-	BOOL success = [_data_ importData:data attributes:nil action:action selection:_tableView.selectionExtents];
-
-	
-	[self.undoManager removeAllActions];
-	[self.tableView clearSelection:NO];
-	[self recreateTableColumns];
-	[self reloadTableAndGraphs];
-
-	self._shouldAutosizeAllColumns = YES;
-
-	VALIDATE;
-	return success;
+    LOGFUNC;
+    
+    NSDate *pre = [NSDate date];
+    NSData *first10KData = [source readFileHeader:10 * 1024]; // don't wanna read possibly huge CSV just to sniff the seperator
+    NSString *first10KString;
+    
+    if (!encoding) // need to guess encoding
+    {
+        encoding = [NSString stringEncodingForData:first10KData encodingOptions:nil convertedString:&first10KString usedLossyConversion:nil];
+        
+        if (!encoding)
+        {
+            for (NSNumber *num in @[@(NSUTF8StringEncoding), @(NSISOLatin1StringEncoding), @(NSASCIIStringEncoding), @(NSUTF16StringEncoding)])
+            {
+                NSString *s = [[NSString alloc] initWithData:first10KData encoding:num.unsignedIntegerValue];
+                
+                if (s)
+                {
+                    first10KString = s;
+                    encoding = num.unsignedIntegerValue;
+                    break;
+                }
+            }
+            
+            if (!encoding)
+                return NO;
+        }
+    }
+    
+    if ([[NSNull null] isEqual:delimiter]) // need to guess delimiter
+    {
+        if ([source.pathExtension.uppercaseString containsAny:@[@"TSV", @"TXT", @"TAB"]])
+            delimiter = @"    ";
+        else
+        {
+            if (!first10KString)
+                first10KString = first10KData.string;
+            
+            delimiter = (([first10KString countOccurencesOfString:@","] > [first10KString countOccurencesOfString:@";"]) ? @"," : @";");
+        }
+    }
+    if (!first10KString)
+        first10KString = first10KData.string;
+    
+    if (!first10KString)
+        return NO;
+    
+    NSUInteger doubleQuoteCount = [first10KString countOccurencesOfString:@"\""];
+    NSUInteger singleQuoteCount = [first10KString countOccurencesOfString:@"\'"];
+    
+    struct fields_reader *reader;
+    struct fields_record *record;
+    FILE *fp = fopen(source.path.UTF8String, "rb");
+    NSMutableArray *csv = makeMutableArray();
+    struct fields_format format;
+    format.delimiter = (char)delimiter.firstCharacter;
+    if (doubleQuoteCount == 0 && singleQuoteCount == 0)
+        format.quote = '\0';
+    else if (doubleQuoteCount >= singleQuoteCount)
+        format.quote = '"';
+    else
+        format.quote = '\'';
+    
+    // TODO: do we need to specify the quote char too?
+    reader = fields_read_file(fp, &format, NULL);
+    if (reader == NULL)
+        return NO;
+    
+    record = fields_record_alloc(NULL);
+    if (record == NULL)
+    {
+        fields_reader_free(reader);
+        return NO;
+    }
+    
+    struct fields_field value;
+    while (fields_reader_read(reader, record) == 0)
+    {
+        NSMutableArray *line = makeMutableArray();
+        
+        for (unsigned int i = 0; i < fields_record_size(record); i++)
+        {
+            fields_record_field(record, i, &value);
+            
+            NSString *field = [[NSString alloc] initWithBytes:value.value length:value.length encoding:encoding];
+            
+            [line addObject:field];
+        }
+        
+        [csv addObject:line];
+    }
+    
+    if (fields_reader_error(reader) != 0)
+    {
+        struct fields_position position;
+        int error = fields_reader_error(reader);
+        const char *message = fields_reader_strerror(error);
+        
+        fields_reader_position(reader, &position);
+        cc_log_error(@"Error: CSV Import: %lu:%lu: %@", position.row, position.column, @(message));
+    }
+    
+    fields_record_free(record);
+    fields_reader_free(reader);
+    
+    
+    BOOL success = [_data_ importData:csv attributes:nil action:action selection:_tableView.selectionExtents];
+    
+    
+    [self.undoManager removeAllActions];
+    [self.tableView clearSelection:NO];
+    [self recreateTableColumns];
+    [self reloadTableAndGraphs];
+    
+    self._shouldAutosizeAllColumns = YES;
+    
+    VALIDATE;
+    cc_log(@"IMPORT took %.2fs for %i bytes", [[NSDate date] timeIntervalSinceDate:pre], (int)source.fileSize);
+    
+    return success;
 }
 
 + (void)showImportPanel:(id)sender forWindow:(NSWindow *)window
@@ -676,7 +731,7 @@ NSCalendar *timezonelessCalendar;
 				Document *newDocument = NSDocumentController.sharedDocumentController.currentDocument;
 
 				if ([panel.URL.pathExtension hasPrefix:@"xls"] || [panel.URL.pathExtension hasPrefix:@"xlt"])
-					[newDocument importExcel:panel.URL data:NULL length:0
+					[newDocument importExcel:panel.URL
 									  action:importReplaceEverything
 										 xml:!([panel.URL.pathExtension isEqualToString:@"xls"] || [panel.URL.pathExtension isEqualToString:@"xlt"])];
 				else
@@ -690,7 +745,7 @@ NSCalendar *timezonelessCalendar;
 			else
 			{
 				if ([panel.URL.pathExtension hasPrefix:@"xls"] || [panel.URL.pathExtension hasPrefix:@"xlt"])
-					[(Document *)sender importExcel:panel.URL data:NULL length:0
+					[(Document *)sender importExcel:panel.URL 
 											 action:action
 												xml:!([panel.URL.pathExtension isEqualToString:@"xls"] || [panel.URL.pathExtension isEqualToString:@"xlt"])];
 				else
@@ -1260,8 +1315,9 @@ NSCalendar *timezonelessCalendar;
 		 NSTableColumn *co = self->_tableView.tableColumns[idx+1];
 
 		 double max = 40;
+         const unsigned  long maximumRowsToCheck = 200;
 
-		 for (NSUInteger i = 0; i < self->_data_.rowCount; i++)
+         for (NSUInteger i = 0; i < MIN(maximumRowsToCheck, self->_data_.rowCount); i++)
 			 max = MAX(max, [self->_tableView preparedCellAtColumn:idx+1 row:i].cellSize.width);
 
 		 co.width = max+5;

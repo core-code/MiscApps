@@ -20,6 +20,8 @@
 		B936618A193F8C9E00E8D4CC /* snappy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9366189193F8C9E00E8D4CC /* snappy.framework */; };
 		B936618C193F901800E8D4CC /* snappy.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9366189193F8C9E00E8D4CC /* snappy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B93661961940888D00E8D4CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B93661951940888D00E8D4CC /* AppDelegate.m */; };
+		B9385A6F20C86391003DA80A /* fields.c in Sources */ = {isa = PBXBuildFile; fileRef = B9385A6D20C86391003DA80A /* fields.c */; };
+		B9385A7020C86391003DA80A /* fields_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = B9385A6E20C86391003DA80A /* fields_posix.c */; };
 		B94061291A7E73F100308CBC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94061281A7E73F100308CBC /* QuartzCore.framework */; };
 		B952522E195AEE9000AEBF47 /* PromotionWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B952522D195AEE9000AEBF47 /* PromotionWindow.xib */; };
 		B9525230195AF2B200AEBF47 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B952522F195AF2B200AEBF47 /* WebKit.framework */; };
@@ -31,7 +33,6 @@
 		B968B1811B9DDE0B0027881B /* DocumentData.m in Sources */ = {isa = PBXBuildFile; fileRef = B968B1801B9DDE0B0027881B /* DocumentData.m */; };
 		B968B1841B9DF4400027881B /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = B968B1831B9DF4400027881B /* Cell.m */; };
 		B96946C41A72710B004C6748 /* DraggableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B96946C31A72710B004C6748 /* DraggableImage.m */; };
-		B973D91020767C4000FE566F /* TableEditLite.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B973D90F20767C4000FE566F /* TableEditLite.xcconfig */; };
 		B97A5E981CC1540700201C2C /* JMBlockFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B97A5E971CC1540700201C2C /* JMBlockFormatter.m */; };
 		B9815CB920753FF7001A6E3F /* FormulaResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B9815CB720753FF7001A6E3F /* FormulaResult.m */; };
 		B981B2011948B3A30052D15A /* DocumentationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B981B2001948B3A30052D15A /* DocumentationWindow.xib */; };
@@ -133,6 +134,10 @@
 		B9366189193F8C9E00E8D4CC /* snappy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = snappy.framework; path = Frameworks/snappy.framework; sourceTree = "<group>"; };
 		B93661941940888D00E8D4CC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B93661951940888D00E8D4CC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B9385A6B20C86391003DA80A /* fields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fields.h; sourceTree = "<group>"; };
+		B9385A6C20C86391003DA80A /* fields_posix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fields_posix.h; sourceTree = "<group>"; };
+		B9385A6D20C86391003DA80A /* fields.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fields.c; sourceTree = "<group>"; };
+		B9385A6E20C86391003DA80A /* fields_posix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fields_posix.c; sourceTree = "<group>"; };
 		B94061281A7E73F100308CBC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B952522D195AEE9000AEBF47 /* PromotionWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromotionWindow.xib; sourceTree = "<group>"; };
 		B952522F195AF2B200AEBF47 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -301,6 +306,17 @@
 			path = ../CoreLib/CoreLib;
 			sourceTree = "<group>";
 		};
+		B9385A6A20C86391003DA80A /* FieldsCSV */ = {
+			isa = PBXGroup;
+			children = (
+				B9385A6B20C86391003DA80A /* fields.h */,
+				B9385A6C20C86391003DA80A /* fields_posix.h */,
+				B9385A6D20C86391003DA80A /* fields.c */,
+				B9385A6E20C86391003DA80A /* fields_posix.c */,
+			);
+			path = FieldsCSV;
+			sourceTree = "<group>";
+		};
 		B9896CDE1EA7C20A004075C9 /* JMRatingWindow */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +404,7 @@
 				B9D16AC71DFC74A200AFA58B /* InsertNumbersView.xib */,
 				B9823FAA1DE619CA0004ABCD /* CrashHelper.app */,
 				B9BBC2AA18B62772007FBC4C /* Images.xcassets */,
+				B9385A6A20C86391003DA80A /* FieldsCSV */,
 				B9B1924B177DED9F00FFE14D /* TableEdit-Info.plist */,
 				B9857E1E1EC4F27800978B94 /* credits.html */,
 				B968B1751B9DD0CF0027881B /* faq.html */,
@@ -436,7 +453,7 @@
 		B9B19238177DED9F00FFE14D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "CoreCode Limited";
 				TargetAttributes = {
 					B9B1923F177DED9F00FFE14D = {
@@ -494,7 +511,6 @@
 				B981B2011948B3A30052D15A /* DocumentationWindow.xib in Resources */,
 				B9D16AC81DFC74A200AFA58B /* InsertNumbersView.xib in Resources */,
 				B9192FAD193E3BFC006C72DD /* ImportOptionView.xib in Resources */,
-				B973D91020767C4000FE566F /* TableEditLite.xcconfig in Resources */,
 				B968B17C1B9DD1C10027881B /* readme.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,10 +554,12 @@
 				B91891AB1A76D49400C0A4A9 /* MovableBorderlessWindow.m in Sources */,
 				B981B2061948D7790052D15A /* JMValueTransformer.m in Sources */,
 				B9F85F211BCBAE94004B7AF9 /* JMAppMovedHandler.m in Sources */,
+				B9385A7020C86391003DA80A /* fields_posix.c in Sources */,
 				B933AB9218BBE1A4006E42B9 /* CoreLib.m in Sources */,
 				B968B1811B9DDE0B0027881B /* DocumentData.m in Sources */,
 				B933AB9018BBE1A4006E42B9 /* AppKit+CoreCode.m in Sources */,
 				B9896CEA1EA7C20A004075C9 /* JMEditableBorderlessWindow.m in Sources */,
+				B9385A6F20C86391003DA80A /* fields.c in Sources */,
 				B90B0D391DA7F907000CA590 /* JMURLButton.m in Sources */,
 				B9B3BC411DA940A5005BA18B /* PrintViewController.m in Sources */,
 				B968A45B18B7A4B900309F2F /* AddressHelper.m in Sources */,
