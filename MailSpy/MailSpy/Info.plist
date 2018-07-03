@@ -4,6 +4,29 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>eml</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>eml Mail File</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>emlx</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>emlx Mail File</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconFile</key>
@@ -17,7 +40,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.3</string>
+	<string>1.0.4</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>

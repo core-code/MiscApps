@@ -62,31 +62,7 @@ class IPGeoLocation
                 return
             }
         }
-        
-        
-        
-        if let data = NSData(contentsOf: NSURL(string: "http://www.telize.com/geoip/" + ipstring)! as URL)
-        {
-            let json = (try! JSONSerialization.jsonObject(with: data as Data, options: [])) as! NSDictionary
-            
-            if (json["longitude"] as! Double?) != nil
-            {
-                    longitude = json["longitude"] as? Double
-                    latitude = json["latitude"] as? Double
-                    if let value = json["country"] as? String { country = value }
-                    if let value = json["region"] as? String { region = value }
-                    if let value = json["city"] as? String { city = value }
-                    if let value = json["postal_code"] as? String { zip = value }
-                    if let value = json["isp"] as? String { isp = value }
-                    if let value = json["asn"] as? String { asn = value }
-                    if let value = json["ip"] as? String { query = value }
-                    msg = "Geolocation by Telize / MaxMind"
-                    url = "http://www.telize.com"
-
-                    return
-            }
-        }
-        
+                
         
         if let data = NSData(contentsOf: NSURL(string: "http://api.db-ip.com/addrinfo?addr=" + ipstring + "&api_key=bed383fd5e8efe3355ef79bb717dfcbd82850bb1")! as URL)
         {

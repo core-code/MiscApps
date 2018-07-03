@@ -76,8 +76,30 @@ class AppDelegate: NSObject, NSApplicationDelegate
 //        }
         
 	}
+   
 
-    
+    func application(_ sender: NSApplication, openFiles filenames: [String])
+    {
+        for file in filenames
+        {
+            let data = NSData(contentsOfFile: file as String)
+            var string: NSString? = nil
+            var lossyConversion: ObjCBool = false
+            
+            let _ = NSString.stringEncoding(for: data! as Data, encodingOptions: nil, convertedString: &string, usedLossyConversion: &lossyConversion)
+            
+            
+            
+            if (string != nil && (string?.length)! > 0)
+            {
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dropReceived"), object: string)
+            }
+            else
+            {
+                Swift.print("Error: could not decode \(file)")
+            }
+        }
+    }
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool
 	{
         return true;
