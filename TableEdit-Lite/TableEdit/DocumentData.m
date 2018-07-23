@@ -262,7 +262,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 	NSData *serializedData = _data_.JSONData;
 	NSArray *serializableGraphs = [_graphs_ mapped:^id(NSDictionary *input)
 	{
-		return [input dictionaryByRemovingKeys:@[@"plot", @"graph", @"graphView"]];
+		return [input dictionaryByDeletingKeys:@[@"plot", @"graph", @"graphView"]];
 	}];
 	NSDictionary *properties =  @{@"enableRowColors" : @(self.enableRowColors),
 								  @"oddRowColor" : self.oddRowColor,
@@ -364,18 +364,22 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 
 	for (NSArray *row in _data_)
 	{
-		for (NSString *obj in row)
-		{
-			if ([obj isKindOfClass:NSString.class] && [obj contains:delimiter])
-			{
-				[export appendString:@"\""];
-				[export appendString:obj.stringValue];
-				[export appendString:@"\""];
-			}
-			else
-				[export appendString:obj.stringValue];
-			[export appendString:delimiter];
-		}
+        for (NSString *obj in row)
+        {
+            if ([obj isKindOfClass:NSString.class] &&
+                ([obj contains:delimiter] || [obj contains:@" "] || [obj contains:@"\""]))
+            {
+                [export appendString:@"\""];
+                NSString *fieldStr = obj.stringValue;
+                fieldStr = [fieldStr replaced:@"\"" with:@"\"\""];
+                [export appendString:fieldStr];
+                [export appendString:@"\""];
+            }
+            else
+                [export appendString:obj.stringValue];
+            
+            [export appendString:delimiter];
+        }
 
         [export deleteCharactersInRange:NSMakeRange(export.length-delimiter.length, delimiter.length)];
 		[export appendString:@"\n"];

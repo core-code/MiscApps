@@ -1316,9 +1316,14 @@ NSCalendar *timezonelessCalendar;
 
 		 double max = 40;
          const unsigned  long maximumRowsToCheck = 200;
+         
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations" // we KNOW that cell bases tables are deprecated
 
          for (NSUInteger i = 0; i < MIN(maximumRowsToCheck, self->_data_.rowCount); i++)
 			 max = MAX(max, [self->_tableView preparedCellAtColumn:idx+1 row:i].cellSize.width);
+         
+#pragma clang diagnostic pop
 
 		 co.width = max+5;
 	 }];
