@@ -52,30 +52,26 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     
     [fileManager copyItemAtPath:[@"~/Library/Logs/DiagnosticReports/" stringByExpandingTildeInPath]
 						 toPath:[tmpPath stringByAppendingString:@"DR"] error:NULL];
-						 
-	{
-		NSURL *path = @"~/Library/Preferences/".expanded.fileURL;
-		for (NSString *p in [path.path.directoryContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'com.corecode'"])
-			[fileManager copyItemAtURL:[path add:p] toURL:[tmpURL add:p] error:NULL];
-	}
-	{
-		NSURL *path = @"~/Library/Containers/".expanded.fileURL;
-		for (NSString *p in [path.path.directoryContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'com.corecode'"])
-			[fileManager copyItemAtURL:[path add:p] toURL:[tmpURL add:p] error:NULL];
-	}
 
+    [fileManager copyItemAtPath:[@"~/Library/Preferences/com.corecode.MacUpdater.plist" stringByExpandingTildeInPath]
+                         toPath:[tmpPath stringByAppendingString:@"com.corecode.MacUpdater.plist"] error:NULL];
 
-	[tmpURL add:@"lsof"].contents = [@[@"/usr/sbin/lsof", @"-c", @"SMART"] runAsTask].data;
+    [tmpURL add:@"LaunchDaemonsDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/LaunchDaemons/"] runAsTask].data;
+    [tmpURL add:@"PrivilegedHelperToolsDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/PrivilegedHelperTools/"] runAsTask].data;
+
 	[tmpURL add:@"ps"].contents = [@[@"/bin/ps", @"ax"] runAsTask].data;
     [tmpURL add:@"top"].contents = [@[@"/usr/bin/top", @"-l1"] runAsTask].data;
-	[tmpURL add:@"loginItems"].contents = [self loginItems].data;
-	[tmpURL add:@"system_profiler"].contents = [@[@"/usr/sbin/system_profiler", @"-xml", @"-detailLevel", @"full"] runAsTask].data;
+	[tmpURL add:@"system_profiler.spx"].contents = [@[@"/usr/sbin/system_profiler", @"-xml", @"-detailLevel", @"full"] runAsTask].data;
 	[tmpURL add:@"ioreg"].contents = [@[@"/usr/sbin/ioreg", @"-l", @"-w", @"0"] runAsTask].data;
-	[tmpURL add:@"diskutil"].contents = [@[@"/usr/sbin/diskutil", @"list"] runAsTask].data;
-	for (int i = 0; i < 16; i++)
-		[tmpURL add:makeString(@"diskutil%i", i)].contents = [@[@"/usr/sbin/diskutil", @"info", makeString(@"disk%i", i)] runAsTask].data;
 
 
+    {
+        NSURL *path = @"~/Library/Application Support/MacUpdater/".expanded.fileURL;
+        for (NSString *p in path.path.directoryContents)
+            if (![path add:p].fileIsDirectory)
+                [fileManager copyItemAtURL:[path add:p] toURL:[tmpURL add:p] error:NULL];
+    }
+    
     NSMutableString *im = [NSMutableString new];
     for (NSString *path in @[@"/Library/InputManagers", @"~/Library/InputManagers".stringByExpandingTildeInPath])
         for (NSString *content in path.directoryContents)
@@ -83,8 +79,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     [tmpURL add:@"inputmanagers"].contents = im.data;
 
 
+    BOOL connectionOK_GH = [@"https://raw.githubusercontent.com/core-code/MiscApps/master/Diagnostics/connectiontest.txt".URL.download.string contains:@"successful"];
+    BOOL connectionOK_MU = [@"https://macupdater.net/macupdater/connectiontest.txt".URL.download.string contains:@"successful"];
+    BOOL connectionOK_CC = [@"https://www.corecode.io/macupdater/connectiontest.txt".URL.download.string contains:@"successful"];
 
+    [tmpURL add:@"connectiontest"].contents = makeString(@"connectiontest %i %i %i", connectionOK_GH, connectionOK_MU, connectionOK_CC).data;
 
+    [tmpURL add:@"curl_gh"].contents = [@[@"/usr/bin/curl", @"-v", @"https://raw.githubusercontent.com/core-code/MiscApps/master/Diagnostics/connectiontest.txt"] runAsTask].data;
+    [tmpURL add:@"curl_mu"].contents = [@[@"/usr/bin/curl", @"-v", @"https://macupdater.net/macupdater/connectiontest.txt"] runAsTask].data;
+    [tmpURL add:@"curl_cc"].contents = [@[@"/usr/bin/curl", @"-v", @"https://www.corecode.io/macupdater/connectiontest.txt"] runAsTask].data;
+    [tmpURL add:@"nscurl_gh"].contents = [@[@"/usr/bin/nscurl", @"-i", @"-v", @"https://raw.githubusercontent.com/core-code/MiscApps/master/Diagnostics/connectiontest.txt"] runAsTask].data;
+    [tmpURL add:@"nscurl_mu"].contents = [@[@"/usr/bin/nscurl", @"-i", @"-v", @"https://macupdater.net/macupdater/connectiontest.txt"] runAsTask].data;
+    [tmpURL add:@"nscurl_cc"].contents = [@[@"/usr/bin/nscurl", @"-i", @"-v", @"https://www.corecode.io/macupdater/connectiontest.txt"] runAsTask].data;
+    
 
 	NSTask *task = [NSTask new];
 	[task setLaunchPath:@"/usr/bin/tar"];
@@ -123,45 +130,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	}
 
 	[fileManager removeItemAtURL:tmpURL error:NULL];
-}
-
-
-- (NSString *)loginItems
-{
-	UInt32 outSnapshotSeed;
-	LSSharedFileListRef list = LSSharedFileListCreate(NULL, kLSSharedFileListSessionLoginItems, NULL);
-	NSMutableString *tmp = [NSMutableString new];
-
-	if (list)
-	{
-		NSArray *array = (__bridge NSArray *) LSSharedFileListCopySnapshot(list, &outSnapshotSeed);
-
-		if (array)
-		{
-			for (id item in array)
-			{
-				CFURLRef url = NULL;
-				OSStatus status = LSSharedFileListItemResolve((__bridge LSSharedFileListItemRef)item, kLSSharedFileListNoUserInteraction | kLSSharedFileListDoNotMountVolumes, &url, NULL);
-
-				if (status == noErr)
-				{
-					[tmp appendFormat:@"item %@\n", [(__bridge NSURL *)url path]];
-				}
-
-
-				if (url != NULL)
-					CFRelease(url);
-			}
-			CFRelease((__bridge CFTypeRef)(array));
-		}
-		else
-			cc_log_error(@"Warning: _IsLoginItem : LSSharedFileListCopySnapshot delivered NULL list!");
-
-		CFRelease(list);
-	}
-	else
-		cc_log_error(@"Warning: _IsLoginItem : LSSharedFileListCreate delivered NULL list!");
-
-	return tmp;
 }
 @end
