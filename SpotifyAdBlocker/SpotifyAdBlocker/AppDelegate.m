@@ -47,7 +47,8 @@
 //
 //    NSLog(@"%li %i %i %i", (long)currentTrack.duration, (currentTrack.duration > 29500 && currentTrack.duration < 31000), (currentTrack.duration > 14500 && currentTrack.duration < 15500), currentTrack.artist.length == 0);
     BOOL isAdForSure = [currentTrack.name isEqualToString:@"Spotify"] || [currentTrack.spotifyUrl hasPrefix:@"spotify:ad:"];
-    BOOL isAdByLength = ((currentTrack.duration > 29500 && currentTrack.duration < 31000) ||
+    BOOL isAdByLength = ((currentTrack.duration > 20500 && currentTrack.duration < 19500) ||
+                         (currentTrack.duration > 29500 && currentTrack.duration < 31000) ||
                          (currentTrack.duration > 14500 && currentTrack.duration < 15500)) &&
                         currentTrack.artist.length == 0 &&
                         currentTrack.albumArtist.length == 0 &&
