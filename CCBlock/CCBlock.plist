@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+   <key>Extension Updates</key>
+   <array>
+     <dict>
+       <key>CFBundleIdentifier</key>
+       <string>com.ccblock.osx</string>
+       <key>Developer Identifier</key>
+       <string>9D78DG5ACV</string>
+       <key>CFBundleVersion</key>
+       <string>1</string>
+       <key>CFBundleShortVersionString</key>
+       <string>1.0</string>
+       <key>Update From Gallery</key>
+       <true/>
+       <key>URL</key>
+       <string>https://raw.githubusercontent.com/core-code/CCBlock/master/CCBlock.safariextz</string>
+     </dict>
+     </dict>
+   </array>
+</dict>
+</plist>

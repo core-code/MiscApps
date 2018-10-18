@@ -3,6 +3,7 @@ MiscApps: A collection of mac applications and tools for developers
 https://www.corecode.io/index_opensource.html
 
  <br/> 
+<b>CCBlock</b> <br/> A safari ad-blocker that actually blocks something. <br/> 
 <b>CHMExtractor</b> <br/> An application for converting/extracting Compiled HTML Help (.chm) files so you can view them in any browser. <br/> 
 <b>CoreLS</b> <br/> An application for realtime generation and visualization of 3D L-Systems. <br/> 
 <b>DesktopLyrics-Lite</b> <br/> The old free and open-source version of DesktopLyrics for old system versions. <br/> 

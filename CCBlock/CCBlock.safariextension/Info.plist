@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>CoreCode</string>
+	<key>Builder Version</key>
+	<string>13604.5.6</string>
+	<key>CFBundleDisplayName</key>
+	<string>CCBlock</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.ccblock.osx</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Content</key>
+	<dict>
+		<key>Content Blocker</key>
+		<string>blockerList.json</string>
+	</dict>
+	<key>Description</key>
+	<string>block ads.</string>
+	<key>DeveloperIdentifier</key>
+	<string>9D78DG5ACV</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Update Manifest URL</key>
+	<string>https://raw.githubusercontent.com/core-code/CCBlock/master/CCBlock.plist</string>
+	<key>Website</key>
+	<string>hhttps://github.com/core-code/CCBlock</string>
+</dict>
+</plist>

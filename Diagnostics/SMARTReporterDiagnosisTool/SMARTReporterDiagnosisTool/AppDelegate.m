@@ -11,8 +11,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 //
 
 #import "AppDelegate.h"
-#import "JMEmailSender.h"
-#import "JMHostInformation.h"
+#import "CoreLibOld.h"
+BOOL _isUserAdmin(void);
+NSString *makeTempDirectory(void);
 
 @implementation AppDelegate
 
@@ -24,7 +25,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	[self.progress setUsesThreadedAnimation:YES];
 	[self performSelector:@selector(perform) withObject:nil afterDelay:0.1];
 
-	if (![JMHostInformation isUserAdmin])
+	if (!_isUserAdmin())
 	{
 		alert_apptitled(@"Sorry the SMARTReporterDiagnosisTool can only be run from an Admin user account.", @"Quit", nil, nil);
 		exit(1);
@@ -219,3 +220,48 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @end
+
+#include <sys/types.h>
+#include <sys/sysctl.h>
+#include <pwd.h>
+#include <grp.h>
+
+BOOL _isUserAdmin()
+{
+    uid_t current_user_id = getuid();
+    struct passwd *pwentry = getpwuid(current_user_id);
+    struct group *admin_group = getgrnam("admin");
+    while(*admin_group->gr_mem != NULL)
+    {
+        if (strcmp(pwentry->pw_name, *admin_group->gr_mem) == 0)
+        {
+            return YES;
+        }
+        admin_group->gr_mem++;
+    }
+    
+    return NO;
+}
+
+NSString *makeTempDirectory()
+{
+    NSString *bundleID = [bundle objectForInfoDictionaryKey:@"CFBundleIdentifier"];
+    NSString *tempDirectoryTemplate = [[NSTemporaryDirectory() stringByAppendingPathComponent:bundleID] stringByAppendingString:@".XXXXXX"];
+    const char *tempDirectoryTemplateCString = tempDirectoryTemplate.fileSystemRepresentation;
+    if (!tempDirectoryTemplateCString) return nil;
+    
+    char *tempDirectoryNameCString = (char *)malloc(strlen(tempDirectoryTemplateCString) + 1);
+    strcpy(tempDirectoryNameCString, tempDirectoryTemplateCString);
+    
+    char *result = mkdtemp(tempDirectoryNameCString);
+    if (!result)
+    {
+        free(tempDirectoryNameCString);
+        return nil;
+    }
+    
+    NSString *tempDirectoryPath = [fileManager stringWithFileSystemRepresentation:result length:strlen(result)];
+    free(tempDirectoryNameCString);
+    
+    return tempDirectoryPath;
+}

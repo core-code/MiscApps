@@ -8,21 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B91098641AEEA30300157817 /* smartctl in Resources */ = {isa = PBXBuildFile; fileRef = B91098631AEEA30300157817 /* smartctl */; };
-		B9517E961A0154FF0074B4DA /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517E8B1A0154FF0074B4DA /* AppKit+CoreCode.m */; };
-		B9517E981A0154FF0074B4DA /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517E8F1A0154FF0074B4DA /* CoreLib.m */; };
-		B9517E991A0154FF0074B4DA /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517E921A0154FF0074B4DA /* Foundation+CoreCode.m */; };
-		B9517EB01A01553C0074B4DA /* JMAppMovedHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517E9D1A01553C0074B4DA /* JMAppMovedHandler.m */; };
-		B9517EB11A01553C0074B4DA /* JMClickableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517E9F1A01553C0074B4DA /* JMClickableImageView.m */; };
-		B9517EB21A01553C0074B4DA /* JMCorrectTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517EA11A01553C0074B4DA /* JMCorrectTimer.m */; };
-		B9517EB31A01553C0074B4DA /* JMDocklessApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517EA31A01553C0074B4DA /* JMDocklessApplication.m */; };
-		B9517EB41A01553C0074B4DA /* JMEmailSender.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517EA51A01553C0074B4DA /* JMEmailSender.m */; };
-		B9517EB51A01553C0074B4DA /* JMFontPopUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517EA71A01553C0074B4DA /* JMFontPopUpButton.m */; };
-		B9517EB61A01553C0074B4DA /* JMHostInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517EA91A01553C0074B4DA /* JMHostInformation.m */; };
-		B9517EB71A01553C0074B4DA /* JMLoginItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517EAB1A01553C0074B4DA /* JMLoginItemManager.m */; };
-		B9517EB81A01553C0074B4DA /* JMValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517EAD1A01553C0074B4DA /* JMValueTransformer.m */; };
-		B9517EB91A01553C0074B4DA /* JMVisibilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9517EAF1A01553C0074B4DA /* JMVisibilityManager.m */; };
 		B9517EBB1A015C690074B4DA /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9517EBA1A015C690074B4DA /* DiskArbitration.framework */; };
 		B9517EBD1A015EE40074B4DA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9517EBC1A015EE40074B4DA /* IOKit.framework */; };
+		B9AB50682178D9EF00734F83 /* CoreLibOld.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AB50672178D9EF00734F83 /* CoreLibOld.m */; };
 		B9DF05E3169DCCF000DB4B58 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DF05E2169DCCF000DB4B58 /* Cocoa.framework */; };
 		B9DF05ED169DCCF000DB4B58 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9DF05EB169DCCF000DB4B58 /* InfoPlist.strings */; };
 		B9DF05EF169DCCF000DB4B58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DF05EE169DCCF000DB4B58 /* main.m */; };
@@ -34,37 +22,13 @@
 
 /* Begin PBXFileReference section */
 		B91098631AEEA30300157817 /* smartctl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = smartctl; sourceTree = SOURCE_ROOT; };
-		B9517E8A1A0154FF0074B4DA /* AppKit+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppKit+CoreCode.h"; sourceTree = "<group>"; };
-		B9517E8B1A0154FF0074B4DA /* AppKit+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppKit+CoreCode.m"; sourceTree = "<group>"; };
-		B9517E8E1A0154FF0074B4DA /* CoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLib.h; sourceTree = "<group>"; };
-		B9517E8F1A0154FF0074B4DA /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
-		B9517E911A0154FF0074B4DA /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
-		B9517E921A0154FF0074B4DA /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
-		B9517E9C1A01553C0074B4DA /* JMAppMovedHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAppMovedHandler.h; sourceTree = "<group>"; };
-		B9517E9D1A01553C0074B4DA /* JMAppMovedHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAppMovedHandler.m; sourceTree = "<group>"; };
-		B9517E9E1A01553C0074B4DA /* JMClickableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMClickableImageView.h; sourceTree = "<group>"; };
-		B9517E9F1A01553C0074B4DA /* JMClickableImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMClickableImageView.m; sourceTree = "<group>"; };
-		B9517EA01A01553C0074B4DA /* JMCorrectTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCorrectTimer.h; sourceTree = "<group>"; };
-		B9517EA11A01553C0074B4DA /* JMCorrectTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCorrectTimer.m; sourceTree = "<group>"; };
-		B9517EA21A01553C0074B4DA /* JMDocklessApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDocklessApplication.h; sourceTree = "<group>"; };
-		B9517EA31A01553C0074B4DA /* JMDocklessApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDocklessApplication.m; sourceTree = "<group>"; };
-		B9517EA41A01553C0074B4DA /* JMEmailSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMEmailSender.h; sourceTree = "<group>"; };
-		B9517EA51A01553C0074B4DA /* JMEmailSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMEmailSender.m; sourceTree = "<group>"; };
-		B9517EA61A01553C0074B4DA /* JMFontPopUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMFontPopUpButton.h; sourceTree = "<group>"; };
-		B9517EA71A01553C0074B4DA /* JMFontPopUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMFontPopUpButton.m; sourceTree = "<group>"; };
-		B9517EA81A01553C0074B4DA /* JMHostInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMHostInformation.h; sourceTree = "<group>"; };
-		B9517EA91A01553C0074B4DA /* JMHostInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMHostInformation.m; sourceTree = "<group>"; };
-		B9517EAA1A01553C0074B4DA /* JMLoginItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLoginItemManager.h; sourceTree = "<group>"; };
-		B9517EAB1A01553C0074B4DA /* JMLoginItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLoginItemManager.m; sourceTree = "<group>"; };
-		B9517EAC1A01553C0074B4DA /* JMValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMValueTransformer.h; sourceTree = "<group>"; };
-		B9517EAD1A01553C0074B4DA /* JMValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMValueTransformer.m; sourceTree = "<group>"; };
-		B9517EAE1A01553C0074B4DA /* JMVisibilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMVisibilityManager.h; sourceTree = "<group>"; };
-		B9517EAF1A01553C0074B4DA /* JMVisibilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMVisibilityManager.m; sourceTree = "<group>"; };
 		B9517EBA1A015C690074B4DA /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = ../../../../../../System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<group>"; };
 		B9517EBC1A015EE40074B4DA /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = ../../../../../../System/Library/Frameworks/IOKit.framework; sourceTree = "<group>"; };
 		B971FD951D3024C5004D8851 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
 		B971FD961D3024C5004D8851 /* Mail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mail.h; sourceTree = "<group>"; };
 		B971FD971D3024C5004D8851 /* Safari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Safari.h; sourceTree = "<group>"; };
+		B9AB50662178D9EF00734F83 /* CoreLibOld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLibOld.h; sourceTree = "<group>"; };
+		B9AB50672178D9EF00734F83 /* CoreLibOld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLibOld.m; sourceTree = "<group>"; };
 		B9DF05DE169DCCF000DB4B58 /* SMARTReporterDiagnosisTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMARTReporterDiagnosisTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9DF05E2169DCCF000DB4B58 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B9DF05E5169DCCF000DB4B58 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -96,48 +60,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B9517E891A0154FF0074B4DA /* CoreLib */ = {
-			isa = PBXGroup;
-			children = (
-				B9517E8A1A0154FF0074B4DA /* AppKit+CoreCode.h */,
-				B9517E8B1A0154FF0074B4DA /* AppKit+CoreCode.m */,
-				B9517E8E1A0154FF0074B4DA /* CoreLib.h */,
-				B9517E8F1A0154FF0074B4DA /* CoreLib.m */,
-				B9517E911A0154FF0074B4DA /* Foundation+CoreCode.h */,
-				B9517E921A0154FF0074B4DA /* Foundation+CoreCode.m */,
-			);
-			name = CoreLib;
-			path = ../../../CoreLib/CoreLib;
-			sourceTree = "<group>";
-		};
-		B9517E9B1A01553C0074B4DA /* Mac */ = {
-			isa = PBXGroup;
-			children = (
-				B9517E9C1A01553C0074B4DA /* JMAppMovedHandler.h */,
-				B9517E9D1A01553C0074B4DA /* JMAppMovedHandler.m */,
-				B9517E9E1A01553C0074B4DA /* JMClickableImageView.h */,
-				B9517E9F1A01553C0074B4DA /* JMClickableImageView.m */,
-				B9517EA01A01553C0074B4DA /* JMCorrectTimer.h */,
-				B9517EA11A01553C0074B4DA /* JMCorrectTimer.m */,
-				B9517EA21A01553C0074B4DA /* JMDocklessApplication.h */,
-				B9517EA31A01553C0074B4DA /* JMDocklessApplication.m */,
-				B9517EA41A01553C0074B4DA /* JMEmailSender.h */,
-				B9517EA51A01553C0074B4DA /* JMEmailSender.m */,
-				B9517EA61A01553C0074B4DA /* JMFontPopUpButton.h */,
-				B9517EA71A01553C0074B4DA /* JMFontPopUpButton.m */,
-				B9517EA81A01553C0074B4DA /* JMHostInformation.h */,
-				B9517EA91A01553C0074B4DA /* JMHostInformation.m */,
-				B9517EAA1A01553C0074B4DA /* JMLoginItemManager.h */,
-				B9517EAB1A01553C0074B4DA /* JMLoginItemManager.m */,
-				B9517EAC1A01553C0074B4DA /* JMValueTransformer.h */,
-				B9517EAD1A01553C0074B4DA /* JMValueTransformer.m */,
-				B9517EAE1A01553C0074B4DA /* JMVisibilityManager.h */,
-				B9517EAF1A01553C0074B4DA /* JMVisibilityManager.m */,
-			);
-			name = Mac;
-			path = ../../../CoreLib/Mac;
-			sourceTree = "<group>";
-		};
 		B971FD931D3024C5004D8851 /* SDEF */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +115,8 @@
 			children = (
 				B9DF05F4169DCCF000DB4B58 /* AppDelegate.h */,
 				B9DF05F5169DCCF000DB4B58 /* AppDelegate.m */,
+				B9AB50662178D9EF00734F83 /* CoreLibOld.h */,
+				B9AB50672178D9EF00734F83 /* CoreLibOld.m */,
 				B9DF05F7169DCCF000DB4B58 /* MainMenu.xib */,
 				B9DF05E9169DCCF000DB4B58 /* Supporting Files */,
 			);
@@ -209,8 +133,6 @@
 				B9DF05F0169DCCF000DB4B58 /* SMARTReporterDiagnosisTool-Prefix.pch */,
 				B9DF05F1169DCCF000DB4B58 /* Credits.rtf */,
 				B971FD931D3024C5004D8851 /* SDEF */,
-				B9517E9B1A01553C0074B4DA /* Mac */,
-				B9517E891A0154FF0074B4DA /* CoreLib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -241,7 +163,7 @@
 		B9DF05D5169DCCF000DB4B58 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "CoreCode Limited";
 			};
 			buildConfigurationList = B9DF05D8169DCCF000DB4B58 /* Build configuration list for PBXProject "SMARTReporterDiagnosisTool" */;
@@ -280,21 +202,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9517EB01A01553C0074B4DA /* JMAppMovedHandler.m in Sources */,
 				B9DF05EF169DCCF000DB4B58 /* main.m in Sources */,
-				B9517EB81A01553C0074B4DA /* JMValueTransformer.m in Sources */,
-				B9517EB11A01553C0074B4DA /* JMClickableImageView.m in Sources */,
-				B9517E991A0154FF0074B4DA /* Foundation+CoreCode.m in Sources */,
+				B9AB50682178D9EF00734F83 /* CoreLibOld.m in Sources */,
 				B9DF05F6169DCCF000DB4B58 /* AppDelegate.m in Sources */,
-				B9517EB31A01553C0074B4DA /* JMDocklessApplication.m in Sources */,
-				B9517E981A0154FF0074B4DA /* CoreLib.m in Sources */,
-				B9517EB61A01553C0074B4DA /* JMHostInformation.m in Sources */,
-				B9517EB71A01553C0074B4DA /* JMLoginItemManager.m in Sources */,
-				B9517EB41A01553C0074B4DA /* JMEmailSender.m in Sources */,
-				B9517E961A0154FF0074B4DA /* AppKit+CoreCode.m in Sources */,
-				B9517EB51A01553C0074B4DA /* JMFontPopUpButton.m in Sources */,
-				B9517EB21A01553C0074B4DA /* JMCorrectTimer.m in Sources */,
-				B9517EB91A01553C0074B4DA /* JMVisibilityManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,11 +249,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -388,11 +300,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -425,7 +339,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMARTReporterDiagnosisTool/SMARTReporterDiagnosisTool-Prefix.pch";
 				INFOPLIST_FILE = "SMARTReporterDiagnosisTool/SMARTReporterDiagnosisTool-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -439,7 +353,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SMARTReporterDiagnosisTool/SMARTReporterDiagnosisTool-Prefix.pch";
 				INFOPLIST_FILE = "SMARTReporterDiagnosisTool/SMARTReporterDiagnosisTool-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
