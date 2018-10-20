@@ -31,14 +31,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	tmpURL = tmpPath.fileURL;
 	cc_log_debug(@"%@", tmpPath);
 
-	
-    [fileManager copyItemAtPath:@"/Library/Logs/DiagnosticReports/"
-                         toPath:[tmpPath stringByAppendingString:@"DRG"] error:NULL];
-    
-    [fileManager copyItemAtPath:[@"~/Library/Logs/DiagnosticReports/" stringByExpandingTildeInPath]
-						 toPath:[tmpPath stringByAppendingString:@"DR"] error:NULL];
 
-
+    {
+        [fileManager createDirectoryAtPath:@[tmpPath, @"DR"].path withIntermediateDirectories:YES attributes:nil error:nil];
+        NSURL *path1 = @"/Library/Logs/DiagnosticReports/".fileURL;
+        NSURL *path2 = @"~/Library/Logs/DiagnosticReports/".expanded.fileURL;
+        for (NSURL *p in [path1.directoryContents arrayByAddingObjectsFromArray:path2.directoryContents])
+            if ([p.contents.string contains:@"corecode"])
+                [fileManager copyItemAtURL:p
+                                     toURL:@[tmpPath, @"DR", p.lastPathComponent].path.fileURL
+                                     error:NULL];
+    }
 
 	{
 		NSURL *path = @"~/Library/Preferences/".expanded.fileURL;

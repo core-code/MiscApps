@@ -47,12 +47,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	[fileManager copyItemAtPath:[@"/private/var/log/system.log.1.gz" stringByExpandingTildeInPath]
 						 toPath:[tmpPath stringByAppendingString:@"system.log.1.gz"] error:NULL];
 
-    [fileManager copyItemAtPath:@"/Library/Logs/DiagnosticReports/"
-                         toPath:[tmpPath stringByAppendingString:@"DRG"] error:NULL];
+
+    {
+        [fileManager createDirectoryAtPath:@[tmpPath, @"DR"].path withIntermediateDirectories:YES attributes:nil error:nil];
+        NSURL *path1 = @"/Library/Logs/DiagnosticReports/".fileURL;
+        NSURL *path2 = @"~/Library/Logs/DiagnosticReports/".expanded.fileURL;
+        for (NSURL *p in [path1.directoryContents arrayByAddingObjectsFromArray:path2.directoryContents])
+            if ([p.contents.string contains:@"corecode"])
+                [fileManager copyItemAtURL:p
+                                     toURL:@[tmpPath, @"DR", p.lastPathComponent].path.fileURL
+                                     error:NULL];
+    }
     
-    [fileManager copyItemAtPath:[@"~/Library/Logs/DiagnosticReports/" stringByExpandingTildeInPath]
-						 toPath:[tmpPath stringByAppendingString:@"DR"] error:NULL];
-						 
 	{
 		NSURL *path = @"~/Library/Preferences/".expanded.fileURL;
 		for (NSString *p in [path.path.directoryContents filteredUsingPredicateString:@"self BEGINSWITH[cd] 'com.corecode'"])
