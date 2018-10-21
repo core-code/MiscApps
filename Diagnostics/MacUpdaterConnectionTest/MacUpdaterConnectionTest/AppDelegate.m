@@ -22,12 +22,19 @@
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+    BOOL connectionOK_PA =  [@"https://v3.paddleapi.com/3.2/product/data".URL.download.string contains:@"authenticate"] &&
+        [@"https://cdn.paddle.com/paddle/paddle.js".URL.download.string contains:@"Paddle"] &&
+        [@"https://checkout.paddle.com/".URL.download.string contains:@"endpoint"] &&
+        [@"https://static.paddle.com/assets/js/checkout.js".URL.download.string contains:@"filter"] &&
+        [[NSImage alloc] initWithData:@"https://paddle-static.s3.amazonaws.com/product-icons-new/software/UninstallPKG.png".URL.download];
 
-    
     BOOL connectionOK_GH = [@"https://raw.githubusercontent.com/core-code/MiscApps/master/Diagnostics/connectiontest.txt".URL.download.string contains:@"successful"];
     BOOL connectionOK_MU = [@"https://macupdater.net/macupdater/connectiontest.txt".URL.download.string contains:@"successful"];
-    BOOL connectionOK_CC = [@"https://www.corecode.io/macupdater/connectiontest.txt".URL.download.string contains:@"successful"];
+//    BOOL connectionOK_CC = [@"https://www.corecode.io/macupdater/connectiontest.txt".URL.download.string contains:@"successful"];
+    
+
 
     
     if (connectionOK_MU)
@@ -41,15 +48,15 @@
         self.MUL.stringValue = @"The connection to 'www.macupdater.net' DOES NOT WORK";
     }
     
-    if (connectionOK_CC)
+    if (connectionOK_PA)
     {
         self.CCIV.image = @"Success".namedImage;
-        self.CCL.stringValue = @"The connection to 'www.corecode.io' works fine ;)";
+        self.CCL.stringValue = @"The connection to 'paddle.com' works fine ;)";
     }
     else
     {
         self.CCIV.image = @"Failure".namedImage;
-        self.CCL.stringValue = @"The connection to 'www.corecode.io' DOES NOT WORK";
+        self.CCL.stringValue = @"The connection to 'paddle.com' DOES NOT WORK";
     }
     
     if (connectionOK_GH)
@@ -71,7 +78,7 @@
 
 - (IBAction)ccClicked:(id)sender
 {
-    [@"https://www.corecode.io/macupdater/connectiontest.html".URL open];
+    [@"https://paddle.com".URL open];
 }
 - (IBAction)muClicked:(id)sender
 {
