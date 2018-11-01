@@ -22,6 +22,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 
+CONST_KEY_IMPLEMENTATION(IMAPSSLPort)
+CONST_KEY_IMPLEMENTATION(IMAPPort)
 CONST_KEY_IMPLEMENTATION(NotificationAlert)
 CONST_KEY_IMPLEMENTATION(NotificationOnscreen)
 CONST_KEY_IMPLEMENTATION(NotificationMenubar)
@@ -73,6 +75,7 @@ CONST_KEY(WelcomeShown)
 
 @implementation AppDelegate
 
+
 + (void)initialize
 {
 	NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
@@ -81,6 +84,10 @@ CONST_KEY(WelcomeShown)
 	defaultValues[kNotificationMenubarKey] = @1;
 	defaultValues[kNotificationAlertKey] = @1;
 	defaultValues[kWelcomeShownKey] = @0;
+    
+    defaultValues[kIMAPSSLPortKey] = @"993";
+    defaultValues[kIMAPPortKey] = @"143";
+    
 	defaultValues[kAccountDataKey] = [NSKeyedArchiver archivedDataWithRootObject:@[]];
 
 	[[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
@@ -450,7 +457,7 @@ CONST_KEY(WelcomeShown)
     NSString *server = account[@"server"];
     NSString *username = account[@"username"];
     NSString *passwd =  account[@"password"];
-	NSString *res = [@[@"/usr/bin/python", @"imap.py".resourcePath, server, username, passwd] runAsTask];
+	NSString *res = [@[@"/usr/bin/python", @"imap.py".resourcePath, server, username, passwd, kIMAPSSLPortKey.defaultString, kIMAPPortKey.defaultString] runAsTask];
 
 //	LOG(res);
 	

@@ -10,13 +10,13 @@ M = 0
 socket.setdefaulttimeout(10)
 
 try	:
-	M = imaplib.IMAP4_SSL(sys.argv[1])
+	M = imaplib.IMAP4_SSL(sys.argv[1], sys.argv[4])
 except:
 	pass
 
 if not M:
 	try	:
-		M = imaplib.IMAP4(sys.argv[1])
+		M = imaplib.IMAP4(sys.argv[1], sys.argv[5])
 	except:
 		print "ERRSERVER"
 		sys.exit(1)		
