@@ -8,6 +8,7 @@ https://www.corecode.io/index_opensource.html
 <b>CoreLS</b> <br/> An application for realtime generation and visualization of 3D L-Systems. <br/> 
 <b>DesktopLyrics-Lite</b> <br/> The old free and open-source version of DesktopLyrics for old system versions. <br/> 
 <b>Diagnostics</b> <br/> Various applications that can collect data to debug problems - mostly specific to problems for various apps. <br/> 
+<b>DMGUncompress</b> <br/> An app to (batch) uncompress DMG images in-place instead of having to mount them. <br/> 
 <b>FilenameList</b> <br/> An application for renaming all files in a directory based on new filenames stored in a text file. <br/> 
 <b>FinderGit</b> <br/> A 'Finder extension' to view the Git source control status of your files and directories via 'badges' right in the Finder. <br/> 
 <b>FingerFrag</b> <br/> A minimal example of doing an iPad game. <br/> 
