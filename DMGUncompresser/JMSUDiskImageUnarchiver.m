@@ -85,6 +85,11 @@
         promptData = [NSData dataWithBytes:"yes\n" length:4];
         
         NSMutableArray *arguments = [@[@"attach", self.archivePath, @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen"] mutableCopy];
+        NSString *destination = [self.archivePath stringByDeletingLastPathComponent];
+        NSString *pc = [NSString stringWithFormat:@"%@_folder", self.archivePath.lastPathComponent.stringByDeletingPathExtension];
+        destination = [destination stringByAppendingPathComponent:pc];
+        [[NSFileManager defaultManager] createDirectoryAtURL: [NSURL fileURLWithPath:destination] withIntermediateDirectories:YES attributes:nil error:NULL];
+
         
         if (self.decryptionPassword) {
             NSMutableData *passwordData = [[self.decryptionPassword dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
@@ -155,8 +160,8 @@
         for (NSString *item in contents)
         {
             NSString *fromPath = [mountPoint stringByAppendingPathComponent:item];
-            NSString *toPath = [[self.archivePath stringByDeletingLastPathComponent] stringByAppendingPathComponent:item];
-            
+            NSString *toPath = [destination stringByAppendingPathComponent:item];
+
             // We skip any files in the DMG which are not readable.
             if (![manager isReadableFileAtPath:fromPath]) {
                 continue;
