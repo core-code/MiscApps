@@ -26,7 +26,7 @@
 
 	NSString *path = url.path;
     
-    if (![path hasSuffix:@".string"])
+    if (![path hasSuffix:@".strings"])
     {
         alert_apptitled(@"Not a strings file", @"D'oh", nil, nil);
         exit(1);
@@ -43,7 +43,8 @@
 		NSMutableString *file = [NSMutableString new];
 
 		NSDictionary *translationsInLanguage = allTranslations[languageName];
-
+        int translated = 0, untranslated = 0;
+        
 		for (NSString *line in n.lines)
 		{
 			if ([line contains:sep])
@@ -75,25 +76,33 @@
                         if ([translationsForString[translation] intValue] == bestTranslationScore && ![translation isEqualToString:bestTranslation])
                             cc_log(@"Warning: [%@] translating string although alternative translation with same score exists %@ =[%i]> %@ ? %@", languageName, line, bestTranslationScore, bestTranslation, translation);
 
-
+                    translated ++;
+                    
                     [file appendString:[line replaced:cont with:[bestTranslation replaced:@"<APPNAME>" with:appname]]];
-
+                    cc_log(@"Notice: [%@] translating line %@ with %@", languageName, line, bestTranslation);
                 }
 				else
                 {
+                    untranslated ++;
+                    
                     [file appendString:line];
-                    cc_log(@"Info: [%@] got no translation for line %@", languageName, line);
+                    //cc_log(@"Info: [%@] got no translation for line %@", languageName, line);
                 }
-
-
 			}
 			else
-				[file appendString:line];
+            {
+                //cc_log(@"Warning: ignoring line for lack of .title %@", line);
+
+                [file appendString:line];
+            }
 
 			[file appendString:@"\n"];
 
 		}
 
+        cc_log(@"\n\n\n");
+        cc_log(@"Info: [%@] translated %i lines untranslated %i lines", languageName, translated, untranslated);
+        cc_log(@"\n\n\n");
 
 		assert([fileManager createDirectoryAtURL:[[url URLByDeletingLastPathComponent] URLByAppendingPathComponent:languageName] withIntermediateDirectories:YES attributes:nil error:nil]);
 		
