@@ -24,6 +24,16 @@
 	<string>1.1.1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>To take photos to use as maps into iOmniMap you must allow access to the camera</string>
+	<key>NSLocationUsageDescription</key>
+	<string>To navigate in maps using iOmniMap you need to allow access to the GPS location services</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>To navigate in maps using iOmniMap you need to allow access to the GPS location services</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>To import photos to use as maps into iOmniMap you must allow access to the photo library</string>
+	<key>UILaunchStoryboardName</key>
+	<string>MainStoryboard_iPhone</string>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>
