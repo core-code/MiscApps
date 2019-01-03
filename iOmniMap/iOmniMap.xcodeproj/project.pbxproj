@@ -56,9 +56,6 @@
 		B9EC4C6014A1FDB2003EADBD /* navigate.png in Resources */ = {isa = PBXBuildFile; fileRef = B9EC4C5814A1FDB2003EADBD /* navigate.png */; };
 		B9EC4C6114A1FDB2003EADBD /* navigate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9EC4C5914A1FDB2003EADBD /* navigate@2x.png */; };
 		B9F0477D16E5F28A006FCCDB /* manual.html in Resources */ = {isa = PBXBuildFile; fileRef = B9F0477C16E5F28A006FCCDB /* manual.html */; };
-		B9F0478116E63D07006FCCDB /* PurchaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F0477F16E63D07006FCCDB /* PurchaseController.m */; };
-		B9F0478416E63E2F006FCCDB /* PurchaseView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9F0478316E63E2E006FCCDB /* PurchaseView_iPad.xib */; };
-		B9F0478616E6405D006FCCDB /* PurchaseView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9F0478516E6405C006FCCDB /* PurchaseView_iPhone.xib */; };
 		B9F0478816E64862006FCCDB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F0478716E64862006FCCDB /* StoreKit.framework */; };
 		B9F0478B16E7601D006FCCDB /* atlas_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F0478916E7601D006FCCDB /* atlas_left@2x.png */; };
 		B9F0478C16E7601D006FCCDB /* atlas_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F0478A16E7601D006FCCDB /* atlas_right@2x.png */; };
@@ -144,10 +141,6 @@
 		B9EC4C5814A1FDB2003EADBD /* navigate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigate.png; sourceTree = "<group>"; };
 		B9EC4C5914A1FDB2003EADBD /* navigate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigate@2x.png"; sourceTree = "<group>"; };
 		B9F0477C16E5F28A006FCCDB /* manual.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = manual.html; sourceTree = "<group>"; };
-		B9F0477E16E63D07006FCCDB /* PurchaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseController.h; sourceTree = "<group>"; };
-		B9F0477F16E63D07006FCCDB /* PurchaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseController.m; sourceTree = "<group>"; };
-		B9F0478316E63E2E006FCCDB /* PurchaseView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurchaseView_iPad.xib; sourceTree = "<group>"; };
-		B9F0478516E6405C006FCCDB /* PurchaseView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurchaseView_iPhone.xib; sourceTree = "<group>"; };
 		B9F0478716E64862006FCCDB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B9F0478916E7601D006FCCDB /* atlas_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "atlas_left@2x.png"; sourceTree = "<group>"; };
 		B9F0478A16E7601D006FCCDB /* atlas_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "atlas_right@2x.png"; sourceTree = "<group>"; };
@@ -285,10 +278,6 @@
 				B96AC54114AA86C800F7A580 /* OmniOverlay.m */,
 				B96AC53D14AA85C500F7A580 /* OmniOverlayView.h */,
 				B96AC53E14AA85C600F7A580 /* OmniOverlayView.m */,
-				B9F0477E16E63D07006FCCDB /* PurchaseController.h */,
-				B9F0477F16E63D07006FCCDB /* PurchaseController.m */,
-				B9F0478316E63E2E006FCCDB /* PurchaseView_iPad.xib */,
-				B9F0478516E6405C006FCCDB /* PurchaseView_iPhone.xib */,
 				B9F3CE2414A1F5590009F8EA /* MainStoryboard_iPhone.storyboard */,
 				B9F3CE2714A1F5590009F8EA /* MainStoryboard_iPad.storyboard */,
 				B9EC4C3814A1F789003EADBD /* Support Classes */,
@@ -364,11 +353,16 @@
 		B9F3CE0514A1F5590009F8EA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "CoreCode Limited";
 				TargetAttributes = {
 					B9F3CE0D14A1F5590009F8EA = {
 						DevelopmentTeam = 9D78DG5ACV;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -423,8 +417,6 @@
 				B978998616DFA068000A6CCC /* ipad_header.png in Resources */,
 				B978998716DFA068000A6CCC /* ipad_header@2x.png in Resources */,
 				B9F0477D16E5F28A006FCCDB /* manual.html in Resources */,
-				B9F0478416E63E2F006FCCDB /* PurchaseView_iPad.xib in Resources */,
-				B9F0478616E6405D006FCCDB /* PurchaseView_iPhone.xib in Resources */,
 				B9F0478B16E7601D006FCCDB /* atlas_left@2x.png in Resources */,
 				B9F0478C16E7601D006FCCDB /* atlas_right@2x.png in Resources */,
 			);
@@ -458,7 +450,6 @@
 				B96AC54214AA86C800F7A580 /* OmniOverlay.m in Sources */,
 				B9F1E41816DE5FA2007D967B /* OptionsViewController.m in Sources */,
 				B96F90961E9D2DAC00E69008 /* JMSlideshowController.m in Sources */,
-				B9F0478116E63D07006FCCDB /* PurchaseController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,11 +484,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -541,11 +534,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -583,6 +578,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOmniMap/iOmniMap-Prefix.pch";
 				INFOPLIST_FILE = "iOmniMap/iOmniMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.corecode.iomnimap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -599,6 +595,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOmniMap/iOmniMap-Prefix.pch";
 				INFOPLIST_FILE = "iOmniMap/iOmniMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.corecode.iomnimap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

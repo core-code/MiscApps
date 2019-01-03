@@ -12,7 +12,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #import "CreateViewController.h"
 #import "JMAlertController.h"
-#import "PurchaseController.h"
 #import "MBProgressHUD.h"
 
 @interface CreateViewController ()
@@ -150,27 +149,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (IBAction)saveAndEdit:(id)sender
 {
-	if ([PurchaseController usedMaps] >= [PurchaseController allowedMaps])
-	{
-		JMAlertController *a = [JMAlertController alertControllerWithTitle:@"Warning"
-                                                            viewController:self
-                                                                   message:@"You have used all of your allowed maps. Do you want to purchase the ability to create more maps?"
-                                                               cancelBlock:^{}
-                                                         cancelButtonTitle:@"Cancel"
-                                                                otherBlock:^(int p){}
-                                                         otherButtonTitles:@[@"Purchase…"]];
-        [a setOtherBlock:^(int index)
-		{
-			PurchaseController *pc = [[PurchaseController alloc] initWithNibName:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? @"PurchaseView_iPad" : @"PurchaseView_iPhone")
-																		  bundle:nil];
-			pc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-			if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-				pc.modalPresentationStyle = UIModalPresentationFormSheet;
-			[self presentViewController:pc animated:YES completion:NULL];
-		}];
-        [a showInView:self.saveButton];
-	}
-	else
 	{
         JMAlertController *alert = [JMAlertController alertControllerWithTitle:@"iOmniMap"
                                               viewController:self
