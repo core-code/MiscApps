@@ -45,7 +45,7 @@
         self.label2.stringValue = @"Local Preferences File: NOT PRESENT ON DISK";
 
 
-    if (@"~/Library/Application Support/SMARTReporter/".stringByExpandingTildeInPath.fileExists || @"~/Library/Application Support-DEMO/SMARTReporter/".stringByExpandingTildeInPath.fileExists)
+    if (@"~/Library/Application Support/SMARTReporter/".stringByExpandingTildeInPath.fileExists || @"~/Library/Application Support/SMARTReporter-DEMO/".stringByExpandingTildeInPath.fileExists)
         self.label3.stringValue = @"Application Support Folder: PRESENT ON DISK";
     else
         self.label3.stringValue = @"Application Support Folder: NOT PRESENT ON DISK";
@@ -121,7 +121,7 @@
         NSError *error;
         BOOL result;
         
-        result = [fileManager removeItemAtPath:@"~/Library/Application Support/SMARTReporter/".stringByExpandingTildeInPath
+        result = [fileManager removeItemAtPath:@"~/Library/Application Support/SMARTReporter-DEMO/".stringByExpandingTildeInPath
                                          error:&error];
         
         if (!result || error)
