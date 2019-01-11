@@ -28,23 +28,24 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {
+    [fileManager removeItemAtPath:@"~/Library/Preferences/com.corecode.SMARTReporterFactoryReset.plist".stringByExpandingTildeInPath error:NULL];
 }
 
 - (void)updateStatus
 {
-    if (@"/Library/Preferences/com.corecode.SMARTReporter.plist".fileExists)
+    if (@"/Library/Preferences/com.corecode.SMARTReporter.plist".fileExists || @"/Library/Preferences/com.corecode.SMARTReporter-DEMO.plist".fileExists)
         self.label1.stringValue = @"Global Preferences File: PRESENT ON DISK";
     else
         self.label1.stringValue = @"Global Preferences File: NOT PRESENT ON DISK";
 
 
-    if (@"~/Library/Preferences/com.corecode.SMARTReporter.plist".stringByExpandingTildeInPath.fileExists)
+    if (@"~/Library/Preferences/com.corecode.SMARTReporter.plist".stringByExpandingTildeInPath.fileExists || @"~/Library/Preferences/com.corecode.SMARTReporter-DEMO.plist".stringByExpandingTildeInPath.fileExists)
         self.label2.stringValue = @"Local Preferences File: PRESENT ON DISK";
     else
         self.label2.stringValue = @"Local Preferences File: NOT PRESENT ON DISK";
 
 
-    if (@"~/Library/Application Support/SMARTReporter/".stringByExpandingTildeInPath.fileExists)
+    if (@"~/Library/Application Support/SMARTReporter/".stringByExpandingTildeInPath.fileExists || @"~/Library/Application Support-DEMO/SMARTReporter/".stringByExpandingTildeInPath.fileExists)
         self.label3.stringValue = @"Application Support Folder: PRESENT ON DISK";
     else
         self.label3.stringValue = @"Application Support Folder: NOT PRESENT ON DISK";
@@ -67,6 +68,18 @@
             alert_apptitled(makeString(@"Error: could not remove global preferences file (reason %@", error.description),
                             @"D'Oh", nil, nil);
     }
+    if (@"/Library/Preferences/com.corecode.SMARTReporter-DEMO.plist".fileExists)
+    {
+        NSError *error;
+        BOOL result;
+        
+        result = [fileManager removeItemAtPath:@"/Library/Preferences/com.corecode.SMARTReporter-DEMO.plist"
+                                         error:&error];
+        
+        if (!result || error)
+            alert_apptitled(makeString(@"Error: could not remove global demo preferences file (reason %@", error.description),
+                            @"D'Oh", nil, nil);
+    }
     if (@"~/Library/Preferences/com.corecode.SMARTReporter.plist".stringByExpandingTildeInPath.fileExists)
     {
         NSError *error;
@@ -77,6 +90,18 @@
 
         if (!result || error)
             alert_apptitled(makeString(@"Error: could not remove local preferences file (reason %@", error.description),
+                            @"D'Oh", nil, nil);
+    }
+    if (@"~/Library/Preferences/com.corecode.SMARTReporter-DEMO.plist".stringByExpandingTildeInPath.fileExists)
+    {
+        NSError *error;
+        BOOL result;
+        
+        result = [fileManager removeItemAtPath:@"~/Library/Preferences/com.corecode.SMARTReporter-DEMO.plist".stringByExpandingTildeInPath
+                                         error:&error];
+        
+        if (!result || error)
+            alert_apptitled(makeString(@"Error: could not remove local demo preferences file (reason %@", error.description),
                             @"D'Oh", nil, nil);
     }
     if (@"~/Library/Application Support/SMARTReporter/".stringByExpandingTildeInPath.fileExists)
@@ -91,10 +116,23 @@
             alert_apptitled(makeString(@"Error: could not remove application support directory (reason %@", error.description),
                             @"D'Oh", nil, nil);
     }
+    if (@"~/Library/Application Support/SMARTReporter-DEMO/".stringByExpandingTildeInPath.fileExists)
+    {
+        NSError *error;
+        BOOL result;
+        
+        result = [fileManager removeItemAtPath:@"~/Library/Application Support/SMARTReporter/".stringByExpandingTildeInPath
+                                         error:&error];
+        
+        if (!result || error)
+            alert_apptitled(makeString(@"Error: could not remove demo application support directory (reason %@", error.description),
+                            @"D'Oh", nil, nil);
+    }
 
     [@[@"/usr/bin/killall", @"-SIGTERM", @"cfprefsd"] runAsTask];
 
     [self updateStatus];
+    [userDefaults synchronize];
 }
 
 @end
