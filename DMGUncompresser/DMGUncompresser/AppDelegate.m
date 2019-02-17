@@ -30,6 +30,7 @@
             [self displayUserNotification:@"DMG Decompression SUCCESS" text:file.lastPathComponent];
     }
     
+    [self displayUserNotification:@"DMG Decompression Finished" text:@"Finito"];
 }
 
 - (void)displayUserNotification:(NSString *)title text:(NSString *)text
