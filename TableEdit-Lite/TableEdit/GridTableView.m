@@ -621,7 +621,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
         for (NSString *line in paste.lines)
         {
             pastedRows ++;
-            NSInteger colsAtThisRow = [line countOccurencesOfString:@"\t"] + 1;
+            NSInteger colsAtThisRow = [line count:@"\t"] + 1;
             pastedCols = MAX(pastedCols, colsAtThisRow);
         }
         NSInteger newRows = MAX(0, insertRow + pastedRows - [self.dataSource numberOfRowsInTableView:self]);

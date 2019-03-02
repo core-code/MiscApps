@@ -120,7 +120,7 @@ CONST_KEY(XCode)
         {
             [_resultTabView selectFirstTabViewItem:nil];
             
-            [_compileLabel setStringValue:makeString(@"Compile: failed in %.2fs (%liw|%lie)", compileTime, [string countOccurencesOfString:@"warning:"], [string countOccurencesOfString:@"error:"])];
+            [_compileLabel setStringValue:makeString(@"Compile: failed in %.2fs (%liw|%lie)", compileTime, [string count:@"warning:"], [string count:@"error:"])];
             [_runLabel setStringValue:@""];
 			
 			for (NSString *line in string.lines)
@@ -148,7 +148,7 @@ CONST_KEY(XCode)
         }
         else
         {
-            [_compileLabel setStringValue:[NSString stringWithFormat:@"Compile: done in %.2fs (%li warnings)", compileTime, [string countOccurencesOfString:@"warning:"]]];
+            [_compileLabel setStringValue:[NSString stringWithFormat:@"Compile: done in %.2fs (%li warnings)", compileTime, [string count:@"warning:"]]];
             [_runLabel setStringValue:@"Run: currently running"];
             [_progressIndicator startAnimation:self];
             [_compileButton setTitle:@"Stop"];

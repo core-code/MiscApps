@@ -605,7 +605,7 @@ NSCalendar *timezonelessCalendar;
             if (!first10KString)
                 first10KString = first10KData.string;
             
-            delimiter = (([first10KString countOccurencesOfString:@","] > [first10KString countOccurencesOfString:@";"]) ? @"," : @";");
+            delimiter = (([first10KString count:@","] > [first10KString count:@";"]) ? @"," : @";");
         }
     }
     if (!first10KString)
@@ -614,8 +614,8 @@ NSCalendar *timezonelessCalendar;
     if (!first10KString)
         return NO;
     
-    NSUInteger doubleQuoteCount = [first10KString countOccurencesOfString:@"\""];
-    NSUInteger singleQuoteCount = [first10KString countOccurencesOfString:@"\'"];
+    NSUInteger doubleQuoteCount = [first10KString count:@"\""];
+    NSUInteger singleQuoteCount = [first10KString count:@"\'"];
     
     struct fields_reader *reader;
     struct fields_record *record;
