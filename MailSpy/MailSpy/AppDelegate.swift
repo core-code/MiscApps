@@ -107,9 +107,9 @@ class AppDelegate: NSObject, NSApplicationDelegate
 
 	@IBAction func openURL(_ sender: AnyObject)
 	{
-		let first = (sender.value(forKey:"tag") as AnyObject).intValue as Int32!
+		let first = (sender.value(forKey:"tag") as AnyObject).intValue as Int32
 
-		cc.openURL(first!)
+		cc.openURL(first)
 	}
 }
 

@@ -23,7 +23,7 @@ class DragDestinationView: NSView
 	{
 		super.init(coder: coder)
 
-		self.register(forDraggedTypes: [NSFilesPromisePboardType, NSFilenamesPboardType])
+		self.registerForDraggedTypes([NSPasteboard.PasteboardType.filePromise, NSPasteboard.PasteboardType("NSFilenamesPboardType")])
 	}
 
     override func draw(_ dirtyRect: NSRect)
@@ -41,13 +41,13 @@ class DragDestinationView: NSView
 
 	override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation
 	{
-		let pb = sender.draggingPasteboard()
+		let pb = sender.draggingPasteboard
 		let items = pb.pasteboardItems!
 		let item = items[0] 
-		let str = item.string(forType: "com.apple.pasteboard.promised-file-content-type")
+		let str = item.string(forType: NSPasteboard.PasteboardType("com.apple.pasteboard.promised-file-content-type"))
 		var succ = str == "com.apple.mail.email";
 
-        let files = pb.propertyList(forType: NSFilenamesPboardType) as? [NSString]
+        let files = pb.propertyList(forType: NSPasteboard.PasteboardType("NSFilenamesPboardType")) as? [NSString]
 
         
         if files != nil
@@ -90,7 +90,7 @@ class DragDestinationView: NSView
 		highlighted = false
 		needsDisplay = true
 
-        if (sender!.draggingPasteboard().propertyList(forType: NSFilenamesPboardType) != nil)
+        if (sender!.draggingPasteboard.propertyList(forType: NSPasteboard.PasteboardType("NSFilenamesPboardType")) != nil)
         {
             return // eml already imported direct file drag
         }
@@ -167,12 +167,12 @@ class DragDestinationView: NSView
         
 		let docstr = "~/Documents/" as NSString
 		let urlBase = NSURL.fileURL(withPath: docstr.expandingTildeInPath)
-		let pb = sender.draggingPasteboard()
+		let pb = sender.draggingPasteboard
 		let items = pb.pasteboardItems!
 		let item = items[0] 
 
 
-        if let files = pb.propertyList(forType: NSFilenamesPboardType) as? [NSString]
+        if let files = pb.propertyList(forType: NSPasteboard.PasteboardType("NSFilenamesPboardType")) as? [NSString]
         {
             var foundEML = false
 
@@ -212,7 +212,7 @@ class DragDestinationView: NSView
         }
 
 
-        if	let pl = item.propertyList(forType: "com.apple.mail.PasteboardTypeAutomator") as? NSArray,
+        if	let pl = item.propertyList(forType: NSPasteboard.PasteboardType("com.apple.mail.PasteboardTypeAutomator")) as? NSArray,
 			let dict = pl[0] as? NSDictionary,
 			let sub = dict["subject"] as? String
         {

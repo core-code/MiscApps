@@ -121,7 +121,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource
             let website = value![row]
 
 
-            if tableView.tableColumns.index(of: tableColumn!) == 0
+            if tableView.tableColumns.firstIndex(of: tableColumn!) == 0
             {
                 return website["title"]
             }
@@ -153,7 +153,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource
                 let urlstr = website["url"]
                 let url = URL(string: urlstr!)
 
-                NSWorkspace.shared().open(url!)
+                NSWorkspace.shared.open(url!)
             }
         }
     }
@@ -171,7 +171,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource
                 let urlstr = website["url"]
                 let url = URL(string: urlstr!)
 
-                NSWorkspace.shared().open(url!)
+                NSWorkspace.shared.open(url!)
             }
         }
     }
@@ -192,7 +192,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSTableViewDataSource
                 let urlstr = website["url"]
                 let url = URL(string: urlstr!)
                 
-                NSWorkspace.shared().open(url!)
+                NSWorkspace.shared.open(url!)
             }
         }
     }

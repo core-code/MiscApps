@@ -16,8 +16,8 @@ var kSomeKey = "s"
 
 class ResultViewController: NSViewController {
 
-	dynamic var mailer : String = ""
-	dynamic var isWebmail : Bool = false
+	@objc dynamic var mailer : String = ""
+	@objc dynamic var isWebmail : Bool = false
 	var originMenuItem : NSMenuItem?
 	@IBOutlet weak var historyPopup: NSPopUpButton!
 	@IBOutlet weak var locationBox: NSBox!
@@ -42,7 +42,7 @@ class ResultViewController: NSViewController {
 				alert.addButton(withTitle: "Show origin location")
 				alert.addButton(withTitle: "Show intermediate-stop location")
 				let response = alert.runModal()
-				if response == NSAlertFirstButtonReturn
+				if response == NSApplication.ModalResponse.alertFirstButtonReturn
 				{
 					button.select(originMenuItem)
 				}
@@ -67,9 +67,9 @@ class ResultViewController: NSViewController {
 
 			if sender is NSPopUpButton
 			{
-				ipButton.state = NSOnState
+				ipButton.state = NSControl.StateValue.on
 			}
-			locationBox.title = ipButton.state == NSOnState ? ip : host
+			locationBox.title = ipButton.state == NSControl.StateValue.on ? ip : host
 
 
 		}
@@ -78,14 +78,14 @@ class ResultViewController: NSViewController {
 			ipButton.isEnabled = false
 			locationBox.title = host
 
-			ipButton.state = NSOffState
+			ipButton.state = NSControl.StateValue.off
 		}
 		else if (priv == false && host == "<no-address>")
 		{
 			ipButton.isEnabled = false
 
 			locationBox.title = ip
-			ipButton.state = NSOnState
+			ipButton.state = NSControl.StateValue.on
 		}
 		else if (priv == true && host == "<no-address>")
 		{
@@ -98,7 +98,7 @@ class ResultViewController: NSViewController {
 		{
 			var location : IPGeoLocation?
 
-			if self.ipButton.state == NSOnState
+			if self.ipButton.state == NSControl.StateValue.on
 			{
 				location = IPGeoLocation(self.locationBox.title)
 			}
@@ -131,7 +131,7 @@ class ResultViewController: NSViewController {
 					geocoder.geocodeAddressString(location.city, completionHandler:
 					{(placemarks: [CLPlacemark]?, error: Error?) -> Void in
 
-						if	let placemark = placemarks?[0] as CLPlacemark!,
+						if	let placemark = placemarks?[0] as CLPlacemark?,
 							let loc = placemark.location
 						{
 							let coordinates : CLLocationCoordinate2D = loc.coordinate
@@ -188,7 +188,7 @@ class ResultViewController: NSViewController {
 			self.mapView.selectAnnotation(anno, animated: true)
 
 			self.providerButton.title = location.msg
-			objc_setAssociatedObject(self.providerButton, &kSomeKey, location.url, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+            objc_setAssociatedObject(self.providerButton as Any, &kSomeKey, location.url, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
 
 
 			if location.longitude != nil
@@ -274,7 +274,7 @@ class ResultViewController: NSViewController {
 					}
 					else
 					{
-						fromString = newLine.substring(from: fromLoc!.lowerBound)
+						fromString = String(newLine[fromLoc!.lowerBound...])
 					}
 					fromString = fromString.trimmingCharacters(in: .whitespacesAndNewlines)
 				}
@@ -290,14 +290,14 @@ class ResultViewController: NSViewController {
 					}
 					else
 					{
-						byString = newLine.substring(from: byLoc!.lowerBound)
+						byString = String(newLine[byLoc!.lowerBound...])
 					}
 					byString = byString.components(separatedBy: " with ")[0]
 					byString = byString.trimmingCharacters(in: .whitespacesAndNewlines)
 				}
 				if forLoc != nil
 				{
-					forString = newLine.substring(from: forLoc!.lowerBound)
+					forString = String(newLine[forLoc!.lowerBound...])
 					forString = forString.trimmingCharacters(in: .whitespacesAndNewlines)
 				}
 
@@ -333,7 +333,7 @@ class ResultViewController: NSViewController {
 				let item = self.historyPopup!.lastItem!
 
 				item.isEnabled = false
-				item.state = NSOffState
+				item.state = NSControl.StateValue.off
 
 				if res.hasPrefix("Origin: ") || res.hasPrefix("Destination: ")
 				{
@@ -451,7 +451,7 @@ class ResultViewController: NSViewController {
 			if (iploc != nil)
 			{
 				var foundStr = ipstr.substring(with: iploc!)
-				ipstr = ipstr.substring(from: iploc!.upperBound)
+				ipstr = String(ipstr[iploc!.upperBound...])
 
 				if foundStr[foundStr.startIndex] == Character.init("(")
 				{
@@ -594,22 +594,22 @@ class ResultViewController: NSViewController {
 
 	@IBAction func urlButtonClicked(_ sender: AnyObject)
 	{
-		let urlstr = objc_getAssociatedObject(self.providerButton, &kSomeKey) as! String?
+        let urlstr = objc_getAssociatedObject(self.providerButton as Any, &kSomeKey) as! String?
 
 		if urlstr != nil
 		{
 			if let url = NSURL(string: urlstr!)
 			{
-				NSWorkspace.shared().open(url as URL)
+				NSWorkspace.shared.open(url as URL)
 			}
 		}
 	}
 
 	@IBAction func helpButtonClicked(_ sender: AnyObject)
 	{
-		let hm = NSHelpManager.shared()
+		let hm = NSHelpManager.shared
 		hm.setContextHelp(NSAttributedString(string: "The email IP history contains all 'IP-addresses' the mail went through from the sender to you.\nThe topmost entry is closest to the sender, the bottommost entry is clostest to you.\nMailSpy automatically selects the closest displayable address to the sender.\nYou will be asked for confirmation if you want to display any other address, as it may not be near the sender."), for: sender)
-		hm.showContextHelp(for: sender, locationHint: NSEvent.mouseLocation())
+		hm.showContextHelp(for: sender, locationHint: NSEvent.mouseLocation)
 		hm.removeContextHelp(for: sender)
 	}
 }

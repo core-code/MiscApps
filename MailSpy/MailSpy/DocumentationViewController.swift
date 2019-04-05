@@ -15,12 +15,12 @@ import WebKit
 
 class DocumentationViewController : NSViewController
 {
-	dynamic var aboutURL : NSURL?
-	dynamic var versionhistoryURL : NSURL?
-	dynamic var faqURL : NSURL?
-	dynamic var readmeURL : NSURL?
-	dynamic var build : String = ""
-	dynamic var version : String = ""
+	@objc dynamic var aboutURL : NSURL?
+	@objc dynamic var versionhistoryURL : NSURL?
+	@objc dynamic var faqURL : NSURL?
+	@objc dynamic var readmeURL : NSURL?
+	@objc dynamic var build : String = ""
+	@objc dynamic var version : String = ""
 
 	@IBOutlet weak var webView: WebView!
 
@@ -44,9 +44,9 @@ class DocumentationViewController : NSViewController
 
 	@IBAction func openURL(_ sender: AnyObject)
 	{
-		let first = (sender.value(forKey:"tag") as AnyObject).intValue as Int32!
+		let first = (sender.value(forKey:"tag") as AnyObject).intValue as Int32
 
-		cc.openURL(first!)
+		cc.openURL(first)
 	}
 
 	func webView(_ sender: WebView!, resource identifier: AnyObject!, didFinishLoadingFromDataSource dataSource: WebDataSource!)
@@ -63,7 +63,7 @@ class DocumentationViewController : NSViewController
 		}
 		else
 		{
-			NSWorkspace.shared().open(request.url!)
+			NSWorkspace.shared.open(request.url!)
 
 			listener.ignore()
 		}
