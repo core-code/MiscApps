@@ -1,0 +1,13 @@
+//
+// Prefix header for all source files of the 'HBCA' target in the 'HBCA' project
+//
+
+
+
+#ifdef __OBJC__
+
+    @import Foundation;
+    @import UIKit;
+
+	#import "CoreLib.h"
+#endif
