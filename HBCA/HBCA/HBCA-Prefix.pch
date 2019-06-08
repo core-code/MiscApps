@@ -9,5 +9,6 @@
     @import Foundation;
     @import UIKit;
 
+    #define USE_SECURITY 1
 	#import "CoreLib.h"
 #endif

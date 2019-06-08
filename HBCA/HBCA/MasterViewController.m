@@ -16,7 +16,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #import "DetailViewController.h"
 #import "SSZipArchive.h"
 #import "MBProgressHUD.h"
-extern NSString *_origdir, *_projectdir;
 
 
 @interface MasterViewController ()
@@ -87,7 +86,6 @@ extern NSString *_origdir, *_projectdir;
         
         [hud hideAnimated:YES];
     });
-
 }
 
 - (void)scanCasks

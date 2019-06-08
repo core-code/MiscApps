@@ -22,6 +22,7 @@
 		B90386CE164AEF75006502A2 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B90386CD164AEF75006502A2 /* MasterViewController.m */; };
 		B90386D1164AEF75006502A2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B90386D0164AEF75006502A2 /* DetailViewController.m */; };
 		B90386EE164B25D1006502A2 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90386ED164B25D1006502A2 /* CoreText.framework */; };
+		B931C18522AC5C750009B7E7 /* CaskHelperLite.m in Sources */ = {isa = PBXBuildFile; fileRef = B931C18322AC5C750009B7E7 /* CaskHelperLite.m */; };
 		B932005D186730F9003F27B4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B9320046186730F9003F27B4 /* MBProgressHUD.m */; };
 		B933AB1718BBD205006E42B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B933AB1618BBD205006E42B9 /* Images.xcassets */; };
 		B933AC2318BBE5FE006E42B9 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC1918BBE5FE006E42B9 /* AppKit+CoreCode.m */; };
@@ -60,6 +61,8 @@
 		B90386CF164AEF75006502A2 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		B90386D0164AEF75006502A2 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		B90386ED164B25D1006502A2 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		B931C18322AC5C750009B7E7 /* CaskHelperLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaskHelperLite.m; sourceTree = "<group>"; };
+		B931C18422AC5C750009B7E7 /* CaskHelperLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaskHelperLite.h; sourceTree = "<group>"; };
 		B9320045186730F9003F27B4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		B9320046186730F9003F27B4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		B933AB1618BBD205006E42B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				B90386CD164AEF75006502A2 /* MasterViewController.m */,
 				B90386CF164AEF75006502A2 /* DetailViewController.h */,
 				B90386D0164AEF75006502A2 /* DetailViewController.m */,
+				B931C18422AC5C750009B7E7 /* CaskHelperLite.h */,
+				B931C18322AC5C750009B7E7 /* CaskHelperLite.m */,
 				B933AB1618BBD205006E42B9 /* Images.xcassets */,
 				B90386B5164AEF75006502A2 /* Supporting Files */,
 			);
@@ -274,6 +279,7 @@
 				B900DAF0164BB63000F85DE1 /* mztools.c in Sources */,
 				B900DAF1164BB63000F85DE1 /* unzip.c in Sources */,
 				B933AC2318BBE5FE006E42B9 /* AppKit+CoreCode.m in Sources */,
+				B931C18522AC5C750009B7E7 /* CaskHelperLite.m in Sources */,
 				B933AC2518BBE5FE006E42B9 /* CoreLib.m in Sources */,
 				B900DAF2164BB63000F85DE1 /* zip.c in Sources */,
 				B933AC2618BBE5FE006E42B9 /* Foundation+CoreCode.m in Sources */,

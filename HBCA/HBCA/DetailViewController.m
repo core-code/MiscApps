@@ -11,6 +11,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 //
 
 #import "DetailViewController.h"
+#import "CaskHelperLite.h"
+#import "MBProgressHUD.h"
 
 
 @interface DetailViewController ()
@@ -49,5 +51,96 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     let url = makeString(@"https://github.com/Homebrew/homebrew-cask/edit/master/Casks/%@.rb", self.caskName);
     
      [[UIApplication sharedApplication] openURL:url.URL options:@{} completionHandler:^(BOOL success) { }];
+}
+
+- (IBAction)newVersion:(id)sender
+{
+    let caskfileContents = self.textView.text;
+    let cv = [CaskHelper getVersionFromCaskfile:caskfileContents];
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"New Version" message:@"You can calculate the checksum of a new version of this app using local download or via CGI server" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = cv;
+    }];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Local" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
+    {
+        [self getNewVersion:alertController.textFields.firstObject.text useCGI:NO];
+    }];
+    [alertController addAction:confirmAction];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"CGI" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action)
+    {
+        [self getNewVersion:alertController.textFields.firstObject.text useCGI:YES];
+    }];
+    [alertController addAction:cancelAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)getNewVersion:(NSString *)version useCGI:(BOOL)useCGI
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.label.text = @"Determinig New SHA…";
+    hud.userInteractionEnabled = YES;
+    
+    
+    dispatch_after_main(0.1, ^
+    {
+        let caskfileContents = self.textView.text;
+        let url = [CaskHelper getDownloadURLFromCaskfile:caskfileContents withVersion:version];
+        var success = YES;
+        var checksum = @"";
+        if (useCGI)
+        {
+            let cgiServerURL = (NSString *)[bundle objectForInfoDictionaryKey:@"__CGI_SHA_CALCULATION_URL_"];
+            let cgiURL = [cgiServerURL replaced:@"%@" with:url.escaped];
+            let response = cgiURL.download.string;
+            success = [response contains:@"SHA: "];
+            if (success)
+            {
+                checksum = [[response split:@"SHA: "][1] split:@"<br>"][0];
+                let sizeStr = [[response split:@"SIZE: "][1] split:@"</body>"][0].trimmedOfWhitespaceAndNewlines;
+                if (sizeStr.integerValue < MB_TO_BYTES(1))
+                    success = NO;
+            }
+        }
+        else
+        {
+            let file = url.download;
+            checksum = file.SHA256;
+            if (file.length < MB_TO_BYTES(1))
+                success = NO;
+        }
+        
+        if (success)
+        {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Success" message:@"You can copy the checksum or the whole new caskfile for updating the cask online" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Copy SHA" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
+            {
+                UIPasteboard.generalPasteboard.string = checksum;
+            }];
+            [alertController addAction:confirmAction];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Copy File" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action)
+            {
+                var newCaskfile = caskfileContents;
+                newCaskfile = [newCaskfile replaced:[CaskHelper getSHA256FromCaskfile:caskfileContents] with:checksum];
+                newCaskfile = [newCaskfile replaced:[CaskHelper getVersionFromCaskfile:caskfileContents] with:version];
+                
+                UIPasteboard.generalPasteboard.string = newCaskfile;
+            }];
+            [alertController addAction:cancelAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+        else
+        {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Could not get checksum" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *ok = [UIAlertAction actionWithTitle:@"D'Oh" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) { [alert dismissViewControllerAnimated:YES completion:nil]; }];
+            
+            [alert addAction:ok];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+        
+        
+        [hud hideAnimated:YES];
+    });
 }
 @end
