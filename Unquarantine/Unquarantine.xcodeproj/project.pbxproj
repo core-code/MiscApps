@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B9A7368A1DF59A5600390E8B /* credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = B9A736881DF59A5600390E8B /* credits.rtfd */; };
 		B9A7368B1DF59A5600390E8B /* Read Me.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9A736891DF59A5600390E8B /* Read Me.rtf */; };
+		B9B9579522D2736900298BC9 /* JMSUFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B9579422D2736900298BC9 /* JMSUFileManager.m */; };
 		B9EED2EA195482C200EB9FC1 /* DragDestinationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EED2E9195482C200EB9FC1 /* DragDestinationView.m */; };
 		B9F8361D1950A1CC00400BFC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F8361C1950A1CC00400BFC /* Cocoa.framework */; };
 		B9F836301950A1CC00400BFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F8362F1950A1CC00400BFC /* AppDelegate.m */; };
@@ -22,15 +23,17 @@
 /* Begin PBXFileReference section */
 		B9A736881DF59A5600390E8B /* credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = credits.rtfd; sourceTree = "<group>"; };
 		B9A736891DF59A5600390E8B /* Read Me.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Read Me.rtf"; sourceTree = "<group>"; };
+		B9B9579322D2736800298BC9 /* JMSUFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSUFileManager.h; sourceTree = SOURCE_ROOT; };
+		B9B9579422D2736900298BC9 /* JMSUFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSUFileManager.m; sourceTree = SOURCE_ROOT; };
 		B9EED2E8195482C200EB9FC1 /* DragDestinationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDestinationView.h; sourceTree = "<group>"; };
 		B9EED2E9195482C200EB9FC1 /* DragDestinationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDestinationView.m; sourceTree = "<group>"; };
-		B9F836191950A1CC00400BFC /* FilenameList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilenameList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9F836191950A1CC00400BFC /* Unquarantine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unquarantine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F8361C1950A1CC00400BFC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B9F8361F1950A1CC00400BFC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		B9F836201950A1CC00400BFC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B9F836211950A1CC00400BFC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B9F836241950A1CC00400BFC /* FilenameList-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FilenameList-Info.plist"; sourceTree = "<group>"; };
-		B9F8362A1950A1CC00400BFC /* FilenameList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FilenameList-Prefix.pch"; sourceTree = "<group>"; };
+		B9F836241950A1CC00400BFC /* Unquarantine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unquarantine-Info.plist"; sourceTree = "<group>"; };
+		B9F8362A1950A1CC00400BFC /* Unquarantine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unquarantine-Prefix.pch"; sourceTree = "<group>"; };
 		B9F8362E1950A1CC00400BFC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B9F8362F1950A1CC00400BFC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B9F836321950A1CC00400BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -58,7 +61,7 @@
 		B9F836101950A1CC00400BFC = {
 			isa = PBXGroup;
 			children = (
-				B9F836221950A1CC00400BFC /* FilenameList */,
+				B9F836221950A1CC00400BFC /* Unquarantine */,
 				B9F8361B1950A1CC00400BFC /* Frameworks */,
 				B9F8361A1950A1CC00400BFC /* Products */,
 			);
@@ -67,7 +70,7 @@
 		B9F8361A1950A1CC00400BFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9F836191950A1CC00400BFC /* FilenameList.app */,
+				B9F836191950A1CC00400BFC /* Unquarantine.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,26 +94,28 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		B9F836221950A1CC00400BFC /* FilenameList */ = {
+		B9F836221950A1CC00400BFC /* Unquarantine */ = {
 			isa = PBXGroup;
 			children = (
 				B9F8362E1950A1CC00400BFC /* AppDelegate.h */,
 				B9F8362F1950A1CC00400BFC /* AppDelegate.m */,
+				B9B9579322D2736800298BC9 /* JMSUFileManager.h */,
+				B9B9579422D2736900298BC9 /* JMSUFileManager.m */,
 				B9EED2E8195482C200EB9FC1 /* DragDestinationView.h */,
 				B9EED2E9195482C200EB9FC1 /* DragDestinationView.m */,
 				B9F836311950A1CC00400BFC /* MainMenu.xib */,
 				B9F836341950A1CC00400BFC /* Images.xcassets */,
 				B9F836231950A1CC00400BFC /* Supporting Files */,
 			);
-			path = FilenameList;
+			path = Unquarantine;
 			sourceTree = "<group>";
 		};
 		B9F836231950A1CC00400BFC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				B9F836501950A2CA00400BFC /* CoreLib */,
-				B9F836241950A1CC00400BFC /* FilenameList-Info.plist */,
-				B9F8362A1950A1CC00400BFC /* FilenameList-Prefix.pch */,
+				B9F836241950A1CC00400BFC /* Unquarantine-Info.plist */,
+				B9F8362A1950A1CC00400BFC /* Unquarantine-Prefix.pch */,
 				B9A736881DF59A5600390E8B /* credits.rtfd */,
 				B9A736891DF59A5600390E8B /* Read Me.rtf */,
 			);
@@ -134,9 +139,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B9F836181950A1CC00400BFC /* FilenameList */ = {
+		B9F836181950A1CC00400BFC /* Unquarantine */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9F8364A1950A1CC00400BFC /* Build configuration list for PBXNativeTarget "FilenameList" */;
+			buildConfigurationList = B9F8364A1950A1CC00400BFC /* Build configuration list for PBXNativeTarget "Unquarantine" */;
 			buildPhases = (
 				B9F836151950A1CC00400BFC /* Sources */,
 				B9F836161950A1CC00400BFC /* Frameworks */,
@@ -146,9 +151,9 @@
 			);
 			dependencies = (
 			);
-			name = FilenameList;
-			productName = FilenameList;
-			productReference = B9F836191950A1CC00400BFC /* FilenameList.app */;
+			name = Unquarantine;
+			productName = Unquarantine;
+			productReference = B9F836191950A1CC00400BFC /* Unquarantine.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -160,7 +165,7 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "CoreCode Limited";
 			};
-			buildConfigurationList = B9F836141950A1CC00400BFC /* Build configuration list for PBXProject "FilenameList" */;
+			buildConfigurationList = B9F836141950A1CC00400BFC /* Build configuration list for PBXProject "Unquarantine" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -173,7 +178,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9F836181950A1CC00400BFC /* FilenameList */,
+				B9F836181950A1CC00400BFC /* Unquarantine */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +204,7 @@
 			files = (
 				B9F836301950A1CC00400BFC /* AppDelegate.m in Sources */,
 				B9F8365D1950A2CA00400BFC /* AppKit+CoreCode.m in Sources */,
+				B9B9579522D2736900298BC9 /* JMSUFileManager.m in Sources */,
 				B9EED2EA195482C200EB9FC1 /* DragDestinationView.m in Sources */,
 				B9F8365F1950A2CA00400BFC /* CoreLib.m in Sources */,
 				B9F836601950A2CA00400BFC /* Foundation+CoreCode.m in Sources */,
@@ -324,8 +330,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FilenameList/FilenameList-Prefix.pch";
-				INFOPLIST_FILE = "FilenameList/FilenameList-Info.plist";
+				GCC_PREFIX_HEADER = "Unquarantine/Unquarantine-Prefix.pch";
+				INFOPLIST_FILE = "Unquarantine/Unquarantine-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -339,8 +345,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FilenameList/FilenameList-Prefix.pch";
-				INFOPLIST_FILE = "FilenameList/FilenameList-Info.plist";
+				GCC_PREFIX_HEADER = "Unquarantine/Unquarantine-Prefix.pch";
+				INFOPLIST_FILE = "Unquarantine/Unquarantine-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,7 +357,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9F836141950A1CC00400BFC /* Build configuration list for PBXProject "FilenameList" */ = {
+		B9F836141950A1CC00400BFC /* Build configuration list for PBXProject "Unquarantine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9F836481950A1CC00400BFC /* Debug */,
@@ -360,7 +366,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9F8364A1950A1CC00400BFC /* Build configuration list for PBXNativeTarget "FilenameList" */ = {
+		B9F8364A1950A1CC00400BFC /* Build configuration list for PBXNativeTarget "Unquarantine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9F8364B1950A1CC00400BFC /* Debug */,
