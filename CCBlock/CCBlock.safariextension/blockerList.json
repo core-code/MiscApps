@@ -939,6 +939,20 @@
 
   {
     "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?best2019-games-web1\\.com[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?bet-at-home\\.com[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
@@ -1066,6 +1080,34 @@
   {
     "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?bnserving\\.com[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?bnsjb1ab1e\\.com[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?boloufduj17\\.agency[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
         "third-party",
@@ -2998,6 +3040,34 @@
   {
     "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?l2\\.io[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?l6b587txj1\\.com[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?ladsreds\\.com[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
         "third-party",
@@ -5490,6 +5560,20 @@
   {
     "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?youhavebeen\\.site[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?yr9n47004g\\.com[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
         "third-party",
