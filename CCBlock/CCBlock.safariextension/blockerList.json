@@ -2269,6 +2269,20 @@
 
   {
     "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?extendedcomputerhelp\\.fun[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?extratorrent\\.ag[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
@@ -3081,6 +3095,20 @@
 
   {
     "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?ladsup\\.com[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?lcontentdelivery\\.info[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
@@ -3585,6 +3613,20 @@
 
   {
     "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?nanoadexchange\\.com[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?netdna-cdn\\.com[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
@@ -3782,6 +3824,20 @@
   {
     "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?onclkds\\.com[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?onemacutils\\.club[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
         "third-party",
