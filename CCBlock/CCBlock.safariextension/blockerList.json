@@ -5684,6 +5684,34 @@
   },
 
   {
+    "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?pyq6n\\.com[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?godabert-nap\\.com[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
       "trigger": {
         "url-filter": "/_ads/",
         "url-filter-is-case-sensitive": true,
