@@ -600,7 +600,6 @@
 					"-Wno-unknown-warning-option",
 					"-Wno-readonly-setter-attrs",
 					"-Wno-unused-macros",
-					"-Wno-format-nonliteral",
 					"-Wno-double-promotion",
 				);
 			};
@@ -655,7 +654,6 @@
 					"-Wno-unknown-warning-option",
 					"-Wno-readonly-setter-attrs",
 					"-Wno-unused-macros",
-					"-Wno-format-nonliteral",
 					"-Wno-double-promotion",
 				);
 			};
