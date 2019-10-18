@@ -29,7 +29,6 @@
 		B933AC2518BBE5FE006E42B9 /* CoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC1D18BBE5FE006E42B9 /* CoreLib.m */; };
 		B933AC2618BBE5FE006E42B9 /* Foundation+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B933AC1F18BBE5FE006E42B9 /* Foundation+CoreCode.m */; };
 		B964E25622ABFE41000793E9 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B964E25422ABFE41000793E9 /* MainStoryboard.storyboard */; };
-		B97E79C51E9D362C006C337A /* HBCA.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B97E79C41E9D362C006C337A /* HBCA.xcconfig */; };
 		B9AC3FB316596A40000C89A2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AC3FB216596A40000C89A2 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,9 +71,10 @@
 		B933AC1D18BBE5FE006E42B9 /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
 		B933AC1E18BBE5FE006E42B9 /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
 		B933AC1F18BBE5FE006E42B9 /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
-		B964E25522ABFE41000793E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B97E79C41E9D362C006C337A /* HBCA.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = HBCA.xcconfig; sourceTree = SOURCE_ROOT; };
 		B9AC3FB216596A40000C89A2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		B9E348152356998300E0E387 /* HBCA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HBCA.entitlements; sourceTree = "<group>"; };
+		B9E34816235699A400E0E387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +142,7 @@
 		B90386B4164AEF75006502A2 /* HBCA */ = {
 			isa = PBXGroup;
 			children = (
+				B9E348152356998300E0E387 /* HBCA.entitlements */,
 				B9320029186730F9003F27B4 /* MBProgressHUD */,
 				B90386BD164AEF75006502A2 /* AppDelegate.h */,
 				B90386BE164AEF75006502A2 /* AppDelegate.m */,
@@ -224,7 +225,7 @@
 		B90386A1164AEF75006502A2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = CoreCode;
 				TargetAttributes = {
 					B90386A9164AEF75006502A2 = {
@@ -234,11 +235,11 @@
 			};
 			buildConfigurationList = B90386A4164AEF75006502A2 /* Build configuration list for PBXProject "HBCA" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = B903869F164AEF75006502A2;
 			productRefGroup = B90386AB164AEF75006502A2 /* Products */;
@@ -255,7 +256,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B97E79C51E9D362C006C337A /* HBCA.xcconfig in Resources */,
 				B964E25622ABFE41000793E9 /* MainStoryboard.storyboard in Resources */,
 				B90386C1164AEF75006502A2 /* Default.png in Resources */,
 				B90386C3164AEF75006502A2 /* Default@2x.png in Resources */,
@@ -293,7 +293,7 @@
 		B964E25422ABFE41000793E9 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B964E25522ABFE41000793E9 /* en */,
+				B9E34816235699A400E0E387 /* Base */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -305,6 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -337,6 +338,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"SANDBOX=1",
+					"XCTEST=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -365,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -391,6 +395,10 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SANDBOX=1",
+					"XCTEST=1",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -420,14 +428,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = HBCA/HBCA.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HBCA/HBCA-Prefix.pch";
 				INFOPLIST_FILE = "HBCA/HBCA-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -438,14 +449,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = HBCA/HBCA.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HBCA/HBCA-Prefix.pch";
 				INFOPLIST_FILE = "HBCA/HBCA-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
