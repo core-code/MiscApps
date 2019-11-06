@@ -13,7 +13,8 @@ https://www.corecode.io/index_opensource.html
 <b>FinderGit</b> <br/> A 'Finder extension' to view the Git source control status of your files and directories via 'badges' right in the Finder. <br/> 
 <b>FingerFrag</b> <br/> A minimal example of doing an iPad game. <br/> 
 <b>FingerMaze</b> <br/> An actually shipping iPad game where you have to search the way through a maze (like on a sheet of paper). <br/> 
-<b>FlowCore</b> <br/> An application for realtime visualization of flow data. <br/> 
+<b>FlowCore</b> <br/> An application for realtime visualization of flow data.<br/> 
+<b>HBCA</b> <br/> Mobile app for HomeBrew Cask contributors.<br/> 
 <b>InstaCode</b> <br/> An application for developers that allows to quickly try out pieces of source code (C/ObjC/C++/ObjC++) without having to create, compile and delete projects or files. <br/> 
 <b>iOmniMap</b> <br/> iOmniMap allows you to navigate in any map that you can download or photograph (without requiring an internet connection).  <br/> 
 <b>iRipCD</b> <br/> An application for converting Audio-CDs to high-quality MP3 audio files. <br/> 
