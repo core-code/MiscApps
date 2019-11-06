@@ -67,12 +67,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         [self getNewVersion:alertController.textFields.firstObject.text useCGI:NO];
     }];
     [alertController addAction:confirmAction];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"CGI" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action)
+    UIAlertAction *cgiAction = [UIAlertAction actionWithTitle:@"CGI" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action)
     {
         [self getNewVersion:alertController.textFields.firstObject.text useCGI:YES];
     }];
+    [alertController addAction:cgiAction];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action)
+    {
+    }];
     [alertController addAction:cancelAction];
     [self presentViewController:alertController animated:YES completion:nil];
+    
+    #if TARGET_OS_MACCATALYST
+      
+    #endif
 }
 
 - (void)getNewVersion:(NSString *)version useCGI:(BOOL)useCGI
