@@ -33,7 +33,7 @@ b.) If you want to use HBCA on a Mac, you can download the 1.0 release [here](ht
 
 
 ## Screenshots
-![Search](/Sceenshots/ss1.png)
-![View](/Sceenshots/ss2.png)
-![Edit](/Sceenshots/ss3.png)
+![Search](/HBCA/Sceenshots/ss1.png)
+![View](/HBCA/Sceenshots/ss2.png)
+![Edit](/HBCA/Sceenshots/ss3.png)
 
