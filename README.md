@@ -45,6 +45,7 @@ https://www.corecode.io/index_opensource.html
 <b>SMARTReporterFactoryReset</b> <br/> A stand-alone app to reset SMARTReporter to 'factory' condition. <br/> 
 <b>SpotifyAdBlocker</b> <br/> Mutes Spotify while its playing its 15 or 30 second advertisements present in the free version. <br/> 
 <b>STOCKings</b> <br/> An application to observe european stock markets right from the menubar. <br/> 
+<b>SubtitleExtractor</b> <br/> An application for extracting text based subtitles out of any movie file types like MKV/MP4/etc.<br/> 
 <b>TableEdit-Lite</b> <br/> This is the free and open-source version of our cutting-edge Mac-native spreadsheet TableEdit. <br/> 
 <b>TerraCore</b> <br/> An application for realtime generation and visualization of fractal terrain. <br/> 
 <b>TimerMenu</b> <br/> An application that provides a switchable timer in the menubar, e.g. for counting work-time. <br/> 
