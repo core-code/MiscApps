@@ -37,6 +37,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @property (nonatomic, readonly) NSInteger editingColumn;
 
 
+- (void)tableView:(NSTableView *)tv setObjectValue:(id)object forCells:(NSArray <Cell *> *)cells;
 
 
 @end

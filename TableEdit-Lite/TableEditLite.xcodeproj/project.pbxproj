@@ -23,6 +23,11 @@
 		B9385A6F20C86391003DA80A /* fields.c in Sources */ = {isa = PBXBuildFile; fileRef = B9385A6D20C86391003DA80A /* fields.c */; };
 		B9385A7020C86391003DA80A /* fields_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = B9385A6E20C86391003DA80A /* fields_posix.c */; };
 		B94061291A7E73F100308CBC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94061281A7E73F100308CBC /* QuartzCore.framework */; };
+		B951E90C23A6ED9B0026A44F /* JMEditableBorderlessWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B951E90423A6ED9B0026A44F /* JMEditableBorderlessWindow.m */; };
+		B951E90D23A6ED9B0026A44F /* JMRatingWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B951E90523A6ED9B0026A44F /* JMRatingWindow.xib */; };
+		B951E90E23A6ED9B0026A44F /* JMRatingWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B951E90823A6ED9B0026A44F /* JMRatingWindowController.m */; };
+		B951E90F23A6ED9B0026A44F /* JMRatingWindow.strings in Resources */ = {isa = PBXBuildFile; fileRef = B951E90923A6ED9B0026A44F /* JMRatingWindow.strings */; };
+		B951E91023A6ED9B0026A44F /* JMRatingWindow.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B951E90B23A6ED9B0026A44F /* JMRatingWindow.xcassets */; };
 		B952522E195AEE9000AEBF47 /* PromotionWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B952522D195AEE9000AEBF47 /* PromotionWindow.xib */; };
 		B9525230195AF2B200AEBF47 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B952522F195AF2B200AEBF47 /* WebKit.framework */; };
 		B968A45B18B7A4B900309F2F /* AddressHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B968A45A18B7A4B900309F2F /* AddressHelper.m */; };
@@ -39,11 +44,6 @@
 		B981B2061948D7790052D15A /* JMValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = B981B2051948D7790052D15A /* JMValueTransformer.m */; };
 		B9823FAB1DE619CA0004ABCD /* CrashHelper.app in Resources */ = {isa = PBXBuildFile; fileRef = B9823FAA1DE619CA0004ABCD /* CrashHelper.app */; };
 		B9857E1F1EC4F27800978B94 /* credits.html in Resources */ = {isa = PBXBuildFile; fileRef = B9857E1E1EC4F27800978B94 /* credits.html */; };
-		B9896CE61EA7C20A004075C9 /* icon-appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = B9896CDF1EA7C20A004075C9 /* icon-appstore.png */; };
-		B9896CE81EA7C20A004075C9 /* icon-macupdate.png in Resources */ = {isa = PBXBuildFile; fileRef = B9896CE01EA7C20A004075C9 /* icon-macupdate.png */; };
-		B9896CEA1EA7C20A004075C9 /* JMEditableBorderlessWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B9896CE21EA7C20A004075C9 /* JMEditableBorderlessWindow.m */; };
-		B9896CEC1EA7C20A004075C9 /* JMRatingWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9896CE31EA7C20A004075C9 /* JMRatingWindow.xib */; };
-		B9896CEE1EA7C20A004075C9 /* JMRatingWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9896CE51EA7C20A004075C9 /* JMRatingWindowController.m */; };
 		B9A76D2019589924002733B9 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A76D1F19589924002733B9 /* Sparkle.framework */; };
 		B9A76D211958995F002733B9 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9A76D1F19589924002733B9 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B9A779D61B8474400029C5DF /* JMHostInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A779D51B8474400029C5DF /* JMHostInformation.m */; };
@@ -139,6 +139,13 @@
 		B9385A6D20C86391003DA80A /* fields.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fields.c; sourceTree = "<group>"; };
 		B9385A6E20C86391003DA80A /* fields_posix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fields_posix.c; sourceTree = "<group>"; };
 		B94061281A7E73F100308CBC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B951E90323A6ED9B0026A44F /* JMRatingWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMRatingWindowController.h; sourceTree = "<group>"; };
+		B951E90423A6ED9B0026A44F /* JMEditableBorderlessWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMEditableBorderlessWindow.m; sourceTree = "<group>"; };
+		B951E90623A6ED9B0026A44F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/JMRatingWindow.xib; sourceTree = "<group>"; };
+		B951E90723A6ED9B0026A44F /* JMEditableBorderlessWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMEditableBorderlessWindow.h; sourceTree = "<group>"; };
+		B951E90823A6ED9B0026A44F /* JMRatingWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMRatingWindowController.m; sourceTree = "<group>"; };
+		B951E90A23A6ED9B0026A44F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/JMRatingWindow.strings"; sourceTree = "<group>"; };
+		B951E90B23A6ED9B0026A44F /* JMRatingWindow.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = JMRatingWindow.xcassets; sourceTree = "<group>"; };
 		B952522D195AEE9000AEBF47 /* PromotionWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromotionWindow.xib; sourceTree = "<group>"; };
 		B952522F195AF2B200AEBF47 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B968A45918B7A4B900309F2F /* AddressHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressHelper.h; sourceTree = "<group>"; };
@@ -164,13 +171,6 @@
 		B981B2051948D7790052D15A /* JMValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMValueTransformer.m; path = ../Mac/JMValueTransformer.m; sourceTree = "<group>"; };
 		B9823FAA1DE619CA0004ABCD /* CrashHelper.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = CrashHelper.app; sourceTree = "<group>"; };
 		B9857E1E1EC4F27800978B94 /* credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = credits.html; sourceTree = "<group>"; };
-		B9896CDF1EA7C20A004075C9 /* icon-appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-appstore.png"; sourceTree = "<group>"; };
-		B9896CE01EA7C20A004075C9 /* icon-macupdate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-macupdate.png"; sourceTree = "<group>"; };
-		B9896CE11EA7C20A004075C9 /* JMEditableBorderlessWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMEditableBorderlessWindow.h; sourceTree = "<group>"; };
-		B9896CE21EA7C20A004075C9 /* JMEditableBorderlessWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMEditableBorderlessWindow.m; sourceTree = "<group>"; };
-		B9896CE31EA7C20A004075C9 /* JMRatingWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMRatingWindow.xib; sourceTree = "<group>"; };
-		B9896CE41EA7C20A004075C9 /* JMRatingWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMRatingWindowController.h; sourceTree = "<group>"; };
-		B9896CE51EA7C20A004075C9 /* JMRatingWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMRatingWindowController.m; sourceTree = "<group>"; };
 		B9A76D1F19589924002733B9 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Frameworks/Sparkle.framework; sourceTree = "<group>"; };
 		B9A779D41B8474400029C5DF /* JMHostInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMHostInformation.h; path = ../Mac/JMHostInformation.h; sourceTree = "<group>"; };
 		B9A779D51B8474400029C5DF /* JMHostInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMHostInformation.m; path = ../Mac/JMHostInformation.m; sourceTree = "<group>"; };
@@ -280,7 +280,7 @@
 		B933AB8418BBE1A4006E42B9 /* CoreLib */ = {
 			isa = PBXGroup;
 			children = (
-				B9896CDE1EA7C20A004075C9 /* JMRatingWindow */,
+				B951E90223A6ED9B0026A44F /* JMRatingWindow */,
 				B933AB8918BBE1A4006E42B9 /* CoreLib.h */,
 				B933AB8A18BBE1A4006E42B9 /* CoreLib.m */,
 				B933AB8B18BBE1A4006E42B9 /* Foundation+CoreCode.h */,
@@ -317,16 +317,16 @@
 			path = FieldsCSV;
 			sourceTree = "<group>";
 		};
-		B9896CDE1EA7C20A004075C9 /* JMRatingWindow */ = {
+		B951E90223A6ED9B0026A44F /* JMRatingWindow */ = {
 			isa = PBXGroup;
 			children = (
-				B9896CDF1EA7C20A004075C9 /* icon-appstore.png */,
-				B9896CE01EA7C20A004075C9 /* icon-macupdate.png */,
-				B9896CE11EA7C20A004075C9 /* JMEditableBorderlessWindow.h */,
-				B9896CE21EA7C20A004075C9 /* JMEditableBorderlessWindow.m */,
-				B9896CE31EA7C20A004075C9 /* JMRatingWindow.xib */,
-				B9896CE41EA7C20A004075C9 /* JMRatingWindowController.h */,
-				B9896CE51EA7C20A004075C9 /* JMRatingWindowController.m */,
+				B951E90323A6ED9B0026A44F /* JMRatingWindowController.h */,
+				B951E90423A6ED9B0026A44F /* JMEditableBorderlessWindow.m */,
+				B951E90523A6ED9B0026A44F /* JMRatingWindow.xib */,
+				B951E90723A6ED9B0026A44F /* JMEditableBorderlessWindow.h */,
+				B951E90823A6ED9B0026A44F /* JMRatingWindowController.m */,
+				B951E90923A6ED9B0026A44F /* JMRatingWindow.strings */,
+				B951E90B23A6ED9B0026A44F /* JMRatingWindow.xcassets */,
 			);
 			name = JMRatingWindow;
 			path = ../Mac/JMRatingWindow;
@@ -472,10 +472,12 @@
 			};
 			buildConfigurationList = B9B1923B177DED9F00FFE14D /* Build configuration list for PBXProject "TableEditLite" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				"pt-BR",
 			);
 			mainGroup = B9B19237177DED9F00FFE14D;
 			productRefGroup = B9B19241177DED9F00FFE14D /* Products */;
@@ -493,21 +495,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9AA2EA41F25489400E38F4A /* dsa_pub.pem in Resources */,
-				B9896CEC1EA7C20A004075C9 /* JMRatingWindow.xib in Resources */,
 				B9857E1F1EC4F27800978B94 /* credits.html in Resources */,
 				B968B17A1B9DD1C10027881B /* history.html in Resources */,
 				B968B1761B9DD0CF0027881B /* faq.html in Resources */,
 				B952522E195AEE9000AEBF47 /* PromotionWindow.xib in Resources */,
-				B9896CE61EA7C20A004075C9 /* icon-appstore.png in Resources */,
-				B9896CE81EA7C20A004075C9 /* icon-macupdate.png in Resources */,
 				B9ECC5C11959D9EC00682C68 /* WelcomeWindow.xib in Resources */,
 				B9823FAB1DE619CA0004ABCD /* CrashHelper.app in Resources */,
+				B951E91023A6ED9B0026A44F /* JMRatingWindow.xcassets in Resources */,
+				B951E90F23A6ED9B0026A44F /* JMRatingWindow.strings in Resources */,
 				B9B3BC3D1DA93F74005BA18B /* PrintOptionView.xib in Resources */,
 				B9BBC2AB18B62772007FBC4C /* Images.xcassets in Resources */,
 				B9192FAA193E1DA8006C72DD /* ExportOptionView.xib in Resources */,
 				B9B1925A177DED9F00FFE14D /* Document.xib in Resources */,
 				B9B1925D177DED9F00FFE14D /* MainMenu.xib in Resources */,
 				B968B17B1B9DD1C10027881B /* privacy.html in Resources */,
+				B951E90D23A6ED9B0026A44F /* JMRatingWindow.xib in Resources */,
 				B981B2011948B3A30052D15A /* DocumentationWindow.xib in Resources */,
 				B9D16AC81DFC74A200AFA58B /* InsertNumbersView.xib in Resources */,
 				B9192FAD193E3BFC006C72DD /* ImportOptionView.xib in Resources */,
@@ -540,7 +542,6 @@
 			files = (
 				B9815CB920753FF7001A6E3F /* FormulaResult.m in Sources */,
 				B93661961940888D00E8D4CC /* AppDelegate.m in Sources */,
-				B9896CEE1EA7C20A004075C9 /* JMRatingWindowController.m in Sources */,
 				B97A5E981CC1540700201C2C /* JMBlockFormatter.m in Sources */,
 				B9B19257177DED9F00FFE14D /* Document.m in Sources */,
 				B933AB9318BBE1A4006E42B9 /* Foundation+CoreCode.m in Sources */,
@@ -558,8 +559,9 @@
 				B933AB9218BBE1A4006E42B9 /* CoreLib.m in Sources */,
 				B968B1811B9DDE0B0027881B /* DocumentData.m in Sources */,
 				B933AB9018BBE1A4006E42B9 /* AppKit+CoreCode.m in Sources */,
-				B9896CEA1EA7C20A004075C9 /* JMEditableBorderlessWindow.m in Sources */,
+				B951E90C23A6ED9B0026A44F /* JMEditableBorderlessWindow.m in Sources */,
 				B9385A6F20C86391003DA80A /* fields.c in Sources */,
+				B951E90E23A6ED9B0026A44F /* JMRatingWindowController.m in Sources */,
 				B90B0D391DA7F907000CA590 /* JMURLButton.m in Sources */,
 				B9B3BC411DA940A5005BA18B /* PrintViewController.m in Sources */,
 				B968A45B18B7A4B900309F2F /* AddressHelper.m in Sources */,
@@ -584,6 +586,22 @@
 				B9192FAC193E3BFC006C72DD /* en */,
 			);
 			name = ImportOptionView.xib;
+			sourceTree = "<group>";
+		};
+		B951E90523A6ED9B0026A44F /* JMRatingWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B951E90623A6ED9B0026A44F /* Base */,
+			);
+			name = JMRatingWindow.xib;
+			sourceTree = "<group>";
+		};
+		B951E90923A6ED9B0026A44F /* JMRatingWindow.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B951E90A23A6ED9B0026A44F /* pt-BR */,
+			);
+			name = JMRatingWindow.strings;
 			sourceTree = "<group>";
 		};
 		B9B19258177DED9F00FFE14D /* Document.xib */ = {
@@ -651,7 +669,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-ftrapv",
@@ -683,6 +701,7 @@
 					"-Wno-nullable-to-nonnull-conversion",
 					"-Wno-auto-import",
 					"-Wno-double-promotion",
+					"-Wno-objc-messaging-id",
 				);
 			};
 			name = Debug;
@@ -731,7 +750,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				OTHER_CFLAGS = "-fobjc-arc-exceptions";
 				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -757,6 +776,7 @@
 					"-Wno-nullable-to-nonnull-conversion",
 					"-Wno-auto-import",
 					"-Wno-double-promotion",
+					"-Wno-objc-messaging-id",
 				);
 			};
 			name = Release;

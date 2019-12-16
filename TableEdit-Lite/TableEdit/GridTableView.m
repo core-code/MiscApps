@@ -334,7 +334,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 - (void)selectionWasModifiedByUserDraggingTheKnob:(NSView *)sender
 {
-	LOGFUNC;
+	LOGFUNC
 	
 	NSPoint center1Left = NSMakePoint(_dragCornerUpperLeft.frame.origin.x + _dragCornerUpperLeft.frame.size.width / 2 - 7, _dragCornerUpperLeft.frame.origin.y + _dragCornerUpperLeft.frame.size.height / 2);
 	NSPoint center1Top = NSMakePoint(_dragCornerUpperLeft.frame.origin.x + _dragCornerUpperLeft.frame.size.width / 2, _dragCornerUpperLeft.frame.origin.y + _dragCornerUpperLeft.frame.size.height / 2 - 5);
@@ -376,7 +376,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 - (void)addToSelection:(NSInteger)row column:(NSInteger)col
 {
-	LOGFUNC;
+	LOGFUNC
 	[self addToSelection:row maxRow:row minColumn:col maxColumn:col];
 }
 
@@ -419,7 +419,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 		   IS_IN_RANGE(col, 1, (NSInteger) self.tableColumns.count-1));
 
 
-	LOGFUNC;
+	LOGFUNC
 
 	[self.selectedCellArray filter:^(Cell *c){ return !(c.rowIndex == row && c.columnIndex == col); }];
 	if (!self.selectedCellArray.count)
@@ -457,7 +457,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 - (void)addColumnToSelection:(NSInteger)col
 {
-	LOGFUNC;
+	LOGFUNC
 	[self addColumnsToSelection:col maxColumn:col];
 }
 
@@ -501,7 +501,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 - (void)addRowsToSelection:(NSInteger)min maxRow:(NSInteger)max
 {
-	LOGFUNC;
+	LOGFUNC
 
 	for (NSInteger row = min; row <= max; row++)
 	{
@@ -534,7 +534,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 - (void)updateSelectionInformation
 {
-	LOGFUNC;
+	LOGFUNC
 	if (self.selectionUpdatesPrevented)
 		return;
 
@@ -571,7 +571,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 - (void)selectAll:(id)sender
 {
-	LOGFUNC;
+	LOGFUNC
 
 	[self clearSelection:YES];
 
@@ -582,7 +582,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 {
 	LOGFUNCPARAMA(@(event.modifierFlags));
 
-	self.optionDown = (event.modifierFlags & NSAlternateKeyMask) > 0;
+    self.optionDown = (event.modifierFlags & NSEventModifierFlagOption) > 0;
 
 
     [self.document flagsChanged:event];
@@ -594,7 +594,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 - (void)paste:(id)sender
 {
-    LOGFUNC;
+    LOGFUNC
 
 	if (!self.selectedCellArray.count)
 		return;
@@ -690,13 +690,13 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 - (void)cut:(id)sender
 {
-    LOGFUNC;
+    LOGFUNC
     [self copy:@"cut"];
 }
 
 - (void)copy:(id)sender
 {
-    LOGFUNC;
+    LOGFUNC
 
     if (self.selectedCellArray)
     {
@@ -782,10 +782,10 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 	unichar character = event.charactersIgnoringModifiers.firstCharacter;
     LOGFUNCPARAMA(makeString(@"%@ [0x%04x] %lu ", [event characters], character, (unsigned long)event.modifierFlags));
 
-    BOOL commandDown = (event.modifierFlags & NSCommandKeyMask) > 0;
-	BOOL shiftDown = (event.modifierFlags & NSShiftKeyMask) > 0;
-	BOOL controlDown = (event.modifierFlags & NSControlKeyMask) > 0;
-	BOOL altDown = (event.modifierFlags & NSAlternateKeyMask) > 0;
+    BOOL commandDown = (event.modifierFlags & NSEventModifierFlagCommand) > 0;
+    BOOL shiftDown = (event.modifierFlags & NSEventModifierFlagShift) > 0;
+    BOOL controlDown = (event.modifierFlags & NSEventModifierFlagControl) > 0;
+    BOOL altDown = (event.modifierFlags & NSEventModifierFlagOption) > 0;
 	BOOL nothingDown = !commandDown && !shiftDown && !controlDown && !altDown;
 	BOOL nothingOrOnlyShiftDown = !commandDown && !controlDown && !altDown;
 
@@ -929,13 +929,10 @@ NSString *processPasteForExcelMultiline(NSString *paste);
     {
 		if (character == NSDeleteCharacter || character == NSBackspaceCharacter || character == NSDeleteFunctionKey)
 		{
-			for (Cell *c in self.selectedCellArray)
-			{
-				[self.dataSource tableView:self
-							setObjectValue:@""
-							forTableColumn:c.column
-									   row:c.rowIndex];
-			}
+            [((Document *)self.dataSource) tableView:self
+                                      setObjectValue:@""
+                                            forCells:self.selectedCellArray];
+		
 			[self setNeedsDisplay];
 		}
     }
@@ -947,10 +944,10 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 {
 	NSPoint p = [self convertPoint:event.locationInWindow fromView:nil];
 	NSInteger columnAtPoint = [self columnAtPoint:p];
-	BOOL commandDown = (event.modifierFlags & NSCommandKeyMask) > 0;
-	BOOL shiftDown = (event.modifierFlags & NSShiftKeyMask) > 0;
+    BOOL commandDown = (event.modifierFlags & NSEventModifierFlagCommand) > 0;
+    BOOL shiftDown = (event.modifierFlags & NSEventModifierFlagShift) > 0;
 
-	LOGFUNCPARAMA(makeString(@"modifier %lu column %li", (unsigned long)event.modifierFlags, (long)columnAtPoint));
+    LOGFUNCPARAMA(makeString(@"modifier %lu column %li", (unsigned long)event.modifierFlags, (long)columnAtPoint));
 
     if (columnAtPoint >= 0 && columnAtPoint < (int)self.tableColumns.count)
     {
@@ -1042,37 +1039,37 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 //- (BOOL)control:(NSControl *)control textShouldBeginEditing:(NSText *)fieldEditor
 //{
-//	LOGFUNC;
+//	LOGFUNC
 //
 //	return YES;
 //}
 //- (BOOL)textShouldBeginEditing:(NSText *)textObject
 //{
-//	LOGFUNC;
+//	LOGFUNC
 //	return YES;
 //}
 //
 //- (BOOL)textShouldEndEditing:(NSText *)textObject
 //{
 //
-//	LOGFUNC;
+//	LOGFUNC
 //	return YES;
 //}
 //- (void)textDidChange:(NSNotification *)notification
 //{
 //
-//	LOGFUNC;
+//	LOGFUNC
 //}
 
 #pragma mark NSTextViewDelegate
 
 - (BOOL)textView:(NSTextView *)tv doCommandBySelector:(SEL)selector
 {
-	LOGFUNCPARAMA(NSStringFromSelector(selector));
+    LOGFUNCPARAMA(NSStringFromSelector(selector));
 	
 	NSInteger row = self.selectedCellArray[0].rowIndex;
 	NSInteger col = self.selectedCellArray[0].columnIndex;
-	BOOL shiftDown = ([NSEvent modifierFlags] & NSShiftKeyMask) > 0;
+    BOOL shiftDown = ([NSEvent modifierFlags] & NSEventModifierFlagShift) > 0;
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wselector"
@@ -1155,7 +1152,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 - (BOOL)prepareForDragOperation:(id <NSDraggingInfo>)sender
 {
-	LOGFUNC;
+	LOGFUNC
 	if ([self.delegate respondsToSelector:_cmd])
 		[(id <NSDraggingDestination>)self.delegate prepareForDragOperation:sender];
 	return YES;
@@ -1163,21 +1160,21 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 - (void)draggingExited:(id < NSDraggingInfo >)sender
 {
-	LOGFUNC;
+	LOGFUNC
 	if (![self.delegate respondsToSelector:_cmd]) return;
 	[(id <NSDraggingDestination>)self.delegate draggingExited:sender];
 }
 
 //- (void)concludeDragOperation:(id < NSDraggingInfo >)sender
 //{
-//	LOGFUNC;
+//	LOGFUNC
 //	if (![self.delegate respondsToSelector:_cmd]) return;
 //	if (![self.delegate respondsToSelector:_cmd]) return;
 //}
 //
 //- (void)draggingEnded:(id < NSDraggingInfo >)sender
 //{
-//	LOGFUNC;
+//	LOGFUNC
 //	if (![self.delegate respondsToSelector:_cmd]) return;
 //	if (![self.delegate respondsToSelector:_cmd]) return;
 //}

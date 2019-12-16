@@ -74,7 +74,7 @@ NSCalendar *timezonelessCalendar;
 
 	if (self)
 	{
-        LOGFUNC;
+        LOGFUNC
         
 		_data_ = [[DocumentData alloc] initWithUndoManager:self.undoManager];
 
@@ -94,13 +94,14 @@ NSCalendar *timezonelessCalendar;
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError * _Nullable __autoreleasing *)outError
 {
-	LOGFUNC;VALIDATE;
+	LOGFUNC
+    VALIDATE;
 	return [_data_ write];
 }
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
 {
-	LOGFUNC;
+	LOGFUNC
 
 //   #warning revert
 //    dispatch_after_main(10, ^{
@@ -184,7 +185,7 @@ NSCalendar *timezonelessCalendar;
 
 - (void)dealloc
 {
-	LOGFUNC;
+	LOGFUNC
 
 
     if ([NSColorPanel sharedColorPanelExists])
@@ -200,7 +201,7 @@ NSCalendar *timezonelessCalendar;
 
 - (BOOL)readFromURL:(NSURL *)url ofType:(NSString *)typeName error:(NSError * __autoreleasing *)outError
 {
-	LOGFUNCPARAMA(self.fileURL.path);
+	LOGFUNCPARAMA(self.fileURL.path)
 	@try
 	{
 		if ([typeName isEqualToString:@"com.corecode.tableedit.spreadsheet"] || [typeName isEqualToString:@"TableEditDocument"])
@@ -252,7 +253,7 @@ NSCalendar *timezonelessCalendar;
 
 - (BOOL)importExcel:(NSURL *)file action:(importChoice)action xml:(BOOL)xml
 {
-	LOGFUNCPARAM(file.path);
+	LOGFUNCPARAM(file.path)
 	BookHandle book = xml ? xlCreateXMLBook() : xlCreateBook();
 	assert(book);
     xlBookSetKey(book, LIBXLNAME, LIBXLKEY);
@@ -306,7 +307,7 @@ NSCalendar *timezonelessCalendar;
         }
 
 
-		BOOL altDown = (NSEvent.modifierFlags & NSAlternateKeyMask) > 0;
+        BOOL altDown = (NSEvent.modifierFlags & NSEventModifierFlagOption) > 0;
 
 //#warning revert
 //		altDown = TRUE;
@@ -495,7 +496,7 @@ NSCalendar *timezonelessCalendar;
 							NSString *hash = @(fontNameBuffer);
 
 							static NSMutableDictionary <NSString *, NSFont *> *fontCache;
-							ONCE_PER_FUNCTION(^{ fontCache = makeMutableDictionary(); });
+							ONCE_PER_FUNCTION(^{ fontCache = makeMutableDictionary(); })
 							NSFont *cellfont = fontCache[hash];
 
 							if (!cellfont)
@@ -547,7 +548,7 @@ NSCalendar *timezonelessCalendar;
 	}
 	@catch (NSException *exception)
 	{
-		LOG(exception);
+		LOG(exception)
 		[exception raise];
 	}
 	
@@ -567,7 +568,7 @@ NSCalendar *timezonelessCalendar;
 
 - (BOOL)importCSV:(NSURL *)source delimiter:(NSString *)delimiter encoding:(NSStringEncoding)encoding action:(importChoice)action
 {
-    LOGFUNC;
+    LOGFUNC
     
     NSDate *pre = [NSDate date];
     NSData *first10KData = [source readFileHeader:10 * 1024]; // don't wanna read possibly huge CSV just to sniff the seperator
@@ -691,7 +692,7 @@ NSCalendar *timezonelessCalendar;
 
 + (void)showImportPanel:(id)sender forWindow:(NSWindow *)window
 {
-	LOGFUNC;
+	LOGFUNC
 	NSOpenPanel *panel = NSOpenPanel.openPanel;
 
 	panel.allowedFileTypes = @[@"csv", @"txt", @"tsv", @"tab", @"xls", @"xlt", @"xlsx", @"xlsm", @"xlsb", @"xltm", @"xltx"];
@@ -718,7 +719,7 @@ NSCalendar *timezonelessCalendar;
 
 	id handler = ^(NSInteger result)
 	{
-		if (result == NSFileHandlingPanelOKButton)
+        if (result == NSModalResponseOK)
 		{
 			NSArray <NSString *> *delimiters = @[(NSString *)[NSNull null], @",", @";", @"	", @":", @" "];
 			NSArray <NSNumber *>*encodings = @[@0, @(NSUTF8StringEncoding), @(NSUnicodeStringEncoding), @(NSMacOSRomanStringEncoding), @(NSASCIIStringEncoding)];
@@ -768,13 +769,13 @@ NSCalendar *timezonelessCalendar;
 
 - (void)import:(id)sender
 {
-	LOGFUNCA;
+	LOGFUNCA
 	[Document showImportPanel:self forWindow:self.windowForSheet];
 }
 
 - (IBAction)fillIntoCell:(NSMenuItem *)sender
 {
-    LOGFUNCPARAMA(sender);
+    LOGFUNCPARAMA(sender)
 
     if (_tableView.selectedCells.count == 0) {	NSBeep(); return; }
 
@@ -803,7 +804,7 @@ NSCalendar *timezonelessCalendar;
         NSString *valueToFill;
         if (row == -1) // special, fill column name
         {
-            valueToFill = [AddressHelper columnIndexToString:column];;
+            valueToFill = [AddressHelper columnIndexToString:column];
         }
         else if (column == -1) // special, fill row name
         {
@@ -1071,7 +1072,7 @@ NSCalendar *timezonelessCalendar;
 	NSWindow *window = self.windowForSheet;
 	[panel beginSheetModalForWindow:window completionHandler:^(NSInteger result)
 	 {
-		 if (result == NSFileHandlingPanelOKButton)
+        if (result == NSModalResponseOK)
 		 {
 			 NSPopUpButton *d = [accessoryView viewWithTag:10];
 			 NSPopUpButton *e = [accessoryView viewWithTag:11];
@@ -1201,7 +1202,7 @@ NSCalendar *timezonelessCalendar;
 
 - (void)sortColumn:(int)column sortAscending:(BOOL)ascending onlySelected:(BOOL)sortOnlySelectedRows wholeTable:(BOOL)wholeTable // called from the table header view (context menu)
 {
-	LOGFUNCA;
+	LOGFUNCA
 	NSMutableIndexSet *rowIndices = [NSMutableIndexSet new];
 
 	if (sortOnlySelectedRows)
@@ -1222,16 +1223,16 @@ NSCalendar *timezonelessCalendar;
 
 - (void)removeRows:(id)sender
 {
-    if (!_tableView.selectedCells.count) {	LOGFUNCA; NSBeep(); return; }
+    if (!_tableView.selectedCells.count) {	LOGFUNCA NSBeep(); return; }
 
 	[self.windowForSheet endEditingFor:nil];
 
 	NSMutableIndexSet *rowIndices = [NSMutableIndexSet new];
 	[_tableView.selectedCells enumerateObjectsUsingBlock:^(Cell *c, NSUInteger idx, BOOL *stop) { [rowIndices addIndex:c.rowIndex]; }]; // datachange
 
-    if (rowIndices.count == _data_.rowCount) {    LOGFUNCA; NSBeep(); return; }
+    if (rowIndices.count == _data_.rowCount) {    LOGFUNCA NSBeep(); return; }
 
-    LOGFUNCPARAMA(makeString(@" ri%@ rc%lu cc%lu", rowIndices.description, (unsigned long)_data_.rowCount, (unsigned long)_data_.columnCount));
+    LOGFUNCPARAMA(makeString(@" ri%@ rc%lu cc%lu", rowIndices.description, (unsigned long)_data_.rowCount, (unsigned long)_data_.columnCount))
 
 	[self.data_ removeRows:rowIndices];
 
@@ -1247,7 +1248,7 @@ NSCalendar *timezonelessCalendar;
 
 - (void)removeColumns:(id)sender
 {
-	if (!_tableView.selectedCells.count) {	LOGFUNCA; NSBeep(); return; }
+	if (!_tableView.selectedCells.count) {	LOGFUNCA NSBeep(); return; }
 
 	[self.windowForSheet endEditingFor:nil];
 
@@ -1255,7 +1256,7 @@ NSCalendar *timezonelessCalendar;
 
 	[_tableView.selectedCells enumerateObjectsUsingBlock:^(Cell *c, NSUInteger idx, BOOL *stop) { [columnIndices addIndex:c.columnIndex-1]; }]; // datachange
 
-    LOGFUNCPARAMA(makeString(@" ci%@ rc%lu cc%lu", columnIndices.description, (unsigned long)_data_.rowCount, (unsigned long)_data_.columnCount));
+    LOGFUNCPARAMA(makeString(@" ci%@ rc%lu cc%lu", columnIndices.description, (unsigned long)_data_.rowCount, (unsigned long)_data_.columnCount))
 
 	[self.data_ removeColums:columnIndices];
 
@@ -1414,8 +1415,8 @@ NSCalendar *timezonelessCalendar;
 - (IBAction)addRow:(id)sender
 {
 	VALIDATE;
-	BOOL optionDown = ([NSEvent modifierFlags] & NSAlternateKeyMask) != 0;
-    LOGFUNCPARAMA(makeString(@" o%i rc%lu cc%lu", optionDown, (unsigned long)_data_.rowCount, (unsigned long)_data_.columnCount));
+    BOOL optionDown = ([NSEvent modifierFlags] & NSEventModifierFlagOption) != 0;
+    LOGFUNCPARAMA(makeString(@" o%i rc%lu cc%lu", optionDown, (unsigned long)_data_.rowCount, (unsigned long)_data_.columnCount))
 
 	if (optionDown)
 	{
@@ -1441,8 +1442,8 @@ NSCalendar *timezonelessCalendar;
 
 	[self.windowForSheet endEditingFor:nil]; // else we can have a crash e.g. when removing a column that has a cell currently editing
 
-	BOOL optionDown = ([NSEvent modifierFlags] & NSAlternateKeyMask) != 0;
-    LOGFUNCPARAMA(makeString(@" o%i rc%lu cc%lu", optionDown, (unsigned long)_data_.rowCount, (unsigned long)_data_.columnCount));
+    BOOL optionDown = ([NSEvent modifierFlags] & NSEventModifierFlagOption) != 0;
+    LOGFUNCPARAMA(makeString(@" o%i rc%lu cc%lu", optionDown, (unsigned long)_data_.rowCount, (unsigned long)_data_.columnCount))
 
 	if (optionDown)
 	{
@@ -1491,7 +1492,7 @@ NSCalendar *timezonelessCalendar;
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
 {
-	//LOGFUNC;
+	//LOGFUNC
 	NSArray *tableColums = _tableView.tableColumns;
 	NSInteger columnIndex = [tableColums indexOfObject:aTableColumn];
 
@@ -1504,7 +1505,7 @@ NSCalendar *timezonelessCalendar;
 	{
 		if ((columnIndex) == self.editingColumn && rowIndex == self.editingRow)
 		{
-			LOGFUNC;
+			LOGFUNC
 
 //			NSText *fe = [self.windowForSheet fieldEditor:NO forObject:_tableView];
 //
@@ -1551,7 +1552,7 @@ NSCalendar *timezonelessCalendar;
 
 - (BOOL)tableView:(NSTableView *)tableView shouldEditTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-	LOGFUNC;
+	LOGFUNC
 	[self tableViewSelectionDidChange:nil];
 
 	NSUInteger column = [tableView.tableColumns indexOfObject:tableColumn];
@@ -1569,9 +1570,31 @@ NSCalendar *timezonelessCalendar;
 	return YES;
 }
 
+- (void)tableView:(NSTableView *)tv setObjectValue:(id)object forCells:(NSArray <Cell *> *)cells
+{
+    
+    LOGFUNC
+
+#warning TODO THIS DOESN'T HAVE UNDO
+    for (Cell *c in cells)
+    {
+        NSInteger row = c.rowIndex;
+        NSUInteger column = [_tableView.tableColumns indexOfObject:c.column]-1;
+
+
+        [_data_ writeData:object toCellAtRow:row column:column];
+    }
+
+
+
+    self.editingColumn = -1;
+    self.editingRow = -1;
+    VALIDATE;
+}
+
 - (void)tableView:(NSTableView *)tv setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-	LOGFUNCA;
+	LOGFUNCA
 	VALIDATE;
 
 	NSUInteger column = [_tableView.tableColumns indexOfObject:tableColumn]-1;
@@ -1580,7 +1603,7 @@ NSCalendar *timezonelessCalendar;
 
 - (void)_tableViewSetObjectValue:(id)object column:(NSInteger)column row:(NSInteger)row // this has to go to a private method because undo wouldn't work with the TC object reference
 {
-	LOGFUNC;
+	LOGFUNC
 
 
 	NSString *oldvalue = _data_.data[row][column];
@@ -1634,15 +1657,15 @@ NSCalendar *timezonelessCalendar;
 
 - (BOOL)tableView:(NSTableView *)tableView shouldSelectTableColumn:(NSTableColumn *)tableColumn
 {
-	LOGFUNCA;
+	LOGFUNCA
 	return [tableView.tableColumns indexOfObject:tableColumn] > 0;
 }
 
 - (void)tableView:(NSTableView *)tableView didClickTableColumn:(NSTableColumn *)tableColumn
 {
-	LOGFUNCA;
-	BOOL shiftDown = (NSEvent.modifierFlags & NSShiftKeyMask) > 0;
-	BOOL commandDown = (NSEvent.modifierFlags & NSCommandKeyMask) > 0;
+	LOGFUNCA
+    BOOL shiftDown = (NSEvent.modifierFlags & NSEventModifierFlagShift) > 0;
+    BOOL commandDown = (NSEvent.modifierFlags & NSEventModifierFlagCommand) > 0;
 	NSUInteger columnIndex = [tableView.tableColumns indexOfObject:tableColumn];
 	static NSUInteger lastColumnIndex = 0;
 
@@ -1667,7 +1690,7 @@ NSCalendar *timezonelessCalendar;
 	CGFloat oldWidth = [not.userInfo[@"NSOldWidth"] doubleValue];
 	CGFloat newWidth = tc.width;
 	NSUInteger columnIndex = [_tableView.tableColumns indexOfObject:tc];
-    LOGFUNCPARAMA(@(columnIndex));
+    LOGFUNCPARAMA(@(columnIndex))
 
 
 	[[self.undoManager prepareWithInvocationTarget:self] resizeTableColumn:columnIndex fromWidth:newWidth toWidth:oldWidth];
@@ -1685,7 +1708,7 @@ NSCalendar *timezonelessCalendar;
 
 - (void)resizeTableColumn:(NSUInteger)columnIndex fromWidth:(CGFloat)oldWidth toWidth:(CGFloat)newWidth
 {
-	LOGFUNC;
+	LOGFUNC
 
 	NSTableColumn *tc = _tableView.tableColumns[columnIndex];
 
@@ -1701,8 +1724,8 @@ NSCalendar *timezonelessCalendar;
 
 - (void)tableViewSelectionDidChange:(NSNotification *)not
 {
-	if (not) LOGFUNCA;
-	else LOGFUNC;
+	if (not) LOGFUNCA
+	else LOGFUNC
 
 	//	[self toolbarPopoverClose:nil];
 
@@ -1767,16 +1790,16 @@ NSCalendar *timezonelessCalendar;
 
 - (void)tableView:(NSTableView *)tableView willDisplayCell:(id)cell forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-	//LOGFUNC;
+	//LOGFUNC
 	NSTextFieldCell *aCell = cell;
 	NSInteger column = [tableView.tableColumns indexOfObject:tableColumn];
 
 	if (column == 0) // rowindex pseudo-cells
 	{
-		aCell.alignment = NSCenterTextAlignment;
+        aCell.alignment = NSTextAlignmentCenter;
 
 		static NSColor *leftRowCellColor;
-		ONCE_PER_FUNCTION(^{ leftRowCellColor = makeColor(0.96f, 0.96f, 0.96f, 1.0f); });
+		ONCE_PER_FUNCTION(^{ leftRowCellColor = makeColor(0.96f, 0.96f, 0.96f, 1.0f); })
 
 		aCell.backgroundColor = leftRowCellColor;
 		aCell.drawsBackground = YES;
@@ -2010,13 +2033,13 @@ NSCalendar *timezonelessCalendar;
 
 - (void)window:(NSWindow *)window didDecodeRestorableState:(NSCoder *)state // only called for restored and not for opened document
 {
-	LOGFUNC;
+	LOGFUNC
 	//[self generateMissingGraphViews];
 }
 
 - (void)windowDidResize:(NSNotification *)notification
 {
-//	LOGFUNC;
+//	LOGFUNC
 //	if (self.tableView.document == self)
 //		ONCE_PER_OBJECT(self, (^{[self generateMissingGraphViews];})) // must be called after window size has been restored (but didDecodeRestorableState is not called in every case) and after windowControllerDidLoadNib
 }
@@ -2043,10 +2066,8 @@ NSCalendar *timezonelessCalendar;
 
 - (NSRect)windowWillUseStandardFrame:(NSWindow *)window defaultFrame:(NSRect)newFrame
 {
-	if (window)
-		LOGFUNCA;
-	else
-		LOGFUNC;
+	if (window)     LOGFUNCA
+	else            LOGFUNC
 	CGFloat newWidth = _plusColumnConstraint.constant - 4;
 	CGFloat newHeight = _plusRowConstraint.constant + 80;
 	NSRect r = NSMakeRect(self.windowForSheet.frame.origin.x,
@@ -2074,9 +2095,9 @@ NSCalendar *timezonelessCalendar;
 
 - (IBAction)sliderFinished:(id)sender
 {
-	LOGFUNCA;
+	LOGFUNCA
 	NSEvent *event = application.currentEvent;
-	BOOL endingDrag = event.type == NSLeftMouseUp;
+    BOOL endingDrag = event.type == NSEventTypeLeftMouseUp;
 	if (endingDrag)
 	{
 		[self willChangeValueForKey:@"maxNewRows"];
@@ -2160,7 +2181,7 @@ NSCalendar *timezonelessCalendar;
 		[_data_ sortColumn:column
                  ascending:!(self.lastSortColumn != column || self.lastSortAscending)
                 rowsToSort:nil
-                wholeTable:	((NSEvent.modifierFlags & NSShiftKeyMask) > 0) ? NO : YES];
+                wholeTable:	((NSEvent.modifierFlags & NSEventModifierFlagShift) > 0) ? NO : YES];
 
 
 		_lastSortAscending = (_lastSortColumn == column) ? !_lastSortAscending : FALSE;
@@ -2366,9 +2387,9 @@ NSCalendar *timezonelessCalendar;
 - (void)makeWindowWideEnough
 {
 // FIXME: this is bugged when we have to many rows to fit
-	LOGFUNC;
+	LOGFUNC
 
-    if ((self.windowForSheet.styleMask & NSFullScreenWindowMask) == NSFullScreenWindowMask) // work around a bug where resizing the table in fullscreen with enough rows to fill the screen will fuck things up
+    if ((self.windowForSheet.styleMask & NSWindowStyleMaskFullScreen) == NSWindowStyleMaskFullScreen) // work around a bug where resizing the table in fullscreen with enough rows to fill the screen will fuck things up
         return;
 
     // make window bigger if needed
@@ -2388,7 +2409,7 @@ NSCalendar *timezonelessCalendar;
 
 - (void)movePlusRowButton
 {
-	LOGFUNC;
+	LOGFUNC
 	// move plus row button
 	const NSSize unitSize = { 1.0, 1.0 };
 	CGFloat factor = [_tableView convertSize:unitSize toView:nil].width;
@@ -2398,7 +2419,7 @@ NSCalendar *timezonelessCalendar;
 
 - (void)movePlusColumnButton
 {
-	LOGFUNC;
+	LOGFUNC
 
 	long totalColumnWidth = [_tableView.tableColumns reduce:^int(NSTableColumn *column ) { return (int)column.width + 3; }];
 	const NSSize unitSize = { 1.0, 1.0 };
@@ -2408,7 +2429,7 @@ NSCalendar *timezonelessCalendar;
 
 - (void)saveColumnWidths
 {
-	LOGFUNC;
+	LOGFUNC
 
 	int i = 0;
 
@@ -2419,7 +2440,7 @@ NSCalendar *timezonelessCalendar;
 
 //- (void)restoreColumnWidths
 //{
-//	LOGFUNC;
+//	LOGFUNC
 //
 //	int i = 0;
 //
@@ -2468,7 +2489,7 @@ NSCalendar *timezonelessCalendar;
 
 - (void)recreateTableColumns
 {
-	LOGFUNC;
+	LOGFUNC
 	// remove columns
 	while (_tableView.tableColumns.count > 1)
 	{
@@ -2480,7 +2501,7 @@ NSCalendar *timezonelessCalendar;
 
 - (void)fitTableColumsToData
 {
-	LOGFUNC;
+	LOGFUNC
 
 	NSUInteger columns = _data_.columnCount;
 
@@ -2539,13 +2560,13 @@ NSCalendar *timezonelessCalendar;
 		NSTableColumn *column = _tableView.tableColumns[columnIndex];
 		NSTableHeaderCell *headerCell = column.headerCell;
 		headerCell.stringValue = [AddressHelper columnIndexToString:columnIndex-1];
-		headerCell.alignment = NSCenterTextAlignment;
+        headerCell.alignment = NSTextAlignmentCenter;
 	}
 }
 
 - (void)modifyAttributesOfSelectedCells:(void (^)(NSMutableDictionary *a))block
 {
-	LOGFUNC;
+	LOGFUNC
 
 
 	// we could make it more efficient by allowing to set attributes for columns at once

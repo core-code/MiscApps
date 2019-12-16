@@ -40,7 +40,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 	if (self)
 	{
-		LOGFUNC;
+		LOGFUNC
 
 		_data_ = @[@[].mutableObject].mutableObject;
 		_attributes_ = @[@[].mutableObject].mutableObject;
@@ -63,7 +63,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)dealloc
 {
-    LOGFUNC;
+    LOGFUNC
 	[notificationCenter removeObserver:self.receiver];
 }
 
@@ -90,7 +90,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 
 - (BOOL)read:(NSData *)data
 {
-	LOGFUNC;
+	LOGFUNC
 	NSDate *pre = [NSDate date];
 	NSData *uncompressedData = data.snappyDecompressed;
 	if (!uncompressedData)
@@ -256,7 +256,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 
 - (NSData *)write
 {
-	LOGFUNC;
+	LOGFUNC
 	NSDate *pre = [NSDate date];
 
 	NSData *serializedData = _data_.JSONData;
@@ -287,7 +287,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 
 - (BOOL)importData:(NSArray <NSArray <NSString *> *> *)importedData attributes:(NSArray <NSArray <NSMutableDictionary *>*> *)importedAttributes action:(importChoice)action selection:(CCIntRange2D)selection
 {
-	LOGFUNC;
+	LOGFUNC
 	NSUInteger importRow = 0, importColumn = 0;
 	coordinates newTableSize = {0,0};
 
@@ -358,7 +358,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 
 - (void)exportCSV:(NSURL *)destination delimiter:(NSString *)delimiter encoding:(NSStringEncoding)encoding
 {
-	LOGFUNC;
+	LOGFUNC
 	NSDate *pre = [NSDate date];
 	NSMutableString *export = makeMutableString();
 
@@ -394,7 +394,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 
 - (void)_exportAttributeCSV:(NSURL *)destination delimiter:(NSString *)delimiter encoding:(NSStringEncoding)encoding
 {
-    LOGFUNC;
+    LOGFUNC
     NSDate *pre = [NSDate date];
     NSMutableString *export = makeMutableString();
 
@@ -419,7 +419,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 
 - (void)exportExcel:(NSURL *)destination xml:(BOOL)xml
 {
-	LOGFUNC;
+	LOGFUNC
 	BookHandle book = xml ? xlCreateXMLBook() : xlCreateBook();
 	assert(book);
     xlBookSetKey(book, LIBXLNAME, LIBXLKEY);
@@ -460,7 +460,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 
 - (void)resizeTable:(coordinates)newSize
 {
-	LOGFUNC;
+	LOGFUNC
 
 	[_undoManager beginUndoGrouping];
 	[_undoManager setActionName:@"Resize Table"];
@@ -648,7 +648,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 
 - (void)insertRow:(NSUInteger)insertLocation
 {
-	LOGFUNC;
+	LOGFUNC
 
 	[[_undoManager prepareWithInvocationTarget:self] removeRows:[NSIndexSet indexSetWithIndex:insertLocation]];
 	[_undoManager setActionName:@"Insert Row"]; // this is never called as part of undo
@@ -677,7 +677,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 
 - (void)insertColumn:(NSUInteger)insertLocation
 {
-	LOGFUNC;
+	LOGFUNC
 
 	[[_undoManager prepareWithInvocationTarget:self] removeColums:[NSIndexSet indexSetWithIndex:insertLocation]];
 	[_undoManager setActionName:@"Insert Column"]; // this is never called as part of undo
@@ -711,7 +711,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 
 - (void)moveRows:(NSIndexSet *)rowIndices toIndex:(NSUInteger)destinationRow
 {
-	LOGFUNC;
+	LOGFUNC
 
 
 
@@ -856,7 +856,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 
 - (void)setGraph:(NSDictionary *)graph value:(id)value forKey:(NSString *)key
 {
-	LOGFUNC;
+	LOGFUNC
 	if (!value)
 		[(NSMutableDictionary *)graph removeObjectForKey:key];
 	else
@@ -866,7 +866,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 
 - (void)modifyAttributesOfCells:(NSArray <Cell *> *)cells inCellMap:(NSMutableDictionary <NSString *, NSNumber *> *)cellMap withBorder:(borderPlacement)border
 {
-	LOGFUNC;
+	LOGFUNC
 	// attributechange
 	switch (border)
 	{
@@ -1063,7 +1063,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 	if (self.undoManager.isUndoing || self.undoManager.isRedoing)
 		return;
 
-	LOGFUNC;
+	LOGFUNC
 
 	for (NSArray *row in _data_)
 		assert(row.count == self.columnCount);

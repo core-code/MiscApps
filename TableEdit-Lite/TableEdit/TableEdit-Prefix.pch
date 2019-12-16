@@ -176,9 +176,9 @@
 
 #ifdef RELEASE  // we need debug info on actions for now
 	#undef LOGFUNCA
-    #define LOGFUNCA log_to_prefs(makeString(@"%@ %@ (%p)", self.undoManager.isUndoing ? @"UNDOACTION" : (self.undoManager.isRedoing ? @"REDOACTION" : @"ACTION"), @(__PRETTY_FUNCTION__), (__bridge void *)self))
+#define LOGFUNCA log_to_prefs(makeString(@"%@ %@ (%p)", self.undoManager.isUndoing ? @"UNDOACTION" : (self.undoManager.isRedoing ? @"REDOACTION" : @"ACTION"), @(__PRETTY_FUNCTION__), (__bridge void *)self));
     #undef LOGFUNCPARAMA
-    #define LOGFUNCPARAMA(x) log_to_prefs(makeString(@"%@ %@ (%p) [%@]", self.undoManager.isUndoing ? @"UNDOACTION" : (self.undoManager.isRedoing ? @"REDOACTION" : @"ACTION"), @(__PRETTY_FUNCTION__), (__bridge void *)self, [(x) description]))
+    #define LOGFUNCPARAMA(x) log_to_prefs(makeString(@"%@ %@ (%p) [%@]", self.undoManager.isUndoing ? @"UNDOACTION" : (self.undoManager.isRedoing ? @"REDOACTION" : @"ACTION"), @(__PRETTY_FUNCTION__), (__bridge void *)self, [(x) description]));
 #endif
 
 #endif

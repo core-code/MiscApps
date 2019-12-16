@@ -47,7 +47,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)mouseDown:(NSEvent *)event
 {
-    LOGFUNC;
+    LOGFUNC
     _dragging = YES;
 
     [[NSCursor closedHandCursor] push];
@@ -64,7 +64,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)mouseDragged:(NSEvent *)theEvent
 {
-    LOGFUNC;
+    LOGFUNC
     if (_dragging)
 	{
 		if (self.tag == 1)
@@ -90,7 +90,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)mouseUp:(NSEvent *)event
 {
-    LOGFUNC;
+    LOGFUNC
 	[self setImagePosition:NSImageOnly];
 	self.title = @"";
 
@@ -142,8 +142,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)flagsChanged:(NSEvent *)event
 {
-//  LOGFUNC;
-    BOOL optionDown = (event.modifierFlags & NSAlternateKeyMask) > 0;
+//  LOGFUNC
+    BOOL optionDown = (event.modifierFlags & NSEventModifierFlagOption) > 0;
 
 
     if (self.dragging && optionDown) return;

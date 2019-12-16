@@ -34,7 +34,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)mouseDown:(NSEvent *)event
 {
-	LOGFUNC;
+	LOGFUNC
 	//[self.chartContainerView removeFromSuperview];
 
     _dragging = YES;
@@ -48,7 +48,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)mouseDragged:(NSEvent *)theEvent
 {
-	LOGFUNC;
+	LOGFUNC
 
     if (_dragging)
 	{
@@ -66,7 +66,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)mouseUp:(NSEvent *)event
 {
-	LOGFUNC;
+	LOGFUNC
     _dragging = NO;
 
     [self setNeedsDisplay: YES];

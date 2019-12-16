@@ -17,7 +17,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 
 
-CONST_KEY(UsagesThisVersion)
+//CONST_KEY(UsagesThisVersion)
 
 
 @interface AppDelegate ()
@@ -71,7 +71,7 @@ CONST_KEY(UsagesThisVersion)
 	
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification
 {
-	LOGFUNC;
+	LOGFUNC
 	cc = CoreLib.new;
 
 #ifndef USE_SPARKLE
@@ -86,7 +86,7 @@ CONST_KEY(UsagesThisVersion)
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
-	LOGFUNC;
+	LOGFUNC
 	self.cl = cc;
     @"NSInitialToolTipDelay".defaultInt = 300;
 
@@ -141,7 +141,7 @@ CONST_KEY(UsagesThisVersion)
 
 - (IBAction)import:(id)sender
 {
-	LOGFUNC;
+	LOGFUNC
 	[Document showImportPanel:self forWindow:nil];
 }
 
@@ -149,7 +149,7 @@ CONST_KEY(UsagesThisVersion)
 
 - (IBAction)openWelcome:(id)sender
 {
-	LOGFUNC;
+	LOGFUNC
 	NSMutableArray *tmp = @[].mutableObject;
 	for (NSURL *url in NSDocumentController.sharedDocumentController.recentDocumentURLs)
 	{
@@ -183,19 +183,19 @@ CONST_KEY(UsagesThisVersion)
 
 - (IBAction)openPromotion:(id)sender
 {
-	LOGFUNC;
+	LOGFUNC
 	[self openWindow:&_promotionWindow nibName:@"PromotionWindow"];
 }
 
 - (IBAction)closeWelcome:(id)sender
 {
-	LOGFUNC;
+	LOGFUNC
 	[self.welcomeWindow performBorderlessClose:sender];
 }
 
 - (IBAction)openDocumentation:(id)sender
 {
-	LOGFUNC;
+	LOGFUNC
 	[self openWindow:&_documentationWindow nibName:@"DocumentationWindow"];
 }
 
@@ -204,7 +204,7 @@ CONST_KEY(UsagesThisVersion)
 
 - (void)windowWillClose:(NSNotification *)notification
 {
-    LOGFUNC;
+    LOGFUNC
 	if (notification.object == self.documentationWindow)
 		self.documentationWindow = nil;
 	else if (notification.object == self.welcomeWindow)
@@ -218,7 +218,7 @@ CONST_KEY(UsagesThisVersion)
 
 - (void)tableViewSelectionDidChange:(NSNotification *)not
 {
-    LOGFUNC;
+    LOGFUNC
 	NSArray *urls = NSDocumentController.sharedDocumentController.recentDocumentURLs;
 	NSInteger row = [not.object selectedRow];
 
