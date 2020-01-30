@@ -1,4 +1,5 @@
-MiscApps: A collection of mac applications and tools for developers
+# MiscApps
+*A collection of mac applications and tools for developers*
 
 https://www.corecode.io/index_opensource.html
 
