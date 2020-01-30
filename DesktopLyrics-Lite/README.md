@@ -1,16 +1,16 @@
 
-# DesktopLyrics
+# DesktopLyrics Lite
 *v1.3.8*
 
 ## Introduction:
-DesktopLyrics is a free application for Mac OS X that displays the lyrics of the song currently playing in "iTunes" right on your desktop. The lyrics for the song have to be set in iTunes, DesktopLyrics does nothing to fetch lyrics if they aren't available in iTunes. If you don't want to type-in all your lyrics manually you can use applications like "[iFetchLyrics][1]", "[Get Lyrical][2]" or "[SongGenie][3]".
+DesktopLyrics Lite is a free application for Mac OS X that displays the lyrics of the song currently playing in "iTunes" right on your desktop. The lyrics for the song have to be set in iTunes, DesktopLyrics does nothing to fetch lyrics if they aren't available in iTunes. If you don't want to type-in all your lyrics manually you can use applications like "[iFetchLyrics][1]", "[Get Lyrical][2]" or "[SongGenie][3]".
 
 ## Requirements:
 • Mac OS X 10.6 or later
 
 ## DesktopLyrics 2:
 DesktopLyrics version 1.x has been discontinued, and is completely unsupported.
-Please [upgrade][4] to the substantially improved version 2 for support and many improvements.
+Please [upgrade][4] to the substantially improved version 2 for support and many improvements. It is still free!
 
 ## License &amp; Cost:
 DesktopLyrics is completely free of charge and the source code is licensed under the [Open Source "MIT License"][5].
