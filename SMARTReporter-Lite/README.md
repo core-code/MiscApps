@@ -20,6 +20,7 @@ SMARTReporter 2 is completely free of charge and the source code is licensed und
 
 ## Download Binary:
 [SMARTReporter Lite 2.7.3 Universal Binary][5]
+
 ## Usage:
 1. Place the SMARTReporter folder anywhere on your file system (the "/Applications" folder is most suitable).
 2. Double-click SMARTReporter.
@@ -29,6 +30,8 @@ SMARTReporter 2 is completely free of charge and the source code is licensed und
 6. If you want to see the individial S.M.A.R.T. attribute values or perform a short S.M.A.R.T. self-test on a drive you can do so by right-clicking on a drive in the list and selecting the appropriate item.
 7. Close the Preferences panel. SMARTReporter will now alert you (with the actions you've selected as well as by changing it's menu-icon) when it determines any impending problems.
 
+## Screenshots:
+![picture alt](https://github.com/core-code/MiscApps/blob/master/SMARTReporter-Lite/screenshots/screenshot_1.png)
 
 [1]: https://www.apple.com/feedback/macos.html
 [2]: https://hddlife.com/eng/help/4_How_to/4_2_smart.htm
