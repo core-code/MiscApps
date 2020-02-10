@@ -31,7 +31,7 @@ SMARTReporter 2 is completely free of charge and the source code is licensed und
 7. Close the Preferences panel. SMARTReporter will now alert you (with the actions you've selected as well as by changing it's menu-icon) when it determines any impending problems.
 
 ## Screenshots:
-![picture alt](https://github.com/core-code/MiscApps/blob/master/SMARTReporter-Lite/screenshots/screenshot_1.png)
+![picture alt](https://github.com/core-code/MiscApps/blob/master/SMARTReporter-Lite/screenshots/screenshot_1.png | width=100)
 
 [1]: https://www.apple.com/feedback/macos.html
 [2]: https://hddlife.com/eng/help/4_How_to/4_2_smart.htm
