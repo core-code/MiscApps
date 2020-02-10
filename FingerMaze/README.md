@@ -9,3 +9,7 @@ Features include:
 
 ## Requirements:
 • iPad
+
+## Download:
+[App Store][1]
+[1]https://itunes.apple.com/us/app/fingermaze-hd/id394780497?mt=8&at=1000lwks
