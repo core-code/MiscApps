@@ -1,5 +1,5 @@
 
-# SMARTReporter
+# SMARTReporter Lite
 *v2.7.4*
 
 ## Introduction:
