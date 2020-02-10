@@ -15,7 +15,7 @@ Please [upgrade][4] to the substantially improved version 2 for support and many
 ## License &amp; Cost:
 DesktopLyrics is completely free of charge and the source code is licensed under the [Open Source "MIT License"][5].
 
-## Warning
+## Warning:
 DesktopLyrics Lite has been discontinued since 2012 and is completely unsupported. 
 Consider upgrading to the much-improved version 2.0 for many new features and support.
 
