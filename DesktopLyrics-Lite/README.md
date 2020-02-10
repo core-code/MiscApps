@@ -20,7 +20,7 @@ DesktopLyrics Lite has been discontinued since 2012 and is completely unsupporte
 Consider upgrading to the much-improved [version 2.0][6] for many new features and support.
 
 ## Download Binary:
-https://www.corecode.io/downloads/desktoplyrics_1.3.8.dmg
+[DesktopLyrics lite Binary Download][7]
 
 ## Usage:
 1. Place the DesktopLyrics folder anywhere on your hard disk (the "/Applications" folder is most suitable).
@@ -37,3 +37,4 @@ Please note, music normally doesn't contain textual lyrics information, even whe
 [4]: https://www.corecode.io/desktoplyrics/
 [5]: https://opensource.org/licenses/mit-license.php
 [6]: https://www.corecode.io/desktoplyrics/index.html
+[7]: https://www.corecode.io/downloads/desktoplyrics_1.3.8.dmg
