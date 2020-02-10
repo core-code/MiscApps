@@ -31,7 +31,7 @@ SMARTReporter 2 is completely free of charge and the source code is licensed und
 7. Close the Preferences panel. SMARTReporter will now alert you (with the actions you've selected as well as by changing it's menu-icon) when it determines any impending problems.
 
 ## Screenshots:
-<img src="screenshots/screenshot_1.png" width="100"/><img src="screenshots/screenshot_2.png" width="100"/><img src="screenshots/screenshot_3.png" width="100"/><img src="screenshots/screenshot_4.png" width="100"/><img src="screenshots/screenshot_5.png" width="100"/><img src="screenshots/screenshot_6.png" width="100"/>
+<img src="screenshots/screenshot_1.png" width="100"/>&nbsp;&nbsp;<img src="screenshots/screenshot_2.png" width="100"/>&nbsp;&nbsp;<img src="screenshots/screenshot_3.png" width="100"/>&nbsp;&nbsp;<img src="screenshots/screenshot_4.png" width="100"/>&nbsp;&nbsp;<img src="screenshots/screenshot_5.png" width="100"/>&nbsp;&nbsp;<img src="screenshots/screenshot_6.png" width="100"/>
 
 [1]: https://www.apple.com/feedback/macos.html
 [2]: https://hddlife.com/eng/help/4_How_to/4_2_smart.htm
