@@ -1,6 +1,5 @@
 # VideoBreakout
 *1.1.0*
-watch web-videos outside your browser
 
 ## Introduction: 
 VideoBreakout allows you to view web-videos in a proper and native video-player instead of having to watch them embedded into a website in your browser. VideoBreakout installs a Safari toolbar plugin you can click whenever you'd rather watch a web-video in a proper video-player (VLC). This allows for higher quality, convenience and more playback options like filters, playback speed, etc.
