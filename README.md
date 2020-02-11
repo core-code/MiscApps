@@ -54,6 +54,7 @@ https://www.corecode.io/index_opensource.html
 <b>TunesController</b> <br/> An application for remotely controlling iTunes from any Java capable device. <br/> 
 <b>Unquarantine</b> <br/> An application that removes the 'Quarantine' on other apps. <br/> 
 <b>Updater</b> <br/> An application for patching applications to a newer version. <br/> 
+<b>VideoBreakout</b> <br/> Allows watching videos embedded into websites outside of your browser - in a proper video player. <br/> 
 <b>VisionOCR</b> <br/> A command-line tool that uses Apple's Vision framework to recognise text regions in an image - High Sierra only. <br/> 
 <b>VolumeCore</b> <br/> An application for realtime visualization of volumetric data. <br/> 
 <b>WindowMover</b> <br/> An application that moves the frontmost window to the mouse cursor position when a hotkey is pressed. <br/> 

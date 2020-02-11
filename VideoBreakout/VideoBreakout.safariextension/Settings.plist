@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>DefaultValue</key>
+		<string>1</string>
+		<key>Key</key>
+		<string>shortcutEnabled</string>
+		<key>Title</key>
+		<string>Enable shortcut to start VideoBreakout (Shortcut: ⌥⌃V)</string>
+		<key>Type</key>
+		<string>CheckBox</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>1</string>
+		<key>Key</key>
+		<string>stopVideos</string>
+		<key>Title</key>
+		<string>Stop Videos</string>
+		<key>Titles</key>
+		<array>
+			<string>Stop the video on the webpage</string>
+			<string>Close website altogether</string>
+			<string>Close website if it is a video-only website, else stop video</string>
+		</array>
+		<key>Type</key>
+		<string>PopUpButton</string>
+		<key>Values</key>
+		<array>
+			<string>1</string>
+			<string>2</string>
+			<string>3</string>
+		</array>
+	</dict>
+</array>
+</plist>

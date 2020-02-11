@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>videobreakout</title>
+<script type="text/javascript">
+
+function videobreakout_global(dict)
+{
+	var json = JSON.stringify(dict)
+	var b64 = btoa(json)
+		
+	var StoppingVideosStop = 1
+	var StoppingVideosClose = 2
+	var StoppingVideosCloseIfYT = 3
+
+	if ((safari.extension.settings.stopVideos == StoppingVideosClose) ||
+		 (safari.extension.settings.stopVideos == StoppingVideosCloseIfYT && (dict["pageURL"].indexOf("youtu") > -1 )))
+		 safari.application.activeBrowserWindow.activeTab.close()
+
+
+	safari.application.activeBrowserWindow.activeTab.url = "videobreakout://" + b64;
+}
+
+
+function handleCommand(event)
+{
+    if (event.command === "VideoBreakout")
+	{	
+		safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("videobreakout_injected", {"stopVideos" : safari.extension.settings.stopVideos, "pageURL" : event.target.browserWindow.activeTab.url});
+    }
+}
+ 
+//function validateCommand(event)
+//{
+//	if (event.command === "VideoBreakout")
+//	{
+//		event.target.disabled = 0;
+//	}
+//}
+
+function handleMessage(event)
+{
+	if (safari.extension.settings.shortcutEnabled && event.name == 'handleKey')
+	{
+		safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("videobreakout_injected", {"stopVideos" : safari.extension.settings.stopVideos, "pageURL" : event.target.browserWindow.activeTab.url});
+	}
+	else if (event.name == 'videobreakout_global')
+	{
+		videobreakout_global(event.message);
+	}
+}
+
+// if event handlers are in the global HTML page,
+// register with application:
+safari.application.addEventListener('command', handleCommand, false);
+safari.application.addEventListener('message', handleMessage, false);
+
+//safari.application.addEventListener("validate", validateCommand, false);
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
+
