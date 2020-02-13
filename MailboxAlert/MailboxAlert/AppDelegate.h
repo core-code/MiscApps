@@ -22,3 +22,10 @@ CONST_KEY_DECLARATION(IMAPPort)
 
 @end
 
+#warning TODO
+// POP support
+// fix broken launch
+// inability to UPDATE the password
+// if you remove passwords from keychain app won't start
+// no "refresh" option for all or single account
+ 

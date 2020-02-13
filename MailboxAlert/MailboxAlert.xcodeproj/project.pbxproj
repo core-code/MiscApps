@@ -62,6 +62,8 @@
 			compilerSpec = com.apple.compilers.proxy.script;
 			filePatterns = "*ail.app";
 			fileType = pattern.proxy;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 				"$(DERIVED_FILES_DIR)/$(INPUT_FILE_BASE).h",
@@ -427,7 +429,7 @@
 			};
 			buildConfigurationList = B938448E1699F79C001773E8 /* Build configuration list for PBXProject "MailboxAlert" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
