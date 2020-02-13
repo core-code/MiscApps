@@ -16,3 +16,12 @@
 
 @end
 
+
+#pragma mark TODO
+#warning TODO
+// support: https://trailers.apple.com/trailers/independent/pandemic/
+// add third thing to setup, agree to terms
+// add download-the-video option
+// new icon
+// note that it works worse with flash installed!
+#pragma mark TODO
