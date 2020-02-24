@@ -28,9 +28,10 @@ https://www.corecode.io/index_opensource.html
 <b>MailSpy</b> <br/> An application that shows the geographic origin of an e-mail on a map - if possible. <br/> 
 <b>MenuSwitch</b> <br/> An application for switching between running applications - like the "Dock", but located in the menubar. <br/> 
 <b>MountMenu</b> <br/> An application displayed in the global menu-bar that allows you to mount and also unmount your disks. <br/> 
-<b>MovieCutter</b> <br/> An application for cutting/splitting any movie file types like MKV/MP4/etc. <br/> 
+<b>MovieCutter</b> <br/> An application for cutting small samples out of any movie including MKV/MP4/etc. <br/> 
 <b>MovieDB</b> <br/> An application for easily managing your digital movie collection easily by using drag & drop. <br/> 
 <b>MovieInfo</b> <br/> An application for getting textual info on the audio/video/subtitle tracks in a movie file like MKV/MP4/etc. <br/> 
+<b>MovieSplitter</b> <br/> An application for splitting movie into multiple smaller movies e.g. for storing on DVDs. <br/> 
 <b>MusicWatch</b> <br/> An application that monitors your favorite music artists for new album releases. <br/> 
 <b>ObserveFreeDiskSpace</b> <br/> A command-line tool to continuously check the free space on your boot disk. <br/> 
 <b>OmniExpose</b> <br/> An application that extends the Exposé feature to include applications that are currently hidden. <br/> 

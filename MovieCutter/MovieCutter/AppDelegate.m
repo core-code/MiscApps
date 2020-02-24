@@ -91,11 +91,11 @@ int durationSecs;
 
 	[panel beginSheetModalForWindow:self.window completionHandler:^(NSInteger result)
 	 {
-		 if (result == NSFileHandlingPanelOKButton)
+        if (result == NSModalResponseOK)
 		 {
 			 NSPanel *progressPanel = [[NSPanel alloc]
 							   initWithContentRect:NSMakeRect(0, 0, 120, 40)
-							   styleMask:NSTitledWindowMask
+                                       styleMask:NSWindowStyleMaskTitled
 							   backing:NSBackingStoreBuffered
 							   defer:YES];
 
