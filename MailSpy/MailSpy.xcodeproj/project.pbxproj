@@ -18,6 +18,8 @@
 		B9284D481A65960500614F3F /* Credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = B9284D451A65960500614F3F /* Credits.rtfd */; };
 		B9284D491A65960500614F3F /* FAQ.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9284D461A65960500614F3F /* FAQ.rtf */; };
 		B9284D4A1A65960500614F3F /* History.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B9284D471A65960500614F3F /* History.rtf */; };
+		B92A272A2405D6DA00BD1F1B /* JMWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = B92A27292405D6DA00BD1F1B /* JMWebView.m */; };
+		B92A272D2405DC2100BD1F1B /* JMReceiptValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = B92A272C2405DC2100BD1F1B /* JMReceiptValidation.m */; };
 		B99AA1B41A659ABE0055134E /* DocumentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99AA1B31A659ABE0055134E /* DocumentationViewController.swift */; };
 		B99AA1B61A659E7F0055134E /* Read Me.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B99AA1B51A659E7F0055134E /* Read Me.rtf */; };
 		B9BD19381CDF4D8200C92598 /* AppKit+CoreCode.m in Sources */ = {isa = PBXBuildFile; fileRef = B9BD19331CDF4D8200C92598 /* AppKit+CoreCode.m */; };
@@ -41,6 +43,10 @@
 		B9284D451A65960500614F3F /* Credits.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = Credits.rtfd; sourceTree = "<group>"; };
 		B9284D461A65960500614F3F /* FAQ.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = FAQ.rtf; sourceTree = "<group>"; };
 		B9284D471A65960500614F3F /* History.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = History.rtf; sourceTree = "<group>"; };
+		B92A27282405D6D900BD1F1B /* JMWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMWebView.h; path = Support/JMWebView.h; sourceTree = SOURCE_ROOT; };
+		B92A27292405D6DA00BD1F1B /* JMWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMWebView.m; path = Support/JMWebView.m; sourceTree = SOURCE_ROOT; };
+		B92A272B2405DC2100BD1F1B /* JMReceiptValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMReceiptValidation.h; path = Support/JMReceiptValidation.h; sourceTree = SOURCE_ROOT; };
+		B92A272C2405DC2100BD1F1B /* JMReceiptValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMReceiptValidation.m; path = Support/JMReceiptValidation.m; sourceTree = SOURCE_ROOT; };
 		B92E88111E5DB82F00A5BBCF /* MailSpy.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = MailSpy.xcconfig; sourceTree = SOURCE_ROOT; };
 		B98357D31A505EEE00586FF3 /* MailSpy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MailSpy-Bridging-Header.h"; sourceTree = "<group>"; };
 		B99AA1B31A659ABE0055134E /* DocumentationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentationViewController.swift; sourceTree = "<group>"; };
@@ -112,8 +118,12 @@
 				B9284D431A6595B500614F3F /* WebKit.framework */,
 				B90578B21A653ADF00A37205 /* MapKit.framework */,
 				B903DFCC1A18EDAB004F6D0B /* Info.plist */,
+				B92A272B2405DC2100BD1F1B /* JMReceiptValidation.h */,
+				B92A272C2405DC2100BD1F1B /* JMReceiptValidation.m */,
 				B9BD19321CDF4D8200C92598 /* AppKit+CoreCode.h */,
 				B9BD19331CDF4D8200C92598 /* AppKit+CoreCode.m */,
+				B92A27282405D6D900BD1F1B /* JMWebView.h */,
+				B92A27292405D6DA00BD1F1B /* JMWebView.m */,
 				B9BD19341CDF4D8200C92598 /* CoreLib.h */,
 				B9BD19351CDF4D8200C92598 /* CoreLib.m */,
 				B9BD19361CDF4D8200C92598 /* Foundation+CoreCode.h */,
@@ -211,6 +221,8 @@
 				B9BD19391CDF4D8200C92598 /* CoreLib.m in Sources */,
 				B9BD19381CDF4D8200C92598 /* AppKit+CoreCode.m in Sources */,
 				B903DFEB1A18F386004F6D0B /* DragDestinationView.swift in Sources */,
+				B92A272A2405D6DA00BD1F1B /* JMWebView.m in Sources */,
+				B92A272D2405DC2100BD1F1B /* JMReceiptValidation.m in Sources */,
 				B9D62F991A3DE8BE008D3643 /* IPGeoLocation.swift in Sources */,
 				B903DFCE1A18EDAB004F6D0B /* AppDelegate.swift in Sources */,
 				B903DFF01A1A6087004F6D0B /* ResultViewController.swift in Sources */,
@@ -280,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -330,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -350,7 +362,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = MailSpy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MailSpy/MailSpy-Bridging-Header.h";
@@ -371,7 +383,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = MailSpy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MailSpy/MailSpy-Bridging-Header.h";

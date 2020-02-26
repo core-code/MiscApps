@@ -50,7 +50,7 @@ static CONST_KEY(CoreCodeAssociatedValue)
     dispatch_async(dispatch_get_main_queue(),^
 	{
 		NSWindow *progressPanel = [[NSWindow alloc] initWithContentRect:NSMakeRect(0.0f, 0.0f, 400.0f, 120.0f)
-													   styleMask:NSTitledWindowMask
+                                                              styleMask:NSWindowStyleMaskTitled
 														 backing:NSBackingStoreBuffered
 														   defer:NO];
 
@@ -72,7 +72,7 @@ static CONST_KEY(CoreCodeAssociatedValue)
 
 		for (NSTextField *textField in @[progressInfo, progressDetailInfo, waitLabel])
 		{
-			[textField setAlignment:NSCenterTextAlignment];
+            [textField setAlignment:NSTextAlignmentCenter];
 			[textField setBezeled:NO];
 			[textField setDrawsBackground:NO];
 			[textField setEditable:NO];

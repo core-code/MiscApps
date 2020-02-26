@@ -33,7 +33,7 @@ NSProcessInfo *processInfo;
 
 @implementation CoreLib
 
-@dynamic appCrashLogs, appID, appBuild, appVersionString, appName, resDir, docDir, suppDir, resURL, docURL, suppURL, deskDir, deskURL, prefsPath, prefsURL, homeURL
+@dynamic appCrashLogs, appID, appBuild, appVersionString, appName, resDir, docDir, suppDir, resURL, docURL, suppURL, deskDir, deskURL, prefsPath, prefsURL, homeURL, appBundleIdentifier
 #ifdef USE_SECURITY
 , appSHA;
 #else
@@ -67,7 +67,10 @@ NSProcessInfo *processInfo;
 
 	return self;
 }
-
+- (NSString *)appBundleIdentifier
+{
+    return NSBundle.mainBundle.bundleIdentifier;
+}
 - (NSString *)prefsPath
 {
 	return makeString(@"~/Library/Preferences/%@.plist", self.appID).expanded;
@@ -185,7 +188,7 @@ NSProcessInfo *processInfo;
 	if ((openChoice)choice == openSupportRequestMail)
 	{
 #if defined(TARGET_OS_MAC) && TARGET_OS_MAC && !TARGET_OS_IPHONE
-		BOOL optionDown = ([NSEvent modifierFlags] & NSAlternateKeyMask) != 0;
+        BOOL optionDown = ([NSEvent modifierFlags] & NSEventModifierFlagOption) != 0;
 #endif
 
 		NSString *encodedPrefs = @"";

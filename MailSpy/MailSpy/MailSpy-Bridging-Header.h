@@ -4,3 +4,4 @@
 
 #import "AppKit+CoreCode.h"
 #import "CoreLib.h"
+#import "JMReceiptValidation.h"

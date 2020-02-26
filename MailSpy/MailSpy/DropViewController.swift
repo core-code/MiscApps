@@ -12,24 +12,64 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 import Cocoa
 
+
 class DropViewController: NSViewController
 {
 
 	var controllers : Array<NSWindowController> = []
 	var progresses : Int = 0
 
+    @IBOutlet var adPanel: NSPanel!
+    
+    func userHasPaid() -> Bool {
+        #if RECEIPTCODE
+        let ov = JMReceiptOriginalVersion();
+        
+        let cr = ov?.compare("1.0.5", options: NSString.CompareOptions.numeric)
+        
+        if (cr == ComparisonResult.orderedAscending && !(ov == "1.0"))
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+        #else
+        #warning("building without promotion")
+        return true;
+        #endif
+    }
+
+    
+    override func viewDidAppear() {
+        
+        let usages = UserDefaults.standard.integer(forKey: "usages")
+        UserDefaults.standard.set(usages + 1, forKey: "usages")
+        
+        if (usages > 10 && usages % 3 == 0)
+        {
+            if (!self.userHasPaid()) {
+             self.view.window!.beginSheet(adPanel)
+            }
+        }
+
+    }
 
 	override func viewDidLoad()
 	{
 		super.viewDidLoad()
 
 
+        
 		NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "dropReceived"), object: nil, queue: OperationQueue.main )
 		{ not in
 
 
 			//print("dropReceived", terminator: "")
+            
 
+            
 			if (self.progresses == 0)
 			{
 				DispatchQueue.global().async
@@ -85,5 +125,10 @@ class DropViewController: NSViewController
 			}
 		}
 	}
+    @IBAction func closeAd(_ sender: Any) {
+        self.view.window!.endSheet(adPanel)
+        adPanel.orderOut(self)
+        
+    }
 }
 

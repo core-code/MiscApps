@@ -160,6 +160,7 @@ MAKE_MAKER(MutableString)
 
 @interface CoreLib : NSObject
 
+@property (readonly, nonatomic) NSString *appBundleIdentifier;
 @property (readonly, nonatomic) NSArray *appCrashLogs;
 
 // info bundle key convenience
@@ -304,6 +305,7 @@ void asl_NSLog_debug(NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 #define IS_IN_RANGE(v,l,h)  (((v) >= (l)) && ((v) <= (h)))
 #define CLAMP(x, low, high) (((x) > (high)) ? (high) : (((x) < (low)) ? (low) : (x)))
 #define ONCE(block)			{ static dispatch_once_t onceToken; dispatch_once(&onceToken, block); }
+#define ONCE_PER_OBJECT(o,b)    @synchronized(o){ static dispatch_once_t onceToken; NSNumber *tokenNumber = [o associatedValueForKey:o.id]; onceToken = tokenNumber.longValue; dispatch_once(&onceToken, b); [o setAssociatedValue:@(onceToken) forKey:o.id]; }
 #define ONCE_EVERY_MINUTES(block, minutes)	{ 	static NSDate *time = nil;	if (!time || [[NSDate date] timeIntervalSinceDate:time] > (minutes * 60))	{	block();	time = [NSDate date]; } }
 #define OS_IS_POST_10_6		(NSAppKitVersionNumber >= (int)NSAppKitVersionNumber10_7)
 #define OS_IS_POST_10_7		(NSAppKitVersionNumber >= (int)NSAppKitVersionNumber10_8)

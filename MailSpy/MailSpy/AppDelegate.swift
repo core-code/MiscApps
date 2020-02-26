@@ -20,11 +20,13 @@ import MapKit
 
 class AppDelegate: NSObject, NSApplicationDelegate
 {
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        cc = CoreLib()
 
+    }
 
 	func applicationDidFinishLaunching(_ aNotification: Notification)
 	{
-		cc = CoreLib()
 
 
 		let docstr : NSString = "~/Documents/"
