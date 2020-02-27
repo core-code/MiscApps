@@ -6,11 +6,11 @@ if [ ! -d "$CC_APP_PATH" ] || [ ! -d "$CC_WEB_PATH" ]; then
 fi
 
 
-textutil -convert html "$CC_APP_PATH/MiscApps/MailSpy/MailSpy/FAQ.rtf" -output "$CC_WEB_PATH/corecode.io/mailspy/faq.html"
+textutil -convert html "$CC_APP_PATH/../MiscApps/MailSpy/MailSpy/FAQ.rtf" -output "$CC_WEB_PATH/corecode.io/mailspy/faq.html"
 
-textutil -convert html "$CC_APP_PATH/MiscApps/MailSpy/MailSpy/History.rtf" -output "$CC_WEB_PATH/corecode.io/mailspy/history.html"
+textutil -convert html "$CC_APP_PATH/../MiscApps/MailSpy/MailSpy/History.rtf" -output "$CC_WEB_PATH/corecode.io/mailspy/history.html"
 
-textutil -convert html "$CC_APP_PATH/MiscApps/MailSpy/MailSpy/Read Me.rtf" -output "$CC_WEB_PATH/corecode.io/mailspy/readme.html"
+textutil -convert html "$CC_APP_PATH/../MiscApps/MailSpy/MailSpy/Read Me.rtf" -output "$CC_WEB_PATH/corecode.io/mailspy/readme.html"
 
 websiteProcessReadMe.py "$CC_WEB_PATH/corecode.io/mailspy/readme.html"
 websiteProcessIndexHTML.py "$CC_WEB_PATH/corecode.io/mailspy/readme.html" "$CC_WEB_PATH/corecode.io/mailspy/index.html"
