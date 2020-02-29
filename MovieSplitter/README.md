@@ -1,5 +1,5 @@
 
-# MovieSpitter
+# MovieSplitter
 *v1.0*
 
 ## Introduction:
@@ -13,11 +13,11 @@ This application is completely unsupported - USE AT YOUR OWN RISK.
 Mac OS X 10.13 or later
 
 ## License &amp; Cost:
-MovieSpitter is completely free of charge and licensed under the [Open Source "MIT License"][1].
+MovieSplitter is completely free of charge and licensed under the [Open Source "MIT License"][1].
 
 ## Usage:
-1.) Place the MovieSpitter folder anywhere on your hard disk (the "/Applications" folder is most suitable).
-2.) Double click MovieSpitter.
+1.) Place the MovieSplitter folder anywhere on your hard disk (the "/Applications" folder is most suitable).
+2.) Double click MovieSplitter.
 3.) Click the "Choose…" button to select a movie to split. Enter the seconds of the split-points.
 4.) Click "Split Movie" and wait
 

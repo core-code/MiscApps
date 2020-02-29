@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  MovieSpitter
+//  MovieSplitter
 //
 //  Created by CoreCode on 14.01.14.
 /*	Copyright © 2018 CoreCode Limited

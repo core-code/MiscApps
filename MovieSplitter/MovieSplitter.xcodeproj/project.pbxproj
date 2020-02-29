@@ -25,13 +25,13 @@
 		B95B1CB51919429D00A9657D /* CoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLib.m; sourceTree = "<group>"; };
 		B95B1CB61919429D00A9657D /* Foundation+CoreCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+CoreCode.h"; sourceTree = "<group>"; };
 		B95B1CB71919429D00A9657D /* Foundation+CoreCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+CoreCode.m"; sourceTree = "<group>"; };
-		B9E60B011885EE0400FD5922 /* MovieSpitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSpitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9E60B011885EE0400FD5922 /* MovieSplitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSplitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E60B041885EE0400FD5922 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B9E60B071885EE0400FD5922 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		B9E60B081885EE0400FD5922 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B9E60B091885EE0400FD5922 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B9E60B0C1885EE0400FD5922 /* MovieSpitter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MovieSpitter-Info.plist"; sourceTree = "<group>"; };
-		B9E60B121885EE0400FD5922 /* MovieSpitter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MovieSpitter-Prefix.pch"; sourceTree = "<group>"; };
+		B9E60B0C1885EE0400FD5922 /* MovieSplitter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MovieSplitter-Info.plist"; sourceTree = "<group>"; };
+		B9E60B121885EE0400FD5922 /* MovieSplitter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MovieSplitter-Prefix.pch"; sourceTree = "<group>"; };
 		B9E60B141885EE0400FD5922 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		B9E60B161885EE0400FD5922 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B9E60B171885EE0400FD5922 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		B9E60AF81885EE0400FD5922 = {
 			isa = PBXGroup;
 			children = (
-				B9E60B0A1885EE0400FD5922 /* MovieSpitter */,
+				B9E60B0A1885EE0400FD5922 /* MovieSplitter */,
 				B9E60B031885EE0400FD5922 /* Frameworks */,
 				B9E60B021885EE0400FD5922 /* Products */,
 			);
@@ -79,7 +79,7 @@
 		B9E60B021885EE0400FD5922 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9E60B011885EE0400FD5922 /* MovieSpitter.app */,
+				B9E60B011885EE0400FD5922 /* MovieSplitter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,7 +104,7 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		B9E60B0A1885EE0400FD5922 /* MovieSpitter */ = {
+		B9E60B0A1885EE0400FD5922 /* MovieSplitter */ = {
 			isa = PBXGroup;
 			children = (
 				B95B1CAF1919429D00A9657D /* CoreLib */,
@@ -115,14 +115,14 @@
 				B9E60B1C1885EE0400FD5922 /* Images.xcassets */,
 				B9E60B0B1885EE0400FD5922 /* Supporting Files */,
 			);
-			path = MovieSpitter;
+			path = MovieSplitter;
 			sourceTree = "<group>";
 		};
 		B9E60B0B1885EE0400FD5922 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B9E60B0C1885EE0400FD5922 /* MovieSpitter-Info.plist */,
-				B9E60B121885EE0400FD5922 /* MovieSpitter-Prefix.pch */,
+				B9E60B0C1885EE0400FD5922 /* MovieSplitter-Info.plist */,
+				B9E60B121885EE0400FD5922 /* MovieSplitter-Prefix.pch */,
 				B9E60B131885EE0400FD5922 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -131,9 +131,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B9E60B001885EE0400FD5922 /* MovieSpitter */ = {
+		B9E60B001885EE0400FD5922 /* MovieSplitter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9E60B321885EE0400FD5922 /* Build configuration list for PBXNativeTarget "MovieSpitter" */;
+			buildConfigurationList = B9E60B321885EE0400FD5922 /* Build configuration list for PBXNativeTarget "MovieSplitter" */;
 			buildPhases = (
 				B9E60AFD1885EE0400FD5922 /* Sources */,
 				B9E60AFE1885EE0400FD5922 /* Frameworks */,
@@ -143,9 +143,9 @@
 			);
 			dependencies = (
 			);
-			name = MovieSpitter;
-			productName = MovieSpitter;
-			productReference = B9E60B011885EE0400FD5922 /* MovieSpitter.app */;
+			name = MovieSplitter;
+			productName = MovieSplitter;
+			productReference = B9E60B011885EE0400FD5922 /* MovieSplitter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -157,7 +157,7 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "CoreCode Limited";
 			};
-			buildConfigurationList = B9E60AFC1885EE0400FD5922 /* Build configuration list for PBXProject "MovieSpitter" */;
+			buildConfigurationList = B9E60AFC1885EE0400FD5922 /* Build configuration list for PBXProject "MovieSplitter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -170,7 +170,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9E60B001885EE0400FD5922 /* MovieSpitter */,
+				B9E60B001885EE0400FD5922 /* MovieSplitter */,
 			);
 		};
 /* End PBXProject section */
@@ -325,8 +325,8 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MovieSpitter/MovieSpitter-Prefix.pch";
-				INFOPLIST_FILE = "MovieSpitter/MovieSpitter-Info.plist";
+				GCC_PREFIX_HEADER = "MovieSplitter/MovieSplitter-Prefix.pch";
+				INFOPLIST_FILE = "MovieSplitter/MovieSplitter-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -340,8 +340,8 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MovieSpitter/MovieSpitter-Prefix.pch";
-				INFOPLIST_FILE = "MovieSpitter/MovieSpitter-Info.plist";
+				GCC_PREFIX_HEADER = "MovieSplitter/MovieSplitter-Prefix.pch";
+				INFOPLIST_FILE = "MovieSplitter/MovieSplitter-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -351,7 +351,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9E60AFC1885EE0400FD5922 /* Build configuration list for PBXProject "MovieSpitter" */ = {
+		B9E60AFC1885EE0400FD5922 /* Build configuration list for PBXProject "MovieSplitter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9E60B301885EE0400FD5922 /* Debug */,
@@ -360,7 +360,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9E60B321885EE0400FD5922 /* Build configuration list for PBXNativeTarget "MovieSpitter" */ = {
+		B9E60B321885EE0400FD5922 /* Build configuration list for PBXNativeTarget "MovieSplitter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9E60B331885EE0400FD5922 /* Debug */,
