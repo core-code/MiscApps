@@ -1,6 +1,20 @@
 [
   {
     "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?adreach\\.me[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?247-video\\.net[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
@@ -2396,20 +2410,6 @@
   {
     "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?dyncdn\\.me[:/]",
-      "url-filter-is-case-sensitive": false,
-      "load-type": [
-        "third-party",
-        "first-party"
-      ]
-    },
-    "action": {
-      "type": "block"
-    }
-  },
-
-  {
-    "trigger": {
-      "url-filter":"^https?:\/\/+([^:\/]+\\.)?dyncdn2\\.com[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
         "third-party",
