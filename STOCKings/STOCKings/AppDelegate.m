@@ -3,7 +3,7 @@
 //  STOCKings
 //
 //  Created by CoreCode on 10.01.14.
-/*	Copyright © 2018 CoreCode Limited
+/*	Copyright © 2020 CoreCode Limited
  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitationthe rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
@@ -149,7 +149,7 @@
 	}
 
 	NSString *str = [(DOMHTMLElement *)[[[self.webView mainFrame] DOMDocument] documentElement] outerHTML];
-	NSArray *links = @[@"/index/TecDAX-Realtime", @"/index/MDAX-Realtime", @"/index/Euro_Stoxx_50-Realtime", @"/index/Dow_Jones-Realtime", @"/index/Nasdaq_100-Realtime", @"/index/S&amp;P_500-Realtime", @"/index/Nikkei_225-Realtime", @"/index/ATX-Realtime", @"/rohstoffe/goldpreis/Realtimekurse", @"/rohstoffe/oelpreis@brent/Realtimekurse", @"/devisen/realtimekurs/dollarkurs"];
+	NSArray *links = @[@"/index/tecdax-realtime", @"/index/mdax-realtime", @"/index/euro_stoxx_50-realtime", @"/index/dow_jones-realtime", @"/index/nasdaq_100-realtime", @"/index/s&amp;p_500-realtime", @"/index/nikkei_225-realtime", @"/index/atx-realtime", @"/rohstoffe/goldpreis/realtimekurse", @"/rohstoffe/oelpreis@brent/realtimekurse", @"/devisen/realtimekurs/dollarkurs"];
 	NSArray *names = @[@"TecDAX", @"MDAX", @"ESTX50", @"DOW.J", @"NAS100", @"S&amp;P 500", @"NIKKEI", @"ATX", @"Goldpreis", @"Ölpreis", @"Dollarkurs"];
 	for (NSString *name in names)
 	{
@@ -191,7 +191,13 @@
 		}
 		else
 		{
-			//cc_log_debug(@"could not find splitter %@", splitter);
+//			cc_log_debug(@"could not find splitter %@", splitter);
+//            NSArray *links = [str split:@"<a href=\"/"];
+//            for (NSString *link in links)
+//            {
+//                if ([link hasPrefix:@"index"] || [link hasPrefix:@"rohstoffe"] || [link hasPrefix:@"devisen"])
+//                    cc_log_debug(@" did find: %@", [link clamp:40].strippedOfNewlines);
+//            }
 		}
 	}
 
