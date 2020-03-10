@@ -225,29 +225,30 @@
 	while (self.daxDates.count > 50) [self.daxDates removeFirstObject];
 
 
-	// notifications
+    const int minimumTimeBetweenNotifications = 30;
+    // notifications
 	for (int i = (int)self.dax.count - 1; i > 0; i--)
 	{
 		NSDate *date = self.daxDates[i];
 
-		if ([now timeIntervalSinceDate:self.lastNotificationDate] > 5 && [now timeIntervalSinceDate:date] < 10 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 15))
+		if ([now timeIntervalSinceDate:self.lastNotificationDate] > minimumTimeBetweenNotifications && [now timeIntervalSinceDate:date] < 10 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 25))
             [self sendNotification:makeString(@"DAX Rising %.1f fast", self.dax.lastObject.floatValue)];
 
-		if ([now timeIntervalSinceDate:self.lastNotificationDate] > 5 && [now timeIntervalSinceDate:date] < 50 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 30))
+		if ([now timeIntervalSinceDate:self.lastNotificationDate] > minimumTimeBetweenNotifications && [now timeIntervalSinceDate:date] < 50 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 40))
             [self sendNotification:makeString(@"DAX Rising %.1f", self.dax.lastObject.floatValue)];
 
-		if ([now timeIntervalSinceDate:self.lastNotificationDate] > 5 && [now timeIntervalSinceDate:date] < 250 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 45))
+		if ([now timeIntervalSinceDate:self.lastNotificationDate] > minimumTimeBetweenNotifications && [now timeIntervalSinceDate:date] < 250 && (self.dax.lastObject.floatValue - self.dax[i].floatValue > 60))
             [self sendNotification:makeString(@"DAX Rising %.1f slowly", self.dax.lastObject.floatValue)];
 
 
 
-		if ([now timeIntervalSinceDate:self.lastNotificationDate] > 5 && [now timeIntervalSinceDate:date] < 10 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -15))
+		if ([now timeIntervalSinceDate:self.lastNotificationDate] > minimumTimeBetweenNotifications && [now timeIntervalSinceDate:date] < 10 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -25))
             [self sendNotification:makeString(@"DAX Falling %.1f fast", self.dax.lastObject.floatValue)];
 
-		if ([now timeIntervalSinceDate:self.lastNotificationDate] > 5 && [now timeIntervalSinceDate:date] < 50 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -30))
+		if ([now timeIntervalSinceDate:self.lastNotificationDate] > minimumTimeBetweenNotifications && [now timeIntervalSinceDate:date] < 50 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -40))
             [self sendNotification:makeString(@"DAX Falling %.1f", self.dax.lastObject.floatValue)];
 
-		if ([now timeIntervalSinceDate:self.lastNotificationDate] > 5 && [now timeIntervalSinceDate:date] < 250 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -45))
+		if ([now timeIntervalSinceDate:self.lastNotificationDate] > minimumTimeBetweenNotifications && [now timeIntervalSinceDate:date] < 250 && (self.dax.lastObject.floatValue - self.dax[i].floatValue < -60))
             [self sendNotification:makeString(@"DAX Falling %.1f slowly", self.dax.lastObject.floatValue)];
 	}
 }
