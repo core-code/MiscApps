@@ -1,0 +1,102 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		0A374C2B95190362EE6DE8C3 /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = .XcodeSupport/AppController.h; sourceTree = SOURCE_ROOT; };
+		1B714BD8A021D309A37DF7E3 /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Car.h; path = .XcodeSupport/Car.h; sourceTree = SOURCE_ROOT; };
+		2F3D4688B28564217C045317 /* xcc_general_include.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = xcc_general_include.h; path = .XcodeSupport/xcc_general_include.h; sourceTree = SOURCE_ROOT; };
+		A721489398DF76B290A56CBD /* AppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppController.m; path = .XcodeSupport/AppController.m; sourceTree = SOURCE_ROOT; };
+		BA8F40E9955A577A5B1599DE /* AppController.j */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = AppController.j; sourceTree = SOURCE_ROOT; };
+		E164FE29172185F500263CE3 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		E62F48BAABDCBAB552F960CF /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Car.m; path = .XcodeSupport/Car.m; sourceTree = SOURCE_ROOT; };
+		FCF54FA9AEB42F6F25E438BD /* Car.j */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.j; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		004C416B96D1CBBA7BD796E3 /* Cappuccino Source */ = {
+			isa = PBXGroup;
+			children = (
+				BA8F40E9955A577A5B1599DE /* AppController.j */,
+				FCF54FA9AEB42F6F25E438BD /* Car.j */,
+			);
+			name = "Cappuccino Source";
+			sourceTree = "<group>";
+		};
+		BFF647C68479F22ADAF3F1B5 /* Cocoa Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0A374C2B95190362EE6DE8C3 /* AppController.h */,
+				A721489398DF76B290A56CBD /* AppController.m */,
+				1B714BD8A021D309A37DF7E3 /* Car.h */,
+				E62F48BAABDCBAB552F960CF /* Car.m */,
+				2F3D4688B28564217C045317 /* xcc_general_include.h */,
+			);
+			name = "Cocoa Classes";
+			sourceTree = "<group>";
+		};
+		E164FE221721857400263CE3 = {
+			isa = PBXGroup;
+			children = (
+				E164FE29172185F500263CE3 /* Resources */,
+				BFF647C68479F22ADAF3F1B5 /* Cocoa Classes */,
+				004C416B96D1CBBA7BD796E3 /* Cappuccino Source */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		E164FE231721857400263CE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = E164FE261721857400263CE3 /* Build configuration list for PBXProject "CarDB-Web" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E164FE221721857400263CE3;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		E164FE271721857400263CE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		E164FE281721857400263CE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E164FE261721857400263CE3 /* Build configuration list for PBXProject "CarDB-Web" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E164FE271721857400263CE3 /* Debug */,
+				E164FE281721857400263CE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E164FE231721857400263CE3 /* Project object */;
+}
