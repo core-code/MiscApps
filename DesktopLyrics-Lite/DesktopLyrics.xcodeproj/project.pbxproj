@@ -328,6 +328,8 @@
 			knownRegions = (
 				en,
 				English,
+				French,
+				German,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* DesktopLyrics */;
 			projectDirPath = "";
