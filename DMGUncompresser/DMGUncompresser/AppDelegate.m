@@ -31,6 +31,7 @@
     }
     
     [self displayUserNotification:@"DMG Decompression Finished" text:@"Finito"];
+    cc_log(@"DONE with all files");
 }
 
 - (void)displayUserNotification:(NSString *)title text:(NSString *)text
