@@ -108,7 +108,7 @@ CONST_KEY(XCode)
 	
         NSInteger terminationStatus;
         NSDate *pre = [NSDate date];
-        NSString *string = [args runAsTaskWithTerminationStatus:&terminationStatus];
+        NSString *string = [args runAsTaskWithTerminationStatus:&terminationStatus usePolling:NO];
         float compileTime = [[NSDate date] timeIntervalSinceDate:pre];
 
         
