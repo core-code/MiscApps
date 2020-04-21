@@ -584,12 +584,6 @@ CONST_KEY_ENUM(DownloadingVideosKey, KeySettingType)
     [finalPath open];
 }
 
-- (IBAction)checkForUpdatesAction:(id)sender
-{
-    if (alert(@"Update Check Unavailable", @"Sorry the update-check as been removed.\nPlease use our 'MacUpdater' to keep this and all your other apps up-to-date automatically.", @"Open MacUpdater Homepage", @"Cancel", nil) == NSAlertFirstButtonReturn)
-         [@"https://www.corecode.io/macupdater/".URL open];
-}
-
 @end
 
 
