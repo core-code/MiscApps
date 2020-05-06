@@ -69,9 +69,10 @@ int durationSecs;
                 
             for (NSString *comp in comps)
             {
-                if (!comp.isIntegerNumberOnly || comps.count > 3)
+                if (!comp.trimmedOfWhitespace.isIntegerNumberOnly || comps.count > 3)
                 {
-                    alert_apptitled(@"you've specified an invalid split point'", @"D'oh", nil, nil);
+                    alert_apptitled(makeString(@"you've specified an invalid split point: %@   %@   %@", cut, comps, comp),
+                                    @"D'oh", nil, nil);
                     return;
                 }
             }
