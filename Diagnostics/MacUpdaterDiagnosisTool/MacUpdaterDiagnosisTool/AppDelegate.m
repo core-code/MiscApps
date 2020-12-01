@@ -13,6 +13,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #import "AppDelegate.h"
 #import "JMEmailSender.h"
 #import "JMHostInformation.h"
+#import "JMSUDiskImageUnarchiver.h"
+#import "JMSUDiskImageUnarchiverDbg.h"
+
+NSMutableString *globalOutput;
 
 @implementation AppDelegate
 
@@ -20,6 +24,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 {
 	cc = [CoreLib new];
 
+    globalOutput = makeMutableString();
+    
 	[self.progress startAnimation:self];
 	[self.progress setUsesThreadedAnimation:YES];
 	[self performSelector:@selector(perform) withObject:nil afterDelay:0.1];
@@ -31,12 +37,154 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	}
 }
 
+
+- (void)runTest
+{
+
+    __block int method1Result = 0;
+    __block int method2Result = 0;
+   __block int method3Result = 0;
+    __block int method4Result = 0;
+
+
+dispatch_async_back(^
+{
+    @"debugExtractDMGsWithLiveOutout".defaultInt = 3;
+    let tmpFile = makeTempFilepath(@"dmg");
+    let succ = [fileManager copyItemAtPath:@"debug_image_test.dmg".resourcePath toPath:tmpFile error:NULL];
+    let extractionError = [[[JMSUDiskImageUnarchiver alloc] initWithArchivePath:tmpFile decryptionPassword:nil] unarchive];
+    if (extractionError)
+        method1Result = 2;
+    else
+        method1Result = 1;
+});
+    
+    dispatch_after_back(2.0, ^
+    {
+        @"debugExtractDMGsWithLiveOutout".defaultInt = 0;
+        let tmpFile = makeTempFilepath(@"dmg");
+        let succ = [fileManager copyItemAtPath:@"debug_image_test.dmg".resourcePath toPath:tmpFile error:NULL];
+        let extractionError = [[[JMSUDiskImageUnarchiverDbg alloc] initWithArchivePath:tmpFile decryptionPassword:nil] unarchive];
+        if (extractionError)
+            method2Result = 2;
+        else
+            method2Result = 1;
+    });
+    dispatch_after_back(3.0, ^
+    {
+        let archivePath = makeTempFilepath(@"dmg");
+        let succ = [fileManager copyItemAtPath:@"debug_image_test.dmg".resourcePath toPath:archivePath error:NULL];
+        NSString *mountPoint;
+        do
+        {
+            CFUUIDRef uuid = CFUUIDCreate(NULL);
+            if (uuid)
+            {
+                NSString *uuidString = CFBridgingRelease(CFUUIDCreateString(NULL, uuid));
+                if (uuidString)
+                {
+                    mountPoint = [@"/Volumes" stringByAppendingPathComponent:uuidString];
+                }
+                CFRelease(uuid);
+            }
+        }
+        while ([[NSURL fileURLWithPath:mountPoint] checkResourceIsReachableAndReturnError:NULL]);
+
+
+        NSInteger status;
+        NSString *output = [@[@"/usr/bin/hdiutil", @"attach", archivePath, @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] runAsTaskWithTerminationStatus:&status usePolling:NO];
+        if (status)
+            method3Result = 2;
+        else
+            method3Result = 1;
+        
+        NSTask *task = [[NSTask alloc] init];
+        task.launchPath = @"/usr/bin/hdiutil";
+        task.arguments = @[@"detach", mountPoint, @"-force"];
+        task.standardOutput = [NSPipe pipe];
+        task.standardError = [NSPipe pipe];
+        
+        @try {
+            [task launch];
+        } @catch (NSException *exception) {
+            [globalOutput appendFormat:@"Failed to unmount %@ Exception: %@", mountPoint, exception];
+        }
+    });
+
+    dispatch_after_back(4.0, ^
+      {
+          let archivePath = makeTempFilepath(@"dmg");
+          let succ = [fileManager copyItemAtPath:@"debug_image_test.dmg".resourcePath toPath:archivePath error:NULL];
+          NSString *mountPoint;
+          do
+          {
+              CFUUIDRef uuid = CFUUIDCreate(NULL);
+              if (uuid)
+              {
+                  NSString *uuidString = CFBridgingRelease(CFUUIDCreateString(NULL, uuid));
+                  if (uuidString)
+                  {
+                      mountPoint = [@"/Volumes" stringByAppendingPathComponent:uuidString];
+                  }
+                  CFRelease(uuid);
+              }
+          }
+          while ([[NSURL fileURLWithPath:mountPoint] checkResourceIsReachableAndReturnError:NULL]);
+
+
+          NSInteger status;
+          NSString *output = [@[@"/usr/bin/hdiutil", @"attach", archivePath, @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] runAsTaskWithTerminationStatus:&status usePolling:YES];
+          if (status)
+              method4Result = 2;
+          else
+              method4Result = 1;
+      });
+    
+dispatch_async_back(^
+{
+    int times = 0;
+    BOOL finished = 0;
+    while (!finished && times < 180)
+    {
+        finished = method1Result && method2Result && method3Result && method4Result;
+        
+        if (!finished)
+            [NSThread sleepForTimeInterval:1.0];
+        
+        times++;
+    }
+    [globalOutput appendFormat:@"done %i %i %i %i", method1Result, method2Result, method3Result, method4Result];
+
+        
+        if (method1Result == 1 &&
+            method2Result == 1 &&
+            method3Result == 1  &&
+            method4Result == 1 )
+            self->dmgResult =  @"succ";
+
+        else
+            self->dmgResult =  makeString(@"some of the checks failed: %i %i %i %i", method1Result, method2Result, method3Result, method4Result);
+});
+
+}
+
 - (void)perform
 {
+    [self runTest];
+    
+    while (!self->dmgResult)
+    {
+        sleep(1);
+        
+    }
+    sleep(1);
+
 	tmpPath = [makeTempDirectory() stringByAppendingString:@"/"];
 	tmpURL = tmpPath.fileURL;
 	cc_log_debug(@"%@", tmpPath);
 
+    [tmpURL add:@"dmg_test"].contents = self->dmgResult.data;
+    [tmpURL add:@"dmg_output"].contents = globalOutput.data;
 
 	[fileManager copyItemAtPath:[@"/private/var/log/system.log" stringByExpandingTildeInPath]
 						 toPath:[tmpPath stringByAppendingString:@"system.log"] error:NULL];
@@ -65,6 +213,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     [tmpURL add:@"LaunchDaemonsDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/LaunchDaemons/"] runAsTask].data;
     [tmpURL add:@"PrivilegedHelperToolsDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/PrivilegedHelperTools/"] runAsTask].data;
+    [tmpURL add:@"ExtensionDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/Extensions/"] runAsTask].data;
 
 	[tmpURL add:@"ps"].contents = [@[@"/bin/ps", @"ax"] runAsTask].data;
     [tmpURL add:@"top"].contents = [@[@"/usr/bin/top", @"-l1"] runAsTask].data;
