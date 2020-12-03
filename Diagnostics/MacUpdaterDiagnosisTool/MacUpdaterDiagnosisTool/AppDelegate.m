@@ -217,7 +217,8 @@ dispatch_async_back(^
 
 	[tmpURL add:@"ps"].contents = [@[@"/bin/ps", @"ax"] runAsTask].data;
     [tmpURL add:@"top"].contents = [@[@"/usr/bin/top", @"-l1"] runAsTask].data;
-	[tmpURL add:@"system_profiler.spx"].contents = [@[@"/usr/sbin/system_profiler", @"-xml", @"-detailLevel", @"full"] runAsTask].data;
+    let sysprofile = [@[@"/usr/sbin/system_profiler", @"-xml", @"-detailLevel", @"full"] runAsTask];
+    [tmpURL add:@"system_profiler.spx"].contents = [sysprofile splitAfterFull:@"<?xml version"].data;
 	[tmpURL add:@"ioreg"].contents = [@[@"/usr/sbin/ioreg", @"-l", @"-w", @"0"] runAsTask].data;
 
 
