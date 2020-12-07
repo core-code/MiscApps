@@ -221,6 +221,12 @@ dispatch_async_back(^
     [tmpURL add:@"system_profiler.spx"].contents = [sysprofile splitAfterFull:@"<?xml version"].data;
 	[tmpURL add:@"ioreg"].contents = [@[@"/usr/sbin/ioreg", @"-l", @"-w", @"0"] runAsTask].data;
 
+    // apple requests
+    //log show —debug —info —last boot > log.txt’
+    // but this is several gigabyte (!)
+    // and
+    //spindump
+    // but this requires root
 
     {
         NSURL *path = @"~/Library/Application Support/MacUpdater/".expanded.fileURL;
