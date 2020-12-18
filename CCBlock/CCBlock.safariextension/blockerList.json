@@ -365,6 +365,20 @@
 
   {
     "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?ads-tracking\\.com[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?ads-twitter\\.com[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
@@ -1163,6 +1177,20 @@
 
   {
     "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?bidr\\.io[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?bidswitch\\.net[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
@@ -1864,6 +1892,20 @@
   {
     "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?commercialvalue\\.org[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?connextra\\.com[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
         "third-party",
@@ -3053,6 +3095,20 @@
 
   {
     "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?gaming001\\.site[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?gearwom\\.de[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
@@ -3166,20 +3222,6 @@
   {
     "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?googlesyndication\\.com[:/]",
-      "url-filter-is-case-sensitive": false,
-      "load-type": [
-        "third-party",
-        "first-party"
-      ]
-    },
-    "action": {
-      "type": "block"
-    }
-  },
-
-  {
-    "trigger": {
-      "url-filter":"^https?:\/\/+([^:\/]+\\.)?googletagmanager\\.com[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
         "third-party",
@@ -3348,6 +3390,20 @@
   {
     "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?hotjar\\.com[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?hrethines-brocale\\.com[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
         "third-party",
@@ -3530,6 +3586,20 @@
   {
     "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?intellitxt\\.com[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?interwetten\\.com[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
         "third-party",
@@ -3935,6 +4005,20 @@
 
   {
     "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?liveads\\.online[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?livejasmin\\.com[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
@@ -4230,20 +4314,6 @@
   {
     "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?monetate\\.net[:/]",
-      "url-filter-is-case-sensitive": false,
-      "load-type": [
-        "third-party",
-        "first-party"
-      ]
-    },
-    "action": {
-      "type": "block"
-    }
-  },
-
-  {
-    "trigger": {
-      "url-filter":"^https?:\/\/+([^:\/]+\\.)?moneymakercdn\\.com[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
         "third-party",
@@ -6707,6 +6777,20 @@
 
   {
     "trigger": {
+      "url-filter":"^https?:\/\/+([^:\/]+\\.)?weaveradrenaline\\.com[:/]",
+      "url-filter-is-case-sensitive": false,
+      "load-type": [
+        "third-party",
+        "first-party"
+      ]
+    },
+    "action": {
+      "type": "block"
+    }
+  },
+
+  {
+    "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?wlresources\\.com[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
@@ -6750,20 +6834,6 @@
   {
     "trigger": {
       "url-filter":"^https?:\/\/+([^:\/]+\\.)?wpush\\.org[:/]",
-      "url-filter-is-case-sensitive": false,
-      "load-type": [
-        "third-party",
-        "first-party"
-      ]
-    },
-    "action": {
-      "type": "block"
-    }
-  },
-
-  {
-    "trigger": {
-      "url-filter":"^https?:\/\/+([^:\/]+\\.)?wsmmirror\\.info[:/]",
       "url-filter-is-case-sensitive": false,
       "load-type": [
         "third-party",
