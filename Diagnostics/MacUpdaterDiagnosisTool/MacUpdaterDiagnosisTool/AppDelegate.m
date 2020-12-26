@@ -40,30 +40,26 @@ NSMutableString *globalOutput;
 
 - (void)runTest
 {
-
     __block int method1Result = 0;
     __block int method2Result = 0;
-   __block int method3Result = 0;
+    __block int method3Result = 0;
     __block int method4Result = 0;
 
 
-dispatch_async_back(^
-{
-    @"debugExtractDMGsWithLiveOutout".defaultInt = 3;
-    let tmpFile = makeTempFilepath(@"dmg");
-    let succ = [fileManager copyItemAtPath:@"debug_image_test.dmg".resourcePath toPath:tmpFile error:NULL];
-    let extractionError = [[[JMSUDiskImageUnarchiver alloc] initWithArchivePath:tmpFile decryptionPassword:nil] unarchive];
-    if (extractionError)
-        method1Result = 2;
-    else
-        method1Result = 1;
-});
-    
+    dispatch_async_back(^
+    {
+        let tmpFile = makeTempFilepath(@"dmg");
+        [fileManager copyItemAtPath:@"debug_image_test.dmg".resourcePath toPath:tmpFile error:NULL];
+        let extractionError = [[[JMSUDiskImageUnarchiver alloc] initWithArchivePath:tmpFile decryptionPassword:nil] unarchive];
+        if (extractionError)
+            method1Result = 2;
+        else
+            method1Result = 1;
+    });
     dispatch_after_back(2.0, ^
     {
-        @"debugExtractDMGsWithLiveOutout".defaultInt = 0;
         let tmpFile = makeTempFilepath(@"dmg");
-        let succ = [fileManager copyItemAtPath:@"debug_image_test.dmg".resourcePath toPath:tmpFile error:NULL];
+        [fileManager copyItemAtPath:@"debug_image_test.dmg".resourcePath toPath:tmpFile error:NULL];
         let extractionError = [[[JMSUDiskImageUnarchiverDbg alloc] initWithArchivePath:tmpFile decryptionPassword:nil] unarchive];
         if (extractionError)
             method2Result = 2;
@@ -73,7 +69,7 @@ dispatch_async_back(^
     dispatch_after_back(3.0, ^
     {
         let archivePath = makeTempFilepath(@"dmg");
-        let succ = [fileManager copyItemAtPath:@"debug_image_test.dmg".resourcePath toPath:archivePath error:NULL];
+        [fileManager copyItemAtPath:@"debug_image_test.dmg".resourcePath toPath:archivePath error:NULL];
         NSString *mountPoint;
         do
         {
@@ -97,7 +93,8 @@ dispatch_async_back(^
             method3Result = 2;
         else
             method3Result = 1;
-        
+        [globalOutput appendFormat:@"3:%@", output];
+
         NSTask *task = [[NSTask alloc] init];
         task.launchPath = @"/usr/bin/hdiutil";
         task.arguments = @[@"detach", mountPoint, @"-force"];
@@ -112,60 +109,61 @@ dispatch_async_back(^
     });
 
     dispatch_after_back(4.0, ^
-      {
-          let archivePath = makeTempFilepath(@"dmg");
-          let succ = [fileManager copyItemAtPath:@"debug_image_test.dmg".resourcePath toPath:archivePath error:NULL];
-          NSString *mountPoint;
-          do
-          {
-              CFUUIDRef uuid = CFUUIDCreate(NULL);
-              if (uuid)
-              {
-                  NSString *uuidString = CFBridgingRelease(CFUUIDCreateString(NULL, uuid));
-                  if (uuidString)
-                  {
-                      mountPoint = [@"/Volumes" stringByAppendingPathComponent:uuidString];
-                  }
-                  CFRelease(uuid);
-              }
-          }
-          while ([[NSURL fileURLWithPath:mountPoint] checkResourceIsReachableAndReturnError:NULL]);
-
-
-          NSInteger status;
-          NSString *output = [@[@"/usr/bin/hdiutil", @"attach", archivePath, @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] runAsTaskWithTerminationStatus:&status usePolling:YES];
-          if (status)
-              method4Result = 2;
-          else
-              method4Result = 1;
-      });
-    
-dispatch_async_back(^
-{
-    int times = 0;
-    BOOL finished = 0;
-    while (!finished && times < 180)
     {
-        finished = method1Result && method2Result && method3Result && method4Result;
-        
-        if (!finished)
-            [NSThread sleepForTimeInterval:1.0];
-        
-        times++;
-    }
-    [globalOutput appendFormat:@"done %i %i %i %i", method1Result, method2Result, method3Result, method4Result];
+        let archivePath = makeTempFilepath(@"dmg");
+        [fileManager copyItemAtPath:@"debug_image_test.dmg".resourcePath toPath:archivePath error:NULL];
+        NSString *mountPoint;
+        do
+        {
+            CFUUIDRef uuid = CFUUIDCreate(NULL);
+            if (uuid)
+            {
+                NSString *uuidString = CFBridgingRelease(CFUUIDCreateString(NULL, uuid));
+                if (uuidString)
+                {
+                    mountPoint = [@"/Volumes" stringByAppendingPathComponent:uuidString];
+                }
+                CFRelease(uuid);
+            }
+        }
+        while ([[NSURL fileURLWithPath:mountPoint] checkResourceIsReachableAndReturnError:NULL]);
 
+
+        NSInteger status;
+        NSString *output = [@[@"/usr/bin/hdiutil", @"attach", archivePath, @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] runAsTaskWithTerminationStatus:&status usePolling:YES];
+          [globalOutput appendFormat:@":%@", output];
+
+        if (status)
+            method4Result = 2;
+        else
+            method4Result = 1;
+    });
+    
+    dispatch_async_back(^
+    {
+        int times = 0;
+        BOOL finished = 0;
+        while (!finished && times < 180)
+        {
+            finished = method1Result && method2Result && method3Result && method4Result;
+            
+            if (!finished)
+                [NSThread sleepForTimeInterval:1.0];
+            
+            times++;
+        }
+        [globalOutput appendFormat:@"done %i %i %i %i", method1Result, method2Result, method3Result, method4Result];
+        
         
         if (method1Result == 1 &&
             method2Result == 1 &&
             method3Result == 1  &&
             method4Result == 1 )
             self->dmgResult =  @"succ";
-
+        
         else
             self->dmgResult =  makeString(@"some of the checks failed: %i %i %i %i", method1Result, method2Result, method3Result, method4Result);
-});
-
+    });
 }
 
 - (void)perform
@@ -175,11 +173,18 @@ dispatch_async_back(^
     while (!self->dmgResult)
     {
         sleep(1);
-        
     }
     sleep(1);
+    
+    let basePath = makeTempDirectory();
 
-	tmpPath = [makeTempDirectory() stringByAppendingString:@"/"];
+
+    tmpPath = [@[basePath, @"folder"].path stringByAppendingString:@"/"];
+    
+    [fileManager createDirectoryAtPath:tmpPath
+           withIntermediateDirectories:YES attributes:nil error:nil];
+    
+    
 	tmpURL = tmpPath.fileURL;
 	cc_log_debug(@"%@", tmpPath);
 
@@ -248,12 +253,12 @@ dispatch_async_back(^
 
     [tmpURL add:@"connectiontest"].contents = makeString(@"connectiontest %i %i %i", connectionOK_GH, connectionOK_MU, connectionOK_CC).data;
 
-    [tmpURL add:@"curl_gh"].contents = [@[@"/usr/bin/curl", @"-v", @"https://raw.githubusercontent.com/core-code/MiscApps/master/Diagnostics/connectiontest.txt"] runAsTask].data;
-    [tmpURL add:@"curl_mu"].contents = [@[@"/usr/bin/curl", @"-v", @"https://macupdater.net/macupdater/connectiontest.txt"] runAsTask].data;
-    [tmpURL add:@"curl_cc"].contents = [@[@"/usr/bin/curl", @"-v", @"https://www.corecode.io/macupdater/connectiontest.txt"] runAsTask].data;
-    [tmpURL add:@"nscurl_gh"].contents = [@[@"/usr/bin/nscurl", @"-i", @"-v", @"https://raw.githubusercontent.com/core-code/MiscApps/master/Diagnostics/connectiontest.txt"] runAsTask].data;
-    [tmpURL add:@"nscurl_mu"].contents = [@[@"/usr/bin/nscurl", @"-i", @"-v", @"https://macupdater.net/macupdater/connectiontest.txt"] runAsTask].data;
-    [tmpURL add:@"nscurl_cc"].contents = [@[@"/usr/bin/nscurl", @"-i", @"-v", @"https://www.corecode.io/macupdater/connectiontest.txt"] runAsTask].data;
+    [tmpURL add:@"curl_gh"].contents = [@[@"/usr/bin/curl", @"-m", @"30", @"-v", @"https://raw.githubusercontent.com/core-code/MiscApps/master/Diagnostics/connectiontest.txt"] runAsTask].data;
+    [tmpURL add:@"curl_mu"].contents = [@[@"/usr/bin/curl", @"-m", @"30", @"-v", @"https://macupdater.net/macupdater/connectiontest.txt"] runAsTask].data;
+    [tmpURL add:@"curl_cc"].contents = [@[@"/usr/bin/curl", @"-m", @"30", @"-v", @"https://www.corecode.io/macupdater/connectiontest.txt"] runAsTask].data;
+    [tmpURL add:@"nscurl_gh"].contents = [@[@"/usr/bin/nscurl", @"-m", @"30", @"-i", @"-v", @"https://raw.githubusercontent.com/core-code/MiscApps/master/Diagnostics/connectiontest.txt"] runAsTask].data;
+    [tmpURL add:@"nscurl_mu"].contents = [@[@"/usr/bin/nscurl", @"-m", @"30", @"-i", @"-v", @"https://macupdater.net/macupdater/connectiontest.txt"] runAsTask].data;
+    [tmpURL add:@"nscurl_cc"].contents = [@[@"/usr/bin/nscurl", @"-m", @"30", @"-i", @"-v", @"https://www.corecode.io/macupdater/connectiontest.txt"] runAsTask].data;
     
 
 	NSTask *task = [NSTask new];

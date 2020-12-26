@@ -99,9 +99,6 @@ extern NSMutableString *globalOutput;
         @try
         {
             {   // test code for getting live output of hidutil NOT ENABLED BY DEFAULT
-                
-                @"debugExtractDMGsWithLiveOutout".defaultInt = @"debugExtractDMGsWithLiveOutout".defaultInt - 1; // not enabled forever
-                
                 NSTask *task = [[NSTask alloc] init];
                 task.launchPath = @"/usr/bin/hdiutil";
                 task.currentDirectoryPath = @"/";
