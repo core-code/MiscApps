@@ -219,11 +219,17 @@ NSMutableString *globalOutput;
     [tmpURL add:@"LaunchDaemonsDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/LaunchDaemons/"] runAsTask].data;
     [tmpURL add:@"PrivilegedHelperToolsDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/PrivilegedHelperTools/"] runAsTask].data;
     [tmpURL add:@"ExtensionDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/Extensions/"] runAsTask].data;
+    [tmpURL add:@"FilesystemsDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/Filesystems/"] runAsTask].data;
+    [tmpURL add:@"SystemExtensionsDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/SystemExtensions/"] runAsTask].data;
+    [tmpURL add:@"AppsDir"].contents = [@[@"/bin/ls", @"-la", @"/Applications/"] runAsTask].data;
 
+    
+    
 	[tmpURL add:@"ps"].contents = [@[@"/bin/ps", @"ax"] runAsTask].data;
     [tmpURL add:@"top"].contents = [@[@"/usr/bin/top", @"-l1"] runAsTask].data;
     let sysprofile = [@[@"/usr/sbin/system_profiler", @"-xml", @"-detailLevel", @"full"] runAsTask];
-    [tmpURL add:@"system_profiler.spx"].contents = [sysprofile splitAfterFull:@"<?xml version"].data;
+    let sysrofiletxt = [@"<?xml version" appended:[sysprofile splitAfterFull:@"<?xml version"]];
+    [tmpURL add:@"system_profiler.spx"].contents = sysrofiletxt.data;
 	[tmpURL add:@"ioreg"].contents = [@[@"/usr/sbin/ioreg", @"-l", @"-w", @"0"] runAsTask].data;
 
     // apple requests
