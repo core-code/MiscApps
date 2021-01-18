@@ -89,7 +89,7 @@ extern NSMutableString *globalOutput2;
         promptData = [NSData dataWithBytes:"yes\n" length:4];
         
         NSMutableArray *arguments = [@[@"attach", self.archivePath,
-                                       @"-debug",
+//                                       @"-debug",
                                        @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] mutableCopy];
         NSString *destination = [self.archivePath stringByDeletingLastPathComponent];
         destination = [destination stringByAppendingPathComponent:makeString(@"%@_folder", self.archivePath.lastPathComponent.stringByDeletingPathExtension)];

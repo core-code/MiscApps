@@ -95,7 +95,7 @@ NSMutableString *globalOutput4;
 
         NSInteger status;
         NSString *output = [@[@"/usr/bin/hdiutil", @"attach", archivePath,
-                              @"-debug",
+//                              @"-debug",
                               @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] runAsTaskWithTerminationStatus:&status usePolling:NO];
         if (status)
             method3Result = 2;
@@ -139,7 +139,7 @@ NSMutableString *globalOutput4;
 
         NSInteger status;
         NSString *output = [@[@"/usr/bin/hdiutil", @"attach", archivePath,
-                              @"-debug",
+//                              @"-debug",
                               @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] runAsTaskWithTerminationStatus:&status usePolling:YES];
           [globalOutput4 appendFormat:@":%@", output];
 
