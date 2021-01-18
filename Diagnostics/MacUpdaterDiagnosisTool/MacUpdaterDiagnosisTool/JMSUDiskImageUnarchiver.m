@@ -9,7 +9,8 @@
 #import "JMSUDiskImageUnarchiver.h"
 #import "CoreLib.h"
 
-extern NSMutableString * globalOutput;
+extern NSMutableString *globalOutput1;
+
 
 
 @interface JMSUDiskImageUnarchiver ()
@@ -89,7 +90,9 @@ extern NSMutableString * globalOutput;
         NSData *promptData = nil;
         promptData = [NSData dataWithBytes:"yes\n" length:4];
         
-        NSMutableArray *arguments = [@[@"attach", self.archivePath, @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] mutableCopy];
+        NSMutableArray *arguments = [@[@"attach", self.archivePath,
+                                       @"-debug",
+                                       @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] mutableCopy];
         NSString *destination = [self.archivePath stringByDeletingLastPathComponent];
         destination = [destination stringByAppendingPathComponent:makeString(@"%@_folder", self.archivePath.lastPathComponent.stringByDeletingPathExtension)];
         [fileManager createDirectoryAtURL:destination.fileURL withIntermediateDirectories:YES attributes:nil error:NULL];
@@ -101,7 +104,7 @@ extern NSMutableString * globalOutput;
         {
             
             {
-                [globalOutput appendString:@"PROG1"];
+                [globalOutput1 appendString:@"PROG1"];
                  NSTask *task = [[NSTask alloc] init];
                 task.launchPath = @"/usr/bin/hdiutil";
                 task.currentDirectoryPath = @"/";
@@ -110,41 +113,41 @@ extern NSMutableString * globalOutput;
                 NSPipe *inputPipe = [NSPipe pipe];
                 NSPipe *outputPipe = [NSPipe pipe];
                 NSPipe *errorPipe = [NSPipe pipe];
-                [globalOutput appendString:@"PROG2"];
+                [globalOutput1 appendString:@"PROG2"];
 
                 task.standardInput = inputPipe;
                 task.standardOutput = outputPipe;
                 task.standardError = errorPipe;
-                [globalOutput appendString:@"PROG3"];
+                [globalOutput1 appendString:@"PROG3"];
 
                 [task launch];
-                [globalOutput appendString:@"PROG4"];
+                [globalOutput1 appendString:@"PROG4"];
 
 
                 [inputPipe.fileHandleForWriting writeData:promptData];
-                [globalOutput appendString:@"PROG5"];
+                [globalOutput1 appendString:@"PROG5"];
                 [inputPipe.fileHandleForWriting closeFile];
-                [globalOutput appendString:@"PROG6"];
+                [globalOutput1 appendString:@"PROG6"];
 
                 // Read data to end *before* waiting until the task ends so we don't deadlock if the stdout buffer becomes full if we haven't consumed from it
                 output = [outputPipe.fileHandleForReading readDataToEndOfFile];
-                [globalOutput appendString:@"PROG7"];
+                [globalOutput1 appendString:@"PROG7"];
                 outputError = [errorPipe.fileHandleForReading availableData];
-                [globalOutput appendString:@"PROG8"];
+                [globalOutput1 appendString:@"PROG8"];
                 [task waitUntilExit];
-                [globalOutput appendString:@"PROG9"];
+                [globalOutput1 appendString:@"PROG9"];
                 taskResult = task.terminationStatus;
             }
         }
         @catch (NSException *e)
         {
             errorString = e.description;
-            [globalOutput appendString:errorString];
+            [globalOutput1 appendString:errorString];
 
             goto reportError;
         }
         
-        [globalOutput appendString:@"DONE"];
+        [globalOutput1 appendString:@"DONE"];
 
         if (output) resultStr = [[NSString alloc] initWithData:output encoding:NSUTF8StringEncoding];
         if (outputError) errorString = [[NSString alloc] initWithData:outputError encoding:NSUTF8StringEncoding];
@@ -152,7 +155,7 @@ extern NSMutableString * globalOutput;
         if (taskResult != 0)
         {
             errorString = makeString(@"hdiutil failed with code: %ld data: <<%@>> error: <<%@>>", (long)taskResult, resultStr, errorStr);
-            [globalOutput appendFormat:@"%@", errorString];
+            [globalOutput1 appendFormat:@"%@", errorString];
             goto reportError;
         }
         
@@ -173,7 +176,7 @@ extern NSMutableString * globalOutput;
         if (error)
         {
             errorString = makeString(@"Couldn't enumerate contents of archive mounted at %@: %@", mountPoint, error);
-            [globalOutput appendFormat:@"%@", errorString];
+            [globalOutput1 appendFormat:@"%@", errorString];
             goto reportError;
         }
 
@@ -199,12 +202,12 @@ extern NSMutableString * globalOutput;
             
             itemsCopied += 1.0;
 
-            [globalOutput appendFormat:@"copyItemAtPath:%@ toPath:%@", fromPath, toPath];
+            [globalOutput1 appendFormat:@"copyItemAtPath:%@ toPath:%@", fromPath, toPath];
 
             if (![manager copyItemAtPath:fromPath toPath:toPath error:&error])
             {
                 errorString = makeString(@"Couldn't copyItemAtPath:%@ toPath:%@ error:%@", fromPath, toPath, error.description);
-                [globalOutput appendFormat:@"%@", errorString];
+                [globalOutput1 appendFormat:@"%@", errorString];
                 goto reportError;
             }
         }
@@ -230,10 +233,10 @@ extern NSMutableString * globalOutput;
             @try {
                 [task launch];
             } @catch (NSException *exception) {
-                [globalOutput appendFormat:@"Failed to unmount %@ Exception: %@", unmountPoint, exception];
+                [globalOutput1 appendFormat:@"Failed to unmount %@ Exception: %@", unmountPoint, exception];
             }
         } else {
-            [globalOutput appendFormat:@"Can't mount DMG %@", self.archivePath];
+            [globalOutput1 appendFormat:@"Can't mount DMG %@", self.archivePath];
         }
     }
     return error;

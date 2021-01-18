@@ -9,7 +9,7 @@
 #import "JMSUDiskImageUnarchiverDbg.h"
 #import "CoreLib.h"
 
-extern NSMutableString *globalOutput;
+extern NSMutableString *globalOutput2;
 
 @interface JMSUDiskImageUnarchiverDbg ()
 
@@ -88,7 +88,9 @@ extern NSMutableString *globalOutput;
         NSData *promptData = nil;
         promptData = [NSData dataWithBytes:"yes\n" length:4];
         
-        NSMutableArray *arguments = [@[@"attach", self.archivePath, @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] mutableCopy];
+        NSMutableArray *arguments = [@[@"attach", self.archivePath,
+                                       @"-debug",
+                                       @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] mutableCopy];
         NSString *destination = [self.archivePath stringByDeletingLastPathComponent];
         destination = [destination stringByAppendingPathComponent:makeString(@"%@_folder", self.archivePath.lastPathComponent.stringByDeletingPathExtension)];
         [fileManager createDirectoryAtURL:destination.fileURL withIntermediateDirectories:YES attributes:nil error:NULL];
@@ -127,7 +129,7 @@ extern NSMutableString *globalOutput;
                     if (string)
                         [jobStdOutput appendString:string];
                     
-                    [globalOutput appendFormat:@"HDIUTIL std output: %@", string];
+                    [globalOutput2 appendFormat:@"HDIUTIL std output: %@", string];
                 }];
                 [fileErrHandle setReadabilityHandler:^(NSFileHandle *file)
                 {
@@ -137,7 +139,7 @@ extern NSMutableString *globalOutput;
                     if (string)
                         [jobErrOutput appendString:string];
                     
-                    [globalOutput appendFormat:@"HDIUTIL err output: %@", string];
+                    [globalOutput2 appendFormat:@"HDIUTIL err output: %@", string];
                 }];
                 
                 
@@ -146,7 +148,7 @@ extern NSMutableString *globalOutput;
                     fileStdHandle.readabilityHandler = nil;
                     fileErrHandle.readabilityHandler = nil;
                     
-                    [globalOutput appendFormat:@"HDIUTIL DONE - termination handler"];
+                    [globalOutput2 appendFormat:@"HDIUTIL DONE - termination handler"];
 
                     assert(sema);
                     dispatch_semaphore_signal(sema);
@@ -166,7 +168,7 @@ extern NSMutableString *globalOutput;
                 outputError = jobErrOutput.data;
 
                 taskResult = task.terminationStatus;
-                [globalOutput appendFormat:@"HDIUTIL DONE result %li", (long)taskResult];
+                [globalOutput2 appendFormat:@"HDIUTIL DONE result %li", (long)taskResult];
             }
             
         }
@@ -183,7 +185,7 @@ extern NSMutableString *globalOutput;
         if (taskResult != 0)
         {
             errorString = makeString(@"hdiutil failed with code: %ld data: <<%@>> error: <<%@>>", (long)taskResult, resultStr, errorStr);
-            [globalOutput appendFormat:@"%@", errorString];
+            [globalOutput2 appendFormat:@"%@", errorString];
             goto reportError;
         }
         
@@ -204,7 +206,7 @@ extern NSMutableString *globalOutput;
         if (error)
         {
             errorString = makeString(@"Couldn't enumerate contents of archive mounted at %@: %@", mountPoint, error);
-            [globalOutput appendFormat:@"%@", errorString];
+            [globalOutput2 appendFormat:@"%@", errorString];
             goto reportError;
         }
 
@@ -230,12 +232,12 @@ extern NSMutableString *globalOutput;
             
             itemsCopied += 1.0;
 
-            [globalOutput appendFormat:@"copyItemAtPath:%@ toPath:%@", fromPath, toPath];
+            [globalOutput2 appendFormat:@"copyItemAtPath:%@ toPath:%@", fromPath, toPath];
 
             if (![manager copyItemAtPath:fromPath toPath:toPath error:&error])
             {
                 errorString = makeString(@"Couldn't copyItemAtPath:%@ toPath:%@ error:%@", fromPath, toPath, error.description);
-                [globalOutput appendFormat:@"%@", errorString];
+                [globalOutput2 appendFormat:@"%@", errorString];
                 goto reportError;
             }
         }
@@ -261,10 +263,10 @@ extern NSMutableString *globalOutput;
             @try {
                 [task launch];
             } @catch (NSException *exception) {
-                [globalOutput appendFormat:@"Failed to unmount %@ Exception: %@", unmountPoint, exception];
+                [globalOutput2 appendFormat:@"Failed to unmount %@ Exception: %@", unmountPoint, exception];
             }
         } else {
-            [globalOutput appendFormat:@"Can't mount DMG %@", self.archivePath];
+            [globalOutput2 appendFormat:@"Can't mount DMG %@", self.archivePath];
         }
     }
     return error;

@@ -16,7 +16,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #import "JMSUDiskImageUnarchiver.h"
 #import "JMSUDiskImageUnarchiverDbg.h"
 
-NSMutableString *globalOutput;
+NSMutableString *globalOutput1;
+NSMutableString *globalOutput2;
+NSMutableString *globalOutput3;
+NSMutableString *globalOutput4;
 
 @implementation AppDelegate
 
@@ -24,8 +27,11 @@ NSMutableString *globalOutput;
 {
 	cc = [CoreLib new];
 
-    globalOutput = makeMutableString();
-    
+    globalOutput1 = makeMutableString();
+    globalOutput2 = makeMutableString();
+    globalOutput3 = makeMutableString();
+    globalOutput4 = makeMutableString();
+
 	[self.progress startAnimation:self];
 	[self.progress setUsesThreadedAnimation:YES];
 	[self performSelector:@selector(perform) withObject:nil afterDelay:0.1];
@@ -88,12 +94,14 @@ NSMutableString *globalOutput;
 
 
         NSInteger status;
-        NSString *output = [@[@"/usr/bin/hdiutil", @"attach", archivePath, @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] runAsTaskWithTerminationStatus:&status usePolling:NO];
+        NSString *output = [@[@"/usr/bin/hdiutil", @"attach", archivePath,
+                              @"-debug",
+                              @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] runAsTaskWithTerminationStatus:&status usePolling:NO];
         if (status)
             method3Result = 2;
         else
             method3Result = 1;
-        [globalOutput appendFormat:@"3:%@", output];
+        [globalOutput3 appendFormat:@"3:%@", output];
 
         NSTask *task = [[NSTask alloc] init];
         task.launchPath = @"/usr/bin/hdiutil";
@@ -104,7 +112,7 @@ NSMutableString *globalOutput;
         @try {
             [task launch];
         } @catch (NSException *exception) {
-            [globalOutput appendFormat:@"Failed to unmount %@ Exception: %@", mountPoint, exception];
+            [globalOutput3 appendFormat:@"Failed to unmount %@ Exception: %@", mountPoint, exception];
         }
     });
 
@@ -130,8 +138,10 @@ NSMutableString *globalOutput;
 
 
         NSInteger status;
-        NSString *output = [@[@"/usr/bin/hdiutil", @"attach", archivePath, @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] runAsTaskWithTerminationStatus:&status usePolling:YES];
-          [globalOutput appendFormat:@":%@", output];
+        NSString *output = [@[@"/usr/bin/hdiutil", @"attach", archivePath,
+                              @"-debug",
+                              @"-mountpoint", mountPoint, /*@"-noverify",*/ @"-nobrowse", @"-noautoopen", @"-verbose"] runAsTaskWithTerminationStatus:&status usePolling:YES];
+          [globalOutput4 appendFormat:@":%@", output];
 
         if (status)
             method4Result = 2;
@@ -152,8 +162,11 @@ NSMutableString *globalOutput;
             
             times++;
         }
-        [globalOutput appendFormat:@"done %i %i %i %i", method1Result, method2Result, method3Result, method4Result];
-        
+        [globalOutput1 appendFormat:@"done %i %i %i %i", method1Result, method2Result, method3Result, method4Result];
+        [globalOutput2 appendFormat:@"done %i %i %i %i", method1Result, method2Result, method3Result, method4Result];
+        [globalOutput3 appendFormat:@"done %i %i %i %i", method1Result, method2Result, method3Result, method4Result];
+        [globalOutput4 appendFormat:@"done %i %i %i %i", method1Result, method2Result, method3Result, method4Result];
+
         
         if (method1Result == 1 &&
             method2Result == 1 &&
@@ -170,26 +183,36 @@ NSMutableString *globalOutput;
 {
     [self runTest];
     
+    let basePath = makeTempDirectory();
+
+
+    tmpPath = [@[basePath, @"folder"].path stringByAppendingString:@"/"];
+    [fileManager createDirectoryAtPath:tmpPath withIntermediateDirectories:YES attributes:nil error:nil];
+    tmpURL = tmpPath.fileURL;
+    cc_log_debug(@"%@", tmpPath);
+    
+    
+    dispatch_async_back(^
+    {
+        let sysprofile = [@[@"/usr/sbin/system_profiler", @"-xml", @"-detailLevel", @"full"] runAsTask]; // this may hang
+        let sysrofiletxt = [@"<?xml version" appended:[sysprofile splitAfterFull:@"<?xml version"]];
+        [self->tmpURL add:@"system_profiler.spx"].contents = sysrofiletxt.data;
+    });
+
+    
     while (!self->dmgResult)
     {
         sleep(1);
     }
     sleep(1);
     
-    let basePath = makeTempDirectory();
 
-
-    tmpPath = [@[basePath, @"folder"].path stringByAppendingString:@"/"];
-    
-    [fileManager createDirectoryAtPath:tmpPath
-           withIntermediateDirectories:YES attributes:nil error:nil];
-    
-    
-	tmpURL = tmpPath.fileURL;
-	cc_log_debug(@"%@", tmpPath);
 
     [tmpURL add:@"dmg_test"].contents = self->dmgResult.data;
-    [tmpURL add:@"dmg_output"].contents = globalOutput.data;
+    [tmpURL add:@"dmg_output1"].contents = globalOutput1.data;
+    [tmpURL add:@"dmg_output2"].contents = globalOutput2.data;
+    [tmpURL add:@"dmg_output3"].contents = globalOutput3.data;
+    [tmpURL add:@"dmg_output4"].contents = globalOutput4.data;
 
 	[fileManager copyItemAtPath:[@"/private/var/log/system.log" stringByExpandingTildeInPath]
 						 toPath:[tmpPath stringByAppendingString:@"system.log"] error:NULL];
@@ -227,9 +250,6 @@ NSMutableString *globalOutput;
     
 	[tmpURL add:@"ps"].contents = [@[@"/bin/ps", @"ax"] runAsTask].data;
     [tmpURL add:@"top"].contents = [@[@"/usr/bin/top", @"-l1"] runAsTask].data;
-    let sysprofile = [@[@"/usr/sbin/system_profiler", @"-xml", @"-detailLevel", @"full"] runAsTask];
-    let sysrofiletxt = [@"<?xml version" appended:[sysprofile splitAfterFull:@"<?xml version"]];
-    [tmpURL add:@"system_profiler.spx"].contents = sysrofiletxt.data;
 	[tmpURL add:@"ioreg"].contents = [@[@"/usr/sbin/ioreg", @"-l", @"-w", @"0"] runAsTask].data;
 
     // apple requests
