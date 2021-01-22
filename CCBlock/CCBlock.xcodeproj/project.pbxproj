@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		031C21921FB5553C00CD2F47 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FCD0291B2AA77600076943 /* ContentBlockerRequestHandler.swift */; };
-		031C21931FB5553D00CD2F47 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FCD0291B2AA77600076943 /* ContentBlockerRequestHandler.swift */; };
 		037E1B251F58C5DE00E90B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037E1B241F58C5DE00E90B3F /* AppDelegate.swift */; };
 		037E1B271F58C5DE00E90B3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037E1B261F58C5DE00E90B3F /* ViewController.swift */; };
 		037E1B291F58C5DE00E90B3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 037E1B281F58C5DE00E90B3F /* Assets.xcassets */; };
@@ -16,13 +15,6 @@
 		0383160B1F5903D50004B1DD /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 03EF8F0A1B33B86F000FAF60 /* blockerList.json */; };
 		03B08AA31F58FEB00041C7D9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B08AA21F58FEB00041C7D9 /* Cocoa.framework */; };
 		03B08AAE1F58FEB00041C7D9 /* CCBlock Content Blocker macOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 03B08AA01F58FEB00041C7D9 /* CCBlock Content Blocker macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		03EF8F0B1B33B86F000FAF60 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 03EF8F0A1B33B86F000FAF60 /* blockerList.json */; };
-		03FCD0101B2AA68A00076943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FCD00F1B2AA68A00076943 /* AppDelegate.swift */; };
-		03FCD0121B2AA68A00076943 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FCD0111B2AA68A00076943 /* ViewController.swift */; };
-		03FCD0151B2AA68A00076943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03FCD0131B2AA68A00076943 /* Main.storyboard */; };
-		03FCD0171B2AA68A00076943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03FCD0161B2AA68A00076943 /* Assets.xcassets */; };
-		03FCD01A1B2AA68A00076943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03FCD0181B2AA68A00076943 /* LaunchScreen.storyboard */; };
-		03FCD02E1B2AA77600076943 /* CCBlock Content Blocker iOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 03FCD0251B2AA77600076943 /* CCBlock Content Blocker iOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +23,6 @@
 			containerPortal = 03FCD0041B2AA68A00076943 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 03B08A9F1F58FEB00041C7D9;
-		};
-		03FCD02C1B2AA77600076943 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03FCD0041B2AA68A00076943 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 03FCD0241B2AA77600076943;
-			remoteInfo = "CCBlock Content Blocker";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -49,17 +34,6 @@
 			dstSubfolderSpec = 13;
 			files = (
 				03B08AAE1F58FEB00041C7D9 /* CCBlock Content Blocker macOS.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03FCD0321B2AA77600076943 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				03FCD02E1B2AA77600076943 /* CCBlock Content Blocker iOS.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,14 +52,12 @@
 		03B08AAB1F58FEB00041C7D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03E9442B1F58FFD400187B69 /* CCBlock Content Blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "CCBlock Content Blocker.entitlements"; path = "CCBlock Content Blocker/macOS/CCBlock Content Blocker.entitlements"; sourceTree = SOURCE_ROOT; };
 		03EF8F0A1B33B86F000FAF60 /* blockerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = blockerList.json; path = CCBlock.safariextension/blockerList.json; sourceTree = SOURCE_ROOT; };
-		03FCD00C1B2AA68A00076943 /* CCBlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCBlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FCD00F1B2AA68A00076943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03FCD0111B2AA68A00076943 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		03FCD0141B2AA68A00076943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03FCD0161B2AA68A00076943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03FCD0191B2AA68A00076943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03FCD01B1B2AA68A00076943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03FCD0251B2AA77600076943 /* CCBlock Content Blocker iOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CCBlock Content Blocker iOS.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FCD0291B2AA77600076943 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
 		03FCD02B1B2AA77600076943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		634FDD33200C233300C669C0 /* CCBlock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CCBlock.entitlements; sourceTree = "<group>"; };
@@ -104,20 +76,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				03B08AA31F58FEB00041C7D9 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03FCD0091B2AA68A00076943 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03FCD0221B2AA77600076943 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,8 +146,6 @@
 		03FCD00D1B2AA68A00076943 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				03FCD00C1B2AA68A00076943 /* CCBlock.app */,
-				03FCD0251B2AA77600076943 /* CCBlock Content Blocker iOS.appex */,
 				037E1B221F58C5DE00E90B3F /* CCBlock.app */,
 				03B08AA01F58FEB00041C7D9 /* CCBlock Content Blocker macOS.appex */,
 			);
@@ -255,42 +211,6 @@
 			productReference = 03B08AA01F58FEB00041C7D9 /* CCBlock Content Blocker macOS.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		03FCD00B1B2AA68A00076943 /* CCBlock iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 03FCD01E1B2AA68A00076943 /* Build configuration list for PBXNativeTarget "CCBlock iOS" */;
-			buildPhases = (
-				03FCD0081B2AA68A00076943 /* Sources */,
-				03FCD0091B2AA68A00076943 /* Frameworks */,
-				03FCD00A1B2AA68A00076943 /* Resources */,
-				03FCD0321B2AA77600076943 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				03FCD02D1B2AA77600076943 /* PBXTargetDependency */,
-			);
-			name = "CCBlock iOS";
-			productName = CCBlock;
-			productReference = 03FCD00C1B2AA68A00076943 /* CCBlock.app */;
-			productType = "com.apple.product-type.application";
-		};
-		03FCD0241B2AA77600076943 /* CCBlock Content Blocker iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 03FCD0311B2AA77600076943 /* Build configuration list for PBXNativeTarget "CCBlock Content Blocker iOS" */;
-			buildPhases = (
-				03FCD0211B2AA77600076943 /* Sources */,
-				03FCD0221B2AA77600076943 /* Frameworks */,
-				03FCD0231B2AA77600076943 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "CCBlock Content Blocker iOS";
-			productName = "CCBlock Content Blocker";
-			productReference = 03FCD0251B2AA77600076943 /* CCBlock Content Blocker iOS.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -315,14 +235,6 @@
 						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
-					03FCD00B1B2AA68A00076943 = {
-						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0900;
-					};
-					03FCD0241B2AA77600076943 = {
-						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0900;
-					};
 				};
 			};
 			buildConfigurationList = 03FCD0071B2AA68A00076943 /* Build configuration list for PBXProject "CCBlock" */;
@@ -338,8 +250,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				03FCD00B1B2AA68A00076943 /* CCBlock iOS */,
-				03FCD0241B2AA77600076943 /* CCBlock Content Blocker iOS */,
 				037E1B211F58C5DE00E90B3F /* CCBlock macOS */,
 				03B08A9F1F58FEB00041C7D9 /* CCBlock Content Blocker macOS */,
 			);
@@ -364,24 +274,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		03FCD00A1B2AA68A00076943 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03FCD01A1B2AA68A00076943 /* LaunchScreen.storyboard in Resources */,
-				03FCD0171B2AA68A00076943 /* Assets.xcassets in Resources */,
-				03FCD0151B2AA68A00076943 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03FCD0231B2AA77600076943 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03EF8F0B1B33B86F000FAF60 /* blockerList.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -402,23 +294,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		03FCD0081B2AA68A00076943 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03FCD0121B2AA68A00076943 /* ViewController.swift in Sources */,
-				03FCD0101B2AA68A00076943 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03FCD0211B2AA77600076943 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				031C21931FB5553D00CD2F47 /* ContentBlockerRequestHandler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -426,11 +301,6 @@
 			isa = PBXTargetDependency;
 			target = 03B08A9F1F58FEB00041C7D9 /* CCBlock Content Blocker macOS */;
 			targetProxy = 03B08AAC1F58FEB00041C7D9 /* PBXContainerItemProxy */;
-		};
-		03FCD02D1B2AA77600076943 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 03FCD0241B2AA77600076943 /* CCBlock Content Blocker iOS */;
-			targetProxy = 03FCD02C1B2AA77600076943 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -666,84 +536,6 @@
 			};
 			name = Release;
 		};
-		03FCD01F1B2AA68A00076943 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9D78DG5ACV;
-				INFOPLIST_FILE = "$(SRCROOT)/CCBlock/iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ccblock.ios;
-				PRODUCT_NAME = "$(PRODUCT_NAME)";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.0;
-				VALID_ARCHS = arm64;
-			};
-			name = Debug;
-		};
-		03FCD0201B2AA68A00076943 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9D78DG5ACV;
-				INFOPLIST_FILE = "$(SRCROOT)/CCBlock/iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ccblock.ios;
-				PRODUCT_NAME = "$(PRODUCT_NAME)";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.0;
-				VALID_ARCHS = arm64;
-			};
-			name = Release;
-		};
-		03FCD02F1B2AA77600076943 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9D78DG5ACV;
-				INFOPLIST_FILE = "$(SRCROOT)/CCBlock Content Blocker/iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ccblock.ios.CCBlock-Content-Blocker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				VALID_ARCHS = arm64;
-			};
-			name = Debug;
-		};
-		03FCD0301B2AA77600076943 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9D78DG5ACV;
-				INFOPLIST_FILE = "$(SRCROOT)/CCBlock Content Blocker/iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ccblock.ios.CCBlock-Content-Blocker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				VALID_ARCHS = arm64;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -770,24 +562,6 @@
 			buildConfigurations = (
 				03FCD01C1B2AA68A00076943 /* Debug */,
 				03FCD01D1B2AA68A00076943 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		03FCD01E1B2AA68A00076943 /* Build configuration list for PBXNativeTarget "CCBlock iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				03FCD01F1B2AA68A00076943 /* Debug */,
-				03FCD0201B2AA68A00076943 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		03FCD0311B2AA77600076943 /* Build configuration list for PBXNativeTarget "CCBlock Content Blocker iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				03FCD02F1B2AA77600076943 /* Debug */,
-				03FCD0301B2AA77600076943 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
