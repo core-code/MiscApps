@@ -29,9 +29,6 @@
 		B9DF05F6169DCCF000DB4B58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DF05F5169DCCF000DB4B58 /* AppDelegate.m */; };
 		B9DF05F9169DCCF000DB4B58 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9DF05F7169DCCF000DB4B58 /* MainMenu.xib */; };
 		B9DF068B169DF23300DB4B58 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DF068A169DF23300DB4B58 /* ScriptingBridge.framework */; };
-		B9E0A80725768A9E00183769 /* JMSUDiskImageUnarchiverDbg.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E0A80425768A9E00183769 /* JMSUDiskImageUnarchiverDbg.m */; };
-		B9E0A80825768A9E00183769 /* JMSUDiskImageUnarchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E0A80525768A9E00183769 /* JMSUDiskImageUnarchiver.m */; };
-		B9E0A81325768EC100183769 /* debug_image_test.dmg in Resources */ = {isa = PBXBuildFile; fileRef = B9E0A81125768E7F00183769 /* debug_image_test.dmg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -95,12 +92,7 @@
 		B9DF05F4169DCCF000DB4B58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B9DF05F5169DCCF000DB4B58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B9DF068A169DF23300DB4B58 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = ../../../../../../System/Library/Frameworks/ScriptingBridge.framework; sourceTree = "<group>"; };
-		B9E0A80325768A9E00183769 /* JMSUDiskImageUnarchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSUDiskImageUnarchiver.h; sourceTree = "<group>"; };
-		B9E0A80425768A9E00183769 /* JMSUDiskImageUnarchiverDbg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSUDiskImageUnarchiverDbg.m; sourceTree = "<group>"; };
-		B9E0A80525768A9E00183769 /* JMSUDiskImageUnarchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSUDiskImageUnarchiver.m; sourceTree = "<group>"; };
-		B9E0A80625768A9E00183769 /* JMSUDiskImageUnarchiverDbg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSUDiskImageUnarchiverDbg.h; sourceTree = "<group>"; };
 		B9E0A80F25768AD600183769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B9E0A81125768E7F00183769 /* debug_image_test.dmg */ = {isa = PBXFileReference; lastKnownFileType = file; path = debug_image_test.dmg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,10 +207,6 @@
 			children = (
 				B9DF05F4169DCCF000DB4B58 /* AppDelegate.h */,
 				B9DF05F5169DCCF000DB4B58 /* AppDelegate.m */,
-				B9E0A80325768A9E00183769 /* JMSUDiskImageUnarchiver.h */,
-				B9E0A80525768A9E00183769 /* JMSUDiskImageUnarchiver.m */,
-				B9E0A80625768A9E00183769 /* JMSUDiskImageUnarchiverDbg.h */,
-				B9E0A80425768A9E00183769 /* JMSUDiskImageUnarchiverDbg.m */,
 				B9DF05F7169DCCF000DB4B58 /* MainMenu.xib */,
 				B9DF05E9169DCCF000DB4B58 /* Supporting Files */,
 			);
@@ -228,7 +216,6 @@
 		B9DF05E9169DCCF000DB4B58 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B9E0A81125768E7F00183769 /* debug_image_test.dmg */,
 				B9DF05EA169DCCF000DB4B58 /* MacUpdaterDiagnosisTool-Info.plist */,
 				B9DF05EB169DCCF000DB4B58 /* InfoPlist.strings */,
 				B9DF05EE169DCCF000DB4B58 /* main.m */,
@@ -296,7 +283,6 @@
 			files = (
 				B9DF05ED169DCCF000DB4B58 /* InfoPlist.strings in Resources */,
 				B9DF05F3169DCCF000DB4B58 /* Credits.rtf in Resources */,
-				B9E0A81325768EC100183769 /* debug_image_test.dmg in Resources */,
 				B9DF05F9169DCCF000DB4B58 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,14 +296,12 @@
 			files = (
 				B9517EB01A01553C0074B4DA /* JMAppMovedHandler.m in Sources */,
 				B9DF05EF169DCCF000DB4B58 /* main.m in Sources */,
-				B9E0A80825768A9E00183769 /* JMSUDiskImageUnarchiver.m in Sources */,
 				B9517EB81A01553C0074B4DA /* JMValueTransformer.m in Sources */,
 				B9517EB11A01553C0074B4DA /* JMClickableImageView.m in Sources */,
 				B9517E991A0154FF0074B4DA /* Foundation+CoreCode.m in Sources */,
 				B9DF05F6169DCCF000DB4B58 /* AppDelegate.m in Sources */,
 				B9517EB31A01553C0074B4DA /* JMDocklessApplication.m in Sources */,
 				B9517E981A0154FF0074B4DA /* CoreLib.m in Sources */,
-				B9E0A80725768A9E00183769 /* JMSUDiskImageUnarchiverDbg.m in Sources */,
 				B9517EB61A01553C0074B4DA /* JMHostInformation.m in Sources */,
 				B9517EB71A01553C0074B4DA /* JMLoginItemManager.m in Sources */,
 				B9517EB41A01553C0074B4DA /* JMEmailSender.m in Sources */,
@@ -365,6 +349,7 @@
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -418,6 +403,7 @@
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;

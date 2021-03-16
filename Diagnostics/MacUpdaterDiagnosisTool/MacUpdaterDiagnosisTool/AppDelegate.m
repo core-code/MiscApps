@@ -13,13 +13,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #import "AppDelegate.h"
 #import "JMEmailSender.h"
 #import "JMHostInformation.h"
-#import "JMSUDiskImageUnarchiver.h"
-#import "JMSUDiskImageUnarchiverDbg.h"
 
-NSMutableString *globalOutput1;
-NSMutableString *globalOutput2;
-NSMutableString *globalOutput3;
-NSMutableString *globalOutput4;
 
 @implementation AppDelegate
 
@@ -27,10 +21,6 @@ NSMutableString *globalOutput4;
 {
 	cc = [CoreLib new];
 
-    globalOutput1 = makeMutableString();
-    globalOutput2 = makeMutableString();
-    globalOutput3 = makeMutableString();
-    globalOutput4 = makeMutableString();
 
 	[self.progress startAnimation:self];
 	[self.progress setUsesThreadedAnimation:YES];
@@ -46,7 +36,6 @@ NSMutableString *globalOutput4;
 
 - (void)perform
 {
-    
     let basePath = makeTempDirectory();
 
 
@@ -64,8 +53,9 @@ NSMutableString *globalOutput4;
     });
 
     
-#error remove dmgResult
 
+    
+    
 	[fileManager copyItemAtPath:[@"/private/var/log/system.log" stringByExpandingTildeInPath]
 						 toPath:[tmpPath stringByAppendingString:@"system.log"] error:NULL];
 
