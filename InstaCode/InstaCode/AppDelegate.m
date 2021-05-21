@@ -104,7 +104,7 @@ CONST_KEY(XCode)
 
         [[fragaria string] writeToURL:[cc.suppURL add:@"InstaCode.mm"] atomically:YES encoding:NSUTF8StringEncoding error:NULL];
 
-		NSArray *args = @[makeString(@"/Applications/%@/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++", kXCodeKey.defaultString), @"-x", @"objective-c++", @"-stdlib=libc++", @"-isysroot", makeString(@"/Applications/%@/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.%i.sdk", kXCodeKey.defaultString, [self checkSDKVersion]), @"-framework", @"Foundation", @"-framework", @"AppKit", @"-framework", @"QuartzCore", @"-O3", @"-Wall", @"-o", [cc.suppURL add:@"InstaCode.out"].path, [cc.suppURL add:@"InstaCode.mm"].path];
+		NSArray *args = @[makeString(@"/Applications/%@/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++", kXCodeKey.defaultString), @"-x", @"objective-c++", @"-stdlib=libc++", @"-isysroot", makeString(@"/Applications/%@/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk", kXCodeKey.defaultString), @"-framework", @"Foundation", @"-framework", @"AppKit", @"-framework", @"QuartzCore", @"-O3", @"-Wall", @"-o", [cc.suppURL add:@"InstaCode.out"].path, [cc.suppURL add:@"InstaCode.mm"].path];
 	
         NSInteger terminationStatus;
         NSDate *pre = [NSDate date];
@@ -306,21 +306,6 @@ CONST_KEY(XCode)
     }
 }
 
-- (int)checkSDKVersion
-{
-    int sdkVer;
-    for (sdkVer = 20; sdkVer >= 0; sdkVer--) // we are save until Mac OS X 10.20 ;->
-        if (makeString(@"/Applications/%@/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.%i.sdk", kXCodeKey.defaultString, sdkVer).fileExists)
-            break;
-    
-    if (!sdkVer)
-    {
-        NSRunAlertPanel(@"Error", @"Fatal Error", @"D'oh", nil, nil);
-        exit(1);
-    }
-	
-	return sdkVer;
-}
 @end
 
 int main(int argc, char *argv[])
