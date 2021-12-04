@@ -22,12 +22,12 @@
 @property (strong) NSMutableArray <NSDate *> *daxDates;
 @property (strong) NSDictionary <NSString *, NSMutableArray <NSNumber *> *> *values;
 @property (strong) NSDictionary <NSString *, NSMutableArray <NSDate *> *> *dates;
-@property (strong) NSDictionary <NSString *, NSMutableArray <NSString *> *> *percents;
+@property (strong) NSDictionary <NSString *, NSMutableArray <NSNumber *> *> *percents;
 
 @end
 
-#define kDAXURL @"http://www.finanzen.net/index/DAX-Realtime"
-#define kPriceList     @{ @"TecDAX" : makeMutableArray(), @"MDAX" : makeMutableArray(), @"ESTX50" : makeMutableArray(), @"DOW.J" : makeMutableArray(), @"NAS100" : makeMutableArray(), @"S&amp;P 500" : makeMutableArray(), @"NIKKEI" : makeMutableArray(), @"ATX" : makeMutableArray(), @"Goldpreis" : makeMutableArray(), @"Ölpreis" : makeMutableArray(), @"Dollarkurs" : makeMutableArray()}
+#define kDAXURL @"https://www.finanzen.net"
+#define kPriceList     @{ @"DAX" : makeMutableArray(), @"TecDAX" : makeMutableArray(), @"MDAX" : makeMutableArray(), @"ESTX50" : makeMutableArray(), @"DOW.J" : makeMutableArray(), @"NAS100" : makeMutableArray(), @"S&amp;P 500" : makeMutableArray(), @"NIKKEI" : makeMutableArray(), @"ATX" : makeMutableArray(), @"Goldpreis" : makeMutableArray(), @"Ölpreis" : makeMutableArray(), @"Dollarkurs" : makeMutableArray()}
 
 
 @implementation AppDelegate
@@ -116,19 +116,73 @@
     }
 
 
-	NSArray <NSString *> *comp = title.words;
-	if ([comp.firstObject isEqualToString:@"DAX"] && comp.count == 4)
-    {
-        float dfp = [[comp[1] replaced:@"." with:@""] replaced:@"," with:@"."].floatValue;
-		[self.dax addObject:@(dfp)];
-		[self.daxDates addObject:now];
+	NSString *str = [(DOMHTMLElement *)[[[self.webView mainFrame] DOMDocument] documentElement] outerHTML];
+	NSArray *links = @[@"/index/dax-realtime", @"/index/tecdax-realtime", @"/index/mdax-realtime", @"/index/euro_stoxx_50-realtime", @"/index/dow_jones-realtime", @"/index/nasdaq_100-realtime", @"/index/s&amp;p_500-realtime", @"/index/nikkei_225-realtime", @"/index/atx-realtime", @"/rohstoffe/goldpreis/realtimekurse", @"/rohstoffe/oelpreis/realtimekurse?type=Brent", @"/devisen/realtimekurs/dollarkurs"];
+	NSArray *names = @[@"DAX", @"TecDAX", @"MDAX", @"ESTX50", @"DOW.J", @"NAS100", @"S&amp;P 500", @"NIKKEI", @"ATX", @"Goldpreis", @"Ölpreis", @"Dollarkurs"];
+	for (NSString *name in names)
+	{
+		NSString *link = links[[names indexOfObject:name]];
+		NSString *splitter = makeString(@"<a href=\"%@\">%@</a></td>", link, name);
+		NSArray <NSString *> *comp1 = [str split:splitter];
 
-		if (title.length)
+		if (comp1.count > 1)
+		{
+            cc_log_debug(@"found splitter %@", splitter);
+
+			@try
+            {
+				NSString *field = [comp1[1] split:@"</tr>"][0];
+                NSString *percent = [[[[field split:@"%</span>"][0] split:@">"].lastObject.trimmedOfWhitespace replaced:@"&nbsp;" with:@""] replaced:@"," with:@"."];
+				NSString *valstr = [[field split:@"data-jsvalue=\""][1] split:@"\""][0];
+
+				assert(percent);
+				NSMutableArray <NSNumber *> *valarray = self.values[name];
+				NSMutableArray <NSDate *> *datearray = self.dates[name];
+				NSMutableArray <NSNumber *>*percarray = self.percents[name];
+
+				[valarray addObject:@(valstr.floatValue)];
+				[datearray addObject:now];
+				[percarray addObject:@(percent.floatValue)];
+
+				while (valarray.count > 50) [valarray removeFirstObject];
+				while (datearray.count > 50) [datearray removeFirstObject];
+				while (percarray.count > 50) [percarray removeFirstObject];
+			}
+			@catch (NSException *exception)
+            {
+                cc_log_debug(@"got exception %@", exception.description);
+			}
+			@finally
+            {
+
+			}
+		}
+		else
+		{
+			cc_log_debug(@"could not find splitter %@", splitter);
+            NSArray *links = [str split:@"<a href=\"/"];
+            for (NSString *link in links)
+            {
+                if ([link hasPrefix:@"index"] || [link hasPrefix:@"rohstoffe"] || [link hasPrefix:@"devisen"])
+                    cc_log_debug(@" did find: %@", [link clamp:40].strippedOfNewlines);
+            }
+            LOGFAIL
+		}
+	}
+    
+    
+    
+    {
+        NSMutableArray <NSNumber *> *valarray = self.values[@"DAX"];
+        NSMutableArray <NSNumber *>*percarray = self.percents[@"DAX"];
+        NSNumber *val = valarray.lastObject;
+        NSNumber *perc = percarray.lastObject;
+
+        if (val)
         {
-            [self.statusItem setTitle:title];
-            
-            NSString *cleanPercentageStr =[[[[comp[2] replaced:@"(" with:@""] replaced:@")" with:@""] replaced:@"%" with:@""] replaced:@"," with:@"."];
-            float cleanPercentage = cleanPercentageStr.floatValue;
+            [self.statusItem setTitle:makeString(@"%@ (%@)", val, perc)];
+
+            float cleanPercentage = perc.floatValue;
             if (cleanPercentage < -3)
                 self.statusItem.button.layer.backgroundColor =  makeColor(1.0, 0.0, 0.0, 1.0).CGColor;
             else if (cleanPercentage < -2)
@@ -146,60 +200,7 @@
             else
                 self.statusItem.button.layer.backgroundColor =  makeColor(0.0, 1.0, 0.0, 1.0).CGColor;
         }
-	}
-
-	NSString *str = [(DOMHTMLElement *)[[[self.webView mainFrame] DOMDocument] documentElement] outerHTML];
-	NSArray *links = @[@"/index/tecdax-realtime", @"/index/mdax-realtime", @"/index/euro_stoxx_50-realtime", @"/index/dow_jones-realtime", @"/index/nasdaq_100-realtime", @"/index/s&amp;p_500-realtime", @"/index/nikkei_225-realtime", @"/index/atx-realtime", @"/rohstoffe/goldpreis/realtimekurse", @"/rohstoffe/oelpreis@brent/realtimekurse", @"/devisen/realtimekurs/dollarkurs"];
-	NSArray *names = @[@"TecDAX", @"MDAX", @"ESTX50", @"DOW.J", @"NAS100", @"S&amp;P 500", @"NIKKEI", @"ATX", @"Goldpreis", @"Ölpreis", @"Dollarkurs"];
-	for (NSString *name in names)
-	{
-		NSString *link = links[[names indexOfObject:name]];
-		NSString *splitter = makeString(@"<a href=\"%@\">%@</a></td>", link, name);
-		NSArray <NSString *> *comp1 = [str split:splitter];
-
-		if (comp1.count > 1)
-		{
-            //cc_log_debug(@"found splitter %@", splitter);
-
-			@try
-            {
-				NSString *field = [comp1[1] split:@"</tr>"][0];
-                NSString *percent = [[[[field split:@"%</span>"][0] split:@">"].lastObject.trimmedOfWhitespace replaced:@"&nbsp;" with:@""] replaced:@"," with:@"."];
-				NSString *valstr = [[field split:@"data-jsvalue=\""][1] split:@"\""][0];
-
-				assert(percent);
-				NSMutableArray <NSNumber *> *valarray = self.values[name];
-				NSMutableArray <NSDate *> *datearray = self.dates[name];
-				NSMutableArray <NSString *>*percarray = self.percents[name];
-
-				[valarray addObject:@(valstr.floatValue)];
-				[datearray addObject:now];
-				[percarray addObject:percent];
-
-				while (valarray.count > 50) [valarray removeFirstObject];
-				while (datearray.count > 50) [datearray removeFirstObject];
-				while (percarray.count > 50) [percarray removeFirstObject];
-			}
-			@catch (NSException *exception)
-            {
-                cc_log_debug(@"got exception %@", exception.description);
-			}
-			@finally
-            {
-
-			}
-		}
-		else
-		{
-//			cc_log_debug(@"could not find splitter %@", splitter);
-//            NSArray *links = [str split:@"<a href=\"/"];
-//            for (NSString *link in links)
-//            {
-//                if ([link hasPrefix:@"index"] || [link hasPrefix:@"rohstoffe"] || [link hasPrefix:@"devisen"])
-//                    cc_log_debug(@" did find: %@", [link clamp:40].strippedOfNewlines);
-//            }
-		}
-	}
+    }
 
 
 	// regenerate menu
@@ -207,7 +208,7 @@
 	for (NSString *name in names)
 	{
 		NSMutableArray <NSNumber *> *valarray = self.values[name];
-		NSMutableArray <NSString *> *percarray = self.percents[name];
+		NSMutableArray <NSNumber *> *percarray = self.percents[name];
 
 		[self.menu addItemWithTitle:makeString(@"%@ %@ (%@)", [name replaced:@"&amp;" with:@"&"], valarray.lastObject, percarray.lastObject) action:@selector(clicked:) keyEquivalent:@""];
 	}
