@@ -113,7 +113,7 @@ static NSString *kRVNBundleVersion = @"1.0.0";
                 value[@"status"] = @(1);
                 dispatch_async_main(^{[self.sourceTable reloadData];});
             }
-#warning todo we need to execute directy without ZSH to get the output sooner
+
             var cmdOutput = [@[@"/bin/zsh", @"-l", @"-i", @"-c", command] runAsTaskWithProgressBlock:^(NSString *newString)
             {
                 @synchronized (self)
