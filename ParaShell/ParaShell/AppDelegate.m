@@ -68,8 +68,15 @@ static NSString *kRVNBundleVersion = @"1.0.0";
 {
     let sortedKeys = [self.jobs keysSortedByValueUsingComparator:^NSComparisonResult(NSDictionary *obj1, NSDictionary * obj2)
     {
-        int status1 = [obj1[@"status"] intValue];
-        int status2 = [obj2[@"status"] intValue];
+        int status1;
+        int status2;
+        
+        
+        @synchronized (self)
+        {
+            status1 = [obj1[@"status"] intValue];
+            status2 = [obj2[@"status"] intValue];
+        }
         
         if (status1 != status2)
         {
@@ -78,7 +85,17 @@ static NSString *kRVNBundleVersion = @"1.0.0";
             return [modStatus1 compare:modStatus2];
         }
         else
-            return [((NSString *)obj1[@"cmd"]) compare:((NSString *)obj2[@"cmd"])];
+        {
+            NSString *cmd1;
+            NSString *cmd2;
+            @synchronized (self)
+            {
+                cmd1 = ((NSString *)obj1[@"cmd"]);
+                cmd2 = ((NSString *)obj2[@"cmd"]);
+            }
+            
+            return [cmd1 compare:cmd2];
+        }
     }];
     
     return sortedKeys;
@@ -119,9 +136,9 @@ static NSString *kRVNBundleVersion = @"1.0.0";
                 @synchronized (self)
                 {
                     NSMutableString *o = value[@"output"];
-                    [o appendString:newString];
+                    if (o.length)
+                        [o appendString:newString];
                 }
-                dispatch_async_main(^{[self updateTextView]; });
             }];
             
             cmdOutput = [cmdOutput.lines filtered:^BOOL(NSString *input) { return ![input contains:@"error finding potential wrapper bundle for node"]; }]. joinedWithNewlines;
@@ -131,9 +148,14 @@ static NSString *kRVNBundleVersion = @"1.0.0";
                 value[@"status"] = @(2);
                 value[@"output"] = cmdOutput;
                 self.output = makeString(@"%@\nOUTPUT FOR CMD: %@\n\n%@\n\n________________________", self.output, command, cmdOutput);
+                
+                int todo = [self.jobs.allKeys reduce:^int(NSString *i) { return [self.jobs[i][@"status"] intValue] == 0; }];
+                int cwip = [self.jobs.allKeys reduce:^int(NSString *i) { return [self.jobs[i][@"status"] intValue] == 1; }];
+                int done = = [self.jobs.allKeys reduce:^int(NSString *i) { return [self.jobs[i][@"status"] intValue] == 2; }];
+                
+                self.mainWindow.title = makeString(@"ParaShell [%i|%i|%i]", done, cwip, todo);
             }
             dispatch_async_main(^{[self.sourceTable reloadData];});
-            dispatch_async_main(^{[self updateTextView]; });
         }];
     });
     dispatch_async_main(^{[self.sourceTable reloadData];});
@@ -147,9 +169,17 @@ static NSString *kRVNBundleVersion = @"1.0.0";
     {
         if (self.jobs.count)
         {
-            int todo = [self.jobs.allKeys reduce:^int(NSString *i) { return [self.jobs[i][@"status"] intValue] == 0; }];
-            int cwip = [self.jobs.allKeys reduce:^int(NSString *i) { return [self.jobs[i][@"status"] intValue] == 1; }];
-            //int done = [self.jobs.allKeys reduce:^int(NSString *i) { return [self.jobs[i][@"status"] intValue] == 2; }];
+            int todo;
+            int cwip;
+            //int done;
+            
+            @synchronized (self)
+            {
+                todo = [self.jobs.allKeys reduce:^int(NSString *i) { return [self.jobs[i][@"status"] intValue] == 0; }];
+                cwip = [self.jobs.allKeys reduce:^int(NSString *i) { return [self.jobs[i][@"status"] intValue] == 1; }];
+            //  done = = [self.jobs.allKeys reduce:^int(NSString *i) { return [self.jobs[i][@"status"] intValue] == 2; }];
+            }
+            
             let status = (todo + cwip) > 0 ? makeString(@"IN-PROGRESS: %i results outstanding", todo + cwip) : @"ALL-DONE-AND-FINITO";
         
             self.textView.string = makeString(@"%@\n\n%@", self.output, status);
@@ -163,6 +193,12 @@ static NSString *kRVNBundleVersion = @"1.0.0";
         
         self.textView.string = newText;
     }
+}
+
+- (void)updateTextTimer
+{
+    dispatch_async_main(^{[self updateTextView]; });
+    dispatch_after_back(1, ^{[self updateTextTimer]; });
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)not
@@ -195,6 +231,8 @@ static NSString *kRVNBundleVersion = @"1.0.0";
 	self.version = makeString(@"%@ %@", @"Version:".localized, cc.appVersionString);
     
 	[self openMainWindow:self];
+    
+    dispatch_after_back(1, ^{[self updateTextTimer]; });
 }
 
 - (BOOL)applicationShouldHandleReopen:(NSApplication *)theApplication hasVisibleWindows:(BOOL)flag
