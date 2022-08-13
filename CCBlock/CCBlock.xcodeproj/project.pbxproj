@@ -14,7 +14,7 @@
 		037E1B2C1F58C5DE00E90B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037E1B2A1F58C5DE00E90B3F /* Main.storyboard */; };
 		0383160B1F5903D50004B1DD /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 03EF8F0A1B33B86F000FAF60 /* blockerList.json */; };
 		03B08AA31F58FEB00041C7D9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B08AA21F58FEB00041C7D9 /* Cocoa.framework */; };
-		03B08AAE1F58FEB00041C7D9 /* CCBlock Content Blocker macOS.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 03B08AA01F58FEB00041C7D9 /* CCBlock Content Blocker macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		03B08AAE1F58FEB00041C7D9 /* CCBlock Content Blocker macOS.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 03B08AA01F58FEB00041C7D9 /* CCBlock Content Blocker macOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,15 +27,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		03B08AB21F58FEB00041C7D9 /* Embed App Extensions */ = {
+		03B08AB21F58FEB00041C7D9 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				03B08AAE1F58FEB00041C7D9 /* CCBlock Content Blocker macOS.appex in Embed App Extensions */,
+				03B08AAE1F58FEB00041C7D9 /* CCBlock Content Blocker macOS.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -182,7 +182,7 @@
 				037E1B1E1F58C5DE00E90B3F /* Sources */,
 				037E1B1F1F58C5DE00E90B3F /* Frameworks */,
 				037E1B201F58C5DE00E90B3F /* Resources */,
-				03B08AB21F58FEB00041C7D9 /* Embed App Extensions */,
+				03B08AB21F58FEB00041C7D9 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -218,7 +218,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					037E1B211F58C5DE00E90B3F = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -344,6 +344,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9D78DG5ACV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/CCBlock/macOS/Info.plist";
@@ -371,6 +372,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9D78DG5ACV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/CCBlock/macOS/Info.plist";
@@ -394,6 +396,7 @@
 				CODE_SIGN_ENTITLEMENTS = "CCBlock Content Blocker/macOS/CCBlock Content Blocker.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9D78DG5ACV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/CCBlock Content Blocker/macOS/Info.plist";
@@ -419,6 +422,7 @@
 				CODE_SIGN_ENTITLEMENTS = "CCBlock Content Blocker/macOS/CCBlock Content Blocker.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 9D78DG5ACV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/CCBlock Content Blocker/macOS/Info.plist";
@@ -457,12 +461,14 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -511,12 +517,14 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
