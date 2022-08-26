@@ -574,7 +574,7 @@ CONST_KEY_ENUM(DownloadingVideosKey, KeySettingType)
 	self.localObservationToken = [@"~/Library/Safari/Extensions/".stringByExpandingTildeInPath startObserving:^(id input){ [self updateStatus]; } withFileLevelEvents:NO];
 
     NSError *err;
-    NSString *tmpFolder = makeTempDirectory();
+    NSString *tmpFolder = makeTempDirectory(NO);
     NSURL *finalPath = @[tmpFolder, @"VideoBreakout.safariextz"].path.fileURL;
 
     [fileManager copyItemAtURL:@"VideoBreakout.safariextz".resourceURL

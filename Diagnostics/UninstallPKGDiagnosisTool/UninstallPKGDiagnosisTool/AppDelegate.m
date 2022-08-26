@@ -27,7 +27,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - (void)perform
 {
 
-	tmpPath = [makeTempDirectory() stringByAppendingString:@"/"];
+	tmpPath = [makeTempDirectory(YES) stringByAppendingString:@"/"];
 	tmpURL = tmpPath.fileURL;
 	cc_log_debug(@"%@", tmpPath);
 

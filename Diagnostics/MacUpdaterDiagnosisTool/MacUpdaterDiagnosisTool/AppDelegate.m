@@ -36,7 +36,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)perform
 {
-    let basePath = makeTempDirectory();
+    let basePath = makeTempDirectory(YES);
 
 
     tmpPath = [@[basePath, @"folder"].path stringByAppendingString:@"/"];
