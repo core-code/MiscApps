@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -673,12 +672,13 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="133" y="-72"/>
         </menu>
         <window title="FilenameList" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="937" height="488"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
             <value key="minSize" type="size" width="937" height="488"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="937" height="488"/>
@@ -687,20 +687,20 @@
                     <box autoresizesSubviews="NO" borderType="line" title="Directory of files to rename" translatesAutoresizingMaskIntoConstraints="NO" id="3Ru-mE-3I9">
                         <rect key="frame" x="17" y="271" width="182" height="197"/>
                         <view key="contentView" id="YFg-Tm-KtE">
-                            <rect key="frame" x="1" y="1" width="180" height="181"/>
+                            <rect key="frame" x="3" y="3" width="176" height="179"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dyd-gM-LZ3">
-                                    <rect key="frame" x="36" y="52" width="114" height="114"/>
+                                    <rect key="frame" x="36" y="50" width="114" height="114"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icon_drophere" id="W7p-Nm-0TD"/>
                                 </imageView>
                                 <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2VY-X7-I8D" customClass="DragDestinationView">
-                                    <rect key="frame" x="3" y="4" width="174" height="177"/>
+                                    <rect key="frame" x="3" y="2" width="174" height="177"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 </customView>
                                 <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptT-Nh-gZO">
-                                    <rect key="frame" x="15" y="13" width="150" height="22"/>
+                                    <rect key="frame" x="15" y="11" width="150" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" alignment="left" pathStyle="popUp" id="z8y-9L-y6I">
                                         <font key="font" metaFont="smallSystem"/>
@@ -718,7 +718,7 @@
                         </constraints>
                     </box>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JUW-Im-BCK">
-                        <rect key="frame" x="773" y="16" width="150" height="32"/>
+                        <rect key="frame" x="772" y="16" width="152" height="33"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="00h-7G-ETs"/>
                             <constraint firstAttribute="width" constant="138" id="chP-A5-gAc"/>
@@ -732,7 +732,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wIL-QR-uuw">
-                        <rect key="frame" x="11" y="16" width="150" height="32"/>
+                        <rect key="frame" x="10" y="16" width="152" height="33"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="138" id="O4F-7C-HqT"/>
                             <constraint firstAttribute="height" constant="21" id="RRN-jS-tZp"/>
@@ -751,20 +751,20 @@ Gw
                     <box autoresizesSubviews="NO" borderType="line" title="Text file with new filenames" translatesAutoresizingMaskIntoConstraints="NO" id="uXY-wf-uCy">
                         <rect key="frame" x="14" y="60" width="188" height="197"/>
                         <view key="contentView" id="Eyb-ah-9r7">
-                            <rect key="frame" x="1" y="1" width="186" height="181"/>
+                            <rect key="frame" x="3" y="3" width="182" height="179"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IUp-KB-aD9">
-                                    <rect key="frame" x="36" y="52" width="114" height="114"/>
+                                    <rect key="frame" x="36" y="50" width="114" height="114"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icon_drophere" id="Tc8-ju-2e3"/>
                                 </imageView>
                                 <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jMW-Ps-o5C" customClass="DragDestinationView">
-                                    <rect key="frame" x="3" y="4" width="174" height="177"/>
+                                    <rect key="frame" x="3" y="2" width="174" height="177"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 </customView>
                                 <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qdf-oi-xbQ">
-                                    <rect key="frame" x="15" y="13" width="156" height="22"/>
+                                    <rect key="frame" x="15" y="11" width="156" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" alignment="left" pathStyle="popUp" id="FDR-Oj-2rA">
                                         <font key="font" metaFont="smallSystem"/>
@@ -807,7 +807,7 @@ Gw
                         </textFieldCell>
                     </textField>
                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Z0y-Ki-Vmf">
-                        <rect key="frame" x="806" y="444" width="114" height="26"/>
+                        <rect key="frame" x="805" y="443" width="116" height="26"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Ggh-Ir-vUB"/>
                             <constraint firstAttribute="width" constant="109" id="yBY-v9-VZg"/>
@@ -841,20 +841,20 @@ Gw
                     </textField>
                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PU-Gk-5fp">
                         <rect key="frame" x="222" y="64" width="695" height="374"/>
-                        <clipView key="contentView" id="yO8-gb-lXY">
+                        <clipView key="contentView" drawsBackground="NO" id="yO8-gb-lXY">
                             <rect key="frame" x="1" y="1" width="678" height="372"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="Ap9-GY-Vuk">
                                     <rect key="frame" x="0.0" y="0.0" width="678" height="372"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <size key="minSize" width="678" height="372"/>
                                     <size key="maxSize" width="698" height="10000000"/>
-                                    <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 </textView>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="gUb-aS-KeO">
                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>

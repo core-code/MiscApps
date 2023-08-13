@@ -103,7 +103,7 @@
 
 - (IBAction)continue:(id)sender
 {
-	NSArray <NSString *> *names = _txtPathControl.URL.contents.string.lines;
+	NSArray <NSString *> *names = _txtPathControl.URL.contents.string.trimmedOfWhitespaceAndNewlines.lines;
 	NSArray <NSURL *> *filenames = [_dirPathControl.URL.directoryContents filtered:^BOOL(NSURL *input)
 	{
 		return ![input.path contains:@"/."];
@@ -122,12 +122,17 @@
 	}].id;
 
 	int i = 0;
+    NSError *lastError;
 	for (NSURL *file in filenames)
     {
 		NSError *err;
 		NSURL *newURL = [[file URLByDeletingLastPathComponent] URLByAppendingPathComponent:names[i++]];
 		[fileManager moveItemAtURL:file toURL:newURL error:&err];
+        if (err) lastError = err;
 	}
+    
+    if (lastError)  alert_apptitled(makeString(@"Error moving files: %@", lastError.localizedDescription), @"D'oh", nil, nil);
+    else            alert_apptitled(@"Renaming successfull", @"Awesome", nil, nil);
 }
 
 @end
