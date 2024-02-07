@@ -124,7 +124,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	@"OmniMaps".defaultObject = [@"OmniMaps".defaultArray arrayByDeletingObjectAtIndex:indexPath.row];
+	@"OmniMaps".defaultObject = [@"OmniMaps".defaultArray arrayByRemovingObjectAtIndex:indexPath.row];
 	
 	[userDefaults synchronize];
 

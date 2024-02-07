@@ -15,6 +15,7 @@ import MapKit
 
 //FIXME: https://www.spamcop.net
 //TODO: https://www.spamcop.net
+//TODO: "copy all the hops listed in the pop-up"
 
 @NSApplicationMain
 

@@ -19,7 +19,7 @@
 
 	NSOpenPanel *panel = [NSOpenPanel openPanel];
 
-    panel.title = @"Please choose MainMenu.strings";
+    panel.title = @"Please choose english MainMenu.strings";
 	[panel runModal];
 
 	NSURL *url = [panel URL];

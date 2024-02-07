@@ -85,7 +85,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     [tmpURL add:@"PrivilegedHelperToolsDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/PrivilegedHelperTools/"] runAsTask].data;
     [tmpURL add:@"ExtensionDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/Extensions/"] runAsTask].data;
     [tmpURL add:@"FilesystemsDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/Filesystems/"] runAsTask].data;
-    [tmpURL add:@"SystemExtensionsDir"].contents = [@[@"/bin/ls", @"-la", @"/Library/SystemExtensions/"] runAsTask].data;
+    [tmpURL add:@"SystemExtensionsDir"].contents = [@[@"/bin/ls", @"-laR", @"/Library/SystemExtensions/"] runAsTask].data;
     [tmpURL add:@"AppsDir"].contents = [@[@"/bin/ls", @"-la", @"/Applications/"] runAsTask].data;
 
     
