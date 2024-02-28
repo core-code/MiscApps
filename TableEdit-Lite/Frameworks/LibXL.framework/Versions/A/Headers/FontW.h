@@ -1,3 +1,16 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+//                    LibXL C++ headers version 4.2.0                        //
+//                                                                           //
+//                 Copyright (c) 2008 - 2023 XLware s.r.o.                   //
+//                                                                           //
+//   THIS FILE AND THE SOFTWARE CONTAINED HEREIN IS PROVIDED 'AS IS' AND     //
+//                COMES WITH NO WARRANTIES OF ANY KIND.                      //
+//                                                                           //
+//          Please define LIBXL_STATIC variable for static linking.          //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+
 #ifndef LIBXL_FONTW_H
 #define LIBXL_FONTW_H
 

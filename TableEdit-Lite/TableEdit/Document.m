@@ -623,7 +623,7 @@ NSCalendar *timezonelessCalendar;
     FILE *fp = fopen(source.path.UTF8String, "rb");
     NSMutableArray *csv = makeMutableArray();
     struct fields_format format;
-    format.delimiter = (char)delimiter.firstCharacter;
+    format.delimiter = (char)delimiter.firstChar;
     if (doubleQuoteCount == 0 && singleQuoteCount == 0)
         format.quote = '\0';
     else if (doubleQuoteCount >= singleQuoteCount)
@@ -1827,6 +1827,12 @@ NSCalendar *timezonelessCalendar;
 			aCell.textColor = color;
 
 		NSFont *font = attributes[kFontFontKey];
+        
+//       NSFontTraitMask mask = [fontManager traitsOfFont:self.cellFont] & NSBoldFontMask ? NSUnboldFontMask : NSBoldFontMask;
+//        _cellFont = [fontManager convertFont:_cellFont toHaveTrait:mask];
+//        BOOL isBold = [fontManager traitsOfFont:font] & NSBoldFontMask;
+//        cc_log_error(@"isBold %i", isBold);
+        
 		if (font)
 			aCell.font = font;
 	}
@@ -1862,7 +1868,7 @@ NSCalendar *timezonelessCalendar;
 {
 	LOGFUNCA;
 	unichar t = 'A';
-	unichar oldHeader = tableColumn.headerCell.stringValue.firstCharacter;
+	unichar oldHeader = tableColumn.headerCell.stringValue.firstChar;
 	unsigned long oldPosition = oldHeader-t;
 	unsigned long newPosition = [tableView.tableColumns indexOfObject:tableColumn]-1;
 

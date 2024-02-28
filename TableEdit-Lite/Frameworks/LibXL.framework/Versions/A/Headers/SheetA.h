@@ -1,3 +1,16 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+//                    LibXL C++ headers version 4.2.0                        //
+//                                                                           //
+//                 Copyright (c) 2008 - 2023 XLware s.r.o.                   //
+//                                                                           //
+//   THIS FILE AND THE SOFTWARE CONTAINED HEREIN IS PROVIDED 'AS IS' AND     //
+//                COMES WITH NO WARRANTIES OF ANY KIND.                      //
+//                                                                           //
+//          Please define LIBXL_STATIC variable for static linking.          //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+
 #ifndef LIBXL_SHEETA_H
 #define LIBXL_SHEETA_H
 
@@ -18,6 +31,10 @@ extern "C"
 
     XLAPI    const char* XLAPIENTRY xlSheetReadStrA(SheetHandle handle, int row, int col, FormatHandle* format);
     XLAPI            int XLAPIENTRY xlSheetWriteStrA(SheetHandle handle, int row, int col, const char* value, FormatHandle format);
+    XLAPI            int XLAPIENTRY xlSheetWriteStrAsNumA(SheetHandle handle, int row, int col, const char* value, FormatHandle format);
+
+    XLAPI RichStringHandle XLAPIENTRY xlSheetReadRichStrA(SheetHandle handle, int row, int col, FormatHandle* format);
+    XLAPI            int XLAPIENTRY xlSheetWriteRichStrA(SheetHandle handle, int row, int col, RichStringHandle richString, FormatHandle format);
 
     XLAPI         double XLAPIENTRY xlSheetReadNumA(SheetHandle handle, int row, int col, FormatHandle* format);
     XLAPI            int XLAPIENTRY xlSheetWriteNumA(SheetHandle handle, int row, int col, double value, FormatHandle format);
@@ -40,6 +57,7 @@ extern "C"
     XLAPI           void XLAPIENTRY xlSheetRemoveCommentA(SheetHandle handle, int row, int col);
 
     XLAPI            int XLAPIENTRY xlSheetIsDateA(SheetHandle handle, int row, int col);
+    XLAPI            int XLAPIENTRY xlSheetIsRichStrA(SheetHandle handle, int row, int col);
 
     XLAPI            int XLAPIENTRY xlSheetReadErrorA(SheetHandle handle, int row, int col);
     XLAPI           void XLAPIENTRY xlSheetWriteErrorA(SheetHandle handle, int row, int col, int error, FormatHandle format);
@@ -47,14 +65,23 @@ extern "C"
     XLAPI         double XLAPIENTRY xlSheetColWidthA(SheetHandle handle, int col);
     XLAPI         double XLAPIENTRY xlSheetRowHeightA(SheetHandle handle, int row);
 
+    XLAPI            int XLAPIENTRY xlSheetColWidthPxA(SheetHandle handle, int col);
+    XLAPI            int XLAPIENTRY xlSheetRowHeightPxA(SheetHandle handle, int row);
+
     XLAPI            int XLAPIENTRY xlSheetSetColA(SheetHandle handle, int colFirst, int colLast, double width, FormatHandle format, int hidden);
+    XLAPI            int XLAPIENTRY xlSheetSetColPxA(SheetHandle handle, int colFirst, int colLast, int widthPx, FormatHandle format, int hidden);
+
     XLAPI            int XLAPIENTRY xlSheetSetRowA(SheetHandle handle, int row, double height, FormatHandle format, int hidden);
+    XLAPI            int XLAPIENTRY xlSheetSetRowPxA(SheetHandle handle, int row, int heightPx, FormatHandle format, int hidden);
 
     XLAPI            int XLAPIENTRY xlSheetRowHiddenA(SheetHandle handle, int row);
     XLAPI            int XLAPIENTRY xlSheetSetRowHiddenA(SheetHandle handle, int row, int hidden);
 
     XLAPI            int XLAPIENTRY xlSheetColHiddenA(SheetHandle handle, int col);
     XLAPI            int XLAPIENTRY xlSheetSetColHiddenA(SheetHandle handle, int col, int hidden);
+
+    XLAPI         double XLAPIENTRY xlSheetDefaultRowHeightA(SheetHandle handle);
+    XLAPI           void XLAPIENTRY xlSheetSetDefaultRowHeightA(SheetHandle handle, double height);
 
     XLAPI            int XLAPIENTRY xlSheetGetMergeA(SheetHandle handle, int row, int col, int* rowFirst, int* rowLast, int* colFirst, int* colLast);
     XLAPI            int XLAPIENTRY xlSheetSetMergeA(SheetHandle handle, int rowFirst, int rowLast, int colFirst, int colLast);
@@ -67,9 +94,11 @@ extern "C"
     XLAPI            int XLAPIENTRY xlSheetPictureSizeA(SheetHandle handle);
     XLAPI            int XLAPIENTRY xlSheetGetPictureA(SheetHandle handle, int index, int* rowTop, int* colLeft, int* rowBottom, int* colRight,
                                                                                       int* width, int* height, int* offset_x, int* offset_y);
+    XLAPI            int XLAPIENTRY xlSheetRemovePictureByIndexA(SheetHandle handle, int index);
 
     XLAPI           void XLAPIENTRY xlSheetSetPictureA(SheetHandle handle, int row, int col, int pictureId, double scale, int offset_x, int offset_y, int pos);
     XLAPI           void XLAPIENTRY xlSheetSetPicture2A(SheetHandle handle, int row, int col, int pictureId, int width, int height, int offset_x, int offset_y, int pos);
+    XLAPI            int XLAPIENTRY xlSheetRemovePictureA(SheetHandle handle, int row, int col);
 
     XLAPI            int XLAPIENTRY xlSheetGetHorPageBreakA(SheetHandle handle, int index);
     XLAPI            int XLAPIENTRY xlSheetGetHorPageBreakSizeA(SheetHandle handle);
@@ -92,12 +121,17 @@ extern "C"
     XLAPI            int XLAPIENTRY xlSheetGroupSummaryRightA(SheetHandle handle);
     XLAPI           void XLAPIENTRY xlSheetSetGroupSummaryRightA(SheetHandle handle, int right);
 
-    XLAPI           void XLAPIENTRY xlSheetClearA(SheetHandle handle, int rowFirst, int rowLast, int colFirst, int colLast);
+    XLAPI            int XLAPIENTRY xlSheetClearA(SheetHandle handle, int rowFirst, int rowLast, int colFirst, int colLast);
 
     XLAPI            int XLAPIENTRY xlSheetInsertColA(SheetHandle handle, int colFirst, int colLast);
     XLAPI            int XLAPIENTRY xlSheetInsertRowA(SheetHandle handle, int rowFirst, int rowLast);
     XLAPI            int XLAPIENTRY xlSheetRemoveColA(SheetHandle handle, int colFirst, int colLast);
     XLAPI            int XLAPIENTRY xlSheetRemoveRowA(SheetHandle handle, int rowFirst, int rowLast);
+
+ XLAPI            int XLAPIENTRY xlSheetInsertColAndKeepRangesA(SheetHandle handle, int colFirst, int colLast);
+    XLAPI            int XLAPIENTRY xlSheetInsertRowAndKeepRangesA(SheetHandle handle, int rowFirst, int rowLast);
+    XLAPI            int XLAPIENTRY xlSheetRemoveColAndKeepRangesA(SheetHandle handle, int colFirst, int colLast);
+    XLAPI            int XLAPIENTRY xlSheetRemoveRowAndKeepRangesA(SheetHandle handle, int rowFirst, int rowLast);
 
     XLAPI            int XLAPIENTRY xlSheetCopyCellA(SheetHandle handle, int rowSrc, int colSrc, int rowDst, int colDst);
 
@@ -105,6 +139,11 @@ extern "C"
     XLAPI            int XLAPIENTRY xlSheetLastRowA(SheetHandle handle);
     XLAPI            int XLAPIENTRY xlSheetFirstColA(SheetHandle handle);
     XLAPI            int XLAPIENTRY xlSheetLastColA(SheetHandle handle);
+
+    XLAPI            int XLAPIENTRY xlSheetFirstFilledRowA(SheetHandle handle);
+    XLAPI            int XLAPIENTRY xlSheetLastFilledRowA(SheetHandle handle);
+    XLAPI            int XLAPIENTRY xlSheetFirstFilledColA(SheetHandle handle);
+    XLAPI            int XLAPIENTRY xlSheetLastFilledColA(SheetHandle handle);
 
     XLAPI            int XLAPIENTRY xlSheetDisplayGridlinesA(SheetHandle handle);
     XLAPI           void XLAPIENTRY xlSheetSetDisplayGridlinesA(SheetHandle handle, int show);
@@ -175,6 +214,7 @@ extern "C"
     XLAPI            int XLAPIENTRY xlSheetNamedRangeSizeA(SheetHandle handle);
     XLAPI    const char* XLAPIENTRY xlSheetNamedRangeA(SheetHandle handle, int index, int* rowFirst, int* rowLast, int* colFirst, int* colLast, int* scopeId, int* hidden);
 
+    XLAPI            int XLAPIENTRY xlSheetGetTableA(SheetHandle handle, const char* name, int* rowFirst, int* rowLast, int* colFirst, int* colLast, int* headerRowCount, int* totalsRowCount);
     XLAPI            int XLAPIENTRY xlSheetTableSizeA(SheetHandle handle);
     XLAPI    const char* XLAPIENTRY xlSheetTableA(SheetHandle handle, int index, int* rowFirst, int* rowLast, int* colFirst, int* colLast, int* headerRowCount, int* totalsRowCount);
 
@@ -182,7 +222,9 @@ extern "C"
     XLAPI    const char* XLAPIENTRY xlSheetHyperlinkA(SheetHandle handle, int index, int* rowFirst, int* rowLast, int* colFirst, int* colLast);
     XLAPI            int XLAPIENTRY xlSheetDelHyperlinkA(SheetHandle handle, int index);
     XLAPI           void XLAPIENTRY xlSheetAddHyperlinkA(SheetHandle handle, const char* hyperlink, int rowFirst, int rowLast, int colFirst, int colLast);
+    XLAPI            int XLAPIENTRY xlSheetHyperlinkIndexA(SheetHandle handle, int row, int col);
 
+    XLAPI            int XLAPIENTRY xlSheetIsAutoFilterA(SheetHandle handle);
     XLAPI AutoFilterHandle XLAPIENTRY xlSheetAutoFilterA(SheetHandle handle);
     XLAPI           void XLAPIENTRY xlSheetApplyFilterA(SheetHandle handle);
     XLAPI           void XLAPIENTRY xlSheetRemoveFilterA(SheetHandle handle);
@@ -208,7 +250,10 @@ extern "C"
     XLAPI           void XLAPIENTRY xlSheetAddrToRowColA(SheetHandle handle, const char* addr, int* row, int* col, int* rowRelative, int* colRelative);
     XLAPI    const char* XLAPIENTRY xlSheetRowColToAddrA(SheetHandle handle, int row, int col, int rowRelative, int colRelative);
 
+    XLAPI            int XLAPIENTRY xlSheetTabColorA(SheetHandle handle);
     XLAPI           void XLAPIENTRY xlSheetSetTabColorA(SheetHandle handle, int color);
+
+    XLAPI            int XLAPIENTRY xlSheetGetTabRgbColorA(SheetHandle handle, int* red, int* green, int* blue);
     XLAPI           void XLAPIENTRY xlSheetSetTabRgbColorA(SheetHandle handle, int red, int green, int blue);
 
     XLAPI            int XLAPIENTRY xlSheetAddIgnoredErrorA(SheetHandle handle, int rowFirst, int colFirst, int rowLast, int colLast, int iError);
@@ -226,6 +271,18 @@ extern "C"
                                                                const char* errorTitle, const char* error, int errorStyle);
 
     XLAPI           void XLAPIENTRY xlSheetRemoveDataValidationsA(SheetHandle handle);
+
+    XLAPI           int XLAPIENTRY xlSheetFormControlSizeA(SheetHandle handle);
+    XLAPI FormControlHandle XLAPIENTRY xlSheetFormControlA(SheetHandle handle, int index);
+
+    XLAPI ConditionalFormattingHandle XLAPIENTRY xlSheetAddConditionalFormattingA(SheetHandle handle);
+
+    XLAPI int XLAPIENTRY xlSheetGetActiveCellA(SheetHandle handle, int* row, int* col);
+    XLAPI void XLAPIENTRY xlSheetSetActiveCellA(SheetHandle handle, int row, int col);
+
+    XLAPI const char* XLAPIENTRY xlSheetSelectionRangeA(SheetHandle handle);
+    XLAPI void XLAPIENTRY xlSheetAddSelectionRangeA(SheetHandle handle, const char* sqref);
+    XLAPI void XLAPIENTRY xlSheetRemoveSelectionA(SheetHandle handle);
 
 #ifdef __cplusplus
 }

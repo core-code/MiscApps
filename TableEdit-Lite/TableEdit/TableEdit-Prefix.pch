@@ -82,7 +82,6 @@
 		inputFormatDECPOINT_GROUPSPACE
 	};
 
-	#import "../Frameworks/Sparkle.framework/Headers/SUUpdater.h"
 	#import <WebKit/WebKit.h>
 
 

@@ -1,7 +1,20 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+//                    LibXL C++ headers version 4.2.0                        //
+//                                                                           //
+//                 Copyright (c) 2008 - 2023 XLware s.r.o.                   //
+//                                                                           //
+//   THIS FILE AND THE SOFTWARE CONTAINED HEREIN IS PROVIDED 'AS IS' AND     //
+//                COMES WITH NO WARRANTIES OF ANY KIND.                      //
+//                                                                           //
+//          Please define LIBXL_STATIC variable for static linking.          //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+
 #ifndef LIBXL_C_H
 #define LIBXL_C_H
 
-#define LIBXL_VERSION 0x03080100
+#define LIBXL_VERSION 0x04020000
 
 #ifdef _UNICODE
 
@@ -11,6 +24,9 @@
     #include "FontW.h"
     #include "AutoFilterW.h"
     #include "FilterColumnW.h"
+    #include "RichStringW.h"
+    #include "ConditionalFormatW.h"
+    #include "ConditionalFormattingW.h"
 
     #define xlCreateBook xlCreateBookCW
     #define xlCreateXMLBook xlCreateXMLBookCW
@@ -20,24 +36,30 @@
     #define xlBookSaveUsingTempFile xlBookSaveUsingTempFileW
     #define xlBookLoadPartially xlBookLoadPartiallyW
     #define xlBookLoadPartiallyUsingTempFile xlBookLoadPartiallyUsingTempFileW
+    #define xlBookLoadWithoutEmptyCells xlBookLoadWithoutEmptyCellsW
+    #define xlBookLoadInfo xlBookLoadInfoW
     #define xlBookLoadRaw xlBookLoadRawW
     #define xlBookLoadRawPartially xlBookLoadRawPartiallyW
     #define xlBookSaveRaw xlBookSaveRawW
     #define xlBookAddSheet xlBookAddSheetW
     #define xlBookInsertSheet xlBookInsertSheetW
     #define xlBookGetSheet xlBookGetSheetW
+    #define xlBookGetSheetName xlBookGetSheetNameW
     #define xlBookSheetType xlBookSheetTypeW
     #define xlBookMoveSheet xlBookMoveSheetW
     #define xlBookDelSheet xlBookDelSheetW
     #define xlBookSheetCount xlBookSheetCountW
     #define xlBookAddFormat xlBookAddFormatW
+    #define xlBookAddFormatFromStyle xlBookAddFormatFromStyleW
     #define xlBookAddFont xlBookAddFontW
+    #define xlBookAddRichString xlBookAddRichStringW
     #define xlBookAddCustomNumFormat xlBookAddCustomNumFormatW
     #define xlBookCustomNumFormat xlBookCustomNumFormatW
     #define xlBookFormat xlBookFormatW
     #define xlBookFormatSize xlBookFormatSizeW
     #define xlBookFont xlBookFontW
     #define xlBookFontSize xlBookFontSizeW
+    #define xlBookAddConditionalFormat xlBookAddConditionalFormatW
     #define xlBookDatePack xlBookDatePackW
     #define xlBookDateUnpack xlBookDateUnpackW
     #define xlBookColorPack xlBookColorPackW
@@ -56,12 +78,15 @@
     #define xlBookSetRefR1C1 xlBookSetRefR1C1W
     #define xlBookRgbMode xlBookRgbModeW
     #define xlBookSetRgbMode xlBookSetRgbModeW
+    #define xlBookCalcMode xlBookCalcModeW
+    #define xlBookSetCalcMode xlBookSetCalcModeW
     #define xlBookVersion xlBookVersionW
     #define xlBookBiffVersion xlBookBiffVersionW
     #define xlBookIsDate1904 xlBookIsDate1904W
     #define xlBookSetDate1904 xlBookSetDate1904W
     #define xlBookIsTemplate xlBookIsTemplateW
     #define xlBookSetTemplate xlBookSetTemplateW
+    #define xlBookIsWriteProtected xlBookIsWriteProtectedW
     #define xlBookSetLocale xlBookSetLocaleW
     #define xlBookErrorMessage xlBookErrorMessageW
     #define xlBookRelease xlBookReleaseW
@@ -72,6 +97,9 @@
     #define xlSheetIsFormula xlSheetIsFormulaW
     #define xlSheetReadStr xlSheetReadStrW
     #define xlSheetWriteStr xlSheetWriteStrW
+    #define xlSheetWriteStrAsNum xlSheetWriteStrAsNumW
+    #define xlSheetReadRichStr xlSheetReadRichStrW
+    #define xlSheetWriteRichStr xlSheetWriteRichStrW
     #define xlSheetReadNum xlSheetReadNumW
     #define xlSheetWriteNum xlSheetWriteNumW
     #define xlSheetReadBool xlSheetReadBoolW
@@ -87,16 +115,23 @@
     #define xlSheetWriteComment xlSheetWriteCommentW
     #define xlSheetRemoveComment xlSheetRemoveCommentW
     #define xlSheetIsDate xlSheetIsDateW
+    #define xlSheetIsRichStr xlSheetIsRichStrW
     #define xlSheetReadError xlSheetReadErrorW
     #define xlSheetWriteError xlSheetWriteErrorW
     #define xlSheetColWidth xlSheetColWidthW
     #define xlSheetRowHeight xlSheetRowHeightW
+    #define xlSheetColWidthPx xlSheetColWidthPxW
+    #define xlSheetRowHeightPx xlSheetRowHeightPxW
     #define xlSheetSetCol xlSheetSetColW
+    #define xlSheetSetColPx xlSheetSetColPxW
     #define xlSheetSetRow xlSheetSetRowW
+    #define xlSheetSetRowPx xlSheetSetRowPxW
     #define xlSheetRowHidden xlSheetRowHiddenW
     #define xlSheetSetRowHidden xlSheetSetRowHiddenW
     #define xlSheetColHidden xlSheetColHiddenW
     #define xlSheetSetColHidden xlSheetSetColHiddenW
+    #define xlSheetDefaultRowHeight xlSheetDefaultRowHeightW
+    #define xlSheetSetDefaultRowHeight xlSheetSetDefaultRowHeightW
     #define xlSheetGetMerge xlSheetGetMergeW
     #define xlSheetSetMerge xlSheetSetMergeW
     #define xlSheetDelMerge xlSheetDelMergeW
@@ -105,8 +140,10 @@
     #define xlSheetDelMergeByIndex xlSheetDelMergeByIndexW
     #define xlSheetPictureSize xlSheetPictureSizeW
     #define xlSheetGetPicture xlSheetGetPictureW
+    #define xlSheetRemovePictureByIndex xlSheetRemovePictureByIndexW
     #define xlSheetSetPicture xlSheetSetPictureW
     #define xlSheetSetPicture2 xlSheetSetPicture2W
+    #define xlSheetRemovePicture xlSheetRemovePictureW
     #define xlSheetGetHorPageBreak xlSheetGetHorPageBreakW
     #define xlSheetGetHorPageBreakSize xlSheetGetHorPageBreakSizeW
     #define xlSheetGetVerPageBreak xlSheetGetVerPageBreakW
@@ -126,11 +163,19 @@
     #define xlSheetInsertRow xlSheetInsertRowW
     #define xlSheetRemoveCol xlSheetRemoveColW
     #define xlSheetRemoveRow xlSheetRemoveRowW
+    #define xlSheetInsertColAndKeepRanges xlSheetInsertColAndKeepRangesW
+    #define xlSheetInsertRowAndKeepRanges xlSheetInsertRowAndKeepRangesW
+    #define xlSheetRemoveColAndKeepRanges xlSheetRemoveColAndKeepRangesW
+    #define xlSheetRemoveRowAndKeepRanges xlSheetRemoveRowAndKeepRangesW
     #define xlSheetCopyCell xlSheetCopyCellW
     #define xlSheetFirstRow xlSheetFirstRowW
     #define xlSheetLastRow xlSheetLastRowW
     #define xlSheetFirstCol xlSheetFirstColW
     #define xlSheetLastCol xlSheetLastColW
+    #define xlSheetFirstFilledRow xlSheetFirstFilledRowW
+    #define xlSheetLastFilledRow xlSheetLastFilledRowW
+    #define xlSheetFirstFilledCol xlSheetFirstFilledColW
+    #define xlSheetLastFilledCol xlSheetLastFilledColW
     #define xlSheetDisplayGridlines xlSheetDisplayGridlinesW
     #define xlSheetSetDisplayGridlines xlSheetSetDisplayGridlinesW
     #define xlSheetPrintGridlines xlSheetPrintGridlinesW
@@ -178,12 +223,15 @@
     #define xlSheetDelNamedRange xlSheetDelNamedRangeW
     #define xlSheetNamedRangeSize xlSheetNamedRangeSizeW
     #define xlSheetNamedRange xlSheetNamedRangeW
+    #define xlSheetGetTable xlSheetGetTableW
     #define xlSheetTableSize xlSheetTableSizeW
     #define xlSheetTable xlSheetTableW
     #define xlSheetHyperlinkSize xlSheetHyperlinkSizeW
     #define xlSheetHyperlink xlSheetHyperlinkW
     #define xlSheetDelHyperlink xlSheetDelHyperlinkW
     #define xlSheetAddHyperlink xlSheetAddHyperlinkW
+    #define xlSheetHyperlinkIndex xlSheetHyperlinkIndexW
+    #define xlSheetIsAutoFilter xlSheetIsAutoFilterW
     #define xlSheetAutoFilter xlSheetAutoFilterW
     #define xlSheetApplyFilter xlSheetApplyFilterW
     #define xlSheetRemoveFilter xlSheetRemoveFilterW
@@ -201,7 +249,9 @@
     #define xlSheetSetAutoFitArea xlSheetSetAutoFitAreaW
     #define xlSheetAddrToRowCol xlSheetAddrToRowColW
     #define xlSheetRowColToAddr xlSheetRowColToAddrW
+    #define xlSheetTabColor xlSheetTabColorW
     #define xlSheetSetTabColor xlSheetSetTabColorW
+    #define xlSheetGetTabRgbColor xlSheetGetTabRgbColorW
     #define xlSheetSetTabRgbColor xlSheetSetTabRgbColorW
     #define xlSheetAddIgnoredError xlSheetAddIgnoredErrorW
     #define xlSheetAddDataValidation xlSheetAddDataValidationW
@@ -209,6 +259,14 @@
     #define xlSheetAddDataValidationDouble xlSheetAddDataValidationDoubleW
     #define xlSheetAddDataValidationDoubleEx xlSheetAddDataValidationDoubleExW
     #define xlSheetRemoveDataValidations xlSheetRemoveDataValidationsW
+    #define xlSheetFormControlSize xlSheetFormControlSizeW
+    #define xlSheetFormControl xlSheetFormControlW
+    #define xlSheetAddConditionalFormatting xlSheetAddConditionalFormattingW
+    #define xlSheetGetActiveCell xlSheetGetActiveCellW
+    #define xlSheetSetActiveCell xlSheetSetActiveCellW
+    #define xlSheetSelectionRange xlSheetSelectionRangeW
+    #define xlSheetAddSelectionRange xlSheetAddSelectionRangeW
+    #define xlSheetRemoveSelection xlSheetRemoveSelectionW
 
     #define xlFontSize xlFontSizeW
     #define xlFontSetSize xlFontSetSizeW
@@ -286,6 +344,7 @@
     #define xlAutoFilterGetSortRange xlAutoFilterGetSortRangeW
     #define xlAutoFilterGetSort xlAutoFilterGetSortW
     #define xlAutoFilterSetSort xlAutoFilterSetSortW
+    #define xlAutoFilterAddSort xlAutoFilterAddSortW
 
     #define xlFilterColumnIndex xlFilterColumnIndexW
     #define xlFilterColumnFilterType xlFilterColumnFilterTypeW
@@ -299,6 +358,99 @@
     #define xlFilterColumnSetCustomFilterEx xlFilterColumnSetCustomFilterExW
     #define xlFilterColumnClear xlFilterColumnClearW
 
+    #define xlRichStringAddFont xlRichStringAddFontW
+    #define xlRichStringAddText xlRichStringAddTextW
+    #define xlRichStringGetText xlRichStringGetTextW
+    #define xlRichStringTextSize xlRichStringTextSizeW
+
+    #define xlFormControlObjectType xlFormControlObjectTypeW
+    #define xlFormControlChecked xlFormControlCheckedW
+    #define xlFormControlSetChecked xlFormControlSetCheckedW
+    #define xlFormControlFmlaGroup xlFormControlFmlaGroupW
+    #define xlFormControlSetFmlaGroup xlFormControlSetFmlaGroupW
+    #define xlFormControlFmlaLink xlFormControlFmlaLinkW
+    #define xlFormControlSetFmlaLink xlFormControlSetFmlaLinkW
+    #define xlFormControlFmlaRange xlFormControlFmlaRangeW
+    #define xlFormControlSetFmlaRange xlFormControlSetFmlaRangeW
+    #define xlFormControlFmlaTxbx xlFormControlFmlaTxbxW
+    #define xlFormControlSetFmlaTxbx xlFormControlSetFmlaTxbxW
+    #define xlFormControlName xlFormControlNameW
+    #define xlFormControlLinkedCell xlFormControlLinkedCellW
+    #define xlFormControlListFillRange xlFormControlListFillRangeW
+    #define xlFormControlMacro xlFormControlMacroW
+    #define xlFormControlAltText xlFormControlAltTextW
+    #define xlFormControlLocked xlFormControlLockedW
+    #define xlFormControlDefaultSize xlFormControlDefaultSizeW
+    #define xlFormControlPrint xlFormControlPrintW
+    #define xlFormControlDisabled xlFormControlDisabledW
+    #define xlFormControlItem xlFormControlItemW
+    #define xlFormControlItemSize xlFormControlItemSizeW
+    #define xlFormControlAddItem xlFormControlAddItemW
+    #define xlFormControlInsertItem xlFormControlInsertItemW
+    #define xlFormControlClearItems xlFormControlClearItemsW
+    #define xlFormControlDropLines xlFormControlDropLinesW
+    #define xlFormControlSetDropLines xlFormControlSetDropLinesW
+    #define xlFormControlDx xlFormControlDxW
+    #define xlFormControlSetDx xlFormControlSetDxW
+    #define xlFormControlFirstButton xlFormControlFirstButtonW
+    #define xlFormControlSetFirstButton xlFormControlSetFirstButtonW
+    #define xlFormControlHoriz xlFormControlHorizW
+    #define xlFormControlSetHoriz xlFormControlSetHorizW
+    #define xlFormControlInc xlFormControlIncW
+    #define xlFormControlSetInc xlFormControlSetIncW
+    #define xlFormControlGetMax xlFormControlGetMaxW
+    #define xlFormControlSetMax xlFormControlSetMaxW
+    #define xlFormControlGetMin xlFormControlGetMinW
+    #define xlFormControlSetMin xlFormControlSetMinW
+    #define xlFormControlMultiSel xlFormControlMultiSelW
+    #define xlFormControlSetMultiSel xlFormControlSetMultiSelW
+    #define xlFormControlSel xlFormControlSelW
+    #define xlFormControlSetSel xlFormControlSetSelW
+    #define xlFormControlFromAnchor xlFormControlFromAnchorW
+    #define xlFormControlToAnchor xlFormControlToAnchorW
+
+    #define xlConditionalFormattingAddRange xlConditionalFormattingAddRangeW
+    #define xlConditionalFormattingAddRule xlConditionalFormattingAddRuleW
+    #define xlConditionalFormattingAddTopRule xlConditionalFormattingAddTopRuleW
+    #define xlConditionalFormattingAddOpNumRule xlConditionalFormattingAddOpNumRuleW
+    #define xlConditionalFormattingAddOpStrRule xlConditionalFormattingAddOpStrRuleW
+    #define xlConditionalFormattingAddAboveAverageRule xlConditionalFormattingAddAboveAverageRuleW
+    #define xlConditionalFormattingAddTimePeriodRule xlConditionalFormattingAddTimePeriodRuleW
+    #define xlConditionalFormattingAdd2ColorScaleRule xlConditionalFormattingAdd2ColorScaleRuleW
+    #define xlConditionalFormattingAdd2ColorScaleFormulaRule xlConditionalFormattingAdd2ColorScaleFormulaRuleW
+    #define xlConditionalFormattingAdd3ColorScaleRule xlConditionalFormattingAdd3ColorScaleRuleW
+    #define xlConditionalFormattingAdd3ColorScaleFormulaRule xlConditionalFormattingAdd3ColorScaleFormulaRuleW
+
+    #define xlConditionalFormatFont xlConditionalFormatFontW
+    #define xlConditionalFormatNumFormat xlConditionalFormatNumFormatW
+    #define xlConditionalFormatSetNumFormat xlConditionalFormatSetNumFormatW
+    #define xlConditionalFormatCustomNumFormat xlConditionalFormatCustomNumFormatW
+    #define xlConditionalFormatSetCustomNumFormat xlConditionalFormatSetCustomNumFormatW
+    #define xlConditionalFormatSetBorder xlConditionalFormatSetBorderW
+    #define xlConditionalFormatSetBorderColor xlConditionalFormatSetBorderColorW
+    #define xlConditionalFormatBorderLeft xlConditionalFormatBorderLeftW
+    #define xlConditionalFormatSetBorderLeft xlConditionalFormatSetBorderLeftW
+    #define xlConditionalFormatBorderRight xlConditionalFormatBorderRightW
+    #define xlConditionalFormatSetBorderRight xlConditionalFormatSetBorderRightW
+    #define xlConditionalFormatBorderTop xlConditionalFormatBorderTopW
+    #define xlConditionalFormatSetBorderTop xlConditionalFormatSetBorderTopW
+    #define xlConditionalFormatBorderBottom xlConditionalFormatBorderBottomW
+    #define xlConditionalFormatSetBorderBottom xlConditionalFormatSetBorderBottomW
+    #define xlConditionalFormatBorderLeftColor xlConditionalFormatBorderLeftColorW
+    #define xlConditionalFormatSetBorderLeftColor xlConditionalFormatSetBorderLeftColorW
+    #define xlConditionalFormatBorderRightColor xlConditionalFormatBorderRightColorW
+    #define xlConditionalFormatSetBorderRightColor xlConditionalFormatSetBorderRightColorW
+    #define xlConditionalFormatBorderTopColor xlConditionalFormatBorderTopColorW
+    #define xlConditionalFormatSetBorderTopColor xlConditionalFormatSetBorderTopColorW
+    #define xlConditionalFormatBorderBottomColor xlConditionalFormatBorderBottomColorW
+    #define xlConditionalFormatSetBorderBottomColor xlConditionalFormatSetBorderBottomColorW
+    #define xlConditionalFormatFillPattern xlConditionalFormatFillPatternW
+    #define xlConditionalFormatSetFillPattern xlConditionalFormatSetFillPatternW
+    #define xlConditionalFormatPatternForegroundColor xlConditionalFormatPatternForegroundColorW
+    #define xlConditionalFormatSetPatternForegroundColor xlConditionalFormatSetPatternForegroundColorW
+    #define xlConditionalFormatPatternBackgroundColor xlConditionalFormatPatternBackgroundColorW
+    #define xlConditionalFormatSetPatternBackgroundColor xlConditionalFormatSetPatternBackgroundColorW
+
 #else
 
     #include "BookA.h"
@@ -307,6 +459,9 @@
     #include "FontA.h"
     #include "AutoFilterA.h"
     #include "FilterColumnA.h"
+    #include "RichStringA.h"
+    #include "ConditionalFormatA.h"
+    #include "ConditionalFormattingA.h"
 
     #define xlCreateBook xlCreateBookCA
     #define xlCreateXMLBook xlCreateXMLBookCA
@@ -316,24 +471,30 @@
     #define xlBookSaveUsingTempFile xlBookSaveUsingTempFileA
     #define xlBookLoadPartially xlBookLoadPartiallyA
     #define xlBookLoadPartiallyUsingTempFile xlBookLoadPartiallyUsingTempFileA
+    #define xlBookLoadWithoutEmptyCells xlBookLoadWithoutEmptyCellsA
+    #define xlBookLoadInfo xlBookLoadInfoA
     #define xlBookLoadRaw xlBookLoadRawA
     #define xlBookLoadRawPartially xlBookLoadRawPartiallyA
     #define xlBookSaveRaw xlBookSaveRawA
     #define xlBookAddSheet xlBookAddSheetA
     #define xlBookInsertSheet xlBookInsertSheetA
     #define xlBookGetSheet xlBookGetSheetA
+    #define xlBookGetSheetName xlBookGetSheetNameA
     #define xlBookSheetType xlBookSheetTypeA
     #define xlBookMoveSheet xlBookMoveSheetA
     #define xlBookDelSheet xlBookDelSheetA
     #define xlBookSheetCount xlBookSheetCountA
     #define xlBookAddFormat xlBookAddFormatA
+    #define xlBookAddFormatFromStyle xlBookAddFormatFromStyleA
     #define xlBookAddFont xlBookAddFontA
+    #define xlBookAddRichString xlBookAddRichStringA
     #define xlBookAddCustomNumFormat xlBookAddCustomNumFormatA
     #define xlBookCustomNumFormat xlBookCustomNumFormatA
     #define xlBookFormat xlBookFormatA
     #define xlBookFormatSize xlBookFormatSizeA
     #define xlBookFont xlBookFontA
     #define xlBookFontSize xlBookFontSizeA
+    #define xlBookAddConditionalFormat xlBookAddConditionalFormatA
     #define xlBookDatePack xlBookDatePackA
     #define xlBookDateUnpack xlBookDateUnpackA
     #define xlBookColorPack xlBookColorPackA
@@ -352,12 +513,15 @@
     #define xlBookSetRefR1C1 xlBookSetRefR1C1A
     #define xlBookRgbMode xlBookRgbModeA
     #define xlBookSetRgbMode xlBookSetRgbModeA
+    #define xlBookCalcMode xlBookCalcModeA
+    #define xlBookSetCalcMode xlBookSetCalcModeA
     #define xlBookVersion xlBookVersionA
     #define xlBookBiffVersion xlBookBiffVersionA
     #define xlBookIsDate1904 xlBookIsDate1904A
     #define xlBookSetDate1904 xlBookSetDate1904A
     #define xlBookIsTemplate xlBookIsTemplateA
     #define xlBookSetTemplate xlBookSetTemplateA
+    #define xlBookIsWriteProtected xlBookIsWriteProtectedA
     #define xlBookSetLocale xlBookSetLocaleA
     #define xlBookErrorMessage xlBookErrorMessageA
     #define xlBookRelease xlBookReleaseA
@@ -368,6 +532,9 @@
     #define xlSheetIsFormula xlSheetIsFormulaA
     #define xlSheetReadStr xlSheetReadStrA
     #define xlSheetWriteStr xlSheetWriteStrA
+    #define xlSheetWriteStrAsNum xlSheetWriteStrAsNumA
+    #define xlSheetReadRichStr xlSheetReadRichStrA
+    #define xlSheetWriteRichStr xlSheetWriteRichStrA
     #define xlSheetReadNum xlSheetReadNumA
     #define xlSheetWriteNum xlSheetWriteNumA
     #define xlSheetReadBool xlSheetReadBoolA
@@ -383,16 +550,23 @@
     #define xlSheetWriteComment xlSheetWriteCommentA
     #define xlSheetRemoveComment xlSheetRemoveCommentA
     #define xlSheetIsDate xlSheetIsDateA
+    #define xlSheetIsRichStr xlSheetIsRichStrA
     #define xlSheetReadError xlSheetReadErrorA
     #define xlSheetWriteError xlSheetWriteErrorA
     #define xlSheetColWidth xlSheetColWidthA
     #define xlSheetRowHeight xlSheetRowHeightA
+    #define xlSheetColWidthPx xlSheetColWidthPxA
+    #define xlSheetRowHeightPx xlSheetRowHeightPxA
     #define xlSheetSetCol xlSheetSetColA
+    #define xlSheetSetColPx xlSheetSetColPxA
     #define xlSheetSetRow xlSheetSetRowA
+    #define xlSheetSetRowPx xlSheetSetRowPxA
     #define xlSheetRowHidden xlSheetRowHiddenA
     #define xlSheetSetRowHidden xlSheetSetRowHiddenA
     #define xlSheetColHidden xlSheetColHiddenA
     #define xlSheetSetColHidden xlSheetSetColHiddenA
+    #define xlSheetDefaultRowHeight xlSheetDefaultRowHeightA
+    #define xlSheetSetDefaultRowHeight xlSheetSetDefaultRowHeightA
     #define xlSheetGetMerge xlSheetGetMergeA
     #define xlSheetSetMerge xlSheetSetMergeA
     #define xlSheetDelMerge xlSheetDelMergeA
@@ -401,8 +575,10 @@
     #define xlSheetDelMergeByIndex xlSheetDelMergeByIndexA
     #define xlSheetPictureSize xlSheetPictureSizeA
     #define xlSheetGetPicture xlSheetGetPictureA
+    #define xlSheetRemovePictureByIndex xlSheetRemovePictureByIndexA
     #define xlSheetSetPicture xlSheetSetPictureA
     #define xlSheetSetPicture2 xlSheetSetPicture2A
+    #define xlSheetRemovePicture xlSheetRemovePictureA
     #define xlSheetGetHorPageBreak xlSheetGetHorPageBreakA
     #define xlSheetGetHorPageBreakSize xlSheetGetHorPageBreakSizeA
     #define xlSheetGetVerPageBreak xlSheetGetVerPageBreakA
@@ -422,11 +598,19 @@
     #define xlSheetInsertRow xlSheetInsertRowA
     #define xlSheetRemoveCol xlSheetRemoveColA
     #define xlSheetRemoveRow xlSheetRemoveRowA
+    #define xlSheetInsertColAndKeepRanges xlSheetInsertColAndKeepRangesA
+    #define xlSheetInsertRowAndKeepRanges xlSheetInsertRowAndKeepRangesA
+    #define xlSheetRemoveColAndKeepRanges xlSheetRemoveColAndKeepRangesA
+    #define xlSheetRemoveRowAndKeepRanges xlSheetRemoveRowAndKeepRangesA
     #define xlSheetCopyCell xlSheetCopyCellA
     #define xlSheetFirstRow xlSheetFirstRowA
     #define xlSheetLastRow xlSheetLastRowA
     #define xlSheetFirstCol xlSheetFirstColA
     #define xlSheetLastCol xlSheetLastColA
+    #define xlSheetFirstFilledRow xlSheetFirstFilledRowA
+    #define xlSheetLastFilledRow xlSheetLastFilledRowA
+    #define xlSheetFirstFilledCol xlSheetFirstFilledColA
+    #define xlSheetLastFilledCol xlSheetLastFilledColA
     #define xlSheetDisplayGridlines xlSheetDisplayGridlinesA
     #define xlSheetSetDisplayGridlines xlSheetSetDisplayGridlinesA
     #define xlSheetPrintGridlines xlSheetPrintGridlinesA
@@ -474,12 +658,15 @@
     #define xlSheetDelNamedRange xlSheetDelNamedRangeA
     #define xlSheetNamedRangeSize xlSheetNamedRangeSizeA
     #define xlSheetNamedRange xlSheetNamedRangeA
+    #define xlSheetGetTable xlSheetGetTableA
     #define xlSheetTableSize xlSheetTableSizeA
     #define xlSheetTable xlSheetTableA
     #define xlSheetHyperlinkSize xlSheetHyperlinkSizeA
     #define xlSheetHyperlink xlSheetHyperlinkA
     #define xlSheetDelHyperlink xlSheetDelHyperlinkA
     #define xlSheetAddHyperlink xlSheetAddHyperlinkA
+    #define xlSheetHyperlinkIndex xlSheetHyperlinkIndexA
+    #define xlSheetIsAutoFilter xlSheetIsAutoFilterA
     #define xlSheetAutoFilter xlSheetAutoFilterA
     #define xlSheetApplyFilter xlSheetApplyFilterA
     #define xlSheetRemoveFilter xlSheetRemoveFilterA
@@ -497,7 +684,9 @@
     #define xlSheetSetAutoFitArea xlSheetSetAutoFitAreaA
     #define xlSheetAddrToRowCol xlSheetAddrToRowColA
     #define xlSheetRowColToAddr xlSheetRowColToAddrA
+    #define xlSheetTabColor xlSheetTabColorA
     #define xlSheetSetTabColor xlSheetSetTabColorA
+    #define xlSheetGetTabRgbColor xlSheetGetTabRgbColorA
     #define xlSheetSetTabRgbColor xlSheetSetTabRgbColorA
     #define xlSheetAddIgnoredError xlSheetAddIgnoredErrorA
     #define xlSheetAddDataValidation xlSheetAddDataValidationA
@@ -505,6 +694,14 @@
     #define xlSheetAddDataValidationDouble xlSheetAddDataValidationDoubleA
     #define xlSheetAddDataValidationDoubleEx xlSheetAddDataValidationDoubleExA
     #define xlSheetRemoveDataValidations xlSheetRemoveDataValidationsA
+    #define xlSheetFormControlSize xlSheetFormControlSizeA
+    #define xlSheetFormControl xlSheetFormControlA
+    #define xlSheetAddConditionalFormatting xlSheetAddConditionalFormattingA
+    #define xlSheetGetActiveCell xlSheetGetActiveCellA
+    #define xlSheetSetActiveCell xlSheetSetActiveCellA
+    #define xlSheetSelectionRange xlSheetSelectionRangeA
+    #define xlSheetAddSelectionRange xlSheetAddSelectionRangeA
+    #define xlSheetRemoveSelection xlSheetRemoveSelectionA
 
     #define xlFontSize xlFontSizeA
     #define xlFontSetSize xlFontSetSizeA
@@ -582,6 +779,7 @@
     #define xlAutoFilterGetSortRange xlAutoFilterGetSortRangeA
     #define xlAutoFilterGetSort xlAutoFilterGetSortA
     #define xlAutoFilterSetSort xlAutoFilterSetSortA
+    #define xlAutoFilterAddSort xlAutoFilterAddSortA
 
     #define xlFilterColumnIndex xlFilterColumnIndexA
     #define xlFilterColumnFilterType xlFilterColumnFilterTypeA
@@ -594,6 +792,99 @@
     #define xlFilterColumnSetCustomFilter xlFilterColumnSetCustomFilterA
     #define xlFilterColumnSetCustomFilterEx xlFilterColumnSetCustomFilterExA
     #define xlFilterColumnClear xlFilterColumnClearA
+
+    #define xlRichStringAddFont xlRichStringAddFontA
+    #define xlRichStringAddText xlRichStringAddTextA
+    #define xlRichStringGetText xlRichStringGetTextA
+    #define xlRichStringTextSize xlRichStringTextSizeA
+
+    #define xlFormControlObjectType xlFormControlObjectTypeA
+    #define xlFormControlChecked xlFormControlCheckedA
+    #define xlFormControlSetChecked xlFormControlSetCheckedA
+    #define xlFormControlFmlaGroup xlFormControlFmlaGroupA
+    #define xlFormControlSetFmlaGroup xlFormControlSetFmlaGroupA
+    #define xlFormControlFmlaLink xlFormControlFmlaLinkA
+    #define xlFormControlSetFmlaLink xlFormControlSetFmlaLinkA
+    #define xlFormControlFmlaRange xlFormControlFmlaRangeA
+    #define xlFormControlSetFmlaRange xlFormControlSetFmlaRangeA
+    #define xlFormControlFmlaTxbx xlFormControlFmlaTxbxA
+    #define xlFormControlSetFmlaTxbx xlFormControlSetFmlaTxbxA
+    #define xlFormControlName xlFormControlNameA
+    #define xlFormControlLinkedCell xlFormControlLinkedCellA
+    #define xlFormControlListFillRange xlFormControlListFillRangeA
+    #define xlFormControlMacro xlFormControlMacroA
+    #define xlFormControlAltText xlFormControlAltTextA
+    #define xlFormControlLocked xlFormControlLockedA
+    #define xlFormControlDefaultSize xlFormControlDefaultSizeA
+    #define xlFormControlPrint xlFormControlPrintA
+    #define xlFormControlDisabled xlFormControlDisabledA
+    #define xlFormControlItem xlFormControlItemA
+    #define xlFormControlItemSize xlFormControlItemSizeA
+    #define xlFormControlAddItem xlFormControlAddItemA
+    #define xlFormControlInsertItem xlFormControlInsertItemA
+    #define xlFormControlClearItems xlFormControlClearItemsA
+    #define xlFormControlDropLines xlFormControlDropLinesA
+    #define xlFormControlSetDropLines xlFormControlSetDropLinesA
+    #define xlFormControlDx xlFormControlDxA
+    #define xlFormControlSetDx xlFormControlSetDxA
+    #define xlFormControlFirstButton xlFormControlFirstButtonA
+    #define xlFormControlSetFirstButton xlFormControlSetFirstButtonA
+    #define xlFormControlHoriz xlFormControlHorizA
+    #define xlFormControlSetHoriz xlFormControlSetHorizA
+    #define xlFormControlInc xlFormControlIncA
+    #define xlFormControlSetInc xlFormControlSetIncA
+    #define xlFormControlGetMax xlFormControlGetMaxA
+    #define xlFormControlSetMax xlFormControlSetMaxA
+    #define xlFormControlGetMin xlFormControlGetMinA
+    #define xlFormControlSetMin xlFormControlSetMinA
+    #define xlFormControlMultiSel xlFormControlMultiSelA
+    #define xlFormControlSetMultiSel xlFormControlSetMultiSelA
+    #define xlFormControlSel xlFormControlSelA
+    #define xlFormControlSetSel xlFormControlSetSelA
+    #define xlFormControlFromAnchor xlFormControlFromAnchorA
+    #define xlFormControlToAnchor xlFormControlToAnchorA
+
+    #define xlConditionalFormattingAddRange xlConditionalFormattingAddRangeA
+    #define xlConditionalFormattingAddRule xlConditionalFormattingAddRuleA
+    #define xlConditionalFormattingAddTopRule xlConditionalFormattingAddTopRuleA
+    #define xlConditionalFormattingAddOpNumRule xlConditionalFormattingAddOpNumRuleA
+    #define xlConditionalFormattingAddOpStrRule xlConditionalFormattingAddOpStrRuleA
+    #define xlConditionalFormattingAddAboveAverageRule xlConditionalFormattingAddAboveAverageRuleA
+    #define xlConditionalFormattingAddTimePeriodRule xlConditionalFormattingAddTimePeriodRuleA
+    #define xlConditionalFormattingAdd2ColorScaleRule xlConditionalFormattingAdd2ColorScaleRuleA
+    #define xlConditionalFormattingAdd2ColorScaleFormulaRule xlConditionalFormattingAdd2ColorScaleFormulaRuleA
+    #define xlConditionalFormattingAdd3ColorScaleRule xlConditionalFormattingAdd3ColorScaleRuleA
+    #define xlConditionalFormattingAdd3ColorScaleFormulaRule xlConditionalFormattingAdd3ColorScaleFormulaRuleA
+
+    #define xlConditionalFormatFont xlConditionalFormatFontA
+    #define xlConditionalFormatNumFormat xlConditionalFormatNumFormatA
+    #define xlConditionalFormatSetNumFormat xlConditionalFormatSetNumFormatA
+    #define xlConditionalFormatCustomNumFormat xlConditionalFormatCustomNumFormatA
+    #define xlConditionalFormatSetCustomNumFormat xlConditionalFormatSetCustomNumFormatA
+    #define xlConditionalFormatSetBorder xlConditionalFormatSetBorderA
+    #define xlConditionalFormatSetBorderColor xlConditionalFormatSetBorderColorA
+    #define xlConditionalFormatBorderLeft xlConditionalFormatBorderLeftA
+    #define xlConditionalFormatSetBorderLeft xlConditionalFormatSetBorderLeftA
+    #define xlConditionalFormatBorderRight xlConditionalFormatBorderRightA
+    #define xlConditionalFormatSetBorderRight xlConditionalFormatSetBorderRightA
+    #define xlConditionalFormatBorderTop xlConditionalFormatBorderTopA
+    #define xlConditionalFormatSetBorderTop xlConditionalFormatSetBorderTopA
+    #define xlConditionalFormatBorderBottom xlConditionalFormatBorderBottomA
+    #define xlConditionalFormatSetBorderBottom xlConditionalFormatSetBorderBottomA
+    #define xlConditionalFormatBorderLeftColor xlConditionalFormatBorderLeftColorA
+    #define xlConditionalFormatSetBorderLeftColor xlConditionalFormatSetBorderLeftColorA
+    #define xlConditionalFormatBorderRightColor xlConditionalFormatBorderRightColorA
+    #define xlConditionalFormatSetBorderRightColor xlConditionalFormatSetBorderRightColorA
+    #define xlConditionalFormatBorderTopColor xlConditionalFormatBorderTopColorA
+    #define xlConditionalFormatSetBorderTopColor xlConditionalFormatSetBorderTopColorA
+    #define xlConditionalFormatBorderBottomColor xlConditionalFormatBorderBottomColorA
+    #define xlConditionalFormatSetBorderBottomColor xlConditionalFormatSetBorderBottomColorA
+    #define xlConditionalFormatFillPattern xlConditionalFormatFillPatternA
+    #define xlConditionalFormatSetFillPattern xlConditionalFormatSetFillPatternA
+    #define xlConditionalFormatPatternForegroundColor xlConditionalFormatPatternForegroundColorA
+    #define xlConditionalFormatSetPatternForegroundColor xlConditionalFormatSetPatternForegroundColorA
+    #define xlConditionalFormatPatternBackgroundColor xlConditionalFormatPatternBackgroundColorA
+    #define xlConditionalFormatSetPatternBackgroundColor xlConditionalFormatSetPatternBackgroundColorA
 
 #endif
 

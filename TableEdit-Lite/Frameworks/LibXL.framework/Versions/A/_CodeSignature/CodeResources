@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		d+k0FGf0RdpywFAPv/lWFoUZgbY=
+		it+k959GQUa7SDF+7vXH3hIWi8A=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -15,187 +15,275 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9elV1EqM+nNKRYesMldJ+5irF0s=
+			kVrwEXfpKSZulK0jSBIwXwFGBMk=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ro3NauUXM7ToQFuv54w2hpcRLAv0Zxc+bXaOMabGHmI=
+			8Vog7guCVfwS7SttDCB3d8JG4Op+AZzseo9nAlET4p8=
 			</data>
 		</dict>
 		<key>Headers/AutoFilterW.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			55WmP3VYIE7jLejks61865U95kI=
+			KDpkp2xWCcX8akULDoxQ9xpsHlA=
 			</data>
 			<key>hash2</key>
 			<data>
-			sAjNFP/VF1KU3hreC/FjBX3xKQIPYGApOqpvn6dhrr4=
+			/cpJddR41apCowc1jqkThBkrqRCMT0tSKwZhtNRm5MA=
 			</data>
 		</dict>
 		<key>Headers/BookA.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NvEyNMWFBoVrXdOX6Xeb7LZ55NE=
+			zcnX4iJjNOFdDYHR0nSU1LKuaNY=
 			</data>
 			<key>hash2</key>
 			<data>
-			Q1+P0sDggqihaDL2CiQO477T2MPHlgDQMc1ct8sz9lw=
+			X0HM1+Sbyz7AJIhTdpFpfisAEdS8bh8gyZuKcVl4VzY=
 			</data>
 		</dict>
 		<key>Headers/BookW.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Vlgc+9dmwCD1GeKP11Ezpbzedr0=
+			OfYvQVUwdxWjQmKpBKMpZ9gSoLA=
 			</data>
 			<key>hash2</key>
 			<data>
-			bp52jgxvdrC/HwFGEY3U2WNHqMLJ+R3UlrIKDfkHtvk=
+			ZCNAXPVzbvfowS4GZ43PZcy7MPITqr599jZRdAhJy5A=
+			</data>
+		</dict>
+		<key>Headers/ConditionalFormatA.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2yGNB7zmw9nroGjJjOyUXmy79JA=
+			</data>
+			<key>hash2</key>
+			<data>
+			H2E7auGut7voskqcFfJg9ojhapohmcpdnHUkICwzhG4=
+			</data>
+		</dict>
+		<key>Headers/ConditionalFormatW.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rA/l2yeRLyDpZwfcbr0p2XULF6Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			AWkXI2hjMClnQvAa4nd/6SYp8iKOqVwc0OW+PFFb8cI=
+			</data>
+		</dict>
+		<key>Headers/ConditionalFormattingA.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			in3s+MOT+paArmJ/25o5ILC3oG0=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ivn5QoFlyeKjqfs9w1Xneo0AUJPj+5hRpkLXf1P2nss=
+			</data>
+		</dict>
+		<key>Headers/ConditionalFormattingW.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GJWW9fnZsb0lPF3MuD/AykOFaMI=
+			</data>
+			<key>hash2</key>
+			<data>
+			0n9ukv1/+15AKbcgSdLgC2rQoXwRiInL/LQnVUvn5iw=
 			</data>
 		</dict>
 		<key>Headers/FilterColumnA.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NCCYYy85olDiRRpHImAys4lv+zs=
+			9W/HqSQXf7CYb61undd5SzZEgiE=
 			</data>
 			<key>hash2</key>
 			<data>
-			fU5dHawc5UsBOBvXF4/FGibyba1X1j5iTsE8YauPCbs=
+			W1YswT7xgF+6lsCK+hcBm792+fQR3tB8mHsZKeavDmw=
 			</data>
 		</dict>
 		<key>Headers/FilterColumnW.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			o3UZJTPvJNTSJDqZyw7H4oSn8sk=
+			hcg1v7CxPG2v6cw2FPFF9iIL33w=
 			</data>
 			<key>hash2</key>
 			<data>
-			aqzKqD2aVnL4hCx3Ac7cRgLHPOIRG4ShNt7tsD3E1Lw=
+			pG3WBYo88dCHGhYaYOAks5QHCxDS/8DyrooUv6sZ4Es=
 			</data>
 		</dict>
 		<key>Headers/FontA.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3Yn7CEgY9Ju5WjZ76Te9cTZkkPo=
+			jKaLBp97/faIhQkC5SthSEhDEWg=
 			</data>
 			<key>hash2</key>
 			<data>
-			X0enDVcb9ZUNhyMofX62hARlNxDO9EI+CO5zNIszw/U=
+			EAoPyIYXqa6BYKpe4xBFfUza+hjAtArXw8AGrsT23UI=
 			</data>
 		</dict>
 		<key>Headers/FontW.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kSYBD5vyqkbzkjsd5GEeZy7rwKA=
+			ueObLM1qHKMiEjI0+yKCH3n2ms8=
 			</data>
 			<key>hash2</key>
 			<data>
-			y1YJU6Cut1I+wPqm+vWTHVB781aZRunUH7Kwjp0b3rw=
+			Yxrd8btYMOCkQ3khcr4gYh05MozHrsU2sHEKBvl1sOw=
+			</data>
+		</dict>
+		<key>Headers/FormControlA.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			51dlUJhFw2mE7uSADsEFT4EcEi4=
+			</data>
+			<key>hash2</key>
+			<data>
+			e9ERIYoYyFnVB+Ff2l/a1WI8R+6vkFxJD1qRQuUcwtg=
+			</data>
+		</dict>
+		<key>Headers/FormControlW.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			zaNIxXfxbyWIL+AU+DVUxZE+tMo=
+			</data>
+			<key>hash2</key>
+			<data>
+			wJoGtEqY+jMSUK+ttvuYxDDAoo/IC0T4F7vcTlWBOgc=
 			</data>
 		</dict>
 		<key>Headers/FormatA.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cDU/5bq2EVH54Ry0atoAeUsIH6E=
+			Kr0ffc0A4Gvm4tHMMZeiDdOSkzg=
 			</data>
 			<key>hash2</key>
 			<data>
-			aAAURfhGXL23ThTymeG2AaH1SBdrnjRS4W9dsP/597M=
+			yzOUtmqoIOGxk2/O514SYHrZQObBOn1f0WpTOk147Kw=
 			</data>
 		</dict>
 		<key>Headers/FormatW.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			s6LFPtUylHdoYaCtLevooFCQXFw=
+			B4IrZFup+5WSeoKOYFqvu0ruP0I=
 			</data>
 			<key>hash2</key>
 			<data>
-			mTRApAoJjJohQdzoyuMuxCYbnaqFoH47VGrQo/3H/QM=
+			JAG01LJLEJsEK4Bxn53H3yu6+BcHZI2ZRP+zde2vQg8=
+			</data>
+		</dict>
+		<key>Headers/RichStringA.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			X5BqOPBOBPfkHIZYSWDGgTl0CsQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			cnEpAiJBC+87AmkTHF7Z3Ov6cFHSzNmXD1gc9dJgS8A=
+			</data>
+		</dict>
+		<key>Headers/RichStringW.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZSRWrIRSyiUUcXkbnb8b2eQaKHc=
+			</data>
+			<key>hash2</key>
+			<data>
+			YpMmdRKwAoWM3sz2ipsFqr67RPIlkFs0uhx6JFLmzOc=
 			</data>
 		</dict>
 		<key>Headers/SheetA.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			O1yi1fC6qr5oQvTTWckGfWfpY8A=
+			wdizrZgYPQ5ZTA1AF70Hj4CEJMc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z3y7+VK3yJMabuHHhziIlBY+GJbJ2O1ROoUHHkwnplQ=
+			4JAFWjyYZy7SZIMw/t99fHtbolVpfdVZ+4TFp09wvlM=
 			</data>
 		</dict>
 		<key>Headers/SheetW.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IAN/sKzQIHKW/yTQvOOQJTzzYUY=
+			n4XhW12/y9ocufwuJLAAN/3a+8M=
 			</data>
 			<key>hash2</key>
 			<data>
-			Pg9UmagmCiWvxL4d2Rkgh5VUV6zAgP9fZTw5ZCCgzvw=
+			BlG0o6Xo3t8PVtBNys5bfaxYRTOEE7FgeJVPSFZF6eY=
 			</data>
 		</dict>
 		<key>Headers/enum.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mVTlPw/+hyPY+/LzuV/U9lo+ZQg=
+			qGCQPHr/sWDUmCMNIU6HBE0azg0=
 			</data>
 			<key>hash2</key>
 			<data>
-			35zW3H+ydl6zDgThmG6Mjlk546NUEK9JOtu90WulawM=
+			yqmqGx29CHOYi8WYL+AgzttcDPiiqPwOheYCO0ZwiA0=
 			</data>
 		</dict>
 		<key>Headers/handle.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9C9QbUxRPNh78vZrGUrguvomPv4=
+			vPdq5xnz/X8LKN3qpRVxgNfnvv4=
 			</data>
 			<key>hash2</key>
 			<data>
-			XxZax4ySNqdXl4T9Nak3TvZ7WzCq7UKkpezweeoTZkc=
+			fOrDUQ1xpE8NELZUUNMMK2XsRiuK+1ruxL8Lddo+47M=
 			</data>
 		</dict>
 		<key>Headers/libxl.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Y69CgrsWPGWdDPfpYZa9OL5ZuP8=
+			wXPjtDaZOuTMfEch2DYiPU2kPMU=
 			</data>
 			<key>hash2</key>
 			<data>
-			8b+jjkMEMmVMwHRxRsLUblakrt0taCXweZWkxggXQb4=
+			3RXVH4brW7Sht74mjYE5IcvIpdfecRXDST8Kbv6w8ts=
 			</data>
 		</dict>
 		<key>Headers/setup.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			O6gffnSKxXKeM5t58E0pZxBB2mk=
+			vRV20sNgu1K+/KrFUfvrDvJY1VM=
 			</data>
 			<key>hash2</key>
 			<data>
-			lIBeXxRVGHsqenvJRff/tfUIsqxscSC4HjNbgS/iDgs=
+			q8rCzQeXivG1J6R5aAFZCi47mOAKyepV+g8mLHA09Fs=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			d+k0FGf0RdpywFAPv/lWFoUZgbY=
+			it+k959GQUa7SDF+7vXH3hIWi8A=
 			</data>
 			<key>hash2</key>
 			<data>
-			58IutvduICWa07X5dl413opWxe8xRefkAGlP4LQbojQ=
+			lRCnQ+Zo6l9vJUtzxwDQXQ17W3hEjZrofaox0dtj0bA=
 			</data>
 		</dict>
 	</dict>

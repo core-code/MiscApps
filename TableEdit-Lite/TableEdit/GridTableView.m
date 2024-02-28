@@ -779,7 +779,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 - (void)keyDown:(NSEvent *)event
 {
-	unichar character = event.charactersIgnoringModifiers.firstCharacter;
+	unichar character = event.charactersIgnoringModifiers.firstChar;
     LOGFUNCPARAMA(makeString(@"%@ [0x%04x] %lu ", [event characters], character, (unsigned long)event.modifierFlags));
 
     BOOL commandDown = (event.modifierFlags & NSEventModifierFlagCommand) > 0;

@@ -262,7 +262,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 	NSData *serializedData = _data_.JSONData;
 	NSArray *serializableGraphs = [_graphs_ mapped:^id(NSDictionary *input)
 	{
-		return [input dictionaryByDeletingKeys:@[@"plot", @"graph", @"graphView"]];
+		return [input dictionaryByRemovingKeys:@[@"plot", @"graph", @"graphView"]];
 	}];
 	NSDictionary *properties =  @{@"enableRowColors" : @(self.enableRowColors),
 								  @"oddRowColor" : self.oddRowColor,

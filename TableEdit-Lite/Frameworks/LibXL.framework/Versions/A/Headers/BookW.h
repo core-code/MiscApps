@@ -1,3 +1,16 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+//                    LibXL C++ headers version 4.2.0                        //
+//                                                                           //
+//                 Copyright (c) 2008 - 2023 XLware s.r.o.                   //
+//                                                                           //
+//   THIS FILE AND THE SOFTWARE CONTAINED HEREIN IS PROVIDED 'AS IS' AND     //
+//                COMES WITH NO WARRANTIES OF ANY KIND.                      //
+//                                                                           //
+//          Please define LIBXL_STATIC variable for static linking.          //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+
 #ifndef LIBXL_BOOKW_H
 #define LIBXL_BOOKW_H
 
@@ -22,6 +35,9 @@ extern "C"
     XLAPI            int XLAPIENTRY xlBookLoadPartiallyW(BookHandle handle, const wchar_t* filename, int sheetIndex, int firstRow, int lastRow);
     XLAPI            int XLAPIENTRY xlBookLoadPartiallyUsingTempFileW(BookHandle handle, const wchar_t* filename, int sheetIndex, int firstRow, int lastRow, const wchar_t* tempFile);
 
+    XLAPI            int XLAPIENTRY xlBookLoadWithoutEmptyCellsW(BookHandle handle, const wchar_t* filename);
+    XLAPI            int XLAPIENTRY xlBookLoadInfoW(BookHandle handle, const wchar_t* filename);
+
     XLAPI            int XLAPIENTRY xlBookLoadRawW(BookHandle handle, const char* data, unsigned size);
     XLAPI            int XLAPIENTRY xlBookLoadRawPartiallyW(BookHandle handle, const char* data, unsigned size, int sheetIndex, int firstRow, int lastRow);
     XLAPI            int XLAPIENTRY xlBookSaveRawW(BookHandle handle, const char** data, unsigned* size);
@@ -29,13 +45,16 @@ extern "C"
     XLAPI    SheetHandle XLAPIENTRY xlBookAddSheetW(BookHandle handle, const wchar_t* name, SheetHandle initSheet);
     XLAPI    SheetHandle XLAPIENTRY xlBookInsertSheetW(BookHandle handle, int index, const wchar_t* name, SheetHandle initSheet);
     XLAPI    SheetHandle XLAPIENTRY xlBookGetSheetW(BookHandle handle, int index);
+    XLAPI const wchar_t* XLAPIENTRY xlBookGetSheetNameW(BookHandle handle, int index);
     XLAPI            int XLAPIENTRY xlBookSheetTypeW(BookHandle handle, int index);
     XLAPI            int XLAPIENTRY xlBookMoveSheetW(BookHandle handle, int srcIndex, int dstIndex);
     XLAPI            int XLAPIENTRY xlBookDelSheetW(BookHandle handle, int index);
     XLAPI            int XLAPIENTRY xlBookSheetCountW(BookHandle handle);
 
     XLAPI   FormatHandle XLAPIENTRY xlBookAddFormatW(BookHandle handle, FormatHandle initFormat);
+    XLAPI   FormatHandle XLAPIENTRY xlBookAddFormatFromStyleW(BookHandle handle, int style);
     XLAPI     FontHandle XLAPIENTRY xlBookAddFontW(BookHandle handle, FontHandle initFont);
+    XLAPI RichStringHandle XLAPIENTRY xlBookAddRichStringW(BookHandle handle);
     XLAPI            int XLAPIENTRY xlBookAddCustomNumFormatW(BookHandle handle, const wchar_t* customNumFormat);
     XLAPI const wchar_t* XLAPIENTRY xlBookCustomNumFormatW(BookHandle handle, int fmt);
 
@@ -44,6 +63,8 @@ extern "C"
 
     XLAPI     FontHandle XLAPIENTRY xlBookFontW(BookHandle handle, int index);
     XLAPI            int XLAPIENTRY xlBookFontSizeW(BookHandle handle);
+
+    XLAPI ConditionalFormatHandle XLAPIENTRY xlBookAddConditionalFormatW(BookHandle handle);
 
     XLAPI         double XLAPIENTRY xlBookDatePackW(BookHandle handle, int year, int month, int day, int hour, int min, int sec, int msec);
     XLAPI            int XLAPIENTRY xlBookDateUnpackW(BookHandle handle, double value, int* year, int* month, int* day, int* hour, int* min, int* sec, int* msec);
@@ -72,6 +93,9 @@ extern "C"
     XLAPI            int XLAPIENTRY xlBookRgbModeW(BookHandle handle);
     XLAPI           void XLAPIENTRY xlBookSetRgbModeW(BookHandle handle, int rgbMode);
 
+    XLAPI            int XLAPIENTRY xlBookCalcModeW(BookHandle handle);
+    XLAPI           void XLAPIENTRY xlBookSetCalcModeW(BookHandle handle, int calcMode);
+
     XLAPI            int XLAPIENTRY xlBookVersionW(BookHandle handle);
     XLAPI            int XLAPIENTRY xlBookBiffVersionW(BookHandle handle);
 
@@ -80,6 +104,8 @@ extern "C"
 
     XLAPI            int XLAPIENTRY xlBookIsTemplateW(BookHandle handle);
     XLAPI           void XLAPIENTRY xlBookSetTemplateW(BookHandle handle, int tmpl);
+
+    XLAPI            int XLAPIENTRY xlBookIsWriteProtectedW(BookHandle handle);
 
     XLAPI            int XLAPIENTRY xlBookSetLocaleW(BookHandle handle, const char* locale);
     XLAPI    const char* XLAPIENTRY xlBookErrorMessageW(BookHandle handle);
