@@ -95,7 +95,11 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 	NSData *uncompressedData = data.snappyDecompressed;
 	if (!uncompressedData)
 		return NO;
-	NSDictionary *dict = [NSUnarchiver unarchiveObjectWithData:uncompressedData];
+    
+    NSError *err;
+    NSDictionary *dict = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:NSDictionary.class, NSString.class, NSFont.class, NSNumber.class, NSData.class, NSColor.class, NSMutableArray.class, nil] fromData:uncompressedData error:&err];
+	if (err || !dict)
+        dict = [NSUnarchiver unarchiveObjectWithData:uncompressedData];
 
 	if (!dict || ![dict isKindOfClass:NSDictionary.class])
 		return NO;
@@ -273,9 +277,11 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
                            @"columns" : _columns_,
                            @"graphs" : serializableGraphs,
                            @"properties" : properties,
-                           @"version" : @(3)};
+                           @"version" : @(4)};
 
-	NSData *serializedEverything = [NSArchiver archivedDataWithRootObject:dict].snappyCompressed;
+
+    NSError *err;
+    NSData *serializedEverything = [NSKeyedArchiver archivedDataWithRootObject:dict requiringSecureCoding:YES error:&err].snappyCompressed;
 
 
 	cc_log(@"WRITE took %.2fs for %i bytes", [[NSDate date] timeIntervalSinceDate:pre], (int)serializedEverything.length);

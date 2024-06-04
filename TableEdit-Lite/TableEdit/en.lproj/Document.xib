@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,7 +21,7 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <rect key="contentRect" x="133" y="235" width="900" height="425"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1728" height="1079"/>
             <value key="minSize" type="size" width="100" height="100"/>
             <view key="contentView" id="6">
                 <rect key="frame" x="0.0" y="0.0" width="900" height="425"/>
@@ -33,17 +33,16 @@
                             <rect key="frame" x="0.0" y="0.0" width="900" height="425"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" selectionHighlightStyle="none" columnSelection="YES" autosaveColumns="NO" headerView="PaL-sT-bNf" id="Gme-KQ-IVq" customClass="GridTableView">
+                                <tableView clipsToBounds="NO" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" selectionHighlightStyle="none" columnSelection="YES" autosaveColumns="NO" headerView="PaL-sT-bNf" id="Gme-KQ-IVq" customClass="GridTableView">
                                     <rect key="frame" x="0.0" y="0.0" width="900" height="402"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <tableViewGridLines key="gridStyleMask" vertical="YES" horizontal="YES"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn identifier="" width="45" minWidth="45" maxWidth="45" id="vvm-f9-2Hg">
+                                        <tableColumn width="45" minWidth="45" maxWidth="45" id="vvm-f9-2Hg">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="🔢">
-                                                <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
@@ -64,44 +63,44 @@
                                 </tableView>
                             </subviews>
                         </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ixU-dd-B9Z">
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="ixU-dd-B9Z">
                             <rect key="frame" x="1" y="119" width="223" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="qZH-cM-leG">
+                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="qZH-cM-leG">
                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <tableHeaderView key="headerView" id="PaL-sT-bNf">
+                        <tableHeaderView key="headerView" wantsLayer="YES" id="PaL-sT-bNf">
                             <rect key="frame" x="0.0" y="0.0" width="900" height="23"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
-                    <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="FEZ-wV-RLw" userLabel="plusRowButton" customClass="DraggableButton">
-                        <rect key="frame" x="2" y="11" width="45" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="41" id="LXb-fe-caG"/>
-                            <constraint firstAttribute="height" constant="13" id="eRr-ds-n4K"/>
-                        </constraints>
+                    <button tag="2" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FEZ-wV-RLw" userLabel="plusRowButton" customClass="DraggableButton">
+                        <rect key="frame" x="1" y="10" width="47" height="20"/>
                         <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSAddTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ooH-3o-Ahw">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="41" id="LXb-fe-caG"/>
+                            <constraint firstAttribute="height" constant="13" id="eRr-ds-n4K"/>
+                        </constraints>
                         <connections>
                             <action selector="addRow:" target="-2" id="Nkf-iK-NE3"/>
                             <outlet property="constraint" destination="g6r-ok-scR" id="wIy-8l-nIV"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="swj-0c-veh" userLabel="plusColumnButton" customClass="DraggableButton">
-                        <rect key="frame" x="331" y="404" width="44" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="13" id="KKK-Oo-Foe"/>
-                            <constraint firstAttribute="width" constant="40" id="mmK-oL-HcT"/>
-                        </constraints>
+                    <button tag="1" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="swj-0c-veh" userLabel="plusColumnButton" customClass="DraggableButton">
+                        <rect key="frame" x="330" y="401" width="46" height="20"/>
                         <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSAddTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8au-lr-XwP">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="KKK-Oo-Foe"/>
+                            <constraint firstAttribute="width" constant="40" id="mmK-oL-HcT"/>
+                        </constraints>
                         <connections>
                             <action selector="addColumn:" target="-2" id="cym-DM-6mY"/>
                             <outlet property="constraint" destination="z1D-Ik-5n0" id="DOv-9W-8sc"/>
@@ -119,7 +118,7 @@
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="swj-0c-veh" firstAttribute="top" secondItem="6" secondAttribute="top" constant="5" id="0n7-Bw-2zM"/>
+                    <constraint firstItem="swj-0c-veh" firstAttribute="top" secondItem="6" secondAttribute="top" constant="7" id="0n7-Bw-2zM"/>
                     <constraint firstItem="LCg-2v-6t9" firstAttribute="top" secondItem="6" secondAttribute="top" id="Ofe-i2-Gud"/>
                     <constraint firstItem="LCg-2v-6t9" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="PBz-i1-s0W"/>
                     <constraint firstAttribute="bottom" secondItem="LCg-2v-6t9" secondAttribute="bottom" id="SiE-wR-fUR"/>
@@ -141,7 +140,7 @@
         <customObject id="FhY-9m-8PL" customClass="FunctionTableDataSource"/>
     </objects>
     <resources>
-        <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="icon_selectionknob" width="14" height="14"/>
+        <image name="NSAddTemplate" width="18" height="17"/>
+        <image name="icon_selectionknob" width="7" height="7"/>
     </resources>
 </document>

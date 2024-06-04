@@ -448,7 +448,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = "CoreCode Limited";
 				TargetAttributes = {
 					B9B1923F177DED9F00FFE14D = {
@@ -800,7 +800,7 @@
 				);
 				INFOPLIST_FILE = "TableEdit/TableEdit-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "TableEdit-Lite";
 				PROVISIONING_PROFILE = "";
@@ -827,7 +827,7 @@
 				GCC_PREFIX_HEADER = "TableEdit/TableEdit-Prefix.pch";
 				INFOPLIST_FILE = "TableEdit/TableEdit-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "TableEdit-Lite";
 				PROVISIONING_PROFILE = "";

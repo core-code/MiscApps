@@ -635,19 +635,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
         else
             [_document movePlusRowButton];
 
-        // check if we need to adjust cell coordinates in pasted formulae
-        BOOL adjustPastedFormula = FALSE;
-        CCIntPoint adjustPastedFormulaOffset = {0, 0};
-        if ([self.lastCopyString isEqualToString:paste])
-        {
-            adjustPastedFormula = TRUE;
-
-            adjustPastedFormulaOffset = (CCIntPoint){  insertCol - self.lastCopyPosition.column,
-                                                        insertRow - self.lastCopyPosition.row};
-
-			cc_log_debug(@"Info: setting offset for paste to c%li r%li", (long)adjustPastedFormulaOffset.x, (long)adjustPastedFormulaOffset.y);
-
-        }
+     
         // now actually paste
         for (NSString *line in paste.lines)
         {

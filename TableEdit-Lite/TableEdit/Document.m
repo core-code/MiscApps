@@ -2420,7 +2420,7 @@ NSCalendar *timezonelessCalendar;
 	const NSSize unitSize = { 1.0, 1.0 };
 	CGFloat factor = [_tableView convertSize:unitSize toView:nil].width;
 	CGFloat rh = _tableView.rowHeight;
-	_plusRowConstraint.constant = (_data_.rowCount *(rh+2.0)+25.0) * factor;
+	_plusRowConstraint.constant = (_data_.rowCount *(rh+2.0)+35.0) * factor;
 }
 
 - (void)movePlusColumnButton
@@ -2430,7 +2430,7 @@ NSCalendar *timezonelessCalendar;
 	long totalColumnWidth = [_tableView.tableColumns reduce:^int(NSTableColumn *column ) { return (int)column.width + 3; }];
 	const NSSize unitSize = { 1.0, 1.0 };
 	CGFloat factor = [_tableView convertSize:unitSize toView:nil].width;
-	_plusColumnConstraint.constant = (totalColumnWidth + 4) * factor;
+	_plusColumnConstraint.constant = (totalColumnWidth + 22) * factor;
 }
 
 - (void)saveColumnWidths
