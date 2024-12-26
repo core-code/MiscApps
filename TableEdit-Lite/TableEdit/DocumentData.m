@@ -98,8 +98,11 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
     
     NSError *err;
     NSDictionary *dict = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:NSDictionary.class, NSString.class, NSFont.class, NSNumber.class, NSData.class, NSColor.class, NSMutableArray.class, nil] fromData:uncompressedData error:&err];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 	if (err || !dict)
         dict = [NSUnarchiver unarchiveObjectWithData:uncompressedData];
+#pragma clang diagnostic pop
 
 	if (!dict || ![dict isKindOfClass:NSDictionary.class])
 		return NO;
@@ -263,6 +266,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 	LOGFUNC
 	NSDate *pre = [NSDate date];
 
+#warning todo, json write fails
 	NSData *serializedData = _data_.JSONData;
 	NSArray *serializableGraphs = [_graphs_ mapped:^id(NSDictionary *input)
 	{
@@ -373,7 +377,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
         for (NSString *obj in row)
         {
             if ([obj isKindOfClass:NSString.class] &&
-                ([obj contains:delimiter] || [obj contains:@" "] || [obj contains:@"\""]))
+                ([obj containsString:delimiter] || [obj containsString:@" "] || [obj containsString:@"\""]))
             {
                 [export appendString:@"\""];
                 NSString *fieldStr = obj.stringValue;
@@ -560,7 +564,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 	[[_undoManager prepareWithInvocationTarget:self] insertRowsWithData:removedDataObjects
 															 attributes:removedAttributeObjects
 															  atIndices:rowIndices];
-	if (![_undoManager.undoActionName contains:@"Resize Table"] && !self.undoManager.isUndoing)
+	if (![_undoManager.undoActionName containsString:@"Resize Table"] && !self.undoManager.isUndoing)
 		[_undoManager setActionName:@"Remove Row"];
 
 
@@ -604,7 +608,7 @@ void _up(NSMutableDictionary *cell, NSString *old, NSString *new) { id a = cell[
 														attributes:removedAttributeObjects
 														 atIndices:columnIndices];
 
-	if (![_undoManager.undoActionName contains:@"Resize Table"])
+	if (![_undoManager.undoActionName containsString:@"Resize Table"])
 		[_undoManager setActionName:@"Remove Column"];
 
 }

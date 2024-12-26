@@ -484,9 +484,9 @@ NSCalendar *timezonelessCalendar;
 							NSMutableDictionary *attributes = attrow.lastObject;
 
 							const char* fn = xlFontName(font);
-							BOOL bold = (BOOL)xlFontBold(font);
-							BOOL italic = (BOOL)xlFontItalic(font);
-							char size = (char) OBJECT_OR(xlFontSize(font), 12);
+							BOOL bold = xlFontBold(font);
+							BOOL italic = xlFontItalic(font);
+							char size = (char) INT_OR(xlFontSize(font), 12);
 							memcpy(fontNameBuffer, fn, strlen(fn));
 							fontNameBuffer[strlen(fn)+0] = '|';
 							fontNameBuffer[strlen(fn)+1] = bold ? 'b' : 'x';
@@ -496,7 +496,7 @@ NSCalendar *timezonelessCalendar;
 							NSString *hash = @(fontNameBuffer);
 
 							static NSMutableDictionary <NSString *, NSFont *> *fontCache;
-							ONCE_PER_FUNCTION(^{ fontCache = makeMutableDictionary(); })
+							ONCE_PER_FUNCTION(^{ fontCache = (id)makeMutableDictionary(); })
 							NSFont *cellfont = fontCache[hash];
 
 							if (!cellfont)
@@ -523,7 +523,7 @@ NSCalendar *timezonelessCalendar;
 							if (colorIndex > 0 && colorIndex < 65)
 							{
                                 static NSMutableDictionary <NSNumber *, NSColor *> *colorCache;
-                                ONCE_PER_FUNCTION(^{ colorCache = makeMutableDictionary(); });
+                                ONCE_PER_FUNCTION(^{ colorCache = (id)makeMutableDictionary(); });
                                 NSColor *colorObject = colorCache[@(colorIndex)];
 
                                 if (!colorObject)
@@ -578,7 +578,7 @@ NSCalendar *timezonelessCalendar;
     {
         encoding = [NSString stringEncodingForData:first10KData encodingOptions:nil convertedString:&first10KString usedLossyConversion:nil];
         
-        if (!encoding)
+        if (!encoding || encoding == 0x84000100)
         {
             for (NSNumber *num in @[@(NSUTF8StringEncoding), @(NSISOLatin1StringEncoding), @(NSASCIIStringEncoding), @(NSUTF16StringEncoding)])
             {
@@ -654,7 +654,21 @@ NSCalendar *timezonelessCalendar;
             
             NSString *field = [[NSString alloc] initWithBytes:value.value length:value.length encoding:encoding];
             
-            [line addObject:field];
+            if (field)
+                [line addObject:field];
+            else
+            {
+                NSData *d = [NSData dataWithBytes:value.value length:value.length];
+                NSString *s = d.string;
+                
+                if (s)
+                    [line addObject:s];
+                else
+                {
+                    cc_log_error(@"Error: CSV Import: could not decode field");
+                    [line addObject:@""];
+                }
+            }
         }
         
         [csv addObject:line];
@@ -1854,7 +1868,7 @@ NSCalendar *timezonelessCalendar;
 
 	}
 
-	if (cellString.length && [cellString contains:@"\n"])
+	if (cellString.length && [cellString containsString:@"\n"])
 		aCell.stringValue = cellString = [cellString replaced:@"\n" with:@" "];
 }
 

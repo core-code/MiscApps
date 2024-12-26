@@ -155,7 +155,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	{
         NSString *path = [url.path.stringByDeletingPathExtension replaced:cc.homeURLOutsideSandbox.path with:@"~"];
 
-        if ([path contains:@"com~apple~CloudDocs"])
+        if ([path containsString:@"com~apple~CloudDocs"])
             path = @[@"iCloudDrive", [path split:@"com~apple~CloudDocs"][1]].string;
 
         [tmp addObject:@{@"name" : url.lastPathComponent.stringByDeletingPathExtension,
