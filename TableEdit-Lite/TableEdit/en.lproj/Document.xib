@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,20 +28,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="LCg-2v-6t9">
-                        <rect key="frame" x="0.0" y="0.0" width="900" height="425"/>
+                        <rect key="frame" x="-20" y="0.0" width="920" height="425"/>
                         <clipView key="contentView" id="qwO-jg-fe9">
-                            <rect key="frame" x="0.0" y="0.0" width="900" height="425"/>
+                            <rect key="frame" x="0.0" y="0.0" width="920" height="425"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView clipsToBounds="NO" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" selectionHighlightStyle="none" columnSelection="YES" autosaveColumns="NO" headerView="PaL-sT-bNf" id="Gme-KQ-IVq" customClass="GridTableView">
-                                    <rect key="frame" x="0.0" y="0.0" width="900" height="402"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="920" height="402"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <tableViewGridLines key="gridStyleMask" vertical="YES" horizontal="YES"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn width="45" minWidth="45" maxWidth="45" id="vvm-f9-2Hg">
+                                        <tableColumn width="50" minWidth="50" maxWidth="50" id="vvm-f9-2Hg">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="🔢">
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -63,6 +63,7 @@
                                 </tableView>
                             </subviews>
                         </clipView>
+                        <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                         <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="ixU-dd-B9Z">
                             <rect key="frame" x="1" y="119" width="223" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
@@ -72,7 +73,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <tableHeaderView key="headerView" wantsLayer="YES" id="PaL-sT-bNf">
-                            <rect key="frame" x="0.0" y="0.0" width="900" height="23"/>
+                            <rect key="frame" x="0.0" y="0.0" width="920" height="23"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
@@ -120,7 +121,7 @@
                 <constraints>
                     <constraint firstItem="swj-0c-veh" firstAttribute="top" secondItem="6" secondAttribute="top" constant="7" id="0n7-Bw-2zM"/>
                     <constraint firstItem="LCg-2v-6t9" firstAttribute="top" secondItem="6" secondAttribute="top" id="Ofe-i2-Gud"/>
-                    <constraint firstItem="LCg-2v-6t9" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="PBz-i1-s0W"/>
+                    <constraint firstItem="LCg-2v-6t9" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="-20" id="PBz-i1-s0W"/>
                     <constraint firstAttribute="bottom" secondItem="LCg-2v-6t9" secondAttribute="bottom" id="SiE-wR-fUR"/>
                     <constraint firstAttribute="trailing" secondItem="LCg-2v-6t9" secondAttribute="trailing" id="Wdv-P3-bCG"/>
                     <constraint firstItem="FEZ-wV-RLw" firstAttribute="top" secondItem="6" secondAttribute="top" constant="398" id="g6r-ok-scR"/>

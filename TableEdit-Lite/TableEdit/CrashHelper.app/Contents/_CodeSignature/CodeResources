@@ -12,10 +12,6 @@
 		<data>
 		ZmaZMh965WIHFJMDNNecb3yUxuI=
 		</data>
-		<key>Resources/archived-expanded-entitlements.xcent</key>
-		<data>
-		HczODx2VOwJmyBLpUSH9zO139Qs=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -39,17 +35,6 @@
 			<key>hash2</key>
 			<data>
 			LQJuay9oKWvkdHJpgpjdelPDX7PVTBRUrUgxBi0j4tk=
-			</data>
-		</dict>
-		<key>Resources/archived-expanded-entitlements.xcent</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			HczODx2VOwJmyBLpUSH9zO139Qs=
-			</data>
-			<key>hash2</key>
-			<data>
-			3vkKD5pIt46KqmgS7VrTVmK4NkW9JJ0FbbAK7rFMDzA=
 			</data>
 		</dict>
 	</dict>

@@ -46,10 +46,6 @@
 		B9857E1F1EC4F27800978B94 /* credits.html in Resources */ = {isa = PBXBuildFile; fileRef = B9857E1E1EC4F27800978B94 /* credits.html */; };
 		B9A779D61B8474400029C5DF /* JMHostInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A779D51B8474400029C5DF /* JMHostInformation.m */; };
 		B9AA2EA41F25489400E38F4A /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = B9AA2EA31F25489400E38F4A /* dsa_pub.pem */; };
-		B9AA2EBE1F25FC7300E38F4A /* org.sparkle-project.Downloader.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9AA2EBA1F25FC7300E38F4A /* org.sparkle-project.Downloader.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B9AA2EBF1F25FC7300E38F4A /* org.sparkle-project.InstallerConnection.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9AA2EBB1F25FC7300E38F4A /* org.sparkle-project.InstallerConnection.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B9AA2EC01F25FC7300E38F4A /* org.sparkle-project.InstallerLauncher.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9AA2EBC1F25FC7300E38F4A /* org.sparkle-project.InstallerLauncher.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B9AA2EC11F25FC7300E38F4A /* org.sparkle-project.InstallerStatus.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = B9AA2EBD1F25FC7300E38F4A /* org.sparkle-project.InstallerStatus.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B9B19244177DED9F00FFE14D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B19243177DED9F00FFE14D /* Cocoa.framework */; };
 		B9B19257177DED9F00FFE14D /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B19256177DED9F00FFE14D /* Document.m */; };
 		B9B1925A177DED9F00FFE14D /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B19258177DED9F00FFE14D /* Document.xib */; };
@@ -85,10 +81,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
 			dstSubfolderSpec = 16;
 			files = (
-				B9AA2EBE1F25FC7300E38F4A /* org.sparkle-project.Downloader.xpc in CopyFiles */,
-				B9AA2EBF1F25FC7300E38F4A /* org.sparkle-project.InstallerConnection.xpc in CopyFiles */,
-				B9AA2EC01F25FC7300E38F4A /* org.sparkle-project.InstallerLauncher.xpc in CopyFiles */,
-				B9AA2EC11F25FC7300E38F4A /* org.sparkle-project.InstallerStatus.xpc in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,10 +163,6 @@
 		B9A779D41B8474400029C5DF /* JMHostInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMHostInformation.h; path = ../Mac/JMHostInformation.h; sourceTree = "<group>"; };
 		B9A779D51B8474400029C5DF /* JMHostInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMHostInformation.m; path = ../Mac/JMHostInformation.m; sourceTree = "<group>"; };
 		B9AA2EA31F25489400E38F4A /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = ../../CoreLibPrivate/dsa_pub.pem; sourceTree = "<absolute>"; };
-		B9AA2EBA1F25FC7300E38F4A /* org.sparkle-project.Downloader.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.Downloader.xpc"; path = "../XPCServices/org.sparkle-project.Downloader.xpc"; sourceTree = "<group>"; };
-		B9AA2EBB1F25FC7300E38F4A /* org.sparkle-project.InstallerConnection.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerConnection.xpc"; path = "../XPCServices/org.sparkle-project.InstallerConnection.xpc"; sourceTree = "<group>"; };
-		B9AA2EBC1F25FC7300E38F4A /* org.sparkle-project.InstallerLauncher.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerLauncher.xpc"; path = "../XPCServices/org.sparkle-project.InstallerLauncher.xpc"; sourceTree = "<group>"; };
-		B9AA2EBD1F25FC7300E38F4A /* org.sparkle-project.InstallerStatus.xpc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.xpc-service"; name = "org.sparkle-project.InstallerStatus.xpc"; path = "../XPCServices/org.sparkle-project.InstallerStatus.xpc"; sourceTree = "<group>"; };
 		B9B19240177DED9F00FFE14D /* TableEdit-Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TableEdit-Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B19243177DED9F00FFE14D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B9B19246177DED9F00FFE14D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -407,10 +395,6 @@
 				B968B1791B9DD1C10027881B /* readme.html */,
 				B973D90F20767C4000FE566F /* TableEditLite.xcconfig */,
 				B9AA2EA31F25489400E38F4A /* dsa_pub.pem */,
-				B9AA2EBA1F25FC7300E38F4A /* org.sparkle-project.Downloader.xpc */,
-				B9AA2EBB1F25FC7300E38F4A /* org.sparkle-project.InstallerConnection.xpc */,
-				B9AA2EBC1F25FC7300E38F4A /* org.sparkle-project.InstallerLauncher.xpc */,
-				B9AA2EBD1F25FC7300E38F4A /* org.sparkle-project.InstallerStatus.xpc */,
 				B981B1FC19487ABC0052D15A /* TableEdit.entitlements */,
 			);
 			name = "Supporting Files";
@@ -427,7 +411,6 @@
 				B9B1923D177DED9F00FFE14D /* Frameworks */,
 				B9B1923E177DED9F00FFE14D /* Resources */,
 				B936618B193F901300E8D4CC /* CopyFiles */,
-				B981B1FB19487A690052D15A /* ShellScript */,
 				B9AA33CB1BE10680009173E8 /* CopyFiles */,
 				B9AA33CF1BE10AED009173E8 /* CopyFiles */,
 				B9AA2EA91F25F06400E38F4A /* CopyFiles */,
@@ -512,22 +495,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B981B1FB19487A690052D15A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" TableEdit/TableEdit-Info.plist)\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" TableEdit/TableEdit-Info.plist\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9B1923C177DED9F00FFE14D /* Sources */ = {
@@ -795,13 +762,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TableEdit/TableEdit-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"PADDKE=1",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "TableEdit/TableEdit-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = xx;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "TableEdit-Lite";
 				PROVISIONING_PROFILE = "";
@@ -829,7 +793,7 @@
 				GCC_PREFIX_HEADER = "TableEdit/TableEdit-Prefix.pch";
 				INFOPLIST_FILE = "TableEdit/TableEdit-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = xx;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "TableEdit-Lite";
 				PROVISIONING_PROFILE = "";

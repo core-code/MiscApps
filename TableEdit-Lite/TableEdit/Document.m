@@ -276,9 +276,9 @@ NSCalendar *timezonelessCalendar;
 
 	if (count > 1)
 	{
-        NSMutableArray <NSString *>*validSheetNames = makeMutableArray();
-        NSMutableArray <NSNumber *>*validSheetIndices = makeMutableArray();
-        NSMutableArray <NSNumber *>*invalidSheetIndices = makeMutableArray();
+        NSMutableArray <NSString *>*validSheetNames = (id)makeMutableArray();
+        NSMutableArray <NSNumber *>*validSheetIndices = (id)makeMutableArray();
+        NSMutableArray <NSNumber *>*invalidSheetIndices = (id)makeMutableArray();
 
 		for (int i = 0; i < count; i++)
 		{
@@ -1309,7 +1309,7 @@ NSCalendar *timezonelessCalendar;
 {
 	LOGFUNCA;
 
-
+    
 	if (columnIndices.count > 1000)
 	{
 		cc_log(@"Warning: NOT going to autosize %lu columns", (unsigned long)columnIndices.count);
@@ -1810,6 +1810,7 @@ NSCalendar *timezonelessCalendar;
 
 	if (column == 0) // rowindex pseudo-cells
 	{
+
         aCell.alignment = NSTextAlignmentCenter;
 
 		static NSColor *leftRowCellColor;
@@ -2444,7 +2445,7 @@ NSCalendar *timezonelessCalendar;
 	long totalColumnWidth = [_tableView.tableColumns reduce:^int(NSTableColumn *column ) { return (int)column.width + 3; }];
 	const NSSize unitSize = { 1.0, 1.0 };
 	CGFloat factor = [_tableView convertSize:unitSize toView:nil].width;
-	_plusColumnConstraint.constant = (totalColumnWidth + 22) * factor;
+	_plusColumnConstraint.constant = (totalColumnWidth + 5) * factor;
 }
 
 - (void)saveColumnWidths

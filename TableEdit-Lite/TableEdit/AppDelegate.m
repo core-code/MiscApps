@@ -54,8 +54,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			kPaddingRowsKey : @2,
 			kCloseColorPanelKey : @1,
 			kAutocreateBorderKey : @1,
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 			kOddRowColorKey :  [NSArchiver archivedDataWithRootObject:makeColor(0.92f, 0.96f, 0.98f, 1.0f)],
 			kEvenRowColorKey : [NSArchiver archivedDataWithRootObject:makeColor(1.0f, 1.0f, 1.0f, 1.0f)],
+#pragma clang diagnostic pop
 			kRowColorsEnabledKey : @NO,
             kPrintSettingsHorizontalPaginationKey : @(NSFitPagination),
             kPrintSettingsVerticalPaginationKey : @(NSAutoPagination),

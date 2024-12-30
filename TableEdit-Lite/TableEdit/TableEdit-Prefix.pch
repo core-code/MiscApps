@@ -19,7 +19,6 @@
 		NSUInteger column;
 		NSUInteger row;
 	} coordinates;
-
 	CC_ENUM(uint8_t, importChoice)
 	{
 		importReplaceEverything = 0,

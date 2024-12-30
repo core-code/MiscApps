@@ -45,12 +45,13 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 - (void)awakeFromNib
 {
-	self.selectedCellMap = makeMutableDictionary();
+	self.selectedCellMap = (id)makeMutableDictionary();
 	self.gradient = [[NSGradient alloc] initWithColorsAndLocations:makeColor(0.667f, 0.667f, 0.667f, 1.0f), 0.0, [NSColor whiteColor], 1.0, nil];
 	self.selectionColor = makeColor(0.343f, 0.562f, 1.0f, 1.0f);
 	self.selectionExtents = (CCIntRange2D){{INT_MAX, INT_MAX}, {INT_MIN, INT_MIN}, {-1, -1}};
-
-
+    self.gridStyleMask = NSTableViewSolidVerticalGridLineMask | NSTableViewSolidHorizontalGridLineMask;
+    self.selectionHighlightStyle = NSTableViewSelectionHighlightStyleNone;
+    
 	for (DraggableImage *selectionDragKnob in @[_dragCornerUpperLeft, _dragCornerLowerRight])
 	{
 		[selectionDragKnob removeFromSuperview];
@@ -67,7 +68,27 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 - (void)drawRect:(NSRect)dirtyRect
 {
+    
 	[super drawRect:dirtyRect];
+    
+    // work around display issues on new xcode
+    long totalColumnWidth = [self.tableColumns reduce:^int(NSTableColumn *column ) { return (int)column.width + 3; }] + 18;
+    [self.gridColor setStroke];
+    // for some reason the last grid line is missing too
+    [NSBezierPath strokeLineFromPoint:NSMakePoint(0,                    self.rowHeight + 7 + (self.rowHeight+2)*(self.numberOfRows-1))
+                              toPoint:NSMakePoint(totalColumnWidth,     self.rowHeight + 7 + (self.rowHeight+2)*(self.numberOfRows-1))];
+
+ //   if (self.selectedRow)
+    {   // for some reason on modern macOS the two lines above and below the selecte cell are missing - draw them ourseleves
+        [NSBezierPath strokeLineFromPoint:NSMakePoint(0,                    5 + (self.rowHeight+2)*self.selectedRow)
+                                  toPoint:NSMakePoint(totalColumnWidth,     5 +  (self.rowHeight+2)*self.selectedRow)];
+        
+        
+        [NSBezierPath strokeLineFromPoint:NSMakePoint(0,                    self.rowHeight + 7 + (self.rowHeight+2)*self.selectedRow)
+                                  toPoint:NSMakePoint(totalColumnWidth,     self.rowHeight + 7 + (self.rowHeight+2)*self.selectedRow)];
+
+    }
+    
 
     // we might get triggered while removing columns, when data is already gone, before removing further columns. just ignore that
     if (self.tableColumns.count-1 != _data.columnCount)
@@ -293,7 +314,6 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 			}
 		}
 
-
 		// draw selection knobs
 //		if (self.selectionIsSingleRect)
 //		{
@@ -388,7 +408,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 	assert(minCol <= maxCol);
 
     if (!self.selectedCellArray)
-        self.selectedCellArray = makeMutableArray();
+        self.selectedCellArray = (id)makeMutableArray();
 
 	for (NSInteger r = minRow; r <= maxRow; r++)
 	{
@@ -471,7 +491,7 @@ NSString *processPasteForExcelMultiline(NSString *paste);
 
 
 		if (!self.selectedCellArray)
-			self.selectedCellArray = makeMutableArray();
+			self.selectedCellArray = (id)makeMutableArray();
 
 		for (int row = 0; row < [self.dataSource numberOfRowsInTableView:self]; row++)
 		{
