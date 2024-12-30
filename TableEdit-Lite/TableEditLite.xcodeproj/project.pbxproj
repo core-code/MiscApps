@@ -662,6 +662,7 @@
 					"-Wno-double-promotion",
 					"-Wno-objc-messaging-id",
 					"-Wno-declaration-after-statement",
+					"-Wno-quoted-include-in-framework-header",
 				);
 			};
 			name = Debug;
@@ -740,6 +741,7 @@
 					"-Wno-double-promotion",
 					"-Wno-objc-messaging-id",
 					"-Wno-declaration-after-statement",
+					"-Wno-quoted-include-in-framework-header",
 				);
 			};
 			name = Release;
@@ -765,7 +767,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "TableEdit/TableEdit-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = xx;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "TableEdit-Lite";
 				PROVISIONING_PROFILE = "";
@@ -793,7 +795,7 @@
 				GCC_PREFIX_HEADER = "TableEdit/TableEdit-Prefix.pch";
 				INFOPLIST_FILE = "TableEdit/TableEdit-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = xx;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.corecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "TableEdit-Lite";
 				PROVISIONING_PROFILE = "";
