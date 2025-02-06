@@ -70,7 +70,7 @@
 	NSArray <NSString *> *names = _txtPathControl.URL.contents.string.trimmedOfWhitespaceAndNewlines.lines;
 	NSArray <NSURL *> *filenames = [_dirPathControl.URL.directoryContents filtered:^BOOL(NSURL *input)
 	{
-		 return ![input.path contains:@"/."];
+		 return ![input.path containsString:@"/."];
 	}].id;
 	filenames = [filenames sortedArrayUsingComparator:^(NSURL *a, NSURL *b)
 	{
@@ -106,7 +106,7 @@
 	NSArray <NSString *> *names = _txtPathControl.URL.contents.string.trimmedOfWhitespaceAndNewlines.lines;
 	NSArray <NSURL *> *filenames = [_dirPathControl.URL.directoryContents filtered:^BOOL(NSURL *input)
 	{
-		return ![input.path contains:@"/."];
+		return ![input.path containsString:@"/."];
 	}].id;
 
 
