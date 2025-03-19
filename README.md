@@ -4,6 +4,7 @@
 https://www.corecode.io/index_opensource.html
 
  <br/> 
+<b>Apposcope</b> <br/> List all your apps along with whether they are sandboxed and which programming-language they are written in. <br/> 
 <b>CarDB</b> <br/> CarDB was a project to create a database of all cars on sale. <br/> 
 <b>CCBlock</b> <br/> A safari ad-blocker that actually blocks something. <br/> 
 <b>CHMExtractor</b> <br/> An application for converting/extracting Compiled HTML Help (.chm) files so you can view them in any browser. <br/> 
