@@ -1,0 +1,14 @@
+iOmniMap allows you to navigate in any map that you can download or photograph (without requiring an internet connection).
+
+Ever wanted to be able to use special maps provided by national parks, tourist information, travel planners, guidebooks or any other source directly on your iPhone/iPad? Ever found yourself looking back-and-forth between a physical map and your iPhone/iPad showing your position? iOmniMap is the solution, it lets you import these maps by photographing or downloading them, and after you've defined the position of the map on the world you can directly navigate inside the map, i.e. iOmniMap will show you your GPS position right within the imported map. iOmniMap can even show your heading direction within the imported map.
+iOmniMap is the ideal companion for traveling, outdoor sport, excursions & tourism.
+iOmniMap can even help you save money because you can navigate inside imported maps without internet connection, saving on expensive data roaming in foreign countries.
+
+*** LIMITATIONS *** 
+Note that some "maps" are no "real" maps in a geographical sense at all and therefore can NOT be used with iOmniMap, e.g. the orientational maps often provided by skiing resorts or  subway networks. If the map looks like a photograph taken from above, it can be used.
+
+*** WEBSITE *** 
+For more information please visit: 
+https://www.corecode.io/iomnimap/
+
+

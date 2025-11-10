@@ -1,0 +1,27 @@
+=>"CONNECT" || REFRESH
+<=STATE1 + STATE2
+
+=>NEXT/PREV
+=="iTUNES_CHANGE"
+<=STATE1
+
+=>PLAYPAUSE/LAUNCHQUIT/RATING_NUM/PLAYLIST_NUM/REPEAT_NUM/SHUFFLE_BOOL/VOLUME_NUM/
+
+STATE:
+	int magicbyte = 666
+	int size
+STATE1
+	int player_state {notrunning, playing, paused, stopped}
+	int year
+	int rating
+	string name
+	string artist
+	string album
+	string genre
+STATE2:
+	string [] playlists
+	int shuffle
+	int repeat
+	int volume
+
+in_refresh = 0, in_launchquit, in_next, in_previous, in_playpause, in_rating_num, in_playlist_num, in_repeat_num, in_shuffle_bool, in_volume_num = 10

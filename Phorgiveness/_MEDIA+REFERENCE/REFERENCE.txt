@@ -1,0 +1,72 @@
+
+struct map_chunk_header // 12 bytes
+{
+0  int32 chunk_type; //plyr
+4  int32 offset;
+8  int32 size;
+};
+
+struct player_data
+{
+0	short identifier;
+2	short flags; /* [unused.1] [dead.1] [zombie.1] [totally_dead.1] [map.1] [teleporting.1] [unused.10] 
+
+4	short color;
+6	short team;
+8	char name[32+1];
+	
+	/* shadowed from physics_variables structure below and the playerÕs object (read-only) 
+41	world_point3d location;
+47	world_point3d camera_location; // beginning of fake world_location3d structure
+53	short camera_polygon_index;
+55	angle facing, 
+57              elevation;
+59	short supporting_polygon_index; /* what polygon is actually supporting our weight 
+61	short last_supporting_polygon_index;
+
+	/* suit energy shadows vitality in the playerÕs monster slot 
+63	short suit_energy, 
+65            suit_oxygen;
+    
+67	short monster_index; /* this playerÕs entry in the monster list 
+69	short object_index; /* monster->object_index 
+	
+	/* Reset by initialize_player_weapons 
+71	short weapon_intensity_decay; /* zero is idle intensity 
+73	fixed weapon_intensity;
+
+	/* powerups 
+79	short invisibility_duration;
+81	short invincibility_duration;
+83	short infravision_duration;
+85	short extravision_duration;
+
+	/* teleporting 
+87	short delay_before_teleport; /* This is only valid for interlevel teleports (teleporting_destination is a negative number) 
+89	short teleporting_phase; /* NONE means no teleporting, otherwise [0,TELEPORTING_PHASE) 
+91	short teleporting_destination; /* level number or NONE if intralevel transporter 
+93	short interlevel_teleport_phase; /* This is for the other players when someone else initiates the teleport 
+
+	/* there is no state information associated with items; each item slot is only a count 
+95	short items[NUMBER_OF_ITEMS];
+
+	/* Used by the game window code to keep track of the interface state. 
+223	short interface_flags;
+225	short interface_decay;
+
+	struct physics_variables variables;
+
+	struct damage_record total_damage_given;
+	struct damage_record damage_taken[MAXIMUM_NUMBER_OF_PLAYERS];
+	struct damage_record monster_damage_taken, monster_damage_given;
+
+	short reincarnation_delay;
+
+	short control_panel_side_index; // NONE, or the side index of a control panel the user is using that requires passage of time
+	
+	long ticks_at_last_successful_save;
+
+	long netgame_parameters[2];
+	
+	short unused[256];
+};

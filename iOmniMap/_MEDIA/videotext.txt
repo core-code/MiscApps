@@ -1,0 +1,17 @@
+Welcome to iOmniMap.
+
+You can import a new map by taking a picture of the map, by choosing a previously stored picture of the map, or by downloading the map from the internet.
+
+To show you how this is done, we'll download a map of Oahu.
+
+To navigate inside the map you have to define its real world position.
+
+You have to select the very same geographical position on both the worldmap and inside your own map. To do so you have to zoom to your map's position in the world. Be careful to select the exact same position with great precision.
+
+You'll have to do the very same thing for a second point to finish defining the map. Note that the second point should be faw away from the first point, for best results choose locations in opposite corners.
+
+You can verify that your map is properly placed on the world by touching "Verify result". 
+
+Once you are satisfied with the precision, press "save" and you are ready to navigate in your new map. The navigation screen always displays all imported maps, and allows you to navigate right within these maps. By touching the corner you can adjust navigation options like rotating the map with your heading direction.
+
+We hope you enjoy iOmniMap.
