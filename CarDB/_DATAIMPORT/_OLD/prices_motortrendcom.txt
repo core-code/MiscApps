@@ -1,0 +1,2539 @@
+Acura ILX Sedan 2.0L 150hp 2014 $26900
+Acura ILX Hybrid Sedan 1.5L 111hp 2014 $28900
+Acura ILX Hybrid Sedan 1.5L 111hp 2013 $28900
+Acura ILX Hybrid Technology Pkg Sedan 1.5L 111hp 2013 $34400
+Acura ILX Hybrid Technology Sedan 1.5L 111hp 2014 $34600
+Acura ILX Premium Pkg Sedan 2.0L 150hp 2014 $29200
+Acura ILX Technology Pkg Sedan 2.0L 150hp 2014 $31600
+Acura MDX Advance and DVD Pkg Sport Utility 3.5L 290hp 2014 $54505
+Acura MDX Advance and Entertainment Pkg Sport Utility 3.7L 300hp 2013 $54805
+Acura MDX Advance Pkg Sport Utility 3.7L 300hp 2013 $52905
+Acura MDX Sport Utility 3.5L 290hp 2014 $42290
+Acura MDX Sport Utility 3.7L 300hp 2013 $43280
+Acura MDX Technology and DVD Pkg Sport Utility 3.5L 290hp 2014 $48565
+Acura MDX Technology and Entertainment Pkg Sport Utility 3.7L 300hp 2013 $48855
+Acura MDX Technology Pkg Sport Utility 3.5L 290hp 2014 $46565
+Acura MDX Technology Pkg Sport Utility 3.7L 300hp 2013 $46955
+Acura RDX Sport Utility 3.5L 273hp 2014 $34520
+Acura RDX SH-AWD Sport Utility 3.5L 273hp 2014 $35920
+Acura RDX Technology Pkg SH-AWD Sport Utility 3.5L 273hp 2014 $39620
+Acura RDX Technology Pkg Sport Utility 3.5L 273hp 2014 $38220
+Acura RL Advance Pkg Sedan 3.7L 300hp 2012 $56150
+Acura RL Sedan 3.7L 300hp 2012 $48200
+Acura RL Technology Pkg Sedan 3.7L 300hp 2012 $52350
+Acura RLX Advance Pkg Sedan 3.5L 310hp 2014 $60450
+Acura RLX Sedan 3.5L 310hp 2014 $48450
+Acura RLX Krell Audio Pkg Sedan 3.5L 310hp 2014 $56950
+Acura RLX Navigation Sedan 3.5L 310hp 2014 $50950
+Acura RLX Technology Pkg Sedan 3.5L 310hp 2014 $54450
+Acura TL Advance Sedan 3.5L 280hp 2014 $41960
+Acura TL Sedan 3.5L 280hp 2014 $36030
+Acura TL SH-AWD Advance Sedan 3.7L 305hp 2013 $45385
+Acura TL SH-AWD Sedan 3.7L 305hp 2013 $39455
+Acura TL SH-AWD Technology Sedan 3.7L 305hp 2013 $43185
+Acura TL Technology Sedan 3.5L 280hp 2014 $39760
+Acura TSX Sedan 2.4L 201hp 2014 $30635
+Acura TSX Wagon 2.4L 201hp 2014 $31985
+Acura TSX Technology Pkg Sedan 2.4L 201hp 2013 $33610
+Acura TSX Technology Pkg Wagon 2.4L 201hp 2013 $35510
+Acura TSX Technology Sedan 2.4L 201hp 2014 $33735
+Acura TSX Technology Wagon 2.4L 201hp 2014 $35635
+Acura ZDX Technology Hatchback 3.7L 300hp 2013 $50920
+Aston Martin DB9 Coupe 5.9L 510hp 2014 $183700
+Aston Martin DB9 Volante Convertible 5.9L 510hp 2014 $198700
+Aston Martin DBS Coupe 5.9L 510hp 2012 $275861
+Aston Martin DBS Carbon Coupe 5.9L 510hp 2012 $284976
+Aston Martin DBS Volante Carbon Convertible 5.9L 510hp 2012 $299576
+Aston Martin DBS Volante Convertible 5.9L 510hp 2012 $290861
+Aston Martin Rapide Sedan 5.9L 470hp 2013 $207895
+Aston Martin Rapide Luxury Sedan 5.9L 470hp 2013 $226850
+Aston Martin Rapide S Sedan 5.9L 550hp 2014 $198250
+Aston Martin V12 Vantage Coupe 5.9L 510hp 2013 $180600
+Aston Martin V8 Vantage Coupe 4.7L 420hp 2013 $122400
+Aston Martin V8 Vantage Roadster 4.7L 420hp 2013 $136900
+Aston Martin V8 Vantage S Coupe 4.7L 430hp 2013 $136400
+Aston Martin V8 Vantage S Roadster 4.7L 430hp 2013 $150900
+Aston Martin Vanquish Coupe 5.9L 565hp 2014 $278295
+Aston Martin Vanquish Volante Convertible 5.9L 565hp 2014 $296295
+Audi A3 Premium Hatchback 2.0L 200hp 2013 $28750
+Audi A3 TDI Premium Hatchback 2.0L 140hp 2013 $30250
+Audi A4 Premium Sedan 2.0L 211hp 2013 $32500
+Audi A4 Premium Sedan 2.0L 220hp 2014 $33800
+Audi A5 2.0T Premium Convertible 2.0L 211hp 2013 $43350
+Audi A5 2.0T Premium Convertible 2.0L 220hp 2014 $44500
+Audi A5 2.0T Premium Coupe 2.0L 211hp 2013 $39050
+Audi A5 2.0T Premium Coupe 2.0L 220hp 2014 $40200
+Audi A6 2.0T Premium Sedan 2.0L 211hp 2013 $42200
+Audi A6 2.0T Premium Sedan 2.0L 220hp 2014 $43100
+Audi A6 3.0T Premium Plus Sedan 3.0L 310hp 2014 $55100
+Audi A6 3.0T Premium Sedan 3.0L 310hp 2013 $50400
+Audi A6 TDI Premium Plus Sedan 3.0L 240hp 2014 $57500
+Audi A7 3.0T Premium Plus Hatchback 3.0L 310hp 2014 $64500
+Audi A7 Premium Hatchback 3.0L 310hp 2013 $60100
+Audi A7 TDI Premium Plus Hatchback 3.0L 240hp 2014 $66900
+Audi A8 3.0T Sedan 3.0L 333hp 2014 $75100
+Audi A8 4.0T Sedan 4.0L 420hp 2014 $83900
+Audi A8 Sedan 3.0L 333hp 2013 $72200
+Audi A8 L 3.0T Sedan 3.0L 333hp 2014 $78800
+Audi A8 L 4.0T Sedan 4.0L 420hp 2014 $87600
+Audi A8 L Sedan 3.0L 333hp 2013 $78500
+Audi A8 L TDI Sedan 3.0L 240hp 2014 $82500
+Audi A8 L W12 Sedan 6.3L 500hp 2014 $135900
+Audi Allroad Premium Wagon 2.0L 211hp 2013 $39600
+Audi Allroad Premium Wagon 2.0L 220hp 2014 $40700
+Audi Q5 2.0T Premium Sport Utility 2.0L 211hp 2013 $35900
+Audi Q5 2.0T Premium Sport Utility 2.0L 220hp 2014 $37300
+Audi Q5 3.0T Premium Plus Sport Utility 3.0L 272hp 2014 $44400
+Audi Q5 Hybrid Sport Utility 2.0L 245hp 2014 $51300
+Audi Q5 TDI Premium Plus Sport Utility 3.0L 240hp 2014 $46500
+Audi Q7 3.0 Premium Sport Utility 3.0L 280hp 2013 $46800
+Audi Q7 3.0 Prestige Sport Utility 3.0L 333hp 2013 $60550
+Audi Q7 3.0 TDI Premium Sport Utility 3.0L 240hp 2013 $52000
+Audi Q7 3.0T Premium Sport Utility 3.0L 280hp 2014 $47700
+Audi Q7 TDI Premium Sport Utility 3.0L 240hp 2014 $52900
+Audi Q7 TDI Prestige Sport Utility 3.0L 333hp 2014 $60900
+Audi R8 Coupe 4.2L 430hp 2014 $124000
+Audi R8 Plus Coupe 5.2L 550hp 2014 $170545
+Audi R8 Spyder Convertible 4.2L 430hp 2014 $137500
+Audi RS 5 Convertible 4.2L 450hp 2014 $77900
+Audi RS 5 Coupe 4.2L 450hp 2014 $69600
+Audi RS 5 Cabriolet Convertible 4.2L 450hp 2013 $77900
+Audi RS 7 Hatchback 4.0L 560hp 2014 $104900
+Audi S4 Sedan 3.0L 333hp 2013 $49000
+Audi S4 Premium Plus Sedan 3.0L 333hp 2014 $49500
+Audi S5 Premium Plus Convertible 3.0L 333hp 2014 $60400
+Audi S5 Premium Plus Coupe 3.0L 333hp 2014 $52000
+Audi S6 Prestige Sedan 4.0L 420hp 2014 $73400
+Audi S7 Prestige Sedan 4.0L 420hp 2014 $80200
+Audi S8 Sedan 4.0L 520hp 2014 $112500
+Audi SQ5 Premium Plus Sport Utility 3.0L 354hp 2014 $51900
+Audi TT Premium Plus Convertible 2.0L 211hp 2014 $42900
+Audi TT Premium Plus Coupe 2.0L 211hp 2014 $39900
+Audi TT Premium Plus Roadster 2.0L 211hp 2013 $41650
+Audi TT Quattro Convertible 2.0L 211hp 2015 $43350
+Audi TT Quattro Convertible Quattro Convertible 2015 $43350
+Audi TT Quattro Convertible Quattro Coupe 2015 $40350
+Audi TT Quattro Coupe 2.0L 211hp 2015 $40350
+Audi TT Quattro Coupe Quattro Convertible 2015 $43350
+Audi TT Quattro Coupe Quattro Coupe 2015 $40350
+Audi TT RS Coupe 2.5L 360hp 2013 $57200
+Audi TTS Premium Plus Convertible 2.0L 265hp 2014 $51700
+Audi TTS Premium Plus Coupe 2.0L 265hp 2014 $48700
+Audi TTS Premium Plus Roadster 2.0L 265hp 2013 $50350
+Audi TTS Quattro Convertible 2.0L 265hp 2015 $51700
+Audi TTS Quattro Coupe 2.0L 265hp 2015 $48700
+Bentley Continental Flying Spur Sedan 6.0L 552hp 2013 $184200
+Bentley Continental Flying Spur Speed Sedan 6.0L 600hp 2013 $209600
+Bentley Continental GT Coupe 4.0L 500hp 2014 $177500
+Bentley Continental GT Speed Coupe 6.0L 616hp 2014 $217000
+Bentley Continental GTC Convertible 4.0L 500hp 2014 $195200
+Bentley Continental GTC Speed Convertible 6.0L 616hp 2014 $238700
+Bentley Continental Supersports Convertible 6.0L 621hp 2013 $280400
+Bentley Flying Spur Sedan 6.0L 616hp 2014 $200500
+Bentley Mulsanne Sedan 6.8L 505hp 2014 $298900
+BMW 1-Series 128i Convertible 3.0L 230hp 2013 $36900
+BMW 1-Series 128i Coupe 3.0L 230hp 2013 $31200
+BMW 1-Series 135i Convertible 3.0L 300hp 2013 $44100
+BMW 1-Series 135i Coupe 3.0L 300hp 2013 $39300
+BMW 1-Series 135is Convertible 3.0L 320hp 2013 $47950
+BMW 1-Series 135is Coupe 3.0L 320hp 2013 $43250
+BMW 2-Series 228i Coupe 2.0L 240hp 2014 $32100
+BMW 2-Series M235i Coupe 3.0L 320hp 2014 $43100
+BMW 3-Series 320i Sedan 2.0L 180hp 2014 $32750
+BMW 3-Series 320i xDrive Sedan 2.0L 180hp 2014 $34750
+BMW 3-Series 328d Sedan 2.0L 180hp 2014 $38600
+BMW 3-Series 328d xDrive Sedan 2.0L 180hp 2014 $40600
+BMW 3-Series 328d xDrive Wagon 2.0L 180hp 2014 $42950
+BMW 3-Series 328i Convertible 3.0L 230hp 2013 $47600
+BMW 3-Series 328i Coupe 3.0L 230hp 2013 $38700
+BMW 3-Series 328i Sedan 2.0L 240hp 2014 $37300
+BMW 3-Series 328i SULEV Sedan 2.0L 240hp 2014 $37300
+BMW 3-Series 328i xDrive Coupe 3.0L 230hp 2013 $40400
+BMW 3-Series 328i xDrive Gran Turismo Hatchback 2.0L 240hp 2014 $41450
+BMW 3-Series 328i xDrive Sedan 2.0L 240hp 2014 $39300
+BMW 3-Series 328i xDrive SULEV Sedan 2.0L 240hp 2014 $39300
+BMW 3-Series 328i xDrive Wagon 2.0L 240hp 2014 $41450
+BMW 3-Series 335i Convertible 3.0L 300hp 2013 $53800
+BMW 3-Series 335i Coupe 3.0L 300hp 2013 $45100
+BMW 3-Series 335i Sedan 3.0L 300hp 2014 $43400
+BMW 3-Series 335i xDrive Coupe 3.0L 300hp 2013 $46800
+BMW 3-Series 335i xDrive Gran Turismo Hatchback 3.0L 300hp 2014 $46850
+BMW 3-Series 335i xDrive Sedan 3.0L 300hp 2014 $45400
+BMW 3-Series 335is Convertible 3.0L 320hp 2013 $60800
+BMW 3-Series 335is Coupe 3.0L 320hp 2013 $52100
+BMW 4-Series 428i Convertible 2.0L 240hp 2014 $48750
+BMW 4-Series 428i Coupe 2.0L 240hp 2014 $40500
+BMW 4-Series 428i Coupe 428i Convertible 2014 $48750
+BMW 4-Series 428i Coupe 428i Coupe 2014 $40500
+BMW 4-Series 428i Coupe 428i SULEV Convertible 2014 $48750
+BMW 4-Series 428i Coupe 428i SULEV Coupe 2014 $40500
+BMW 4-Series 428i Coupe 428i xDrive Coupe 2014 $42500
+BMW 4-Series 428i Coupe 428i xDrive SULEV Coupe 2014 $42500
+BMW 4-Series 428i Coupe 435i Convertible 2014 $54900
+BMW 4-Series 428i Coupe 435i Coupe 2014 $46000
+BMW 4-Series 428i Coupe 435i xDrive Coupe 2014 $48000
+BMW 4-Series 428i SULEV Convertible 2.0L 240hp 2014 $48750
+BMW 4-Series 428i SULEV Coupe 2.0L 240hp 2014 $40500
+BMW 4-Series 428i SULEV Coupe 428i Convertible 2014 $48750
+BMW 4-Series 428i SULEV Coupe 428i Coupe 2014 $40500
+BMW 4-Series 428i SULEV Coupe 428i SULEV Convertible 2014 $48750
+BMW 4-Series 428i SULEV Coupe 428i SULEV Coupe 2014 $40500
+BMW 4-Series 428i SULEV Coupe 428i xDrive Coupe 2014 $42500
+BMW 4-Series 428i SULEV Coupe 428i xDrive SULEV Coupe 2014 $42500
+BMW 4-Series 428i SULEV Coupe 435i Convertible 2014 $54900
+BMW 4-Series 428i SULEV Coupe 435i Coupe 2014 $46000
+BMW 4-Series 428i SULEV Coupe 435i xDrive Coupe 2014 $48000
+BMW 4-Series 428i xDrive Coupe 2.0L 240hp 2014 $42500
+BMW 4-Series 428i xDrive SULEV Coupe 2.0L 240hp 2014 $42500
+BMW 4-Series 435i Convertible 3.0L 300hp 2014 $54900
+BMW 4-Series 435i Coupe 3.0L 300hp 2014 $46000
+BMW 4-Series 435i xDrive Coupe 3.0L 300hp 2014 $48000
+BMW 5-Series 528i Sedan 2.0L 240hp 2013 $47800
+BMW 5-Series 528i Sedan 2.0L 241hp 2014 $49500
+BMW 5-Series 528i xDrive Sedan 2.0L 240hp 2013 $50100
+BMW 5-Series 528i xDrive Sedan 2.0L 241hp 2014 $51800
+BMW 5-Series 535d Sedan 3.0L 255hp 2014 $56600
+BMW 5-Series 535d xDrive Sedan 3.0L 255hp 2014 $58900
+BMW 5-Series 535i Gran Turismo Hatchback 3.0L 300hp 2013 $58300
+BMW 5-Series 535i Gran Turismo Hatchback 3.0L 302hp 2014 $60200
+BMW 5-Series 535i Sedan 3.0L 300hp 2013 $53400
+BMW 5-Series 535i Sedan 3.0L 302hp 2014 $55100
+BMW 5-Series 535i xDrive Gran Turismo Hatchback 3.0L 300hp 2013 $60600
+BMW 5-Series 535i xDrive Gran Turismo Hatchback 3.0L 302hp 2014 $62500
+BMW 5-Series 535i xDrive Sedan 3.0L 300hp 2013 $55700
+BMW 5-Series 535i xDrive Sedan 3.0L 302hp 2014 $57400
+BMW 5-Series 550i Gran Turismo Hatchback 4.4L 400hp 2013 $67800
+BMW 5-Series 550i Gran Turismo Hatchback 4.4L 443hp 2014 $68100
+BMW 5-Series 550i Sedan 4.4L 400hp 2013 $62700
+BMW 5-Series 550i Sedan 4.4L 443hp 2014 $63900
+BMW 5-Series 550i xDrive Gran Turismo Hatchback 4.4L 400hp 2013 $70100
+BMW 5-Series 550i xDrive Gran Turismo Hatchback 4.4L 443hp 2014 $70400
+BMW 5-Series 550i xDrive Sedan 4.4L 400hp 2013 $65000
+BMW 5-Series 550i xDrive Sedan 4.4L 443hp 2014 $66200
+BMW 6-Series 640i Convertible 3.0L 315hp 2014 $82900
+BMW 6-Series 640i Coupe 3.0L 315hp 2014 $75400
+BMW 6-Series 640I Gran Coupe Sedan 3.0L 315hp 2014 $77600
+BMW 6-Series 640i xDrive Convertible 3.0L 315hp 2014 $85900
+BMW 6-Series 640i xDrive Coupe 3.0L 315hp 2014 $78400
+BMW 6-Series 640i xDrive Gran Coupe Sedan 3.0L 315hp 2014 $80600
+BMW 6-Series 650i Convertible 4.4L 445hp 2014 $94200
+BMW 6-Series 650i Coupe 4.4L 445hp 2014 $86700
+BMW 6-Series 650i Gran Coupe Coupe 4.4L 445hp 2013 $87200
+BMW 6-Series 650i Gran Coupe Sedan 4.4L 450hp 2014 $88900
+BMW 6-Series 650i xDrive Convertible 4.4L 445hp 2014 $97200
+BMW 6-Series 650i xDrive Coupe 4.4L 445hp 2014 $89700
+BMW 6-Series 650i xDrive Gran Coupe Coupe 4.4L 445hp 2013 $90200
+BMW 6-Series 650i xDrive Gran Coupe Sedan 4.4L 450hp 2014 $91900
+BMW 7-Series 740i Sedan 3.0L 315hp 2014 $74000
+BMW 7-Series 740Li Sedan 3.0L 315hp 2014 $78000
+BMW 7-Series 740Li xDrive Sedan 3.0L 315hp 2014 $81000
+BMW 7-Series 750i Sedan 4.4L 445hp 2014 $87300
+BMW 7-Series 750i xDrive Sedan 4.4L 445hp 2014 $90300
+BMW 7-Series 750Li Sedan 4.4L 445hp 2014 $91000
+BMW 7-Series 750Li xDrive Sedan 4.4L 445hp 2014 $94000
+BMW 7-Series 760Li Sedan 6.0L 535hp 2014 $141200
+BMW 7-Series Alpina B7 L Sedan 4.4L 500hp 2014 $132200
+BMW 7-Series Alpina B7 L xDrive Sedan 4.4L 500hp 2014 $135200
+BMW 7-Series Alpina B7 Sedan 4.4L 500hp 2014 $128300
+BMW 7-Series Alpina B7 xDrive Sedan 4.4L 500hp 2014 $131300
+BMW ActiveHybrid 3 Sedan 3.0L 335hp 2014 $49900
+BMW ActiveHybrid 5 Sedan 3.0L 335hp 2014 $61400
+BMW ActiveHybrid 7 740Li Sedan 3.0L 348hp 2013 $84300
+BMW ActiveHybrid 7 Sedan 3.0L 348hp 2014 $84300
+BMW i3 Hatchback N/A 2014 $41350
+BMW i3 Range Extender Hatchback 0.7L 170hp 2014 $45200
+BMW M3 Convertible 4.0L 414hp 2013 $68750
+BMW M3 Coupe 4.0L 414hp 2013 $60100
+BMW M5 Sedan 4.4L 552hp 2014 $92900
+BMW M5 Sedan 4.4L 560hp 2013 $90200
+BMW M6 Convertible 4.4L 560hp 2014 $117500
+BMW M6 Coupe 4.4L 560hp 2014 $111200
+BMW M6 Gran Coupe Sedan 4.4L 560hp 2014 $115000
+BMW X1 sDrive28i Sport Utility 2.0L 240hp 2014 $30900
+BMW X1 sDrive28i Sport Utility 2.0L 241hp 2013 $30800
+BMW X1 xDrive28i Sport Utility 2.0L 240hp 2014 $32600
+BMW X1 xDrive28i Sport Utility 2.0L 241hp 2013 $32500
+BMW X1 xDrive35i Sport Utility 3.0L 300hp 2014 $38800
+BMW X3 xDrive28i Sport Utility 2.0L 240hp 2014 $39800
+BMW X3 xDrive35i Sport Utility 3.0L 300hp 2014 $44900
+BMW X5 M Sport Utility 4.4L 555hp 2013 $88850
+BMW X5 sDrive35i Sport Utility 3.0L 302hp 2014 $52800
+BMW X5 xDrive35d Sport Utility 3.0L 255hp 2014 $56600
+BMW X5 xDrive35d Sport Utility 3.0L 265hp 2013 $56700
+BMW X5 xDrive35i Sport Utility 3.0L 300hp 2013 $47500
+BMW X5 xDrive35i Sport Utility 3.0L 302hp 2014 $55100
+BMW X5 xDrive50i Sport Utility 4.4L 400hp 2013 $64200
+BMW X5 xDrive50i Sport Utility 4.4L 445hp 2014 $68200
+BMW X6 M Sport Utility 4.4L 555hp 2014 $93900
+BMW X6 xDrive35i Sport Utility 3.0L 300hp 2014 $60800
+BMW X6 xDrive50i Sport Utility 4.4L 400hp 2014 $71400
+BMW Z4 sDrive28i Convertible 2.0L 240hp 2014 $48950
+BMW Z4 sDrive35i Convertible 3.0L 300hp 2014 $56950
+BMW Z4 sDrive35is Convertible 3.0L 335hp 2014 $65800
+Buick Enclave Convenience Sport Utility 3.6L 288hp 2014 $38890
+Buick Enclave Leather Sport Utility 3.6L 288hp 2014 $42905
+Buick Enclave Premium Sport Utility 3.6L 288hp 2014 $46465
+Buick Encore Sport Utility 1.4L 138hp 2014 $24160
+Buick Encore Convenience Sport Utility 1.4L 138hp 2014 $25785
+Buick Encore Leather Sport Utility 1.4L 138hp 2014 $27485
+Buick Encore Premium Sport Utility 1.4L 138hp 2014 $28965
+Buick LaCrosse eAssist Leather Sedan 2.4L 197hp 2014 $35610
+Buick LaCrosse eAssist Sedan 2.4L 197hp 2014 $33535
+Buick LaCrosse Hybrid Sedan 2.4L 197hp 2013 $31660
+Buick LaCrosse Leather Hybrid Sedan 2.4L 197hp 2013 $33870
+Buick LaCrosse Leather Sedan 3.6L 303hp 2014 $38615
+Buick LaCrosse Premium I Sedan 3.6L 303hp 2014 $39210
+Buick LaCrosse Premium II Sedan 3.6L 303hp 2014 $39755
+Buick LaCrosse Premium Sedan 3.6L 303hp 2013 $35285
+Buick LaCrosse Touring Sedan 3.6L 303hp 2013 $39240
+Buick Regal Sedan 2.0L 259hp 2014 $29690
+Buick Regal GS Sedan 2.0L 259hp 2014 $36905
+Buick Regal GS Turbo Sedan 2.0L 270hp 2013 $34980
+Buick Regal Hybrid Sedan 2.4L 182hp 2013 $29015
+Buick Regal Premium 1 Sedan 2.0L 259hp 2014 $31560
+Buick Regal Premium 2 Sedan 2.0L 259hp 2014 $33760
+Buick Regal Premium Hybrid Sedan 2.4L 182hp 2013 $30635
+Buick Regal Premium Turbo Sedan 2.0L 220hp 2013 $30635
+Buick Verano Sedan 2.4L 180hp 2014 $23700
+Buick Verano Convenience Sedan 2.4L 180hp 2014 $24870
+Buick Verano Leather Sedan 2.4L 180hp 2014 $26900
+Buick Verano Premium Sedan 2.0L 250hp 2014 $29065
+Cadillac ATS 2.0 1SE Sedan 2.0L 272hp 2014 $35095
+Cadillac ATS 2.0 1SF Sedan 2.0L 272hp 2014 $37095
+Cadillac ATS 2.0 Luxury 1SG Sedan 2.0L 272hp 2014 $39095
+Cadillac ATS 2.0 Luxury 1SH Sedan 2.0L 272hp 2014 $41095
+Cadillac ATS 2.0 Performance 1SJ Sedan 2.0L 272hp 2014 $42095
+Cadillac ATS 2.0 Performance 1SK Sedan 2.0L 272hp 2014 $44095
+Cadillac ATS 2.0 Premium 1SL Sedan 2.0L 272hp 2014 $45095
+Cadillac ATS 2.0 Premium 1SM Sedan 2.0L 272hp 2014 $46195
+Cadillac ATS 2.5 1SB Sedan 2.5L 202hp 2014 $33065
+Cadillac ATS 2.5 Luxury 1SC Sedan 2.5L 202hp 2014 $37095
+Cadillac ATS 3.6 Luxury 1SP Sedan 3.6L 321hp 2014 $41095
+Cadillac ATS 3.6 Luxury 1SQ Sedan 3.6L 321hp 2014 $43095
+Cadillac ATS 3.6 Performance 1SR Sedan 3.6L 321hp 2014 $44095
+Cadillac ATS 3.6 Performance 1ST Sedan 3.6L 321hp 2014 $46095
+Cadillac ATS 3.6 Premium 1SU Sedan 3.6L 321hp 2014 $47095
+Cadillac ATS 3.6 Premium 1SW Sedan 3.6L 321hp 2014 $48195
+Cadillac ATS Sedan 2.0L 202hp 2013 $33095
+Cadillac ATS Luxury Sedan 2.0L 202hp 2013 $37590
+Cadillac ATS Performance Sedan 2.0L 272hp 2013 $41895
+Cadillac ATS Premium Sedan 2.0L 272hp 2013 $44895
+Cadillac CTS 2.0 Luxury Collection Sedan 2.0L 272hp 2014 $51000
+Cadillac CTS 2.0 Performance Collection Sedan 2.0L 272hp 2014 $57400
+Cadillac CTS 2.0 Premium Collection Sedan 2.0L 272hp 2014 $61800
+Cadillac CTS 2.0 Sedan 2.0L 272hp 2014 $45100
+Cadillac CTS 3.0 Luxury Collection Wagon 3.0L 270hp 2014 $42195
+Cadillac CTS 3.6 Coupe 3.6L 318hp 2014 $39495
+Cadillac CTS 3.6 Luxury Collection Sedan 3.6L 321hp 2014 $53700
+Cadillac CTS 3.6 Performance Collection  Coupe 3.6L 318hp 2014 $43795
+Cadillac CTS 3.6 Performance Collection  Sedan 3.6L 321hp 2014 $60100
+Cadillac CTS 3.6 Performance Collection  Wagon 3.6L 318hp 2014 $44195
+Cadillac CTS 3.6 Premium Collection  Coupe 3.6L 318hp 2014 $47995
+Cadillac CTS 3.6 Premium Collection  Sedan 3.6L 321hp 2014 $64500
+Cadillac CTS 3.6 Premium Collection  Wagon 3.6L 318hp 2014 $49795
+Cadillac CTS 3.6 Vsport Premium Sedan 3.6L 420hp 2014 $69070
+Cadillac CTS 3.6 Vsport Sedan 3.6L 420hp 2014 $59070
+Cadillac CTS Coupe 3.6L 318hp 2013 $38905
+Cadillac CTS Wagon 3.0L 270hp 2013 $39205
+Cadillac CTS Luxury Sedan 3.0L 270hp 2013 $39095
+Cadillac CTS Luxury Wagon 3.0L 270hp 2013 $42150
+Cadillac CTS Performance Coupe 3.6L 318hp 2013 $43950
+Cadillac CTS Performance Sedan 3.6L 318hp 2013 $43340
+Cadillac CTS Performance Wagon 3.6L 318hp 2013 $44190
+Cadillac CTS Premium Coupe 3.6L 318hp 2013 $48150
+Cadillac CTS Premium Sedan 3.6L 318hp 2013 $48290
+Cadillac CTS Premium Wagon 3.6L 318hp 2013 $49750
+Cadillac CTS-V Coupe 6.2L 556hp 2014 $63600
+Cadillac CTS-V Sedan 6.2L 556hp 2014 $63600
+Cadillac CTS-V Wagon 6.2L 556hp 2014 $63600
+Cadillac ELR Coupe 1.4L 207hp 2014 $75000
+Cadillac Escalade Sport Utility 6.2L 403hp 2014 $63745
+Cadillac Escalade Sport Utility 6.2L 420hp 2015 $71695
+Cadillac Escalade ESV Sport Utility 6.2L 403hp 2014 $66345
+Cadillac Escalade ESV Sport Utility 6.2L 420hp 2015 $74695
+Cadillac Escalade ESV Luxury Sport Utility 6.2L 403hp 2014 $70570
+Cadillac Escalade ESV Luxury Sport Utility 6.2L 420hp 2015 $78695
+Cadillac Escalade ESV Premium Sport Utility 6.2L 403hp 2014 $75450
+Cadillac Escalade ESV Premium Sport Utility 6.2L 420hp 2015 $83195
+Cadillac Escalade ESV Sport Utility 6.2L 403hp 2013 $66345
+Cadillac Escalade EXT Crew Cab Pickup 6.2L 403hp 2013 $63060
+Cadillac Escalade Hybrid Sport Utility 6.0L 332hp 2013 $74425
+Cadillac Escalade Luxury Sport Utility 6.2L 403hp 2014 $67970
+Cadillac Escalade Luxury Sport Utility 6.2L 420hp 2015 $75695
+Cadillac Escalade Premium Sport Utility 6.2L 403hp 2014 $72250
+Cadillac Escalade Premium Sport Utility 6.2L 420hp 2015 $80195
+Cadillac SRX Sport Utility 3.6L 308hp 2014 $37505
+Cadillac SRX Luxury Collection Sport Utility 3.6L 308hp 2014 $42880
+Cadillac SRX Luxury Sport Utility 3.6L 308hp 2013 $42705
+Cadillac SRX Performance Collection Sport Utility 3.6L 308hp 2014 $45255
+Cadillac SRX Performance Sport Utility 3.6L 308hp 2013 $45080
+Cadillac SRX Premium Collection Sport Utility 3.6L 308hp 2014 $48145
+Cadillac SRX Premium Sport Utility 3.6L 308hp 2013 $47920
+Cadillac XTS Sedan 3.6L 304hp 2014 $44600
+Cadillac XTS Luxury Sedan 3.6L 304hp 2014 $49510
+Cadillac XTS Platinum Sedan 3.6L 304hp 2014 $61750
+Cadillac XTS Premium Sedan 3.6L 304hp 2014 $54455
+Cadillac XTS TT Platinum Sedan 3.6L 410hp 2014 $69095
+Cadillac XTS TT Premium Sedan 3.6L 410hp 2014 $62095
+Chevrolet Avalanche LS Crew Cab Pickup 5.3L 326hp 2013 $35980
+Chevrolet Avalanche LT Crew Cab Pickup 5.3L 326hp 2013 $38625
+Chevrolet Avalanche LTZ Crew Cab Pickup 5.3L 326hp 2013 $44580
+Chevrolet Camaro 1LS Coupe 3.6L 323hp 2014 $23555
+Chevrolet Camaro 1LT Convertible 3.6L 323hp 2014 $31055
+Chevrolet Camaro 1LT Coupe 3.6L 323hp 2014 $25855
+Chevrolet Camaro 1SS Convertible 6.2L 426hp 2014 $39355
+Chevrolet Camaro 1SS Coupe 6.2L 426hp 2014 $33355
+Chevrolet Camaro 2LS Coupe 3.6L 323hp 2014 $24755
+Chevrolet Camaro 2LT Convertible 3.6L 323hp 2014 $35155
+Chevrolet Camaro 2LT Coupe 3.6L 323hp 2014 $29055
+Chevrolet Camaro 2SS Convertible 6.2L 426hp 2014 $42255
+Chevrolet Camaro 2SS Coupe 6.2L 426hp 2014 $37155
+Chevrolet Camaro LS Coupe 3.6L 323hp 2013 $23345
+Chevrolet Camaro LT Convertible 3.6L 323hp 2013 $30660
+Chevrolet Camaro LT Coupe 3.6L 323hp 2013 $25760
+Chevrolet Camaro SS Convertible 6.2L 426hp 2013 $38685
+Chevrolet Camaro SS Coupe 6.2L 426hp 2013 $32635
+Chevrolet Camaro ZL1 Convertible 6.2L 580hp 2014 $60555
+Chevrolet Camaro ZL1 Coupe 6.2L 580hp 2014 $55355
+Chevrolet Colorado Crew Cab Pickup 2.9L 185hp 2012 $24285
+Chevrolet Colorado Extended Cab Pickup 2.9L 185hp 2012 $22955
+Chevrolet Colorado Regular Cab Pickup 2.9L 185hp 2012 $20370
+Chevrolet Corvette 427 Convertible 7.0L 505hp 2013 $75925
+Chevrolet Corvette Convertible 6.2L 430hp 2013 $54600
+Chevrolet Corvette Coupe 6.2L 430hp 2013 $49600
+Chevrolet Corvette Grand Sport Convertible 6.2L 430hp 2013 $59600
+Chevrolet Corvette Grand Sport Coupe 6.2L 430hp 2013 $56000
+Chevrolet Corvette Stingray Convertible 6.2L 455hp 2014 $56000
+Chevrolet Corvette Stingray Coupe 6.2L 455hp 2014 $51000
+Chevrolet Corvette Stingray Z51 Convertible 6.2L 455hp 2014 $58800
+Chevrolet Corvette Stingray Z51 Coupe 6.2L 455hp 2014 $53800
+Chevrolet Corvette Z06 Coupe 7.0L 505hp 2013 $75600
+Chevrolet Corvette ZR1 Coupe 6.2L 638hp 2013 $111600
+Chevrolet Cruze 1LT Sedan 1.4L 138hp 2014 $18815
+Chevrolet Cruze 2LT Sedan 1.4L 138hp 2014 $21295
+Chevrolet Cruze Clean Turbo Diesel Sedan 2.0L 151hp 2014 $24985
+Chevrolet Cruze Eco Sedan 1.4L 138hp 2014 $19935
+Chevrolet Cruze LS Sedan 1.8L 138hp 2014 $17520
+Chevrolet Cruze LT Sedan 1.4L 138hp 2013 $18560
+Chevrolet Cruze LTZ Sedan 1.4L 138hp 2014 $23805
+Chevrolet Equinox 1LT Sport Utility 2.4L 182hp 2014 $26020
+Chevrolet Equinox 2LT Sport Utility 2.4L 182hp 2014 $27890
+Chevrolet Equinox LS Sport Utility 2.4L 182hp 2014 $24360
+Chevrolet Equinox LT Sport Utility 2.4L 182hp 2013 $25800
+Chevrolet Equinox LTZ Sport Utility 2.4L 182hp 2014 $31585
+Chevrolet Express 1500 Cargo Van 4.3L 195hp 2014 $27710
+Chevrolet Express 1500 LS Passenger Van 5.3L 310hp 2014 $30970
+Chevrolet Express 2500 Cargo Van 6.6L 260hp 2014 $41160
+Chevrolet Express 2500 Extended Cargo Van 6.6L 260hp 2014 $43020
+Chevrolet Express 2500 LS Passenger Van 4.8L 280hp 2014 $31865
+Chevrolet Express 3500 Cargo Van 6.6L 260hp 2014 $44480
+Chevrolet Express 3500 Extended Cargo Van 6.6L 260hp 2014 $45365
+Chevrolet Express 3500 LS Extended Passenger Van 6.6L 260hp 2014 $48970
+Chevrolet Express 3500 LS Passenger Van 6.6L 260hp 2014 $47100
+Chevrolet Impala LS Eco Sedan 2.4L 182hp 2014 $29135
+Chevrolet Impala LS Sedan 2.5L 195hp 2014 $26860
+Chevrolet Impala LS Sedan 3.6L 300hp 2013 $25860
+Chevrolet Impala LT Eco Sedan 2.4L 182hp 2014 $31110
+Chevrolet Impala LT Sedan 2.5L 195hp 2014 $29110
+Chevrolet Impala LT Sedan 3.6L 300hp 2013 $27385
+Chevrolet Impala LTZ Sedan 2.5L 195hp 2014 $33880
+Chevrolet Impala LTZ Sedan 3.6L 300hp 2013 $30400
+Chevrolet Malibu Eco Sedan 2.4L 197hp 2014 $25945
+Chevrolet Malibu LS Sedan 2.5L 197hp 2014 $22340
+Chevrolet Malibu LT 1LT Sedan 2.5L 197hp 2014 $23610
+Chevrolet Malibu LT 2LT Sedan 2.5L 197hp 2014 $25315
+Chevrolet Malibu LT 3LT Sedan 2.0L 259hp 2014 $26850
+Chevrolet Malibu LT Sedan 2.5L 197hp 2013 $23185
+Chevrolet Malibu LTZ 1LZ Sedan 2.5L 197hp 2014 $27790
+Chevrolet Malibu LTZ 2LZ Sedan 2.0L 259hp 2014 $29950
+Chevrolet Malibu LTZ Sedan 2.5L 197hp 2013 $27365
+Chevrolet Malibu SA Hybrid Sedan 2.4L 182hp 2013 $24985
+Chevrolet Silverado 1500 1WT Short Bed Crew Cab Pickup 4.3L 297hp 2014 $33700
+Chevrolet Silverado 1500 1WT Standard Bed Crew Cab Pickup 4.3L 297hp 2014 $34000
+Chevrolet Silverado 1500 2WT Short Bed Crew Cab Pickup 4.3L 297hp 2014 $35755
+Chevrolet Silverado 1500 2WT Standard Bed Crew Cab Pickup 4.3L 297hp 2014 $36055
+Chevrolet Silverado 1500 Crew Cab Pickup 5.3L 326hp 2013 $36020
+Chevrolet Silverado 1500 Double Cab LT Extended Cab Pickup 4.3L 297hp 2014 $33785
+Chevrolet Silverado 1500 Double Cab LTZ Extended Cab Pickup 5.3L 380hp 2014 $38660
+Chevrolet Silverado 1500 Double Cab Work Truck 1WT Extended Cab Pickup 4.3L 297hp 2014 $29600
+Chevrolet Silverado 1500 Double Cab Work Truck 2WT Extended Cab Pickup 4.3L 297hp 2014 $31605
+Chevrolet Silverado 1500 Double Cab Z71 LT  Extended Cab Pickup 4.3L 297hp 2014 $35375
+Chevrolet Silverado 1500 Double Cab Z71 LTZ  Extended Cab Pickup 5.3L 380hp 2014 $39340
+Chevrolet Silverado 1500 Hybrid Crew Cab Pickup 6.0L 332hp 2013 $41135
+Chevrolet Silverado 1500 Long Bed Extended Cab Pickup 5.3L 326hp 2013 $29655
+Chevrolet Silverado 1500 Long Bed Regular Cab Pickup 4.3L 195hp 2013 $23980
+Chevrolet Silverado 1500 LT Long Bed Regular Cab Pickup 4.3L 297hp 2014 $31255
+Chevrolet Silverado 1500 LT Short Bed Crew Cab Pickup 4.3L 297hp 2014 $36250
+Chevrolet Silverado 1500 LT Short Bed Regular Cab Pickup 4.3L 297hp 2014 $31130
+Chevrolet Silverado 1500 LT Standard Bed Crew Cab Pickup 4.3L 297hp 2014 $36550
+Chevrolet Silverado 1500 LTZ Short Bed Crew Cab Pickup 5.3L 380hp 2014 $41120
+Chevrolet Silverado 1500 LTZ Standard Bed Crew Cab Pickup 5.3L 380hp 2014 $41420
+Chevrolet Silverado 1500 Short Bed Regular Cab Pickup 4.3L 195hp 2013 $23590
+Chevrolet Silverado 1500 Standard Bed Extended Cab Pickup 4.3L 195hp 2013 $27615
+Chevrolet Silverado 1500 Work Truck 1WT Long Bed Regular Cab Pickup 4.3L 297hp 2014 $25965
+Chevrolet Silverado 1500 Work Truck 1WT Short Bed Regular Cab Pickup 4.3L 297hp 2014 $25575
+Chevrolet Silverado 1500 Work Truck 2WT Long Bed Regular Cab Pickup 4.3L 297hp 2014 $28210
+Chevrolet Silverado 1500 Work Truck 2WT Short Bed Regular Cab Pickup 4.3L 297hp 2014 $27820
+Chevrolet Silverado 1500 Z71 LT Long Bed Regular Cab Pickup 4.3L 297hp 2014 $32845
+Chevrolet Silverado 1500 Z71 LT Short Bed Crew Cab Pickup 4.3L 297hp 2014 $37840
+Chevrolet Silverado 1500 Z71 LT Short Bed Regular Cab Pickup 4.3L 297hp 2014 $32720
+Chevrolet Silverado 1500 Z71 LT Standard Bed Crew Cab Pickup 4.3L 297hp 2014 $38140
+Chevrolet Silverado 1500 Z71 LTZ Short Bed Crew Cab Pickup 5.3L 380hp 2014 $41800
+Chevrolet Silverado 1500 Z71 LTZ Standard Bed Crew Cab Pickup 5.3L 380hp 2014 $42100
+Chevrolet Silverado 2500 HD Long Bed Crew Cab Pickup 6.0L 360hp 2013 $33530
+Chevrolet Silverado 2500 HD Long Bed Extended Cab Pickup 6.0L 360hp 2013 $31925
+Chevrolet Silverado 2500 HD Long Bed Regular Cab Pickup 6.0L 360hp 2013 $29550
+Chevrolet Silverado 2500 HD Short Bed Crew Cab Pickup 6.0L 360hp 2013 $33335
+Chevrolet Silverado 2500 HD Short Bed Extended Cab Pickup 6.0L 360hp 2013 $31730
+Chevrolet Silverado 2500HD Double Cab LT Long Bed Extended Cab Pickup 6.0L 360hp 2015 $37710
+Chevrolet Silverado 2500HD Double Cab LT Short Bed Extended Cab Pickup 6.0L 360hp 2015 $37515
+Chevrolet Silverado 2500HD Double Cab LTZ Long Bed Extended Cab Pickup 6.0L 360hp 2015 $43030
+Chevrolet Silverado 2500HD Double Cab LTZ Short Bed Extended Cab Pickup 6.0L 360hp 2015 $42835
+Chevrolet Silverado 2500HD Double Cab Work Truck Long Bed Extended Cab Pickup 6.0L 360hp 2015 $33685
+Chevrolet Silverado 2500HD Double Cab Work Truck Short Bed Extended Cab Pickup 6.0L 360hp 2015 $33490
+Chevrolet Silverado 2500HD LT Long Bed Crew Cab Pickup 6.0L 360hp 2015 $39555
+Chevrolet Silverado 2500HD LT Long Bed Regular Cab Pickup 6.0L 360hp 2014 $34940
+Chevrolet Silverado 2500HD LT Regular Cab Pickup 6.0L 360hp 2015 $34940
+Chevrolet Silverado 2500HD LT Short Bed Crew Cab Pickup 6.0L 360hp 2015 $39360
+Chevrolet Silverado 2500HD LTZ Long Bed Crew Cab Pickup 6.0L 360hp 2015 $45275
+Chevrolet Silverado 2500HD LTZ Short Bed Crew Cab Pickup 6.0L 360hp 2015 $45080
+Chevrolet Silverado 2500HD Work Truck Long Bed Crew Cab Pickup 6.0L 360hp 2015 $35290
+Chevrolet Silverado 2500HD Work Truck Long Bed Regular Cab Pickup 6.0L 360hp 2014 $31310
+Chevrolet Silverado 2500HD Work Truck Regular Cab Pickup 6.0L 360hp 2015 $31310
+Chevrolet Silverado 2500HD Work Truck Short Bed Crew Cab Pickup 6.0L 360hp 2015 $35095
+Chevrolet Silverado 3500 HD Extended Cab Pickup 6.0L 322hp 2013 $34370
+Chevrolet Silverado 3500 HD Long Bed Crew Cab Pickup 6.0L 322hp 2013 $35800
+Chevrolet Silverado 3500 HD Long Bed Regular Cab Pickup 6.0L 322hp 2013 $31045
+Chevrolet Silverado 3500 HD Short Bed Crew Cab Pickup 6.0L 322hp 2013 $35605
+Chevrolet Silverado 3500HD Double Cab LT DRW Extended Cab Pickup 6.0L 360hp 2015 $40830
+Chevrolet Silverado 3500HD Double Cab LT Extended Cab Pickup 6.0L 360hp 2015 $39525
+Chevrolet Silverado 3500HD Double Cab LTZ DRW Extended Cab Pickup 6.0L 360hp 2015 $44645
+Chevrolet Silverado 3500HD Double Cab LTZ Extended Cab Pickup 6.0L 360hp 2015 $44145
+Chevrolet Silverado 3500HD Double Cab Work Truck DRW Extended Cab Pickup 6.0L 360hp 2015 $36425
+Chevrolet Silverado 3500HD Double Cab Work Truck Extended Cab Pickup 6.0L 360hp 2015 $36130
+Chevrolet Silverado 3500HD LT DRW Long Bed Crew Cab Pickup 6.0L 322hp 2014 $42810
+Chevrolet Silverado 3500HD LT DRW Long Bed Crew Cab Pickup 6.0L 360hp 2015 $42810
+Chevrolet Silverado 3500HD LT DRW Long Bed Regular Cab Pickup 6.0L 322hp 2014 $37080
+Chevrolet Silverado 3500HD LT DRW Regular Cab Pickup 6.0L 360hp 2015 $37080
+Chevrolet Silverado 3500HD LT Long Bed Crew Cab Pickup 6.0L 322hp 2014 $41260
+Chevrolet Silverado 3500HD LT Long Bed Crew Cab Pickup 6.0L 360hp 2015 $41260
+Chevrolet Silverado 3500HD LT Long Bed Regular Cab Pickup 6.0L 322hp 2014 $35665
+Chevrolet Silverado 3500HD LT Regular Cab Pickup 6.0L 360hp 2015 $35665
+Chevrolet Silverado 3500HD LT Short Bed Crew Cab Pickup 6.0L 322hp 2014 $41065
+Chevrolet Silverado 3500HD LT Short Bed Crew Cab Pickup 6.0L 360hp 2015 $41065
+Chevrolet Silverado 3500HD LTZ DRW Long Bed Crew Cab Pickup 6.0L 322hp 2014 $46395
+Chevrolet Silverado 3500HD LTZ DRW Long Bed Crew Cab Pickup 6.0L 360hp 2015 $47155
+Chevrolet Silverado 3500HD LTZ Long Bed Crew Cab Pickup 6.0L 322hp 2014 $46050
+Chevrolet Silverado 3500HD LTZ Long Bed Crew Cab Pickup 6.0L 360hp 2015 $46050
+Chevrolet Silverado 3500HD LTZ Short Bed Crew Cab Pickup 6.0L 322hp 2014 $45855
+Chevrolet Silverado 3500HD LTZ Short Bed Crew Cab Pickup 6.0L 360hp 2015 $45855
+Chevrolet Silverado 3500HD Work Truck DRW Long Bed Crew Cab Pickup 6.0L 322hp 2014 $38090
+Chevrolet Silverado 3500HD Work Truck DRW Long Bed Crew Cab Pickup 6.0L 360hp 2015 $38090
+Chevrolet Silverado 3500HD Work Truck DRW Long Bed Regular Cab Pickup 6.0L 322hp 2014 $33585
+Chevrolet Silverado 3500HD Work Truck DRW Regular Cab Pickup 6.0L 360hp 2015 $33585
+Chevrolet Silverado 3500HD Work Truck Long Bed Crew Cab Pickup 6.0L 322hp 2014 $37560
+Chevrolet Silverado 3500HD Work Truck Long Bed Crew Cab Pickup 6.0L 360hp 2015 $37560
+Chevrolet Silverado 3500HD Work Truck Long Bed Regular Cab Pickup 6.0L 322hp 2014 $32805
+Chevrolet Silverado 3500HD Work Truck Regular Cab Pickup 6.0L 360hp 2015 $32805
+Chevrolet Silverado 3500HD Work Truck Short Bed Crew Cab Pickup 6.0L 322hp 2014 $37365
+Chevrolet Silverado 3500HD Work Truck Short Bed Crew Cab Pickup 6.0L 360hp 2015 $37365
+Chevrolet Silverado High Country Long Bed Crew Cab Pickup 5.3L 380hp 2014 $45905
+Chevrolet Silverado High Country Short Bed Crew Cab Pickup 5.3L 380hp 2014 $45605
+Chevrolet Sonic LS Hatchback 1.8L 138hp 2014 $14770
+Chevrolet Sonic LS Sedan 1.8L 138hp 2014 $14170
+Chevrolet Sonic LT Hatchback 1.8L 138hp 2014 $16380
+Chevrolet Sonic LT Sedan 1.8L 138hp 2014 $15780
+Chevrolet Sonic LTZ Hatchback 1.8L 138hp 2014 $17990
+Chevrolet Sonic LTZ Sedan 1.8L 138hp 2014 $17390
+Chevrolet Sonic RS Hatchback 1.4L 138hp 2014 $20325
+Chevrolet Spark 1LT Hatchback 1.2L 84hp 2014 $13940
+Chevrolet Spark 2LT Hatchback 1.2L 84hp 2014 $15290
+Chevrolet Spark EV 1LT Hatchback N/A 2014 $26685
+Chevrolet Spark EV 2LT Hatchback N/A 2014 $27010
+Chevrolet Spark LS Hatchback 1.2L 84hp 2014 $12170
+Chevrolet SS Sedan 6.2L 415hp 2014 $43475
+Chevrolet Suburban 1500 LS Sport Utility 5.3L 326hp 2013 $43295
+Chevrolet Suburban 1500 LT Sport Utility 5.3L 326hp 2013 $47055
+Chevrolet Suburban 1500 LTZ Sport Utility 5.3L 326hp 2013 $56190
+Chevrolet Suburban 2500 LS Sport Utility 6.0L 352hp 2013 $44905
+Chevrolet Suburban 2500 LT Sport Utility 6.0L 352hp 2013 $48645
+Chevrolet Suburban LS Sport Utility 5.3L 326hp 2014 $46300
+Chevrolet Suburban LS Sport Utility 5.3L 355hp 2015 $47300
+Chevrolet Suburban LT Sport Utility 5.3L 326hp 2014 $49715
+Chevrolet Suburban LT Sport Utility 5.3L 355hp 2015 $52700
+Chevrolet Suburban LTZ Sport Utility 5.3L 326hp 2014 $58400
+Chevrolet Suburban LTZ Sport Utility 5.3L 355hp 2015 $61700
+Chevrolet Tahoe Hybrid Sport Utility 6.0L 332hp 2013 $53045
+Chevrolet Tahoe LS Sport Utility 5.3L 326hp 2014 $43600
+Chevrolet Tahoe LS Sport Utility 5.3L 355hp 2015 $44600
+Chevrolet Tahoe LT Sport Utility 5.3L 326hp 2014 $47640
+Chevrolet Tahoe LT Sport Utility 5.3L 355hp 2015 $50000
+Chevrolet Tahoe LTZ Sport Utility 5.3L 326hp 2014 $56255
+Chevrolet Tahoe LTZ Sport Utility 5.3L 355hp 2015 $59000
+Chevrolet Traverse LS Sport Utility 3.6L 281hp 2014 $30795
+Chevrolet Traverse LT 1LT Sport Utility 3.6L 281hp 2014 $34010
+Chevrolet Traverse LT 2LT Sport Utility 3.6L 281hp 2014 $36865
+Chevrolet Traverse LT Sport Utility 3.6L 281hp 2013 $33725
+Chevrolet Traverse LTZ Sport Utility 3.6L 288hp 2014 $41255
+Chevrolet Volt Hatchback 1.4L 149hp 2013 $39145
+Chevrolet Volt Sedan 1.4L 149hp 2014 $34185
+Chrysler 200 C Sedan 2.4L 184hp 2015 $25995
+Chrysler 200 Limited Convertible 3.6L 283hp 2014 $32945
+Chrysler 200 Limited Sedan 2.4L 184hp 2015 $23255
+Chrysler 200 Limited Sedan 3.6L 283hp 2014 $25695
+Chrysler 200 LX Sedan 2.4L 173hp 2013 $19395
+Chrysler 200 LX Sedan 2.4L 184hp 2015 $21700
+Chrysler 200 LX Sedan 3.6L 283hp 2014 $21795
+Chrysler 200 S Convertible 3.6L 283hp 2014 $33445
+Chrysler 200 S Sedan 2.4L 184hp 2015 $24495
+Chrysler 200 Touring Convertible 2.4L 173hp 2014 $27950
+Chrysler 200 Touring Sedan 2.4L 173hp 2014 $22995
+Chrysler 300 Sedan 3.6L 292hp 2014 $30830
+Chrysler 300 C Sedan 3.6L 292hp 2014 $36980
+Chrysler 300 C Varvatos Collection Sedan 3.6L 292hp 2014 $41480
+Chrysler 300 Luxury Series Sedan 3.6L 292hp 2013 $39995
+Chrysler 300 S Sedan 3.6L 300hp 2014 $33930
+Chrysler 300 SRT8 Core Sedan 6.4L 470hp 2014 $44900
+Chrysler 300 SRT8 Sedan 6.4L 470hp 2014 $48900
+Chrysler Town & Country Limited Passenger Minivan 3.6L 283hp 2014 $41765
+Chrysler Town & Country S Passenger Minivan 3.6L 283hp 2014 $32565
+Chrysler Town & Country Touring Passenger Minivan 3.6L 283hp 2014 $30765
+Chrysler Town & Country Touring-L Passenger Minivan 3.6L 283hp 2014 $34165
+Dodge Avenger R/T Sedan 3.6L 283hp 2014 $25795
+Dodge Avenger SE Sedan 2.4L 173hp 2014 $20595
+Dodge Avenger SXT Sedan 2.4L 173hp 2014 $23295
+Dodge Challenger R/T Classic Coupe 5.7L 375hp 2014 $34495
+Dodge Challenger R/T Coupe 5.7L 375hp 2014 $30495
+Dodge Challenger R/T Plus  Coupe 5.7L 375hp 2014 $32495
+Dodge Challenger R/T Shaker Coupe 5.7L 375hp 2014 $37495
+Dodge Challenger Rallye Redline Coupe 3.6L 305hp 2014 $30295
+Dodge Challenger SRT8 392 Coupe 6.4L 470hp 2014 $44685
+Dodge Challenger SRT8 Core Coupe 6.4L 470hp 2014 $39485
+Dodge Challenger SRT8 Coupe 6.4L 470hp 2013 $43995
+Dodge Challenger SXT Coupe 3.6L 305hp 2014 $26295
+Dodge Challenger SXT Plus Coupe 3.6L 305hp 2014 $28295
+Dodge Charger R/T Max  Sedan 5.7L 370hp 2014 $36995
+Dodge Charger R/T Plus  Sedan 5.7L 370hp 2014 $32495
+Dodge Charger R/T Road/Track Sedan 5.7L 370hp 2014 $34495
+Dodge Charger R/T Sedan 5.7L 370hp 2014 $30495
+Dodge Charger SE Sedan 3.6L 292hp 2014 $26995
+Dodge Charger SRT8 Sedan 6.4L 470hp 2014 $46385
+Dodge Charger SRT8 Super Bee Sedan 6.4L 470hp 2013 $42250
+Dodge Charger SRT8 Superbee Sedan 6.4L 470hp 2014 $43385
+Dodge Charger SXT Plus Sedan 3.6L 292hp 2014 $31295
+Dodge Charger SXT Sedan 3.6L 292hp 2014 $29295
+Dodge Dart Aero Sedan 1.4L 160hp 2014 $19995
+Dodge Dart GT Sedan 2.4L 184hp 2014 $20995
+Dodge Dart Limited Sedan 2.0L 160hp 2013 $19995
+Dodge Dart Limited Sedan 2.4L 184hp 2014 $22995
+Dodge Dart R/T Sedan 2.4L 184hp 2013 $22495
+Dodge Dart Rallye Sedan 2.0L 160hp 2013 $18995
+Dodge Dart SE Sedan 2.0L 160hp 2014 $15995
+Dodge Dart SXT Sedan 2.0L 160hp 2013 $17995
+Dodge Dart SXT Sedan 2.4L 184hp 2014 $18495
+Dodge Durango Citadel Sport Utility 3.6L 290hp 2014 $40995
+Dodge Durango Crew Sport Utility 3.6L 290hp 2013 $35195
+Dodge Durango Limited Sport Utility 3.6L 290hp 2014 $35995
+Dodge Durango R/T Sport Utility 5.7L 360hp 2014 $38995
+Dodge Durango SXT Sport Utility 3.6L 290hp 2014 $29795
+Dodge Grand Caravan American Value Passenger Minivan 3.6L 283hp 2014 $20395
+Dodge Grand Caravan Crew Passenger Minivan 3.6L 283hp 2013 $28795
+Dodge Grand Caravan R/T Passenger Minivan 3.6L 283hp 2014 $29995
+Dodge Grand Caravan SE Passenger Minivan 3.6L 283hp 2014 $23595
+Dodge Grand Caravan SXT Passenger Minivan 3.6L 283hp 2014 $26795
+Dodge Journey American Value Sport Utility 2.4L 173hp 2014 $19995
+Dodge Journey Crew Sport Utility 3.6L 283hp 2014 $28395
+Dodge Journey R/T Sport Utility 3.6L 283hp 2014 $28995
+Dodge Journey SXT Sport Utility 2.4L 173hp 2014 $23295
+Ferrari 458 Italia Coupe 4.5L 562hp 2012 $229825
+Ferrari 458 Spider Convertible 4.5L 562hp 2012 $257000
+Ferrari California Convertible 4.3L 460hp 2012 $192000
+Ferrari FF Coupe 6.3L 660hp 2012 $295000
+Fiat 500 Abarth Convertible 1.4L 160hp 2013 $26000
+Fiat 500 Abarth Hatchback 1.4L 160hp 2014 $22095
+Fiat 500 Lounge Convertible 1.4L 101hp 2013 $22500
+Fiat 500 Lounge Hatchback 1.4L 101hp 2014 $18500
+Fiat 500 Pop Convertible 1.4L 101hp 2013 $19600
+Fiat 500 Pop Hatchback 1.4L 101hp 2014 $16195
+Fiat 500 Sport Hatchback 1.4L 101hp 2014 $17500
+Fiat 500 Turbo Hatchback 1.4L 135hp 2014 $19500
+Fiat 500C Abarth Convertible 1.4L 160hp 2014 $26095
+Fiat 500C Lounge Convertible 1.4L 101hp 2014 $22500
+Fiat 500C Pop Convertible 1.4L 101hp 2014 $19695
+Fiat 500e Hatchback N/A 2014 $31800
+Fiat 500L Easy Hatchback 1.4L 160hp 2014 $20395
+Fiat 500L Lounge Hatchback 1.4L 160hp 2014 $24395
+Fiat 500L Pop Hatchback 1.4L 160hp 2014 $19195
+Fiat 500L Trekking Hatchback 1.4L 160hp 2014 $21395
+Ford C-MAX Energi SEL Wagon 2.0L 188hp 2014 $32920
+Ford C-Max Energi Wagon 2.0L 188hp 2013 $32950
+Ford C-MAX Hybrid SE Wagon 2.0L 188hp 2014 $25170
+Ford C-MAX Hybrid SEL Wagon 2.0L 188hp 2014 $28455
+Ford C-Max SE Wagon 2.0L 188hp 2013 $25200
+Ford C-Max SEL Wagon 2.0L 188hp 2013 $28365
+Ford E-150 Cargo Van 4.6L 225hp 2013 $27325
+Ford E-150 Extended Cargo Van 4.6L 225hp 2013 $28540
+Ford E-150 XL Passenger Van 4.6L 225hp 2014 $30230
+Ford E-150 XLT Passenger Van 4.6L 225hp 2014 $32675
+Ford E-250 Cargo Van 4.6L 225hp 2013 $28785
+Ford E-250 Extended Cargo Van 4.6L 225hp 2013 $30145
+Ford E-350 Cargo Van 5.4L 255hp 2013 $31485
+Ford E-350 Extended Cargo Van 5.4L 255hp 2013 $32385
+Ford E-350 XL Extended Passenger Van 5.4L 255hp 2014 $35860
+Ford E-350 XL Passenger Van 5.4L 255hp 2014 $33560
+Ford E-350 XLT Extended Passenger Van 5.4L 255hp 2014 $37320
+Ford E-350 XLT Passenger Van 5.4L 255hp 2014 $36020
+Ford Edge Limited Sport Utility 3.5L 285hp 2014 $35100
+Ford Edge SE Sport Utility 3.5L 285hp 2014 $28100
+Ford Edge SEL Sport Utility 3.5L 285hp 2014 $31300
+Ford Edge Sport Sport Utility 3.7L 305hp 2014 $37600
+Ford Escape s Sport Utility 2.5L 168hp 2014 $23100
+Ford Escape SE Sport Utility 1.6L 173hp 2013 $25070
+Ford Escape SE Sport Utility 1.6L 178hp 2014 $25550
+Ford Escape SEL Sport Utility 1.6L 173hp 2013 $28170
+Ford Escape Titanium Sport Utility 1.6L 178hp 2014 $29100
+Ford Escape Titanium Sport Utility 2.0L 237hp 2013 $30370
+Ford Expedition King Ranch EL Sport Utility 5.4L 310hp 2014 $54820
+Ford Expedition King Ranch Sport Utility 5.4L 310hp 2014 $52170
+Ford Expedition Limited EL Sport Utility 5.4L 310hp 2014 $50560
+Ford Expedition Limited Sport Utility 5.4L 310hp 2014 $47910
+Ford Expedition XLT EL Sport Utility 5.4L 310hp 2014 $44345
+Ford Expedition XLT Sport Utility 5.4L 310hp 2014 $41635
+Ford Explorer Sport Utility 3.5L 290hp 2014 $30015
+Ford Explorer Limited Sport Utility 3.5L 290hp 2014 $38100
+Ford Explorer Sport Sport Utility 3.5L 290hp 2013 $40780
+Ford Explorer Sport Sport Utility 3.5L 365hp 2014 $41675
+Ford Explorer XLT Sport Utility 3.5L 290hp 2014 $32900
+Ford F-150 FX2 Short Bed Regular Cab Pickup 3.5L 365hp 2014 $34270
+Ford F-150 FX4 Short Bed Regular Cab Pickup 3.5L 365hp 2014 $38385
+Ford F-150 STX Short Bed Regular Cab Pickup 3.7L 302hp 2014 $28180
+Ford F-150 Styleside Long Bed Extended Cab Pickup 5.0L 360hp 2013 $28195
+Ford F-150 Styleside Long Bed Regular Cab Pickup 3.7L 302hp 2013 $24370
+Ford F-150 Styleside Short Bed Extended Cab Pickup 3.7L 302hp 2013 $27895
+Ford F-150 Styleside Short Bed Regular Cab Pickup 3.7L 302hp 2013 $24070
+Ford F-150 SuperCab FX2 Extended Cab Pickup 5.0L 360hp 2014 $35875
+Ford F-150 SuperCab FX4 Extended Cab Pickup 5.0L 360hp 2014 $39990
+Ford F-150 SuperCab Lariat Extended Cab Pickup 5.0L 360hp 2014 $37060
+Ford F-150 SuperCab STX Long Bed Extended Cab Pickup 5.0L 360hp 2014 $37805
+Ford F-150 SuperCab STX Short Bed Extended Cab Pickup 3.7L 302hp 2014 $30880
+Ford F-150 SuperCab SVT Raptor Extended Cab Pickup 6.2L 411hp 2014 $44415
+Ford F-150 SuperCab XL Long Bed Extended Cab Pickup 5.0L 360hp 2014 $29660
+Ford F-150 SuperCab XL Short Bed Extended Cab Pickup 3.7L 302hp 2014 $28360
+Ford F-150 SuperCab XLT Long Bed Extended Cab Pickup 5.0L 360hp 2014 $33755
+Ford F-150 SuperCab XLT Short Bed Extended Cab Pickup 3.7L 302hp 2014 $32455
+Ford F-150 SuperCrew FX2 Short Bed Crew Cab Pickup 5.0L 360hp 2014 $38375
+Ford F-150 SuperCrew FX4 Long Bed Crew Cab Pickup 5.0L 360hp 2014 $42790
+Ford F-150 SuperCrew FX4 Short Bed Crew Cab Pickup 5.0L 360hp 2014 $42495
+Ford F-150 SuperCrew King Ranch Long Bed Crew Cab Pickup 5.0L 360hp 2014 $44600
+Ford F-150 SuperCrew King Ranch Short Bed Crew Cab Pickup 5.0L 360hp 2014 $44300
+Ford F-150 SuperCrew Lariat Long Bed Crew Cab Pickup 5.0L 360hp 2014 $39860
+Ford F-150 SuperCrew Lariat Short Bed Crew Cab Pickup 5.0L 360hp 2014 $39560
+Ford F-150 SuperCrew Limited Short Bed Crew Cab Pickup 3.5L 365hp 2014 $50405
+Ford F-150 SuperCrew Long Bed Crew Cab Pickup 5.0L 360hp 2013 $32770
+Ford F-150 SuperCrew Platinum Long Bed Crew Cab Pickup 5.0L 360hp 2014 $47625
+Ford F-150 SuperCrew Platinum Short Bed Crew Cab Pickup 5.0L 360hp 2014 $47325
+Ford F-150 SuperCrew Short Bed Crew Cab Pickup 3.5L 302hp 2013 $31555
+Ford F-150 SuperCrew STX Long Bed Crew Cab Pickup 3.7L 302hp 2014 $33380
+Ford F-150 SuperCrew STX Short Bed Crew Cab Pickup 3.7L 302hp 2014 $34305
+Ford F-150 SuperCrew SVT Raptor Short Bed Crew Cab Pickup 6.2L 411hp 2014 $47315
+Ford F-150 SuperCrew XL Long Bed Crew Cab Pickup 5.0L 360hp 2014 $33310
+Ford F-150 SuperCrew XL Short Bed Crew Cab Pickup 3.7L 302hp 2014 $32010
+Ford F-150 SuperCrew XLT Long Bed Crew Cab Pickup 5.0L 360hp 2014 $36255
+Ford F-150 SuperCrew XLT Short Bed Crew Cab Pickup 3.7L 302hp 2014 $34955
+Ford F-150 XL Long Bed Regular Cab Pickup 3.7L 302hp 2014 $24745
+Ford F-150 XL Short Bed Regular Cab Pickup 3.7L 302hp 2014 $24445
+Ford F-150 XLT Long Bed Regular Cab Pickup 3.7L 302hp 2014 $30055
+Ford F-150 XLT Short Bed Regular Cab Pickup 3.7L 302hp 2014 $29755
+Ford F-250 Super Duty King Ranch Long Bed Crew Cab Pickup 6.2L 385hp 2014 $49715
+Ford F-250 Super Duty King Ranch Short Bed Crew Cab Pickup 6.2L 385hp 2014 $49515
+Ford F-250 Super Duty Lariat Long Bed Crew Cab Pickup 6.2L 385hp 2014 $44330
+Ford F-250 Super Duty Lariat Short Bed Crew Cab Pickup 6.2L 385hp 2014 $44130
+Ford F-250 Super Duty Long Bed Crew Cab Pickup 6.2L 385hp 2013 $33670
+Ford F-250 Super Duty Long Bed Extended Cab Pickup 6.2L 385hp 2013 $32270
+Ford F-250 Super Duty Platinum Long Bed Crew Cab Pickup 6.2L 385hp 2014 $53600
+Ford F-250 Super Duty Platinum Short Bed Crew Cab Pickup 6.2L 385hp 2014 $53400
+Ford F-250 Super Duty Regular Cab Pickup 6.2L 385hp 2013 $29875
+Ford F-250 Super Duty Short Bed Crew Cab Pickup 6.2L 385hp 2013 $33470
+Ford F-250 Super Duty Short Bed Extended Cab Pickup 6.2L 385hp 2013 $32070
+Ford F-250 Super Duty SuperCab Lariat Long Bed Extended Cab Pickup 6.2L 385hp 2014 $41930
+Ford F-250 Super Duty SuperCab Lariat Short Bed Extended Cab Pickup 6.2L 385hp 2014 $41730
+Ford F-250 Super Duty SuperCab XL Long Bed Extended Cab Pickup 6.2L 385hp 2014 $32430
+Ford F-250 Super Duty SuperCab XL Short Bed Extended Cab Pickup 6.2L 385hp 2014 $32230
+Ford F-250 Super Duty SuperCab XLT Long Bed Extended Cab Pickup 6.2L 385hp 2014 $36765
+Ford F-250 Super Duty SuperCab XLT Short Bed Extended Cab Pickup 6.2L 385hp 2014 $36565
+Ford F-250 Super Duty XL Long Bed Crew Cab Pickup 6.2L 385hp 2014 $33830
+Ford F-250 Super Duty XL Regular Cab Pickup 6.2L 385hp 2014 $30035
+Ford F-250 Super Duty XL Short Bed Crew Cab Pickup 6.2L 385hp 2014 $33630
+Ford F-250 Super Duty XLT Long Bed Crew Cab Pickup 6.2L 385hp 2014 $38665
+Ford F-250 Super Duty XLT Regular Cab Pickup 6.2L 385hp 2014 $34065
+Ford F-250 Super Duty XLT Short Bed Crew Cab Pickup 6.2L 385hp 2014 $38470
+Ford F-350 Super Duty DRW Extended Cab Pickup 6.2L 316hp 2013 $34375
+Ford F-350 Super Duty DRW Long Bed Crew Cab Pickup 6.2L 316hp 2013 $35770
+Ford F-350 Super Duty DRW Regular Cab Pickup 6.2L 316hp 2013 $31975
+Ford F-350 Super Duty King Ranch DRW Long Bed Crew Cab Pickup 6.2L 316hp 2014 $51815
+Ford F-350 Super Duty King Ranch Long Bed Crew Cab Pickup 6.2L 316hp 2014 $50620
+Ford F-350 Super Duty King Ranch Short Bed Crew Cab Pickup 6.2L 316hp 2014 $50415
+Ford F-350 Super Duty Lariat DRW Long Bed Crew Cab Pickup 6.2L 316hp 2014 $46425
+Ford F-350 Super Duty Lariat Long Bed Crew Cab Pickup 6.2L 316hp 2014 $45225
+Ford F-350 Super Duty Lariat Short Bed Crew Cab Pickup 6.2L 316hp 2014 $45025
+Ford F-350 Super Duty Long Bed Crew Cab Pickup 6.2L 316hp 2013 $34570
+Ford F-350 Super Duty Long Bed Extended Cab Pickup 6.2L 316hp 2013 $33170
+Ford F-350 Super Duty Platinum DRW Long Bed Crew Cab Pickup 6.2L 316hp 2014 $52510
+Ford F-350 Super Duty Platinum Long Bed Crew Cab Pickup 6.2L 316hp 2014 $54500
+Ford F-350 Super Duty Platinum Short Bed Crew Cab Pickup 6.2L 316hp 2014 $54300
+Ford F-350 Super Duty Regular Cab Pickup 6.2L 316hp 2013 $30770
+Ford F-350 Super Duty Short Bed Crew Cab Pickup 6.2L 316hp 2013 $34370
+Ford F-350 Super Duty Short Bed Extended Cab Pickup 6.2L 316hp 2013 $32970
+Ford F-350 Super Duty SuperCab Lariat DRW Long Bed Extended Cab Pickup 6.2L 316hp 2014 $44025
+Ford F-350 Super Duty SuperCab Lariat Long Bed Extended Cab Pickup 6.2L 316hp 2014 $42825
+Ford F-350 Super Duty SuperCab Lariat Short Bed Extended Cab Pickup 6.2L 316hp 2014 $42625
+Ford F-350 Super Duty SuperCab XL DRW Long Bed Extended Cab Pickup 6.2L 316hp 2014 $34535
+Ford F-350 Super Duty SuperCab XL Long Bed Extended Cab Pickup 6.2L 316hp 2014 $33330
+Ford F-350 Super Duty SuperCab XL Short Bed Extended Cab Pickup 6.2L 316hp 2014 $33130
+Ford F-350 Super Duty SuperCab XLT DRW Long Bed Extended Cab Pickup 6.2L 316hp 2014 $38865
+Ford F-350 Super Duty SuperCab XLT Long Bed Extended Cab Pickup 6.2L 316hp 2014 $37665
+Ford F-350 Super Duty SuperCab XLT Short Bed Extended Cab Pickup 6.2L 316hp 2014 $37465
+Ford F-350 Super Duty XL DRW Long Bed Crew Cab Pickup 6.2L 316hp 2014 $35930
+Ford F-350 Super Duty XL DRW Regular Cab Pickup 6.2L 316hp 2014 $32135
+Ford F-350 Super Duty XL Long Bed Crew Cab Pickup 6.2L 316hp 2014 $34730
+Ford F-350 Super Duty XL Regular Cab Pickup 6.2L 316hp 2014 $30930
+Ford F-350 Super Duty XL Short Bed Crew Cab Pickup 6.2L 316hp 2014 $34530
+Ford F-350 Super Duty XLT DRW Long Bed Crew Cab Pickup 6.2L 316hp 2014 $40765
+Ford F-350 Super Duty XLT DRW Regular Cab Pickup 6.2L 316hp 2014 $36165
+Ford F-350 Super Duty XLT Long Bed Crew Cab Pickup 6.2L 316hp 2014 $39565
+Ford F-350 Super Duty XLT Regular Cab Pickup 6.2L 316hp 2014 $34965
+Ford F-350 Super Duty XLT Short Bed Crew Cab Pickup 6.2L 316hp 2014 $39370
+Ford F-450 Super Duty King Ranch DRW Long Bed Crew Cab Pickup 6.7L 400hp 2014 $66835
+Ford F-450 Super Duty Lariat DRW Long Bed Crew Cab Pickup 6.7L 400hp 2014 $61445
+Ford F-450 Super Duty Long Bed Crew Cab Pickup 6.7L 400hp 2013 $66350
+Ford F-450 Super Duty Platinum DRW Long Bed Crew Cab Pickup 6.7L 400hp 2014 $67530
+Ford F-450 Super Duty XL DRW Long Bed Crew Cab Pickup 6.7L 400hp 2014 $50560
+Ford F-450 Super Duty XLT DRW Long Bed Crew Cab Pickup 6.7L 400hp 2014 $55390
+Ford Fiesta S Hatchback 1.6L 120hp 2014 $14600
+Ford Fiesta S Sedan 1.6L 120hp 2014 $14100
+Ford Fiesta SE Hatchback 1.6L 120hp 2014 $16080
+Ford Fiesta SE Sedan 1.6L 120hp 2014 $15580
+Ford Fiesta ST Hatchback 1.6L 197hp 2014 $21400
+Ford Fiesta Titanium Hatchback 1.6L 120hp 2014 $18800
+Ford Fiesta Titanium Sedan 1.6L 120hp 2014 $18300
+Ford Flex Limited EcoBoost Sport Utility 3.5L 365hp 2014 $42375
+Ford Flex Limited Sport Utility 3.5L 285hp 2013 $39200
+Ford Flex Limited Sport Utility 3.5L 287hp 2014 $37600
+Ford Flex SE Sport Utility 3.5L 285hp 2013 $30900
+Ford Flex SE Sport Utility 3.5L 287hp 2014 $29015
+Ford Flex SEL Sport Utility 3.5L 285hp 2013 $33300
+Ford Flex SEL Sport Utility 3.5L 287hp 2014 $31900
+Ford Focus BEV Hatchback N/A 2014 $35170
+Ford Focus Electric Hatchback N/A 2013 $39200
+Ford Focus S Sedan 2.0L 160hp 2014 $16810
+Ford Focus SE Hatchback 2.0L 160hp 2014 $19115
+Ford Focus SE Sedan 2.0L 160hp 2014 $18615
+Ford Focus ST Hatchback 2.0L 252hp 2014 $24115
+Ford Focus Titanium Hatchback 2.0L 160hp 2014 $24065
+Ford Focus Titanium Sedan 2.0L 160hp 2014 $23565
+Ford Fusion Energi SE Luxury Sedan 2.0L 188hp 2013 $38700
+Ford Fusion Energi SE Luxury Sedan 2.0L 195hp 2014 $34700
+Ford Fusion Energi Titanium Sedan 2.0L 188hp 2013 $40100
+Ford Fusion Energi Titanium Sedan 2.0L 195hp 2014 $36500
+Ford Fusion Hybrid S Sedan 2.0L 188hp 2014 $26270
+Ford Fusion Hybrid SE Sedan 2.0L 188hp 2014 $27280
+Ford Fusion Hybrid Titanium Sedan 2.0L 188hp 2014 $32600
+Ford Fusion S Sedan 2.5L 175hp 2014 $21970
+Ford Fusion SE Hybrid Sedan 2.0L 188hp 2013 $27200
+Ford Fusion SE Sedan 2.5L 175hp 2014 $23935
+Ford Fusion Titanium Hybrid Sedan 2.0L 188hp 2013 $32100
+Ford Fusion Titanium Sedan 2.0L 240hp 2014 $30600
+Ford Mustang Convertible 3.7L 305hp 2014 $27510
+Ford Mustang Coupe 3.7L 305hp 2014 $22510
+Ford Mustang Boss 302 Coupe 5.0L 444hp 2013 $42200
+Ford Mustang GT Convertible 5.0L 420hp 2014 $36210
+Ford Mustang GT Coupe 5.0L 420hp 2014 $31210
+Ford Mustang GT Premium Convertible 5.0L 420hp 2014 $40310
+Ford Mustang GT Premium Coupe 5.0L 420hp 2014 $35310
+Ford Mustang Premium Convertible 3.7L 305hp 2014 $31610
+Ford Mustang Premium Coupe 3.7L 305hp 2014 $26610
+Ford Shelby GT500 Convertible 5.8L 662hp 2014 $60110
+Ford Shelby GT500 Coupe 5.8L 662hp 2014 $55110
+Ford Taurus Limited Sedan 3.5L 285hp 2013 $33100
+Ford Taurus Limited Sedan 3.5L 288hp 2014 $34280
+Ford Taurus SE Sedan 3.5L 285hp 2013 $26700
+Ford Taurus SE Sedan 3.5L 288hp 2014 $26780
+Ford Taurus SEL Sedan 3.5L 285hp 2013 $28900
+Ford Taurus SEL Sedan 3.5L 288hp 2014 $29080
+Ford Taurus SHO Sedan 3.5L 365hp 2014 $39980
+Ford Transit Connect Titanium LWB w/Liftgate Extended Passenger Minivan N/A 2014 $29000
+Ford Transit Connect XL Cargo Minivan 2.0L 136hp 2013 $22425
+Ford Transit Connect XL LWB Extended Cargo Minivan N/A 2014 $23000
+Ford Transit Connect XL LWB Extended Passenger Minivan N/A 2014 $25000
+Ford Transit Connect XL LWB w/Liftgate Extended Cargo Minivan N/A 2014 $23000
+Ford Transit Connect XL LWB w/Liftgate Extended Passenger Minivan N/A 2014 $25000
+Ford Transit Connect XL SWB Cargo Minivan N/A 2014 $22000
+Ford Transit Connect XL SWB w/Liftgate Cargo Minivan N/A 2014 $22000
+Ford Transit Connect XLT Cargo Minivan 2.0L 136hp 2013 $23485
+Ford Transit Connect XLT LWB Extended Cargo Minivan N/A 2014 $24525
+Ford Transit Connect XLT LWB Extended Passenger Minivan N/A 2014 $26525
+Ford Transit Connect XLT LWB w/Liftgate Extended Cargo Minivan N/A 2014 $24525
+Ford Transit Connect XLT LWB w/Liftgate Extended Passenger Minivan N/A 2014 $26525
+Ford Transit Connect XLT Passenger Minivan 2.0L 136hp 2013 $24050
+Ford Transit Connect XLT SWB Cargo Minivan N/A 2014 $23525
+Ford Transit Connect XLT SWB Passenger Minivan N/A 2014 $24525
+Ford Transit Connect XLT SWB w/Liftgate Cargo Minivan N/A 2014 $23525
+Ford Transit Connect XLT SWB w/Liftgate Passenger Minivan N/A 2014 $24525
+GMC Acadia Denali Sport Utility 3.6L 288hp 2014 $46825
+GMC Acadia SL Sport Utility 3.6L 288hp 2013 $34050
+GMC Acadia SLE Sport Utility 3.6L 288hp 2013 $35940
+GMC Acadia SLE-1  Sport Utility 3.6L 288hp 2014 $34485
+GMC Acadia SLE-2  Sport Utility 3.6L 288hp 2014 $36375
+GMC Acadia SLT Sport Utility 3.6L 288hp 2013 $39780
+GMC Acadia SLT-1  Sport Utility 3.6L 288hp 2014 $40540
+GMC Acadia SLT-2  Sport Utility 3.6L 288hp 2014 $41635
+GMC Canyon SLE Crew Cab Pickup 2.9L 185hp 2012 $24685
+GMC Canyon SLE Extended Cab Pickup 2.9L 185hp 2012 $23040
+GMC Canyon SLE Regular Cab Pickup 2.9L 185hp 2012 $20455
+GMC Canyon SLT Crew Cab Pickup 3.7L 242hp 2012 $31790
+GMC Canyon Work Truck Extended Cab Pickup 2.9L 185hp 2012 $20840
+GMC Canyon Work Truck Regular Cab Pickup 2.9L 185hp 2012 $17490
+GMC Savana 1500 Cargo Van 4.3L 195hp 2014 $27710
+GMC Savana 1500 LS Passenger Van 5.3L 310hp 2014 $30970
+GMC Savana 2500 Cargo Van 6.6L 260hp 2014 $41160
+GMC Savana 2500 Extended Cargo Van 6.6L 260hp 2014 $43020
+GMC Savana 2500 LS Passenger Van 4.8L 280hp 2014 $31865
+GMC Savana 3500 Cargo Van 6.6L 260hp 2014 $44480
+GMC Savana 3500 Extended Cargo Van 6.6L 260hp 2014 $45365
+GMC Savana 3500 LS Extended Passenger Van 6.6L 260hp 2014 $48970
+GMC Savana 3500 LS Passenger Van 6.6L 260hp 2014 $47100
+GMC Sierra 1500 1SA Long Bed Regular Cab Pickup 4.3L 297hp 2014 $26465
+GMC Sierra 1500 1SA Short Bed Crew Cab Pickup 4.3L 297hp 2014 $34200
+GMC Sierra 1500 1SA Short Bed Regular Cab Pickup 4.3L 297hp 2014 $26075
+GMC Sierra 1500 1SA Standard Bed Crew Cab Pickup 4.3L 297hp 2014 $34500
+GMC Sierra 1500 Crew Cab Pickup 5.3L 326hp 2013 $40860
+GMC Sierra 1500 Denali Crew Cab Pickup 6.2L 403hp 2013 $46430
+GMC Sierra 1500 Denali Long Bed Crew Cab Pickup 5.3L 380hp 2014 $48615
+GMC Sierra 1500 Denali Short Bed Crew Cab Pickup 5.3L 380hp 2014 $48315
+GMC Sierra 1500 Double Cab 1SA Extended Cab Pickup 4.3L 297hp 2014 $30100
+GMC Sierra 1500 Double Cab SLE Extended Cab Pickup 4.3L 297hp 2014 $35205
+GMC Sierra 1500 Double Cab SLT Extended Cab Pickup 5.3L 380hp 2014 $39400
+GMC Sierra 1500 Hybrid Crew Cab Pickup 6.0L 332hp 2013 $41555
+GMC Sierra 1500 Long Bed Extended Cab Pickup 5.3L 326hp 2013 $29655
+GMC Sierra 1500 Long Bed Regular Cab Pickup 4.3L 195hp 2013 $23980
+GMC Sierra 1500 Short Bed Extended Cab Pickup 4.3L 195hp 2013 $27615
+GMC Sierra 1500 Short Bed Regular Cab Pickup 4.3L 195hp 2013 $23590
+GMC Sierra 1500 SLE Long Bed Regular Cab Pickup 4.3L 297hp 2014 $32525
+GMC Sierra 1500 SLE Short Bed Crew Cab Pickup 4.3L 297hp 2014 $37670
+GMC Sierra 1500 SLE Short Bed Regular Cab Pickup 4.3L 297hp 2014 $32400
+GMC Sierra 1500 SLE Standard Bed Crew Cab Pickup 4.3L 297hp 2014 $37970
+GMC Sierra 1500 SLT Short Bed Crew Cab Pickup 5.3L 380hp 2014 $41860
+GMC Sierra 1500 SLT Standard Bed Crew Cab Pickup 5.3L 380hp 2014 $42160
+GMC Sierra 2500 HD Denali Short Bed Crew Cab Pickup 6.0L 360hp 2013 $46810
+GMC Sierra 2500 HD Long Bed Crew Cab Pickup 6.0L 360hp 2013 $33530
+GMC Sierra 2500 HD Long Bed Extended Cab Pickup 6.0L 360hp 2013 $31925
+GMC Sierra 2500 HD Long Bed Regular Cab Pickup 6.0L 360hp 2013 $29550
+GMC Sierra 2500 HD Short Bed Crew Cab Pickup 6.0L 360hp 2013 $33335
+GMC Sierra 2500 HD Short Bed Extended Cab Pickup 6.0L 360hp 2013 $31730
+GMC Sierra 2500HD Denali Crew Cab Pickup 6.0L 360hp 2015 $50540
+GMC Sierra 2500HD Denali Short Bed Crew Cab Pickup 6.0L 360hp 2014 $49045
+GMC Sierra 2500HD Double Cab SLE Long Bed Extended Cab Pickup 6.0L 360hp 2015 $39850
+GMC Sierra 2500HD Double Cab SLE Short Bed Extended Cab Pickup 6.0L 360hp 2015 $39655
+GMC Sierra 2500HD Double Cab SLT Long Bed Extended Cab Pickup 6.0L 360hp 2015 $43750
+GMC Sierra 2500HD Double Cab SLT Short Bed Extended Cab Pickup 6.0L 360hp 2015 $43555
+GMC Sierra 2500HD Double Cab Work Truck Long Bed Extended Cab Pickup 6.0L 360hp 2015 $33940
+GMC Sierra 2500HD Double Cab Work Truck Short Bed Extended Cab Pickup 6.0L 360hp 2015 $33745
+GMC Sierra 2500HD SLE Long Bed Crew Cab Pickup 6.0L 360hp 2015 $41790
+GMC Sierra 2500HD SLE Long Bed Regular Cab Pickup 6.0L 360hp 2014 $35380
+GMC Sierra 2500HD SLE Regular Cab Pickup 6.0L 360hp 2015 $36985
+GMC Sierra 2500HD SLE Short Bed Crew Cab Pickup 6.0L 360hp 2015 $41595
+GMC Sierra 2500HD SLT Long Bed Crew Cab Pickup 6.0L 360hp 2015 $45895
+GMC Sierra 2500HD SLT Short Bed Crew Cab Pickup 6.0L 360hp 2015 $45705
+GMC Sierra 2500HD Work Truck Long Bed Crew Cab Pickup 6.0L 360hp 2015 $35545
+GMC Sierra 2500HD Work Truck Long Bed Regular Cab Pickup 6.0L 360hp 2014 $31310
+GMC Sierra 2500HD Work Truck Regular Cab Pickup 6.0L 360hp 2015 $31565
+GMC Sierra 2500HD Work Truck Short Bed Crew Cab Pickup 6.0L 360hp 2015 $35350
+GMC Sierra 3500 HD Denali Long Bed Crew Cab Pickup 6.0L 360hp 2013 $47580
+GMC Sierra 3500 HD Denali Short Bed Crew Cab Pickup 6.0L 360hp 2013 $47385
+GMC Sierra 3500 HD Long Bed Crew Cab Pickup 6.0L 322hp 2013 $35800
+GMC Sierra 3500 HD Long Bed Extended Cab Pickup 6.0L 322hp 2013 $34370
+GMC Sierra 3500 HD Long Bed Regular Cab Pickup 6.0L 322hp 2013 $31045
+GMC Sierra 3500 HD Short Bed Crew Cab Pickup 6.0L 322hp 2013 $35605
+GMC Sierra 3500HD Denali DRW Long Bed Crew Cab Pickup 6.0L 360hp 2015 $50835
+GMC Sierra 3500HD Denali Long Bed Crew Cab Pickup 6.0L 360hp 2015 $51075
+GMC Sierra 3500HD Denali Short Bed Crew Cab Pickup 6.0L 360hp 2015 $50640
+GMC Sierra 3500HD Double Cab SLE DRW Extended Cab Pickup 6.0L 322hp 2015 $42040
+GMC Sierra 3500HD Double Cab SLE Extended Cab Pickup 6.0L 322hp 2015 $40730
+GMC Sierra 3500HD Double Cab SLT DRW Extended Cab Pickup 6.0L 322hp 2015 $45505
+GMC Sierra 3500HD Double Cab SLT Extended Cab Pickup 6.0L 322hp 2015 $45005
+GMC Sierra 3500HD Double Cab Work Truck DRW Extended Cab Pickup 6.0L 322hp 2015 $36680
+GMC Sierra 3500HD Double Cab Work Truck Extended Cab Pickup 6.0L 322hp 2015 $36385
+GMC Sierra 3500HD SLE DRW Long Bed Crew Cab Pickup 6.0L 322hp 2015 $44120
+GMC Sierra 3500HD SLE DRW Long Bed Regular Cab Pickup 6.0L 322hp 2014 $37520
+GMC Sierra 3500HD SLE DRW Regular Cab Pickup 6.0L 322hp 2015 $38195
+GMC Sierra 3500HD SLE Long Bed Crew Cab Pickup 6.0L 322hp 2015 $42570
+GMC Sierra 3500HD SLE Long Bed Regular Cab Pickup 6.0L 322hp 2014 $36105
+GMC Sierra 3500HD SLE Regular Cab Pickup 6.0L 322hp 2015 $36780
+GMC Sierra 3500HD SLE Short Bed Crew Cab Pickup 6.0L 322hp 2015 $42375
+GMC Sierra 3500HD SLT DRW Long Bed Crew Cab Pickup 6.0L 322hp 2015 $47560
+GMC Sierra 3500HD SLT Long Bed Crew Cab Pickup 6.0L 322hp 2015 $46810
+GMC Sierra 3500HD SLT Short Bed Crew Cab Pickup 6.0L 322hp 2015 $46615
+GMC Sierra 3500HD Work Truck DRW Long Bed Crew Cab Pickup 6.0L 322hp 2015 $38345
+GMC Sierra 3500HD Work Truck DRW Long Bed Regular Cab Pickup 6.0L 322hp 2014 $33585
+GMC Sierra 3500HD Work Truck DRW Regular Cab Pickup 6.0L 322hp 2015 $33840
+GMC Sierra 3500HD Work Truck Long Bed Crew Cab Pickup 6.0L 322hp 2015 $37815
+GMC Sierra 3500HD Work Truck Long Bed Regular Cab Pickup 6.0L 322hp 2014 $32805
+GMC Sierra 3500HD Work Truck Regular Cab Pickup 6.0L 322hp 2015 $33060
+GMC Sierra 3500HD Work Truck Short Bed Crew Cab Pickup 6.0L 322hp 2015 $37620
+GMC Terrain Denali Sport Utility 2.4L 182hp 2014 $35155
+GMC Terrain SLE Sport Utility 2.4L 182hp 2013 $26305
+GMC Terrain SLE-1  Sport Utility 2.4L 182hp 2014 $26465
+GMC Terrain SLE-2  Sport Utility 2.4L 182hp 2014 $27965
+GMC Terrain SLT Sport Utility 2.4L 182hp 2013 $29355
+GMC Terrain SLT-1  Sport Utility 2.4L 182hp 2014 $29515
+GMC Terrain SLT-2  Sport Utility 2.4L 182hp 2014 $32760
+GMC Yukon Denali Hybrid Sport Utility 6.0L 332hp 2013 $61960
+GMC Yukon Denali Sport Utility 6.2L 403hp 2014 $58320
+GMC Yukon Denali Sport Utility 6.2L 420hp 2015 $62680
+GMC Yukon Hybrid Sport Utility 6.0L 332hp 2013 $54145
+GMC Yukon SLE Sport Utility 5.3L 326hp 2014 $44455
+GMC Yukon SLE Sport Utility 5.3L 355hp 2015 $46335
+GMC Yukon SLE Sport Utility Denali Sport Utility 2015 $62680
+GMC Yukon SLE Sport Utility SLE Sport Utility 2015 $46335
+GMC Yukon SLE Sport Utility SLT Sport Utility 2015 $54735
+GMC Yukon SLT Sport Utility 5.3L 326hp 2014 $48880
+GMC Yukon SLT Sport Utility 5.3L 355hp 2015 $54735
+GMC Yukon SLT Sport Utility Denali Sport Utility 2015 $62680
+GMC Yukon SLT Sport Utility SLE Sport Utility 2015 $46335
+GMC Yukon SLT Sport Utility SLT Sport Utility 2015 $54735
+GMC Yukon XL 1500 SLE Sport Utility 5.3L 326hp 2013 $45230
+GMC Yukon XL 1500 SLE Sport Utility 5.3L 355hp 2015 $49035
+GMC Yukon XL 1500 SLT Sport Utility 5.3L 326hp 2013 $49465
+GMC Yukon XL 1500 SLT Sport Utility 5.3L 355hp 2015 $57435
+GMC Yukon XL 2500 SLE Sport Utility 6.0L 352hp 2013 $46720
+GMC Yukon XL 2500 SLT Sport Utility 6.0L 352hp 2013 $51095
+GMC Yukon XL Denali Sport Utility 6.2L 403hp 2014 $60985
+GMC Yukon XL Denali Sport Utility 6.2L 420hp 2015 $65380
+GMC Yukon XL SLE Sport Utility 5.3L 326hp 2014 $47925
+GMC Yukon XL SLT Sport Utility 5.3L 326hp 2014 $51100
+Honda Accord EX Coupe 2.4L 185hp 2014 $26150
+Honda Accord EX PZEV Coupe 2.4L 185hp 2014 $26150
+Honda Accord EX PZEV Sedan 2.4L 185hp 2014 $25680
+Honda Accord EX Sedan 2.4L 185hp 2014 $25680
+Honda Accord EX-L Coupe 2.4L 185hp 2014 $28345
+Honda Accord EX-L Navigation Coupe 2.4L 185hp 2014 $30120
+Honda Accord EX-L Navigation PZEV Coupe 2.4L 185hp 2014 $30120
+Honda Accord EX-L Navigation PZEV Sedan 2.4L 185hp 2014 $30045
+Honda Accord EX-L Navigation Sedan 2.4L 185hp 2014 $30045
+Honda Accord EX-L PZEV Coupe 2.4L 185hp 2014 $28345
+Honda Accord EX-L PZEV Sedan 2.4L 185hp 2014 $28270
+Honda Accord EX-L Sedan 2.4L 185hp 2014 $28270
+Honda Accord Hybrid Sedan 2.0L 196hp 2014 $29155
+Honda Accord Hybrid EX-L Sedan 2.0L 196hp 2014 $31905
+Honda Accord Hybrid Touring Sedan 2.0L 196hp 2014 $34905
+Honda Accord LX PZEV Sedan 2.4L 185hp 2014 $22755
+Honda Accord LX Sedan 2.4L 185hp 2014 $22755
+Honda Accord LX-S Coupe 2.4L 185hp 2014 $24475
+Honda Accord LX-S PZEV Coupe 2.4L 185hp 2014 $24475
+Honda Accord Plug-In Sedan 2.0L 196hp 2014 $39780
+Honda Accord Sport PZEV Sedan 2.4L 189hp 2014 $24515
+Honda Accord Sport Sedan 2.4L 189hp 2014 $24515
+Honda Accord Touring PZEV Sedan 3.5L 278hp 2014 $33480
+Honda Accord Touring Sedan 3.5L 278hp 2014 $33480
+Honda Civic EX Coupe 1.8L 140hp 2013 $20015
+Honda Civic EX Coupe 1.8L 143hp 2014 $20290
+Honda Civic EX PZEV Coupe 1.8L 143hp 2014 $21090
+Honda Civic EX PZEV Sedan 1.8L 143hp 2014 $21090
+Honda Civic EX Sedan 1.8L 140hp 2013 $20815
+Honda Civic EX Sedan 1.8L 143hp 2014 $21090
+Honda Civic EX-L Coupe 1.8L 140hp 2013 $22265
+Honda Civic EX-L Coupe 1.8L 143hp 2014 $22540
+Honda Civic EX-L Navigation Coupe 1.8L 143hp 2014 $24040
+Honda Civic EX-L Navigation Sedan 1.8L 143hp 2014 $24240
+Honda Civic EX-L PZEV Coupe 1.8L 143hp 2014 $22540
+Honda Civic EX-L PZEV Navigation Coupe 1.8L 143hp 2014 $24040
+Honda Civic EX-L PZEV Navigation Sedan 1.8L 143hp 2014 $24240
+Honda Civic EX-L PZEV Sedan 1.8L 143hp 2014 $22740
+Honda Civic EX-L Sedan 1.8L 140hp 2013 $22265
+Honda Civic EX-L Sedan 1.8L 143hp 2014 $22740
+Honda Civic HF PZEV Sedan 1.8L 143hp 2014 $19940
+Honda Civic HF Sedan 1.8L 140hp 2013 $19765
+Honda Civic HF Sedan 1.8L 143hp 2014 $19940
+Honda Civic Hybrid Sedan 1.5L 110hp 2014 $24635
+Honda Civic Hybrid Leather Navigation Sedan 1.5L 110hp 2014 $27335
+Honda Civic Hybrid Leather Sedan 1.5L 110hp 2014 $25835
+Honda Civic Hybrid Navigation Sedan 1.5L 110hp 2014 $26135
+Honda Civic Hybrid Sedan 1.5L 110hp 2013 $24360
+Honda Civic LX Coupe 1.8L 140hp 2013 $17965
+Honda Civic LX Coupe 1.8L 143hp 2014 $18190
+Honda Civic LX PZEV Coupe 1.8L 143hp 2014 $18990
+Honda Civic LX PZEV Sedan 1.8L 143hp 2014 $19190
+Honda Civic LX Sedan 1.8L 140hp 2013 $18965
+Honda Civic LX Sedan 1.8L 143hp 2014 $19190
+Honda Civic Natural Gas Navigation Sedan 1.8L 110hp 2014 $29290
+Honda Civic Natural Gas Sedan 1.8L 110hp 2014 $26640
+Honda Civic SI Coupe 2.4L 201hp 2013 $22515
+Honda Civic SI Coupe 2.4L 205hp 2014 $22790
+Honda Civic Si HP Summer Tires Coupe 2.4L 205hp 2014 $22990
+Honda Civic Si HP Summer Tires Navigation Coupe 2.4L 205hp 2014 $24490
+Honda Civic Si HP Summer Tires Sedan 2.4L 205hp 2014 $23190
+Honda Civic SI Navigation Coupe 2.4L 205hp 2014 $24290
+Honda Civic SI Navigation Sedan 2.4L 205hp 2014 $24490
+Honda Civic SI Sedan 2.4L 201hp 2013 $22715
+Honda Civic SI Sedan 2.4L 205hp 2014 $22990
+Honda CR-V EX Sport Utility 2.4L 185hp 2014 $25045
+Honda CR-V EX-L Navigation Sport Utility 2.4L 185hp 2014 $29195
+Honda CR-V EX-L Rear Entertainment Sport Utility 2.4L 185hp 2014 $28395
+Honda CR-V EX-L Sport Utility 2.4L 185hp 2014 $27695
+Honda CR-V LX Sport Utility 2.4L 185hp 2014 $22945
+Honda CR-Z Coupe 1.5L 130hp 2014 $20645
+Honda CR-Z Hatchback 1.5L 130hp 2013 $20625
+Honda CR-Z EX Coupe 1.5L 130hp 2014 $22490
+Honda CR-Z EX Hatchback 1.5L 130hp 2013 $22305
+Honda CR-Z EX Navigation Coupe 1.5L 130hp 2014 $23990
+Honda Crosstour EX Hatchback 2.4L 192hp 2014 $27380
+Honda Crosstour EX-L Hatchback 2.4L 192hp 2014 $31065
+Honda Crosstour EX-L Navigation Hatchback 2.4L 192hp 2014 $33165
+Honda Fit Hatchback 1.5L 117hp 2013 $16225
+Honda Fit EV Hatchback N/A 2013 $36625
+Honda Fit Sport Hatchback 1.5L 117hp 2013 $18010
+Honda Insight Hatchback 1.3L 98hp 2014 $18725
+Honda Insight EX Hatchback 1.3L 98hp 2014 $22190
+Honda Insight EX Navigation System Hatchback 1.3L 98hp 2014 $23915
+Honda Insight EX PZEV Hatchback 1.3L 98hp 2014 $22190
+Honda Insight EX PZEV Navigation System Hatchback 1.3L 98hp 2014 $23915
+Honda Insight LX Hatchback 1.3L 98hp 2014 $20500
+Honda Insight LX PZEV Hatchback 1.3L 98hp 2014 $20500
+Honda Insight PZEV Hatchback 1.3L 98hp 2014 $18725
+Honda Odyssey EX Passenger Minivan 3.5L 248hp 2014 $32125
+Honda Odyssey EX-L DVD Passenger Minivan 3.5L 248hp 2014 $37225
+Honda Odyssey EX-L Navigation System Passenger Minivan 3.5L 248hp 2014 $37625
+Honda Odyssey EX-L Passenger Minivan 3.5L 248hp 2014 $35625
+Honda Odyssey LX Passenger Minivan 3.5L 248hp 2014 $28825
+Honda Odyssey Touring Elite Passenger Minivan 3.5L 248hp 2014 $44450
+Honda Odyssey Touring Passenger Minivan 3.5L 248hp 2014 $41880
+Honda Pilot EX Sport Utility 3.5L 250hp 2014 $31920
+Honda Pilot EX-L Navigation Sport Utility 3.5L 250hp 2014 $37170
+Honda Pilot EX-L Rear Entertainment Sport Utility 3.5L 250hp 2014 $36770
+Honda Pilot EX-L Sport Utility 3.5L 250hp 2014 $35170
+Honda Pilot LX Sport Utility 3.5L 250hp 2014 $29670
+Honda Pilot Touring Sport Utility 3.5L 250hp 2014 $39820
+Honda Ridgeline RT Crew Cab Pickup 3.5L 250hp 2014 $29575
+Honda Ridgeline RTL Crew Cab Pickup 3.5L 250hp 2014 $35155
+Honda Ridgeline RTL Navigation System Crew Cab Pickup 3.5L 250hp 2014 $37505
+Honda Ridgeline RTS Crew Cab Pickup 3.5L 250hp 2014 $32380
+Honda Ridgeline SE Crew Cab Pickup 3.5L 250hp 2014 $37505
+Honda Ridgeline Sport Crew Cab Pickup 3.5L 250hp 2014 $30720
+Hyundai Accent GLS Sedan 1.6L 138hp 2014 $14645
+Hyundai Accent GS Hatchback 1.6L 138hp 2014 $14895
+Hyundai Accent SE Hatchback 1.6L 138hp 2014 $16395
+Hyundai Azera Sedan 3.3L 293hp 2014 $31000
+Hyundai Azera Sedan Sedan 2014 $31000
+Hyundai Azera Sedan Limited Sedan 2014 $34750
+Hyundai Azera Limited Sedan 3.3L 293hp 2014 $34750
+Hyundai Elantra Coupe Coupe 2.0L 173hp 2014 $19600
+Hyundai Elantra Coupe GS Coupe 1.8L 148hp 2013 $17595
+Hyundai Elantra Coupe PZEV Coupe 2.0L 166hp 2014 $19600
+Hyundai Elantra Coupe SE Coupe 1.8L 148hp 2013 $19895
+Hyundai Elantra GLS Sedan 1.8L 148hp 2013 $17965
+Hyundai Elantra GT Hatchback 1.8L 148hp 2013 $18545
+Hyundai Elantra GT Hatchback 2.0L 166hp 2014 $18750
+Hyundai Elantra Limited PZEV Sedan 1.8L 145hp 2014 $21650
+Hyundai Elantra Limited Sedan 1.8L 145hp 2014 $21650
+Hyundai Elantra Limited Sedan 1.8L 148hp 2013 $21115
+Hyundai Elantra SE Sedan 1.8L 145hp 2014 $18200
+Hyundai Elantra Sport PZEV Sedan 2.0L 166hp 2014 $22700
+Hyundai Elantra Sport Sedan 2.0L 173hp 2014 $22700
+Hyundai Equus Signature Sedan 5.0L 429hp 2014 $61000
+Hyundai Equus Ultimate Sedan 5.0L 429hp 2014 $68000
+Hyundai Genesis 3.8 Sedan 3.8L 333hp 2014 $35200
+Hyundai Genesis 5.0 R-Spec Sedan 5.0L 429hp 2014 $47400
+Hyundai Genesis Coupe 2.0T Coupe 2.0L 274hp 2014 $26350
+Hyundai Genesis Coupe 2.0T Premium Coupe 2.0L 274hp 2014 $29300
+Hyundai Genesis Coupe 2.0T R-Spec Coupe 2.0L 274hp 2014 $27200
+Hyundai Genesis Coupe 3.8 Grand Touring Coupe 3.8L 348hp 2014 $32150
+Hyundai Genesis Coupe 3.8 R-Spec Coupe 3.8L 348hp 2014 $29350
+Hyundai Genesis Coupe 3.8 Ultimate Coupe 3.8L 348hp 2014 $34600
+Hyundai Genesis Coupe Grand Touring Coupe 3.8L 348hp 2013 $32000
+Hyundai Genesis Coupe Premium Coupe 2.0L 274hp 2013 $28750
+Hyundai Genesis Coupe R-Spec Coupe 2.0L 274hp 2013 $26500
+Hyundai Genesis Coupe Track Coupe 3.8L 348hp 2013 $34250
+Hyundai Santa Fe GLS Sport Utility 3.3L 290hp 2014 $29800
+Hyundai Santa Fe Limited Sport Utility 3.3L 290hp 2014 $33700
+Hyundai Santa Fe Sport 2.0T Sport Utility 2.0L 264hp 2014 $30650
+Hyundai Santa Fe Sport Sport Utility 2.4L 190hp 2014 $24950
+Hyundai Sonata GLS PZEV Sedan 2.4L 190hp 2014 $21450
+Hyundai Sonata GLS Sedan 2.4L 190hp 2014 $21450
+Hyundai Sonata Hybrid Sedan 2.4L 199hp 2013 $25650
+Hyundai Sonata Hybrid Limited Sedan 2.4L 199hp 2013 $30550
+Hyundai Sonata Limited 2.0T Sedan 2.0L 274hp 2014 $28550
+Hyundai Sonata Limited PZEV Sedan 2.4L 190hp 2014 $27000
+Hyundai Sonata Limited Sedan 2.0L 274hp 2013 $27595
+Hyundai Sonata Limited Sedan 2.4L 190hp 2014 $27000
+Hyundai Sonata SE 2.0T Sedan 2.0L 274hp 2014 $25850
+Hyundai Sonata SE Sedan 2.0L 274hp 2013 $25095
+Hyundai Sonata SE Sedan 2.4L 192hp 2014 $24300
+Hyundai Tucson GL Sport Utility 2.0L 165hp 2013 $20595
+Hyundai Tucson GL Sport Utility 2012 $16698
+Hyundai Tucson GLS Sport Utility 2.0L 164hp 2014 $21450
+Hyundai Tucson GLS Sport Utility 2.4L 176hp 2013 $22945
+Hyundai Tucson GLS Sport Utility 2012 $20459
+Hyundai Tucson Limited PZEV Sport Utility 2.4L 180hp 2014 $27700
+Hyundai Tucson Limited Sport Utility 2.4L 176hp 2013 $25595
+Hyundai Tucson Limited Sport Utility 2.4L 182hp 2014 $26200
+Hyundai Tucson Limited Sport Utility 2012 $22005
+Hyundai Tucson SE PZEV Sport Utility 2.4L 180hp 2014 $25000
+Hyundai Tucson SE Sport Utility 2.4L 182hp 2014 $23500
+Hyundai Veloster 1.6 Hatchback 1.6L 138hp 2014 $17800
+Hyundai Veloster Hatchback 1.6L 138hp 2013 $17600
+Hyundai Veloster RE:MIX Hatchback 1.6L 138hp 2013 $20050
+Hyundai Veloster Turbo Hatchback 1.6L 201hp 2014 $22300
+Hyundai Veloster Turbo R-Spec Hatchback 1.6L 201hp 2014 $21300
+Infiniti EX35 Sport Utility 3.5L 297hp 2012 $35800
+Infiniti EX35 Journey Sport Utility 3.5L 297hp 2012 $38100
+Infiniti EX37 Sport Utility 3.7L 325hp 2013 $36900
+Infiniti EX37 Journey Sport Utility 3.7L 325hp 2013 $39250
+Infiniti FX35 Sport Utility 3.5L 303hp 2012 $43700
+Infiniti FX37 Sport Utility 3.7L 325hp 2013 $44950
+Infiniti FX50 Sport Utility 5.0L 390hp 2013 $61500
+Infiniti G25 Sedan 2.5L 218hp 2012 $33100
+Infiniti G25 Journey Sedan 2.5L 218hp 2012 $34500
+Infiniti G25 X Sedan 2.5L 218hp 2012 $36100
+Infiniti G37 Convertible 3.7L 325hp 2013 $47900
+Infiniti G37 Journey Coupe 3.7L 330hp 2013 $40400
+Infiniti G37 Journey Sedan 3.7L 328hp 2013 $37350
+Infiniti G37 Performance Line Convertible 3.7L 343hp 2013 $61450
+Infiniti G37 Performance Line Coupe 3.7L 348hp 2013 $51200
+Infiniti G37 Sport Convertible 3.7L 325hp 2013 $52750
+Infiniti G37 Sport Coupe 3.7L 330hp 2013 $45500
+Infiniti G37 Sport Sedan 3.7L 328hp 2013 $41950
+Infiniti G37 X Coupe 3.7L 330hp 2013 $42050
+Infiniti G37 X Sedan 3.7L 328hp 2013 $38950
+Infiniti JX35 Sport Utility 3.5L 265hp 2013 $41250
+Infiniti M35 Sedan 2010 $26481
+Infiniti M35h Sedan 3.5L 360hp 2013 $54750
+Infiniti M37 Sedan 3.7L 330hp 2013 $48700
+Infiniti M56 Sedan 5.6L 420hp 2013 $61200
+Infiniti Q50 Sedan 3.7L 328hp 2014 $37050
+Infiniti Q50 Hybrid Premium Sedan 3.5L 360hp 2014 $44300
+Infiniti Q50 Hybrid Sport Sedan 3.5L 360hp 2014 $46700
+Infiniti Q50 Premium Sedan 3.7L 328hp 2014 $39900
+Infiniti Q50 Sport Sedan 3.7L 328hp 2014 $43550
+Infiniti Q60 Convertible 3.7L 325hp 2014 $48450
+Infiniti Q60 Coupe 3.7L 330hp 2014 $42500
+Infiniti Q60 Journey Coupe 3.7L 330hp 2014 $40850
+Infiniti Q60 Performance Line Convertible 3.7L 343hp 2014 $62000
+Infiniti Q60 Performance Line Coupe 3.7L 348hp 2014 $51650
+Infiniti Q60 S Convertible 3.7L 325hp 2014 $53300
+Infiniti Q60 S Coupe 3.7L 330hp 2014 $45950
+Infiniti Q70 3.7 Sedan 3.7L 330hp 2014 $49500
+Infiniti Q70 5.6 Sedan 5.6L 420hp 2014 $62000
+Infiniti Q70 Hybrid Sedan 3.5L 360hp 2014 $55550
+Infiniti QX50 Sport Utility 3.7L 325hp 2014 $34750
+Infiniti QX50 Journey Sport Utility 3.7L 325hp 2014 $37100
+Infiniti QX56 Sport Utility 5.6L 400hp 2013 $61350
+Infiniti QX60 3.5 Sport Utility 3.5L 265hp 2014 $42000
+Infiniti QX60 Hybrid Sport Utility 2.5L 250hp 2014 $45000
+Infiniti QX70 3.7 Sport Utility 3.7L 325hp 2014 $45750
+Infiniti QX70 5.0 Sport Utility 5.0L 390hp 2014 $62300
+Infiniti QX80 Sport Utility 5.6L 400hp 2014 $62550
+Jaguar F-Type Convertible 3.0L 340hp 2015 $69000
+Jaguar F-Type Coupe 3.0L 340hp 2015 $65000
+Jaguar F-Type Range Extender Coupe 5.0L 550hp 2015 $99000
+Jaguar F-Type S Convertible 3.0L 380hp 2015 $81000
+Jaguar F-Type S Coupe 3.0L 380hp 2015 $77000
+Jaguar F-Type S V8 Convertible 5.0L 495hp 2015 $92000
+Jaguar XF Sedan 2.0L 240hp 2014 $46975
+Jaguar XF R Sedan 5.0L 510hp 2014 $83200
+Jaguar XF R-S Sedan 5.0L 550hp 2014 $99000
+Jaguar XF Supecharged Sedan 5.0L 470hp 2013 $68100
+Jaguar XF Supercharged Sedan 5.0L 470hp 2014 $68100
+Jaguar XJ-Series Sedan 3.0L 340hp 2014 $74200
+Jaguar XJ-Series L Portfolio  Sedan 3.0L 340hp 2014 $81200
+Jaguar XJ-Series L Supercharged Sedan 5.0L 470hp 2014 $93600
+Jaguar XJ-Series Portfolio Sedan 3.0L 340hp 2013 $83700
+Jaguar XJ-Series Supercharged Sedan 5.0L 470hp 2014 $90600
+Jaguar XJ-Series XJ Sedan 3.0L 340hp 2013 $73200
+Jaguar XJ-Series XJ Supercharged Sedan 5.0L 470hp 2013 $89600
+Jaguar XJ-Series XJ Supersport Sedan 5.0L 510hp 2013 $112600
+Jaguar XJ-Series XJL Portfolio Sedan 5.0L 385hp 2013 $81200
+Jaguar XJ-Series XJL Supercharged Sedan 5.0L 470hp 2013 $92600
+Jaguar XJ-Series XJL Supersport Sedan 5.0L 510hp 2013 $119100
+Jaguar XJ-Series XJL Ultimate Sedan 5.0L 510hp 2013 $155000
+Jaguar XJ-Series XJR L Sedan 5.0L 550hp 2014 $119000
+Jaguar XJ-Series XJR Sedan 5.0L 550hp 2014 $116000
+Jaguar XK Convertible 5.0L 385hp 2015 $90500
+Jaguar XK Coupe 5.0L 385hp 2015 $84500
+Jaguar XK-Series XK Convertible 5.0L 385hp 2014 $90500
+Jaguar XK-Series XK Coupe 5.0L 385hp 2014 $84500
+Jaguar XK-Series XK Touring Convertible 5.0L 385hp 2014 $85000
+Jaguar XK-Series XK Touring Coupe 5.0L 385hp 2014 $79000
+Jaguar XK-Series XKR Convertible 5.0L 510hp 2014 $103500
+Jaguar XK-Series XKR Coupe 5.0L 510hp 2014 $97500
+Jaguar XK-Series XKR S Convertible 5.0L 550hp 2014 $138000
+Jaguar XK-Series XKR S Coupe 5.0L 550hp 2014 $132000
+Jaguar XK-Series XKR S GT Coupe 5.0L 550hp 2014 $174000
+Jaguar XKR Convertible 5.0L 510hp 2015 $103500
+Jaguar XKR Coupe 5.0L 510hp 2015 $97500
+Jaguar XKR S Convertible 5.0L 550hp 2015 $138000
+Jaguar XKR S Coupe 5.0L 550hp 2015 $132000
+Jeep Cherokee Altitude Sport Utility 2.4L 184hp 2014 $24995
+Jeep Cherokee Latitude Sport Utility 2.4L 184hp 2014 $24495
+Jeep Cherokee Limited Sport Utility 2.4L 184hp 2014 $27995
+Jeep Cherokee Sport Sport Utility 2.4L 184hp 2014 $22995
+Jeep Cherokee Sport Sport Utility Altitude Sport Utility 2014 $24995
+Jeep Cherokee Sport Sport Utility Latitude Sport Utility 2014 $24495
+Jeep Cherokee Sport Sport Utility Limited Sport Utility 2014 $27995
+Jeep Cherokee Sport Sport Utility Sport Sport Utility 2014 $22995
+Jeep Cherokee Sport Sport Utility Trailhawk Sport Utility 2014 $29495
+Jeep Cherokee Trailhawk Sport Utility 2.4L 184hp 2014 $29495
+Jeep Compass Latitude High Altitude Sport Utility 2.0L 158hp 2014 $23290
+Jeep Compass Latitude Sport Utility 2.0L 158hp 2014 $22295
+Jeep Compass Limited Sport Utility 2.4L 172hp 2014 $25895
+Jeep Compass Sport Altitude Sport Utility 2.0L 158hp 2014 $20290
+Jeep Compass Sport Sport Utility 2.0L 158hp 2014 $18595
+Jeep Grand Cherokee Alpine Sport Utility 6.4L 470hp 2013 $62790
+Jeep Grand Cherokee Altitude Sport Utility 3.6L 290hp 2014 $34295
+Jeep Grand Cherokee Laredo Sport Utility 3.6L 290hp 2014 $29195
+Jeep Grand Cherokee Limited Sport Utility 3.6L 290hp 2014 $36195
+Jeep Grand Cherokee Overland Sport Utility 3.6L 290hp 2014 $43195
+Jeep Grand Cherokee SRT8 Sport Utility 6.4L 470hp 2014 $63995
+Jeep Grand Cherokee Summit Sport Utility 3.6L 290hp 2014 $48195
+Jeep Liberty Limited Sport Utility 3.7L 210hp 2012 $26760
+Jeep Liberty Sport Sport Utility 3.7L 210hp 2012 $23395
+Jeep Patriot Latitude High Altitude Sport Utility 2.0L 158hp 2014 $22775
+Jeep Patriot Latitude Sport Utility 2.0L 158hp 2014 $20495
+Jeep Patriot Limited Sport Utility 2.4L 172hp 2014 $24395
+Jeep Patriot Sport Altitude Sport Utility 2.0L 158hp 2014 $17690
+Jeep Patriot Sport Sport Utility 2.0L 158hp 2014 $15995
+Jeep Wrangler Altitude Sport Utility 3.6L 285hp 2014 $31595
+Jeep Wrangler Rubicon Sport Utility 3.6L 285hp 2014 $30995
+Jeep Wrangler Rubicon X Sport Utility 3.6L 285hp 2014 $35095
+Jeep Wrangler Sahara Sport Utility 3.6L 285hp 2014 $28095
+Jeep Wrangler Sport S  Sport Utility 3.6L 285hp 2014 $24995
+Jeep Wrangler Sport Sport Utility 3.6L 285hp 2014 $22395
+Jeep Wrangler Unlimited Altitude Sport Utility 3.6L 285hp 2014 $35395
+Jeep Wrangler Unlimited Rubicon Sport Utility 3.6L 285hp 2014 $34795
+Jeep Wrangler Unlimited Rubicon X Sport Utility 3.6L 285hp 2014 $38895
+Jeep Wrangler Unlimited Sahara Sport Utility 3.6L 285hp 2014 $31895
+Jeep Wrangler Unlimited Sport S  Sport Utility 3.6L 285hp 2014 $28795
+Jeep Wrangler Unlimited Sport Sport Utility 3.6L 285hp 2014 $26195
+Jeep Wrangler Unlimited Sport Sport Utility Altitude Sport Utility 2014 $35395
+Jeep Wrangler Unlimited Sport Sport Utility Rubicon Sport Utility 2014 $34795
+Jeep Wrangler Unlimited Sport Sport Utility Rubicon X Sport Utility 2014 $38895
+Jeep Wrangler Unlimited Sport Sport Utility Sahara Sport Utility 2014 $31895
+Jeep Wrangler Unlimited Sport Sport Utility Sport S  Sport Utility 2014 $28795
+Jeep Wrangler Unlimited Sport Sport Utility Sport Sport Utility 2014 $26195
+Kia Cadenza Sedan 3.3L 293hp 2014 $35100
+Kia Cadenza SXL Sedan 3.3L 293hp 2014 $42400
+Kia Forte EX Hatchback 2.0L 156hp 2013 $18300
+Kia Forte EX Sedan 2.0L 156hp 2013 $17800
+Kia Forte EX Sedan 2.0L 173hp 2014 $19500
+Kia Forte Koup EX Coupe 2.0L 156hp 2013 $18400
+Kia Forte Koup EX Coupe 2.0L 173hp 2014 $19600
+Kia Forte Koup SX Coupe 1.6L 201hp 2014 $21600
+Kia Forte Koup SX Coupe 2.4L 173hp 2013 $19800
+Kia Forte LX Sedan 1.8L 148hp 2014 $17500
+Kia Forte LX Sedan 2.0L 156hp 2013 $16400
+Kia Forte SX Hatchback 2.4L 173hp 2013 $19800
+Kia Forte SX Sedan 2.4L 173hp 2013 $19300
+Kia Forte5 EX Hatchback 2.0L 173hp 2014 $19700
+Kia Forte5 SX Hatchback 1.6L 201hp 2014 $21900
+Kia Optima EX Sedan 2.4L 192hp 2014 $23950
+Kia Optima EX Sedan 2.4L 200hp 2013 $23650
+Kia Optima Hybrid EX Sedan 2.4L 199hp 2013 $31950
+Kia Optima Hybrid LX Sedan 2.4L 199hp 2013 $25900
+Kia Optima LX Sedan 2.4L 192hp 2014 $21500
+Kia Optima LX Sedan 2.4L 200hp 2013 $21350
+Kia Optima SX Sedan 2.0L 274hp 2013 $26800
+Kia Optima SX Sedan 2.4L 192hp 2014 $25500
+Kia Optima SX Turbo Sedan 2.0L 274hp 2014 $27500
+Kia Optima SXL Turbo Chrome Limited Sedan 2.0L 274hp 2014 $35300
+Kia Rio EX Sedan 1.6L 138hp 2014 $16800
+Kia Rio LX Sedan 1.6L 138hp 2014 $15000
+Kia Rio SX Sedan 1.6L 138hp 2014 $17900
+Kia Rio5 EX Hatchback 1.6L 138hp 2014 $17000
+Kia Rio5 LX Hatchback 1.6L 138hp 2014 $15090
+Kia Rio5 SX Hatchback 1.6L 138hp 2014 $18090
+Kia Sedona EX Passenger Minivan 3.5L 269hp 2014 $30900
+Kia Sedona LX Passenger Minivan 3.5L 269hp 2014 $25900
+Kia Sorento EX Sport Utility 2.4L 191hp 2013 $26950
+Kia Sorento EX Sport Utility 3.3L 290hp 2015 $31500
+Kia Sorento Limited Sport Utility 3.3L 290hp 2015 $39900
+Kia Sorento LX Sport Utility 2.4L 175hp 2013 $23150
+Kia Sorento LX Sport Utility 2.4L 191hp 2015 $24100
+Kia Sorento SX Sport Utility 3.3L 290hp 2015 $36500
+Kia Sorento SX Sport Utility 3.5L 276hp 2013 $31700
+Kia Soul Hatchback 1.6L 138hp 2013 $14400
+Kia Soul Wagon 1.6L 130hp 2014 $14900
+Kia Soul Exclaim Hatchback 2.0L 164hp 2013 $19900
+Kia Soul Exclaim Wagon 2.0L 164hp 2014 $20500
+Kia Soul Plus Hatchback 2.0L 164hp 2013 $17700
+Kia Soul Plus Wagon 2.0L 164hp 2014 $18400
+Kia Sportage Sport Utility 2.4L 176hp 2013 $19000
+Kia Sportage EX Sport Utility 2.4L 176hp 2013 $24200
+Kia Sportage EX Sport Utility 2.4L 182hp 2014 $25000
+Kia Sportage LX Sport Utility 2.4L 176hp 2013 $21200
+Kia Sportage LX Sport Utility 2.4L 182hp 2014 $21600
+Kia Sportage SX Sport Utility 2.0L 260hp 2013 $26900
+Kia Sportage SX Turbo Sport Utility 2.0L 260hp 2014 $26900
+Lamborghini Aventador LP 700-4 50th Anniversario Coupe 6.5L 720hp 2014 $497650
+Lamborghini Aventador LP 700-4 Coupe 6.5L 700hp 2014 $397500
+Lamborghini Aventador LP 700-4 Roadster 50th Anniversario Convertible 6.5L 720hp 2014 $548800
+Lamborghini Aventador LP 700-4 Roadster Convertible 6.5L 700hp 2014 $441600
+Lamborghini Gallardo LP 550-2 Coupe 5.2L 550hp 2014 $191900
+Lamborghini Gallardo LP 550-2 Spyder Convertible 5.2L 550hp 2014 $209500
+Lamborghini Gallardo LP 560-2 50th Anniversario Coupe 5.2L 560hp 2014 $198900
+Lamborghini Gallardo LP 560-4 FLII Coupe 5.2L 560hp 2014 $202000
+Lamborghini Gallardo LP 560-4 Spyder FLII Convertible 5.2L 560hp 2014 $225400
+Lamborghini Gallardo LP 570-4 Spyder Performante Edizione Tecnica Convertible 5.2L 570hp 2014 $251600
+Lamborghini Gallardo LP 570-4 Squadra Corse Coupe 5.2L 570hp 2014 $259100
+Lamborghini Gallardo LP 570-4 Superleggera Edizione Tecnica Coupe 5.2L 570hp 2014 $241200
+Lamborghini Gallardo LP550-2 Coupe 5.2L 550hp 2013 $191900
+Lamborghini Gallardo LP550-2 Spyder Convertible 5.2L 550hp 2013 $209500
+Lamborghini Gallardo LP560-4 Coupe 5.2L 560hp 2013 $202000
+Lamborghini Gallardo LP560-4 Spyder Convertible 5.2L 560hp 2013 $225400
+Lamborghini Gallardo LP570-4 Spyder Performante Convertible 5.2L 570hp 2013 $248000
+Lamborghini Gallardo LP570-4 Superleggera Coupe 5.2L 570hp 2013 $237600
+Land Rover LR2 Sport Utility 2.0L 240hp 2014 $36600
+Land Rover LR4 Sport Utility 3.0L 340hp 2014 $49700
+Land Rover LR4 Sport Utility 5.0L 375hp 2013 $49100
+Land Rover Range Rover Sport Utility 3.0L 340hp 2014 $83300
+Land Rover Range Rover Sport Utility 5.0L 375hp 2013 $82650
+Land Rover Range Rover Evoque Pure Coupe Sport Utility 2.0L 240hp 2013 $44145
+Land Rover Range Rover Evoque Pure Plus Coupe Sport Utility 2.0L 240hp 2014 $45100
+Land Rover Range Rover Evoque pure Sport Utility 2.0L 240hp 2014 $41100
+Land Rover Range Rover HSE Sport Utility 5.0L 375hp 2013 $87650
+Land Rover Range Rover Sport HSE Sport Utility 5.0L 375hp 2013 $60595
+Land Rover Range Rover Sport SE Sport Utility 3.0L 340hp 2014 $62600
+Land Rover Range Rover Sport Supercharged Sport Utility 5.0L 510hp 2014 $79100
+Land Rover Range Rover Supercharged LWB Sport Utility 5.0L 510hp 2014 $105300
+Land Rover Range Rover Supercharged Sport Utility 5.0L 510hp 2014 $100100
+Lexus CT 200h Hatchback 1.8L 134hp 2014 $32050
+Lexus ES300h Sedan 2.5L 200hp 2014 $39500
+Lexus ES350 Sedan 3.5L 268hp 2014 $36620
+Lexus GS350 Sedan 3.5L 306hp 2014 $47700
+Lexus GS450H Sedan 3.5L 338hp 2014 $60430
+Lexus GX460 Sport Utility 4.6L 301hp 2014 $49085
+Lexus GX460 Luxury Sport Utility 4.6L 301hp 2014 $60715
+Lexus GX460 Premium Sport Utility 4.6L 301hp 2013 $58590
+Lexus HS250h Sedan 2.4L 187hp 2012 $37030
+Lexus HS250h Premium Sedan 2.4L 187hp 2012 $39800
+Lexus IS-F Sedan 5.0L 416hp 2014 $63600
+Lexus IS250 Sedan 2.5L 204hp 2014 $36100
+Lexus IS250 Sedan Sedan 2014 $36100
+Lexus IS250 Sedan C Convertible 2014 $42860
+Lexus IS250 C Convertible 2.5L 204hp 2014 $42860
+Lexus IS350 Sedan 3.5L 306hp 2014 $39615
+Lexus IS350 Sedan Sedan 2014 $39615
+Lexus IS350 Sedan C Convertible 2014 $47140
+Lexus IS350 C Convertible 3.5L 306hp 2014 $47140
+Lexus LFA Coupe 4.8L 552hp 2012 $375000
+Lexus LS460 Sedan 4.6L 360hp 2014 $72140
+Lexus LS460 L Sedan 4.6L 360hp 2014 $78440
+Lexus LS600h L Sedan 5.0L 438hp 2014 $120060
+Lexus LX570 Sport Utility 5.7L 383hp 2014 $82630
+Lexus RX350 Sport Utility 3.5L 270hp 2014 $39760
+Lexus RX350 F Sport Sport Utility 3.5L 270hp 2014 $47450
+Lexus RX450h Sport Utility 3.5L 295hp 2014 $46410
+Lincoln MKC Sport Utility N/A 2015 $33100
+Lincoln MKS Sedan 3.7L 304hp 2014 $40425
+Lincoln MKS EcoBoost Sedan 3.5L 365hp 2014 $47415
+Lincoln MKT Sport Utility 3.5L 303hp 2014 $43050
+Lincoln MKT Sport Utility 3.7L 303hp 2013 $45285
+Lincoln MKT EcoBoost Sport Utility 3.5L 365hp 2013 $47280
+Lincoln MKX Sport Utility 3.7L 305hp 2014 $39575
+Lincoln MKZ Sedan 2.0L 240hp 2014 $36190
+Lincoln MKZ Hybrid Sedan 2.0L 188hp 2014 $36190
+Lincoln MKZ Hybrid Sedan 2.0L 188hp 2013 $35925
+Lincoln Navigator Sport Utility 5.4L 310hp 2014 $56165
+Lincoln Navigator L Sport Utility 5.4L 310hp 2014 $58330
+Lincoln Navigator L Sport Utility 5.4L 310hp 2013 $60040
+Lotus Evora Coupe 3.5L 276hp 2012 $66100
+Lotus Evora S Coupe 3.5L 345hp 2012 $76100
+Maserati Ghibli Sedan 3.0L 345hp 2014 $65600
+Maserati Ghibli S Q4 Sedan 3.0L 404hp 2014 $75700
+Maserati GranTurismo Convertible 4.7L 444hp 2014 $138800
+Maserati GranTurismo MC Convertible 4.7L 454hp 2014 $143400
+Maserati GranTurismo MC Coupe 4.7L 454hp 2014 $153400
+Maserati GranTurismo S Coupe 4.7L 454hp 2013 $126000
+Maserati GranTurismo Sport Convertible 4.7L 454hp 2014 $143300
+Maserati GranTurismo Sport Coupe 4.7L 454hp 2014 $126500
+Maserati Quattroporte GTS Sedan 3.8L 523hp 2014 $140500
+Maserati Quattroporte S Sedan 3.0L 404hp 2014 $102500
+Maybach 57 Sedan 5.5L 543hp 2012 $376300
+Maybach 57 S Sedan 6.0L 620hp 2012 $416200
+Maybach 62 Sedan 5.5L 543hp 2012 $427700
+Maybach 62 Landaulet Convertible 6.0L 620hp 2012 $1380000
+Maybach 62 S Sedan 6.0L 620hp 2012 $467600
+Mazda CX-5 Grand Touring Sport Utility 2.0L 155hp 2013 $27345
+Mazda CX-5 Grand Touring Sport Utility 2.5L 184hp 2015 $27970
+Mazda CX-5 Sport Sport Utility 2.0L 155hp 2015 $21545
+Mazda CX-5 Touring Sport Utility 2.0L 155hp 2013 $24195
+Mazda CX-5 Touring Sport Utility 2.5L 184hp 2015 $24965
+Mazda CX-9 Grand Touring Sport Utility 3.7L 273hp 2014 $35035
+Mazda CX-9 Sport Sport Utility 3.7L 273hp 2014 $29985
+Mazda CX-9 Touring Sport Utility 3.7L 273hp 2014 $32480
+Mazda Mazda2 Sport Hatchback 1.5L 100hp 2014 $14720
+Mazda Mazda2 Touring Hatchback 1.5L 100hp 2014 $16210
+Mazda MAZDA3 i Grand Touring Hatchback 2.0L 155hp 2014 $23245
+Mazda MAZDA3 i Grand Touring Sedan 2.0L 155hp 2014 $22745
+Mazda MAZDA3 I Sport Hatchback 2.0L 155hp 2014 $19995
+Mazda MAZDA3 I Sport Sedan 2.0L 155hp 2014 $19495
+Mazda MAZDA3 I SV Sedan 2.0L 148hp 2013 $17550
+Mazda MAZDA3 I SV Sedan 2.0L 155hp 2014 $17995
+Mazda MAZDA3 I Touring Hatchback 2.0L 155hp 2014 $21145
+Mazda MAZDA3 I Touring Sedan 2.0L 155hp 2014 $19595
+Mazda MAZDA3 S Grand Touring Hatchback 2.5L 167hp 2013 $24850
+Mazda MAZDA3 S Grand Touring Hatchback 2.5L 184hp 2014 $26495
+Mazda MAZDA3 S Grand Touring Sedan 2.5L 167hp 2013 $25150
+Mazda MAZDA3 S Grand Touring Sedan 2.5L 184hp 2014 $25995
+Mazda MAZDA3 S Touring Hatchback 2.5L 184hp 2014 $25095
+Mazda MAZDA3 S Touring Sedan 2.5L 184hp 2014 $24595
+Mazda MAZDA5 Grand Touring Passenger Minivan 2.5L 157hp 2014 $24670
+Mazda MAZDA5 Sport Passenger Minivan 2.5L 157hp 2014 $21140
+Mazda MAZDA5 Touring Passenger Minivan 2.5L 157hp 2014 $22270
+Mazda MAZDA6 i Grand Touring Sedan 2.5L 170hp 2013 $27750
+Mazda MAZDA6 i Grand Touring Sedan 2.5L 184hp 2015 $29895
+Mazda MAZDA6 I Sport Sedan 2.5L 170hp 2013 $21725
+Mazda MAZDA6 I Sport Sedan 2.5L 184hp 2015 $22895
+Mazda MAZDA6 i Touring Plus Sedan 2.5L 170hp 2013 $25170
+Mazda MAZDA6 I Touring Sedan 2.5L 170hp 2013 $23370
+Mazda MAZDA6 I Touring Sedan 2.5L 184hp 2015 $24895
+Mazda MAZDA6 S Grand Touring Sedan 3.7L 272hp 2013 $29990
+Mazda MAZDASPEED3 Hatchback 2.3L 263hp 2013 $24200
+Mazda Miata Club Convertible 2.0L 158hp 2014 $27505
+Mazda Miata Club Hardtop Convertible 2.0L 158hp 2014 $29265
+Mazda Miata Grand Touring Convertible 2.0L 158hp 2014 $28650
+Mazda Miata Grand Touring Hardtop Convertible 2.0L 167hp 2014 $29450
+Mazda Miata Sport Convertible 2.0L 167hp 2014 $23720
+McLaren MP4-12C Coupe 3.8L 616hp 2013 $239400
+Mercedes C-Class C250 Coupe 1.8L 201hp 2014 $38200
+Mercedes C-Class C250 Luxury Sedan 1.8L 201hp 2014 $36250
+Mercedes C-Class C250 Sport Sedan 1.8L 201hp 2014 $35800
+Mercedes C-Class C300 Luxury Sedan 3.0L 248hp 2013 $39360
+Mercedes C-Class C300 Luxury Sedan 3.5L 248hp 2014 $39850
+Mercedes C-Class C300 Sport Sedan 3.0L 248hp 2013 $38950
+Mercedes C-Class C300 Sport Sedan 3.5L 248hp 2014 $39400
+Mercedes C-Class C350 Coupe 3.5L 302hp 2014 $43850
+Mercedes C-Class C350 Sport Sedan 3.5L 302hp 2014 $42100
+Mercedes C-Class C63 AMG Coupe 6.2L 451hp 2014 $62750
+Mercedes C-Class C63 AMG Sedan 6.2L 451hp 2014 $60250
+Mercedes CL-Class CL550 Coupe 4.7L 429hp 2014 $116600
+Mercedes CL-Class CL600 Coupe 5.5L 510hp 2014 $162000
+Mercedes CL-Class CL63 AMG Coupe 5.5L 536hp 2014 $154600
+Mercedes CL-Class CL65 AMG Coupe 6.0L 621hp 2014 $215500
+Mercedes CLA-Class CLA250 Sedan 2.0L 208hp 2014 $29900
+Mercedes CLA-Class CLA45 AMG Sedan 2.0L 355hp 2014 $47450
+Mercedes CLS-Class CLS550 Sedan 4.7L 402hp 2014 $72100
+Mercedes CLS-Class CLS63 AMG S Sedan 5.5L 577hp 2014 $106500
+Mercedes CLS-Class CLS63 AMG Sedan 5.5L 518hp 2013 $95900
+Mercedes CLS-Class CLS63 AMG Sedan 5.5L 550hp 2014 $99500
+Mercedes E-Class E250 BlueTEC Luxury Sedan 2.1L 195hp 2014 $51400
+Mercedes E-Class E250 BlueTEC Sport Sedan 2.1L 195hp 2014 $51400
+Mercedes E-Class E350 BlueTEC Luxury Sedan 3.0L 210hp 2013 $52200
+Mercedes E-Class E350 BlueTEC Sport Sedan 3.0L 210hp 2013 $52200
+Mercedes E-Class E350 Convertible 3.5L 302hp 2014 $60200
+Mercedes E-Class E350 Coupe 3.5L 302hp 2014 $52200
+Mercedes E-Class E350 Luxury Sedan 3.5L 302hp 2014 $51900
+Mercedes E-Class E350 Luxury Wagon 3.5L 302hp 2014 $58600
+Mercedes E-Class E350 Sport Sedan 3.5L 302hp 2014 $51900
+Mercedes E-Class E350 Sport Wagon 3.5L 302hp 2014 $58600
+Mercedes E-Class E400 Sedan 3.5L 301hp 2013 $55800
+Mercedes E-Class E550 Convertible 4.7L 402hp 2014 $67300
+Mercedes E-Class E550 Coupe 4.7L 402hp 2014 $59000
+Mercedes E-Class E550 Sport Sedan 4.7L 402hp 2014 $61400
+Mercedes E-Class E63 AMG S Sedan 5.5L 577hp 2014 $99770
+Mercedes E-Class E63 AMG S Wagon 5.5L 577hp 2014 $102370
+Mercedes E-Class E63 AMG Sedan 5.5L 518hp 2013 $89800
+Mercedes E-Class E63 AMG Sedan 5.5L 550hp 2014 $92770
+Mercedes E-Class E63 AMG Wagon 5.5L 518hp 2013 $92400
+Mercedes E-Class Hybrid E400 Sedan 3.5L 302hp 2014 $56700
+Mercedes G-Class G550 Sport Utility 5.5L 382hp 2014 $114200
+Mercedes G-Class G550 Sport Utility 5.5L 388hp 2013 $113000
+Mercedes G-Class G63 AMG Sport Utility 5.5L 536hp 2014 $135700
+Mercedes G-Class G63 AMG Sport Utility 5.5L 544hp 2013 $134300
+Mercedes GL-Class GL350 BlueTEC Sport Utility 3.0L 240hp 2014 $63000
+Mercedes GL-Class GL450 Sport Utility 4.7L 362hp 2014 $64550
+Mercedes GL-Class GL550 Sport Utility 4.7L 429hp 2014 $88600
+Mercedes GL-Class GL63 AMG Sport Utility 5.5L 550hp 2014 $118160
+Mercedes GLK-Class GLK250 BlueTEC Sport Utility 2.1L 200hp 2014 $38980
+Mercedes GLK-Class GLK350 Sport Utility 3.5L 302hp 2014 $37480
+Mercedes M-Class ML350 BlueTEC Sport Utility 3.0L 240hp 2014 $51790
+Mercedes M-Class ML350 Sport Utility 3.5L 302hp 2014 $47790
+Mercedes M-Class ML550 Sport Utility 4.7L 402hp 2014 $59450
+Mercedes M-Class ML63 AMG Sport Utility 5.5L 518hp 2014 $97250
+Mercedes S-Class S350 BlueTEC Sedan 3.0L 240hp 2013 $93000
+Mercedes S-Class S400 Hybrid Sedan 3.5L 295hp 2013 $92350
+Mercedes S-Class S550 Sedan 4.7L 429hp 2013 $95000
+Mercedes S-Class S550 Sedan 4.7L 449hp 2014 $92900
+Mercedes S-Class S600 Sedan 5.5L 510hp 2013 $160300
+Mercedes S-Class S63 AMG Sedan 5.5L 536hp 2013 $140000
+Mercedes S-Class S63 AMG Sedan 5.5L 577hp 2014 $139500
+Mercedes S-Class S65 AMG Sedan 6.0L 621hp 2013 $212000
+Mercedes SL-Class SL550 Convertible 4.7L 429hp 2014 $106700
+Mercedes SL-Class SL550 Roadster 4.7L 429hp 2013 $105500
+Mercedes SL-Class SL63 AMG Convertible 5.5L 530hp 2014 $147300
+Mercedes SL-Class SL63 AMG Roadster 5.5L 530hp 2013 $145800
+Mercedes SL-Class SL65 AMG Convertible 6.0L 621hp 2014 $214500
+Mercedes SL-Class SL65 AMG Roadster Convertible 6.0L 621hp 2013 $212240
+Mercedes SLK-Class SLK250 Convertible 1.8L 201hp 2014 $43525
+Mercedes SLK-Class SLK250 Roadster 1.8L 201hp 2013 $42900
+Mercedes SLK-Class SLK350 Convertible 3.5L 302hp 2014 $56225
+Mercedes SLK-Class SLK350 Roadster 3.5L 302hp 2013 $55400
+Mercedes SLK-Class SLK55 AMG Convertible 5.5L 415hp 2014 $68925
+Mercedes SLK-Class SLK55 AMG Roadster 5.5L 415hp 2013 $67990
+Mercedes SLS AMG Convertible 6.2L 583hp 2014 $208000
+Mercedes SLS AMG Coupe 6.2L 563hp 2013 $199500
+Mercedes SLS AMG Coupe 6.2L 583hp 2014 $201500
+Mercedes SLS AMG Roadster 6.2L 563hp 2013 $206000
+Mercedes SLS AMG Black Series Coupe 6.2L 622hp 2014 $275000
+Mercedes Sprinter 2500 144WB High Roof Cargo Van 2.1L 188hp 2014 $38335
+Mercedes Sprinter 2500 144WB High Roof Crew Cargo Van 2.1L 188hp 2014 $40125
+Mercedes Sprinter 2500 144WB High Roof Passenger Van 2.1L 188hp 2014 $42260
+Mercedes Sprinter 2500 144WB Standard Roof Cargo Van 2.1L 188hp 2014 $35920
+Mercedes Sprinter 2500 144WB Standard Roof Crew Cargo Van 2.1L 188hp 2014 $37710
+Mercedes Sprinter 2500 144WB Standard Roof Passenger Van 2.1L 188hp 2014 $40015
+Mercedes Sprinter 2500 170WB High Roof Cargo Van 2.1L 188hp 2014 $41540
+Mercedes Sprinter 2500 170WB High Roof Crew Extended Cargo Van 2.1L 188hp 2014 $42890
+Mercedes Sprinter 2500 170WB High Roof Extended Cargo Van 2.1L 188hp 2014 $42510
+Mercedes Sprinter 2500 170WB High Roof Extended Passenger Van 2.1L 188hp 2014 $45500
+Mercedes Sprinter 2500 Cargo Van 3.0L 188hp 2013 $36290
+Mercedes Sprinter 2500 High Roof Cargo Van 3.0L 188hp 2013 $41820
+Mercedes Sprinter 2500 High Roof Extended Cargo Van 3.0L 188hp 2013 $42775
+Mercedes Sprinter 2500 High Roof Passenger Van 3.0L 188hp 2013 $42530
+Mercedes Sprinter 2500 Passenger Van 3.0L 188hp 2013 $40320
+Mercedes Sprinter 3500 144WB High Roof 11030 GVWR DRW Cargo Van 2.1L 188hp 2014 $41075
+Mercedes Sprinter 3500 144WB High Roof 9990 GVWR DRW Cargo Van 2.1L 188hp 2014 $40450
+Mercedes Sprinter 3500 170WB High Roof 11030 GVWR DRW Cargo Van 2.1L 188hp 2014 $43790
+Mercedes Sprinter 3500 170WB High Roof 11030 GVWR DRW Extended Cargo Van 2.1L 188hp 2014 $44455
+Mercedes Sprinter 3500 170WB High Roof 9990 GVWR DRW Cargo Van 2.1L 188hp 2014 $43165
+Mercedes Sprinter 3500 170WB High Roof 9990 GVWR DRW Extended Cargo Van 2.1L 188hp 2014 $43830
+Mercedes Sprinter 3500 High Roof Cargo Van 3.0L 188hp 2013 $43425
+Mercedes Sprinter 3500 High Roof Extended Cargo Van 3.0L 188hp 2013 $44075
+Mercedes Sprinter Crew 2500 Cargo Van 3.0L 188hp 2013 $38050
+Mercedes Sprinter Crew 2500 High Roof Cargo Van 3.0L 188hp 2013 $40430
+Mercedes Sprinter Crew 2500 High Roof Extended Cargo Van 3.0L 188hp 2013 $43150
+MINI Cooper Convertible 1.6L 121hp 2014 $25150
+MINI Cooper Hatchback 1.6L 121hp 2013 $19700
+MINI Cooper Clubman Hatchback 1.6L 121hp 2014 $21400
+MINI Cooper Clubman John Cooper Works Hatchback 1.6L 208hp 2014 $32300
+MINI Cooper Clubman S Hatchback 1.6L 181hp 2014 $25100
+MINI Cooper Clubvan Hatchback 1.6L 121hp 2013 $25295
+MINI Cooper Countryman Hatchback 1.6L 121hp 2014 $22100
+MINI Cooper Countryman John Cooper Works ALL4 Hatchback 1.6L 208hp 2014 $34950
+MINI Cooper Countryman S ALL4 Hatchback 1.6L 181hp 2014 $27400
+MINI Cooper Countryman S Hatchback 1.6L 181hp 2014 $25700
+MINI Cooper Coupe Coupe 1.6L 121hp 2014 $21450
+MINI Cooper Coupe John Cooper Works Coupe 1.6L 208hp 2014 $31350
+MINI Cooper Coupe S Coupe 1.6L 181hp 2014 $24750
+MINI Cooper John Cooper Works Convertible 1.6L 208hp 2014 $35300
+MINI Cooper John Cooper Works Hatchback 1.6L 208hp 2013 $30100
+MINI Cooper Paceman Hatchback 1.6L 121hp 2014 $23300
+MINI Cooper Paceman John Cooper Works ALL4 Hatchback 1.6L 208hp 2014 $35600
+MINI Cooper Paceman S ALL4 Hatchback 1.6L 181hp 2014 $28600
+MINI Cooper Paceman S Hatchback 1.6L 181hp 2014 $26900
+MINI Cooper Roadster Convertible 1.6L 121hp 2014 $25550
+MINI Cooper Roadster Roadster Convertible 1.6L 121hp 2013 $25550
+MINI Cooper Roadster John Cooper Works Convertible 1.6L 208hp 2014 $35700
+MINI Cooper Roadster John Cooper Works Roadster Convertible 1.6L 208hp 2013 $35700
+MINI Cooper Roadster S Convertible 1.6L 181hp 2014 $28550
+MINI Cooper Roadster S Roadster Convertible 1.6L 181hp 2013 $28550
+MINI Cooper S Convertible 1.6L 181hp 2014 $28150
+MINI Cooper S Hatchback 1.6L 181hp 2013 $23300
+Mitsubishi Eclipse GS Coupe 2.4L 162hp 2012 $19499
+Mitsubishi Eclipse GS Sport Coupe 2.4L 162hp 2012 $24699
+Mitsubishi Eclipse GT Coupe 3.8L 265hp 2012 $29089
+Mitsubishi Eclipse SE Coupe 2.4L 162hp 2012 $24699
+Mitsubishi Eclipse Spyder GS Sport Convertible 2.4L 162hp 2012 $27799
+Mitsubishi Eclipse Spyder GT Convertible 3.8L 265hp 2012 $32599
+Mitsubishi Eclipse Spyder SE Convertible 2.4L 162hp 2012 $28299
+Mitsubishi Galant ES Sedan 2.4L 160hp 2012 $21899
+Mitsubishi Galant SE Sedan 2.4L 160hp 2012 $24299
+Mitsubishi i-MiEV ES Hatchback N/A 2014 $22995
+Mitsubishi Lancer DE Sedan 2.0L 148hp 2013 $15995
+Mitsubishi Lancer ES Hatchback 2.0L 148hp 2014 $18595
+Mitsubishi Lancer ES Sedan 2.0L 148hp 2014 $18095
+Mitsubishi Lancer Evolution GSR Sedan 2.0L 291hp 2014 $34995
+Mitsubishi Lancer Evolution MR Sedan 2.0L 291hp 2014 $38195
+Mitsubishi Lancer GT Hatchback 2.4L 168hp 2014 $21945
+Mitsubishi Lancer GT Sedan 2.4L 168hp 2014 $21445
+Mitsubishi Lancer Ralliart Sedan 2.0L 237hp 2014 $28395
+Mitsubishi Lancer SE Sedan 2.4L 168hp 2014 $20695
+Mitsubishi Lancer Sportback ES Hatchback 2.0L 148hp 2013 $18495
+Mitsubishi Lancer Sportback GT Hatchback 2.4L 168hp 2013 $21495
+Mitsubishi Mirage DE Hatchback 1.2L 74hp 2014 $12995
+Mitsubishi Mirage ES Hatchback 1.2L 74hp 2014 $14195
+Mitsubishi Outlander ES Sport Utility 2.4L 166hp 2014 $22995
+Mitsubishi Outlander ES Sport Utility 2.4L 168hp 2013 $22695
+Mitsubishi Outlander GT Sport Utility 3.0L 224hp 2014 $27795
+Mitsubishi Outlander GT Sport Utility 3.0L 230hp 2013 $26595
+Mitsubishi Outlander SE Sport Utility 2.4L 166hp 2014 $23795
+Mitsubishi Outlander SE Sport Utility 2.4L 168hp 2013 $23995
+Mitsubishi Outlander Sport ES Sport Utility 2.0L 148hp 2014 $20670
+Mitsubishi Outlander Sport SE Sport Utility 2.0L 148hp 2014 $22595
+Nissan 370Z Convertible 3.7L 332hp 2014 $41470
+Nissan 370Z Coupe 3.7L 332hp 2014 $31290
+Nissan 370Z Nismo Coupe 3.7L 350hp 2014 $43020
+Nissan 370Z Touring Convertible 3.7L 332hp 2014 $44170
+Nissan 370Z Touring Coupe 3.7L 332hp 2014 $36570
+Nissan Altima 2.5 S Sedan 2.5L 182hp 2014 $22630
+Nissan Altima 2.5 Sedan 2.5L 182hp 2014 $22110
+Nissan Altima 2.5 SL Sedan 2.5L 182hp 2014 $27860
+Nissan Altima 2.5 SV Sedan 2.5L 182hp 2014 $24280
+Nissan Altima 3.5 S Sedan 3.5L 270hp 2014 $26260
+Nissan Altima 3.5 SL Sedan 3.5L 270hp 2014 $30760
+Nissan Altima 3.5 SV Sedan 3.5L 270hp 2014 $28460
+Nissan Altima Sedan 2.5L 182hp 2013 $21760
+Nissan Altima S Coupe 2.5L 175hp 2013 $25230
+Nissan Altima S Sedan 2.5L 182hp 2013 $22280
+Nissan Altima SL Sedan 2.5L 182hp 2013 $27660
+Nissan Altima SV Sedan 2.5L 182hp 2013 $24080
+Nissan Armada Platinum Sport Utility 5.6L 317hp 2014 $49610
+Nissan Armada SL Sport Utility 5.6L 317hp 2014 $42330
+Nissan Armada SV Sport Utility 5.6L 317hp 2014 $37240
+Nissan Cube S 1.8 Wagon 1.8L 122hp 2014 $17760
+Nissan Cube S Wagon 1.8L 122hp 2013 $17760
+Nissan Cube SL 1.8 Wagon 1.8L 122hp 2014 $18860
+Nissan Cube SL Wagon 1.8L 122hp 2013 $18860
+Nissan Frontier Desert Runner Crew Cab Pickup 4.0L 261hp 2014 $25340
+Nissan Frontier Desert Runner Extended Cab Pickup 4.0L 261hp 2013 $23760
+Nissan Frontier Desert Runner Short Bed Crew Cab Pickup 4.0L 261hp 2013 $25010
+Nissan Frontier King Cab Desert Runner Extended Cab Pickup 4.0L 261hp 2014 $24020
+Nissan Frontier King Cab PRO-4X Extended Cab Pickup 4.0L 261hp 2014 $31140
+Nissan Frontier King Cab S Extended Cab Pickup 2.5L 152hp 2014 $17990
+Nissan Frontier King Cab SV Extended Cab Pickup 2.5L 152hp 2014 $22710
+Nissan Frontier PRO-4X Crew Cab Pickup 4.0L 261hp 2014 $30900
+Nissan Frontier PRO-4X Extended Cab Pickup 4.0L 261hp 2013 $30530
+Nissan Frontier PRO-4X Short Bed Crew Cab Pickup 4.0L 261hp 2013 $30220
+Nissan Frontier S Crew Cab Pickup 4.0L 261hp 2014 $23460
+Nissan Frontier S Extended Cab Pickup 2.5L 152hp 2013 $17990
+Nissan Frontier S Short Bed Crew Cab Pickup 4.0L 261hp 2013 $23080
+Nissan Frontier SL Long Bed Crew Cab Pickup 4.0L 261hp 2014 $31570
+Nissan Frontier SL Short Bed Crew Cab Pickup 4.0L 261hp 2014 $31070
+Nissan Frontier SV Extended Cab Pickup 2.5L 152hp 2013 $22450
+Nissan Frontier SV Long Bed Crew Cab Pickup 4.0L 261hp 2014 $25040
+Nissan Frontier SV Short Bed Crew Cab Pickup 4.0L 261hp 2014 $24320
+Nissan GT-R Premium Coupe 3.8L 545hp 2015 $101770
+Nissan Juke Nismo Sport Utility 1.6L 197hp 2014 $22990
+Nissan Juke s Sport Utility 1.6L 188hp 2014 $18990
+Nissan Juke SL Sport Utility 1.6L 188hp 2014 $24290
+Nissan Juke SV Sport Utility 1.6L 188hp 2014 $22040
+Nissan Leaf S Hatchback N/A 2014 $28980
+Nissan Leaf SL Hatchback N/A 2014 $35020
+Nissan Leaf SV Hatchback N/A 2014 $32000
+Nissan Maxima 3.5 S Sedan 3.5L 290hp 2014 $31200
+Nissan Maxima 3.5 SV Sedan 3.5L 290hp 2014 $34290
+Nissan Maxima S Sedan 3.5L 290hp 2013 $31000
+Nissan Maxima SV Sedan 3.5L 290hp 2013 $33240
+Nissan Murano CrossCabriolet Sport Utility 3.5L 265hp 2014 $41995
+Nissan Murano LE Sport Utility 3.5L 260hp 2014 $37880
+Nissan Murano s Sport Utility 3.5L 260hp 2014 $28440
+Nissan Murano SL Sport Utility 3.5L 260hp 2014 $35390
+Nissan Murano SV Sport Utility 3.5L 260hp 2014 $31530
+Nissan NV1500 S Cargo Van 4.0L 261hp 2013 $25420
+Nissan NV1500 SV Cargo Van 4.0L 261hp 2013 $27060
+Nissan NV200 S Cargo Van 2.0L 131hp 2013 $19990
+Nissan NV200 SV Cargo Van 2.0L 131hp 2013 $20980
+Nissan NV2500 S Cargo Van 4.0L 261hp 2013 $26420
+Nissan NV2500 S High Roof Cargo Van 4.0L 261hp 2013 $28970
+Nissan NV2500 SV Cargo Van 4.0L 261hp 2013 $28060
+Nissan NV2500 SV High Roof Cargo Van 4.0L 261hp 2013 $30610
+Nissan NV3500 Passenger S Passenger Van 4.0L 261hp 2013 $31990
+Nissan NV3500 Passenger SL Passenger Van 5.6L 317hp 2013 $37690
+Nissan NV3500 Passenger SV Passenger Van 4.0L 261hp 2013 $34190
+Nissan NV3500 S Cargo Van 5.6L 317hp 2013 $29020
+Nissan NV3500 S High Roof Cargo Van 5.6L 317hp 2013 $31570
+Nissan NV3500 SV Cargo Van 5.6L 317hp 2013 $30660
+Nissan NV3500 SV High Roof Cargo Van 5.6L 317hp 2013 $33210
+Nissan Pathfinder Hybrid Platinum Sport Utility 2.5L 250hp 2014 $42750
+Nissan Pathfinder Hybrid SL Sport Utility 2.5L 250hp 2014 $38050
+Nissan Pathfinder Hybrid SV Sport Utility 2.5L 250hp 2014 $35110
+Nissan Pathfinder Platinum Sport Utility 3.5L 260hp 2014 $39750
+Nissan Pathfinder s Sport Utility 3.5L 260hp 2014 $28950
+Nissan Pathfinder SL Sport Utility 3.5L 260hp 2014 $35050
+Nissan Pathfinder SV Sport Utility 3.5L 260hp 2014 $32110
+Nissan Quest LE Passenger Minivan 3.5L 260hp 2014 $42640
+Nissan Quest S Passenger Minivan 3.5L 260hp 2014 $25990
+Nissan Quest SL Passenger Minivan 3.5L 260hp 2014 $33520
+Nissan Quest SV Passenger Minivan 3.5L 260hp 2014 $29740
+Nissan Rogue s Sport Utility 2.5L 170hp 2014 $22490
+Nissan Rogue Select s Sport Utility 2.5L 170hp 2014 $19990
+Nissan Rogue SL Sport Utility 2.5L 170hp 2014 $28070
+Nissan Rogue SV Sport Utility 2.5L 170hp 2014 $24230
+Nissan Sentra S FE Plus Sedan 1.8L 130hp 2014 $17190
+Nissan Sentra S Sedan 1.8L 130hp 2014 $15990
+Nissan Sentra SL Sedan 1.8L 130hp 2014 $19590
+Nissan Sentra SR Sedan 1.8L 130hp 2014 $18690
+Nissan Sentra SV FE Plus Sedan 1.8L 130hp 2014 $17890
+Nissan Sentra SV Sedan 1.8L 130hp 2014 $17490
+Nissan Titan King Cab PRO-4X Extended Cab Pickup 5.6L 317hp 2014 $37490
+Nissan Titan King Cab S Extended Cab Pickup 5.6L 317hp 2014 $29270
+Nissan Titan King Cab SV Extended Cab Pickup 5.6L 317hp 2014 $31700
+Nissan Titan PRO-4X Short Bed Crew Cab Pickup 5.6L 317hp 2014 $39690
+Nissan Titan PRO-4X Short Bed Extended Cab Pickup 5.6L 317hp 2013 $37490
+Nissan Titan S Short Bed Crew Cab Pickup 5.6L 317hp 2014 $31820
+Nissan Titan S Short Bed Extended Cab Pickup 5.6L 317hp 2013 $29270
+Nissan Titan SL Short Bed Crew Cab Pickup 5.6L 317hp 2014 $40490
+Nissan Titan SV Long Bed Crew Cab Pickup 5.6L 317hp 2014 $34350
+Nissan Titan SV Short Bed Crew Cab Pickup 5.6L 317hp 2014 $33900
+Nissan Titan SV Short Bed Extended Cab Pickup 5.6L 317hp 2013 $31700
+Nissan Versa 1.6 S Plus Sedan 1.6L 109hp 2014 $13790
+Nissan Versa 1.6 S Sedan 1.6L 109hp 2014 $11990
+Nissan Versa 1.6 SL Sedan 1.6L 109hp 2014 $16890
+Nissan Versa 1.6 SV Sedan 1.6L 109hp 2014 $15240
+Nissan Versa Note 1.6 S Hatchback 1.6L 109hp 2014 $13990
+Nissan Versa Note 1.6 S Plus Hatchback 1.6L 109hp 2014 $15240
+Nissan Versa Note 1.6 SV Hatchback 1.6L 109hp 2014 $15990
+Nissan Xterra PRO-4X Sport Utility 4.0L 261hp 2014 $31090
+Nissan Xterra s Sport Utility 4.0L 261hp 2014 $25020
+Nissan Xterra X Sport Utility 4.0L 261hp 2014 $23110
+Porsche 911 Carrera 4 Cabriolet Convertible 3.4L 350hp 2014 $102930
+Porsche 911 Carrera 4 Convertible 3.4L 350hp 2013 $102930
+Porsche 911 Carrera 4 Coupe 3.4L 350hp 2014 $91030
+Porsche 911 Carrera 4S Cabriolet Convertible 3.8L 400hp 2014 $117530
+Porsche 911 Carrera 4S Convertible 3.8L 400hp 2013 $117530
+Porsche 911 Carrera 4S Coupe 3.8L 400hp 2014 $105630
+Porsche 911 Carrera Cabriolet Convertible 3.4L 350hp 2014 $96200
+Porsche 911 Carrera Convertible 3.4L 350hp 2013 $96200
+Porsche 911 Carrera Coupe 3.4L 350hp 2014 $84300
+Porsche 911 Carrera S Cabriolet Convertible 3.8L 400hp 2014 $110800
+Porsche 911 Carrera S Convertible 3.8L 400hp 2013 $110800
+Porsche 911 Carrera S Coupe 3.8L 400hp 2014 $98900
+Porsche 911 GT3 Coupe 3.8L 475hp 2014 $130400
+Porsche 911 Turbo Cabriolet Convertible 3.8L 520hp 2014 $160700
+Porsche 911 Turbo Convertible 3.8L 500hp 2013 $149000
+Porsche 911 Turbo Coupe 3.8L 500hp 2013 $137500
+Porsche 911 Turbo Coupe 3.8L 520hp 2014 $148300
+Porsche 911 Turbo S Cabriolet Convertible 3.8L 560hp 2014 $193900
+Porsche 911 Turbo S Convertible 3.8L 530hp 2013 $172100
+Porsche 911 Turbo S Coupe 3.8L 530hp 2013 $160700
+Porsche 911 Turbo S Coupe 3.8L 560hp 2014 $181100
+Porsche 918 Hybrid Spyder Coupe 4.6L 887hp 2014 $845000
+Porsche 918 Spyder Convertible 4.6L 887hp 2015 $845000
+Porsche 918 Spyder Weissach Pkg Convertible 4.6L 887hp 2015 $929000
+Porsche Boxster Convertible 2.7L 265hp 2014 $50400
+Porsche Boxster S Convertible 3.4L 315hp 2014 $62100
+Porsche Cayenne Sport Utility 3.6L 300hp 2014 $52600
+Porsche Cayenne Diesel Sport Utility 3.0L 240hp 2014 $56600
+Porsche Cayenne Diesel Sport Utility 3.0L 245hp 2013 $55750
+Porsche Cayenne GTS Sport Utility 4.8L 420hp 2014 $83300
+Porsche Cayenne S Hybrid Sport Utility 3.0L 380hp 2014 $70900
+Porsche Cayenne s Sport Utility 4.8L 400hp 2014 $66800
+Porsche Cayenne Turbo S Sport Utility 4.8L 550hp 2014 $146000
+Porsche Cayenne Turbo Sport Utility 4.8L 500hp 2014 $110400
+Porsche Cayman Coupe 2.7L 275hp 2014 $52600
+Porsche Cayman S Coupe 3.4L 325hp 2014 $63800
+Porsche Macan s Sport Utility 3.0L 340hp 2015 $49900
+Porsche Macan Turbo Sport Utility 3.6L 400hp 2015 $72300
+Porsche Panamera 4 Hatchback 3.6L 300hp 2013 $80450
+Porsche Panamera 4 Sedan 3.6L 300hp 2014 $82800
+Porsche Panamera 4S Executive Sedan 3.0L 420hp 2014 $125600
+Porsche Panamera 4S Hatchback 4.8L 400hp 2013 $96350
+Porsche Panamera 4S Sedan 3.0L 420hp 2014 $98300
+Porsche Panamera Hatchback 3.6L 300hp 2013 $75850
+Porsche Panamera Sedan 3.6L 300hp 2014 $78100
+Porsche Panamera GTS Hatchback 4.8L 430hp 2013 $111000
+Porsche Panamera GTS Sedan 4.8L 430hp 2014 $113400
+Porsche Panamera Hybrid S Sedan 3.0L 416hp 2014 $99000
+Porsche Panamera S Hatchback 4.8L 400hp 2013 $91350
+Porsche Panamera S Hybrid Hatchback 3.0L 380hp 2013 $96150
+Porsche Panamera S Sedan 3.0L 420hp 2014 $93200
+Porsche Panamera Turbo Executive Sedan 4.8L 500hp 2014 $161100
+Porsche Panamera Turbo Hatchback 4.8L 500hp 2013 $138650
+Porsche Panamera Turbo S Executive Sedan 4.8L 550hp 2014 $200500
+Porsche Panamera Turbo S Hatchback 4.8L 550hp 2013 $175300
+Porsche Panamera Turbo S Sedan 4.8L 550hp 2014 $180300
+Porsche Panamera Turbo Sedan 4.8L 500hp 2014 $141300
+Ram 1500 Extended Cab Pickup 3.6L 305hp 2013 $30355
+Ram 1500 Long Bed Crew Cab Pickup 4.7L 310hp 2013 $30575
+Ram 1500 Long Bed Regular Cab Pickup 3.6L 305hp 2013 $23485
+Ram 1500 Short Bed Crew Cab Pickup 3.6L 305hp 2013 $32835
+Ram 1500 Short Bed Regular Cab Pickup 3.6L 305hp 2013 $25660
+Ram 1500 Big Horn/Lone Star Long Bed Crew Cab Pickup 5.7L 395hp 2014 $37900
+Ram 1500 Big Horn/Lone Star Long Bed Regular Cab Pickup 3.6L 305hp 2014 $30040
+Ram 1500 Big Horn/Lone Star Short Bed Crew Cab Pickup 3.6L 305hp 2014 $35950
+Ram 1500 Big Horn/Lone Star Short Bed Regular Cab Pickup 3.6L 305hp 2014 $29740
+Ram 1500 Express Crew Cab Pickup 5.7L 395hp 2014 $33660
+Ram 1500 Express Short Bed Regular Cab Pickup 5.7L 395hp 2014 $26195
+Ram 1500 Laramie Limited Long Bed Crew Cab Pickup 5.7L 395hp 2014 $48755
+Ram 1500 Laramie Limited Short Bed Crew Cab Pickup 5.7L 395hp 2014 $48455
+Ram 1500 Laramie Long Bed Crew Cab Pickup 5.7L 395hp 2014 $42455
+Ram 1500 Laramie Longhorn Long Bed Crew Cab Pickup 5.7L 395hp 2014 $46260
+Ram 1500 Laramie Longhorn Short Bed Crew Cab Pickup 5.7L 395hp 2014 $45960
+Ram 1500 Laramie Short Bed Crew Cab Pickup 5.7L 395hp 2014 $42155
+Ram 1500 Outdoorsman Long Bed Crew Cab Pickup 5.7L 395hp 2014 $38715
+Ram 1500 Outdoorsman Short Bed Crew Cab Pickup 3.6L 305hp 2014 $36765
+Ram 1500 Quad Cab Big Horn Extended Cab Pickup 3.6L 305hp 2014 $33545
+Ram 1500 Quad Cab Express Extended Cab Pickup 5.7L 395hp 2014 $31040
+Ram 1500 Quad Cab Laramie Extended Cab Pickup 5.7L 395hp 2014 $40200
+Ram 1500 Quad Cab Outdoorsman Extended Cab Pickup 3.6L 305hp 2014 $34360
+Ram 1500 Quad Cab SLT Extended Cab Pickup 3.6L 305hp 2014 $32815
+Ram 1500 Quad Cab Sport Extended Cab Pickup 5.7L 395hp 2014 $38015
+Ram 1500 Quad Cab Tradesman Extended Cab Pickup 3.6L 305hp 2014 $29170
+Ram 1500 SLT HFE Short Bed Regular Cab Pickup 3.6L 305hp 2014 $28895
+Ram 1500 SLT Long Bed Crew Cab Pickup 5.7L 395hp 2014 $37170
+Ram 1500 SLT Long Bed Regular Cab Pickup 3.6L 305hp 2014 $29310
+Ram 1500 SLT Short Bed Crew Cab Pickup 3.6L 305hp 2014 $35220
+Ram 1500 SLT Short Bed Regular Cab Pickup 3.6L 305hp 2014 $29010
+Ram 1500 Sport Long Bed Crew Cab Pickup 5.7L 395hp 2014 $40270
+Ram 1500 Sport Short Bed Crew Cab Pickup 5.7L 395hp 2014 $39970
+Ram 1500 Sport Short Bed Regular Cab Pickup 5.7L 395hp 2014 $34430
+Ram 1500 Tradesman Long Bed Crew Cab Pickup 5.7L 395hp 2014 $32360
+Ram 1500 Tradesman Long Bed Regular Cab Pickup 3.6L 305hp 2014 $24770
+Ram 1500 Tradesman Short Bed Crew Cab Pickup 3.6L 305hp 2014 $31750
+Ram 1500 Tradesman Short Bed Regular Cab Pickup 3.6L 305hp 2014 $24385
+Ram 2500 Long Bed Crew Cab Pickup 5.7L 383hp 2013 $37120
+Ram 2500 Regular Cab Pickup 5.7L 383hp 2013 $33100
+Ram 2500 Short Bed Crew Cab Pickup 5.7L 383hp 2013 $36920
+Ram 2500 Big Horn/Lone Star Long Bed Crew Cab Pickup 5.7L 383hp 2014 $39920
+Ram 2500 Big Horn/Lone Star Short Bed Crew Cab Pickup 5.7L 383hp 2014 $39720
+Ram 2500 Laramie Limited Long Bed Crew Cab Pickup 5.7L 383hp 2014 $51515
+Ram 2500 Laramie Limited Short Bed Crew Cab Pickup 5.7L 383hp 2014 $51815
+Ram 2500 Laramie Long Bed Crew Cab Pickup 5.7L 383hp 2014 $43805
+Ram 2500 Laramie Longhorn Long Bed Crew Cab Pickup 5.7L 383hp 2014 $49220
+Ram 2500 Laramie Longhorn Short Bed Crew Cab Pickup 5.7L 383hp 2014 $49020
+Ram 2500 Laramie Short Bed Crew Cab Pickup 5.7L 383hp 2014 $43605
+Ram 2500 Mega Cab Big Horn/Lone Star Crew Cab Pickup 5.7L 383hp 2014 $40720
+Ram 2500 Mega Cab Crew Cab Pickup 5.7L 383hp 2013 $37920
+Ram 2500 Mega Cab Laramie Crew Cab Pickup 5.7L 383hp 2014 $44605
+Ram 2500 Mega Cab Laramie Limited Crew Cab Pickup 5.7L 383hp 2014 $52815
+Ram 2500 Mega Cab Laramie Longhorn Crew Cab Pickup 5.7L 383hp 2014 $50020
+Ram 2500 Mega Cab SLT Crew Cab Pickup 5.7L 383hp 2014 $38885
+Ram 2500 Outdoorsman Long Bed Crew Cab Pickup 5.7L 383hp 2014 $43950
+Ram 2500 Outdoorsman Short Bed Crew Cab Pickup 5.7L 383hp 2014 $43750
+Ram 2500 SLT Long Bed Crew Cab Pickup 5.7L 383hp 2014 $38085
+Ram 2500 SLT Regular Cab Pickup 5.7L 383hp 2014 $33865
+Ram 2500 SLT Short Bed Crew Cab Pickup 5.7L 383hp 2014 $37885
+Ram 2500 Tradesman Long Bed Crew Cab Pickup 5.7L 383hp 2014 $33610
+Ram 2500 Tradesman Regular Cab Pickup 5.7L 383hp 2014 $29840
+Ram 2500 Tradesman Short Bed Crew Cab Pickup 5.7L 383hp 2014 $33410
+Ram 3500 Long Bed Crew Cab Pickup 5.7L 383hp 2013 $38725
+Ram 3500 Regular Cab Pickup 5.7L 383hp 2013 $33815
+Ram 3500 Short Bed Crew Cab Pickup 5.7L 383hp 2013 $38525
+Ram 3500 Big Horn/Lone Star DRW Long Bed Crew Cab Pickup 5.7L 383hp 2014 $40400
+Ram 3500 Big Horn/Lone Star Short Bed Crew Cab Pickup 5.7L 383hp 2014 $40200
+Ram 3500 Laramie DRW Long Bed Crew Cab Pickup 5.7L 383hp 2014 $45035
+Ram 3500 Laramie Longhorn DRW Long Bed Crew Cab Pickup 5.7L 383hp 2014 $50495
+Ram 3500 Laramie Longhorn Short Bed Crew Cab Pickup 5.7L 383hp 2014 $50295
+Ram 3500 Laramie Short Bed Crew Cab Pickup 5.7L 383hp 2014 $44835
+Ram 3500 Limited DRW Long Bed Crew Cab Pickup 5.7L 383hp 2014 $52790
+Ram 3500 Limited Short Bed Crew Cab Pickup 5.7L 383hp 2014 $53090
+Ram 3500 Mega Cab Big Horn/Lone Star DRW Crew Cab Pickup 5.7L 383hp 2014 $41400
+Ram 3500 Mega Cab Crew Cab Pickup 5.7L 383hp 2013 $39525
+Ram 3500 Mega Cab Laramie DRW Crew Cab Pickup 5.7L 383hp 2014 $46035
+Ram 3500 Mega Cab Laramie Longhorn DRW Crew Cab Pickup 5.7L 383hp 2014 $51495
+Ram 3500 Mega Cab Limited Crew Cab Pickup 5.7L 383hp 2014 $54290
+Ram 3500 Mega Cab SLT DRW Crew Cab Pickup 5.7L 383hp 2014 $40265
+Ram 3500 SLT DRW Long Bed Crew Cab Pickup 5.7L 383hp 2014 $39265
+Ram 3500 SLT DRW Regular Cab Pickup 5.7L 383hp 2014 $34655
+Ram 3500 SLT Short Bed Crew Cab Pickup 5.7L 383hp 2014 $39065
+Ram 3500 Tradesman DRW Long Bed Crew Cab Pickup 5.7L 383hp 2014 $34650
+Ram 3500 Tradesman DRW Regular Cab Pickup 5.7L 383hp 2014 $30595
+Ram 3500 Tradesman Short Bed Crew Cab Pickup 5.7L 383hp 2014 $34450
+Ram Cargo Van Cargo Van 3.6L 283hp 2013 $22465
+Ram Cargo Van Tradesman Cargo Van 3.6L 283hp 2014 $21360
+Ram ProMaster 1500 High Roof 136 WB Cargo Van 3.6L 280hp 2014 $30520
+Ram ProMaster 1500 Low Roof 118 WB Cargo Van 3.6L 280hp 2014 $28630
+Ram ProMaster 1500 Low Roof 136 WB Cargo Van 3.6L 280hp 2014 $29520
+Ram ProMaster 2500 High Roof 136 WB Cargo Van 3.6L 280hp 2014 $31520
+Ram ProMaster 2500 High Roof 159WB Cargo Van 3.6L 280hp 2014 $32875
+Ram ProMaster 2500 High Roof 159WB Passenger Van 3.6L 280hp 2014 $33255
+Ram ProMaster 3500 High Roof 159 WB Cargo Van 3.6L 280hp 2014 $35350
+Ram ProMaster 3500 High Roof 159 WB Extended Cargo Van 3.6L 280hp 2014 $36150
+Rolls Royce Ghost Sedan 6.6L 563hp 2014 $263200
+Rolls Royce Ghost EWB Sedan 6.6L 563hp 2013 $296000
+Rolls Royce Ghost Extended Sedan 6.6L 563hp 2014 $303300
+Rolls Royce Phantom Coupe 6.7L 453hp 2014 $433550
+Rolls Royce Phantom Sedan 6.7L 453hp 2014 $402940
+Rolls Royce Phantom Coupe Coupe 6.7L 453hp 2013 $429295
+Rolls Royce Phantom Drophead Convertible 6.7L 453hp 2014 $474600
+Rolls Royce Phantom Drophead Coupe Convertible 6.7L 453hp 2013 $469900
+Rolls Royce Phantom EWB Sedan 6.7L 453hp 2013 $470295
+Rolls Royce Phantom Extended Sedan 6.7L 453hp 2014 $474990
+Rolls Royce Wraith Coupe 6.6L 624hp 2014 $284900
+Saab 9-3 Griffin 2.0T Convertible 2.0L 220hp 2012 $40840
+Saab 9-3 Griffin 2.0T Sedan 2.0L 220hp 2012 $30250
+Saab 9-3 Griffin 2.0T SportCombi Wagon 2.0L 220hp 2012 $29830
+Saab 9-3 Griffin Aero Convertible 2.0L 220hp 2012 $44080
+Saab 9-3 Griffin Aero Sedan 2.0L 220hp 2012 $34340
+Saab 9-3 Griffin Independence Convertible 2.0L 220hp 2012 $46080
+Saab 9-3X Griffin Wagon 2.0L 220hp 2012 $34975
+Scion FR-S 10 Series Coupe 10 Series Coupe 2013 $27425
+Scion FR-S 10 Series Coupe 2.0L 200hp 2013 $27425
+Scion FR-S 10 Series Coupe Coupe 2013 $25600
+Scion FR-S 10 Series Coupe Comfort Coupe 2013 $24500
+Scion FR-S Coupe 10 Series Coupe 2013 $27425
+Scion FR-S Coupe 2.0L 200hp 2014 $25800
+Scion FR-S Coupe Coupe 2013 $25600
+Scion FR-S Coupe Comfort Coupe 2013 $24500
+Scion FR-S Comfort Coupe 10 Series Coupe 2013 $27425
+Scion FR-S Comfort Coupe 2.0L 200hp 2013 $24500
+Scion FR-S Comfort Coupe Coupe 2013 $25600
+Scion FR-S Comfort Coupe Comfort Coupe 2013 $24500
+Scion iQ 10 Series Hatchback 1.3L 94hp 2014 $17850
+Scion iQ Hatchback 1.3L 94hp 2014 $15665
+Scion tC 10 Series Hatchback 2.5L 180hp 2014 $21440
+Scion tC Hatchback 2.5L 180hp 2014 $20210
+Scion xB 10 Series Hatchback 2.4L 158hp 2013 $19210
+Scion xB Hatchback 2.4L 158hp 2013 $17920
+Scion xB Wagon 2.4L 158hp 2014 $17920
+Scion xD 10 Series Hatchback 1.8L 128hp 2013 $18155
+Scion xD Hatchback 1.8L 128hp 2014 $16720
+smart fortwo electric drive Convertible N/A 2014 $28000
+smart fortwo electric drive Hatchback N/A 2014 $25000
+smart fortwo electric drive Convertible N/A 2013 $28000
+smart fortwo electric drive Hatchback N/A 2013 $25000
+smart fortwo passion Convertible 1.0L 70hp 2014 $17930
+smart fortwo passion Hatchback 1.0L 70hp 2014 $14930
+smart fortwo pure Hatchback 1.0L 70hp 2014 $13270
+SRT Viper Coupe 8.4L 640hp 2014 $99885
+SRT Viper GTS Coupe 8.4L 640hp 2014 $122385
+Subaru BRZ Limited Coupe 2.0L 200hp 2014 $27595
+Subaru BRZ Premium Coupe 2.0L 200hp 2014 $25595
+Subaru Forester 2.0XT Premium Sport Utility 2.0L 250hp 2014 $27995
+Subaru Forester 2.0XT Touring Sport Utility 2.0L 250hp 2014 $32995
+Subaru Forester 2.5i Limited Sport Utility 2.5L 170hp 2014 $27995
+Subaru Forester 2.5i Premium Sport Utility 2.5L 170hp 2014 $24995
+Subaru Forester 2.5i Sport Utility 2.5L 170hp 2014 $22995
+Subaru Forester 2.5i Touring Sport Utility 2.5L 170hp 2014 $29995
+Subaru Forester 2.5X Limited Sport Utility 2.5L 170hp 2013 $26995
+Subaru Forester 2.5X Premium Sport Utility 2.5L 170hp 2013 $24795
+Subaru Forester 2.5X Sport Utility 2.5L 170hp 2013 $22495
+Subaru Forester 2.5X Touring Sport Utility 2.5L 224hp 2013 $28395
+Subaru Forester 2.5XT Premium Sport Utility 2.5L 224hp 2013 $27295
+Subaru Forester 2.5XT Touring Sport Utility 2.5L 224hp 2013 $29995
+Subaru Impreza 2.0i Hatchback 2.0L 148hp 2013 $18395
+Subaru Impreza 2.0i Limited Hatchback 2.0L 148hp 2013 $22495
+Subaru Impreza 2.0i Limited PZEV Sedan 2.0L 148hp 2014 $22195
+Subaru Impreza 2.0i Limited PZEV Wagon 2.0L 148hp 2014 $22695
+Subaru Impreza 2.0i Limited Sedan 2.0L 148hp 2013 $21995
+Subaru Impreza 2.0i Premium Hatchback 2.0L 148hp 2013 $20295
+Subaru Impreza 2.0i Premium PZEV Sedan 2.0L 148hp 2014 $19795
+Subaru Impreza 2.0i Premium PZEV Wagon 2.0L 148hp 2014 $20295
+Subaru Impreza 2.0i Premium Sedan 2.0L 148hp 2013 $19795
+Subaru Impreza 2.0i PZEV Sedan 2.0L 148hp 2014 $18895
+Subaru Impreza 2.0i PZEV Wagon 2.0L 148hp 2014 $18395
+Subaru Impreza 2.0i Sedan 2.0L 148hp 2013 $18895
+Subaru Impreza 2.0i Sport Limited Hatchback 2.0L 148hp 2013 $22995
+Subaru Impreza 2.0i Sport Limited PZEV Wagon 2.0L 148hp 2014 $23195
+Subaru Impreza 2.0i Sport Premium Hatchback 2.0L 148hp 2013 $20795
+Subaru Impreza 2.0i Sport Premium PZEV Wagon 2.0L 148hp 2014 $20795
+Subaru Impreza WRX Limited Sedan 2.5L 265hp 2014 $29495
+Subaru Impreza WRX Limited Wagon 2.5L 265hp 2014 $29495
+Subaru Impreza WRX Premium Sedan 2.5L 265hp 2014 $28495
+Subaru Impreza WRX Premium Wagon 2.5L 265hp 2014 $28495
+Subaru Impreza WRX Sedan 2.5L 265hp 2014 $25995
+Subaru Impreza WRX STi Limited Sedan 2.5L 305hp 2014 $37845
+Subaru Impreza WRX STi Sedan 2.5L 305hp 2014 $34495
+Subaru Impreza WRX STi Wagon 2.5L 305hp 2014 $36495
+Subaru Impreza WRX Wagon 2.5L 265hp 2014 $25995
+Subaru Legacy 2.5i Limited PZEV Sedan 2.5L 170hp 2014 $26195
+Subaru Legacy 2.5i Limited Sedan 2.5L 170hp 2014 $25895
+Subaru Legacy 2.5I Premium PZEV Sedan 2.5L 170hp 2014 $23595
+Subaru Legacy 2.5i Premium Sedan 2.5L 170hp 2014 $23295
+Subaru Legacy 2.5i PZEV Sedan 2.5L 170hp 2014 $21595
+Subaru Legacy 2.5i Sedan 2.5L 170hp 2014 $21295
+Subaru Legacy 2.5i Sport PZEV Sedan 2.5L 170hp 2014 $25545
+Subaru Legacy 2.5i Sport Sedan 2.5L 170hp 2014 $25245
+Subaru Legacy 3.6R Limited Sedan 3.6L 256hp 2014 $28895
+Subaru Legacy 3.6R Sedan 3.6L 256hp 2013 $25395
+Subaru Outback 2.5i Limited PZEV Wagon 2.5L 173hp 2014 $29395
+Subaru Outback 2.5i Limited Wagon 2.5L 173hp 2014 $29095
+Subaru Outback 2.5I Premium PZEV Wagon 2.5L 173hp 2014 $27095
+Subaru Outback 2.5i Premium Wagon 2.5L 173hp 2014 $26795
+Subaru Outback 2.5i PZEV Wagon 2.5L 173hp 2014 $24795
+Subaru Outback 2.5i Wagon 2.5L 173hp 2014 $24495
+Subaru Outback 3.6R Limited Wagon 3.6L 256hp 2014 $32095
+Subaru Outback 3.6R Wagon 3.6L 256hp 2013 $28495
+Subaru Tribeca 3.6R Limited Sport Utility 3.6L 256hp 2014 $34095
+Subaru Tribeca Limited Sport Utility 3.6L 256hp 2013 $32595
+Subaru XV Crosstrek 2.0i Limited Sport Utility 2.0L 148hp 2013 $24495
+Subaru XV Crosstrek 2.0i Limited Wagon 2.0L 148hp 2014 $24495
+Subaru XV Crosstrek 2.0i Premium Sport Utility 2.0L 148hp 2013 $21995
+Subaru XV Crosstrek 2.0i Premium Wagon 2.0L 148hp 2014 $21995
+Subaru XV Crosstrek Hybrid Wagon 2.0L 160hp 2014 $25995
+Subaru XV Crosstrek Hybrid Touring Wagon 2.0L 160hp 2014 $29295
+Suzuki Grand Vitara Sport Utility 2.4L 166hp 2013 $19949
+Suzuki Grand Vitara Limited Sport Utility 2.4L 166hp 2013 $24449
+Suzuki Grand Vitara Premium Sport Utility 2.4L 166hp 2013 $22349
+Suzuki Kizashi Sedan 2.4L 185hp 2013 $19999
+Suzuki Kizashi SE Sedan 2.4L 180hp 2013 $21749
+Suzuki Kizashi Sport GTS Sedan 2.4L 180hp 2013 $25799
+Suzuki Kizashi Sport SLS Sedan 2.4L 180hp 2013 $28999
+Suzuki SX4 Crossover Sport Utility 2.0L 150hp 2013 $16999
+Suzuki SX4 Crossover Premium Sport Utility 2.0L 148hp 2013 $19175
+Suzuki SX4 LE Popular Sedan 2.0L 148hp 2013 $17849
+Suzuki SX4 LE Sedan 2.0L 150hp 2013 $15845
+Suzuki SX4 Sport SE Sedan 2.0L 148hp 2013 $18799
+Suzuki SX4 Sportback Hatchback 2.0L 148hp 2013 $18349
+Tesla Model S 60kWh Battery Sedan N/A 2014 $69900
+Tesla Model S 85kWh Battery Sedan N/A 2014 $79900
+Tesla Model S Sedan N/A 2013 $59900
+Tesla Model S Performance Sedan N/A 2014 $94900
+Toyota 4Runner Limited Sport Utility 4.0L 270hp 2014 $41365
+Toyota 4Runner SR5 Premium Sport Utility 4.0L 270hp 2014 $35740
+Toyota 4Runner SR5 Sport Utility 4.0L 270hp 2014 $32820
+Toyota 4Runner Trail Premium Sport Utility 4.0L 270hp 2014 $38645
+Toyota 4Runner Trail Sport Utility 4.0L 270hp 2014 $35725
+Toyota Avalon Hybrid Limited Sedan 2.5L 268hp 2014 $41400
+Toyota Avalon Hybrid XLE Premium Sedan 2.5L 268hp 2014 $35555
+Toyota Avalon Hybrid XLE Touring Sedan 2.5L 268hp 2014 $36750
+Toyota Avalon Limited Hybrid Sedan 2.5L 268hp 2013 $41400
+Toyota Avalon Limited Sedan 3.5L 268hp 2014 $39650
+Toyota Avalon XLE Premium Hybrid Sedan 2.5L 268hp 2013 $35555
+Toyota Avalon XLE Premium Sedan 3.5L 268hp 2014 $33195
+Toyota Avalon XLE Sedan 3.5L 268hp 2014 $31340
+Toyota Avalon XLE Touring Hybrid Sedan 2.5L 268hp 2013 $37250
+Toyota Avalon XLE Touring Sedan 3.5L 268hp 2014 $35000
+Toyota Camry Hybrid LE Sedan 2.5L 200hp 2014 $26330
+Toyota Camry Hybrid XLE Sedan 2.5L 200hp 2014 $28625
+Toyota Camry L Sedan 2.5L 178hp 2014 $22425
+Toyota Camry LE Hybrid Sedan 2.5L 200hp 2013 $26140
+Toyota Camry LE Sedan 2.5L 178hp 2014 $22870
+Toyota Camry SE Sedan 2.5L 178hp 2014 $23740
+Toyota Camry SE Sport Sedan 2.5L 178hp 2014 $25430
+Toyota Camry XLE Hybrid Sedan 2.5L 200hp 2013 $27670
+Toyota Camry XLE Sedan 2.5L 178hp 2014 $25810
+Toyota Corolla L Sedan 1.8L 132hp 2014 $17400
+Toyota Corolla LE Eco Plus Sedan 1.8L 140hp 2014 $19400
+Toyota Corolla LE Eco Premium Sedan 1.8L 140hp 2014 $20100
+Toyota Corolla LE Eco Sedan 1.8L 140hp 2014 $18700
+Toyota Corolla LE Plus Sedan 1.8L 132hp 2014 $18700
+Toyota Corolla LE Premium Sedan 1.8L 132hp 2014 $19400
+Toyota Corolla LE Sedan 1.8L 132hp 2014 $18300
+Toyota Corolla S Plus Sedan 1.8L 132hp 2014 $19700
+Toyota Corolla S Premium Sedan 1.8L 132hp 2014 $20400
+Toyota Corolla S Sedan 1.8L 132hp 2014 $19000
+Toyota FJ Cruiser Sport Utility 4.0L 260hp 2014 $27680
+Toyota Highlander Sport Utility 2.7L 187hp 2013 $29020
+Toyota Highlander Hybrid Sport Utility 3.5L 280hp 2013 $40170
+Toyota Highlander Hybrid Limited Platinum Sport Utility 3.5L 280hp 2014 $49790
+Toyota Highlander Hybrid Limited Sport Utility 3.5L 280hp 2014 $47300
+Toyota Highlander LE Plus Sport Utility 3.5L 270hp 2014 $32740
+Toyota Highlander LE Sport Utility 2.7L 185hp 2014 $29215
+Toyota Highlander Limited Platinum Sport Utility 3.5L 270hp 2014 $42130
+Toyota Highlander Limited Sport Utility 3.5L 270hp 2014 $39640
+Toyota Highlander Plus Sport Utility 2.7L 187hp 2013 $30475
+Toyota Highlander SE Sport Utility 3.5L 270hp 2013 $34560
+Toyota Highlander XLE Sport Utility 3.5L 270hp 2014 $36040
+Toyota Land Cruiser Sport Utility 5.7L 381hp 2014 $79605
+Toyota Matrix L Wagon 1.8L 132hp 2013 $20115
+Toyota Matrix S Wagon 2.4L 158hp 2013 $21455
+Toyota Prius C Four Hatchback 1.5L 99hp 2014 $23360
+Toyota Prius C One Hatchback 1.5L 99hp 2014 $19080
+Toyota Prius C Three Hatchback 1.5L 99hp 2014 $21765
+Toyota Prius C Two Hatchback 1.5L 99hp 2014 $20030
+Toyota Prius Five Hatchback 1.8L 134hp 2014 $30005
+Toyota Prius Four Hatchback 1.8L 134hp 2014 $28435
+Toyota Prius II Hatchback 1.8L 134hp 2013 $24200
+Toyota Prius III Hatchback 1.8L 134hp 2013 $25765
+Toyota Prius IV Hatchback 1.8L 134hp 2013 $28435
+Toyota Prius Plug-In Advanced Hatchback 1.8L 134hp 2014 $34905
+Toyota Prius Plug-In Hatchback 1.8L 134hp 2014 $29990
+Toyota Prius Three Hatchback 1.8L 134hp 2014 $25765
+Toyota Prius Two Hatchback 1.8L 134hp 2014 $24200
+Toyota Prius V Five Wagon 1.8L 134hp 2014 $30395
+Toyota Prius V Hatchback 1.8L 134hp 2013 $30005
+Toyota Prius V Three Wagon 1.8L 134hp 2014 $27515
+Toyota Prius V Two Wagon 1.8L 134hp 2014 $26750
+Toyota RAV4 EV Sport Utility N/A 2014 $49800
+Toyota RAV4 LE Sport Utility 2.5L 176hp 2014 $23550
+Toyota RAV4 Limited Sport Utility 2.5L 176hp 2014 $28320
+Toyota RAV4 XLE Sport Utility 2.5L 176hp 2014 $25000
+Toyota Sequoia Limited FFV Sport Utility 5.7L 381hp 2014 $56280
+Toyota Sequoia Limited Sport Utility 5.7L 381hp 2014 $53055
+Toyota Sequoia Platinum FFV Sport Utility 5.7L 381hp 2014 $64020
+Toyota Sequoia Platinum Sport Utility 5.7L 381hp 2014 $60795
+Toyota Sequoia SR5 FFV Sport Utility 5.7L 381hp 2014 $47320
+Toyota Sequoia SR5 Sport Utility 5.7L 381hp 2014 $44095
+Toyota Sienna Passenger Minivan 3.5L 266hp 2013 $26585
+Toyota Sienna CE Cargo Van 3.5L 266hp 2013 $24655
+Toyota Sienna L Passenger Minivan 3.5L 266hp 2014 $26920
+Toyota Sienna LE 7-Passenger Auto Access Seat Passenger Minivan 3.5L 266hp 2014 $36505
+Toyota Sienna LE 7-Passenger Mobility Passenger Minivan 3.5L 266hp 2014 $30690
+Toyota Sienna LE 7-Passenger Passenger Minivan 3.5L 266hp 2014 $32920
+Toyota Sienna LE 8-Passenger Passenger Minivan 3.5L 266hp 2014 $30490
+Toyota Sienna Limited 7-Passenger Passenger Minivan 3.5L 266hp 2014 $40240
+Toyota Sienna SE 7-Passenger Passenger Minivan 3.5L 266hp 2013 $33725
+Toyota Sienna SE 8-Passenger Passenger Minivan 3.5L 266hp 2014 $33860
+Toyota Sienna XLE 7-Passenger Auto Access Seat Passenger Minivan 3.5L 266hp 2014 $40915
+Toyota Sienna XLE 7-Passenger Passenger Minivan 3.5L 266hp 2014 $36185
+Toyota Sienna XLE 8-Passenger Passenger Minivan 3.5L 266hp 2014 $33645
+Toyota Tacoma Access Cab Extended Cab Pickup 2.7L 159hp 2014 $21515
+Toyota Tacoma Access Cab PreRunner Extended Cab Pickup 2.7L 159hp 2014 $22175
+Toyota Tacoma Crew Cab Pickup 2.7L 159hp 2013 $22525
+Toyota Tacoma Extended Cab Pickup 2.7L 159hp 2013 $21315
+Toyota Tacoma Long Bed Crew Cab Pickup 4.0L 236hp 2013 $28185
+Toyota Tacoma Regular Cab Pickup 2.7L 159hp 2014 $19025
+Toyota Tacoma Double Cab Long Bed Crew Cab Pickup 4.0L 236hp 2014 $28385
+Toyota Tacoma Double Cab PreRunner Long Bed Crew Cab Pickup 4.0L 236hp 2014 $25210
+Toyota Tacoma Double Cab PreRunner Short Bed Crew Cab Pickup 2.7L 159hp 2014 $23275
+Toyota Tacoma Double Cab Short Bed Crew Cab Pickup 2.7L 159hp 2014 $22725
+Toyota Tacoma Prerunner Crew Cab Pickup 2.7L 159hp 2013 $23175
+Toyota Tacoma Prerunner Extended Cab Pickup 2.7L 159hp 2013 $22075
+Toyota Tacoma Prerunner Long Bed Crew Cab Pickup 4.0L 236hp 2013 $25110
+Toyota Tacoma X-Runner Extended Cab Pickup 4.0L 236hp 2013 $26775
+Toyota Tundra Crew Cab Pickup 5.7L 381hp 2013 $31880
+Toyota Tundra Long Bed Extended Cab Pickup 5.7L 381hp 2013 $30045
+Toyota Tundra Long Bed Regular Cab Pickup 4.0L 270hp 2013 $25785
+Toyota Tundra Standard Bed Extended Cab Pickup 4.0L 270hp 2013 $27665
+Toyota Tundra Standard Bed Regular Cab Pickup 4.0L 270hp 2013 $25455
+Toyota Tundra CrewMax Limited Crew Cab Pickup 5.7L 381hp 2014 $39125
+Toyota Tundra CrewMax Limited FFV Crew Cab Pickup 5.7L 381hp 2014 $42175
+Toyota Tundra CrewMax Platinum Crew Cab Pickup 5.7L 381hp 2014 $44550
+Toyota Tundra CrewMax Platinum FFV Crew Cab Pickup 5.7L 381hp 2014 $47600
+Toyota Tundra CrewMax SR5 Crew Cab Pickup 5.7L 381hp 2014 $33605
+Toyota Tundra CrewMax SR5 FFV Crew Cab Pickup 5.7L 381hp 2014 $36655
+Toyota Tundra Double Cab Limited FFV Short Bed Extended Cab Pickup 5.7L 381hp 2014 $40270
+Toyota Tundra Double Cab Limited Short Bed Extended Cab Pickup 5.7L 381hp 2014 $37220
+Toyota Tundra Double Cab SR FFV Long Bed Extended Cab Pickup 5.7L 381hp 2014 $33015
+Toyota Tundra Double Cab SR FFV Short Bed Extended Cab Pickup 5.7L 381hp 2014 $32685
+Toyota Tundra Double Cab SR Long Bed Extended Cab Pickup 5.7L 381hp 2014 $29965
+Toyota Tundra Double Cab SR Short Bed Extended Cab Pickup 4.0L 270hp 2014 $27090
+Toyota Tundra Double Cab SR5 FFV Long Bed Extended Cab Pickup 5.7L 381hp 2014 $34625
+Toyota Tundra Double Cab SR5 FFV Short Bed Extended Cab Pickup 5.7L 381hp 2014 $34295
+Toyota Tundra Double Cab SR5 Long Bed Extended Cab Pickup 5.7L 381hp 2014 $31575
+Toyota Tundra Double Cab SR5 Short Bed Extended Cab Pickup 4.6L 310hp 2014 $29745
+Toyota Tundra Limited Crew Cab Pickup 5.7L 381hp 2013 $40835
+Toyota Tundra Limited Standard Bed Extended Cab Pickup 5.7L 381hp 2013 $38300
+Toyota Tundra SR FFV Regular Cab Pickup 5.7L 381hp 2014 $31795
+Toyota Tundra SR Regular Cab Pickup 4.0L 270hp 2014 $26200
+Toyota Venza LE Hatchback 2.7L 181hp 2014 $27950
+Toyota Venza LE Sport Utility 2.7L 181hp 2013 $27850
+Toyota Venza Limited Hatchback 3.5L 268hp 2014 $38120
+Toyota Venza Limited Sport Utility 3.5L 268hp 2013 $37570
+Toyota Venza XLE Hatchback 2.7L 181hp 2014 $31810
+Toyota Venza XLE Sport Utility 2.7L 181hp 2013 $31510
+Toyota Yaris L Hatchback 1.5L 106hp 2014 $15155
+Toyota Yaris LE Hatchback 1.5L 106hp 2014 $16015
+Toyota Yaris SE Hatchback 1.5L 106hp 2014 $17340
+Volkswagen Beetle 2.0 TDI Convertible 2.0L 140hp 2014 $29995
+Volkswagen Beetle 2.0 TDI Hatchback 2.0L 140hp 2014 $24595
+Volkswagen Beetle 2.0 TDI Sound and Navigation Convertible 2.0L 140hp 2014 $31195
+Volkswagen Beetle 2.0 TDI Sunroof Sound and Navigation Hatchback 2.0L 140hp 2014 $28595
+Volkswagen Beetle 2.0T GSR Hatchback 2.0L 210hp 2014 $31095
+Volkswagen Beetle 2.0T GSR PZEV Hatchback 2.0L 210hp 2014 $29995
+Volkswagen Beetle 2.0T Hatchback 2.0L 210hp 2013 $25470
+Volkswagen Beetle 2.0T R-Line Convertible 2.0L 210hp 2014 $29395
+Volkswagen Beetle 2.0T R-Line Hatchback 2.0L 210hp 2014 $26095
+Volkswagen Beetle 2.0T R-Line PZEV Convertible 2.0L 210hp 2014 $30495
+Volkswagen Beetle 2.0T R-Line PZEV Hatchback 2.0L 210hp 2014 $26095
+Volkswagen Beetle 2.0T R-Line Sound and Navigation Convertible 2.0L 210hp 2014 $34895
+Volkswagen Beetle 2.0T R-Line Sound and Navigation PZEV Convertible 2.0L 210hp 2014 $34895
+Volkswagen Beetle 2.0T R-Line Sound Convertible 2.0L 210hp 2014 $30695
+Volkswagen Beetle 2.0T R-Line Sound PZEV Convertible 2.0L 210hp 2014 $31795
+Volkswagen Beetle 2.0T R-Line Sunroof and Sound Hatchback 2.0L 210hp 2014 $27895
+Volkswagen Beetle 2.0T R-Line Sunroof and Sound PZEV Hatchback 2.0L 210hp 2014 $28995
+Volkswagen Beetle 2.0T R-Line Sunroof Sound and Navigation Hatchback 2.0L 210hp 2014 $31395
+Volkswagen Beetle 2.0T R-Line Sunroof Sound and Navigation PZEV Hatchback 2.0L 210hp 2014 $31395
+Volkswagen Beetle 2.5 Convertible 2.5L 170hp 2014 $25170
+Volkswagen Beetle 2.5 Hatchback 2.5L 170hp 2014 $20295
+Volkswagen Beetle 2.5 PZEV Convertible 2.5L 170hp 2014 $25170
+Volkswagen Beetle 2.5 PZEV Hatchback 2.5L 170hp 2014 $20295
+Volkswagen Beetle 2.5 Sound and Navigation Convertible 2.5L 170hp 2014 $29395
+Volkswagen Beetle 2.5 Sound and Navigation PZEV Convertible 2.5L 170hp 2014 $29395
+Volkswagen Beetle 2.5 Sunroof Hatchback 2.5L 170hp 2014 $22895
+Volkswagen Beetle 2.5 Sunroof PZEV Hatchback 2.5L 170hp 2014 $23995
+Volkswagen Beetle 2.5 Sunroof Sound and Navigation Hatchback 2.5L 170hp 2014 $25995
+Volkswagen Beetle 2.5 Sunroof Sound and Navigation PZEV Hatchback 2.5L 170hp 2014 $25995
+Volkswagen Beetle 2.5 Technology Convertible 2.5L 170hp 2014 $27295
+Volkswagen Beetle 2.5 Technology PZEV Convertible 2.5L 170hp 2014 $27295
+Volkswagen Beetle Convertible 2.0L 170hp 2013 $24995
+Volkswagen Beetle R-Line Hatchback 2.0L 210hp 2013 $31235
+Volkswagen Beetle TDI Convertible 2.0L 140hp 2013 $28995
+Volkswagen Beetle TDI Hatchback 2.0L 140hp 2013 $23495
+Volkswagen CC Executive PZEV Sedan 2.0L 200hp 2014 $37395
+Volkswagen CC Executive Sedan 2.0L 200hp 2014 $37395
+Volkswagen CC LUX Sedan 2.0L 200hp 2013 $35635
+Volkswagen CC R-Line PZEV Sedan 2.0L 200hp 2014 $34830
+Volkswagen CC R-Line Sedan 2.0L 200hp 2014 $34830
+Volkswagen CC Sport Plus Sedan 2.0L 200hp 2013 $32995
+Volkswagen CC Sport PZEV Sedan 2.0L 200hp 2014 $33595
+Volkswagen CC Sport Sedan 2.0L 200hp 2014 $33595
+Volkswagen CC VR6 4Motion Sedan 3.6L 280hp 2013 $41835
+Volkswagen CC VR6 Executive Sedan 3.6L 280hp 2014 $42895
+Volkswagen CC VR6 Lux Sedan 3.6L 280hp 2013 $38110
+Volkswagen Eos Executive Convertible 2.0L 200hp 2014 $42095
+Volkswagen Eos Komfort Convertible 2.0L 200hp 2014 $35595
+Volkswagen Eos LUX Convertible 2.0L 200hp 2013 $39595
+Volkswagen Eos Sport Convertible 2.0L 200hp 2014 $38325
+Volkswagen GLI Sedan 2.0L 200hp 2012 $23745
+Volkswagen Golf 2.5 Convenience Sunroof PZEV Hatchback 2.5L 170hp 2014 $22995
+Volkswagen Golf 2.5 PZEV Hatchback 2.5L 170hp 2014 $19995
+Volkswagen Golf Hatchback 2.5L 170hp 2013 $18095
+Volkswagen Golf R Hatchback 2.0L 256hp 2013 $34195
+Volkswagen Golf TDI Hatchback 2.0L 140hp 2014 $26300
+Volkswagen Golf TDI Sunroof Navigation Hatchback 2.0L 140hp 2014 $27995
+Volkswagen GTI 2.0T Drivers Editon PZEV Hatchback 2.0L 200hp 2014 $30795
+Volkswagen GTI Hatchback 2.0L 200hp 2013 $24200
+Volkswagen Jetta 1.8 SE Connectivity PZEV Sedan 1.8L 170hp 2014 $20715
+Volkswagen Jetta 1.8 SE Connectivity Sedan 1.8L 170hp 2014 $20715
+Volkswagen Jetta 1.8 SE Connectivity Sunroof PZEV Sedan 1.8L 170hp 2014 $22395
+Volkswagen Jetta 1.8 SE Connectivity Sunroof Sedan 1.8L 170hp 2014 $22395
+Volkswagen Jetta 1.8 SE PZEV Sedan 1.8L 170hp 2014 $18895
+Volkswagen Jetta 1.8 SE Sedan 1.8L 170hp 2014 $19995
+Volkswagen Jetta 1.8 SEL Navigation PZEV Sedan 1.8L 170hp 2014 $25925
+Volkswagen Jetta 1.8 SEL Navigation Sedan 1.8L 170hp 2014 $25925
+Volkswagen Jetta 2.0L S Sedan 1.8 SE Connectivity PZEV Sedan 2014 $20715
+Volkswagen Jetta 2.0L S Sedan 1.8 SE Connectivity Sedan 2014 $20715
+Volkswagen Jetta 2.0L S Sedan 1.8 SE Connectivity Sunroof PZEV Sedan 2014 $22395
+Volkswagen Jetta 2.0L S Sedan 1.8 SE Connectivity Sunroof Sedan 2014 $22395
+Volkswagen Jetta 2.0L S Sedan 1.8 SE PZEV Sedan 2014 $18895
+Volkswagen Jetta 2.0L S Sedan 1.8 SE Sedan 2014 $19995
+Volkswagen Jetta 2.0L S Sedan 1.8 SEL Navigation PZEV Sedan 2014 $25925
+Volkswagen Jetta 2.0L S Sedan 1.8 SEL Navigation Sedan 2014 $25925
+Volkswagen Jetta 2.0L S Sedan 2.0L 115hp 2014 $17995
+Volkswagen Jetta 2.0L S Sedan 2.0L S Sedan 2014 $17995
+Volkswagen Jetta 2.0L S Sedan 2.0L Sedan 2014 $15695
+Volkswagen Jetta 2.0L S Sedan GLI Autobahn Navigation PZEV Sedan 2014 $28855
+Volkswagen Jetta 2.0L S Sedan GLI Autobahn Navigation Sedan 2014 $28855
+Volkswagen Jetta 2.0L S Sedan GLI Autobahn PZEV Sedan 2014 $26825
+Volkswagen Jetta 2.0L S Sedan GLI Autobahn Sedan 2014 $26825
+Volkswagen Jetta 2.0L S Sedan GLI PZEV Sedan 2014 $24535
+Volkswagen Jetta 2.0L S Sedan GLI Sedan 2014 $24535
+Volkswagen Jetta 2.0L S Sedan TDI Premium  Navigation Sedan 2014 $26795
+Volkswagen Jetta 2.0L S Sedan TDI Premium Sedan 2014 $25295
+Volkswagen Jetta 2.0L S Sedan TDI Sedan 2014 $23625
+Volkswagen Jetta 2.0L Sedan 1.8 SE Connectivity PZEV Sedan 2014 $20715
+Volkswagen Jetta 2.0L Sedan 1.8 SE Connectivity Sedan 2014 $20715
+Volkswagen Jetta 2.0L Sedan 1.8 SE Connectivity Sunroof PZEV Sedan 2014 $22395
+Volkswagen Jetta 2.0L Sedan 1.8 SE Connectivity Sunroof Sedan 2014 $22395
+Volkswagen Jetta 2.0L Sedan 1.8 SE PZEV Sedan 2014 $18895
+Volkswagen Jetta 2.0L Sedan 1.8 SE Sedan 2014 $19995
+Volkswagen Jetta 2.0L Sedan 1.8 SEL Navigation PZEV Sedan 2014 $25925
+Volkswagen Jetta 2.0L Sedan 1.8 SEL Navigation Sedan 2014 $25925
+Volkswagen Jetta 2.0L Sedan 2.0L 115hp 2014 $15695
+Volkswagen Jetta 2.0L Sedan 2.0L S Sedan 2014 $17995
+Volkswagen Jetta 2.0L Sedan 2.0L Sedan 2014 $15695
+Volkswagen Jetta 2.0L Sedan GLI Autobahn Navigation PZEV Sedan 2014 $28855
+Volkswagen Jetta 2.0L Sedan GLI Autobahn Navigation Sedan 2014 $28855
+Volkswagen Jetta 2.0L Sedan GLI Autobahn PZEV Sedan 2014 $26825
+Volkswagen Jetta 2.0L Sedan GLI Autobahn Sedan 2014 $26825
+Volkswagen Jetta 2.0L Sedan GLI PZEV Sedan 2014 $24535
+Volkswagen Jetta 2.0L Sedan GLI Sedan 2014 $24535
+Volkswagen Jetta 2.0L Sedan TDI Premium  Navigation Sedan 2014 $26795
+Volkswagen Jetta 2.0L Sedan TDI Premium Sedan 2014 $25295
+Volkswagen Jetta 2.0L Sedan TDI Sedan 2014 $23625
+Volkswagen Jetta Sedan 2.0L 115hp 2013 $15545
+Volkswagen Jetta GLI Autobahn Navigation PZEV Sedan 2.0L 210hp 2014 $28855
+Volkswagen Jetta GLI Autobahn Navigation Sedan 2.0L 210hp 2014 $28855
+Volkswagen Jetta GLI Autobahn PZEV Sedan 2.0L 210hp 2014 $26825
+Volkswagen Jetta GLI Autobahn Sedan 2.0L 210hp 2014 $26825
+Volkswagen Jetta GLI PZEV Sedan 2.0L 210hp 2014 $24535
+Volkswagen Jetta GLI Sedan 2.0L 210hp 2014 $24535
+Volkswagen Jetta Hybrid Sedan 1.4L 170hp 2014 $25560
+Volkswagen Jetta Hybrid SE Sedan 1.4L 170hp 2014 $27645
+Volkswagen Jetta Hybrid Sedan 1.4L 170hp 2013 $24995
+Volkswagen Jetta Hybrid SEL Premium Sedan 1.4L 170hp 2014 $31895
+Volkswagen Jetta Hybrid SEL Sedan 1.4L 170hp 2014 $30245
+Volkswagen Jetta S Sedan 2.0L 115hp 2013 $17820
+Volkswagen Jetta SE Hybrid Sedan 1.4L 170hp 2013 $26990
+Volkswagen Jetta SE Sedan 2.5L 170hp 2013 $20115
+Volkswagen Jetta SEL Hybrid Sedan 1.4L 170hp 2013 $29325
+Volkswagen Jetta SEL Premium Hybrid Sedan 1.4L 170hp 2013 $31180
+Volkswagen Jetta SEL Sedan 2.5L 170hp 2013 $23995
+Volkswagen Jetta SportWagen 2.5 S PZEV Wagon 2.5L 170hp 2014 $20995
+Volkswagen Jetta SportWagen 2.5 S Wagon 2.5L 170hp 2014 $20995
+Volkswagen Jetta SportWagen 2.5 SE PZEV Wagon 2.5L 170hp 2014 $24885
+Volkswagen Jetta SportWagen 2.5 SE Sunroof PZEV Wagon 2.5L 170hp 2014 $26685
+Volkswagen Jetta SportWagen 2.5 SE Sunroof Wagon 2.5L 170hp 2014 $26685
+Volkswagen Jetta SportWagen 2.5 SE Wagon 2.5L 170hp 2014 $24885
+Volkswagen Jetta SportWagen S Wagon 2.5L 170hp 2013 $20595
+Volkswagen Jetta SportWagen SE Wagon 2.5L 170hp 2013 $24395
+Volkswagen Jetta SportWagen TDI Sunroof Navigation Wagon 2.0L 140hp 2014 $30265
+Volkswagen Jetta SportWagen TDI Sunroof Wagon 2.0L 140hp 2014 $29465
+Volkswagen Jetta SportWagen TDI Wagon 2.0L 140hp 2014 $26565
+Volkswagen Jetta TDI Premium  Navigation Sedan 2.0L 140hp 2014 $26795
+Volkswagen Jetta TDI Premium Sedan 2.0L 140hp 2014 $25295
+Volkswagen Jetta TDI Sedan 2.0L 140hp 2014 $23625
+Volkswagen Passat S PZEV Sedan 1.8L 170hp 2014 $20995
+Volkswagen Passat S PZEV Sedan S PZEV Sedan 2014 $20995
+Volkswagen Passat S PZEV Sedan S Sedan 2014 $20995
+Volkswagen Passat S PZEV Sedan SE PZEV Sedan 2014 $24775
+Volkswagen Passat S PZEV Sedan SE Sedan 2014 $24775
+Volkswagen Passat S PZEV Sedan SE Sunroof Navigation PZEV Sedan 2014 $27895
+Volkswagen Passat S PZEV Sedan SE Sunroof Navigation Sedan 2014 $27895
+Volkswagen Passat S PZEV Sedan SE Sunroof PZEV Sedan 2014 $26695
+Volkswagen Passat S PZEV Sedan SE Sunroof Sedan 2014 $26695
+Volkswagen Passat S PZEV Sedan SEL Premium PZEV Sedan 2014 $31295
+Volkswagen Passat S PZEV Sedan SEL Premium Sedan 2014 $31295
+Volkswagen Passat S PZEV Sedan Sport PZEV Sedan 2014 $26475
+Volkswagen Passat S PZEV Sedan Sport Sedan 2014 $26475
+Volkswagen Passat S PZEV Sedan TDI SE Sedan 2014 $26675
+Volkswagen Passat S PZEV Sedan TDI SE Sunroof Navigation Sedan 2014 $30375
+Volkswagen Passat S PZEV Sedan TDI SE Sunroof Sedan 2014 $28675
+Volkswagen Passat S PZEV Sedan TDI SEL Premium Sedan 2014 $33395
+Volkswagen Passat S PZEV Sedan V6 SE Sunroof Sedan 2014 $29665
+Volkswagen Passat S PZEV Sedan V6 SEL Premium Sedan 2014 $34265
+Volkswagen Passat S Sedan 1.8L 170hp 2014 $20995
+Volkswagen Passat S Sedan 2.5L 170hp 2013 $20845
+Volkswagen Passat S Sedan S PZEV Sedan 2014 $20995
+Volkswagen Passat S Sedan S Sedan 2014 $20995
+Volkswagen Passat S Sedan SE PZEV Sedan 2014 $24775
+Volkswagen Passat S Sedan SE Sedan 2014 $24775
+Volkswagen Passat S Sedan SE Sunroof Navigation PZEV Sedan 2014 $27895
+Volkswagen Passat S Sedan SE Sunroof Navigation Sedan 2014 $27895
+Volkswagen Passat S Sedan SE Sunroof PZEV Sedan 2014 $26695
+Volkswagen Passat S Sedan SE Sunroof Sedan 2014 $26695
+Volkswagen Passat S Sedan SEL Premium PZEV Sedan 2014 $31295
+Volkswagen Passat S Sedan SEL Premium Sedan 2014 $31295
+Volkswagen Passat S Sedan Sport PZEV Sedan 2014 $26475
+Volkswagen Passat S Sedan Sport Sedan 2014 $26475
+Volkswagen Passat S Sedan TDI SE Sedan 2014 $26675
+Volkswagen Passat S Sedan TDI SE Sunroof Navigation Sedan 2014 $30375
+Volkswagen Passat S Sedan TDI SE Sunroof Sedan 2014 $28675
+Volkswagen Passat S Sedan TDI SEL Premium Sedan 2014 $33395
+Volkswagen Passat S Sedan V6 SE Sunroof Sedan 2014 $29665
+Volkswagen Passat S Sedan V6 SEL Premium Sedan 2014 $34265
+Volkswagen Passat SE PZEV Sedan 1.8L 170hp 2014 $24775
+Volkswagen Passat SE Sedan 1.8L 170hp 2014 $24775
+Volkswagen Passat SE Sedan 2.5L 170hp 2013 $23945
+Volkswagen Passat SE Sunroof Navigation PZEV Sedan 1.8L 170hp 2014 $27895
+Volkswagen Passat SE Sunroof Navigation Sedan 1.8L 170hp 2014 $27895
+Volkswagen Passat SE Sunroof PZEV Sedan 1.8L 170hp 2014 $26695
+Volkswagen Passat SE Sunroof Sedan 1.8L 170hp 2014 $26695
+Volkswagen Passat SEL Premium PZEV Sedan 1.8L 170hp 2014 $31295
+Volkswagen Passat SEL Premium Sedan 1.8L 170hp 2014 $31295
+Volkswagen Passat SEL Premium Sedan 2.5L 170hp 2013 $30425
+Volkswagen Passat SEL Sedan 2.5L 170hp 2013 $28925
+Volkswagen Passat Sport PZEV Sedan 1.8L 170hp 2014 $26475
+Volkswagen Passat Sport Sedan 1.8L 170hp 2014 $26475
+Volkswagen Passat TDI SE Sedan 2.0L 140hp 2014 $26675
+Volkswagen Passat TDI SE Sunroof Navigation Sedan 2.0L 140hp 2014 $30375
+Volkswagen Passat TDI SE Sunroof Sedan 2.0L 140hp 2014 $28675
+Volkswagen Passat TDI SEL Premium Sedan 2.0L 140hp 2014 $33395
+Volkswagen Passat V6 SE Sunroof Sedan 3.6L 280hp 2014 $29665
+Volkswagen Passat V6 SEL Premium Sedan 3.6L 280hp 2014 $34265
+Volkswagen Routan S Passenger Minivan 3.6L 283hp 2012 $27020
+Volkswagen Routan SE Passenger Minivan 3.6L 283hp 2012 $32010
+Volkswagen Routan SEL Passenger Minivan 3.6L 283hp 2012 $37890
+Volkswagen Routan SEL Premium Passenger Minivan 3.6L 283hp 2012 $44280
+Volkswagen Tiguan 2.0T R-Line Sedan 2.0L 200hp 2014 $36880
+Volkswagen Tiguan 2.0T R-Line Sport Utility 2.0L 200hp 2014 $38835
+Volkswagen Tiguan 2.0T S Sport Utility 2.0L 200hp 2014 $23305
+Volkswagen Tiguan 2.0T SE Appearance Sport Utility 2.0L 200hp 2014 $29965
+Volkswagen Tiguan 2.0T SE Sport Utility 2.0L 200hp 2014 $27340
+Volkswagen Tiguan 2.0T SEL Sport Utility 2.0L 200hp 2014 $32995
+Volkswagen Tiguan s Sport Utility 2.0L 200hp 2013 $22995
+Volkswagen Tiguan SE Sport Utility 2.0L 200hp 2013 $29470
+Volkswagen Tiguan SEL Sport Utility 2.0L 200hp 2013 $35175
+Volkswagen Touareg Executive Sport Utility 3.6L 280hp 2013 $55675
+Volkswagen Touareg Hybrid Sport Utility 3.0L 380hp 2014 $64745
+Volkswagen Touareg Hybrid Sport Utility 3.0L 380hp 2013 $62575
+Volkswagen Touareg LUX Sport Utility 3.6L 280hp 2013 $49950
+Volkswagen Touareg Sport Sport Utility 3.6L 280hp 2013 $43945
+Volkswagen Touareg TDI Executive  Sport Utility 3.0L 240hp 2014 $61435
+Volkswagen Touareg TDI Lux Sport Utility 3.0L 240hp 2014 $55550
+Volkswagen Touareg TDI R-Line Sport Utility 3.0L 240hp 2014 $58190
+Volkswagen Touareg TDI Sport Navigation Sport Utility 3.0L 240hp 2014 $51610
+Volkswagen Touareg TDI Sport Sport Utility 3.0L 240hp 2013 $47445
+Volkswagen Touareg TDI X Sport Utility 3.0L 240hp 2014 $56170
+Volkswagen Touareg VR6 Executive Sport Utility 3.6L 280hp 2014 $57935
+Volkswagen Touareg VR6 Lux Sport Utility 3.6L 280hp 2014 $52050
+Volkswagen Touareg VR6 R-Line Sport Utility 3.6L 280hp 2014 $54690
+Volkswagen Touareg VR6 Sport Navigation Sport Utility 3.6L 280hp 2014 $48110
+Volkswagen Touareg VR6 Sport Sport Utility 3.6L 280hp 2014 $44570
+Volvo C30 R-Design Hatchback 2.5L 227hp 2013 $27850
+Volvo C30 T5 Hatchback 2.5L 227hp 2013 $25500
+Volvo C70 T5 Convertible 2.5L 227hp 2013 $41200
+Volvo S60 R-Design Sedan 3.0L 325hp 2013 $44100
+Volvo S60 T5 Platinum Sedan 2.0L 240hp 2015 $39150
+Volvo S60 T5 Platinum Sedan 2.5L 250hp 2014 $38250
+Volvo S60 T5 Premier Plus Sedan 2.0L 240hp 2015 $36550
+Volvo S60 T5 Premier Plus Sedan 2.5L 250hp 2014 $35550
+Volvo S60 T5 Premier Sedan 2.0L 240hp 2015 $35800
+Volvo S60 T5 Premier Sedan 2.5L 250hp 2014 $34900
+Volvo S60 T5 Premier Sedan T5 Platinum Sedan 2015 $39150
+Volvo S60 T5 Premier Sedan T5 Premier Plus Sedan 2015 $36550
+Volvo S60 T5 Premier Sedan T5 Premier Sedan 2015 $35800
+Volvo S60 T5 Premier Sedan T5 Sedan 2015 $33300
+Volvo S60 T5 Premier Sedan T6 Platinum  Sedan N/A 2015 $41500
+Volvo S60 T5 Premier Sedan T6 Premier Plus  Sedan N/A 2015 $38900
+Volvo S60 T5 Premier Sedan T6 R-Design  Sedan 2015 $42700
+Volvo S60 T5 Premier Sedan T6 R-Design Platinum  Sedan 2015 $45700
+Volvo S60 T5 Premier Sedan T6 Sedan N/A 2015 $38150
+Volvo S60 T5 Sedan 2.0L 240hp 2015 $33300
+Volvo S60 T5 Sedan 2.5L 250hp 2014 $32400
+Volvo S60 T5 Sedan T5 Platinum Sedan 2015 $39150
+Volvo S60 T5 Sedan T5 Premier Plus Sedan 2015 $36550
+Volvo S60 T5 Sedan T5 Premier Sedan 2015 $35800
+Volvo S60 T5 Sedan T5 Sedan 2015 $33300
+Volvo S60 T5 Sedan T6 Platinum  Sedan N/A 2015 $41500
+Volvo S60 T5 Sedan T6 Premier Plus  Sedan N/A 2015 $38900
+Volvo S60 T5 Sedan T6 R-Design  Sedan 2015 $42700
+Volvo S60 T5 Sedan T6 R-Design Platinum  Sedan 2015 $45700
+Volvo S60 T5 Sedan T6 Sedan N/A 2015 $38150
+Volvo S60 T6 Platinum  Sedan 2.0L 302hp 2015 $41500
+Volvo S60 T6 Platinum  Sedan 3.0L 300hp 2014 $42600
+Volvo S60 T6 Premier Plus  Sedan 2.0L 302hp 2015 $38900
+Volvo S60 T6 Premier Plus  Sedan 3.0L 300hp 2014 $39900
+Volvo S60 T6 R-Design  Sedan 3.0L 325hp 2015 $42700
+Volvo S60 T6 R-Design Platinum  Sedan 3.0L 325hp 2015 $45700
+Volvo S60 T6 Sedan 2.0L 302hp 2015 $38150
+Volvo S60 T6 Sedan 3.0L 300hp 2014 $39250
+Volvo S80 3.2 Platinum  Sedan 3.2L 240hp 2014 $44100
+Volvo S80 3.2 Premier Plus  Sedan 3.2L 240hp 2014 $41400
+Volvo S80 3.2 Sedan 3.2L 240hp 2014 $39900
+Volvo S80 Sedan 2.0L 240hp 2015 $40500
+Volvo S80 Platinum Sedan 2.0L 240hp 2015 $44700
+Volvo S80 Premier Plus Sedan 2.0L 240hp 2015 $42000
+Volvo S80 T6 Platinum  Sedan 3.0L 300hp 2015 $48150
+Volvo S80 T6 Premier Plus  Sedan 3.0L 300hp 2015 $45450
+Volvo S80 T6 Premier Sedan 3.0L 300hp 2015 $43950
+Volvo S80 T6 Sedan 3.0L 300hp 2014 $43950
+Volvo V60 T5 Platinum Wagon 2.0L 240hp 2015 $40450
+Volvo V60 T5 Premier Plus Wagon 2.0L 240hp 2015 $37850
+Volvo V60 T5 Premier Wagon 2.0L 240hp 2015 $37100
+Volvo V60 T5 Wagon 2.0L 240hp 2015 $35300
+Volvo V60 T6 R-Design  Wagon 3.0L 300hp 2015 $44300
+Volvo V60 T6 R-Design Platinum  Wagon 3.0L 300hp 2015 $47300
+Volvo XC60 3.2 Platinum  Sport Utility 3.2L 240hp 2015 $44350
+Volvo XC60 3.2 Premier  Sport Utility 3.2L 240hp 2015 $40350
+Volvo XC60 3.2 Premier Plus  Sport Utility 3.2L 240hp 2015 $41750
+Volvo XC60 3.2 Sport Utility 3.2L 240hp 2015 $37250
+Volvo XC60 Sport Utility 3.2L 240hp 2013 $34350
+Volvo XC60 R-Design Sport Utility 3.0L 325hp 2013 $44850
+Volvo XC60 T5 Platinum Sport Utility 2.0L 240hp 2015 $42850
+Volvo XC60 T5 Premier Plus Sport Utility 2.0L 240hp 2015 $40250
+Volvo XC60 T5 Premier Sport Utility 2.0L 240hp 2015 $38850
+Volvo XC60 T5 Sport Utility 2.0L 240hp 2015 $35750
+Volvo XC60 T6 Platinum  Sport Utility 2.0L 300hp 2015 $44050
+Volvo XC60 T6 Platinum  Sport Utility 3.0L 300hp 2014 $45550
+Volvo XC60 T6 Premier Plus  Sport Utility 2.0L 300hp 2015 $41450
+Volvo XC60 T6 Premier Plus  Sport Utility 3.0L 300hp 2014 $42850
+Volvo XC60 T6 R-Design  Sport Utility 3.0L 300hp 2014 $45800
+Volvo XC60 T6 R-Design  Sport Utility 3.0L 325hp 2015 $45800
+Volvo XC60 T6 R-Design Platinum  Sport Utility 3.0L 300hp 2014 $49800
+Volvo XC60 T6 R-Design Platinum  Sport Utility 3.0L 325hp 2015 $49800
+Volvo XC60 T6 R-Design Premier Plus  Sport Utility 3.0L 300hp 2014 $47100
+Volvo XC60 T6 R-Design Premier Plus  Sport Utility 3.0L 325hp 2015 $47200
+Volvo XC60 T6 Sport Utility 2.0L 300hp 2015 $40050
+Volvo XC60 T6 Sport Utility 3.0L 300hp 2014 $41550
+Volvo XC70 3.2 Platinum  Wagon 3.2L 240hp 2014 $41950
+Volvo XC70 3.2 Premier  Wagon 3.2L 240hp 2014 $37900
+Volvo XC70 3.2 Premier Plus  Wagon 3.2L 240hp 2014 $39450
+Volvo XC70 3.2 Wagon 3.2L 240hp 2014 $34500
+Volvo XC70 Wagon 2.0L 240hp 2015 $35400
+Volvo XC70 Wagon 3.2L 240hp 2013 $33600
+Volvo XC70 Wagon Wagon N/A 2015 $35400
+Volvo XC70 Wagon Platinum Wagon N/A 2015 $42850
+Volvo XC70 Wagon Premier Plus Wagon N/A 2015 $40350
+Volvo XC70 Wagon Premier Wagon N/A 2015 $38800
+Volvo XC70 Wagon T6 Platinum  Wagon 2015 $45650
+Volvo XC70 Wagon T6 Premier Plus  Wagon 2015 $42950
+Volvo XC70 Wagon T6 Wagon 2015 $40950
+Volvo XC70 Platinum Wagon 2.0L 240hp 2015 $42850
+Volvo XC70 Premier Plus Wagon 2.0L 240hp 2015 $40350
+Volvo XC70 Premier Wagon 2.0L 240hp 2015 $38800
+Volvo XC70 Premier Wagon Wagon N/A 2015 $35400
+Volvo XC70 Premier Wagon Platinum Wagon N/A 2015 $42850
+Volvo XC70 Premier Wagon Premier Plus Wagon N/A 2015 $40350
+Volvo XC70 Premier Wagon Premier Wagon N/A 2015 $38800
+Volvo XC70 Premier Wagon T6 Platinum  Wagon 2015 $45650
+Volvo XC70 Premier Wagon T6 Premier Plus  Wagon 2015 $42950
+Volvo XC70 Premier Wagon T6 Wagon 2015 $40950
+Volvo XC70 T6 Platinum  Wagon 3.0L 300hp 2015 $45650
+Volvo XC70 T6 Premier Plus  Wagon 3.0L 300hp 2015 $42950
+Volvo XC70 T6 Wagon 3.0L 300hp 2015 $40950
+Volvo XC90 3.2 Platinum  Sport Utility 3.2L 240hp 2014 $43900
+Volvo XC90 3.2 Premier Plus  Sport Utility 3.2L 240hp 2014 $41200
+Volvo XC90 3.2 R-Design Platinum Sport Utility 3.2L 240hp 2014 $45400
+Volvo XC90 3.2 R-Design Sport Utility 3.2L 240hp 2014 $42700
+Volvo XC90 3.2 Sport Utility 3.2L 240hp 2014 $39700
+Volvo XC90 R-Design Sport Utility 3.2L 240hp 2013 $42500

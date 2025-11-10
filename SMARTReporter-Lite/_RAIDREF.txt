@@ -1,0 +1,126 @@
+MacPro:~ julian$ diskutil checkraid
+AppleRAID sets (1 found)
+===============================================================================
+Name:                 StorageRAID
+Unique ID:            79361FD6-81EB-461E-AAF0-C03DBA7C3721
+Type:                 Stripe
+Status:               Online
+Size:                 2.0 TB (1999721791488 Bytes)
+Rebuild:              manual
+Device Node:          disk7
+-------------------------------------------------------------------------------
+#   Device Node       UUID                                   Status
+-------------------------------------------------------------------------------
+0   disk6s2           E425A7F6-C9CC-4E3E-A02A-011903707C81   Online
+1   disk5s2           39F9A7A2-D08C-4A09-B513-9EAC60B9FB1C   Online
+===============================================================================
+
+MacPro:~ julian$ diskutil checkraid
+AppleRAID sets (1 found)
+===============================================================================
+Name:                 StorageRAID
+Unique ID:            79361FD6-81EB-461E-AAF0-C03DBA7C3721
+Type:                 Stripe
+Status:               Offline
+Size:                 2.0 TB (1999721791488 Bytes)
+Rebuild:              manual
+Device Node:          -
+-------------------------------------------------------------------------------
+#   Device Node       UUID                                   Status
+-------------------------------------------------------------------------------
+0   disk6s2           E425A7F6-C9CC-4E3E-A02A-011903707C81   Online
+0   -none-            39F9A7A2-D08C-4A09-B513-9EAC60B9FB1C   Missing/Damaged
+===============================================================================
+
+
+
+
+MacPro:~ julian$ diskutil checkraid
+AppleRAID sets (1 found)
+===============================================================================
+Name:                 RAID
+Unique ID:            259E1160-3185-4959-9035-757091B7D995
+Type:                 Mirror
+Status:               Online
+Size:                 999.9 GB (999860895744 Bytes)
+Rebuild:              manual
+Device Node:          disk7
+-------------------------------------------------------------------------------
+#   Device Node       UUID                                   Status
+-------------------------------------------------------------------------------
+0   disk5s2           83AE8CF4-F52A-411F-B036-AEBB5737342E   Online
+1   disk6s2           0E6789D2-7DB3-4C1C-9B02-C5697525EA47   Online
+===============================================================================
+
+MacPro:~ julian$ diskutil checkraid
+AppleRAID sets (1 found)
+===============================================================================
+Name:                 RAID
+Unique ID:            259E1160-3185-4959-9035-757091B7D995
+Type:                 Mirror
+Status:               Degraded
+Size:                 999.9 GB (999860895744 Bytes)
+Rebuild:              manual
+Device Node:          disk7
+-------------------------------------------------------------------------------
+#   Device Node       UUID                                   Status
+-------------------------------------------------------------------------------
+0   -none-            83AE8CF4-F52A-411F-B036-AEBB5737342E   Missing/Damaged
+1   disk6s2           0E6789D2-7DB3-4C1C-9B02-C5697525EA47   Online
+===============================================================================
+
+
+MacPro:~ julian$ diskutil checkraid
+AppleRAID sets (1 found)
+===============================================================================
+Name:                 RAID
+Unique ID:            259E1160-3185-4959-9035-757091B7D995
+Type:                 Mirror
+Status:               Degraded
+Size:                 999.9 GB (999860895744 Bytes)
+Rebuild:              manual
+Device Node:          disk7
+-------------------------------------------------------------------------------
+#   Device Node       UUID                                   Status
+-------------------------------------------------------------------------------
+0   disk5s2           83AE8CF4-F52A-411F-B036-AEBB5737342E   Failed
+1   disk6s2           0E6789D2-7DB3-4C1C-9B02-C5697525EA47   Online
+===============================================================================
+MacPro:~ julian$ 
+
+
+
+
+MacPro:~ julian$ diskutil checkraid
+AppleRAID sets (1 found)
+===============================================================================
+Name:                 JBOD
+Unique ID:            14280691-C9DA-4FDF-AEBE-0E5C99250CC9
+Type:                 Concat
+Status:               Online
+Size:                 2.0 TB (1999721791488 Bytes)
+Rebuild:              manual
+Device Node:          disk7
+-------------------------------------------------------------------------------
+#   Device Node       UUID                                   Status
+-------------------------------------------------------------------------------
+0   disk5s2           AB5FAA10-D9E4-469B-BEA7-2F92D9E349E6   Online
+1   disk6s2           90E49333-EF85-4CF7-A081-633CAC03FA57   Online
+===============================================================================
+
+MacPro:~ julian$ diskutil checkraid
+AppleRAID sets (1 found)
+===============================================================================
+Name:                 JBOD
+Unique ID:            14280691-C9DA-4FDF-AEBE-0E5C99250CC9
+Type:                 Concat
+Status:               Offline
+Size:                 999.9 GB (999860895744 Bytes)
+Rebuild:              manual
+Device Node:          -
+-------------------------------------------------------------------------------
+#   Device Node       UUID                                   Status
+-------------------------------------------------------------------------------
+0   disk5s2           AB5FAA10-D9E4-469B-BEA7-2F92D9E349E6   Online
+0   -none-            90E49333-EF85-4CF7-A081-633CAC03FA57   Missing/Damaged
+===============================================================================
