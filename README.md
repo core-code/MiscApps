@@ -13,6 +13,7 @@ https://www.corecode.io/index_opensource.html
 <b>Diagnostics</b> <br/> Various applications that can collect data to debug problems - mostly specific to problems for various apps. <br/> 
 <b>DMGUncompress</b> <br/> An app to (batch) uncompress DMG images in-place instead of having to mount them. <br/> 
 <b>FilenameList</b> <br/> An application for renaming all files in a directory based on new filenames stored in a text file. <br/> 
+<b>FilenameMatch</b> <br/> An application for renaming all files in a directory based on the filenames in another directory. <br/> 
 <b>FinderGit</b> <br/> A 'Finder extension' to view the Git source control status of your files and directories via 'badges' right in the Finder. <br/> 
 <b>FingerFrag</b> <br/> A minimal example of doing an iPad game. <br/> 
 <b>FingerMaze</b> <br/> An actually shipping iPad game where you have to search the way through a maze (like on a sheet of paper). <br/> 
